@@ -1,0 +1,15 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+### Local artifacts ###
+.venv
+*.log
+*.zip
+*.pdf
+pdf_manifest.json
