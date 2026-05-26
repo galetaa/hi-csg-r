@@ -13,3 +13,4 @@
 *.zip
 *.pdf
 pdf_manifest.json
+/data/raw/
