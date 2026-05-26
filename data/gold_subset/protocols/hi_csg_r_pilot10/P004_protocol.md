@@ -1,11 +1,11 @@
 # HI-CSG-R handwriting dataset protocol — P004
 
 [PARTICIPANT_ID: P004]
-[VERSION: HI-CSG-R_gold_protocol_v1.0_pilot10]
+[VERSION: HI-CSG-R_gold_protocol_v1.1]
 [SESSIONS: S01,S02]
 [DO_NOT_WRITE_REAL_SIGNATURE: true]
 [DO_NOT_INCLUDE_PERSONAL_DATA: true]
-[GENERAL_INSTRUCTION: Переписывайте все блоки дословно между WRITE_START и WRITE_END. Не добавляйте реальные имена участников, адреса, телефоны, подписи, e-mail или приватные сведения. Если ошиблись, аккуратно зачеркните ошибку и продолжайте переписывать заданный текст.]
+[GENERAL_INSTRUCTION: Переписывайте все блоки дословно между WRITE_START и WRITE_END. Не добавляйте реальные имена участников, адреса, телефоны, подписи, e-mail или приватные сведения. Все имена и номера, уже напечатанные в заданных текстах, являются вымышленными учебными примерами. Если ошиблись, аккуратно зачеркните ошибку и продолжайте.]
 
 ---
 ## S01 Page 01 — Russian anchor + rotating controlled text
@@ -33,7 +33,7 @@ WRITE_END
 [TITLE: Русский rotating controlled paragraph]
 
 WRITE_START
-В лаборатории бумаги утром сверяли образцы чернил, фольгу, щёлочь в закрытой колбе и журнал учёта. У ровной полки лежали овальные образцы: форма, обводка, фургон на схеме, бумажная фишка и мягкая дуга. Запись от 14.05.2026 по ведомости № 15-052 указала сумму — 10 281,43 руб.; рядом добавили пометку: «проверить ещё раз щётку, эскиз, цифру и объект». Затем участник практикума переписал короткую фразу, сравнил подъёмные элементы букв, отметил хвосты у д, у, р, ц, щ и аккуратно убрал лишнюю пыль. Текст нейтрален: без адресов, подписей и личных данных.
+В лаборатории бумаги до обеда сверяли образцы чернил, фольгу, щёлочной раствор в закрытой колбе и журнал учёта. На ровной полке разложили листы с овальной формой, схемой фургона, мягкой дугой и условным объектом № 34-243. Запись от 14.05.2026 содержит сумму — 10 281,43 руб.; после тире стоит указание: «не менять порядок строк». В абзаце намеренно повторяются соединения ми, ни, ши, ли, ст, тр, пр и буквы ф, щ, ц, ё, ъ, э. Реальные имена, адреса и подписи не используются.
 WRITE_END
 [BLOCK_ID: P004_S01_P01_B03_RU_CONTROLLED_LINES_004]
 [SESSION: S01]
@@ -46,12 +46,12 @@ WRITE_END
 [TITLE: Русские controlled short lines]
 
 WRITE_START
-Овальная форма обводит фургон, дорогу и мягкую дугу № 04.
-Длинные хвосты у д, у, р, ц и щ видны в строке 34.
-Минимальные соединения: ми, ни, ши, ли, ть, ст, тр, др, пр.
-Файл, щётка, цех, эскиз, подъём и ёмкость лежат рядом.
-Дата 14.05.2026, сумма 6 450,04 руб., № 04-78.
-Смешанная строка: код RX-04 / Б-24, архив и box label.
+Овал, фольга, фургон и мягкая петля сравниваются № 04.
+Длинные хвосты д, у, р, ц, щ опускаются ниже клетки 34.
+Связная цепочка: им, ин, иш, ил, ть, ст, тр, др, пр.
+Форма, щёлочь, цех, эскиз, подъём и объект на листе.
+Дата 14.05.2026; сумма 6 450,04 руб.; журнал № 04-81.
+Mixed line: code RX-04 / Д-24, лаборатория and box label.
 WRITE_END
 ---
 ## S01 Page 02 — English anchor + rotating controlled text
@@ -66,7 +66,7 @@ WRITE_END
 [TITLE: English shared anchor]
 
 WRITE_START
-On 24/05/2026, Quick Brown Lab checked invoice No. XQ-57 for $1,248.30. Jolly zebras, quiet ducks, fuzzy boxes, and six mixed glyphs moved by the workbench; Victor noted: “Pack my box with five dozen liquor jugs, then write clearly.”
+On 24/05/2026, Quick Brown Lab checked invoice No. XQ-57 for $1,248.30. Jolly zebras, quiet ducks, fuzzy boxes, and six mixed glyphs moved by the workbench; A clerk noted: “Pack my box with five dozen liquor jugs, then write clearly.”
 WRITE_END
 [BLOCK_ID: P004_S01_P02_B02_EN_ROT_PARAGRAPH_004]
 [SESSION: S01]
@@ -79,7 +79,7 @@ WRITE_END
 [TITLE: English rotating controlled paragraph]
 
 WRITE_START
-At the workshop bench, the team neatly placed black files, puzzle cards, quiet boxes, and a zigzag template. On 04/06/2026, invoice No. QXJ-14-Z14 listed $461.75 and six extra samples. The note said: “Keep every query, x-height mark, zigzag join, and jolly descender visible.” Long letters such as b, d, f, h, k, l, and t were compared with g, j, p, q, and y. No private names were copied; only neutral workshop records, box codes, and clear writing lines were used for the exercise.
+At the workshop bench, black files, puzzle cards, quiet boxes, and a zigzag template were placed near the ruler. On 04/06/2026, invoice No. QXJ-14-Z14 listed $461.75. The guide added: “Fix the x-height, keep fuzzy joins, and mark each quartz label.” This block gives q, x, z, j, tall ascenders, lower descenders, punctuation, and numbers without copying a private record.
 WRITE_END
 [BLOCK_ID: P004_S01_P02_B03_EN_CONTROLLED_LINES_004]
 [SESSION: S01]
@@ -92,12 +92,12 @@ WRITE_END
 [TITLE: English controlled short lines]
 
 WRITE_START
-Quick zephyrs blow vexing jinxed boxes near lab 04.
-Long descenders: g, j, p, q, y move below the baseline 4.
-Tall ascenders: b, d, f, h, k, l, t stand above the line.
-Minimum movement keeps writing connected and smoothly checked.
-Invoice No. QX-04 costs $124.40 on 24/05/2026.
-Mixed note: English word, русский токен, code ZJ-34.
+Puzzle cards, quiet boxes, and zigzag strips mark lab 04.
+The letters g, j, p, q, y hang below the lower line.
+Tall letters b, d, f, h, k, l, t touch the upper guide.
+Connected writing should stay smooth, quick, and legible.
+Invoice No. QX-04 totals $160.70 on 27/05/2026.
+Mixed note: workshop word, русский блок, code ZJ-34.
 WRITE_END
 ---
 ## S01 Page 03 — Target words and target phrases
@@ -153,14 +153,14 @@ WRITE_END
 [TITLE: Русские target phrases]
 
 WRITE_START
-мягкая дуга и быстрый подъём
-чёткий штрих рядом с овалом
-фрагмент щётки и жёлтый ярлык
-связная линия без лишних разрывов
-цифра, объект и короткая подпись-метка
-ровная строка над серой клеткой
-петля, хвост и верхний элемент
-архивный бланк без личных данных
+лабораторная фольга и узкий овал
+щелчок пера на буквах ф и щ
+цеховой код и учебная метка
+петля о рядом с петлёй а
+подстрочный хвост у буквы д
+соединения ст, тр, др без разрыва
+объект и эскиз в условной записи
+ровная строка с датой и номером
 WRITE_END
 [BLOCK_ID: P004_S01_P03_B04_MIXED_TARGET_PHRASES]
 [SESSION: S01]
@@ -173,14 +173,14 @@ WRITE_END
 [TITLE: Mixed target phrases]
 
 WRITE_START
-minimum movement and quiet writing
-мягкая дуга и быстрый подъём
-quick x-height check near the baseline
-фрагмент щётки и жёлтый ярлык
-fuzzy box with a joined descender
-петля, хвост и верхний элемент
-zebra label and quartz guide
-архивный бланк без личных данных
+puzzle card and quiet box
+лабораторная фольга и узкий овал
+quick join at the x-height line
+цеховой код и учебная метка
+fuzzy zigzag beside a label
+подстрочный хвост у буквы д
+quartz tag No. QX-04
+ровная строка с датой
 WRITE_END
 ---
 ## S01 Page 04 — Repeats and tempo variation
@@ -303,12 +303,12 @@ WRITE_END
 [TITLE: Short mixed document-like records]
 
 WRITE_START
-код RX-04 / Б-43; стр. 5–11; сумма 12 340,15 руб.
-invoice QXJ-04-Z08; box № 18-75; time 12:30
-масса 45 кг; объём 4,75 л; процент 18%; дробь 6/10
+код PB-04 / Д-43; журнал 5–11; сумма 12 309,15 руб.
+invoice PPR-04-XQ; shelf № 18-75; time 12:20
+масса 45 кг; объём 4,10 л; процент 18%; дробь 6/13
 WRITE_END
 ---
-## S01 Page 06 — Controlled natural-copy writing
+## S01 Page 06 — Controlled instruction-copy and correction writing
 [BLOCK_ID: P004_S01_P06_B01_RU_CONTROLLED_NATURAL_TEXT]
 [SESSION: S01]
 [PAGE: 06]
@@ -320,14 +320,14 @@ WRITE_END
 [TITLE: Русский controlled natural-copy text]
 
 WRITE_START
-В читальном зале утром открыли серую тетрадь № 04-17.
-На столе лежали жёлтые листы, циркуль, щётка и чистый бланк.
-Сотрудник сверил дату 24.05.2026, сумму 13 580,45 руб. и код РУ-04.
-В учётный журнал внесли короткую строку: «файл, эскиз, объект, подъём».
-Рядом лежали ящик, фургон на схеме, ключи, ручка и мягкая фольга.
-Для проверки формы отметили петли о, а, ю, ф и хвосты д, у, р, ц, щ.
-В рабочей зоне не было реальных адресов, подписей, телефонов или личных сведений.
-После сверки страницы аккуратно сложили в папку и убрали на полку.
+В читальном зале утром открыли серую тетрадь № 04-20.
+На столе лежали листы, щёлочная проба, циркуль, щётка и фольга.
+Проверили дату 27.05.2026, сумму 15 870,74 руб. и код РУ-04.
+В учётный журнал добавили слова: «форма, фургон, цифра, эскиз».
+Овалы о, а, ю, ф сравнили с хвостами д, у, р, ц, щ.
+Рядом был условный объект, циновка, ёмкость и мягкая дуга.
+В тексте нет настоящих адресов, телефонов и личных сведений.
+После проверки тетрадь закрыли и положили под чистый бланк.
 WRITE_END
 [BLOCK_ID: P004_S01_P06_B02_MIXED_CONTROLLED_NATURAL_TEXT]
 [SESSION: S01]
@@ -340,12 +340,12 @@ WRITE_END
 [TITLE: Mixed controlled natural-copy text]
 
 WRITE_START
-At the reading room, a quiet index card listed invoice No. QXJ-04-Z05.
-The note connected quick letters, fuzzy boxes, yellow tags, and a zigzag guide.
-На той же строке указали папка Б-24, код RX-04, дату 25.05.2026 и 12:45.
-A small sample used descenders g, j, p, q, y and tall letters b, d, f, h, k, l, t.
-В каталожный бланк добавили слова: ящик, щётка, фургон, цифра, эскиз и объект.
-The box QX-04 and label ZJ-34 stayed neutral; no real private record was copied.
+At the paper table, a test slip listed invoice No. QXJ-04-Z14.
+The phrase connected quiet boxes, puzzle cards, x-height marks, and quartz tags.
+В строке рядом указали папка Д-24, код RX-04, дату 28.05.2026 и 15:30.
+The sample included descenders g, j, p, q, y and ascenders b, d, f, h, k, l, t.
+В лабораторный лист внесли: фольга, щёлочь, объект, цех, эскиз.
+The note is neutral and does not copy any private document.
 WRITE_END
 [BLOCK_ID: P004_S01_P06_B03_MIXED_EXACT_COPY_VARIATION]
 [SESSION: S01]
@@ -358,10 +358,49 @@ WRITE_END
 [TITLE: Mixed exact copy variation block]
 
 WRITE_START
-архивная строка № 04 — объект, цифра, щётка и жёлтый ярлык
-архивная строка № 04 — объект, цифра, щётка и жёлтый ярлык
-sample copy line No. 04 — quick box, fuzzy grid, quartz label
-sample copy line No. 04 — quick box, fuzzy grid, quartz label
+лабораторная строка № 04 — фольга, щёлочь, цех и овал
+лабораторная строка № 04 — фольга, щёлочь, цех и овал
+sample line No. 04 — puzzle card, quiet box, x-height cue
+sample line No. 04 — puzzle card, quiet box, x-height cue
+WRITE_END
+[BLOCK_ID: P004_S01_P06_B04_RU_CONTROLLED_INSTRUCTION_COPY_004]
+[SESSION: S01]
+[PAGE: 06]
+[LANG: ru]
+[SCRIPT: cyrillic]
+[TASK_TYPE: ru_controlled_instruction_copy]
+[CONDITION: normal]
+[TRANSCRIPTION_EXPECTED: exact]
+[TITLE: Русский controlled instruction-copy block]
+
+WRITE_START
+В полевом журнале указаны дата 08.06.2026, номер НП-04-74, предмет «файл» и этап «проверка кода». Запись составлена как нейтральный учебный пример без реальных имён, адресов, телефонов, e-mail и подписи.
+WRITE_END
+[BLOCK_ID: P004_S01_P06_B05_EN_CONTROLLED_INSTRUCTION_COPY_004]
+[SESSION: S01]
+[PAGE: 06]
+[LANG: en]
+[SCRIPT: latin]
+[TASK_TYPE: en_controlled_instruction_copy]
+[CONDITION: normal]
+[TRANSCRIPTION_EXPECTED: exact]
+[TITLE: English controlled instruction-copy block]
+
+WRITE_START
+The sample folder lists date 04/07/2026, code NF-04-84, object “card”, and step “sample check”. This is a neutral training example with no real names, addresses, phone numbers, e-mail, or signature.
+WRITE_END
+[BLOCK_ID: P004_S01_P06_B06_CONTROLLED_CORRECTION_COPY_004]
+[SESSION: S01]
+[PAGE: 06]
+[LANG: mixed]
+[SCRIPT: mixed]
+[TASK_TYPE: controlled_correction_copy]
+[CONDITION: correction]
+[TRANSCRIPTION_EXPECTED: exact]
+[TITLE: Controlled correction / overwrite copy block]
+
+WRITE_START
+КР-04: учебное исправление — объект заменён на образец; файл, box QX-04, дата 07.06.2026.
 WRITE_END
 ---
 ## S02 Page 01 — Russian retest
@@ -389,7 +428,7 @@ WRITE_END
 [TITLE: Новый русский rotating paragraph для ретеста]
 
 WRITE_START
-В комнате приёма документов утром сверяли анкеты без личных данных, квитанции, штампы и щиток. У низкой стойки лежали овальные образцы: форма, обводка, фургон на схеме, бумажная фишка и мягкая дуга. Запись от 24.05.2026 по ведомости № 25-122 указала сумму — 20 451,53 руб.; рядом добавили пометку: «проверить ещё раз щётку, эскиз, цифру и объект». Затем участник практикума переписал короткую фразу, сравнил подъёмные элементы букв, отметил хвосты у д, у, р, ц, щ и аккуратно убрал лишнюю пыль. Текст нейтрален: без адресов, подписей и личных данных.
+Во второй сессии в лаборатории бумаги сверяли колбу, фольгу, журнал, щёлочной образец и маленький эскиз. У лампы лежали круглая форма, овал, фрагмент буквы ф и хвост у щ. По записи № 44-373 от 24.05.2026 указали сумму — 20 451,53 руб.; рядом поставили фразу: «проверка повторная». Абзац сохраняет контролируемые графовые признаки, но меняет лексику, ритм и порядок числовых элементов.
 WRITE_END
 [BLOCK_ID: P004_S02_P01_B03_RU_REPEAT_RETEST_NORMAL]
 [SESSION: S02]
@@ -432,7 +471,7 @@ WRITE_END
 [TITLE: English anchor retest part]
 
 WRITE_START
-On 24/05/2026, Quick Brown Lab checked invoice No. XQ-57 for $1,248.30. Jolly zebras, quiet ducks, fuzzy boxes, and six mixed glyphs moved by the workbench; Victor noted: “Pack my box with five
+On 24/05/2026, Quick Brown Lab checked invoice No. XQ-57 for $1,248.30. Jolly zebras, quiet ducks, fuzzy boxes, and six mixed glyphs moved by the workbench; A clerk noted: “Pack my box with five
 WRITE_END
 [BLOCK_ID: P004_S02_P02_B02_EN_ROT_PARAGRAPH_014]
 [SESSION: S02]
@@ -445,7 +484,7 @@ WRITE_END
 [TITLE: New English rotating paragraph for retest]
 
 WRITE_START
-At the inventory table, the team carefully numbered zipped bags, quill marks, flex rulers, and box folders. On 14/06/2026, invoice No. QXJ-24-Z44 listed $931.75 and six extra samples. The note said: “Keep every query, x-height mark, zigzag join, and jolly descender visible.” Long letters such as b, d, f, h, k, l, and t were compared with g, j, p, q, and y. No private names were copied; only neutral workshop records, box codes, and clear writing lines were used for the exercise.
+At the paper counter, a quartz ruler, box index, fuzzy jacket, and zigzag strip were placed near the lamp. Invoice No. QXJ-24-Z44 on 14/06/2026 listed $931.75. The phrase “quick joins, exact x-height, jolly descender” is used as a retest cue. No names, addresses, or real private records appear.
 WRITE_END
 [BLOCK_ID: P004_S02_P02_B03_EN_REPEAT_RETEST_NORMAL]
 [SESSION: S02]

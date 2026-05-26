@@ -9,7 +9,10 @@ Updated layout behavior:
   - no bottom QC checkboxes;
   - no footer with source file / page counter;
   - concise exact-copying instructions for writers;
-  - compact multi-column source text fitting, so long blocks do not shrink the writing area.
+  - compact multi-column source text fitting, so long blocks do not shrink the writing area;
+  - Latin letters/English words are bold in mixed Russian/English source blocks;
+  - S02 pages show a 3-14 day interval reminder in the header;
+  - handwriting lines include pale line numbers.
 
 Example:
   python make_printable_pdfs_fixed_18lines.py \
@@ -106,6 +109,9 @@ FIELD_RE = re.compile(r"^\[([A-Z0-9_]+):\s*(.*?)\]\s*$")
 BLOCK_START_RE = re.compile(r"^\[BLOCK_ID:\s*(.*?)\]\s*$")
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 PHONE_RE = re.compile(r"(?<!\d)(?:\+?\d[\s\-()]{0,3}){9,}\d(?!\d)")
+CYRILLIC_LETTER_RE = re.compile(r"[А-Яа-яЁё]")
+LATIN_LETTER_RE = re.compile(r"[A-Za-z]")
+LATIN_RUN_RE = re.compile(r"[A-Za-z]+")
 
 DEFAULT_FONT_CANDIDATES = [
     "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
@@ -323,6 +329,128 @@ def draw_text_lines(c: canvas.Canvas, lines: Sequence[str], x: float, y_top: flo
     return y
 
 
+def is_mixed_ru_en_text(text: str) -> bool:
+    """True when a source block contains both Cyrillic and Latin letters."""
+    return bool(CYRILLIC_LETTER_RE.search(text) and LATIN_LETTER_RE.search(text))
+
+
+def should_bold_latin_in_block(block: ProtocolBlock) -> bool:
+    """Bold Latin runs only in mixed Russian/English source blocks."""
+    return block.lang == "mixed" or is_mixed_ru_en_text(block.text)
+
+
+def local_block_label(block: ProtocolBlock) -> str:
+    """Use the B-number from BLOCK_ID, not the global block ordinal."""
+    match = re.search(r"_B(\d{2,3})(?:_|$)", block.block_id)
+    if match:
+        return f"B{match.group(1)}"
+    return f"B{block.ordinal:02d}"
+
+
+def styled_text_width(text: str, base_font: str, latin_bold_font: str, size: float, bold_latin: bool) -> float:
+    if not bold_latin or not text:
+        return text_width(text, base_font, size)
+    width = 0.0
+    pos = 0
+    for match in LATIN_RUN_RE.finditer(text):
+        if match.start() > pos:
+            width += text_width(text[pos:match.start()], base_font, size)
+        width += text_width(match.group(0), latin_bold_font, size)
+        pos = match.end()
+    if pos < len(text):
+        width += text_width(text[pos:], base_font, size)
+    return width
+
+
+def draw_styled_string(c: canvas.Canvas, text: str, x: float, y: float, base_font: str, latin_bold_font: str, size: float, bold_latin: bool) -> None:
+    if not bold_latin:
+        c.setFont(base_font, size)
+        c.drawString(x, y, text)
+        return
+    cur_x = x
+    pos = 0
+    for match in LATIN_RUN_RE.finditer(text):
+        if match.start() > pos:
+            chunk = text[pos:match.start()]
+            c.setFont(base_font, size)
+            c.drawString(cur_x, y, chunk)
+            cur_x += text_width(chunk, base_font, size)
+        chunk = match.group(0)
+        c.setFont(latin_bold_font, size)
+        c.drawString(cur_x, y, chunk)
+        cur_x += text_width(chunk, latin_bold_font, size)
+        pos = match.end()
+    if pos < len(text):
+        chunk = text[pos:]
+        c.setFont(base_font, size)
+        c.drawString(cur_x, y, chunk)
+
+
+def draw_text_lines_styled(
+    c: canvas.Canvas,
+    lines: Sequence[str],
+    x: float,
+    y_top: float,
+    base_font: str,
+    latin_bold_font: str,
+    size: float,
+    line_h: float,
+    bold_latin: bool,
+    fill=colors.black,
+) -> float:
+    c.saveState()
+    c.setFillColor(fill)
+    y = y_top
+    for line in lines:
+        draw_styled_string(c, line, x, y, base_font, latin_bold_font, size, bold_latin)
+        y -= line_h
+    c.restoreState()
+    return y
+
+
+def wrap_one_paragraph_styled(paragraph: str, base_font: str, latin_bold_font: str, size: float, max_width: float, bold_latin: bool) -> List[str]:
+    if paragraph == "":
+        return [""]
+    words = paragraph.split(" ")
+    lines: List[str] = []
+    cur = ""
+    for word in words:
+        if word == "":
+            continue
+        candidate = word if not cur else cur + " " + word
+        if styled_text_width(candidate, base_font, latin_bold_font, size, bold_latin) <= max_width:
+            cur = candidate
+            continue
+        if cur:
+            lines.append(cur)
+        if styled_text_width(word, base_font, latin_bold_font, size, bold_latin) <= max_width:
+            cur = word
+            continue
+        buf = ""
+        for ch in word:
+            candidate_char = buf + ch
+            if styled_text_width(candidate_char, base_font, latin_bold_font, size, bold_latin) <= max_width:
+                buf = candidate_char
+            else:
+                if buf:
+                    lines.append(buf)
+                buf = ch
+        cur = buf
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def wrap_text_preserve_newlines_styled(text: str, base_font: str, latin_bold_font: str, size: float, max_width: float, bold_latin: bool) -> List[str]:
+    paragraphs = text.splitlines() or [""]
+    out: List[str] = []
+    for idx, paragraph in enumerate(paragraphs):
+        out.extend(wrap_one_paragraph_styled(paragraph.strip(), base_font, latin_bold_font, size, max_width, bold_latin))
+        if idx != len(paragraphs) - 1 and paragraph.strip() == "":
+            out.append("")
+    return out
+
+
 def draw_label(c: canvas.Canvas, x: float, y: float, label: str, value: str, font: str, bold: str, size: float = 7.2) -> None:
     c.saveState()
     c.setFont(bold, size)
@@ -357,11 +485,14 @@ def tempo_instruction(condition: str) -> str:
 
 
 def instruction_for(block: ProtocolBlock) -> str:
-    return (
-        "Перепишите текст из блока ниже дословно: пунктуацию, регистр, символы и цифры. "
-        f"Темп: {tempo_instruction(block.condition)}. "
-        "При ошибке аккуратно зачеркните фрагмент и продолжайте."
-    )
+    parts = [
+        "Перепишите текст из блока ниже дословно: пунктуацию, регистр, символы и цифры.",
+        f"Темп: {tempo_instruction(block.condition)}.",
+        "При ошибке аккуратно зачеркните фрагмент и продолжайте.",
+    ]
+    if should_bold_latin_in_block(block):
+        parts.append("В смешанных RU/EN блоках латиница в образце выделена полужирным.")
+    return " ".join(parts)
 
 
 def draw_header(c: canvas.Canvas, block: ProtocolBlock, cfg: LayoutConfig) -> None:
@@ -376,9 +507,18 @@ def draw_header(c: canvas.Canvas, block: ProtocolBlock, cfg: LayoutConfig) -> No
     c.setFont(cfg.font_bold, 10.8)
     c.drawString(x0 + 4 * mm, y_top - 6.8 * mm, "HI-CSG-R writing form")
     c.setFont(cfg.font_bold, 14.6)
-    compact = f"{block.participant_id}  {block.session} / P{block.page} / B{block.ordinal:02d}"
+    compact = f"{block.participant_id}  {block.session} / P{block.page} / {local_block_label(block)}"
     right_reserve = 33 * mm if cfg.with_qr else 4 * mm
     c.drawRightString(x0 + content_w - right_reserve, y_top - 6.8 * mm, compact)
+    if block.session.upper() == "S02":
+        c.setFont(cfg.font_bold, 7.8)
+        c.setFillColor(colors.HexColor("#555555"))
+        c.drawRightString(
+            x0 + content_w - right_reserve,
+            y_top - 11.3 * mm,
+            "S02: проходить через 3–14 дней после S01",
+        )
+        c.setFillColor(colors.black)
 
     if cfg.with_qr:
         qr_payload = json.dumps(
@@ -414,8 +554,8 @@ def draw_instruction_box(c: canvas.Canvas, block: ProtocolBlock, cfg: LayoutConf
     draw_round_rect(c, x, y, w, h, stroke=colors.black, fill=colors.white, radius=4)
     c.setFont(cfg.font_bold, 8.0)
     c.drawString(x + 3 * mm, y_top - 4.7 * mm, "Указание")
-    lines = wrap_text_preserve_newlines(instruction_for(block), cfg.font_regular, 7.2, w - 6 * mm)
-    draw_text_lines(c, lines[:2], x + 3 * mm, y_top - 9.1 * mm, cfg.font_regular, 7.2, 3.7 * mm)
+    lines = wrap_text_preserve_newlines(instruction_for(block), cfg.font_regular, 6.8, w - 6 * mm)
+    draw_text_lines(c, lines[:3], x + 3 * mm, y_top - 8.6 * mm, cfg.font_regular, 6.8, 3.1 * mm)
     return y - cfg.gap
 
 
@@ -428,6 +568,7 @@ def source_font_for(block: ProtocolBlock, cfg: LayoutConfig) -> str:
 def choose_source_layout(block: ProtocolBlock, cfg: LayoutConfig, inner_w: float, inner_h: float) -> Tuple[float, float, int, List[str], bool]:
     """Fit source text into a fixed box. Returns font size, line height, column count, lines, truncated."""
     font = source_font_for(block, cfg)
+    bold_latin = should_bold_latin_in_block(block)
     task = block.task_type.lower()
     preferred_cols = [1, 2, 3]
     if "target" in task or "numeric" in task or block.lang == "mixed" or len(block.text) > 700:
@@ -441,7 +582,7 @@ def choose_source_layout(block: ProtocolBlock, cfg: LayoutConfig, inner_w: float
             col_w = (inner_w - gutter * (cols - 1)) / cols
             if col_w <= 12 * mm:
                 continue
-            lines = wrap_text_preserve_newlines(block.text, font, size, col_w)
+            lines = wrap_text_preserve_newlines_styled(block.text, font, cfg.font_bold, size, col_w, bold_latin)
             capacity_per_col = max(1, int(inner_h // line_h))
             if len(lines) <= capacity_per_col * cols:
                 return size, line_h, cols, lines, False
@@ -450,7 +591,7 @@ def choose_source_layout(block: ProtocolBlock, cfg: LayoutConfig, inner_w: float
     line_h = size * 1.12
     cols = 3
     col_w = (inner_w - gutter * (cols - 1)) / cols
-    lines = wrap_text_preserve_newlines(block.text, font, size, col_w)
+    lines = wrap_text_preserve_newlines_styled(block.text, font, cfg.font_bold, size, col_w, bold_latin)
     capacity = max(1, int(inner_h // line_h)) * cols
     if len(lines) > capacity:
         lines = lines[: max(1, capacity - 1)] + ["[... clipped; increase --source-height-mm ...]"]
@@ -471,6 +612,7 @@ def draw_source_box(c: canvas.Canvas, block: ProtocolBlock, cfg: LayoutConfig, x
     inner_h = h - 12.5 * mm
     size, line_h, cols, lines, truncated = choose_source_layout(block, cfg, inner_w, inner_h)
     font = source_font_for(block, cfg)
+    bold_latin = should_bold_latin_in_block(block)
     gutter = 3 * mm
     col_w = (inner_w - gutter * (cols - 1)) / cols
     capacity_per_col = max(1, int(inner_h // line_h))
@@ -482,7 +624,10 @@ def draw_source_box(c: canvas.Canvas, block: ProtocolBlock, cfg: LayoutConfig, x
         if not col_lines:
             continue
         col_x = inner_x + col * (col_w + gutter)
-        draw_text_lines(c, col_lines, col_x, inner_top, font, size, line_h)
+        if bold_latin:
+            draw_text_lines_styled(c, col_lines, col_x, inner_top, font, cfg.font_bold, size, line_h, True)
+        else:
+            draw_text_lines(c, col_lines, col_x, inner_top, font, size, line_h)
 
     return y - cfg.gap, truncated
 
@@ -502,9 +647,13 @@ def draw_writing_area(c: canvas.Canvas, cfg: LayoutConfig, x: float, y_top: floa
         y_positions = [start_y - i * line_gap for i in range(cfg.writing_line_count)]
 
     c.saveState()
-    c.setStrokeColor(colors.HexColor("#D7D7D7"))
+    line_color = colors.HexColor("#D7D7D7")
+    c.setStrokeColor(line_color)
+    c.setFillColor(line_color)
     c.setLineWidth(0.35)
-    for y in y_positions:
+    c.setFont(cfg.font_regular, 6.2)
+    for idx, y in enumerate(y_positions, start=1):
+        c.drawRightString(x + 4.2 * mm, y - 1.0 * mm, f"{idx:02d}")
         c.line(x + 5 * mm, y, x + w - 5 * mm, y)
     c.restoreState()
     return y_positions
