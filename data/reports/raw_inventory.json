@@ -1,0 +1,299 @@
+{
+  "comnist": {
+    "dataset": "comnist",
+    "path": "data/raw/comnist",
+    "num_files": 28308,
+    "num_dirs": 70,
+    "extensions": {
+      ".png": 28304,
+      ".csv": 4
+    },
+    "examples_by_extension": {
+      ".csv": [
+        "data/raw/comnist/cyrillic_data/cyrillic_data.csv",
+        "data/raw/comnist/latin_label/latin_label.csv",
+        "data/raw/comnist/cyrillic_label/cyrillic_label.csv",
+        "data/raw/comnist/latin_data/latin_data.csv"
+      ],
+      ".png": [
+        "data/raw/comnist/images/images/Latin/Latin/T/59d23ed4debc7.png",
+        "data/raw/comnist/images/images/Latin/Latin/T/58c040497141f.png",
+        "data/raw/comnist/images/images/Latin/Latin/T/58bf12bce6e33.png",
+        "data/raw/comnist/images/images/Latin/Latin/T/58be8e56d2bc3.png",
+        "data/raw/comnist/images/images/Latin/Latin/T/5958066922698.png",
+        "data/raw/comnist/images/images/Latin/Latin/T/5975b6dae12d6.png",
+        "data/raw/comnist/images/images/Latin/Latin/T/58bc40f30cc85.png",
+        "data/raw/comnist/images/images/Latin/Latin/T/58be9371e0166.png",
+        "data/raw/comnist/images/images/Latin/Latin/T/58cd181a8e10d.png",
+        "data/raw/comnist/images/images/Latin/Latin/T/58bf07ddbcfdd.png"
+      ]
+    }
+  },
+  "cyrillic-handwriting-dataset": {
+    "dataset": "cyrillic-handwriting-dataset",
+    "path": "data/raw/cyrillic-handwriting-dataset",
+    "num_files": 73832,
+    "num_dirs": 2,
+    "extensions": {
+      ".png": 73830,
+      ".tsv": 2
+    },
+    "examples_by_extension": {
+      ".tsv": [
+        "data/raw/cyrillic-handwriting-dataset/train.tsv",
+        "data/raw/cyrillic-handwriting-dataset/test.tsv"
+      ],
+      ".png": [
+        "data/raw/cyrillic-handwriting-dataset/train/av123186.png",
+        "data/raw/cyrillic-handwriting-dataset/train/yob6685.png",
+        "data/raw/cyrillic-handwriting-dataset/train/pe12924.png",
+        "data/raw/cyrillic-handwriting-dataset/train/dem15951.png",
+        "data/raw/cyrillic-handwriting-dataset/train/das2895.png",
+        "data/raw/cyrillic-handwriting-dataset/train/das1620.png",
+        "data/raw/cyrillic-handwriting-dataset/train/pe5143.png",
+        "data/raw/cyrillic-handwriting-dataset/train/ao9753.png",
+        "data/raw/cyrillic-handwriting-dataset/train/lk207.png",
+        "data/raw/cyrillic-handwriting-dataset/train/rc1046.png"
+      ]
+    }
+  },
+  "hkr": {
+    "dataset": "hkr",
+    "path": "data/raw/hkr",
+    "num_files": 3,
+    "num_dirs": 0,
+    "extensions": {
+      ".rar": 2,
+      ".pdf": 1
+    },
+    "examples_by_extension": {
+      ".rar": [
+        "data/raw/hkr/HKR_Dataset_Forms_Public.rar",
+        "data/raw/hkr/HKR_Dataset_Words_Public.rar"
+      ],
+      ".pdf": [
+        "data/raw/hkr/Application_Form_for_HKR.pdf"
+      ]
+    }
+  },
+  "hwr200": {
+    "dataset": "hwr200",
+    "path": "data/raw/hwr200",
+    "num_files": 56,
+    "num_dirs": 43,
+    "extensions": {
+      "<no_ext>": 27,
+      ".sample": 14,
+      ".zip": 11,
+      ".md": 1,
+      ".idx": 1,
+      ".rev": 1,
+      ".pack": 1
+    },
+    "examples_by_extension": {
+      ".md": [
+        "data/raw/hwr200/README.md"
+      ],
+      ".zip": [
+        "data/raw/hwr200/hwr200_40_59.zip",
+        "data/raw/hwr200/hwr200_160_179.zip",
+        "data/raw/hwr200/annotations.zip",
+        "data/raw/hwr200/hwr200_60_79.zip",
+        "data/raw/hwr200/hwr200_80_99.zip",
+        "data/raw/hwr200/hwr200_100_119.zip",
+        "data/raw/hwr200/hwr200_0_19.zip",
+        "data/raw/hwr200/hwr200_140_159.zip",
+        "data/raw/hwr200/hwr200_20_39.zip",
+        "data/raw/hwr200/hwr200_180_199.zip"
+      ],
+      "<no_ext>": [
+        "data/raw/hwr200/.gitattributes",
+        "data/raw/hwr200/.git/index",
+        "data/raw/hwr200/.git/description",
+        "data/raw/hwr200/.git/HEAD",
+        "data/raw/hwr200/.git/packed-refs",
+        "data/raw/hwr200/.git/config",
+        "data/raw/hwr200/.git/hooks/pre-push",
+        "data/raw/hwr200/.git/hooks/post-commit",
+        "data/raw/hwr200/.git/hooks/post-merge",
+        "data/raw/hwr200/.git/hooks/post-checkout"
+      ],
+      ".idx": [
+        "data/raw/hwr200/.git/objects/pack/pack-6e465534bb4f61791acf0427aec7985846146557.idx"
+      ],
+      ".rev": [
+        "data/raw/hwr200/.git/objects/pack/pack-6e465534bb4f61791acf0427aec7985846146557.rev"
+      ],
+      ".pack": [
+        "data/raw/hwr200/.git/objects/pack/pack-6e465534bb4f61791acf0427aec7985846146557.pack"
+      ],
+      ".sample": [
+        "data/raw/hwr200/.git/hooks/fsmonitor-watchman.sample",
+        "data/raw/hwr200/.git/hooks/pre-applypatch.sample",
+        "data/raw/hwr200/.git/hooks/update.sample",
+        "data/raw/hwr200/.git/hooks/post-update.sample",
+        "data/raw/hwr200/.git/hooks/sendemail-validate.sample",
+        "data/raw/hwr200/.git/hooks/pre-rebase.sample",
+        "data/raw/hwr200/.git/hooks/prepare-commit-msg.sample",
+        "data/raw/hwr200/.git/hooks/pre-merge-commit.sample",
+        "data/raw/hwr200/.git/hooks/pre-receive.sample",
+        "data/raw/hwr200/.git/hooks/applypatch-msg.sample"
+      ]
+    }
+  },
+  "iam": {
+    "dataset": "iam",
+    "path": "data/raw/iam",
+    "num_files": 8,
+    "num_dirs": 0,
+    "extensions": {
+      ".tgz": 8
+    },
+    "examples_by_extension": {
+      ".tgz": [
+        "data/raw/iam/words.tgz",
+        "data/raw/iam/xml.tgz",
+        "data/raw/iam/lines.tgz",
+        "data/raw/iam/formsA-D.tgz",
+        "data/raw/iam/ascii.tgz",
+        "data/raw/iam/sentences.tgz",
+        "data/raw/iam/formsE-H.tgz",
+        "data/raw/iam/formsI-Z.tgz"
+      ]
+    }
+  },
+  "peter": {
+    "dataset": "peter",
+    "path": "data/raw/peter",
+    "num_files": 45,
+    "num_dirs": 31,
+    "extensions": {
+      "<no_ext>": 21,
+      ".sample": 14,
+      ".json": 4,
+      ".md": 1,
+      ".zip": 1,
+      ".py": 1,
+      ".pack": 1,
+      ".rev": 1,
+      ".idx": 1
+    },
+    "examples_by_extension": {
+      ".md": [
+        "data/raw/peter/README.md"
+      ],
+      ".json": [
+        "data/raw/peter/annotations_test.json",
+        "data/raw/peter/dataset_infos.json",
+        "data/raw/peter/annotations_val.json",
+        "data/raw/peter/annotations_train.json"
+      ],
+      "<no_ext>": [
+        "data/raw/peter/.gitattributes",
+        "data/raw/peter/.git/index",
+        "data/raw/peter/.git/description",
+        "data/raw/peter/.git/HEAD",
+        "data/raw/peter/.git/packed-refs",
+        "data/raw/peter/.git/config",
+        "data/raw/peter/.git/hooks/pre-push",
+        "data/raw/peter/.git/hooks/post-commit",
+        "data/raw/peter/.git/hooks/post-merge",
+        "data/raw/peter/.git/hooks/post-checkout"
+      ],
+      ".zip": [
+        "data/raw/peter/images.zip"
+      ],
+      ".py": [
+        "data/raw/peter/Peter.py"
+      ],
+      ".pack": [
+        "data/raw/peter/.git/objects/pack/pack-89c5efd87808d7b09e308505f1c8c08637fb6ab5.pack"
+      ],
+      ".rev": [
+        "data/raw/peter/.git/objects/pack/pack-89c5efd87808d7b09e308505f1c8c08637fb6ab5.rev"
+      ],
+      ".idx": [
+        "data/raw/peter/.git/objects/pack/pack-89c5efd87808d7b09e308505f1c8c08637fb6ab5.idx"
+      ],
+      ".sample": [
+        "data/raw/peter/.git/hooks/fsmonitor-watchman.sample",
+        "data/raw/peter/.git/hooks/pre-applypatch.sample",
+        "data/raw/peter/.git/hooks/update.sample",
+        "data/raw/peter/.git/hooks/post-update.sample",
+        "data/raw/peter/.git/hooks/sendemail-validate.sample",
+        "data/raw/peter/.git/hooks/pre-rebase.sample",
+        "data/raw/peter/.git/hooks/prepare-commit-msg.sample",
+        "data/raw/peter/.git/hooks/pre-merge-commit.sample",
+        "data/raw/peter/.git/hooks/pre-receive.sample",
+        "data/raw/peter/.git/hooks/applypatch-msg.sample"
+      ]
+    }
+  },
+  "school_notebooks": {
+    "dataset": "school_notebooks",
+    "path": "data/raw/school_notebooks",
+    "num_files": 45,
+    "num_dirs": 31,
+    "extensions": {
+      "<no_ext>": 21,
+      ".sample": 14,
+      ".json": 4,
+      ".py": 1,
+      ".md": 1,
+      ".zip": 1,
+      ".pack": 1,
+      ".idx": 1,
+      ".rev": 1
+    },
+    "examples_by_extension": {
+      ".py": [
+        "data/raw/school_notebooks/school_notebooks_RU.py"
+      ],
+      ".md": [
+        "data/raw/school_notebooks/README.md"
+      ],
+      ".json": [
+        "data/raw/school_notebooks/annotations_test.json",
+        "data/raw/school_notebooks/dataset_infos.json",
+        "data/raw/school_notebooks/annotations_val.json",
+        "data/raw/school_notebooks/annotations_train.json"
+      ],
+      "<no_ext>": [
+        "data/raw/school_notebooks/.gitattributes",
+        "data/raw/school_notebooks/.git/index",
+        "data/raw/school_notebooks/.git/description",
+        "data/raw/school_notebooks/.git/HEAD",
+        "data/raw/school_notebooks/.git/packed-refs",
+        "data/raw/school_notebooks/.git/config",
+        "data/raw/school_notebooks/.git/hooks/pre-push",
+        "data/raw/school_notebooks/.git/hooks/post-commit",
+        "data/raw/school_notebooks/.git/hooks/post-merge",
+        "data/raw/school_notebooks/.git/hooks/post-checkout"
+      ],
+      ".zip": [
+        "data/raw/school_notebooks/images.zip"
+      ],
+      ".pack": [
+        "data/raw/school_notebooks/.git/objects/pack/pack-6782dcc83e5fa741b7340c86b05b16e7232d7822.pack"
+      ],
+      ".idx": [
+        "data/raw/school_notebooks/.git/objects/pack/pack-6782dcc83e5fa741b7340c86b05b16e7232d7822.idx"
+      ],
+      ".rev": [
+        "data/raw/school_notebooks/.git/objects/pack/pack-6782dcc83e5fa741b7340c86b05b16e7232d7822.rev"
+      ],
+      ".sample": [
+        "data/raw/school_notebooks/.git/hooks/fsmonitor-watchman.sample",
+        "data/raw/school_notebooks/.git/hooks/pre-applypatch.sample",
+        "data/raw/school_notebooks/.git/hooks/update.sample",
+        "data/raw/school_notebooks/.git/hooks/post-update.sample",
+        "data/raw/school_notebooks/.git/hooks/sendemail-validate.sample",
+        "data/raw/school_notebooks/.git/hooks/pre-rebase.sample",
+        "data/raw/school_notebooks/.git/hooks/prepare-commit-msg.sample",
+        "data/raw/school_notebooks/.git/hooks/pre-merge-commit.sample",
+        "data/raw/school_notebooks/.git/hooks/pre-receive.sample",
+        "data/raw/school_notebooks/.git/hooks/applypatch-msg.sample"
+      ]
+    }
+  }
+}

@@ -1,0 +1,896 @@
+group_id,group_size,splits_source,num_unique_transcriptions,transcriptions,sample_ids,source_ids
+8012,2,train_source,1,капитал,cyr_word_008013 | cyr_word_008658,ahh1268.png | ahh2956.png
+8013,2,train_source,1,трудом,cyr_word_008014 | cyr_word_008660,ahh1270.png | ahh2958.png
+8014,2,train_source,1,прибыль,cyr_word_008015 | cyr_word_008662,ahh1272.png | ahh2960.png
+8015,2,train_source,1,доходы минус,cyr_phrase_008016 | cyr_phrase_008663,ahh1273.png | ahh2961.png
+8016,2,train_source,1,чистая,cyr_word_008017 | cyr_word_008664,ahh1276.png | ahh2964.png
+8017,2,train_source,1,прибыль,cyr_word_008018 | cyr_word_008665,ahh1277.png | ahh2965.png
+8018,2,train_source,1,кол-ва,cyr_word_008019 | cyr_word_008666,ahh1279.png | ahh2967.png
+8020,2,train_source,1,девиденды,cyr_word_008021 | cyr_word_008667,ahh1280.png | ahh2968.png
+8021,2,train_source,1,человек,cyr_word_008022 | cyr_word_008668,ahh1281.png | ahh2969.png
+8023,2,train_source,2,показа || показь,cyr_word_008024 | cyr_word_008669,ahh1285.png | ahh2973.png
+8024,2,train_source,1,какое,cyr_word_008025 | cyr_word_008670,ahh1287.png | ahh2975.png
+8025,2,train_source,1,кол-во,cyr_word_008026 | cyr_word_008671,ahh1288.png | ahh2976.png
+8026,2,train_source,1,выработку,cyr_word_008027 | cyr_word_008672,ahh1290.png | ahh2978.png
+8027,2,train_source,1,фактор,cyr_word_008028 | cyr_word_008674,ahh1293.png | ahh2981.png
+8028,2,train_source,1,единицы,cyr_word_008029 | cyr_word_008675,ahh1297.png | ahh2985.png
+8029,2,train_source,1,продукций,cyr_word_008030 | cyr_word_008676,ahh1298.png | ahh2986.png
+8030,2,train_source,1,выработка,cyr_word_008031 | cyr_word_008677,ahh1299.png | ahh2987.png
+8032,2,train_source,1,рабочая,cyr_word_008033 | cyr_word_008678,ahh1300.png | ahh2988.png
+8033,2,train_source,1,сила,cyr_word_008034 | cyr_word_008679,ahh1301.png | ahh2989.png
+8034,2,train_source,1,способность,cyr_word_008035 | cyr_word_008680,ahh1302.png | ahh2990.png
+8035,2,train_source,1,чел-ка,cyr_word_008036 | cyr_word_008681,ahh1303.png | ahh2991.png
+8036,2,train_source,1,способность,cyr_word_008037 | cyr_word_008683,ahh1306.png | ahh2994.png
+8037,2,train_source,1,сил,cyr_word_008038 | cyr_word_008684,ahh1308.png | ahh2996.png
+8040,2,train_source,1,деятель,cyr_word_008041 | cyr_word_008687,ahh1314.png | ahh3002.png
+8042,2,train_source,1,кости,cyr_word_008043 | cyr_word_008689,ahh1317.png | ahh3005.png
+8044,2,train_source,1,эконом,cyr_word_008045 | cyr_word_008691,ahh1323.png | ahh3011.png
+8045,2,train_source,1,ресурсы,cyr_word_008046 | cyr_word_008692,ahh1324.png | ahh3012.png
+8046,2,train_source,1,природные,cyr_word_008047 | cyr_word_008693,ahh1325.png | ahh3013.png
+8047,2,train_source,1,технические,cyr_word_008048 | cyr_word_008695,ahh1327.png | ahh3015.png
+8048,2,train_source,1,расчитывает,cyr_word_008049 | cyr_word_008696,ahh1329.png | ahh3017.png
+8049,2,train_source,1,чем,cyr_word_008050 | cyr_word_008699,ahh1334.png | ahh3022.png
+8050,2,train_source,1,необходимо,cyr_word_008051 | cyr_word_008700,ahh1335.png | ahh3023.png
+8051,2,train_source,1,показателями,cyr_word_008052 | cyr_word_008701,ahh1337.png | ahh3025.png
+8052,2,train_source,1,лет,cyr_word_008053 | cyr_word_008702,ahh1339.png | ahh3027.png
+8053,2,train_source,1,выроботка,cyr_word_008054 | cyr_word_008703,ahh1342.png | ahh3030.png
+8054,2,train_source,1,прямой,cyr_word_008055 | cyr_word_008704,ahh1343.png | ahh3031.png
+8055,2,train_source,1,показатель,cyr_word_008056 | cyr_word_008705,ahh1344.png | ahh3032.png
+8056,2,train_source,1,кол-во,cyr_word_008057 | cyr_word_008706,ahh1345.png | ahh3033.png
+8057,2,train_source,1,единицу,cyr_word_008058 | cyr_word_008708,ahh1350.png | ahh3038.png
+8058,2,train_source,1,одного,cyr_word_008059 | cyr_word_008709,ahh1352.png | ahh3040.png
+8059,2,train_source,1,теория,cyr_word_008060 | cyr_word_008710,ahh1354.png | ahh3042.png
+8060,2,train_source,1,изучает,cyr_word_008061 | cyr_word_008711,ahh1355.png | ahh3043.png
+8061,2,train_source,2,закон о || законо,cyr_phrase_008062 | cyr_word_008712,ahh1356.png | ahh3044.png
+8062,2,train_source,1,расходы,cyr_word_008063 | cyr_word_008715,ahh1361.png | ahh3049.png
+8063,2,train_source,1,время,cyr_word_008064 | cyr_word_008716,ahh1362.png | ahh3050.png
+8064,2,train_source,1,труда,cyr_word_008065 | cyr_word_008717,ahh1363.png | ahh3051.png
+8065,2,train_source,1,матер,cyr_word_008066 | cyr_word_008718,ahh1368.png | ahh3056.png
+8067,2,train_source,1,правило,cyr_word_008068 | cyr_word_008719,ahh1371.png | ahh3059.png
+8068,2,train_source,1,удовл,cyr_word_008069 | cyr_word_008721,ahh1372.png | ahh3060.png
+8069,2,train_source,1,времени,cyr_word_008070 | cyr_word_008722,ahh1376.png | ahh3064.png
+8072,2,train_source,1,товар,cyr_word_008073 | cyr_word_009154,ahh1379.png | ahh3841.png
+8074,2,train_source,1,история,cyr_word_008075 | cyr_word_009155,ahh1380.png | ahh3842.png
+8076,2,train_source,1,эконом,cyr_word_008077 | cyr_word_009156,ahh1382.png | ahh3844.png
+8077,2,train_source,1,теории,cyr_word_008078 | cyr_word_009157,ahh1383.png | ahh3845.png
+8078,2,train_source,1,деньги,cyr_word_008079 | cyr_word_009158,ahh1384.png | ahh3846.png
+8079,2,train_source,1,этапы развития,cyr_phrase_008080 | cyr_phrase_009159,ahh1385.png | ahh3847.png
+8080,2,train_source,1,эконом,cyr_word_008081 | cyr_word_009160,ahh1386.png | ahh3848.png
+8081,2,train_source,1,теории:,cyr_word_008082 | cyr_word_009161,ahh1387.png | ahh3849.png
+8082,2,train_source,1,объекта,cyr_word_008083 | cyr_word_009163,ahh1388.png | ahh3850.png
+8083,2,train_source,1,анализ,cyr_word_008084 | cyr_word_009164,ahh1389.png | ahh3851.png
+8084,2,train_source,1,синтез,cyr_word_008085 | cyr_word_009165,ahh1390.png | ahh3852.png
+8085,2,train_source,1,изучение,cyr_word_008086 | cyr_word_009166,ahh1391.png | ahh3853.png
+8086,2,train_source,1,целом,cyr_word_008087 | cyr_word_009167,ahh1392.png | ahh3854.png
+8087,2,train_source,1,мерконтимум,cyr_word_008088 | cyr_word_009168,ahh1393.png | ahh3855.png
+8088,2,train_source,1,классическая,cyr_word_008089 | cyr_word_009169,ahh1394.png | ahh3856.png
+8089,2,train_source,1,экономикс,cyr_word_008090 | cyr_word_009170,ahh1397.png | ahh3859.png
+8090,2,train_source,1,политиче,cyr_word_008091 | cyr_word_009172,ahh1398.png | ahh3860.png
+8094,2,train_source,1,5-17,cyr_word_008095 | cyr_word_009174,ahh1402.png | ahh3864.png
+8095,2,train_source,1,как,cyr_word_008096 | cyr_word_009176,ahh1407.png | ahh3869.png
+8096,2,train_source,1,сумма,cyr_word_008097 | cyr_word_009177,ahh1408.png | ahh3870.png
+8098,2,train_source,1,мые,cyr_word_008099 | cyr_word_009179,ahh1412.png | ahh3874.png
+8099,2,train_source,1,экономиче,cyr_word_008100 | cyr_word_009181,ahh1414.png | ahh3876.png
+8101,2,train_source,1,теория,cyr_word_008102 | cyr_word_009182,ahh1417.png | ahh3879.png
+8102,2,train_source,1,основная,cyr_word_008103 | cyr_word_009184,ahh1418.png | ahh3880.png
+8106,2,train_source,1,россия,cyr_word_008107 | cyr_word_009185,ahh1421.png | ahh3883.png
+8107,2,train_source,1,капитар,cyr_word_008108 | cyr_word_009186,ahh1423.png | ahh3885.png
+8108,2,train_source,1,тома,cyr_word_008109 | cyr_word_009187,ahh1424.png | ahh3886.png
+8109,2,train_source,1,при жизни,cyr_phrase_008110 | cyr_phrase_009188,ahh1425.png | ahh3887.png
+8110,2,train_source,1,изучает,cyr_word_008111 | cyr_word_009189,ahh1426.png | ahh3888.png
+8113,2,train_source,1,индукция,cyr_word_008114 | cyr_word_009192,ahh1430.png | ahh3892.png
+8114,2,train_source,1,лизм,cyr_word_008115 | cyr_word_009194,ahh1433.png | ahh3895.png
+8115,2,train_source,1,деньги,cyr_word_008116 | cyr_word_009195,ahh1434.png | ahh3896.png
+8116,2,train_source,1,частные,cyr_word_008117 | cyr_word_009197,ahh1436.png | ahh3898.png
+8117,2,train_source,1,акты,cyr_word_008118 | cyr_word_009198,ahh1437.png | ahh3899.png
+8118,2,train_source,1,частные,cyr_word_008119 | cyr_word_009200,ahh1438.png | ahh3900.png
+8119,2,train_source,1,этого,cyr_word_008120 | cyr_word_009201,ahh1440.png | ahh3902.png
+8120,2,train_source,1,богатства,cyr_word_008121 | cyr_word_009202,ahh1441.png | ahh3903.png
+8121,2,train_source,1,выводы,cyr_word_008122 | cyr_word_009203,ahh1443.png | ahh3905.png
+8122,2,train_source,1,средства,cyr_word_008123 | cyr_word_009204,ahh1444.png | ahh3906.png
+8123,2,train_source,1,ращения,cyr_word_008124 | cyr_word_009205,ahh1445.png | ahh3907.png
+8124,2,train_source,1,положения,cyr_word_008125 | cyr_word_009206,ahh1447.png | ahh3909.png
+8125,2,train_source,1,должно,cyr_word_008126 | cyr_word_009208,ahh1450.png | ahh3912.png
+8126,2,train_source,1,активно,cyr_word_008127 | cyr_word_009209,ahh1451.png | ahh3913.png
+8127,2,train_source,1,фический,cyr_word_008128 | cyr_word_009210,ahh1453.png | ahh3915.png
+8128,2,train_source,1,метод,cyr_word_008129 | cyr_word_009211,ahh1454.png | ahh3916.png
+8129,2,train_source,1,экономи,cyr_word_008130 | cyr_word_009213,ahh1457.png | ahh3919.png
+8130,2,train_source,2,стратегия || стрателия,cyr_word_008131 | cyr_word_009215,ahh1458.png | ahh3920.png
+8133,2,train_source,1,полез,cyr_word_008134 | cyr_word_009219,ahh1466.png | ahh3928.png
+8134,2,train_source,1,эпоха,cyr_word_008135 | cyr_word_009221,ahh1468.png | ahh3930.png
+8135,2,train_source,1,монета,cyr_word_008136 | cyr_word_009222,ahh1469.png | ahh3931.png
+8136,2,train_source,1,разв,cyr_word_008137 | cyr_word_009223,ahh1471.png | ahh3933.png
+8137,2,train_source,1,это,cyr_word_008138 | cyr_word_009224,ahh1473.png | ahh3935.png
+8139,2,train_source,1,добычи,cyr_word_008140 | cyr_word_009227,ahh1487.png | ahh3949.png
+8141,2,train_source,1,разбор дз.,cyr_phrase_008142 | cyr_phrase_017704,ahh1490.png | aw1319.png
+8151,2,train_source,1,глобальных,cyr_word_008152 | cyr_word_017923,ahh1658.png | aw924.png
+8152,2,train_source,1,вычислительная,cyr_word_008153 | cyr_word_017928,ahh1663.png | aw929.png
+8153,2,train_source,1,сеть,cyr_word_008154 | cyr_word_017930,ahh1664.png | aw930.png
+8154,2,train_source,1,при,cyr_word_008155 | cyr_word_017933,ahh1667.png | aw933.png
+8155,2,train_source,1,объединении,cyr_word_008156 | cyr_word_017934,ahh1668.png | aw934.png
+8156,2,train_source,1,ватепей,cyr_word_008157 | cyr_word_017937,ahh1673.png | aw939.png
+8161,2,train_source,1,которое,cyr_word_008162 | cyr_word_017954,ahh1691.png | aw957.png
+8166,2,train_source,1,сетей,cyr_word_008167 | cyr_word_017964,ahh1701.png | aw967.png
+8174,2,train_source,1,эвм,cyr_word_008175 | cyr_word_017980,ahh1720.png | aw986.png
+8176,2,train_source,1,сред.,cyr_word_008177 | cyr_word_017991,ahh1733.png | aw999.png
+8177,2,train_source,2,вание || вания,cyr_word_008178 | cyr_word_017597,ahh1736.png | aw1002.png
+8178,2,train_source,1,сетям.,cyr_word_008179 | cyr_word_017598,ahh1740.png | aw1006.png
+8181,3,train_source,1,решения,cyr_word_008182 | cyr_word_008829 | cyr_word_017604,ahh1754.png | ahh3224.png | aw1111.png
+8182,3,train_source,1,что,cyr_word_008183 | cyr_word_008830 | cyr_word_017605,ahh1758.png | ahh3228.png | aw1115.png
+8184,3,train_source,1,какие,cyr_word_008185 | cyr_word_008832 | cyr_word_017606,ahh1762.png | ahh3232.png | aw1119.png
+8185,3,train_source,1,именно,cyr_word_008186 | cyr_word_008833 | cyr_word_017608,ahh1763.png | ahh3233.png | aw1120.png
+8186,2,train_source,1,блага,cyr_word_008187 | cyr_word_008834,ahh1764.png | ahh3234.png
+8187,2,train_source,1,испо,cyr_word_008188 | cyr_word_008835,ahh1766.png | ahh3236.png
+8188,2,train_source,1,кач,cyr_word_008189 | cyr_word_008836,ahh1767.png | ahh3237.png
+8189,3,train_source,1,какого,cyr_word_008190 | cyr_word_008838 | cyr_word_017609,ahh1771.png | ahh3241.png | aw1128.png
+8190,3,train_source,1,природны,cyr_word_008191 | cyr_word_008839 | cyr_word_017610,ahh1772.png | ahh3242.png | aw1129.png
+8191,2,train_source,1,вом,cyr_word_008192 | cyr_word_008840,ahh1774.png | ahh3244.png
+8192,3,train_source,1,быть,cyr_word_008193 | cyr_word_008841 | cyr_word_017611,ahh1776.png | ahh3246.png | aw1133.png
+8193,2,train_source,1,производить,cyr_word_008194 | cyr_word_008842,ahh1777.png | ahh3247.png
+8194,2,train_source,1,маш. тех,cyr_phrase_008195 | cyr_phrase_017612,ahh1778.png | aw1135.png
+8195,2,train_source,1,потребности,cyr_word_008196 | cyr_word_008843,ahh1779.png | ahh3249.png
+8197,3,train_source,1,(голосование,cyr_word_008198 | cyr_word_008845 | cyr_word_017613,ahh1780.png | ahh3250.png | aw1137.png
+8198,2,train_source,1,путем,cyr_word_008199 | cyr_word_008846,ahh1781.png | ahh3251.png
+8199,3,train_source,1,общества,cyr_word_008200 | cyr_word_008847 | cyr_word_017614,ahh1782.png | ahh3252.png | aw1139.png
+8200,3,train_source,1,финансовые,cyr_word_008201 | cyr_word_008848 | cyr_word_017615,ahh1783.png | ahh3253.png | aw1140.png
+8201,2,train_source,1,(безграничны),cyr_word_008202 | cyr_word_008849,ahh1784.png | ahh3254.png
+8202,2,train_source,1,ресурсы,cyr_word_008203 | cyr_word_008850,ahh1785.png | ahh3255.png
+8203,2,train_source,1,как,cyr_word_008204 | cyr_word_008851,ahh1786.png | ahh3256.png
+8204,3,train_source,1,производить,cyr_word_008205 | cyr_word_008852 | cyr_word_017616,ahh1787.png | ahh3257.png | aw1144.png
+8205,3,train_source,1,решения,cyr_word_008206 | cyr_word_008854 | cyr_word_017617,ahh1789.png | ahh3259.png | aw1146.png
+8207,3,train_source,1,проблема,cyr_word_008208 | cyr_word_008856 | cyr_word_017618,ahh1792.png | ahh3262.png | aw1149.png
+8208,3,train_source,1,помощью,cyr_word_008209 | cyr_word_008858 | cyr_word_017620,ahh1794.png | ahh3264.png | aw1151.png
+8209,2,train_source,1,что,cyr_word_008210 | cyr_word_008861,ahh1797.png | ahh3267.png
+8210,2,train_source,1,производиться,cyr_word_008211 | cyr_word_008862,ahh1798.png | ahh3268.png
+8211,3,train_source,1,товары,cyr_word_008212 | cyr_word_008863 | cyr_word_017622,ahh1799.png | ahh3269.png | aw1156.png
+8212,3,train_source,1,как,cyr_word_008213 | cyr_word_008865 | cyr_word_017623,ahh1800.png | ahh3270.png | aw1157.png
+8213,2,train_source,1,будут,cyr_word_008214 | cyr_word_008866,ahh1801.png | ahh3271.png
+8214,3,train_source,1,кого,cyr_word_008215 | cyr_word_008867 | cyr_word_017624,ahh1802.png | ahh3272.png | aw1159.png
+8216,2,train_source,1,технологии,cyr_word_008217 | cyr_word_008868,ahh1804.png | ahh3274.png
+8217,3,train_source,1,сколь,cyr_word_008218 | cyr_word_008869 | cyr_word_017626,ahh1805.png | ahh3275.png | aw1162.png
+8218,3,train_source,1,какои,cyr_word_008219 | cyr_word_008870 | cyr_word_017627,ahh1807.png | ahh3277.png | aw1164.png
+8219,2,train_source,1,возмож,cyr_word_008220 | cyr_word_008871,ahh1809.png | ahh3279.png
+8220,2,train_source,1,цене,cyr_word_008221 | cyr_word_008873,ahh1810.png | ahh3280.png
+8221,3,train_source,1,во товаров,cyr_phrase_008222 | cyr_phrase_008874 | cyr_phrase_017628,ahh1812.png | ahh3282.png | aw1169.png
+8222,2,train_source,1,и услуг,cyr_phrase_008223 | cyr_phrase_008875,ahh1813.png | ahh3283.png
+8223,2,train_source,1,которые,cyr_word_008224 | cyr_word_008876,ahh1814.png | ahh3284.png
+8224,3,train_source,1,экономическая,cyr_word_008225 | cyr_word_008877 | cyr_word_017629,ahh1815.png | ahh3285.png | aw1172.png
+8225,2,train_source,1,парадигма,cyr_word_008226 | cyr_word_008878,ahh1816.png | ahh3286.png
+8226,3,train_source,1,может,cyr_word_008227 | cyr_word_008879 | cyr_word_017630,ahh1817.png | ahh3287.png | aw1174.png
+8227,3,train_source,1,быть,cyr_word_008228 | cyr_word_008880 | cyr_word_017631,ahh1818.png | ahh3288.png | aw1175.png
+8229,3,train_source,1,что-то,cyr_word_008230 | cyr_word_008882 | cyr_word_017633,ahh1821.png | ahh3291.png | aw1178.png
+8230,3,train_source,1,новое,cyr_word_008231 | cyr_word_008883 | cyr_word_017634,ahh1822.png | ahh3292.png | aw1179.png
+8231,3,train_source,1,кия,cyr_word_008232 | cyr_word_008884 | cyr_word_017636,ahh1823.png | ahh3293.png | aw1180.png
+8232,3,train_source,1,определ,cyr_word_008233 | cyr_word_008886 | cyr_word_017637,ahh1826.png | ahh3296.png | aw1183.png
+8233,3,train_source,1,при,cyr_word_008234 | cyr_word_008887 | cyr_word_017638,ahh1827.png | ahh3297.png | aw1184.png
+8234,2,train_source,1,данных ресурсах,cyr_phrase_008235 | cyr_phrase_008888,ahh1828.png | ahh3298.png
+8235,2,train_source,1,и технологий,cyr_phrase_008236 | cyr_phrase_008890,ahh1830.png | ahh3300.png
+8236,3,train_source,1,экономически,cyr_word_008237 | cyr_word_008891 | cyr_word_017639,ahh1832.png | ahh3302.png | aw1189.png
+8238,3,train_source,1,технологии,cyr_word_008239 | cyr_word_008892 | cyr_word_017640,ahh1836.png | ahh3306.png | aw1193.png
+8239,3,train_source,1,рудовые,cyr_word_008240 | cyr_word_008893 | cyr_word_017641,ahh1838.png | ahh3308.png | aw1195.png
+8240,2,train_source,1,обществу,cyr_word_008241 | cyr_word_008894,ahh1843.png | ahh3313.png
+8241,2,train_source,1,альтора,cyr_word_008242 | cyr_word_008895,ahh1846.png | ahh3316.png
+8242,2,train_source,1,числовых,cyr_word_008243 | cyr_word_017798,ahh1851.png | aw72.png
+8243,2,train_source,1,данных.,cyr_word_008244 | cyr_word_017800,ahh1852.png | aw73.png
+8245,2,train_source,1,шуро-,cyr_word_008246 | cyr_word_017804,ahh1857.png | aw78.png
+8246,2,train_source,1,числовых,cyr_word_008247 | cyr_word_017806,ahh1858.png | aw79.png
+8250,2,train_source,1,иность,cyr_word_008251 | cyr_word_017929,ahh1872.png | aw93.png
+8252,2,train_source,1,иность,cyr_word_008253 | cyr_word_017607,ahh1891.png | aw112.png
+8256,2,train_source,1,обоз,cyr_word_008257 | cyr_word_017706,ahh1912.png | aw133.png
+8260,3,train_source,1,сколько,cyr_word_008261 | cyr_word_008723 | cyr_word_017644,ahh193.png | ahh3066.png | aw1206.png
+8261,2,train_source,1,волчная,cyr_word_008262 | cyr_word_017715,ahh1931.png | aw152.png
+8269,3,train_source,1,цене,cyr_word_008270 | cyr_word_008725 | cyr_word_017646,ahh196.png | ahh3069.png | aw1209.png
+8270,2,train_source,1,формы,cyr_word_008271 | cyr_word_017724,ahh1965.png | aw186.png
+8271,2,train_source,1,образова,cyr_word_008272 | cyr_word_008727,ahh197.png | ahh3070.png
+8272,2,train_source,2,пассивная || пасывная,cyr_word_008273 | cyr_word_017727,ahh1975.png | aw196.png
+8273,2,train_source,1,форма,cyr_word_008274 | cyr_word_017728,ahh1982.png | aw203.png
+8277,2,train_source,1,общества.,cyr_word_008278 | cyr_word_017729,ahh1992.png | aw213.png
+8278,2,train_source,1,ность,cyr_word_008279 | cyr_word_017730,ahh1994.png | aw215.png
+8280,2,train_source,1,работать,cyr_word_008281 | cyr_word_017732,ahh2003.png | aw224.png
+8281,2,train_source,1,вопрос,cyr_word_008282 | cyr_word_017733,ahh2008.png | aw229.png
+8282,3,train_source,1,для,cyr_word_008283 | cyr_word_008729 | cyr_word_017648,ahh201.png | ahh3074.png | aw1214.png
+8286,3,train_source,1,ская,cyr_word_008287 | cyr_word_008730 | cyr_word_017649,ahh203.png | ahh3076.png | aw1216.png
+8287,2,train_source,1,ранных,cyr_word_008288 | cyr_word_017735,ahh2037.png | aw258.png
+8289,3,train_source,1,прикладная,cyr_word_008290 | cyr_word_008731 | cyr_word_017650,ahh204.png | ahh3077.png | aw1217.png
+8300,3,train_source,1,налоги,cyr_word_008301 | cyr_word_008733 | cyr_word_017652,ahh207.png | ahh3080.png | aw1220.png
+8303,3,train_source,1,методы,cyr_word_008304 | cyr_word_008734 | cyr_word_017653,ahh208.png | ahh3081.png | aw1221.png
+8309,2,train_source,1,экономич,cyr_word_008310 | cyr_word_008735,ahh209.png | ahh3082.png
+8320,3,train_source,1,ские,cyr_word_008321 | cyr_word_008736 | cyr_word_017654,ahh211.png | ahh3084.png | aw1224.png
+8324,3,train_source,1,наблюдение,cyr_word_008325 | cyr_word_008737 | cyr_word_017655,ahh212.png | ahh3085.png | aw1225.png
+8333,3,train_source,1,налог,cyr_word_008334 | cyr_word_008738 | cyr_word_017656,ahh214.png | ahh3087.png | aw1227.png
+8337,3,train_source,1,частичное,cyr_word_008338 | cyr_word_008739 | cyr_word_017657,ahh215.png | ahh3088.png | aw1228.png
+8339,3,train_source,1,изъятие,cyr_word_008340 | cyr_word_008740 | cyr_word_017658,ahh216.png | ahh3089.png | aw1229.png
+8341,2,train_source,1,кых,cyr_word_008342 | cyr_word_008742,ahh217.png | ahh3090.png
+8350,3,train_source,1,польз,cyr_word_008351 | cyr_word_008743 | cyr_word_017659,ahh219.png | ahh3092.png | aw1232.png
+8356,3,train_source,1,гос-,cyr_word_008357 | cyr_word_008744 | cyr_word_017660,ahh220.png | ahh3093.png | aw1233.png
+8364,3,train_source,1,эксперимент,cyr_word_008365 | cyr_word_008745 | cyr_word_017661,ahh222.png | ahh3095.png | aw1235.png
+8367,3,train_source,1,моделирование,cyr_word_008368 | cyr_word_008747 | cyr_word_017662,ahh226.png | ahh3099.png | aw1239.png
+8368,2,train_source,1,позднего,cyr_word_008369 | cyr_word_009229,ahh2319.png | ahh3951.png
+8369,3,train_source,1,империческая,cyr_word_008370 | cyr_word_008751 | cyr_word_017664,ahh232.png | ahh3105.png | aw1245.png
+8371,2,train_source,1,составляют,cyr_word_008372 | cyr_word_009231,ahh2323.png | ahh3955.png
+8372,2,train_source,1,при выходе,cyr_phrase_008373 | cyr_phrase_009234,ahh2329.png | ahh3961.png
+8373,2,train_source,1,мир,cyr_word_008374 | cyr_word_009235,ahh2331.png | ahh3963.png
+8374,2,train_source,1,рынок,cyr_word_008375 | cyr_word_009236,ahh2332.png | ahh3964.png
+8376,2,train_source,1,продукты,cyr_word_008377 | cyr_word_009238,ahh2336.png | ahh3968.png
+8378,2,train_source,1,ая,cyr_word_008379 | cyr_word_009240,ahh2340.png | ahh3972.png
+8379,2,train_source,1,чем,cyr_word_008380 | cyr_word_009242,ahh2342.png | ahh3974.png
+8380,2,train_source,1,пища,cyr_word_008381 | cyr_word_009243,ahh2343.png | ahh3975.png
+8381,2,train_source,1,цена,cyr_word_008382 | cyr_word_009245,ahh2345.png | ahh3977.png
+8382,2,train_source,1,цена,cyr_word_008383 | cyr_word_009246,ahh2346.png | ahh3978.png
+8384,2,train_source,1,одно другое,cyr_phrase_008385 | cyr_phrase_009248,ahh2349.png | ahh3981.png
+8385,2,train_source,1,привлечь,cyr_word_008386 | cyr_word_009249,ahh2350.png | ahh3982.png
+8387,2,train_source,1,можно,cyr_word_008388 | cyr_word_009250,ahh2355.png | ahh3987.png
+8388,2,train_source,1,дает,cyr_word_008389 | cyr_word_009252,ahh2359.png | ahh3991.png
+8389,3,train_source,1,деление,cyr_word_008390 | cyr_word_008753 | cyr_word_017667,ahh236.png | ahh3109.png | aw1249.png
+8390,2,train_source,1,только,cyr_word_008391 | cyr_word_009253,ahh2360.png | ahh3992.png
+8391,2,train_source,1,демпинговая,cyr_word_008392 | cyr_word_009254,ahh2362.png | ahh3994.png
+8392,2,train_source,1,политика,cyr_word_008393 | cyr_word_009255,ahh2363.png | ahh3995.png
+8393,2,train_source,1,поличика,cyr_word_008394 | cyr_word_009256,ahh2365.png | ahh3997.png
+8394,2,train_source,1,источники,cyr_word_008395 | cyr_word_009257,ahh2367.png | ahh3999.png
+8395,2,train_source,1,физиокра,cyr_word_008396 | cyr_word_009260,ahh2368.png | ahh4000.png
+8396,2,train_source,1,сельх,cyr_word_008397 | cyr_word_009262,ahh2373.png | ahh4005.png
+8397,2,train_source,1,бога,cyr_word_008398 | cyr_word_009263,ahh2374.png | ahh4006.png
+8398,2,train_source,1,поддержание,cyr_word_008399 | cyr_word_009264,ahh2375.png | ahh4007.png
+8399,2,train_source,1,баланса,cyr_word_008400 | cyr_word_009265,ahh2377.png | ahh4009.png
+8401,2,train_source,1,быть,cyr_word_008402 | cyr_word_009267,ahh2380.png | ahh4012.png
+8403,2,train_source,1,импорт,cyr_word_008404 | cyr_word_009269,ahh2383.png | ahh4015.png
+8404,2,train_source,1,бесплодная,cyr_word_008405 | cyr_word_009271,ahh2385.png | ahh4017.png
+8405,2,train_source,1,акчив,cyr_word_008406 | cyr_word_009272,ahh2387.png | ahh4019.png
+8406,2,train_source,1,классическом,cyr_word_008407 | cyr_word_009274,ahh2389.png | ahh4021.png
+8407,2,train_source,1,кость,cyr_word_008408 | cyr_word_017669,ahh239.png | aw1252.png
+8408,2,train_source,1,рыночном,cyr_word_008409 | cyr_word_009275,ahh2390.png | ahh4022.png
+8409,2,train_source,1,произве,cyr_word_008410 | cyr_word_009276,ahh2392.png | ahh4024.png
+8411,2,train_source,1,богатство,cyr_word_008412 | cyr_word_009277,ahh2394.png | ahh4026.png
+8412,2,train_source,1,деньги,cyr_word_008413 | cyr_word_009278,ahh2395.png | ahh4027.png
+8413,2,train_source,1,внутри,cyr_word_008414 | cyr_word_009279,ahh2397.png | ahh4029.png
+8414,2,train_source,1,общества,cyr_word_008415 | cyr_word_009281,ahh2401.png | ahh4033.png
+8415,2,train_source,1,произвед,cyr_word_008416 | cyr_word_009282,ahh2403.png | ahh4035.png
+8416,2,train_source,1,сфера,cyr_word_008417 | cyr_word_009284,ahh2405.png | ahh4037.png
+8418,3,train_source,1,сикте,cyr_word_008419 | cyr_word_008756 | cyr_word_017672,ahh243.png | ahh3116.png | aw1256.png
+8420,3,train_source,1,подход,cyr_word_008421 | cyr_word_008759 | cyr_word_017676,ahh251.png | ahh3124.png | aw1264.png
+8427,3,train_source,1,ученые,cyr_word_008428 | cyr_word_008760 | cyr_word_017677,ahh252.png | ahh3125.png | aw1265.png
+8432,2,train_source,1,делают,cyr_word_008433 | cyr_word_017678,ahh253.png | aw1266.png
+8440,2,train_source,1,этом,cyr_word_008441 | cyr_word_008761,ahh255.png | ahh3128.png
+8444,3,train_source,1,индукция,cyr_word_008445 | cyr_word_008762 | cyr_word_017679,ahh256.png | ahh3129.png | aw1269.png
+8449,3,train_source,1,дедукции,cyr_word_008450 | cyr_word_008764 | cyr_word_017680,ahh257.png | ahh3130.png | aw1270.png
+8454,3,train_source,1,выводы,cyr_word_008455 | cyr_word_008765 | cyr_word_017681,ahh258.png | ahh3131.png | aw1271.png
+8461,2,train_source,1,строятся,cyr_word_008462 | cyr_word_008766,ahh259.png | ahh3132.png
+8469,2,train_source,1,эконом,cyr_word_008470 | cyr_word_008767,ahh260.png | ahh3133.png
+8474,3,train_source,1,исто,cyr_word_008475 | cyr_word_008768 | cyr_word_017682,ahh261.png | ahh3134.png | aw1274.png
+8476,3,train_source,1,ским,cyr_word_008477 | cyr_word_008769 | cyr_word_017683,ahh262.png | ahh3135.png | aw1275.png
+8484,3,train_source,1,логический,cyr_word_008485 | cyr_word_008770 | cyr_word_017684,ahh264.png | ahh3137.png | aw1277.png
+8505,2,train_source,1,графический,cyr_word_008506 | cyr_word_008773,ahh268.png | ahh3141.png
+8513,3,train_source,1,теоритическая,cyr_word_008514 | cyr_word_008774 | cyr_word_017687,ahh269.png | ahh3142.png | aw1282.png
+8522,2,train_source,1,экономика,cyr_word_008523 | cyr_word_009381,ahh2699.png | ahh4327.png
+8523,3,train_source,1,после,cyr_word_008524 | cyr_word_008775 | cyr_word_017688,ahh270.png | ahh3143.png | aw1283.png
+8524,2,train_source,1,налоги:,cyr_word_008525 | cyr_word_009382,ahh2701.png | ahh4329.png
+8525,2,train_source,1,земельный,cyr_word_008526 | cyr_word_009384,ahh2702.png | ahh4330.png
+8526,2,train_source,1,процесс,cyr_word_008527 | cyr_word_009385,ahh2707.png | ahh4335.png
+8527,2,train_source,1,создания,cyr_word_008528 | cyr_word_009386,ahh2708.png | ahh4336.png
+8528,2,train_source,1,спец. налоговый,cyr_phrase_008529 | cyr_phrase_009387,ahh2709.png | ahh4337.png
+8529,3,train_source,1,метод,cyr_word_008530 | cyr_word_008776 | cyr_word_017689,ahh271.png | ahh3144.png | aw1284.png
+8530,2,train_source,1,режим,cyr_word_008531 | cyr_word_009388,ahh2710.png | ahh4338.png
+8531,2,train_source,2,производство || производство-,cyr_word_008532 | cyr_word_009389,ahh2711.png | ahh4339.png
+8532,2,train_source,1,материальных,cyr_word_008533 | cyr_word_009391,ahh2712.png | ahh4340.png
+8533,2,train_source,1,благ,cyr_word_008534 | cyr_word_009392,ahh2713.png | ahh4341.png
+8534,2,train_source,1,распределения,cyr_word_008535 | cyr_word_009393,ahh2715.png | ahh4343.png
+8535,2,train_source,1,стадия,cyr_word_008536 | cyr_word_009394,ahh2716.png | ahh4344.png
+8536,2,train_source,1,определа,cyr_word_008537 | cyr_word_009395,ahh2717.png | ahh4345.png
+8537,2,train_source,1,этапы,cyr_word_008538 | cyr_word_009396,ahh2719.png | ahh4347.png
+8538,3,train_source,1,научных,cyr_word_008539 | cyr_word_008777 | cyr_word_017690,ahh272.png | ahh3145.png | aw1285.png
+8539,2,train_source,1,кол-во,cyr_word_008540 | cyr_word_009399,ahh2722.png | ahh4350.png
+8540,2,train_source,1,производ,cyr_word_008541 | cyr_word_009400,ahh2723.png | ahh4351.png
+8541,2,train_source,1,это,cyr_word_008542 | cyr_word_009401,ahh2725.png | ahh4353.png
+8542,2,train_source,1,исходная,cyr_word_008543 | cyr_word_009402,ahh2726.png | ahh4354.png
+8543,2,train_source,1,долей,cyr_word_008544 | cyr_word_009403,ahh2727.png | ahh4355.png
+8544,2,train_source,1,котором,cyr_word_008545 | cyr_word_009405,ahh2729.png | ahh4357.png
+8545,2,train_source,1,субъект,cyr_word_008546 | cyr_word_009406,ahh2731.png | ahh4359.png
+8546,2,train_source,1,ключевая,cyr_word_008547 | cyr_word_009407,ahh2732.png | ahh4360.png
+8547,2,train_source,1,экономического,cyr_word_008548 | cyr_word_009408,ahh2733.png | ahh4361.png
+8548,2,train_source,2,имперический || имперических,cyr_word_008549 | cyr_word_017691,ahh274.png | aw1287.png
+8550,2,train_source,1,стадии,cyr_word_008551 | cyr_word_009411,ahh2743.png | ahh4371.png
+8551,2,train_source,1,создания,cyr_word_008552 | cyr_word_009412,ahh2744.png | ahh4372.png
+8552,2,train_source,1,материальных,cyr_word_008553 | cyr_word_009413,ahh2745.png | ahh4373.png
+8553,2,train_source,1,благ:,cyr_word_008554 | cyr_word_009414,ahh2746.png | ahh4374.png
+8554,2,train_source,1,сущ-,cyr_word_008555 | cyr_word_009416,ahh2748.png | ahh4376.png
+8555,2,train_source,1,потребности,cyr_word_008556 | cyr_word_009417,ahh2750.png | ahh4378.png
+8556,2,train_source,1,продукции,cyr_word_008557 | cyr_word_009419,ahh2752.png | ahh4380.png
+8557,2,train_source,1,обмен,cyr_word_008558 | cyr_word_009420,ahh2755.png | ahh4383.png
+8558,2,train_source,1,стадия,cyr_word_008559 | cyr_word_009421,ahh2756.png | ahh4384.png
+8559,2,train_source,1,движения,cyr_word_008560 | cyr_word_009422,ahh2757.png | ahh4385.png
+8560,2,train_source,1,горы,cyr_word_008561 | cyr_word_009423,ahh2758.png | ahh4386.png
+8561,2,train_source,1,производст,cyr_word_008562 | cyr_word_009424,ahh2759.png | ahh4387.png
+8562,2,train_source,1,материальных,cyr_word_008563 | cyr_word_009425,ahh2760.png | ahh4388.png
+8563,2,train_source,1,услуг,cyr_word_008564 | cyr_word_009427,ahh2762.png | ahh4390.png
+8564,2,train_source,1,чел-ки,cyr_word_008565 | cyr_word_009428,ahh2764.png | ahh4392.png
+8565,2,train_source,1,факте,cyr_word_008566 | cyr_word_009429,ahh2765.png | ahh4393.png
+8566,2,train_source,1,труд,cyr_word_008567 | cyr_word_009430,ahh2766.png | ahh4394.png
+8567,2,train_source,1,одного субъекта,cyr_phrase_008568 | cyr_phrase_009432,ahh2768.png | ahh4396.png
+8568,2,train_source,1,труда,cyr_word_008569 | cyr_word_009434,ahh2770.png | ahh4398.png
+8569,2,train_source,1,т.е,cyr_word_008570 | cyr_word_009435,ahh2771.png | ahh4399.png
+8570,2,train_source,1,обмен,cyr_word_008571 | cyr_word_009437,ahh2772.png | ahh4400.png
+8571,2,train_source,1,факт,cyr_word_008572 | cyr_word_009438,ahh2774.png | ahh4402.png
+8572,2,train_source,1,блал,cyr_word_008573 | cyr_word_009439,ahh2776.png | ahh4404.png
+8573,2,train_source,1,гос,cyr_word_008574 | cyr_word_009440,ahh2777.png | ahh4405.png
+8574,2,train_source,1,абстракции,cyr_word_008575 | cyr_word_009441,ahh2779.png | ahh4407.png
+8575,2,train_source,1,налоговый,cyr_word_008576 | cyr_word_009442,ahh2780.png | ahh4408.png
+8576,2,train_source,1,рента,cyr_word_008577 | cyr_word_009444,ahh2783.png | ahh4411.png
+8577,2,train_source,2,плата || плача,cyr_word_008578 | cyr_word_009445,ahh2784.png | ahh4412.png
+8578,2,train_source,1,гос-,cyr_word_008579 | cyr_word_009446,ahh2786.png | ahh4414.png
+8579,2,train_source,1,труд,cyr_word_008580 | cyr_word_009447,ahh2789.png | ahh4417.png
+8580,2,train_source,1,т.е,cyr_word_008581 | cyr_word_009449,ahh2793.png | ahh4421.png
+8582,3,train_source,1,данных,cyr_word_008583 | cyr_word_008780 | cyr_word_017693,ahh280.png | ahh3153.png | aw1293.png
+8583,2,train_source,1,товар,cyr_word_008584 | cyr_word_009452,ahh2801.png | ahh4429.png
+8586,2,train_source,1,землю,cyr_word_008587 | cyr_word_009453,ahh2805.png | ahh4433.png
+8588,2,train_source,1,пользу,cyr_word_008589 | cyr_word_009454,ahh2807.png | ahh4435.png
+8590,3,train_source,1,или,cyr_word_008591 | cyr_word_008781 | cyr_word_017694,ahh281.png | ahh3154.png | aw1294.png
+8600,3,train_source,1,отвлеченые,cyr_word_008601 | cyr_word_008782 | cyr_word_017695,ahh283.png | ahh3156.png | aw1296.png
+8616,3,train_source,1,т.е,cyr_word_008617 | cyr_word_008784 | cyr_word_017696,ahh285.png | ahh3158.png | aw1298.png
+8625,3,train_source,1,или,cyr_word_008626 | cyr_word_008787 | cyr_word_017698,ahh287.png | ahh3160.png | aw1300.png
+8634,3,train_source,1,цена,cyr_word_008635 | cyr_word_008789 | cyr_word_017699,ahh289.png | ahh3162.png | aw1302.png
+8646,3,train_source,1,петровские,cyr_word_008647 | cyr_word_008791 | cyr_word_017701,ahh292.png | ahh3165.png | aw1305.png
+8649,2,train_source,1,времена,cyr_word_008650 | cyr_word_008792,ahh293.png | ahh3166.png
+8652,2,train_source,1,фактов,cyr_word_008653 | cyr_word_008793,ahh294.png | ahh3167.png
+8658,2,train_source,1,средств,cyr_word_008661 | cyr_word_008794,ahh296.png | ahh3169.png
+8659,2,train_source,1,научных,cyr_word_008673 | cyr_word_017702,ahh298.png | aw1311.png
+8662,3,train_source,1,уровне,cyr_word_008686 | cyr_word_008796 | cyr_word_017703,ahh300.png | ahh3173.png | aw1313.png
+8666,2,train_source,1,рова,cyr_word_008697 | cyr_word_008797,ahh302.png | ahh3175.png
+8672,2,train_source,1,какои,cyr_word_008724 | cyr_word_017645,ahh3068.png | aw1208.png
+8674,2,train_source,1,чельная,cyr_word_008728 | cyr_word_017647,ahh3072.png | aw1212.png
+8682,2,train_source,1,бление,cyr_word_008754 | cyr_word_017668,ahh3111.png | aw1251.png
+8683,2,train_source,1,эконом,cyr_word_008755 | cyr_word_017670,ahh3114.png | aw1254.png
+8685,2,train_source,1,системный,cyr_word_008758 | cyr_word_017675,ahh3122.png | aw1262.png
+8687,2,train_source,1,законы,cyr_word_008771 | cyr_word_017685,ahh3138.png | aw1278.png
+8690,2,train_source,1,позволяет,cyr_word_008779 | cyr_word_017692,ahh3149.png | aw1289.png
+8695,2,train_source,1,кого,cyr_word_008790 | cyr_word_017700,ahh3164.png | aw1304.png
+8733,2,train_source,1,выборы,cyr_word_008857 | cyr_word_017619,ahh3263.png | aw1150.png
+8735,2,train_source,1,технологий,cyr_word_008860 | cyr_word_017621,ahh3266.png | aw1153.png
+8947,2,train_source,1,области,cyr_word_009102 | cyr_word_017697,ahh3718.png | aw13.png
+8948,2,train_source,1,октября,cyr_word_009103 | cyr_word_017725,ahh3724.png | aw19.png
+8950,2,train_source,1,отвественностью,cyr_word_009105 | cyr_word_017736,ahh3731.png | aw26.png
+8951,2,train_source,1,охранная,cyr_word_009106 | cyr_word_017737,ahh3732.png | aw27.png
+8955,2,train_source,1,октября 2019 г.,cyr_phrase_009110 | cyr_phrase_017773,ahh3757.png | aw52.png
+8958,2,train_source,1,управление,cyr_word_009113 | cyr_word_017787,ahh3768.png | aw63.png
+8962,2,train_source,1,ское,cyr_word_009117 | cyr_word_009291,ahh3779.png | ahh405.png
+8964,2,train_source,1,произв,cyr_word_009119 | cyr_word_009298,ahh3780.png | ahh406.png
+8965,2,train_source,1,создает,cyr_word_009120 | cyr_word_009325,ahh3785.png | ahh411.png
+8966,2,train_source,1,лишь,cyr_word_009121 | cyr_word_009329,ahh3786.png | ahh412.png
+8967,2,train_source,1,власть,cyr_word_009122 | cyr_word_009342,ahh3789.png | ahh415.png
+8970,2,train_source,1,пролегарна,cyr_word_009125 | cyr_word_009352,ahh3793.png | ahh419.png
+8971,2,train_source,1,руки,cyr_word_009126 | cyr_word_009357,ahh3795.png | ahh421.png
+8972,2,train_source,1,чтобы,cyr_word_009127 | cyr_word_009360,ahh3796.png | ahh422.png
+8973,2,train_source,1,убрать,cyr_word_009128 | cyr_word_009364,ahh3797.png | ahh423.png
+8974,2,train_source,1,построение,cyr_word_009129 | cyr_word_009365,ahh3799.png | ahh425.png
+8976,2,train_source,1,социолизма,cyr_word_009131 | cyr_word_009367,ahh3800.png | ahh426.png
+8977,2,train_source,1,идея,cyr_word_009132 | cyr_word_009372,ahh3802.png | ahh428.png
+8978,2,train_source,1,отн,cyr_word_009133 | cyr_word_009376,ahh3804.png | ahh430.png
+8979,2,train_source,1,спо,cyr_word_009134 | cyr_word_009377,ahh3805.png | ahh431.png
+8980,2,train_source,1,собен,cyr_word_009135 | cyr_word_009379,ahh3806.png | ahh432.png
+8981,2,train_source,1,обеспечить,cyr_word_009136 | cyr_word_009383,ahh3807.png | ahh433.png
+8982,2,train_source,1,государ,cyr_word_009137 | cyr_word_009390,ahh3808.png | ahh434.png
+8983,2,train_source,1,рынок,cyr_word_009138 | cyr_word_009398,ahh3809.png | ahh435.png
+8985,2,train_source,1,социал,cyr_word_009140 | cyr_word_009418,ahh3812.png | ahh438.png
+8986,2,train_source,1,экон,cyr_word_009141 | cyr_word_009426,ahh3813.png | ahh439.png
+8987,2,train_source,1,главные,cyr_word_009142 | cyr_word_009436,ahh3814.png | ahh440.png
+8988,2,train_source,1,идеи:,cyr_word_009143 | cyr_word_009443,ahh3815.png | ahh441.png
+8989,2,train_source,1,должно регулир,cyr_phrase_009144 | cyr_phrase_009457,ahh3818.png | ahh444.png
+8990,2,train_source,2,экономи || экономик,cyr_word_009145 | cyr_word_009463,ahh3819.png | ahh445.png
+8991,2,train_source,1,джон,cyr_word_009146 | cyr_word_009481,ahh3822.png | ahh448.png
+8992,2,train_source,1,кейн,cyr_word_009147 | cyr_word_009483,ahh3823.png | ahh449.png
+8993,2,train_source,1,отказ,cyr_word_009148 | cyr_word_009489,ahh3824.png | ahh450.png
+8994,2,train_source,1,идеи,cyr_word_009149 | cyr_word_009500,ahh3826.png | ahh452.png
+8998,2,train_source,1,классовом,cyr_word_009153 | cyr_word_009525,ahh3834.png | ahh460.png
+9178,2,train_source,1,причина,cyr_word_009509 | cyr_word_017776,ahh4546.png | aw570.png
+9226,2,train_source,1,гидравлический,cyr_word_009558 | cyr_word_017602,ahh4711.png | aw1063.png
+9232,2,train_source,1,тношение,cyr_word_009564 | cyr_word_017808,ahh4765.png | aw806.png
+9233,2,train_source,1,субъектом,cyr_word_009565 | cyr_word_017809,ahh4767.png | aw808.png
+9235,2,train_source,1,другом,cyr_word_009567 | cyr_word_017829,ahh4771.png | aw812.png
+9238,2,train_source,1,или,cyr_word_009570 | cyr_word_017840,ahh4784.png | aw825.png
+9239,2,train_source,1,хор-,cyr_word_009571 | cyr_word_017843,ahh4787.png | aw828.png
+9243,2,train_source,1,какому,cyr_word_009575 | cyr_word_017849,ahh4796.png | aw837.png
+9246,2,train_source,1,между,cyr_word_009578 | cyr_word_017856,ahh4817.png | aw858.png
+9248,2,train_source,1,субъектом,cyr_word_009580 | cyr_word_017861,ahh4822.png | aw863.png
+9249,2,train_source,2,одной || одном,cyr_word_009581 | cyr_word_017862,ahh4824.png | aw865.png
+9250,2,train_source,1,собственника,cyr_word_009582 | cyr_word_017864,ahh4826.png | aw867.png
+9252,2,train_source,1,или,cyr_word_009584 | cyr_word_017873,ahh4842.png | aw883.png
+9254,2,train_source,1,своему,cyr_word_009586 | cyr_word_017884,ahh4847.png | aw888.png
+9256,2,train_source,1,определенных,cyr_word_009588 | cyr_word_017906,ahh4861.png | aw902.png
+9257,2,train_source,1,ресурсов,cyr_word_009589 | cyr_word_017907,ahh4866.png | aw907.png
+9259,2,train_source,1,тео,cyr_word_009591 | cyr_word_017740,ahh4882.png | aw358.png
+9260,2,train_source,1,предмет,cyr_word_009592 | cyr_word_017741,ahh4887.png | aw363.png
+9261,2,train_source,1,экономик,cyr_word_009593 | cyr_word_017742,ahh4891.png | aw367.png
+9264,2,train_source,1,экономии,cyr_word_009596 | cyr_word_017743,ahh4901.png | aw377.png
+9265,2,train_source,1,тесно,cyr_word_009597 | cyr_word_017744,ahh4902.png | aw378.png
+9266,2,train_source,1,ком,cyr_word_009598 | cyr_word_017745,ahh4903.png | aw379.png
+9267,2,train_source,1,экономика,cyr_word_009599 | cyr_word_017746,ahh4906.png | aw382.png
+9269,2,train_source,1,учение,cyr_word_009601 | cyr_word_017747,ahh4913.png | aw389.png
+9271,2,train_source,1,экономика,cyr_word_009603 | cyr_word_017748,ahh4925.png | aw401.png
+9273,2,train_source,1,хоз,cyr_word_009605 | cyr_word_017750,ahh4934.png | aw410.png
+9274,2,train_source,1,430,cyr_word_009606 | cyr_word_017751,ahh4939.png | aw415.png
+9275,2,train_source,2,355 ден. || 355 дон.,cyr_phrase_009607 | cyr_phrase_017752,ahh4940.png | aw416.png
+9276,2,train_source,1,спустя,cyr_word_009608 | cyr_word_017754,ahh4946.png | aw422.png
+9277,2,train_source,2,десяти || десячи,cyr_word_009609 | cyr_word_017756,ahh4948.png | aw424.png
+9280,2,train_source,1,как,cyr_word_009612 | cyr_word_017757,ahh4958.png | aw434.png
+9281,2,train_source,1,экономику,cyr_word_009613 | cyr_word_017758,ahh4959.png | aw435.png
+9282,2,train_source,1,науку,cyr_word_009614 | cyr_word_017759,ahh4961.png | aw437.png
+9284,2,train_source,1,благ,cyr_word_009616 | cyr_word_017760,ahh4964.png | aw440.png
+9288,2,train_source,1,искусство,cyr_word_009620 | cyr_word_017763,ahh4980.png | aw456.png
+9292,2,train_source,1,был,cyr_word_009624 | cyr_word_017764,ahh4992.png | aw468.png
+9293,2,train_source,1,14-15,cyr_word_009625 | cyr_word_017765,ahh5002.png | aw478.png
+9294,2,train_source,1,учебник:,cyr_word_009626 | cyr_word_017766,ahh5006.png | aw482.png
+9295,2,train_source,1,рок,cyr_word_009627 | cyr_word_017768,ahh5009.png | aw485.png
+9297,2,train_source,1,что,cyr_word_009629 | cyr_word_017769,ahh5010.png | aw486.png
+9300,2,train_source,1,крестьян,cyr_word_009632 | cyr_word_017770,ahh5023.png | aw499.png
+9304,2,train_source,1,единого,cyr_word_009636 | cyr_word_017771,ahh5031.png | aw507.png
+9305,2,train_source,1,теория,cyr_word_009637 | cyr_word_017772,ahh5032.png | aw508.png
+9308,2,train_source,1,имущество,cyr_word_009640 | cyr_word_017774,ahh5055.png | aw531.png
+9309,2,train_source,1,феодаль,cyr_word_009641 | cyr_word_017775,ahh5066.png | aw542.png
+9347,2,train_source,1,насколько,cyr_word_009679 | cyr_word_014545,ahh5296.png | aqq333.png
+9348,3,train_source,1,поэтическое,cyr_word_009680 | cyr_word_014546 | cyr_word_024300,ahh5298.png | aqq335.png | dbs342.png
+9350,3,train_source,1,дополненное,cyr_word_009682 | cyr_word_014547 | cyr_word_024301,ahh5300.png | aqq337.png | dbs344.png
+9351,3,train_source,1,смыслом,cyr_word_009683 | cyr_word_014548 | cyr_word_024302,ahh5301.png | aqq338.png | dbs345.png
+9352,3,train_source,1,направленное,cyr_word_009684 | cyr_word_014549 | cyr_word_024303,ahh5302.png | aqq339.png | dbs346.png
+9354,3,train_source,1,начало,cyr_word_009686 | cyr_word_014551 | cyr_word_024316,ahh5310.png | aqq347.png | dbs354.png
+9355,2,train_source,1,"автор уверен,",cyr_phrase_009687 | cyr_phrase_014552,ahh5313.png | aqq350.png
+9356,2,train_source,1,непрерывной,cyr_word_009688 | cyr_word_014553,ahh5316.png | aqq353.png
+9357,3,train_source,1,поэтическое,cyr_word_009689 | cyr_word_014554 | cyr_word_024322,ahh5319.png | aqq356.png | dbs363.png
+9359,2,train_source,1,"определяющие,",cyr_word_009691 | cyr_word_014555,ahh5321.png | aqq358.png
+9360,3,train_source,1,способные,cyr_word_009692 | cyr_word_014556 | cyr_word_024331,ahh5322.png | aqq359.png | dbs366.png
+9361,3,train_source,1,сподвигнуть,cyr_word_009693 | cyr_word_014557 | cyr_word_024336,ahh5323.png | aqq360.png | dbs367.png
+9362,3,train_source,1,личность,cyr_word_009694 | cyr_word_014558 | cyr_word_024341,ahh5324.png | aqq361.png | dbs368.png
+9363,3,train_source,1,потому,cyr_word_009695 | cyr_word_014559 | cyr_word_024346,ahh5326.png | aqq363.png | dbs370.png
+9364,3,train_source,1,именно,cyr_word_009696 | cyr_word_014560 | cyr_word_024349,ahh5327.png | aqq364.png | dbs371.png
+9365,3,train_source,1,такой подход,cyr_phrase_009697 | cyr_phrase_014561 | cyr_phrase_024352,ahh5328.png | aqq365.png | dbs372.png
+9367,3,train_source,1,открывает,cyr_word_009699 | cyr_word_014562 | cyr_word_024362,ahh5330.png | aqq367.png | dbs374.png
+9368,3,train_source,1,для человека,cyr_phrase_009700 | cyr_phrase_014563 | cyr_phrase_024364,ahh5331.png | aqq368.png | dbs375.png
+9369,3,train_source,1,неиссякаемый,cyr_word_009701 | cyr_word_014564 | cyr_word_024366,ahh5332.png | aqq369.png | dbs376.png
+9370,3,train_source,1,вдохновения,cyr_word_009702 | cyr_word_014565 | cyr_word_024367,ahh5334.png | aqq371.png | dbs378.png
+9371,3,train_source,1,"точкой зрения,",cyr_phrase_009703 | cyr_phrase_014566 | cyr_phrase_024368,ahh5335.png | aqq372.png | dbs379.png
+9373,2,train_source,1,писатели,cyr_word_009705 | cyr_word_014568,ahh5342.png | aqq379.png
+9374,3,train_source,1,иногда,cyr_word_009706 | cyr_word_014570 | cyr_word_024370,ahh5343.png | aqq380.png | dbs387.png
+9375,3,train_source,1,внутренних,cyr_word_009707 | cyr_word_014571 | cyr_word_024371,ahh5348.png | aqq385.png | dbs392.png
+9376,3,train_source,1,создания,cyr_word_009708 | cyr_word_014572 | cyr_word_024372,ahh5350.png | aqq387.png | dbs394.png
+9378,3,train_source,1,постоянная,cyr_word_009710 | cyr_word_014576 | cyr_word_024376,ahh5369.png | aqq406.png | dbs413.png
+9380,3,train_source,1,открытию,cyr_word_009712 | cyr_word_014577 | cyr_word_024377,ahh5371.png | aqq408.png | dbs415.png
+9381,3,train_source,1,поэтическое,cyr_word_009713 | cyr_word_014578 | cyr_word_024378,ahh5376.png | aqq413.png | dbs420.png
+9382,3,train_source,1,ощущение,cyr_word_009714 | cyr_word_014579 | cyr_word_024379,ahh5377.png | aqq414.png | dbs421.png
+9383,3,train_source,1,зарождающиеся,cyr_word_009715 | cyr_word_014580 | cyr_word_024380,ahh5379.png | aqq416.png | dbs423.png
+9385,3,train_source,1,с данной,cyr_phrase_009717 | cyr_phrase_014581 | cyr_phrase_024383,ahh5392.png | aqq429.png | dbs436.png
+9386,2,train_source,1,"неизвестного,",cyr_word_009718 | cyr_word_014584,ahh5397.png | aqq434.png
+9440,2,train_source,1,условий,cyr_word_009772 | cyr_word_017794,ahh665.png | aw684.png
+9446,2,train_source,1,реализация,cyr_word_009778 | cyr_word_017796,ahh681.png | aw700.png
+9447,2,train_source,1,стоимости,cyr_word_009779 | cyr_word_017797,ahh685.png | aw704.png
+9451,2,train_source,1,банк,cyr_word_009783 | cyr_word_017801,ahh738.png | aw757.png
+9452,2,train_source,1,производство,cyr_word_009784 | cyr_word_017802,ahh739.png | aw758.png
+9455,2,train_source,2,"производство || производство,",cyr_word_009787 | cyr_word_017803,ahh753.png | aw772.png
+9460,2,train_source,1,план,cyr_word_009792 | cyr_word_017805,ahh769.png | aw788.png
+9461,2,train_source,1,ответ:,cyr_word_009793 | cyr_word_017807,ahh776.png | aw795.png
+9463,2,train_source,1,умвд,cyr_word_009795 | cyr_word_017778,ahh779.png | aw599.png
+9464,2,train_source,1,россии,cyr_word_009796 | cyr_word_017779,ahh780.png | aw600.png
+9465,2,train_source,1,области,cyr_word_009797 | cyr_word_017781,ahh782.png | aw602.png
+9466,2,train_source,1,апреля,cyr_word_009798 | cyr_word_017782,ahh788.png | aw608.png
+9468,2,train_source,1,обществу с,cyr_phrase_009800 | cyr_phrase_017783,ahh792.png | aw612.png
+9469,2,train_source,1,ограниченной,cyr_word_009801 | cyr_word_017784,ahh793.png | aw613.png
+9470,2,train_source,1,ответственностью,cyr_word_009802 | cyr_word_017785,ahh795.png | aw615.png
+9473,2,train_source,1,олимп,cyr_word_009805 | cyr_word_017786,ahh800.png | aw620.png
+9475,2,train_source,1,4632049270,cyr_word_009807 | cyr_word_017788,ahh810.png | aw630.png
+9476,2,train_source,1,305023,cyr_word_009808 | cyr_word_017789,ahh812.png | aw632.png
+9477,2,train_source,1,"курск, ул.",cyr_phrase_009809 | cyr_phrase_017790,ahh813.png | aw633.png
+9478,2,train_source,1,3-я песковская,cyr_phrase_009810 | cyr_phrase_017791,ahh814.png | aw634.png
+9480,2,train_source,1,апреля 2015,cyr_phrase_009812 | cyr_phrase_017792,ahh825.png | aw645.png
+9481,2,train_source,1,в.и. сидоров,cyr_phrase_009813 | cyr_phrase_017793,ahh828.png | aw648.png
+9484,2,train_source,1,лекция,cyr_word_009816 | cyr_word_017711,ahh852.png | aw1485.png
+9488,2,train_source,1,общества,cyr_word_009820 | cyr_word_017712,ahh869.png | aw1502.png
+9493,2,train_source,1,единяет,cyr_word_009825 | cyr_word_017718,ahh904.png | aw1537.png
+9497,2,train_source,1,так,cyr_word_009829 | cyr_word_017720,ahh930.png | aw1563.png
+9502,2,train_source,1,технологий,cyr_word_009834 | cyr_word_017721,ahh941.png | aw1574.png
+9503,2,train_source,1,работы,cyr_word_009835 | cyr_word_017722,ahh958.png | aw1591.png
+9595,2,train_source,1,элемент,cyr_word_009927 | cyr_word_010564,ao1005.png | ao12311.png
+9603,2,train_source,1,примеры,cyr_word_009935 | cyr_word_010565,ao1008.png | ao12314.png
+9610,2,train_source,1,-идеалы,cyr_word_009942 | cyr_word_010566,ao1010.png | ao12316.png
+9615,2,train_source,1,кольца,cyr_word_009947 | cyr_word_010567,ao1011.png | ao12317.png
+9630,2,train_source,1,ост-,cyr_word_009962 | cyr_word_010569,ao1016.png | ao12322.png
+9636,2,train_source,1,идеалы,cyr_word_009968 | cyr_word_010570,ao1018.png | ao12324.png
+9641,2,train_source,1,собственные,cyr_word_009973 | cyr_word_010571,ao1019.png | ao12325.png
+9677,2,train_source,1,коммутативное,cyr_word_010009 | cyr_word_010573,ao1026.png | ao12332.png
+9681,2,train_source,1,кольцо,cyr_word_010013 | cyr_word_010574,ao1027.png | ao12333.png
+9690,2,train_source,1,единицей,cyr_word_010022 | cyr_word_010575,ao1030.png | ao12336.png
+9700,2,train_source,1,наз-ся,cyr_word_010032 | cyr_word_010576,ao1034.png | ao12340.png
+9713,2,train_source,1,нет,cyr_word_010045 | cyr_word_010577,ao1039.png | ao12345.png
+9714,2,train_source,1,собственных,cyr_word_010046 | cyr_word_010578,ao1040.png | ao12346.png
+9715,2,train_source,1,идеалов,cyr_word_010047 | cyr_word_010579,ao1041.png | ao12347.png
+9717,2,train_source,1,док-во:,cyr_word_010049 | cyr_word_010580,ao1043.png | ao12349.png
+9718,2,train_source,1,пусть,cyr_word_010050 | cyr_word_010581,ao1045.png | ao12351.png
+9721,2,train_source,1,теорема,cyr_word_010053 | cyr_word_010582,ao1049.png | ao12355.png
+9752,2,train_source,1,колец,cyr_word_010084 | cyr_word_010583,ao1059.png | ao12365.png
+9755,2,train_source,1,идеалов,cyr_word_010087 | cyr_word_010584,ao1060.png | ao12366.png
+9760,2,train_source,1,существует.,cyr_word_010092 | cyr_word_010585,ao1061.png | ao12367.png
+9784,2,train_source,1,единицой.,cyr_word_010116 | cyr_word_010586,ao1069.png | ao12375.png
+9829,2,train_source,1,док-во:,cyr_word_010161 | cyr_word_010587,ao1084.png | ao12390.png
+9857,2,train_source,1,наш.,cyr_word_010189 | cyr_word_010588,ao1090.png | ao12396.png
+9882,2,train_source,1,предположению,cyr_word_010214 | cyr_word_010591,ao1100.png | ao12406.png
+9900,2,train_source,1,пример,cyr_word_010232 | cyr_word_010593,ao1105.png | ao12411.png
+10324,2,train_source,1,кратных,cyr_word_010681 | cyr_word_011823,ao12810.png | ao3959.png
+10325,2,train_source,1,корней,cyr_word_010682 | cyr_word_011824,ao12811.png | ao3960.png
+10327,2,train_source,1,сепарабельно,cyr_word_010684 | cyr_word_011825,ao12816.png | ao3965.png
+10330,2,train_source,1,самые,cyr_word_010687 | cyr_word_011827,ao12829.png | ao3978.png
+10331,2,train_source,1,рассуждения,cyr_word_010688 | cyr_word_011828,ao12830.png | ao3979.png
+10332,2,train_source,1,теоремы,cyr_word_010689 | cyr_word_011829,ao12834.png | ao3983.png
+10333,2,train_source,1,утв 24,cyr_phrase_010690 | cyr_phrase_011830,ao12837.png | ao3986.png
+10334,2,train_source,1,"-сепарабельны,",cyr_word_010691 | cyr_word_011831,ao12844.png | ao3993.png
+10335,2,train_source,1,конечные,cyr_word_010692 | cyr_word_011832,ao12848.png | ao3997.png
+10338,2,train_source,1,док-во:,cyr_word_010695 | cyr_word_011833,ao12850.png | ao3999.png
+14179,2,train_source,1,талантливые,cyr_word_014567 | cyr_word_024369,aqq377.png | dbs384.png
+14181,2,train_source,1,занятиям,cyr_word_014573 | cyr_word_024373,aqq400.png | dbs407.png
+14182,2,train_source,1,человека,cyr_word_014574 | cyr_word_024374,aqq403.png | dbs410.png
+14183,2,train_source,1,побуждают,cyr_word_014575 | cyr_word_024375,aqq404.png | dbs411.png
+14185,2,train_source,1,деятельность,cyr_word_014583 | cyr_word_024385,aqq433.png | dbs440.png
+14327,2,train_source,1,евгений,cyr_word_014726 | cyr_word_058507,arr10.png | rr10.png
+14328,2,train_source,1,евгений,cyr_word_014727 | cyr_word_058508,arr11.png | rr11.png
+14329,2,train_source,1,евгений,cyr_word_014728 | cyr_word_058509,arr12.png | rr12.png
+14330,2,train_source,1,евгений,cyr_word_014729 | cyr_word_058510,arr14.png | rr14.png
+14331,2,train_source,1,евгений,cyr_word_014730 | cyr_word_058511,arr15.png | rr15.png
+14332,2,train_source,1,евгений,cyr_word_014731 | cyr_word_058512,arr16.png | rr16.png
+14333,2,train_source,1,евгений,cyr_word_014732 | cyr_word_058513,arr17.png | rr17.png
+14334,2,train_source,1,евгений,cyr_word_014733 | cyr_word_058514,arr18.png | rr18.png
+14335,2,train_source,1,евгений,cyr_word_014734 | cyr_word_058515,arr19.png | rr19.png
+14336,2,train_source,1,евгений,cyr_word_014735 | cyr_word_058516,arr20.png | rr20.png
+14337,2,train_source,1,евгений,cyr_word_014736 | cyr_word_058517,arr21.png | rr21.png
+14338,2,train_source,1,евгений,cyr_word_014737 | cyr_word_058518,arr25.png | rr25.png
+14339,2,train_source,1,евгений,cyr_word_014738 | cyr_word_058519,arr26.png | rr26.png
+14340,2,train_source,1,евгений,cyr_word_014739 | cyr_word_058520,arr27.png | rr27.png
+14341,2,train_source,1,евгений,cyr_word_014740 | cyr_word_058521,arr28.png | rr28.png
+14342,2,train_source,1,евгений,cyr_word_014741 | cyr_word_058522,arr29.png | rr29.png
+14343,2,train_source,1,евгений,cyr_word_014742 | cyr_word_058523,arr30.png | rr30.png
+14344,2,train_source,1,евгений,cyr_word_014743 | cyr_word_058524,arr31.png | rr31.png
+14345,2,train_source,1,евгений,cyr_word_014744 | cyr_word_058525,arr33.png | rr33.png
+14346,2,train_source,1,евгений,cyr_word_014745 | cyr_word_058526,arr34.png | rr34.png
+14347,2,train_source,1,евгений,cyr_word_014746 | cyr_word_058527,arr35.png | rr35.png
+14348,2,train_source,1,евгений,cyr_word_014747 | cyr_word_058528,arr36.png | rr36.png
+14349,2,train_source,1,евгений,cyr_word_014748 | cyr_word_058529,arr40.png | rr40.png
+14350,2,train_source,1,евгений,cyr_word_014749 | cyr_word_058530,arr41.png | rr41.png
+14351,2,train_source,1,евгений,cyr_word_014750 | cyr_word_058531,arr42.png | rr42.png
+14352,2,train_source,1,евгений,cyr_word_014751 | cyr_word_058532,arr43.png | rr43.png
+14353,2,train_source,1,евгений,cyr_word_014752 | cyr_word_058533,arr44.png | rr44.png
+14354,2,train_source,1,евгений,cyr_word_014753 | cyr_word_058534,arr45.png | rr45.png
+14355,2,train_source,1,евгений,cyr_word_014754 | cyr_word_058535,arr46.png | rr46.png
+14356,2,train_source,1,евгений,cyr_word_014755 | cyr_word_058536,arr48.png | rr48.png
+14357,2,train_source,1,евгений,cyr_word_014756 | cyr_word_058537,arr49.png | rr49.png
+14358,2,train_source,1,евгений,cyr_word_014757 | cyr_word_058538,arr50.png | rr50.png
+14359,2,train_source,1,евгений,cyr_word_014758 | cyr_word_058539,arr51.png | rr51.png
+14360,2,train_source,1,евгений,cyr_word_014759 | cyr_word_058540,arr52.png | rr52.png
+14361,2,train_source,1,евгений,cyr_word_014760 | cyr_word_058541,arr53.png | rr53.png
+14362,2,train_source,1,евгений,cyr_word_014761 | cyr_word_058542,arr54.png | rr54.png
+14363,2,train_source,1,евгений,cyr_word_014762 | cyr_word_058543,arr55.png | rr55.png
+14364,2,train_source,1,евгений,cyr_word_014763 | cyr_word_058544,arr56.png | rr56.png
+14365,2,train_source,1,евгений,cyr_word_014764 | cyr_word_058545,arr57.png | rr57.png
+14366,2,train_source,1,евгений,cyr_word_014765 | cyr_word_058546,arr58.png | rr58.png
+14367,2,train_source,1,евгений,cyr_word_014766 | cyr_word_058547,arr59.png | rr59.png
+14368,2,train_source,1,евгений,cyr_word_014767 | cyr_word_058548,arr60.png | rr60.png
+14369,2,train_source,1,евгений,cyr_word_014768 | cyr_word_058549,arr61.png | rr61.png
+14370,2,train_source,1,евгений,cyr_word_014769 | cyr_word_058550,arr62.png | rr62.png
+14371,2,train_source,1,евгений,cyr_word_014770 | cyr_word_058551,arr63.png | rr63.png
+14372,2,train_source,1,евгений,cyr_word_014771 | cyr_word_058552,arr64.png | rr64.png
+14373,2,train_source,1,евгений,cyr_word_014772 | cyr_word_058553,arr65.png | rr65.png
+14374,2,train_source,1,евгений,cyr_word_014773 | cyr_word_058554,arr66.png | rr66.png
+14375,2,train_source,1,евгений,cyr_word_014774 | cyr_word_058555,arr67.png | rr67.png
+14376,2,train_source,1,евгений,cyr_word_014775 | cyr_word_058556,arr69.png | rr69.png
+14377,2,train_source,1,евгений,cyr_word_014776 | cyr_word_058557,arr70.png | rr70.png
+14378,2,train_source,1,евгений,cyr_word_014777 | cyr_word_058558,arr71.png | rr71.png
+14379,2,train_source,1,евгений,cyr_word_014778 | cyr_word_058559,arr72.png | rr72.png
+14380,2,train_source,1,евгений,cyr_word_014779 | cyr_word_058560,arr73.png | rr73.png
+14381,2,train_source,1,евгений,cyr_word_014780 | cyr_word_058561,arr74.png | rr74.png
+14382,2,train_source,1,евгений,cyr_word_014781 | cyr_word_058562,arr75.png | rr75.png
+14383,2,train_source,1,евгений,cyr_word_014782 | cyr_word_058563,arr76.png | rr76.png
+14384,2,train_source,1,евгений,cyr_word_014783 | cyr_word_058564,arr77.png | rr77.png
+14385,2,train_source,1,евгений,cyr_word_014784 | cyr_word_058565,arr78.png | rr78.png
+14386,2,train_source,1,евгений,cyr_word_014785 | cyr_word_058566,arr79.png | rr79.png
+14387,2,train_source,1,евгений,cyr_word_014786 | cyr_word_058567,arr81.png | rr81.png
+14388,2,train_source,1,евгений,cyr_word_014787 | cyr_word_058568,arr82.png | rr82.png
+14389,2,train_source,1,евгений,cyr_word_014788 | cyr_word_058569,arr83.png | rr83.png
+14390,2,train_source,1,евгений,cyr_word_014789 | cyr_word_058570,arr84.png | rr84.png
+14391,2,train_source,1,евгений,cyr_word_014790 | cyr_word_058571,arr86.png | rr86.png
+14392,2,train_source,1,евгений,cyr_word_014791 | cyr_word_058572,arr90.png | rr90.png
+14393,2,train_source,1,евгений,cyr_word_014792 | cyr_word_058573,arr91.png | rr91.png
+14394,2,train_source,1,евгений,cyr_word_014793 | cyr_word_058574,arr92.png | rr92.png
+14395,2,train_source,1,евгений,cyr_word_014794 | cyr_word_058575,arr93.png | rr93.png
+14396,2,train_source,1,евгений,cyr_word_014795 | cyr_word_058576,arr94.png | rr94.png
+14958,2,train_source,1,10.05.06,cyr_word_015357 | cyr_word_018081,as3032.png | ax1830.png
+14960,2,train_source,1,физика,cyr_word_015359 | cyr_word_018082,as3039.png | ax1837.png
+14961,2,train_source,1,17.05.06,cyr_word_015360 | cyr_word_018084,as3042.png | ax1840.png
+14962,2,train_source,1,10.05.0,cyr_word_015361 | cyr_word_018085,as3047.png | ax1845.png
+14963,2,train_source,1,19.05.06,cyr_word_015362 | cyr_word_018087,as3053.png | ax1851.png
+14964,2,train_source,1,25.05.06,cyr_word_015363 | cyr_word_018088,as3063.png | ax1861.png
+14966,2,train_source,1,беляев,cyr_word_015365 | cyr_word_018089,as3075.png | ax1873.png
+14967,2,train_source,1,17.05.06,cyr_word_015366 | cyr_word_018091,as3077.png | ax1875.png
+14968,2,train_source,1,1.06.0,cyr_word_015367 | cyr_word_018092,as3080.png | ax1878.png
+15089,3,train_source,1,2002,cyr_word_015488 | cyr_word_018077 | cyr_word_018993,as4832.png | ax1724.png | ay6398.png
+15791,2,train_source,1,может,cyr_word_016190 | cyr_word_024184,au443.png | dbs2857.png
+15792,2,train_source,1,представить,cyr_word_016191 | cyr_word_024185,au444.png | dbs2858.png
+15793,2,train_source,1,справиться,cyr_word_016192 | cyr_word_024186,au453.png | dbs2867.png
+15794,2,train_source,1,несчастьями,cyr_word_016193 | cyr_word_024187,au455.png | dbs2869.png
+15795,2,train_source,1,которые,cyr_word_016194 | cyr_word_024189,au456.png | dbs2870.png
+15796,2,train_source,1,женщина,cyr_word_016195 | cyr_word_024190,au463.png | dbs2877.png
+15797,2,train_source,1,относят,cyr_word_016196 | cyr_word_024191,au465.png | dbs2879.png
+15798,2,train_source,1,обладать,cyr_word_016197 | cyr_word_024192,au469.png | dbs2883.png
+15799,2,train_source,1,определять,cyr_word_016198 | cyr_word_024195,au480.png | dbs2894.png
+15803,2,train_source,1,считают,cyr_word_016202 | cyr_word_024197,au492.png | dbs2906.png
+15804,2,train_source,1,бороться,cyr_word_016203 | cyr_word_024200,au511.png | dbs2925.png
+15807,2,train_source,1,побоялись,cyr_word_016206 | cyr_word_024204,au527.png | dbs2941.png
+15809,2,train_source,1,собственной,cyr_word_016208 | cyr_word_024206,au539.png | dbs2953.png
+15810,2,train_source,1,возможна,cyr_word_016209 | cyr_word_024207,au550.png | dbs2964.png
+15811,2,train_source,1,каждый,cyr_word_016210 | cyr_word_024208,au552.png | dbs2966.png
+15812,2,train_source,1,испытателя,cyr_word_016211 | cyr_word_024210,au559.png | dbs2973.png
+15813,2,train_source,1,зависит,cyr_word_016212 | cyr_word_024211,au561.png | dbs2975.png
+15814,2,train_source,1,увлечения,cyr_word_016213 | cyr_word_024213,au571.png | dbs2985.png
+15815,2,train_source,1,известного,cyr_word_016214 | cyr_word_024214,au574.png | dbs2988.png
+17497,2,train_source,1,дневная,cyr_word_018099 | cyr_word_018672,ax1965.png | ax7165.png
+17566,2,train_source,1,ремкран,cyr_word_018168 | cyr_word_018880,ax2577.png | ay4137.png
+17568,2,train_source,1,зао,cyr_word_018170 | cyr_word_018881,ax2597.png | ay4157.png
+17570,2,train_source,1,февраля,cyr_word_018172 | cyr_word_018882,ax2617.png | ay4177.png
+17571,2,train_source,1,2001,cyr_word_018173 | cyr_word_018883,ax2618.png | ay4178.png
+17622,2,train_source,1,сергеевич,cyr_word_018224 | cyr_word_018854,ax3018.png | ay3688.png
+17878,2,train_source,1,денис,cyr_word_018480 | cyr_word_018951,ax5027.png | ay5591.png
+18126,2,train_source,1,сергей,cyr_word_018729 | cyr_word_018980,ay2078.png | ay6164.png
+18219,2,train_source,1,михаил,cyr_word_018822 | cyr_word_019110,ay3225.png | ay8376.png
+18220,2,train_source,1,викторович,cyr_word_018823 | cyr_word_019111,ay3227.png | ay8378.png
+18221,2,train_source,1,20,cyr_word_018824 | cyr_word_019115,ay3235.png | ay8386.png
+18223,3,train_source,1,романов,cyr_word_018826 | cyr_word_019031 | cyr_word_019223,ay3317.png | ay6966.png | az1485.png
+18224,2,train_source,1,алексин,cyr_word_018827 | cyr_word_019226,ay3327.png | az1495.png
+18308,2,train_source,1,казахстан,cyr_word_018916 | cyr_word_019254,ay470.png | az1844.png
+18310,2,train_source,1,жен.,cyr_word_018918 | cyr_word_019255,ay473.png | az1847.png
+18375,2,train_source,1,325,cyr_word_018985 | cyr_word_019266,ay6256.png | az1933.png
+18386,2,train_source,1,вич,cyr_word_018997 | cyr_word_019461,ay6481.png | az4353.png
+18387,2,train_source,1,2016,cyr_word_018998 | cyr_word_019462,ay6504.png | az4376.png
+18388,2,train_source,1,2020,cyr_word_018999 | cyr_word_019463,ay6507.png | az4379.png
+18391,2,train_source,1,елагин,cyr_word_019002 | cyr_word_019465,ay6528.png | az4400.png
+18798,2,train_source,1,608,cyr_word_019418 | cyr_word_019644,az3379.png | az7271.png
+18818,2,train_source,1,любительская,cyr_word_019438 | cyr_word_019709,az4063.png | azz4063.png
+18819,2,train_source,1,лось,cyr_word_019439 | cyr_word_019710,az4075.png | azz4075.png
+18820,2,train_source,1,взрослый,cyr_word_019440 | cyr_word_019711,az4076.png | azz4076.png
+18821,2,train_source,1,0053911,cyr_word_019441 | cyr_word_019712,az4094.png | azz4094.png
+18822,2,train_source,1,октября,cyr_word_019442 | cyr_word_019713,az4098.png | azz4098.png
+18870,2,train_source,1,алексеевич,cyr_word_019494 | cyr_word_019715,az510.png | azz510.png
+18930,2,train_source,1,2015,cyr_word_019554 | cyr_word_019716,az6214.png | azz6214.png
+18995,2,train_source,1,тоз-,cyr_word_019619 | cyr_word_019717,az7053.png | azz7053.png
+18996,2,train_source,1,78-01м,cyr_word_019620 | cyr_word_019718,az7054.png | azz7054.png
+18998,2,train_source,1,2024,cyr_word_019622 | cyr_word_019719,az7059.png | azz7059.png
+19001,2,train_source,1,082755718,cyr_word_019625 | cyr_word_019720,az7084.png | azz7084.png
+19005,2,train_source,1,2019,cyr_word_019629 | cyr_word_019721,az7104.png | azz7104.png
+19006,2,train_source,1,мая,cyr_word_019630 | cyr_word_019722,az7126.png | azz7126.png
+19007,2,train_source,1,2003,cyr_word_019631 | cyr_word_019723,az7127.png | azz7127.png
+19009,2,train_source,1,06 октября 2016,cyr_phrase_019633 | cyr_phrase_019724,az7148.png | azz7148.png
+19074,2,train_source,1,галданов,cyr_word_019699 | cyr_word_019725,az800.png | azz800.png
+50874,2,test_source|train_source,1,деформация,cyr_word_051565 | cyr_word_072605,rc186.png | test130.png
+51051,2,test_source|train_source,1,линейное,cyr_word_051742 | cyr_word_072625,rc206.png | test132.png
+51650,2,test_source|train_source,1,используем,cyr_word_052341 | cyr_word_072705,rc270.png | test141.png
+51668,2,test_source|train_source,1,дисперсия,cyr_word_052359 | cyr_word_072715,rc272.png | test142.png
+51695,2,test_source|train_source,1,принцип,cyr_word_052386 | cyr_word_072723,rc275.png | test143.png
+51749,2,test_source|train_source,1,порядок,cyr_word_052440 | cyr_word_072743,rc281.png | test145.png
+51767,2,test_source|train_source,1,равномерно,cyr_word_052458 | cyr_word_072753,rc283.png | test146.png
+51788,2,test_source|train_source,1,осуществляется,cyr_word_052479 | cyr_word_072762,rc285.png | test147.png
+51839,2,test_source|train_source,1,через,cyr_word_052530 | cyr_word_072769,rc290.png | test148.png
+51858,2,test_source|train_source,1,имеем,cyr_word_052549 | cyr_word_072778,rc292.png | test149.png
+51875,2,test_source|train_source,1,линейных,cyr_word_052566 | cyr_word_072787,rc294.png | test150.png
+51894,2,test_source|train_source,1,метод,cyr_word_052585 | cyr_word_072798,rc296.png | test151.png
+51923,2,test_source|train_source,1,моделей,cyr_word_052614 | cyr_word_072806,rc299.png | test152.png
+51968,2,test_source|train_source,1,тогда,cyr_word_052659 | cyr_word_072821,rc303.png | test154.png
+52029,2,test_source|train_source,1,сверху,cyr_word_052720 | cyr_word_072829,rc309.png | test155.png
+52068,2,test_source|train_source,1,ерез,cyr_word_052759 | cyr_word_072847,rc313.png | test157.png
+52088,2,test_source|train_source,1,линейная,cyr_word_052779 | cyr_word_072857,rc315.png | test158.png
+52109,2,test_source|train_source,1,вероятность,cyr_word_052800 | cyr_word_072865,rc317.png | test159.png
+52158,2,test_source|train_source,1,схема,cyr_word_052849 | cyr_word_073017,rc3217.png | test284.png
+56059,2,train_source,1,коллизия,cyr_word_056750 | cyr_word_056835,rc7024.png | rc7103.png
+56060,2,train_source,1,коллизия,cyr_word_056751 | cyr_word_056836,rc7025.png | rc7104.png
+56061,2,train_source,1,коллизия,cyr_word_056752 | cyr_word_056837,rc7026.png | rc7105.png
+56062,2,train_source,1,коллизия,cyr_word_056753 | cyr_word_056838,rc7028.png | rc7106.png
+56063,2,train_source,1,коллизия,cyr_word_056754 | cyr_word_056839,rc7029.png | rc7107.png
+56066,2,train_source,1,коллизия,cyr_word_056757 | cyr_word_056840,rc7031.png | rc7108.png
+56067,2,train_source,1,коллизия,cyr_word_056758 | cyr_word_056841,rc7032.png | rc7109.png
+56068,2,train_source,1,коллизия,cyr_word_056759 | cyr_word_056843,rc7033.png | rc7110.png
+56069,2,train_source,1,коллизия,cyr_word_056760 | cyr_word_056844,rc7034.png | rc7111.png
+56070,2,train_source,1,коллизия,cyr_word_056761 | cyr_word_056845,rc7035.png | rc7112.png
+56071,2,train_source,1,коллизия,cyr_word_056762 | cyr_word_056846,rc7037.png | rc7113.png
+56072,2,train_source,1,коллизия,cyr_word_056763 | cyr_word_056847,rc7038.png | rc7114.png
+56076,2,train_source,1,заграждения,cyr_word_056767 | cyr_word_056848,rc7041.png | rc7117.png
+56077,2,train_source,1,заграждение,cyr_word_056768 | cyr_word_056850,rc7042.png | rc7119.png
+56078,2,train_source,2,заграждение || заграждения,cyr_word_056769 | cyr_word_056852,rc7043.png | rc7120.png
+56079,2,train_source,1,егор,cyr_word_056770 | cyr_word_056853,rc7044.png | rc7121.png
+56081,2,train_source,1,егор,cyr_word_056772 | cyr_word_056854,rc7046.png | rc7122.png
+56082,2,train_source,1,егор,cyr_word_056773 | cyr_word_056855,rc7047.png | rc7123.png
+56086,2,train_source,1,заграждения,cyr_word_056777 | cyr_word_056857,rc7050.png | rc7127.png
+56087,2,train_source,2,заграждение || заграждения,cyr_word_056778 | cyr_word_056858,rc7051.png | rc7128.png
+56088,2,train_source,1,егор,cyr_word_056779 | cyr_word_056859,rc7052.png | rc7129.png
+56089,2,train_source,1,егор,cyr_word_056780 | cyr_word_056861,rc7053.png | rc7130.png
+56090,2,train_source,1,егор,cyr_word_056781 | cyr_word_056862,rc7054.png | rc7131.png
+56091,2,train_source,1,егор,cyr_word_056782 | cyr_word_056863,rc7055.png | rc7132.png
+56092,2,train_source,1,егор,cyr_word_056783 | cyr_word_056864,rc7056.png | rc7133.png
+56093,2,train_source,1,егор,cyr_word_056784 | cyr_word_056865,rc7057.png | rc7134.png
+56094,2,train_source,1,егор,cyr_word_056785 | cyr_word_056866,rc7058.png | rc7135.png
+56095,2,train_source,1,егор,cyr_word_056786 | cyr_word_056867,rc7059.png | rc7136.png
+56097,2,train_source,1,егор,cyr_word_056788 | cyr_word_056868,rc7060.png | rc7137.png
+56098,2,train_source,1,егор,cyr_word_056789 | cyr_word_056869,rc7061.png | rc7138.png
+56099,2,train_source,1,егор,cyr_word_056790 | cyr_word_056870,rc7062.png | rc7139.png
+56100,2,train_source,1,егор,cyr_word_056791 | cyr_word_056872,rc7063.png | rc7140.png
+56101,2,train_source,1,егор,cyr_word_056792 | cyr_word_056873,rc7064.png | rc7141.png
+56102,2,train_source,1,егор,cyr_word_056793 | cyr_word_056874,rc7065.png | rc7142.png
+56103,2,train_source,1,егор,cyr_word_056794 | cyr_word_056875,rc7066.png | rc7143.png
+56104,2,train_source,1,егор,cyr_word_056795 | cyr_word_056876,rc7067.png | rc7144.png
+56105,2,train_source,1,егор,cyr_word_056796 | cyr_word_056877,rc7068.png | rc7145.png
+56106,2,train_source,1,егор,cyr_word_056797 | cyr_word_056878,rc7069.png | rc7146.png
+61398,2,train_source,1,борьбы,cyr_word_062197 | cyr_word_067436,yob1630.png | yob12222.png
+61399,2,train_source,1,метод,cyr_word_062198 | cyr_word_067438,yob1632.png | yob12224.png
+61400,2,train_source,1,цепочек,cyr_word_062199 | cyr_word_067439,yob1633.png | yob12225.png
+61401,2,train_source,1,объединить,cyr_word_062200 | cyr_word_067440,yob1634.png | yob12226.png
+61402,2,train_source,1,элемент,cyr_word_062201 | cyr_word_067441,yob1635.png | yob12227.png
+61404,2,train_source,1,коллизии,cyr_word_062203 | cyr_word_067442,yob1639.png | yob12231.png
+61405,2,train_source,1,таблиц,cyr_word_062204 | cyr_word_067443,yob1641.png | yob12233.png
+61406,2,train_source,1,списков.,cyr_word_062205 | cyr_word_067445,yob1646.png | yob12238.png
+61407,2,train_source,1,номер,cyr_word_062206 | cyr_word_067446,yob1647.png | yob12239.png
+61408,2,train_source,1,списка,cyr_word_062207 | cyr_word_067447,yob1648.png | yob12240.png
+61409,2,train_source,1,который,cyr_word_062208 | cyr_word_067448,yob1649.png | yob12241.png
+61411,2,train_source,1,элемент,cyr_word_062210 | cyr_word_067450,yob1651.png | yob12243.png
+61412,2,train_source,1,определяется,cyr_word_062211 | cyr_word_067451,yob1652.png | yob12244.png
+61413,2,train_source,1,функции,cyr_word_062212 | cyr_word_067452,yob1655.png | yob12247.png
+61414,2,train_source,1,построения,cyr_word_062213 | cyr_word_067454,yob1657.png | yob12249.png
+61415,2,train_source,1,таблица,cyr_word_062214 | cyr_word_067455,yob1658.png | yob12250.png
+61416,2,train_source,1,поиска,cyr_word_062215 | cyr_word_067456,yob1659.png | yob12251.png
+61417,2,train_source,2,списков || списков.,cyr_word_062216 | cyr_word_067458,yob1665.png | yob12257.png
+61418,2,train_source,2,что бы || чтобы,cyr_phrase_062217 | cyr_word_067459,yob1666.png | yob12258.png
+61419,2,train_source,1,сравнить,cyr_word_062218 | cyr_word_067460,yob1667.png | yob12259.png
+61420,2,train_source,1,нужно,cyr_word_062219 | cyr_word_067462,yob1669.png | yob12261.png
+61423,2,train_source,1,одного,cyr_word_062222 | cyr_word_067463,yob1671.png | yob12263.png
+61424,2,train_source,1,списка,cyr_word_062223 | cyr_word_067464,yob1672.png | yob12264.png
+61425,2,train_source,1,элемент,cyr_word_062224 | cyr_word_067465,yob1674.png | yob12266.png
+61426,2,train_source,1,берем,cyr_word_062225 | cyr_word_067466,yob1675.png | yob12267.png
+61427,2,train_source,1,новый,cyr_word_062226 | cyr_word_067467,yob1676.png | yob12268.png
+61428,2,train_source,1,элемент,cyr_word_062227 | cyr_word_067468,yob1677.png | yob12269.png
+61429,2,train_source,1,попадаем,cyr_word_062228 | cyr_word_067469,yob1682.png | yob12274.png
+61430,2,train_source,1,соотв.,cyr_word_062229 | cyr_word_067470,yob1683.png | yob12275.png
+61431,2,train_source,1,список,cyr_word_062230 | cyr_word_067471,yob1684.png | yob12276.png
+61432,2,train_source,1,таблица,cyr_word_062231 | cyr_word_067474,yob1694.png | yob12286.png
+61433,2,train_source,1,содержит,cyr_word_062232 | cyr_word_067475,yob1698.png | yob12290.png
+61434,2,train_source,1,элементы,cyr_word_062233 | cyr_word_067476,yob1699.png | yob12291.png
+61437,2,train_source,2,"коллизий || коллизий,",cyr_word_062236 | cyr_word_067477,yob1702.png | yob12294.png
+61438,2,train_source,1,списки,cyr_word_062237 | cyr_word_067478,yob1703.png | yob12295.png
+61440,2,train_source,1,вычи,cyr_word_062239 | cyr_word_067479,yob1706.png | yob12298.png
+61441,2,train_source,1,незанятые,cyr_word_062240 | cyr_word_067480,yob1709.png | yob12301.png
+61442,2,train_source,1,остальные,cyr_word_062241 | cyr_word_067482,yob1713.png | yob12305.png
+61443,2,train_source,1,вычисляют,cyr_word_062242 | cyr_word_067484,yob1716.png | yob12308.png
+61444,2,train_source,1,списки.,cyr_word_062243 | cyr_word_067485,yob1719.png | yob12311.png
+61445,2,train_source,1,списке,cyr_word_062244 | cyr_word_067486,yob1724.png | yob12316.png
+61779,2,train_source,2,хем-фунская || хеш-функция,cyr_word_062578 | cyr_word_066208,yob2716.png | yob8446.png
+61780,2,train_source,2,смесь || смесь),cyr_word_062579 | cyr_word_066209,yob2718.png | yob8448.png
+61782,2,train_source,1,номера,cyr_word_062581 | cyr_word_066210,yob2726.png | yob8456.png
+61784,2,train_source,1,функции,cyr_word_062583 | cyr_word_066211,yob2733.png | yob8463.png
+61785,2,train_source,1,основная,cyr_word_062584 | cyr_word_066212,yob2734.png | yob8464.png
+61786,2,train_source,2,хеширование || хеширования,cyr_word_062585 | cyr_word_066213,yob2736.png | yob8466.png
+61787,2,train_source,1,используем,cyr_word_062586 | cyr_word_066214,yob2737.png | yob8467.png
+61789,2,train_source,1,чтобы,cyr_word_062588 | cyr_word_066215,yob2742.png | yob8472.png
+61790,2,train_source,1,ключевого,cyr_word_062589 | cyr_word_066216,yob2744.png | yob8474.png
+61791,2,train_source,1,перейти,cyr_word_062590 | cyr_word_066218,yob2746.png | yob8476.png
+61792,2,train_source,1,адресу,cyr_word_062591 | cyr_word_066219,yob2748.png | yob8478.png
+61793,2,train_source,1,элемента,cyr_word_062592 | cyr_word_066220,yob2751.png | yob8481.png
+61794,2,train_source,1,хеш,cyr_word_062593 | cyr_word_066221,yob2752.png | yob8482.png
+61795,2,train_source,1,где хранятся,cyr_phrase_062594 | cyr_phrase_066222,yob2753.png | yob8483.png
+61796,2,train_source,2,объекты || объекты),cyr_word_062595 | cyr_word_066224,yob2756.png | yob8486.png
+61797,2,train_source,2,используют || используютс,cyr_word_062596 | cyr_word_066225,yob2757.png | yob8487.png
+61798,2,train_source,1,основе,cyr_word_062597 | cyr_word_066226,yob2762.png | yob8492.png
+61799,2,train_source,1,деления,cyr_word_062598 | cyr_word_066227,yob2763.png | yob8493.png
+61800,2,train_source,1,основе,cyr_word_062599 | cyr_word_066228,yob2768.png | yob8498.png
+61801,2,train_source,1,умножения,cyr_word_062600 | cyr_word_066229,yob2769.png | yob8499.png
+61802,2,train_source,1,длина,cyr_word_062601 | cyr_word_066230,yob2770.png | yob8500.png
+61803,2,train_source,1,простое,cyr_word_062602 | cyr_word_066231,yob2773.png | yob8503.png
+61804,2,train_source,1,число,cyr_word_062603 | cyr_word_066232,yob2774.png | yob8504.png
+61805,2,train_source,1,"функция,",cyr_word_062604 | cyr_word_066233,yob2776.png | yob8506.png
+61808,2,train_source,1,конкретный,cyr_word_062607 | cyr_word_068600,yob2779.png | yob8509.png
+61809,2,train_source,1,число,cyr_word_062608 | cyr_word_068601,yob2783.png | yob8513.png
+61810,2,train_source,1,простое,cyr_word_062609 | cyr_word_068602,yob2788.png | yob8518.png
+61811,2,train_source,1,чисто,cyr_word_062610 | cyr_word_068603,yob2789.png | yob8519.png
+61812,2,train_source,1,простое,cyr_word_062611 | cyr_word_068604,yob2792.png | yob8522.png
+61813,2,train_source,1,число,cyr_word_062612 | cyr_word_068605,yob2793.png | yob8523.png
+61816,2,train_source,1,ключевых,cyr_word_062615 | cyr_word_068606,yob2806.png | yob8536.png
+61817,2,train_source,1,значений,cyr_word_062616 | cyr_word_068607,yob2807.png | yob8537.png
+61818,2,train_source,1,таблиц,cyr_word_062617 | cyr_word_068608,yob2810.png | yob8540.png
+61819,2,train_source,1,целое,cyr_word_062618 | cyr_word_068609,yob2811.png | yob8541.png
+64744,2,train_source,2,общая трудоемкос || общая трудоемкост,cyr_phrase_065545 | cyr_phrase_070766,yob7216.png | yob17712.png
+64746,2,train_source,2,откоситель- || относитель-,cyr_word_065547 | cyr_word_070767,yob7219.png | yob17715.png
+64747,2,train_source,1,таблицы,cyr_word_065548 | cyr_word_070768,yob7223.png | yob17719.png
+64749,2,train_source,2,кать || чать,cyr_word_065550 | cyr_word_070769,yob7229.png | yob17725.png
+64750,2,train_source,1,искомого,cyr_word_065551 | cyr_word_070770,yob7230.png | yob17726.png
+64751,2,train_source,1,объект,cyr_word_065552 | cyr_word_070771,yob7231.png | yob17727.png
+64752,2,train_source,1,основе,cyr_word_065553 | cyr_word_070772,yob7233.png | yob17729.png
+64753,2,train_source,1,ключевого,cyr_word_065554 | cyr_word_070773,yob7238.png | yob17734.png
+64754,2,train_source,1,чения,cyr_word_065555 | cyr_word_070774,yob7239.png | yob17735.png
+64755,2,train_source,1,вычисляется,cyr_word_065556 | cyr_word_070775,yob7241.png | yob17737.png
+64756,2,train_source,1,емеющее,cyr_word_065557 | cyr_word_070776,yob7244.png | yob17740.png
+64757,2,train_source,2,колее || номе,cyr_word_065558 | cyr_word_070777,yob7245.png | yob17741.png
+64758,2,train_source,1,записи,cyr_word_065559 | cyr_word_070778,yob7246.png | yob17742.png
+64759,2,train_source,1,некоторой,cyr_word_065560 | cyr_word_070779,yob7247.png | yob17743.png
+64760,2,train_source,1,блице,cyr_word_065561 | cyr_word_070780,yob7249.png | yob17745.png
+64761,2,train_source,1,требования,cyr_word_065562 | cyr_word_070781,yob7252.png | yob17748.png
+64762,2,train_source,1,функции,cyr_word_065563 | cyr_word_070782,yob7253.png | yob17749.png
+64763,2,train_source,1,разные,cyr_word_065564 | cyr_word_070783,yob7256.png | yob17752.png
+64764,2,train_source,1,объекты,cyr_word_065565 | cyr_word_070784,yob7257.png | yob17753.png
+64765,2,train_source,1,разным,cyr_word_065566 | cyr_word_070785,yob7259.png | yob17755.png
+64766,2,train_source,1,адресам,cyr_word_065567 | cyr_word_070786,yob7260.png | yob17756.png
+64767,2,train_source,1,простота,cyr_word_065568 | cyr_word_070787,yob7261.png | yob17757.png
+64768,2,train_source,1,вычисления,cyr_word_065569 | cyr_word_070788,yob7262.png | yob17758.png
+64769,2,train_source,1,быстрое вычисл.,cyr_phrase_065570 | cyr_phrase_070789,yob7263.png | yob17759.png
+64770,2,train_source,1,длина,cyr_word_065571 | cyr_word_070790,yob7264.png | yob17760.png
+64771,2,train_source,2,таблица || таблицо,cyr_word_065572 | cyr_word_070791,yob7265.png | yob17761.png
+64772,2,train_source,2,возможно || возмошно,cyr_word_065573 | cyr_word_070792,yob7271.png | yob17767.png
+64773,2,train_source,1,зникновение,cyr_word_065574 | cyr_word_070793,yob7272.png | yob17768.png
+64774,2,train_source,1,когда,cyr_word_065575 | cyr_word_070794,yob7276.png | yob17772.png
+64775,2,train_source,1,напремер,cyr_word_065576 | cyr_word_070795,yob7277.png | yob17773.png
+64776,2,train_source,1,значения,cyr_word_065577 | cyr_word_070796,yob7278.png | yob17774.png
+64777,2,train_source,1,то же,cyr_phrase_065578 | cyr_phrase_070797,yob7284.png | yob17780.png
+64778,2,train_source,1,значен.,cyr_word_065579 | cyr_word_070798,yob7285.png | yob17781.png
+64779,2,train_source,1,подход,cyr_word_065580 | cyr_word_070799,yob7289.png | yob17785.png
+64780,2,train_source,1,исключать,cyr_word_065581 | cyr_word_070800,yob7290.png | yob17786.png
+64782,2,train_source,1,смотреть,cyr_word_065583 | cyr_word_070801,yob7293.png | yob17789.png
+64783,2,train_source,1,выбирать,cyr_word_065584 | cyr_word_070802,yob7296.png | yob17792.png
+64784,2,train_source,1,таким,cyr_word_065585 | cyr_word_070803,yob7298.png | yob17794.png
+64785,2,train_source,1,образом,cyr_word_065586 | cyr_word_070804,yob7299.png | yob17795.png
+64786,2,train_source,1,возможности,cyr_word_065587 | cyr_word_070805,yob7303.png | yob17799.png
+64787,2,train_source,1,ртах,cyr_word_065588 | cyr_word_070806,yob7305.png | yob17801.png
+64788,2,train_source,1,тпотенциальных,cyr_word_065589 | cyr_word_070807,yob7307.png | yob17803.png
+64789,2,train_source,1,значении,cyr_word_065590 | cyr_word_070808,yob7308.png | yob17804.png
+64790,2,train_source,1,ключа,cyr_word_065591 | cyr_word_070809,yob7309.png | yob17805.png
+64791,2,train_source,1,адресам.,cyr_word_065592 | cyr_word_070810,yob7310.png | yob17806.png
+64792,2,train_source,1,общий,cyr_word_065593 | cyr_word_070811,yob7320.png | yob17816.png
+66250,2,train_source,1,поиске,cyr_word_067075 | cyr_word_068017,yob11539.png | yob13325.png
+66251,2,train_source,1,методы,cyr_word_067076 | cyr_word_068018,yob11542.png | yob13328.png
+66252,2,train_source,1,вычисление,cyr_word_067077 | cyr_word_068019,yob11543.png | yob13329.png
+66253,2,train_source,2,шага || шала,cyr_word_067078 | cyr_word_068021,yob11545.png | yob13331.png
+66254,2,train_source,1,должны,cyr_word_067079 | cyr_word_068022,yob11546.png | yob13332.png
+66255,2,train_source,1,исключать,cyr_word_067080 | cyr_word_068023,yob11547.png | yob13333.png
+66256,2,train_source,1,зацикливания,cyr_word_067081 | cyr_word_068024,yob11548.png | yob13334.png
+66258,2,train_source,1,выбирается,cyr_word_067083 | cyr_word_068025,yob11551.png | yob13337.png
+66259,2,train_source,2,должно || должны,cyr_word_067084 | cyr_word_068026,yob11554.png | yob13340.png
+66260,2,train_source,1,взаимно,cyr_word_067085 | cyr_word_068027,yob11556.png | yob13342.png
+66261,2,train_source,1,шаги,cyr_word_067086 | cyr_word_068028,yob11558.png | yob13344.png
+66262,2,train_source,1,следующей,cyr_word_067087 | cyr_word_068029,yob11564.png | yob13350.png
+66263,2,train_source,2,предыдущего || предыдущего),cyr_word_067088 | cyr_word_068030,yob11569.png | yob13355.png
+66264,2,train_source,1,недостатки,cyr_word_067089 | cyr_word_068031,yob11570.png | yob13356.png
+66265,2,train_source,1,первичное,cyr_word_067090 | cyr_word_068032,yob11571.png | yob13357.png
+66266,2,train_source,1,скучивание,cyr_word_067091 | cyr_word_068033,yob11572.png | yob13358.png
+66267,2,train_source,1,маленьком,cyr_word_067092 | cyr_word_068034,yob11574.png | yob13360.png
+66269,2,train_source,1,начально,cyr_word_067094 | cyr_word_068035,yob11579.png | yob13365.png
+66270,2,train_source,1,квадратичные,cyr_word_067095 | cyr_word_068036,yob11580.png | yob13366.png
+66271,2,train_source,1,шагом,cyr_word_067096 | cyr_word_068037,yob11582.png | yob13368.png
+66272,2,train_source,1,является-,cyr_word_067097 | cyr_word_068038,yob11583.png | yob13369.png
+66274,2,train_source,1,попытки,cyr_word_067099 | cyr_word_068039,yob11586.png | yob13372.png
+66275,2,train_source,1,адреса,cyr_word_067100 | cyr_word_068040,yob11589.png | yob13375.png
+66276,2,train_source,1,квадрат,cyr_word_067101 | cyr_word_068042,yob11593.png | yob13379.png
+66277,2,train_source,1,попытки,cyr_word_067102 | cyr_word_068043,yob11594.png | yob13380.png
+66278,2,train_source,2,"хеми || хеши,",cyr_word_067103 | cyr_word_068044,yob11596.png | yob13382.png
+66279,2,train_source,1,рование,cyr_word_067104 | cyr_word_068045,yob11597.png | yob13383.png
+66280,2,train_source,1,второй,cyr_word_067105 | cyr_word_068046,yob11600.png | yob13386.png
+66281,2,train_source,1,функции,cyr_word_067106 | cyr_word_068047,yob11607.png | yob13393.png
+66282,2,train_source,2,"похоже на линейные пробы || похоже на линейные пробы,",cyr_phrase_067107 | cyr_phrase_068048,yob11610.png | yob13396.png
+66283,2,train_source,1,для разных,cyr_phrase_067108 | cyr_phrase_068049,yob11612.png | yob13398.png
+66284,2,train_source,1,делается,cyr_word_067109 | cyr_word_068050,yob11614.png | yob13400.png
+67625,2,train_source,1,места,cyr_word_068523 | cyr_word_069919,yob14255.png | yob16039.png
+67626,2,train_source,1,начинается,cyr_word_068524 | cyr_word_069920,yob14257.png | yob16041.png
+67628,2,train_source,1,формирование бинарного,cyr_phrase_068526 | cyr_phrase_069921,yob14261.png | yob16045.png
+67629,2,train_source,1,любой,cyr_word_068527 | cyr_word_069922,yob14263.png | yob16047.png
+67631,2,train_source,1,значение,cyr_word_068529 | cyr_word_069923,yob14268.png | yob16052.png
+67633,2,train_source,1,листом,cyr_word_068531 | cyr_word_069925,yob14276.png | yob16060.png
+67634,2,train_source,1,идеальном,cyr_word_068532 | cyr_word_069926,yob14279.png | yob16063.png
+67635,2,train_source,1,может,cyr_word_068533 | cyr_word_069927,yob14285.png | yob16069.png
+67636,2,train_source,2,послед || послед.,cyr_word_068534 | cyr_word_069928,yob14286.png | yob16070.png
+67637,2,train_source,1,имеет,cyr_word_068535 | cyr_word_069929,yob14287.png | yob16071.png
+67638,2,train_source,1,минимальную,cyr_word_068536 | cyr_word_069930,yob14288.png | yob16072.png
+67639,2,train_source,1,высоту,cyr_word_068537 | cyr_word_069931,yob14289.png | yob16073.png
+67640,2,train_source,1,минимальную,cyr_word_068538 | cyr_word_069932,yob14290.png | yob16074.png
+67642,2,train_source,1,построения,cyr_word_068540 | cyr_word_069933,yob14295.png | yob16079.png
+67643,2,train_source,1,удаление,cyr_word_068541 | cyr_word_069934,yob14298.png | yob16082.png
+67646,2,train_source,1,бинарного,cyr_word_068544 | cyr_word_069935,yob14301.png | yob16085.png
+67647,2,train_source,1,вершина,cyr_word_068545 | cyr_word_069937,yob14304.png | yob16088.png
+67648,2,train_source,2,ссылку || ссыпку,cyr_word_068546 | cyr_word_069938,yob14309.png | yob16093.png
+67649,2,train_source,1,если,cyr_word_068547 | cyr_word_069939,yob14312.png | yob16096.png
+67652,2,train_source,1,перестроить,cyr_word_068550 | cyr_word_069940,yob14319.png | yob16103.png
+67653,2,train_source,1,вершины,cyr_word_068551 | cyr_word_069941,yob14323.png | yob16107.png
+67654,2,train_source,1,дерева,cyr_word_068552 | cyr_word_069942,yob14324.png | yob16108.png
+67655,2,train_source,1,"дерево,",cyr_word_068553 | cyr_word_069943,yob14333.png | yob16117.png
