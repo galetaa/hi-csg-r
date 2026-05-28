@@ -1,0 +1,5 @@
+sample_id,split,writer_id,document_id,source_group,condition,page_idx,page_path,error
+hwr200_document_condition_007577,train,70,reuse11,Reuse,photo_light,4,data/processed/hwr200/images/hwr200_document_condition_007577/page_004.jpg,OSError('image file is truncated (23 bytes not processed)')
+hwr200_document_condition_007578,train,70,reuse11,Reuse,photo_dark,2,data/processed/hwr200/images/hwr200_document_condition_007578/page_002.jpg,OSError('image file is truncated (5 bytes not processed)')
+hwr200_document_condition_007593,train,70,reuse5,Reuse,photo_dark,2,data/processed/hwr200/images/hwr200_document_condition_007593/page_002.jpg,OSError('image file is truncated (7 bytes not processed)')
+hwr200_document_condition_008972,train,99,reuse11,Reuse,photo_light,1,data/processed/hwr200/images/hwr200_document_condition_008972/page_001.jpg,OSError('image file is truncated (6 bytes not processed)')

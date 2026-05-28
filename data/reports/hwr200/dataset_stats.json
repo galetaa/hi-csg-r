@@ -1,0 +1,33 @@
+{
+  "num_samples": 9000,
+  "datasets": {
+    "hwr200": 9000
+  },
+  "levels": {
+    "hwr200::document_condition": 9000
+  },
+  "num_issues": 658,
+  "issue_counts": {
+    "mixed_script": 594,
+    "duplicate_exact": 63,
+    "broken_image": 1
+  },
+  "image_width": {
+    "count": 8999,
+    "min": 360,
+    "max": 5632,
+    "mean": 1785.9977775308369
+  },
+  "image_height": {
+    "count": 8999,
+    "min": 236,
+    "max": 6039,
+    "mean": 2123.715190576731
+  },
+  "text_length": {
+    "count": 9000,
+    "min": 1981,
+    "max": 7317,
+    "mean": 3680.6736666666666
+  }
+}
