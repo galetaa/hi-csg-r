@@ -1,0 +1,29 @@
+{
+  "num_samples": 13353,
+  "datasets": {
+    "iam": 13353
+  },
+  "levels": {
+    "iam::line": 13353
+  },
+  "num_issues": 0,
+  "issue_counts": {},
+  "image_width": {
+    "count": 13353,
+    "min": 100,
+    "max": 2270,
+    "mean": 1697.893881524751
+  },
+  "image_height": {
+    "count": 13353,
+    "min": 38,
+    "max": 342,
+    "mean": 122.32719239122295
+  },
+  "text_length": {
+    "count": 13353,
+    "min": 1,
+    "max": 93,
+    "mean": 43.261364487381115
+  }
+}
