@@ -4,7 +4,6 @@ import re
 import unicodedata
 from dataclasses import dataclass
 
-
 _PUNCT_RE = re.compile(r"[^\w\sа-яА-ЯёЁa-zA-Z0-9]", flags=re.UNICODE)
 _SPACE_RE = re.compile(r"\s+")
 
@@ -18,6 +17,38 @@ class NormalizedText:
     ctc_default: str
     ctc_no_punct: str
     ru_yo_to_e: str
+
+
+@dataclass(frozen=True)
+class NormalizedTextEn:
+    raw: str
+    nfc: str
+    lower: str
+    no_punct: str
+    ctc_default: str
+    ctc_no_punct: str
+
+
+def normalize_text_en(text: str) -> NormalizedTextEn:
+    raw = text.rstrip("\n\r")
+    nfc = unicodedata.normalize("NFC", raw)
+    nfc = normalize_spaces(nfc)
+
+    lower = nfc.lower()
+    no_punct = remove_punctuation(lower)
+
+    # Для первого IAM baseline оставляем punctuation.
+    ctc_default = lower
+    ctc_no_punct = no_punct
+
+    return NormalizedTextEn(
+        raw=raw,
+        nfc=nfc,
+        lower=lower,
+        no_punct=no_punct,
+        ctc_default=ctc_default,
+        ctc_no_punct=ctc_no_punct,
+    )
 
 
 def normalize_spaces(text: str) -> str:
