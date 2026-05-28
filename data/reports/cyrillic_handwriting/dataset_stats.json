@@ -1,0 +1,35 @@
+{
+  "num_samples": 73830,
+  "datasets": {
+    "cyrillic_handwriting": 73830
+  },
+  "levels": {
+    "cyrillic_handwriting::word": 66060,
+    "cyrillic_handwriting::phrase": 7770
+  },
+  "num_issues": 1001,
+  "issue_counts": {
+    "duplicate_exact": 993,
+    "mixed_script": 4,
+    "empty_normalized_transcription": 2,
+    "empty_raw_transcription": 2
+  },
+  "image_width": {
+    "count": 73830,
+    "min": 30,
+    "max": 1348,
+    "mean": 213.58369226601653
+  },
+  "image_height": {
+    "count": 73830,
+    "min": 15,
+    "max": 908,
+    "mean": 66.98450494378979
+  },
+  "text_length": {
+    "count": 73830,
+    "min": 0,
+    "max": 40,
+    "mean": 7.517608018420696
+  }
+}
