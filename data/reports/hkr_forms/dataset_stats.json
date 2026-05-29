@@ -1,0 +1,33 @@
+{
+  "num_samples": 1577,
+  "datasets": {
+    "hkr_forms": 1577
+  },
+  "levels": {
+    "hkr_forms::form_page": 1577
+  },
+  "num_issues": 172,
+  "issue_counts": {
+    "mixed_script": 165,
+    "suspicious_filename_x": 6,
+    "duplicate_exact": 1
+  },
+  "image_width": {
+    "count": 1577,
+    "min": 2480,
+    "max": 2480,
+    "mean": 2480.0
+  },
+  "image_height": {
+    "count": 1577,
+    "min": 3507,
+    "max": 3507,
+    "mean": 3507.0
+  },
+  "text_length": {
+    "count": 1577,
+    "min": 448,
+    "max": 806,
+    "mean": 601.2777425491439
+  }
+}
