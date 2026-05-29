@@ -22,29 +22,26 @@ dependencies = [
   "rich>=13.7",
   "typer>=0.12",
   "loguru>=0.7",
-
   # Images / CV / skeletonization
   "opencv-python-headless>=4.9",
   "pillow>=10.3",
   "scikit-image>=0.23",
   "matplotlib>=3.8",
-
   # Graphs / geometry / vector export
   "networkx>=3.3",
   "shapely>=2.0",
   "svgwrite>=1.4",
-
   # Metrics / utilities
   "scikit-learn>=1.5",
   "jiwer>=3.0",
   "rapidfuzz>=3.9",
-
   # Dataset helpers
   "requests>=2.32",
   "huggingface-hub>=0.23",
   "datasets>=2.19",
   "reportlab>=3.6",
   "pypdf>=3.0",
+  "scipy-stubs~=1.17.1",
 ]
 
 [dependency-groups]
