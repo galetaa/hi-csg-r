@@ -1664,6 +1664,439 @@ Default feature stream: grayscale после alpha composite, без autocontras
 
 ---
 
+## 29.2. Статус IAM
+
+IAM распакован в `data/interim/iam`.
+
+Фактическая структура после распаковки:
+
+```text
+data/interim/iam/ascii
+data/interim/iam/lines
+data/interim/iam/formsA-D
+data/interim/iam/formsE-H
+data/interim/iam/formsI-Z
+```
+
+Line images находятся в структуре вида:
+
+```text
+data/interim/iam/lines/d01/d01-052/d01-052-04.png
+```
+
+Фактические данные IAM:
+
+```text
+files total: 148 507
+.png: 146 964
+.xml: 1 539
+.txt: 4
+line images: 13 353
+XML files: 1 539
+ascii files: forms.txt, lines.txt, sentences.txt, words.txt
+```
+
+`lines.txt` содержит формат line-level разметки:
+
+```text
+line_id segmentation_status graylevel components bbox transcription_with_|_tokens
+```
+
+Пример:
+
+```text
+a01-000u-00 ok 154 19 408 746 1661 89 A|MOVE|to|stop|Mr.|Gaitskell|from
+```
+
+XML root содержит `writer-id`, например:
+
+```text
+<form id="a01-000u" writer-id="000" ...>
+```
+
+Решение по converter:
+
+```text
+1. использовать `ascii/lines.txt` как основной источник line-level транскрипций;
+2. использовать XML-файлы как источник `writer-id` на уровне form;
+3. связывать line_id с изображением по правилу:
+   line_id = a01-000u-00
+   form_id = a01-000u
+   image_path = data/interim/iam/lines/a01/a01-000u/a01-000u-00.png
+```
+
+Важно: в XML встречаются `machine-print-line`, поэтому для line-level HTR безопаснее использовать `ascii/lines.txt` для самих рукописных строк, а XML — только для writer_id/form metadata.
+
+Финальный converter IAM успешно отработал:
+
+```text
+Converted IAM lines: 13 353
+Missing images: 0
+Missing writer_id: 0
+```
+
+Writer-independent split:
+
+```text
+train: 11 134
+val:    1 180
+test:   1 039
+```
+
+Writer leakage check:
+
+```text
+writers total: 657
+train writers: 525
+val writers:    65
+test writers:   67
+writer leakage: 0
+missing writer: 0
+```
+
+Full preprocessing выполнен:
+
+```text
+records:               13 353
+missing ocr:                0
+missing feature:            0
+ocr files exist:       13 353
+feature files exist:   13 353
+flags:                 none
+```
+
+Финальный файл для дальнейших этапов:
+
+```text
+data/processed/iam/metadata.preprocessed.jsonl
+```
+
+Интерпретация:
+
+```text
+1. IAM готов как Core EN line-level dataset.
+2. Writer-independent split корректен.
+3. Датасет готов для image-only CRNN/CTC baseline.
+4. Датасет готов для graph extraction pilot и EN gold subset candidate selection.
+```
+
+---
+
+## 29.3. Статус HWR200
+
+HWR200 распакован в `data/interim/hwr200`.
+
+Фактическая структура annotations:
+
+```text
+data/interim/hwr200/annotations/FPR/
+data/interim/hwr200/annotations/Originals/
+data/interim/hwr200/annotations/Reuse/
+```
+
+Фактические annotation JSON:
+
+```text
+JSON count: 2 720
+annotations/Reuse:      2 650
+annotations/FPR:           35
+annotations/Originals:     35
+```
+
+Ключи annotation JSON:
+
+```text
+words_count: 2 720
+full_text:   2 720
+reuse_0:     2 650
+sentences:      70
+```
+
+Фактический image inventory:
+
+```text
+IMAGE count: 33 030
+.jpg:   27 788
+.jpeg:   3 061
+.png:    2 181
+```
+
+Фактическая структура изображений:
+
+```text
+data/interim/hwr200/hwr200_0_19/hw_dataset/0/fpr0/Сканы/1.JPG
+data/interim/hwr200/hwr200_0_19/hw_dataset/0/fpr0/ФотоСветлое/1.jpg
+data/interim/hwr200/hwr200_0_19/hw_dataset/0/fpr0/ФотоТемное/1.jpg
+```
+
+Условия съёмки кодируются папками:
+
+```text
+Сканы        → scan
+ФотоСветлое  → photo_light
+ФотоТемное   → photo_dark
+```
+
+Связь annotation → image восстанавливается по структуре директорий:
+
+```text
+writer_id / document_folder / acquisition_condition / page_image
+```
+
+Методологическое решение:
+
+```text
+1. HWR200 не используется как обычный line-level HTR training dataset на первом проходе.
+2. У HWR200 full_text относится к документу/эссе, а не обязательно к каждому отдельному page image.
+3. Нельзя автоматически назначать full_text каждой странице как ground truth для CER.
+4. Основной уровень HWR200 в Core MVP: document_condition.
+5. Один sample = один документ в одном условии съёмки, содержащий список page_image_paths.
+6. image_path в sample = первая страница, только для preview/compatibility.
+7. page_image_paths хранится в metadata.
+8. usable_for_htr = false для обычного single-image line/page HTR baseline.
+9. usable_for_graph = true для page-level graph/quality experiments.
+10. usable_for_robustness = true для real-condition scan/photo_light/photo_dark comparison.
+```
+
+Финальный converter HWR200 успешно отработал:
+
+```text
+Found image groups: 9 000
+Converted HWR200 document-condition samples: 9 000
+Linked/copied pages total: 33 030
+Missing annotations: 0
+Empty full_text: 0
+```
+
+Counts by condition:
+
+```text
+scan:        3 000
+photo_light: 3 000
+photo_dark:  3 000
+```
+
+Counts by source_group:
+
+```text
+Reuse:      7 950
+FPR:          525
+Originals:    525
+```
+
+Condition-aware split:
+
+```text
+train: 6 300
+val:     900
+test:  1 800
+```
+
+Document leakage check:
+
+```text
+document leakage: 0
+```
+
+Validation/preprocessing status:
+
+```text
+records:             9 000
+missing annotations:     0
+empty text:              0
+total pages:        33 030
+usable_for_htr:      False for all 9 000 samples
+usable_for_graph:    True
+usable_for_robustness: True
+```
+
+Финальный файл metadata для HWR200 после split:
+
+```text
+data/processed/hwr200/metadata.condition_splits.jsonl
+```
+
+Финальный файл metadata после page-level preprocessing:
+
+```text
+data/processed/hwr200/metadata.preprocessed.jsonl
+```
+
+HWR200-specific preprocessing выполнен.
+
+Pilot preprocessing:
+
+```text
+records: 30
+total original pages: 171
+total ocr pages: 171
+total feature pages: 171
+failed pages: 0
+conditions: scan=10, photo_light=10, photo_dark=10
+```
+
+Full preprocessing:
+
+```text
+records: 9 000
+total original pages: 33 030
+total ocr pages: 33 026
+total feature pages: 33 026
+failed pages: 4
+```
+
+Full preprocessing checks:
+
+```text
+splits: train=6 300, val=900, test=1 800
+conditions: scan=3 000, photo_light=3 000, photo_dark=3 000
+source groups: Reuse=7 950, FPR=525, Originals=525
+samples with missing ocr pages: 4
+samples with missing feature pages: 4
+checked files: 200
+missing checked files: 0
+```
+
+Remaining flags:
+
+```text
+mixed_script: 594
+duplicate_exact: 63
+hwr200_page_preprocess_failed: 4
+broken_image: 1
+```
+
+Interpretation:
+
+```text
+1. HWR200 is ready as a document-condition robustness dataset.
+2. 4 failed pages are acceptable for Stage 1 but must be inspected and reported.
+3. mixed_script flags are expected for document-level Russian essays containing Latin letters, abbreviations, foreign names or symbols; they should not be treated as automatic exclusion.
+4. duplicate_exact is not critical for HWR200 because split is document-group-aware, but it should be logged.
+5. broken_image / failed page cases should be listed in hwr200_failed_pages_report.csv.
+```
+
+Next HWR200-specific step:
+
+```text
+1. inspect 4 failed pages;
+2. write hwr200 summary report;
+3. create paired robustness index: writer_id + document_id → scan/photo_light/photo_dark;
+4. then proceed to HKR Forms if Words archive is unavailable.
+```
+
+Следующий HWR200-specific шаг:
+
+```text
+1. не запускать обычный line-level OCR preprocessing;
+2. сделать отдельный page-level preprocessing для всех page_image_paths;
+3. сохранить metadata.page_ocr_image_paths и metadata.page_feature_image_paths;
+4. сформировать paired robustness index: writer_id + document_id → scan/photo_light/photo_dark;
+5. сделать HWR200 summary report.
+```
+
+---
+
+## 29.4. Статус HKR Forms после inspection
+
+HKR Forms распакован в `data/interim/hkr/forms`.
+
+Фактическая структура:
+
+```text
+data/interim/hkr/forms/0
+data/interim/hkr/forms/1
+...
+data/interim/hkr/forms/13
+```
+
+Фактический inventory:
+
+```text
+num files: 1 600
+images:    1 577
+.jpg:      1 366
+.png:        211
+.txt:         14
+.ini:          9
+```
+
+Файлы `class_indexes_*.txt` находятся в корне `data/interim/hkr/forms`:
+
+```text
+class_indexes_0.txt
+class_indexes_1.txt
+...
+class_indexes_13.txt
+```
+
+`class_indexes_*.txt` содержат mapping:
+
+```text
+class_index → target text fragment
+```
+
+Примеры:
+
+```text
+0  Шёл человек.
+26 Шёл степью,
+1  долго, долго.
+27 Куда? Зачем?
+```
+
+INI-файлы являются служебными `desktop.ini` и не содержат полезной разметки.
+
+Изображения находятся в папках форм/классов, например:
+
+```text
+data/interim/hkr/forms/0/Скан_20190925_10 (13) - 2.jpg
+data/interim/hkr/forms/10/20190124 001.jpg
+```
+
+Типичный размер страницы:
+
+```text
+2480 × 3507 RGB
+```
+
+Методологическое решение:
+
+```text
+1. HKR Forms используется как form_page dataset.
+2. Не считать HKR Forms line-level HTR dataset: line/word crops и координаты в Forms inspection не обнаружены.
+3. Для каждой страницы можно связать form_id с набором target text fragments из class_indexes_{form_id}.txt.
+4. raw_transcription = concatenated template text для всей формы.
+5. usable_for_htr = false для CRNN/CTC baseline, потому что это page/form-level full-template transcription без line segmentation.
+6. usable_for_graph = true.
+7. usable_for_gold_subset = limited/manual only.
+8. HKR Words archive всё ещё нужен для полноценного word-level/line-level HKR HTR.
+```
+
+Текущая роль HKR Forms:
+
+```text
+1. дополнительный page/form-level русский корпус;
+2. source для сложных graph extraction примеров;
+3. проверка влияния form/grid background;
+4. optional candidate source для gold subset после визуального аудита;
+5. future page-to-line segmentation test.
+```
+
+Следующий шаг:
+
+```text
+1. написать `src/datasets/hkr_forms.py`;
+2. создать metadata для 1 577 form-page images;
+3. выполнить validation;
+4. сделать random_no_writer_no_htr split;
+5. выполнить page-level OCR/feature preprocessing;
+6. сделать summary report;
+7. HKR Words подключить позже, когда будет пароль.
+```
+
+---
+
 ## 30. Финальное резюме этапа
 
 Этап 1 должен превратить набор разнородных рукописных датасетов в контролируемую исследовательскую основу. Главный результат — не красивые изображения и не первая модель, а воспроизводимый слой данных: единые metadata, validation, splits, preprocessing streams, alphabet report, quality flags и preview notebook. Только после этого можно корректно переходить к image-only baseline и classical graph extractor.
