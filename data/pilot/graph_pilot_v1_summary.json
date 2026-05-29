@@ -1,0 +1,45 @@
+{
+  "seed": 42,
+  "num_records": 370,
+  "by_dataset": {
+    "iam": 100,
+    "cyrillic_handwriting": 150,
+    "hwr200": 90,
+    "hkr_forms": 30
+  },
+  "by_level": {
+    "line": 100,
+    "word": 100,
+    "phrase": 50,
+    "page_from_document_condition": 90,
+    "form_page": 30
+  },
+  "by_split": {
+    "train": 320,
+    "val": 50
+  },
+  "hwr200_conditions": {
+    "scan": 30,
+    "photo_light": 30,
+    "photo_dark": 30
+  },
+  "selection_reasons": {
+    "iam": 100,
+    "line": 100,
+    "random_train_val": 280,
+    "segmentation_ok": 100,
+    "cyrillic_handwriting": 150,
+    "word": 100,
+    "phrase": 50,
+    "hwr200": 90,
+    "document_triplet": 90,
+    "scan": 30,
+    "first_valid_page": 90,
+    "photo_light": 30,
+    "photo_dark": 30,
+    "hkr_forms": 30,
+    "form_page": 30,
+    "page_stress": 30
+  },
+  "output_path": "data/pilot/graph_pilot_v1.jsonl"
+}
