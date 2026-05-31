@@ -1,0 +1,36 @@
+{
+  "num_samples": 324312,
+  "datasets": {
+    "school_notebooks": 324312
+  },
+  "levels": {
+    "school_notebooks::word": 320422,
+    "school_notebooks::phrase": 3890
+  },
+  "num_issues": 365033,
+  "issue_counts": {
+    "polygon_masked_crop": 324312,
+    "single_character_or_mark": 40641,
+    "mixed_script": 77,
+    "duplicate_exact": 2,
+    "occluded": 1
+  },
+  "image_width": {
+    "count": 324312,
+    "min": 26,
+    "max": 1835,
+    "mean": 255.99082981819976
+  },
+  "image_height": {
+    "count": 324312,
+    "min": 25,
+    "max": 1990,
+    "mean": 106.50203507733293
+  },
+  "text_length": {
+    "count": 324312,
+    "min": 1,
+    "max": 23,
+    "mean": 5.269545992747725
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "seed": 43,
+  "num_records": 670,
+  "by_dataset": {
+    "iam": 100,
+    "cyrillic_handwriting": 150,
+    "hkr_words": 150,
+    "school_notebooks": 150,
+    "hwr200": 90,
+    "hkr_forms": 30
+  },
+  "by_level": {
+    "line": 100,
+    "word": 348,
+    "phrase": 102,
+    "page_from_document_condition": 90,
+    "form_page": 30
+  },
+  "by_split": {
+    "train": 593,
+    "val": 77
+  },
+  "school_categories": {
+    "pupil_text": 100,
+    "pupil_comment": 30,
+    "teacher_comment": 20
+  },
+  "hwr200_conditions": {
+    "scan": 30,
+    "photo_light": 30,
+    "photo_dark": 30
+  },
+  "selection_reasons": {
+    "iam": 100,
+    "line": 100,
+    "random_train_val": 280,
+    "segmentation_ok": 100,
+    "cyrillic_handwriting": 150,
+    "word": 200,
+    "phrase": 100,
+    "hkr_words": 150,
+    "text_grouped_train_val": 150,
+    "school_notebooks": 150,
+    "pupil_text": 100,
+    "polygon_crop": 150,
+    "clean_no_single_char": 150,
+    "pupil_comment": 30,
+    "teacher_comment": 20,
+    "hwr200": 90,
+    "document_triplet": 90,
+    "scan": 30,
+    "first_valid_page": 90,
+    "photo_light": 30,
+    "photo_dark": 30,
+    "hkr_forms": 30,
+    "form_page": 30,
+    "page_stress": 30
+  },
+  "output_path": "data/pilot/graph_pilot_v2.jsonl"
+}

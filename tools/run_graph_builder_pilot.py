@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 from collections import Counter
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
@@ -15,6 +14,8 @@ from src.visualization.draw_graph import draw_graph_overlay
 VARIANTS_BY_DATASET = {
     "iam": ["otsu"],
     "cyrillic_handwriting": ["otsu"],
+    "hkr_words": ["otsu"],
+    "school_notebooks": ["otsu", "sauvola"],
     "hwr200": ["otsu", "otsu_gridless"],
     "hkr_forms": ["otsu", "otsu_gridless"],
 }
@@ -50,30 +51,60 @@ def method_paths(summary: dict, method: str) -> tuple[Path, Path] | None:
     return binary_path, skeleton_path
 
 
-def process_one_graph(task: tuple[dict, str, int]) -> tuple[str, dict]:
-    summary, method, max_skeleton_pixels = task
+def make_tasks(
+    selected: list[dict],
+    max_skeleton_pixels: int,
+) -> list[dict]:
+    tasks = []
+
+    for summary in selected:
+        dataset = summary["dataset"]
+        variants = VARIANTS_BY_DATASET.get(dataset, ["otsu"])
+
+        for method in variants:
+            tasks.append(
+                {
+                    "summary": summary,
+                    "method": method,
+                    "max_skeleton_pixels": max_skeleton_pixels,
+                }
+            )
+
+    return tasks
+
+
+def process_graph_task(task: dict) -> dict:
+    summary = task["summary"]
+    method = task["method"]
+    max_skeleton_pixels = task["max_skeleton_pixels"]
 
     dataset = summary["dataset"]
 
     paths = method_paths(summary, method)
     if paths is None:
-        return "skipped", {
-            "pilot_id": summary["pilot_id"],
-            "dataset": dataset,
-            "method": method,
-            "reason": "missing_binary_or_skeleton",
+        return {
+            "status": "skipped",
+            "row": {
+                "pilot_id": summary["pilot_id"],
+                "dataset": dataset,
+                "method": method,
+                "reason": "missing_binary_or_skeleton",
+            },
         }
 
     method_diag = summary["methods"].get(method, {})
     skeleton_pixels = method_diag.get("skeleton_pixels")
 
     if skeleton_pixels is not None and skeleton_pixels > max_skeleton_pixels:
-        return "skipped", {
-            "pilot_id": summary["pilot_id"],
-            "dataset": dataset,
-            "method": method,
-            "reason": "too_many_skeleton_pixels",
-            "skeleton_pixels": skeleton_pixels,
+        return {
+            "status": "skipped",
+            "row": {
+                "pilot_id": summary["pilot_id"],
+                "dataset": dataset,
+                "method": method,
+                "reason": "too_many_skeleton_pixels",
+                "skeleton_pixels": skeleton_pixels,
+            },
         }
 
     binary_path, skeleton_path = paths
@@ -109,75 +140,88 @@ def process_one_graph(task: tuple[dict, str, int]) -> tuple[str, dict]:
             other_node_radius=2,
         )
 
-        return "run", {
-            "pilot_id": summary["pilot_id"],
-            "sample_id": summary["sample_id"],
-            "dataset": dataset,
-            "level": summary["level"],
-            "method": method,
-            "graph_path": str(graph_path),
-            "overlay_path": str(overlay_path),
-            "node_count": graph["graph_features"].get("node_count"),
-            "edge_count": graph["graph_features"].get("edge_count"),
-            "component_count": graph["graph_features"].get("component_count"),
-            "junction_count": graph["graph_features"].get("junction_count"),
-            "endpoint_count": graph["graph_features"].get("endpoint_count"),
-            "skeleton_pixels": graph["graph_features"].get("skeleton_pixels"),
-            "warnings": graph.get("warnings", []),
+        return {
+            "status": "built",
+            "row": {
+                "pilot_id": summary["pilot_id"],
+                "sample_id": summary["sample_id"],
+                "dataset": dataset,
+                "level": summary["level"],
+                "method": method,
+                "graph_path": str(graph_path),
+                "overlay_path": str(overlay_path),
+                "node_count": graph["graph_features"].get("node_count"),
+                "edge_count": graph["graph_features"].get("edge_count"),
+                "component_count": graph["graph_features"].get("component_count"),
+                "junction_count": graph["graph_features"].get("junction_count"),
+                "endpoint_count": graph["graph_features"].get("endpoint_count"),
+                "skeleton_pixels": graph["graph_features"].get("skeleton_pixels"),
+                "warnings": graph.get("warnings", []),
+            },
         }
 
     except Exception as exc:
-        return "skipped", {
-            "pilot_id": summary["pilot_id"],
-            "dataset": dataset,
-            "method": method,
-            "reason": "graph_build_failed",
-            "error": repr(exc),
+        return {
+            "status": "skipped",
+            "row": {
+                "pilot_id": summary["pilot_id"],
+                "dataset": dataset,
+                "method": method,
+                "reason": "graph_build_failed",
+                "error": repr(exc),
+            },
         }
+
+
+def run_tasks(tasks: list[dict], workers: int) -> list[dict]:
+    if workers <= 1:
+        return [process_graph_task(task) for task in tasks]
+
+    with ProcessPoolExecutor(max_workers=workers) as executor:
+        return list(executor.map(process_graph_task, tasks))
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--binary_summary",
-        default="outputs/graph_pilot/binary_skeleton_pilot_summary.json",
+        default="outputs/graph_pilot_v2/binary_skeleton_pilot_summary.json",
     )
-    parser.add_argument("--max_per_dataset", type=int, default=3)
+    parser.add_argument(
+        "--out_report",
+        default="outputs/graph_pilot_v2/graph_builder_pilot_report.json",
+    )
+    parser.add_argument("--max_per_dataset", type=int, default=10)
     parser.add_argument("--max_skeleton_pixels", type=int, default=180000)
     parser.add_argument(
         "--workers",
         type=int,
-        default=max(1, (os.cpu_count() or 2) - 1),
+        default=1,
         help="Number of parallel worker processes. Use 1 for sequential execution.",
     )
     args = parser.parse_args()
 
+    if args.workers < 1:
+        raise ValueError("--workers must be >= 1")
+
     summaries = load_summaries(args.binary_summary)
     selected = select_limited(summaries, args.max_per_dataset)
 
-    tasks = []
+    tasks = make_tasks(
+        selected=selected,
+        max_skeleton_pixels=args.max_skeleton_pixels,
+    )
 
-    for summary in selected:
-        dataset = summary["dataset"]
-        variants = VARIANTS_BY_DATASET.get(dataset, ["otsu"])
-
-        for method in variants:
-            tasks.append((summary, method, args.max_skeleton_pixels))
-
-    if args.workers <= 1:
-        results = [process_one_graph(task) for task in tasks]
-    else:
-        with ProcessPoolExecutor(max_workers=args.workers) as executor:
-            results = list(executor.map(process_one_graph, tasks))
+    results = run_tasks(tasks, args.workers)
 
     run_rows = []
     skipped = []
 
-    for status, row in results:
-        if status == "run":
-            run_rows.append(row)
+    for result in results:
+        if result["status"] == "built":
+            run_rows.append(result["row"])
         else:
-            skipped.append(row)
+            skipped.append(result["row"])
 
     report = {
         "num_binary_summaries": len(summaries),
@@ -190,7 +234,7 @@ def main() -> None:
         "runs": run_rows,
     }
 
-    out_report = Path("outputs/graph_pilot/graph_builder_pilot_report.json")
+    out_report = Path(args.out_report)
     out_report.parent.mkdir(parents=True, exist_ok=True)
     out_report.write_text(
         json.dumps(report, ensure_ascii=False, indent=2),
