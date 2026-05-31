@@ -1,0 +1,213 @@
+
+==============================
+SPLIT: train
+path: data/interim/school_notebooks/annotations_train.json
+categories: {0: 'pupil_text', 1: 'pupil_comment', 2: 'teacher_comment', 3: 'paper', 4: 'text_line'}
+images: 1557
+annotations: 335962
+
+Image samples:
+{'height': 1960, 'width': 4032, 'id': 0, 'file_name': '0_0.jpg'} exists= True
+{'height': 1960, 'width': 4032, 'id': 1, 'file_name': '0_1.jpg'} exists= True
+{'height': 1960, 'width': 4032, 'id': 2, 'file_name': '0_2.jpg'} exists= True
+{'height': 1960, 'width': 4032, 'id': 3, 'file_name': '0_3.jpg'} exists= True
+{'height': 1960, 'width': 4032, 'id': 4, 'file_name': '0_4.jpg'} exists= True
+{'height': 1960, 'width': 4032, 'id': 5, 'file_name': '0_5.jpg'} exists= True
+{'height': 1960, 'width': 4032, 'id': 6, 'file_name': '0_6.jpg'} exists= True
+{'height': 1960, 'width': 4032, 'id': 7, 'file_name': '0_7.jpg'} exists= True
+{'height': 1960, 'width': 4032, 'id': 8, 'file_name': '0_8.jpg'} exists= True
+{'height': 3024, 'width': 4032, 'id': 9, 'file_name': '100_1000.JPG'} exists= True
+
+Annotation keys:
+  category_id: 335962
+  image_id: 335962
+  segmentation: 335962
+  attributes: 269437
+  group_id: 257819
+
+Category annotation counts:
+  pupil_text: 244529
+  text_line: 63559
+  pupil_comment: 14581
+  teacher_comment: 10327
+  paper: 2966
+
+Has segmentation: 335962
+Has bbox: 0
+Text-like keys: {}
+
+Annotation samples by category:
+
+--- category: pupil_text ---
+{"category_id": 0, "image_id": 0, "group_id": 9, "segmentation": [[1315.19, 1437.79, 1303.0, 1454.71, 1301.01, 1482.83, 1338.08, 1499.25, 1373.91, 1480.84, 1452.79, 1481.58, 1464.74, 1451.23, 1451.8, 1433.06, 1422.93, 1430.32]], "attributes": {"occluded": false, "translation": "прил.,"}}
+{"category_id": 0, "image_id": 0, "group_id": 7, "segmentation": [[1616.14, 1510.59, 1610.74, 1546.05, 1647.86, 1562.43, 1674.61, 1563.05, 1684.15, 1547.5, 1673.78, 1511.83, 1653.46, 1503.95]], "attributes": {"occluded": false, "translation": "п.,"}}
+{"category_id": 0, "image_id": 0, "group_id": 7, "segmentation": [[1535.68, 1493.79, 1525.52, 1549.99, 1580.68, 1553.72, 1597.89, 1546.05, 1608.46, 1524.69, 1610.33, 1491.72, 1596.44, 1478.45, 1555.59, 1478.66]], "attributes": {"occluded": false, "translation": "П."}}
+
+--- category: pupil_comment ---
+{"category_id": 1, "image_id": 0, "group_id": 52, "segmentation": [[1193.52, 275.78, 1243.91, 276.64, 1245.2, 296.02, 1194.38, 297.32]], "attributes": {"occluded": false, "translation": "ж."}}
+{"category_id": 1, "image_id": 0, "group_id": 52, "segmentation": [[1250.37, 277.5, 1267.6, 271.47, 1270.61, 278.8, 1280.52, 277.07, 1287.84, 289.99, 1278.37, 291.72, 1259.42, 293.01, 1258.55, 302.05, 1250.8, 302.48]], "attributes": {"occluded": false, "translation": "р."}}
+{"category_id": 1, "image_id": 0, "group_id": 57, "segmentation": [[1262.48, 418.53, 1275.04, 411.35, 1294.48, 426.0, 1289.7, 431.98, 1267.57, 428.69, 1267.27, 444.55, 1262.48, 446.94]], "attributes": {"occluded": false, "translation": "р."}}
+
+--- category: paper ---
+{"category_id": 3, "image_id": 0, "segmentation": [[418.33, 187.82, 476.85, 142.3, 635.07, 134.72, 910.33, 130.38, 1270.12, 118.46, 1446.77, 117.38, 1690.39, 115.75, 1826.61, 126.26, 1921.44, 141.33, 1926.64, 214.37, 1930.43, 311.47, 1926.64, 354.39, 1930.43, 419.84, 1932.92, 591.39, 1942.89, 901.34, 1946.04, 1083.94, 1953.73, 1238.16, 1961.53, 1343.49, 1964.14, 1411.12, 1965.44, 1526.86, 1968.9, 1816.97, 1978.22, 1957.74, 1712.93, 1954.71, 1227.64, 1959.37, 320.03, 1957.63, 191.29, 1958.93, 256.31, 1662.43, 352.0, 957.58, 395.57, 529.84]]}
+{"category_id": 3, "image_id": 0, "segmentation": [[1921.55, 142.74, 2064.6, 130.82, 2306.26, 122.15, 2554.44, 123.23, 2774.43, 124.31, 3112.44, 129.19, 3181.69, 127.67, 3273.48, 129.95, 3302.09, 131.36, 3342.19, 155.52, 3350.53, 193.67, 3367.22, 306.05, 3415.23, 530.16, 3462.7, 797.52, 3506.59, 1047.1, 3560.56, 1369.5, 3612.36, 1666.01, 3629.7, 1785.21, 3641.73, 1855.98, 3643.79, 1881.34, 3598.27, 1927.94, 3476.89, 1930.11, 3306.75, 1940.94, 2994.1, 1956.66, 2875.76, 1956.66, 2720.46, 1957.63, 2153.03, 1957.52, 1982.23, 1956.66, 1970.96, 1813.17, 1969.66, 1507.57, 1960.45, 1313.36, 1946.15, 1080.58, 1937.15, 747.56, 1929.67, 415.83]]}
+{"category_id": 3, "image_id": 1, "segmentation": [[1916.6, 166.1, 2155.32, 156.73, 2372.24, 150.49, 2587.6, 158.29, 2912.19, 178.58, 3161.88, 183.26, 3269.56, 182.95, 3322.62, 215.56, 3337.75, 282.67, 3351.8, 343.37, 3413.13, 623.02, 3496.15, 1034.07, 3584.48, 1489.59, 3632.23, 1718.68, 3660.32, 1846.65, 3669.68, 1899.71, 3636.91, 1955.89, 3462.13, 1955.89, 3181.23, 1957.45, 2811.38, 1957.45, 1992.87, 1956.67, 1955.42, 1960.0, 1951.67, 1486.63, 1951.83, 1332.92, 1936.38, 1165.0, 1934.51, 903.14, 1929.2, 657.04, 1925.92, 386.6]]}
+
+--- category: teacher_comment ---
+{"category_id": 2, "image_id": 3, "segmentation": [[3014.55, 1562.97, 3067.07, 1562.97, 3082.07, 1624.06, 3029.56, 1634.77]], "attributes": {"occluded": false, "translation": "5"}}
+{"category_id": 2, "image_id": 9, "segmentation": [[1201.63, 2253.68, 1252.44, 2251.95, 1247.48, 2337.94, 1155.04, 2341.91, 1155.29, 2290.86]], "attributes": {"occluded": false, "translation": "2"}}
+{"category_id": 2, "image_id": 9, "segmentation": [[819.35, 1490.14, 833.81, 1482.5, 845.78, 1496.34, 851.57, 1535.57, 820.18, 1541.15, 813.98, 1516.99]], "attributes": {"occluded": false, "translation": "ь"}}
+
+--- category: text_line ---
+{"category_id": 4, "image_id": 0, "segmentation": [[2207, 1825, 3136, 1805]]}
+{"category_id": 4, "image_id": 0, "segmentation": [[2196, 1735, 3163, 1717]]}
+{"category_id": 4, "image_id": 0, "segmentation": [[655.5, 1727, 741, 1727, 826.5, 1727]]}
+
+Image size check:
+0_0.jpg (4032, 1960) RGB
+0_1.jpg (4032, 1960) RGB
+0_2.jpg (4032, 1960) RGB
+0_3.jpg (4032, 1960) RGB
+0_4.jpg (4032, 1960) RGB
+
+==============================
+SPLIT: val
+path: data/interim/school_notebooks/annotations_val.json
+categories: {0: 'pupil_text', 1: 'pupil_comment', 2: 'teacher_comment', 3: 'paper', 4: 'text_line'}
+images: 150
+annotations: 34623
+
+Image samples:
+{'height': 3000, 'width': 4000, 'id': 0, 'file_name': '2638.jpg'} exists= True
+{'height': 3000, 'width': 4000, 'id': 1, 'file_name': '2639.jpg'} exists= True
+{'height': 3000, 'width': 4000, 'id': 2, 'file_name': '2640.jpg'} exists= True
+{'height': 3000, 'width': 4000, 'id': 3, 'file_name': '2641.jpg'} exists= True
+{'height': 3000, 'width': 4000, 'id': 4, 'file_name': '2642.jpg'} exists= True
+{'height': 3000, 'width': 4000, 'id': 5, 'file_name': '2643.jpg'} exists= True
+{'height': 3000, 'width': 4000, 'id': 6, 'file_name': '2644.jpg'} exists= True
+{'height': 3000, 'width': 4000, 'id': 7, 'file_name': '2645.jpg'} exists= True
+{'height': 3000, 'width': 4000, 'id': 8, 'file_name': '2646.jpg'} exists= True
+{'height': 3000, 'width': 4000, 'id': 9, 'file_name': '2647.jpg'} exists= True
+
+Annotation keys:
+  category_id: 34623
+  image_id: 34623
+  segmentation: 34623
+  attributes: 27893
+  group_id: 26908
+
+Category annotation counts:
+  pupil_text: 25155
+  text_line: 6453
+  teacher_comment: 1462
+  pupil_comment: 1276
+  paper: 277
+
+Has segmentation: 34623
+Has bbox: 0
+Text-like keys: {}
+
+Annotation samples by category:
+
+--- category: pupil_text ---
+{"category_id": 0, "image_id": 0, "group_id": 17, "segmentation": [[931.85, 1810.61, 933.09, 1787.55, 908.79, 1787.55, 891.09, 1804.84, 901.38, 1867.43, 947.5, 1874.02, 1028.2, 1864.55, 1098.19, 1867.43, 1150.89, 1867.84, 1167.36, 1860.43, 1162.83, 1828.31, 1087.9, 1820.9, 982.49, 1815.96, 962.32, 1819.67, 970.97, 1785.49, 947.08, 1779.73]], "attributes": {"occluded": false, "translation": "Своими"}}
+{"category_id": 0, "image_id": 0, "group_id": 16, "segmentation": [[2142.8, 1889.88, 2086.97, 1896.8, 2084.49, 1923.48, 2085.48, 1941.76, 2166.51, 1938.8, 2162.56, 1896.31]], "attributes": {"occluded": false, "translation": "он"}}
+{"category_id": 0, "image_id": 0, "group_id": 18, "segmentation": [[3665.21, 1762.54, 3593.73, 1767.12, 3585.15, 1816.01, 3674.64, 1813.44, 3686.08, 1821.16, 3695.8, 1798.28, 3690.08, 1787.99, 3675.79, 1787.99]], "attributes": {"occluded": false, "translation": "то,"}}
+
+--- category: paper ---
+{"category_id": 3, "image_id": 0, "segmentation": [[1851.6, 254.1, 1897.17, 251.28, 2088.77, 250.34, 2301.87, 251.28, 2555.16, 252.21, 2989.21, 242.68, 3552.89, 236.51, 3765.52, 229.78, 3914.2, 225.5, 3918.14, 403.25, 3930.48, 953.28, 3937.4, 1199.75, 3974.88, 1897.92, 3986.46, 2102.61, 4000.0, 2367.67, 4000.0, 2813.59, 3736.26, 2818.08, 3431.2, 2820.32, 2973.13, 2827.14, 2313.84, 2839.67, 2017.27, 2845.46, 1897.17, 2847.42, 1885.49, 2847.42, 1884.65, 2330.38, 1876.14, 1848.57, 1869.51, 1614.92, 1870.26, 1259.57, 1857.92, 679.62]]}
+{"category_id": 3, "image_id": 0, "segmentation": [[0.0, 327.87, 186.46, 300.83, 450.78, 265.17, 679.46, 233.21, 933.95, 197.55, 1061.81, 184.03, 1233.93, 173.83, 1386.63, 176.9, 1484.98, 179.97, 1611.0, 192.27, 1721.65, 211.81, 1830.21, 250.3, 1854.92, 256.2, 1854.06, 478.23, 1865.13, 974.43, 1873.24, 1584.72, 1885.17, 2218.01, 1882.83, 2523.03, 1887.01, 2856.82, 1811.77, 2881.9, 1678.99, 2908.46, 1476.87, 2929.11, 1265.9, 2939.44, 1051.36, 2940.54, 831.79, 2928.13, 534.39, 2905.14, 117.73, 2877.47, 0.0, 2859.77]]}
+{"category_id": 3, "image_id": 1, "segmentation": [[1894.64, 287.72, 1915.99, 284.17, 2058.28, 282.74, 2216.94, 284.17, 2415.45, 284.88, 2622.49, 285.59, 3013.8, 282.17, 3482.24, 272.57, 3807.67, 264.89, 3946.33, 259.05, 3943.99, 387.69, 3946.41, 642.33, 3961.2, 1101.3, 3966.54, 1219.9, 4000.0, 1857.67, 4000.0, 2856.66, 3835.49, 2859.36, 3535.31, 2855.31, 3077.76, 2856.66, 2369.84, 2864.98, 2042.92, 2867.26, 1915.06, 2864.56, 1909.73, 2439.31, 1907.38, 1681.23, 1901.76, 1149.75, 1896.99, 664.95]]}
+
+--- category: teacher_comment ---
+{"category_id": 2, "image_id": 0, "segmentation": [[41.86, 565.2, 0.0, 571.13, 0.0, 679.33, 40.38, 679.83, 87.32, 637.83, 94.23, 605.22, 122.4, 586.45, 113.5, 567.18]], "attributes": {"occluded": false, "translation": "5/5"}}
+{"category_id": 2, "image_id": 3, "segmentation": [[3909.15, 575.73, 3864.76, 585.98, 3818.65, 673.91, 3844.27, 692.7, 3830.61, 745.63, 3851.1, 744.78, 3879.27, 707.21, 3927.08, 701.24, 3952.7, 674.77, 3974.04, 620.98, 4000.0, 612.1, 4000.0, 599.3, 3941.08, 602.71, 3953.98, 557.29, 3943.56, 548.41]], "attributes": {"occluded": false, "translation": "5/5"}}
+{"category_id": 2, "image_id": 5, "group_id": 24, "segmentation": [[41.1, 1250.2, 117.32, 1343.11, 96.52, 1405.51, 0.0, 1414.08, 1.09, 1378.6, 0.5, 1287.5]], "attributes": {"occluded": false, "translation": "/1ош"}}
+
+--- category: pupil_comment ---
+{"category_id": 1, "image_id": 11, "group_id": 85, "segmentation": [[2615.01, 2128.86, 2711.55, 2132.14, 2703.37, 2184.5, 2624.83, 2189.41, 2598.65, 2171.41]], "attributes": {"occluded": false, "translation": "гл"}}
+{"category_id": 1, "image_id": 11, "group_id": 82, "segmentation": [[3762.74, 2252.97, 3814.8, 2264.6, 3877.38, 2262.41, 3887.79, 2295.81, 3889.98, 2316.63, 3877.91, 2337.46, 3869.16, 2340.21, 3863.66, 2326.52, 3865.3, 2308.42, 3823.65, 2306.78, 3823.12, 2327.05, 3812.16, 2340.21, 3797.91, 2335.82, 3794.08, 2320.49, 3786.94, 2305.14, 3759.54, 2305.14, 3745.29, 2294.73, 3747.49, 2262.93]], "attributes": {"occluded": false, "translation": "сущ"}}
+{"category_id": 1, "image_id": 11, "group_id": 82, "segmentation": [[3119.98, 2261.11, 3191.0, 2253.22, 3205.99, 2304.51, 3159.44, 2308.45, 3127.87, 2300.56, 3116.82, 2274.52]], "attributes": {"occluded": false, "translation": "гл"}}
+
+--- category: text_line ---
+{"category_id": 4, "image_id": 0, "segmentation": [[202, 2679, 538, 2700, 893, 2724, 1256, 2732, 1559, 2709, 1704, 2696]]}
+{"category_id": 4, "image_id": 0, "segmentation": [[2100, 2657, 2475, 2647, 2855, 2636, 3361, 2629, 3708, 2619]]}
+{"category_id": 4, "image_id": 0, "segmentation": [[127, 2565, 438, 2585, 991, 2615, 1505, 2608, 1795, 2569]]}
+
+Image size check:
+2638.jpg (4000, 3000) RGB
+2639.jpg (4000, 3000) RGB
+2640.jpg (4000, 3000) RGB
+2641.jpg (4000, 3000) RGB
+2642.jpg (4000, 3000) RGB
+
+==============================
+SPLIT: test
+path: data/interim/school_notebooks/annotations_test.json
+categories: {0: 'pupil_text', 1: 'pupil_comment', 2: 'teacher_comment', 3: 'paper', 4: 'text_line'}
+images: 150
+annotations: 34670
+
+Image samples:
+{'height': 3000, 'width': 4000, 'id': 0, 'file_name': '2013.jpg'} exists= True
+{'height': 3000, 'width': 4000, 'id': 1, 'file_name': '2014.jpg'} exists= True
+{'height': 3000, 'width': 4000, 'id': 2, 'file_name': '2015.jpg'} exists= True
+{'height': 3000, 'width': 4000, 'id': 3, 'file_name': '2016.jpg'} exists= True
+{'height': 3024, 'width': 4032, 'id': 4, 'file_name': '2039.jpg'} exists= True
+{'height': 3024, 'width': 4032, 'id': 5, 'file_name': '2040.jpg'} exists= True
+{'height': 3024, 'width': 4032, 'id': 6, 'file_name': '2041.jpg'} exists= True
+{'height': 3024, 'width': 4032, 'id': 7, 'file_name': '2042.jpg'} exists= True
+{'height': 3024, 'width': 4032, 'id': 8, 'file_name': '2043.jpg'} exists= True
+{'height': 3024, 'width': 4032, 'id': 9, 'file_name': '2044.jpg'} exists= True
+
+Annotation keys:
+  category_id: 34670
+  image_id: 34670
+  segmentation: 34670
+  attributes: 28136
+  group_id: 26890
+
+Category annotation counts:
+  pupil_text: 25296
+  text_line: 6258
+  pupil_comment: 1785
+  teacher_comment: 1055
+  paper: 276
+
+Has segmentation: 34670
+Has bbox: 0
+Text-like keys: {}
+
+Annotation samples by category:
+
+--- category: pupil_comment ---
+{"category_id": 1, "image_id": 0, "group_id": 73, "segmentation": [[3058.51, 440.36, 3204.94, 448.14, 3245.44, 430.23, 3261.8, 434.13, 3262.58, 452.82, 3319.43, 462.71, 3353.7, 467.38, 3356.82, 488.41, 3292.17, 492.31, 3229.08, 483.74, 3194.81, 484.52, 3111.48, 473.61, 3075.65, 482.96, 3044.49, 489.19, 3031.25, 483.74, 3028.14, 475.17, 3045.27, 462.71]], "attributes": {"occluded": false, "translation": "узнавая"}}
+{"category_id": 1, "image_id": 0, "group_id": 73, "segmentation": [[2757.5, 448.85, 2788.15, 452.91, 2809.79, 433.98, 2831.87, 433.08, 2862.97, 426.76, 2862.97, 430.37, 2861.17, 442.99, 2967.54, 442.99, 2971.15, 460.12, 3013.97, 454.26, 3016.67, 475.44, 2950.42, 484.46, 2937.8, 474.54, 2785.45, 474.99, 2759.76, 485.36, 2748.04, 470.49]], "attributes": {"occluded": false, "translation": "больше"}}
+{"category_id": 1, "image_id": 0, "group_id": 73, "segmentation": [[2618.69, 453.44, 2644.39, 434.75, 2659.19, 433.19, 2666.98, 446.43, 2683.33, 437.08, 2721.5, 439.42, 2712.15, 479.92, 2687.23, 485.37, 2614.79, 483.82, 2591.43, 478.36]], "attributes": {"occluded": false, "translation": "всё"}}
+
+--- category: pupil_text ---
+{"category_id": 0, "image_id": 0, "group_id": 2, "segmentation": [[2549.97, 2583.56, 2437.0, 2594.97, 2398.36, 2648.33, 2719.6, 2643.54, 2762.29, 2617.42, 2734.69, 2602.7]], "attributes": {"occluded": false, "translation": "наспех"}}
+{"category_id": 0, "image_id": 0, "group_id": 17, "segmentation": [[1469.64, 950.36, 1408.17, 973.67, 1403.4, 993.28, 1413.47, 1027.72, 1441.55, 1029.84, 1530.04, 1025.6, 1605.81, 1014.47, 1612.7, 973.67, 1615.88, 920.16, 1579.85, 922.81]], "attributes": {"occluded": false, "translation": "По"}}
+{"category_id": 0, "image_id": 0, "group_id": 20, "segmentation": [[2663.29, 689.82, 2606.25, 697.48, 2587.86, 733.05, 2675.86, 730.29, 2629.25, 785.49, 2644.28, 791.93, 2704.99, 732.13, 2882.84, 732.44, 2877.94, 696.56]], "attributes": {"occluded": false, "translation": "стран."}}
+
+--- category: paper ---
+{"category_id": 3, "image_id": 0, "segmentation": [[1409.16, 234.58, 3431.59, 286.92, 3633.46, 2926.17, 1360.93, 2967.29]]}
+{"category_id": 3, "image_id": 1, "segmentation": [[52.52, 294.39, 799.81, 245.79, 1341.87, 208.41, 1674.95, 245.79, 1884.3, 350.47, 1902.62, 2821.5, 1588.97, 2855.14, 721.31, 2862.62, 0.0, 2837.2, 9.91, 568.79]]}
+{"category_id": 3, "image_id": 1, "segmentation": [[1890.14, 344.77, 3688.81, 381.36, 4000.0, 2762.88, 1913.76, 2802.37]]}
+
+--- category: teacher_comment ---
+{"category_id": 2, "image_id": 4, "segmentation": [[2701.45, 947.2, 2794.79, 947.19, 2790.95, 1008.57, 2683.54, 1012.41]], "attributes": {"occluded": false, "translation": "а"}}
+{"category_id": 2, "image_id": 4, "segmentation": [[2133.97, 1360.61, 2224.99, 1359.13, 2230.91, 1390.21, 2186.51, 1430.17, 2135.45, 1420.55, 2119.91, 1407.97]], "attributes": {"occluded": false, "translation": "а"}}
+{"category_id": 2, "image_id": 4, "group_id": 1, "segmentation": [[2882.29, 2543.23, 2966.56, 2547.85, 2993.28, 2512.91, 3017.44, 2524.73, 2994.31, 2549.39, 3072.42, 2551.96, 3156.19, 2580.23, 3180.85, 2614.14, 3123.81, 2667.59, 2974.27, 2670.67, 2963.48, 2702.53, 2939.84, 2675.81, 2857.11, 2666.56]], "attributes": {"occluded": false, "translation": "2/4+"}}
+
+--- category: text_line ---
+{"category_id": 4, "image_id": 0, "segmentation": [[1625, 2760, 2028, 2734, 2354, 2734, 2660, 2727, 2892, 2707, 3052, 2729]]}
+{"category_id": 4, "image_id": 0, "segmentation": [[1640, 2629, 2171, 2632, 2572, 2618, 3121, 2615]]}
+{"category_id": 4, "image_id": 0, "segmentation": [[1472, 2501, 1767, 2507, 2115, 2492, 2549, 2504, 3017, 2483]]}
+
+Image size check:
+2013.jpg (4000, 3000) RGB
+2014.jpg (4000, 3000) RGB
+2015.jpg (4000, 3000) RGB
+2016.jpg (4000, 3000) RGB
+2039.jpg (4032, 3024) RGB
