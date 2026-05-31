@@ -1,0 +1,383 @@
+{
+  "school_notebooks": {
+    "num_unique_chars": 94,
+    "chars": [
+      {
+        "char": "о",
+        "count": 149004
+      },
+      {
+        "char": "е",
+        "count": 128848
+      },
+      {
+        "char": "а",
+        "count": 126225
+      },
+      {
+        "char": "и",
+        "count": 103211
+      },
+      {
+        "char": "н",
+        "count": 96220
+      },
+      {
+        "char": "т",
+        "count": 95340
+      },
+      {
+        "char": "с",
+        "count": 86151
+      },
+      {
+        "char": "р",
+        "count": 80350
+      },
+      {
+        "char": "л",
+        "count": 76151
+      },
+      {
+        "char": "в",
+        "count": 65591
+      },
+      {
+        "char": "к",
+        "count": 55722
+      },
+      {
+        "char": ".",
+        "count": 55022
+      },
+      {
+        "char": "п",
+        "count": 51395
+      },
+      {
+        "char": "д",
+        "count": 48451
+      },
+      {
+        "char": "м",
+        "count": 44663
+      },
+      {
+        "char": "у",
+        "count": 40925
+      },
+      {
+        "char": "я",
+        "count": 35629
+      },
+      {
+        "char": ",",
+        "count": 34885
+      },
+      {
+        "char": "ь",
+        "count": 30794
+      },
+      {
+        "char": "ы",
+        "count": 28631
+      },
+      {
+        "char": "г",
+        "count": 26382
+      },
+      {
+        "char": "з",
+        "count": 25477
+      },
+      {
+        "char": "б",
+        "count": 25259
+      },
+      {
+        "char": "ч",
+        "count": 24571
+      },
+      {
+        "char": "-",
+        "count": 19932
+      },
+      {
+        "char": "й",
+        "count": 18134
+      },
+      {
+        "char": "ж",
+        "count": 16104
+      },
+      {
+        "char": "ш",
+        "count": 15094
+      },
+      {
+        "char": "х",
+        "count": 12211
+      },
+      {
+        "char": "ю",
+        "count": 10412
+      },
+      {
+        "char": "ц",
+        "count": 8634
+      },
+      {
+        "char": "ё",
+        "count": 8202
+      },
+      {
+        "char": "щ",
+        "count": 5958
+      },
+      {
+        "char": ")",
+        "count": 5353
+      },
+      {
+        "char": "(",
+        "count": 4304
+      },
+      {
+        "char": " ",
+        "count": 4020
+      },
+      {
+        "char": "1",
+        "count": 3630
+      },
+      {
+        "char": "2",
+        "count": 3327
+      },
+      {
+        "char": "?",
+        "count": 3140
+      },
+      {
+        "char": "ф",
+        "count": 3102
+      },
+      {
+        "char": "i",
+        "count": 3096
+      },
+      {
+        "char": "5",
+        "count": 3001
+      },
+      {
+        "char": "3",
+        "count": 2944
+      },
+      {
+        "char": "4",
+        "count": 2705
+      },
+      {
+        "char": "\"",
+        "count": 2172
+      },
+      {
+        "char": "э",
+        "count": 2009
+      },
+      {
+        "char": ";",
+        "count": 1693
+      },
+      {
+        "char": ":",
+        "count": 1430
+      },
+      {
+        "char": "[",
+        "count": 1371
+      },
+      {
+        "char": "]",
+        "count": 1344
+      },
+      {
+        "char": "0",
+        "count": 1063
+      },
+      {
+        "char": "/",
+        "count": 1038
+      },
+      {
+        "char": "6",
+        "count": 879
+      },
+      {
+        "char": "!",
+        "count": 777
+      },
+      {
+        "char": "ъ",
+        "count": 754
+      },
+      {
+        "char": "7",
+        "count": 579
+      },
+      {
+        "char": "8",
+        "count": 512
+      },
+      {
+        "char": "9",
+        "count": 453
+      },
+      {
+        "char": "'",
+        "count": 439
+      },
+      {
+        "char": "e",
+        "count": 436
+      },
+      {
+        "char": "+",
+        "count": 386
+      },
+      {
+        "char": "n",
+        "count": 350
+      },
+      {
+        "char": "s",
+        "count": 297
+      },
+      {
+        "char": "o",
+        "count": 284
+      },
+      {
+        "char": "a",
+        "count": 278
+      },
+      {
+        "char": "t",
+        "count": 252
+      },
+      {
+        "char": "r",
+        "count": 221
+      },
+      {
+        "char": "h",
+        "count": 183
+      },
+      {
+        "char": "№",
+        "count": 169
+      },
+      {
+        "char": "|",
+        "count": 157
+      },
+      {
+        "char": "l",
+        "count": 143
+      },
+      {
+        "char": "c",
+        "count": 130
+      },
+      {
+        "char": "w",
+        "count": 122
+      },
+      {
+        "char": "y",
+        "count": 116
+      },
+      {
+        "char": "m",
+        "count": 107
+      },
+      {
+        "char": "d",
+        "count": 97
+      },
+      {
+        "char": "=",
+        "count": 89
+      },
+      {
+        "char": "b",
+        "count": 72
+      },
+      {
+        "char": "p",
+        "count": 67
+      },
+      {
+        "char": "g",
+        "count": 62
+      },
+      {
+        "char": "k",
+        "count": 58
+      },
+      {
+        "char": "u",
+        "count": 58
+      },
+      {
+        "char": "v",
+        "count": 41
+      },
+      {
+        "char": "x",
+        "count": 28
+      },
+      {
+        "char": "f",
+        "count": 26
+      },
+      {
+        "char": "j",
+        "count": 5
+      },
+      {
+        "char": "_",
+        "count": 5
+      },
+      {
+        "char": "<",
+        "count": 5
+      },
+      {
+        "char": "*",
+        "count": 5
+      },
+      {
+        "char": "z",
+        "count": 4
+      },
+      {
+        "char": ">",
+        "count": 4
+      },
+      {
+        "char": "’",
+        "count": 3
+      },
+      {
+        "char": "\\",
+        "count": 2
+      },
+      {
+        "char": "}",
+        "count": 2
+      }
+    ]
+  }
+}
