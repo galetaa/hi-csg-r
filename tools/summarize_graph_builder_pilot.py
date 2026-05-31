@@ -1,19 +1,25 @@
 from __future__ import annotations
 
+import argparse
 import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
 
-REPORT = Path("outputs/graph_pilot/graph_builder_pilot_report.json")
-
-
 def mean(xs):
+    xs = [x for x in xs if x is not None]
     return sum(xs) / len(xs) if xs else None
 
 
 def main() -> None:
-    data = json.loads(REPORT.read_text(encoding="utf-8"))
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--report",
+        default="outputs/graph_pilot_v2/graph_builder_pilot_report.json",
+    )
+    args = parser.parse_args()
+
+    data = json.loads(Path(args.report).read_text(encoding="utf-8"))
     runs = data["runs"]
 
     print("graphs built:", len(runs))
@@ -45,7 +51,7 @@ def main() -> None:
 
     if data.get("skipped"):
         print("\nSkipped:")
-        for s in data["skipped"][:30]:
+        for s in data["skipped"][:50]:
             print(s)
 
 
