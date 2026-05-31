@@ -1,0 +1,194 @@
+sample_id,dataset,level,issue_type,severity,message,image_path,transcription,suggested_action
+hkr_words_003827,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_0.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003828,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_1.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003829,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_10.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003830,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_11.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003831,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_13.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003832,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_14.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003833,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_15.jpg,Кем? Кем? Волкoм,manual_review
+hkr_words_003834,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_16.jpg,кем? Кем? Волкoв?,manual_review
+hkr_words_003835,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_18.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003836,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_19.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003837,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_2.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003838,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_20.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003839,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_21.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003840,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_22.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003841,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_23.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003842,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_24.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003843,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_25.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003844,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_26.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003845,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_27.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003846,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_28_.jpg,Кем? Кем? волкoм?,manual_review
+hkr_words_003847,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_29.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003848,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_3.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003849,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_30.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003850,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_31.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003851,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_33.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003852,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_34.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003853,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_35.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003854,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_36.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003855,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_38.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003856,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_4.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003857,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_40.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003858,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_41.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003859,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_42.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003860,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_43.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003861,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_45.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003862,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_46.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003863,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_47.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003864,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_48.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003865,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_49.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003866,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_50.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003867,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_51.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003868,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_52.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003869,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_55.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003870,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_56.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003871,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_57.jpg,Кем? Кем? Волкoм,manual_review
+hkr_words_003872,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_58.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003873,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_59.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003874,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_6.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003875,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_60.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003876,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_61.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003877,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_611_.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003878,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_612.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003879,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_613.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003880,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_614.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003881,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_615_.jpg,Кем? Кем? Волкoм,manual_review
+hkr_words_003882,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_616.jpg,Кем? Кем? Волкoм,manual_review
+hkr_words_003883,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_617.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003884,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_618.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003885,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_619.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003886,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_62.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003887,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_620.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003888,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_621.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003889,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_622.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003890,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_623.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003891,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_624.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003892,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_625.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003893,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_626.jpg,Кем? Чем? Волкoм?,manual_review
+hkr_words_003894,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_627.jpg,Кем? Кем? Волкoм,manual_review
+hkr_words_003895,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_628.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003896,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_629.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003897,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_630.jpg,Кем? Кем? Волкoм,manual_review
+hkr_words_003898,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_631.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003899,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_632_.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003900,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_633.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003901,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_634.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003902,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_635.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003903,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_636.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003904,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_8.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_003905,hkr_words,phrase,mixed_script,warning,mixed_script,data/processed/hkr_words/images/0_9_9.jpg,Кем? Кем? Волкoм?,manual_review
+hkr_words_029664,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_138.jpg,Hоводолинский,manual_review
+hkr_words_029665,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_139.jpg,Hоводолинск,manual_review
+hkr_words_029666,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_140.jpg,Hоводолинский,manual_review
+hkr_words_029667,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_141_.jpg,Hоводомнский,manual_review
+hkr_words_029668,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_142_.jpg,Hоводолинский,manual_review
+hkr_words_029669,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_143.jpg,Hоводолинский,manual_review
+hkr_words_029670,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_145.jpg,Hоводолинский,manual_review
+hkr_words_029671,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_146.jpg,Hоводолинский,manual_review
+hkr_words_029672,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_147.jpg,Hоводолинский,manual_review
+hkr_words_029673,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_148.jpg,Hоводолинский,manual_review
+hkr_words_029674,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_149.jpg,Hоводолинский,manual_review
+hkr_words_029675,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_150.jpg,Hоводолинский,manual_review
+hkr_words_029676,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_151.jpg,Hоводолинский,manual_review
+hkr_words_029677,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_152.jpg,Hоводолинск,manual_review
+hkr_words_029678,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_153.jpg,Hоводолинский,manual_review
+hkr_words_029679,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_154.jpg,Hоводолинский,manual_review
+hkr_words_029680,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_155.jpg,Hоводолинский,manual_review
+hkr_words_029681,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_156.jpg,Hоводолинскии,manual_review
+hkr_words_029682,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_157.jpg,Hоводолинский,manual_review
+hkr_words_029683,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_158.jpg,Hоводолинский,manual_review
+hkr_words_029684,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_159.jpg,Hоводолинский,manual_review
+hkr_words_029685,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_160.jpg,Hоводолинский,manual_review
+hkr_words_029686,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_161.jpg,Hоводолинский,manual_review
+hkr_words_029687,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_162.jpg,Hоводолинский,manual_review
+hkr_words_029688,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_163.jpg,Hоводолинский,manual_review
+hkr_words_029689,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_164.jpg,Hоводолинский,manual_review
+hkr_words_029690,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_165.jpg,Hоводолинскии,manual_review
+hkr_words_029691,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_166.jpg,Hоводолинский,manual_review
+hkr_words_029692,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_167.jpg,Hоводолинский,manual_review
+hkr_words_029693,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_169.jpg,Hоводолинский,manual_review
+hkr_words_029694,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_170.jpg,Hоводолинский,manual_review
+hkr_words_029695,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_171.jpg,Hоводолинский,manual_review
+hkr_words_029696,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_172.jpg,Hоводолинский,manual_review
+hkr_words_029697,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_173.jpg,Hоводолинскии,manual_review
+hkr_words_029698,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_174.jpg,Hоводолинский,manual_review
+hkr_words_029699,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_175.jpg,Hоводолинский,manual_review
+hkr_words_029700,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_176.jpg,Hоводолинский,manual_review
+hkr_words_029701,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_178.jpg,Hоводолинскии,manual_review
+hkr_words_029702,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_179.jpg,Hоводолинский,manual_review
+hkr_words_029703,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_180.jpg,Hоводолинский,manual_review
+hkr_words_029704,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_181.jpg,Hоводолинский,manual_review
+hkr_words_029705,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_182.jpg,Hоводолинский,manual_review
+hkr_words_029706,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_183.jpg,Hоводолинский,manual_review
+hkr_words_029707,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_184.jpg,Hоводолинский,manual_review
+hkr_words_029708,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_185.jpg,Hоводолинский,manual_review
+hkr_words_029709,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_186.jpg,Hоводолинский,manual_review
+hkr_words_029710,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_187.jpg,Hоводолинскии,manual_review
+hkr_words_029711,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_188.jpg,Hоводолинский,manual_review
+hkr_words_029712,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_189.jpg,Hоводолинский,manual_review
+hkr_words_029713,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_190.jpg,Hоводолинский,manual_review
+hkr_words_029714,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_192_.jpg,Hоводолинский,manual_review
+hkr_words_029715,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_193.jpg,Hоводолинскии,manual_review
+hkr_words_029716,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_194.jpg,Hоводолинский,manual_review
+hkr_words_029717,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_195_.jpg,Hоводолинский,manual_review
+hkr_words_029718,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_196.jpg,Hоводолинский,manual_review
+hkr_words_029719,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_197.jpg,Hоводолинский,manual_review
+hkr_words_029720,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_198.jpg,Hоводолинский,manual_review
+hkr_words_029721,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_199.jpg,Hоводолинский,manual_review
+hkr_words_029722,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_200.jpg,Hоводолинский,manual_review
+hkr_words_029723,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_201.jpg,Hоводолинский,manual_review
+hkr_words_029724,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_202.jpg,Hоводолинский,manual_review
+hkr_words_029725,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_203.jpg,Hоводолинский,manual_review
+hkr_words_029726,hkr_words,word,mixed_script,warning,mixed_script,data/processed/hkr_words/images/13_17_204.jpg,Hоводолинский,manual_review
+hkr_words_043987,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_0_727.jpg,Сквозь волнистые,manual_review
+hkr_words_044050,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_10_727.jpg,"То разгулье удалое,",manual_review
+hkr_words_044112,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_11_727.jpg,"Ни огня,",manual_review
+hkr_words_044177,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_12_727.jpg,Глуииь и снег..,manual_review
+hkr_words_044234,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_13_727.jpg,Только версты полосаты,manual_review
+hkr_words_044296,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_14_727.jpg,"Скучно, грустно…",manual_review
+hkr_words_044359,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_15_727.jpg,Завтра к милой,manual_review
+hkr_words_044426,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_16_727.jpg,Я забудусь,manual_review
+hkr_words_044487,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_17_727.jpg,Загляжусь,manual_review
+hkr_words_044549,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_18_727.jpg,Звучно стрелка,manual_review
+hkr_words_044616,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_19_727.jpg,Мерный круг,manual_review
+hkr_words_044683,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_1_727.jpg,Пробирается,manual_review
+hkr_words_044751,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_20_727.jpg,"И, докучных",manual_review
+hkr_words_044815,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_21_727.jpg,Полночь нас,manual_review
+hkr_words_044880,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_22_727.jpg,"Грустно, Нина:",manual_review
+hkr_words_044945,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_23_727.jpg,Дремля смолкнул,manual_review
+hkr_words_045014,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_24_727.jpg,Колокольчик,manual_review
+hkr_words_045071,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_25_727.jpg,Отуманен,manual_review
+hkr_words_045147,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_26_727.jpg,туманы,manual_review
+hkr_words_045220,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_27_727.jpg,"луна,",manual_review
+hkr_words_045296,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_28_727.jpg,поляны,manual_review
+hkr_words_045373,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_29_727.jpg,свет она.,manual_review
+hkr_words_045447,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_2_727.jpg,На печальные,manual_review
+hkr_words_045517,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_30_727.jpg,скучнои,manual_review
+hkr_words_045585,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_31_727.jpg,"бежит,",manual_review
+hkr_words_045656,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_32_727.jpg,однозвучный,manual_review
+hkr_words_045732,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_33_727.jpg,"гремит,",manual_review
+hkr_words_045810,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_34_727.jpg,родное,manual_review
+hkr_words_045885,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_35_727.jpg,песнях ямщика:,manual_review
+hkr_words_045961,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_36_727.jpg,То сердечная тоска…,manual_review
+hkr_words_046035,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_37_727.jpg,"ни черной хаты,",manual_review
+hkr_words_046105,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_38_727.jpg,Навстречу мне,manual_review
+hkr_words_046168,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_39_727.jpg,Попадаются одне...,manual_review
+hkr_words_046245,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_3_727.jpg,Льет печально,manual_review
+hkr_words_046314,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_40_727.jpg,"Завтра, Нина,",manual_review
+hkr_words_046383,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_41_727.jpg,"возвратясь,",manual_review
+hkr_words_046454,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_42_727.jpg,"у камина,",manual_review
+hkr_words_046521,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_43_727.jpg,не наглядясь,manual_review
+hkr_words_046586,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_44_727.jpg,часовая,manual_review
+hkr_words_046660,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_45_727.jpg,"свой совершит,",manual_review
+hkr_words_046725,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_46_727.jpg,"удаляя,",manual_review
+hkr_words_046789,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_47_727.jpg,не разлучит.,manual_review
+hkr_words_046854,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_48_727.jpg,"путь мои скучен,",manual_review
+hkr_words_046921,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_49_727.jpg,"мой ямщик,",manual_review
+hkr_words_046984,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_4_727.jpg,"По дороге зимней,",manual_review
+hkr_words_047048,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_50_727.jpg,однозвучен,manual_review
+hkr_words_047160,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_5_727.jpg,Тройка борзая,manual_review
+hkr_words_047233,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_6_727.jpg,Колокольчик,manual_review
+hkr_words_047314,hkr_words,word,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_7_727.jpg,Утомительно,manual_review
+hkr_words_047399,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_8_727.jpg,Что-то слышится,manual_review
+hkr_words_047470,hkr_words,phrase,duplicate_exact,warning,duplicate_exact,data/processed/hkr_words/images/4_9_727.jpg,В долгих,manual_review

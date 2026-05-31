@@ -1,0 +1,33 @@
+{
+  "num_samples": 64943,
+  "datasets": {
+    "hkr_words": 64943
+  },
+  "levels": {
+    "hkr_words::phrase": 29787,
+    "hkr_words::word": 35156
+  },
+  "num_issues": 193,
+  "issue_counts": {
+    "mixed_script": 142,
+    "duplicate_exact": 51
+  },
+  "image_width": {
+    "count": 64943,
+    "min": 44,
+    "max": 1697,
+    "mean": 443.299262430131
+  },
+  "image_height": {
+    "count": 64943,
+    "min": 14,
+    "max": 150,
+    "mean": 75.70643487365844
+  },
+  "text_length": {
+    "count": 64943,
+    "min": 2,
+    "max": 42,
+    "mean": 11.020356312458617
+  }
+}

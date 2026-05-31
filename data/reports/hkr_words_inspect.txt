@@ -1,0 +1,348 @@
+ann files: 64943
+img files: 64943
+ann without img: 0
+img without ann: 0
+
+Ann filename examples:
+  0_0_0.json
+  0_0_1.json
+  0_0_10.json
+  0_0_11.json
+  0_0_12.json
+  0_0_13.json
+  0_0_14.json
+  0_0_15.json
+  0_0_16.json
+  0_0_17.json
+  0_0_18.json
+  0_0_19.json
+  0_0_2.json
+  0_0_20.json
+  0_0_21.json
+  0_0_22.json
+  0_0_23.json
+  0_0_24.json
+  0_0_25.json
+  0_0_26.json
+
+Image filename examples:
+  0_0_0.jpg
+  0_0_1.jpg
+  0_0_10.jpg
+  0_0_11.jpg
+  0_0_12.jpg
+  0_0_13.jpg
+  0_0_14.jpg
+  0_0_15.jpg
+  0_0_16.jpg
+  0_0_17.jpg
+  0_0_18.jpg
+  0_0_19.jpg
+  0_0_2.jpg
+  0_0_20.jpg
+  0_0_21.jpg
+  0_0_22.jpg
+  0_0_23.jpg
+  0_0_24.jpg
+  0_0_25.jpg
+  0_0_26.jpg
+
+Sample annotations:
+
+--- 0_0_0.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 495, 'height': 64}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек.'
+  name = '0_0_0'
+
+--- 0_0_1.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 494, 'height': 65}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_1'
+
+--- 0_0_10.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 489, 'height': 73}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_10'
+
+--- 0_0_11.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 406, 'height': 46}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек.'
+  name = '0_0_11'
+
+--- 0_0_12.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 379, 'height': 76}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_12'
+
+--- 0_0_13.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 578, 'height': 73}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_13'
+
+--- 0_0_14.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 440, 'height': 73}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_14'
+
+--- 0_0_15.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 529, 'height': 44}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек.'
+  name = '0_0_15'
+
+--- 0_0_16.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 390, 'height': 64}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_16'
+
+--- 0_0_17.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 484, 'height': 107}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_17'
+
+--- 0_0_18.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 476, 'height': 80}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек,'
+  name = '0_0_18'
+
+--- 0_0_19.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 481, 'height': 64}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек.'
+  name = '0_0_19'
+
+--- 0_0_2.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 403, 'height': 55}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_2'
+
+--- 0_0_20.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 583, 'height': 76}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек,'
+  name = '0_0_20'
+
+--- 0_0_21.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 463, 'height': 83}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_21'
+
+--- 0_0_22.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 361, 'height': 45}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек,'
+  name = '0_0_22'
+
+--- 0_0_23.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 353, 'height': 57}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_23'
+
+--- 0_0_24.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 345, 'height': 62}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_24'
+
+--- 0_0_25.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 477, 'height': 73}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_25'
+
+--- 0_0_26.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 462, 'height': 62}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_26'
+
+--- 0_0_27.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 442, 'height': 84}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_27'
+
+--- 0_0_28.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 442, 'height': 83}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_28'
+
+--- 0_0_29.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 444, 'height': 79}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_29'
+
+--- 0_0_3.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 375, 'height': 75}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_3'
+
+--- 0_0_30.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 427, 'height': 58}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек.'
+  name = '0_0_30'
+
+--- 0_0_31.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 415, 'height': 83}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_31'
+
+--- 0_0_32.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 409, 'height': 91}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_32'
+
+--- 0_0_33.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 476, 'height': 78}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_33'
+
+--- 0_0_34.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 401, 'height': 58}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек.'
+  name = '0_0_34'
+
+--- 0_0_35.json ---
+type: <class 'dict'>
+keys: ['size', 'moderation', 'description', 'name']
+  size = "{'width': 378, 'height': 72}"
+  moderation = "{'isModerated': 1, 'moderatedBy': 'Norlist', 'predicted': ''}"
+  description = 'Шёл человек'
+  name = '0_0_35'
+
+Key counts:
+  size: 30
+  moderation: 30
+  description: 30
+  name: 30
+
+Image size samples:
+0_0_0.jpg (495, 64) RGB
+0_0_1.jpg (494, 65) RGB
+0_0_10.jpg (489, 73) RGB
+0_0_11.jpg (406, 46) RGB
+0_0_12.jpg (379, 76) RGB
+0_0_13.jpg (578, 73) RGB
+0_0_14.jpg (440, 73) RGB
+0_0_15.jpg (529, 44) RGB
+0_0_16.jpg (390, 64) RGB
+0_0_17.jpg (484, 107) RGB
+0_0_18.jpg (476, 80) RGB
+0_0_19.jpg (481, 64) RGB
+0_0_2.jpg (403, 55) RGB
+0_0_20.jpg (583, 76) RGB
+0_0_21.jpg (463, 83) RGB
+0_0_22.jpg (361, 45) RGB
+0_0_23.jpg (353, 57) RGB
+0_0_24.jpg (345, 62) RGB
+0_0_25.jpg (477, 73) RGB
+0_0_26.jpg (462, 62) RGB
+0_0_27.jpg (442, 84) RGB
+0_0_28.jpg (442, 83) RGB
+0_0_29.jpg (444, 79) RGB
+0_0_3.jpg (375, 75) RGB
+0_0_30.jpg (427, 58) RGB
+0_0_31.jpg (415, 83) RGB
+0_0_32.jpg (409, 91) RGB
+0_0_33.jpg (476, 78) RGB
+0_0_34.jpg (401, 58) RGB
+0_0_35.jpg (378, 72) RGB
+0_0_36.jpg (543, 83) RGB
+0_0_37.jpg (449, 80) RGB
+0_0_38.jpg (375, 71) RGB
+0_0_39.jpg (545, 75) RGB
+0_0_4.jpg (452, 76) RGB
+0_0_40.jpg (396, 71) RGB
+0_0_41.jpg (320, 52) RGB
+0_0_42.jpg (403, 53) RGB
+0_0_43.jpg (340, 73) RGB
+0_0_44.jpg (471, 73) RGB
+0_0_45.jpg (376, 77) RGB
+0_0_46.jpg (367, 58) RGB
+0_0_47.jpg (554, 64) RGB
+0_0_48.jpg (511, 68) RGB
+0_0_49.jpg (525, 67) RGB
+0_0_5.jpg (353, 99) RGB
+0_0_50.jpg (438, 59) RGB
+0_0_51.jpg (398, 63) RGB
+0_0_52.jpg (382, 49) RGB
+0_0_53.jpg (555, 78) RGB
