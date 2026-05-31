@@ -1,0 +1,2233 @@
+{
+  "num_records": 324312,
+  "num_unique_texts": 59777,
+  "num_leakage_texts": 10230,
+  "leakage_ratio_by_unique_text": 0.17113605567358683,
+  "top_repeated_texts": [
+    [
+      "и",
+      8060
+    ],
+    [
+      "в",
+      7935
+    ],
+    [
+      "на",
+      5077
+    ],
+    [
+      "с",
+      2993
+    ],
+    [
+      "не",
+      2942
+    ],
+    [
+      "а",
+      1851
+    ],
+    [
+      "о",
+      1763
+    ],
+    [
+      ",",
+      1621
+    ],
+    [
+      "он",
+      1600
+    ],
+    [
+      "к",
+      1557
+    ],
+    [
+      "по",
+      1540
+    ],
+    [
+      "я",
+      1510
+    ],
+    [
+      "что",
+      1340
+    ],
+    [
+      "работа",
+      1302
+    ],
+    [
+      "упражнение",
+      1249
+    ],
+    [
+      "от",
+      1063
+    ],
+    [
+      "у",
+      1059
+    ],
+    [
+      "п",
+      1058
+    ],
+    [
+      "за",
+      1021
+    ],
+    [
+      "п.",
+      1007
+    ],
+    [
+      "из",
+      995
+    ],
+    [
+      "но",
+      967
+    ],
+    [
+      "сущ",
+      915
+    ],
+    [
+      "2",
+      870
+    ],
+    [
+      "е",
+      807
+    ],
+    [
+      "это",
+      763
+    ],
+    [
+      "сущ.",
+      762
+    ],
+    [
+      "то",
+      761
+    ],
+    [
+      "его",
+      738
+    ],
+    [
+      "1",
+      714
+    ],
+    [
+      "мы",
+      704
+    ],
+    [
+      "2.",
+      704
+    ],
+    [
+      "3",
+      700
+    ],
+    [
+      "как",
+      700
+    ],
+    [
+      "1.",
+      679
+    ],
+    [
+      "над",
+      667
+    ],
+    [
+      "они",
+      665
+    ],
+    [
+      "двадцать",
+      664
+    ],
+    [
+      "диктант",
+      636
+    ],
+    [
+      "под",
+      616
+    ],
+    [
+      "х",
+      613
+    ],
+    [
+      "классная",
+      610
+    ],
+    [
+      "3.",
+      600
+    ],
+    [
+      "она",
+      572
+    ],
+    [
+      "4.",
+      569
+    ],
+    [
+      "контрольный",
+      532
+    ],
+    [
+      "домашняя",
+      529
+    ],
+    [
+      "н",
+      506
+    ],
+    [
+      "апреля",
+      495
+    ],
+    [
+      "4",
+      485
+    ],
+    [
+      "р",
+      482
+    ],
+    [
+      "-",
+      474
+    ],
+    [
+      "очень",
+      460
+    ],
+    [
+      "скл",
+      450
+    ],
+    [
+      "р.",
+      444
+    ],
+    [
+      "для",
+      440
+    ],
+    [
+      "5.",
+      436
+    ],
+    [
+      "i",
+      415
+    ],
+    [
+      "?",
+      398
+    ],
+    [
+      "ед.",
+      390
+    ],
+    [
+      "гл",
+      376
+    ],
+    [
+      "ь",
+      376
+    ],
+    [
+      "их",
+      368
+    ],
+    [
+      "её",
+      367
+    ],
+    [
+      "мне",
+      367
+    ],
+    [
+      "в.",
+      362
+    ],
+    [
+      "диктант.",
+      362
+    ],
+    [
+      "когда",
+      358
+    ],
+    [
+      "5",
+      358
+    ],
+    [
+      "всё",
+      358
+    ],
+    [
+      "вот",
+      351
+    ],
+    [
+      "ii",
+      348
+    ],
+    [
+      "ещё",
+      344
+    ],
+    [
+      ".",
+      343
+    ],
+    [
+      "гл.",
+      342
+    ],
+    [
+      "был",
+      340
+    ],
+    [
+      "только",
+      339
+    ],
+    [
+      "т",
+      338
+    ],
+    [
+      "так",
+      337
+    ],
+    [
+      "было",
+      330
+    ],
+    [
+      "+",
+      326
+    ],
+    [
+      "ч.",
+      324
+    ],
+    [
+      "лес",
+      318
+    ],
+    [
+      "ч",
+      316
+    ],
+    [
+      "или",
+      313
+    ],
+    [
+      "словарный",
+      307
+    ],
+    [
+      "прил",
+      301
+    ],
+    [
+      "до",
+      291
+    ],
+    [
+      "работа.",
+      286
+    ],
+    [
+      "бы",
+      284
+    ],
+    [
+      "(что",
+      282
+    ],
+    [
+      "н.",
+      280
+    ],
+    [
+      "много",
+      277
+    ],
+    [
+      "чтобы",
+      273
+    ],
+    [
+      "согл.,",
+      272
+    ],
+    [
+      "iii",
+      270
+    ],
+    [
+      "ни",
+      266
+    ],
+    [
+      "без",
+      265
+    ],
+    [
+      "1)",
+      260
+    ],
+    [
+      "все",
+      256
+    ]
+  ],
+  "leakage_preview": {
+    "п.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "в": [
+      "test",
+      "train",
+      "val"
+    ],
+    "ч.,": [
+      "test",
+      "train"
+    ],
+    "ж.": [
+      "test",
+      "train"
+    ],
+    "ед.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "сообщали": [
+      "test",
+      "train"
+    ],
+    "н.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "упражнение": [
+      "test",
+      "train",
+      "val"
+    ],
+    "небо": [
+      "test",
+      "train",
+      "val"
+    ],
+    "молодёжь": [
+      "test",
+      "train"
+    ],
+    "яблоко": [
+      "test",
+      "train",
+      "val"
+    ],
+    "невидимки": [
+      "test",
+      "train"
+    ],
+    "(на": [
+      "test",
+      "train",
+      "val"
+    ],
+    "солнце": [
+      "test",
+      "train",
+      "val"
+    ],
+    "рояль": [
+      "test",
+      "train"
+    ],
+    "двенадцатое": [
+      "test",
+      "train",
+      "val"
+    ],
+    "апреля.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "работа.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "классная": [
+      "test",
+      "train",
+      "val"
+    ],
+    "имена": [
+      "test",
+      "train",
+      "val"
+    ],
+    "существительные": [
+      "train",
+      "val"
+    ],
+    "только": [
+      "test",
+      "train",
+      "val"
+    ],
+    "ч.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "р.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "м.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "ср.": [
+      "test",
+      "train"
+    ],
+    "товарищам": [
+      "test",
+      "train"
+    ],
+    "своим": [
+      "test",
+      "train",
+      "val"
+    ],
+    "чистой": [
+      "test",
+      "train",
+      "val"
+    ],
+    "на": [
+      "test",
+      "train",
+      "val"
+    ],
+    "буквы": [
+      "train",
+      "val"
+    ],
+    "между": [
+      "test",
+      "train",
+      "val"
+    ],
+    "строк": [
+      "test",
+      "train",
+      "val"
+    ],
+    "бумаге": [
+      "test",
+      "train"
+    ],
+    "раз": [
+      "test",
+      "train",
+      "val"
+    ],
+    "самого": [
+      "test",
+      "train",
+      "val"
+    ],
+    "выручали": [
+      "test",
+      "train"
+    ],
+    "соком": [
+      "test",
+      "train"
+    ],
+    "утюгом": [
+      "test",
+      "train"
+    ],
+    "бумаги": [
+      "test",
+      "train"
+    ],
+    "лист": [
+      "test",
+      "train"
+    ],
+    "следов": [
+      "test",
+      "train"
+    ],
+    "чернила": [
+      "test",
+      "train"
+    ],
+    "известия.": [
+      "test",
+      "train"
+    ],
+    "важные": [
+      "test",
+      "train"
+    ],
+    "разведчиков,": [
+      "test",
+      "train"
+    ],
+    "обычного": [
+      "test",
+      "train"
+    ],
+    "которые": [
+      "test",
+      "train",
+      "val"
+    ],
+    "письма": [
+      "test",
+      "train"
+    ],
+    "предположение": [
+      "test",
+      "train"
+    ],
+    "ворота": [
+      "train",
+      "val"
+    ],
+    "шёпот": [
+      "test",
+      "train",
+      "val"
+    ],
+    "бегство,": [
+      "test",
+      "train"
+    ],
+    "темнота,": [
+      "test",
+      "train"
+    ],
+    "3)": [
+      "test",
+      "train",
+      "val"
+    ],
+    "домашняя": [
+      "test",
+      "train",
+      "val"
+    ],
+    "не": [
+      "test",
+      "train",
+      "val"
+    ],
+    "восьмое": [
+      "test",
+      "train",
+      "val"
+    ],
+    "железо,": [
+      "test",
+      "train"
+    ],
+    "2)": [
+      "test",
+      "train",
+      "val"
+    ],
+    "1)": [
+      "test",
+      "train",
+      "val"
+    ],
+    "молодёжь,": [
+      "test",
+      "train"
+    ],
+    "человечество,": [
+      "test",
+      "train"
+    ],
+    "окна": [
+      "test",
+      "train",
+      "val"
+    ],
+    "деревья": [
+      "test",
+      "train",
+      "val"
+    ],
+    "столы": [
+      "test",
+      "train"
+    ],
+    "очки": [
+      "test",
+      "train"
+    ],
+    "лыжи": [
+      "test",
+      "train",
+      "val"
+    ],
+    "заморозки": [
+      "test",
+      "train"
+    ],
+    "мн.": [
+      "test",
+      "train"
+    ],
+    "цифра": [
+      "train",
+      "val"
+    ],
+    "изм.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "2": [
+      "test",
+      "train",
+      "val"
+    ],
+    "3": [
+      "test",
+      "train",
+      "val"
+    ],
+    "растение": [
+      "test",
+      "train",
+      "val"
+    ],
+    "цирк": [
+      "train",
+      "val"
+    ],
+    "праздник": [
+      "test",
+      "train",
+      "val"
+    ],
+    "сущ.,": [
+      "train",
+      "val"
+    ],
+    "неодуш.,": [
+      "test",
+      "train"
+    ],
+    "е": [
+      "test",
+      "train",
+      "val"
+    ],
+    "2-": [
+      "test",
+      "train",
+      "val"
+    ],
+    "штаны": [
+      "train",
+      "val"
+    ],
+    "всюду": [
+      "test",
+      "train",
+      "val"
+    ],
+    "и": [
+      "test",
+      "train",
+      "val"
+    ],
+    "везде": [
+      "test",
+      "train"
+    ],
+    "люди.": [
+      "train",
+      "val"
+    ],
+    "и.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "нариц.,": [
+      "test",
+      "train",
+      "val"
+    ],
+    "(чего?)": [
+      "test",
+      "train",
+      "val"
+    ],
+    "(что?)": [
+      "test",
+      "train"
+    ],
+    "о": [
+      "test",
+      "train",
+      "val"
+    ],
+    "дома.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "к": [
+      "test",
+      "train",
+      "val"
+    ],
+    "за": [
+      "test",
+      "train",
+      "val"
+    ],
+    "новые": [
+      "test",
+      "train",
+      "val"
+    ],
+    "машины.": [
+      "test",
+      "train"
+    ],
+    "д.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "в.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "т.": [
+      "test",
+      "train",
+      "val"
+    ],
+    "шорох": [
+      "test",
+      "train",
+      "val"
+    ]
+  },
+  "top_repeated_with_categories": [
+    {
+      "text": "и",
+      "count": 8060,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 7173,
+        "teacher_comment": 556,
+        "pupil_comment": 331
+      }
+    },
+    {
+      "text": "в",
+      "count": 7935,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 7650,
+        "pupil_comment": 173,
+        "teacher_comment": 112
+      }
+    },
+    {
+      "text": "на",
+      "count": 5077,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 4999,
+        "teacher_comment": 48,
+        "pupil_comment": 30
+      }
+    },
+    {
+      "text": "с",
+      "count": 2993,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 2689,
+        "teacher_comment": 146,
+        "pupil_comment": 158
+      }
+    },
+    {
+      "text": "не",
+      "count": 2942,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 2886,
+        "teacher_comment": 32,
+        "pupil_comment": 24
+      }
+    },
+    {
+      "text": "а",
+      "count": 1851,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 1300,
+        "teacher_comment": 456,
+        "pupil_comment": 95
+      }
+    },
+    {
+      "text": "о",
+      "count": 1763,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 1099,
+        "pupil_comment": 140,
+        "teacher_comment": 524
+      }
+    },
+    {
+      "text": ",",
+      "count": 1621,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 322,
+        "teacher_comment": 1276,
+        "pupil_comment": 23
+      }
+    },
+    {
+      "text": "он",
+      "count": 1600,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 1578,
+        "pupil_comment": 10,
+        "teacher_comment": 12
+      }
+    },
+    {
+      "text": "к",
+      "count": 1557,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 1464,
+        "teacher_comment": 51,
+        "pupil_comment": 42
+      }
+    },
+    {
+      "text": "по",
+      "count": 1540,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 1512,
+        "teacher_comment": 17,
+        "pupil_comment": 11
+      }
+    },
+    {
+      "text": "я",
+      "count": 1510,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "teacher_comment": 131,
+        "pupil_text": 1330,
+        "pupil_comment": 49
+      }
+    },
+    {
+      "text": "что",
+      "count": 1340,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 1322,
+        "teacher_comment": 4,
+        "pupil_comment": 14
+      }
+    },
+    {
+      "text": "работа",
+      "count": 1302,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 1300,
+        "teacher_comment": 2
+      }
+    },
+    {
+      "text": "упражнение",
+      "count": 1249,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 1248,
+        "pupil_comment": 1
+      }
+    },
+    {
+      "text": "от",
+      "count": 1063,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 1051,
+        "teacher_comment": 4,
+        "pupil_comment": 8
+      }
+    },
+    {
+      "text": "у",
+      "count": 1059,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 945,
+        "teacher_comment": 70,
+        "pupil_comment": 44
+      }
+    },
+    {
+      "text": "п",
+      "count": 1058,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_comment": 827,
+        "teacher_comment": 78,
+        "pupil_text": 153
+      }
+    },
+    {
+      "text": "за",
+      "count": 1021,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 995,
+        "teacher_comment": 20,
+        "pupil_comment": 6
+      }
+    },
+    {
+      "text": "п.",
+      "count": 1007,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 225,
+        "pupil_comment": 778,
+        "teacher_comment": 4
+      }
+    },
+    {
+      "text": "из",
+      "count": 995,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 982,
+        "pupil_comment": 9,
+        "teacher_comment": 4
+      }
+    },
+    {
+      "text": "но",
+      "count": 967,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 953,
+        "pupil_comment": 4,
+        "teacher_comment": 10
+      }
+    },
+    {
+      "text": "сущ",
+      "count": 915,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_comment": 730,
+        "pupil_text": 151,
+        "teacher_comment": 34
+      }
+    },
+    {
+      "text": "2",
+      "count": 870,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_comment": 373,
+        "pupil_text": 359,
+        "teacher_comment": 138
+      }
+    },
+    {
+      "text": "е",
+      "count": 807,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 168,
+        "pupil_comment": 152,
+        "teacher_comment": 487
+      }
+    },
+    {
+      "text": "это",
+      "count": 763,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 756,
+        "pupil_comment": 3,
+        "teacher_comment": 4
+      }
+    },
+    {
+      "text": "сущ.",
+      "count": 762,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_comment": 574,
+        "pupil_text": 175,
+        "teacher_comment": 13
+      }
+    },
+    {
+      "text": "то",
+      "count": 761,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 747,
+        "pupil_comment": 4,
+        "teacher_comment": 10
+      }
+    },
+    {
+      "text": "его",
+      "count": 738,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 725,
+        "teacher_comment": 8,
+        "pupil_comment": 5
+      }
+    },
+    {
+      "text": "1",
+      "count": 714,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 328,
+        "pupil_comment": 331,
+        "teacher_comment": 55
+      }
+    },
+    {
+      "text": "мы",
+      "count": 704,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 694,
+        "pupil_comment": 7,
+        "teacher_comment": 3
+      }
+    },
+    {
+      "text": "2.",
+      "count": 704,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 657,
+        "teacher_comment": 40,
+        "pupil_comment": 7
+      }
+    },
+    {
+      "text": "3",
+      "count": 700,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_comment": 342,
+        "pupil_text": 277,
+        "teacher_comment": 81
+      }
+    },
+    {
+      "text": "как",
+      "count": 700,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 687,
+        "teacher_comment": 7,
+        "pupil_comment": 6
+      }
+    },
+    {
+      "text": "1.",
+      "count": 679,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 667,
+        "pupil_comment": 11,
+        "teacher_comment": 1
+      }
+    },
+    {
+      "text": "над",
+      "count": 667,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 662,
+        "teacher_comment": 4,
+        "pupil_comment": 1
+      }
+    },
+    {
+      "text": "они",
+      "count": 665,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 654,
+        "pupil_comment": 7,
+        "teacher_comment": 4
+      }
+    },
+    {
+      "text": "двадцать",
+      "count": 664,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 664
+      }
+    },
+    {
+      "text": "диктант",
+      "count": 636,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 635,
+        "teacher_comment": 1
+      }
+    },
+    {
+      "text": "под",
+      "count": 616,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 605,
+        "teacher_comment": 5,
+        "pupil_comment": 6
+      }
+    },
+    {
+      "text": "х",
+      "count": 613,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_comment": 516,
+        "pupil_text": 75,
+        "teacher_comment": 22
+      }
+    },
+    {
+      "text": "классная",
+      "count": 610,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 610
+      }
+    },
+    {
+      "text": "3.",
+      "count": 600,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 467,
+        "teacher_comment": 132,
+        "pupil_comment": 1
+      }
+    },
+    {
+      "text": "она",
+      "count": 572,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 563,
+        "pupil_comment": 6,
+        "teacher_comment": 3
+      }
+    },
+    {
+      "text": "4.",
+      "count": 569,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 257,
+        "teacher_comment": 311,
+        "pupil_comment": 1
+      }
+    },
+    {
+      "text": "контрольный",
+      "count": 532,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 530,
+        "teacher_comment": 2
+      }
+    },
+    {
+      "text": "домашняя",
+      "count": 529,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 529
+      }
+    },
+    {
+      "text": "н",
+      "count": 506,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "teacher_comment": 197,
+        "pupil_comment": 208,
+        "pupil_text": 101
+      }
+    },
+    {
+      "text": "апреля",
+      "count": 495,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 494,
+        "teacher_comment": 1
+      }
+    },
+    {
+      "text": "4",
+      "count": 485,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_comment": 107,
+        "pupil_text": 190,
+        "teacher_comment": 188
+      }
+    },
+    {
+      "text": "р",
+      "count": 482,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "teacher_comment": 150,
+        "pupil_comment": 251,
+        "pupil_text": 81
+      }
+    },
+    {
+      "text": "-",
+      "count": 474,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "teacher_comment": 227,
+        "pupil_text": 243,
+        "pupil_comment": 4
+      }
+    },
+    {
+      "text": "очень",
+      "count": 460,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 455,
+        "teacher_comment": 4,
+        "pupil_comment": 1
+      }
+    },
+    {
+      "text": "скл",
+      "count": 450,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_comment": 376,
+        "pupil_text": 73,
+        "teacher_comment": 1
+      }
+    },
+    {
+      "text": "р.",
+      "count": 444,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_comment": 273,
+        "pupil_text": 165,
+        "teacher_comment": 6
+      }
+    },
+    {
+      "text": "для",
+      "count": 440,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 439,
+        "teacher_comment": 1
+      }
+    },
+    {
+      "text": "5.",
+      "count": 436,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 136,
+        "teacher_comment": 299,
+        "pupil_comment": 1
+      }
+    },
+    {
+      "text": "i",
+      "count": 415,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 400,
+        "teacher_comment": 9,
+        "pupil_comment": 6
+      }
+    },
+    {
+      "text": "?",
+      "count": 398,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "teacher_comment": 374,
+        "pupil_comment": 11,
+        "pupil_text": 13
+      }
+    },
+    {
+      "text": "ед.",
+      "count": 390,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 186,
+        "pupil_comment": 203,
+        "teacher_comment": 1
+      }
+    },
+    {
+      "text": "гл",
+      "count": 376,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_comment": 311,
+        "teacher_comment": 13,
+        "pupil_text": 52
+      }
+    },
+    {
+      "text": "ь",
+      "count": 376,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "teacher_comment": 269,
+        "pupil_text": 43,
+        "pupil_comment": 64
+      }
+    },
+    {
+      "text": "их",
+      "count": 368,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 361,
+        "teacher_comment": 5,
+        "pupil_comment": 2
+      }
+    },
+    {
+      "text": "её",
+      "count": 367,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 365,
+        "teacher_comment": 2
+      }
+    },
+    {
+      "text": "мне",
+      "count": 367,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 366,
+        "teacher_comment": 1
+      }
+    },
+    {
+      "text": "в.",
+      "count": 362,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 183,
+        "pupil_comment": 178,
+        "teacher_comment": 1
+      }
+    },
+    {
+      "text": "диктант.",
+      "count": 362,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 362
+      }
+    },
+    {
+      "text": "когда",
+      "count": 358,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 349,
+        "pupil_comment": 6,
+        "teacher_comment": 3
+      }
+    },
+    {
+      "text": "5",
+      "count": 358,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "teacher_comment": 241,
+        "pupil_text": 95,
+        "pupil_comment": 22
+      }
+    },
+    {
+      "text": "всё",
+      "count": 358,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 353,
+        "pupil_comment": 2,
+        "teacher_comment": 3
+      }
+    },
+    {
+      "text": "вот",
+      "count": 351,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 348,
+        "pupil_comment": 2,
+        "teacher_comment": 1
+      }
+    },
+    {
+      "text": "ii",
+      "count": 348,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 343,
+        "teacher_comment": 3,
+        "pupil_comment": 2
+      }
+    },
+    {
+      "text": "ещё",
+      "count": 344,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 344
+      }
+    },
+    {
+      "text": ".",
+      "count": 343,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 99,
+        "teacher_comment": 240,
+        "pupil_comment": 4
+      }
+    },
+    {
+      "text": "гл.",
+      "count": 342,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_comment": 269,
+        "pupil_text": 65,
+        "teacher_comment": 8
+      }
+    },
+    {
+      "text": "был",
+      "count": 340,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 338,
+        "teacher_comment": 2
+      }
+    },
+    {
+      "text": "только",
+      "count": 339,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 337,
+        "pupil_comment": 1,
+        "teacher_comment": 1
+      }
+    },
+    {
+      "text": "т",
+      "count": 338,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "teacher_comment": 107,
+        "pupil_comment": 147,
+        "pupil_text": 84
+      }
+    },
+    {
+      "text": "так",
+      "count": 337,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 331,
+        "teacher_comment": 4,
+        "pupil_comment": 2
+      }
+    },
+    {
+      "text": "было",
+      "count": 330,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 320,
+        "teacher_comment": 7,
+        "pupil_comment": 3
+      }
+    },
+    {
+      "text": "+",
+      "count": 326,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_comment": 21,
+        "teacher_comment": 236,
+        "pupil_text": 69
+      }
+    },
+    {
+      "text": "ч.",
+      "count": 324,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 124,
+        "pupil_comment": 197,
+        "teacher_comment": 3
+      }
+    },
+    {
+      "text": "лес",
+      "count": 318,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 313,
+        "pupil_comment": 5
+      }
+    },
+    {
+      "text": "ч",
+      "count": 316,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "teacher_comment": 31,
+        "pupil_text": 69,
+        "pupil_comment": 216
+      }
+    },
+    {
+      "text": "или",
+      "count": 313,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 310,
+        "teacher_comment": 2,
+        "pupil_comment": 1
+      }
+    },
+    {
+      "text": "словарный",
+      "count": 307,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 307
+      }
+    },
+    {
+      "text": "прил",
+      "count": 301,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 63,
+        "pupil_comment": 227,
+        "teacher_comment": 11
+      }
+    },
+    {
+      "text": "до",
+      "count": 291,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 288,
+        "pupil_comment": 2,
+        "teacher_comment": 1
+      }
+    },
+    {
+      "text": "работа.",
+      "count": 286,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 286
+      }
+    },
+    {
+      "text": "бы",
+      "count": 284,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 282,
+        "pupil_comment": 1,
+        "teacher_comment": 1
+      }
+    },
+    {
+      "text": "(что",
+      "count": 282,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 282
+      }
+    },
+    {
+      "text": "н.",
+      "count": 280,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 180,
+        "pupil_comment": 99,
+        "teacher_comment": 1
+      }
+    },
+    {
+      "text": "много",
+      "count": 277,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 265,
+        "teacher_comment": 12
+      }
+    },
+    {
+      "text": "чтобы",
+      "count": 273,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 272,
+        "pupil_comment": 1
+      }
+    },
+    {
+      "text": "согл.,",
+      "count": 272,
+      "splits": [
+        "test",
+        "train"
+      ],
+      "categories": {
+        "pupil_text": 271,
+        "pupil_comment": 1
+      }
+    },
+    {
+      "text": "iii",
+      "count": 270,
+      "splits": [
+        "test",
+        "train"
+      ],
+      "categories": {
+        "pupil_text": 270
+      }
+    },
+    {
+      "text": "ни",
+      "count": 266,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 262,
+        "teacher_comment": 2,
+        "pupil_comment": 2
+      }
+    },
+    {
+      "text": "без",
+      "count": 265,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 264,
+        "pupil_comment": 1
+      }
+    },
+    {
+      "text": "1)",
+      "count": 260,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 233,
+        "teacher_comment": 27
+      }
+    },
+    {
+      "text": "все",
+      "count": 256,
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "categories": {
+        "pupil_text": 250,
+        "teacher_comment": 6
+      }
+    }
+  ]
+}
