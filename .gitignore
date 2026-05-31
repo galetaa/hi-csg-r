@@ -17,3 +17,4 @@ pdf_manifest.json
 /data/interim/
 /data/processed/
 /data/splits/
+/outputs/
