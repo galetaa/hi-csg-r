@@ -29,6 +29,7 @@ def set_seed(seed: int) -> None:
 def mean(xs: list[float]) -> float:
     return sum(xs) / len(xs) if xs else 0.0
 
+
 def apply_blank_logit_penalty(
     log_probs: torch.Tensor,
     blank_index: int,
@@ -48,6 +49,7 @@ def apply_blank_logit_penalty(
     adjusted = adjusted - torch.logsumexp(adjusted, dim=-1, keepdim=True)
     return adjusted
 
+
 def scheduled_blank_penalty(
     *,
     epoch: int,
@@ -61,6 +63,7 @@ def scheduled_blank_penalty(
     alpha = (epoch - 1) / max(total_epochs - 1, 1)
     return start + alpha * (end - start)
 
+
 def evaluate(
     *,
     model: CRNNCTC,
@@ -70,6 +73,7 @@ def evaluate(
     device: torch.device,
     blank_logit_penalty: float = 0.0,
     max_batches: int | None = None,
+    amp_enabled: bool = False,
 ) -> dict[str, Any]:
     model.eval()
 
@@ -89,24 +93,25 @@ def evaluate(
             if max_batches is not None and batch_idx > max_batches:
                 break
 
-            images = batch["images"].to(device)
-            targets = batch["targets"].to(device)
-            target_lengths = batch["target_lengths"].to(device)
-            widths = batch["widths"].to(device)
+            images = batch["images"].to(device, non_blocking=True)
+            targets = batch["targets"].to(device, non_blocking=True)
+            target_lengths = batch["target_lengths"].to(device, non_blocking=True)
+            widths = batch["widths"].to(device, non_blocking=True)
 
-            log_probs = model(images)
+            # Модель считаем в AMP, если включено.
+            # Но CTC loss и blank penalty оставляем в float32 для стабильности.
+            with torch.amp.autocast("cuda", enabled=amp_enabled):
+                log_probs = model(images)
+
+            log_probs = log_probs.float()
+
             log_probs = apply_blank_logit_penalty(
                 log_probs,
                 blank_index=vocab.blank_index,
                 penalty=blank_logit_penalty,
             )
-            input_lengths = model.output_lengths(widths).to(device)
 
-            log_probs = apply_blank_logit_penalty(
-                log_probs,
-                blank_index=vocab.blank_index,
-                penalty=args.blank_logit_penalty if "args" in globals() else 0.0,  # pyright: ignore [reportUndefinedVariable]
-            )
+            input_lengths = model.output_lengths(widths).to(device)
 
             loss = criterion(log_probs, targets, input_lengths, target_lengths)
             losses.append(float(loss.item()))
@@ -158,8 +163,10 @@ def evaluate(
                             "wer": w,
                         }
                     )
+
             if token_total > 0:
                 argmax_blank_ratios.append(blank_total / token_total)
+
     grouped_out = {
         key: {
             "n": len(vals["cer"]),
@@ -186,29 +193,43 @@ def evaluate(
 def train(args: argparse.Namespace) -> None:
     set_seed(args.seed)
 
-    device = torch.device(args.device if args.device else ("cuda" if torch.cuda.is_available() else "cpu"))
+    device = torch.device(
+        args.device if args.device else ("cuda" if torch.cuda.is_available() else "cpu")
+    )
+
+    amp_enabled = bool(args.amp and device.type == "cuda")
+
+    if device.type == "cuda":
+        torch.backends.cudnn.benchmark = True
 
     vocab = CTCVocab.from_path(args.vocab)
 
     train_ds = HTRDataset(args.train_manifest, vocab)
     val_ds = HTRDataset(args.val_manifest, vocab)
 
+    loader_kwargs = {
+        "num_workers": args.num_workers,
+        "pin_memory": device.type == "cuda",
+    }
+
+    if args.num_workers > 0:
+        loader_kwargs["persistent_workers"] = True
+        loader_kwargs["prefetch_factor"] = args.prefetch_factor
+
     train_loader = DataLoader(
         train_ds,
         batch_size=args.batch_size,
         shuffle=True,
-        num_workers=args.num_workers,
         collate_fn=collate_htr_batch,
-        pin_memory=torch.cuda.is_available(),
+        **loader_kwargs,
     )
 
     val_loader = DataLoader(
         val_ds,
         batch_size=args.batch_size,
         shuffle=False,
-        num_workers=args.num_workers,
         collate_fn=collate_htr_batch,
-        pin_memory=torch.cuda.is_available(),
+        **loader_kwargs,
     )
 
     model = CRNNCTC(
@@ -223,13 +244,20 @@ def train(args: argparse.Namespace) -> None:
     ).to(device)
 
     criterion = nn.CTCLoss(blank=vocab.blank_index, zero_infinity=True)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+    optimizer = torch.optim.AdamW(
+        model.parameters(),
+        lr=args.lr,
+        weight_decay=args.weight_decay,
+    )
+
+    scaler = torch.cuda.amp.GradScaler(enabled=amp_enabled)
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    config = vars(args)
+    config = vars(args).copy()
     config["device_resolved"] = str(device)
+    config["amp_enabled"] = amp_enabled
     config["num_classes"] = vocab.num_classes
     config["train_size"] = len(train_ds)
     config["val_size"] = len(val_ds)
@@ -254,32 +282,44 @@ def train(args: argparse.Namespace) -> None:
                 start=args.blank_logit_penalty_start,
                 end=args.blank_logit_penalty_end,
             )
+
         model.train()
         train_losses = []
 
         for batch_idx, batch in enumerate(train_loader, start=1):
-            images = batch["images"].to(device)
-            targets = batch["targets"].to(device)
-            target_lengths = batch["target_lengths"].to(device)
-            widths = batch["widths"].to(device)
+            images = batch["images"].to(device, non_blocking=True)
+            targets = batch["targets"].to(device, non_blocking=True)
+            target_lengths = batch["target_lengths"].to(device, non_blocking=True)
+            widths = batch["widths"].to(device, non_blocking=True)
 
-            log_probs = model(images)
+            optimizer.zero_grad(set_to_none=True)
+
+            # Forward модели в AMP.
+            # Blank penalty и CTCLoss считаем в float32, чтобы не просадить стабильность.
+            with torch.amp.autocast("cuda", enabled=amp_enabled):
+                log_probs = model(images)
+
+            log_probs = log_probs.float()
+
             log_probs = apply_blank_logit_penalty(
                 log_probs,
                 blank_index=vocab.blank_index,
                 penalty=current_blank_penalty,
             )
+
             input_lengths = model.output_lengths(widths).to(device)
 
             loss = criterion(log_probs, targets, input_lengths, target_lengths)
 
-            optimizer.zero_grad(set_to_none=True)
-            loss.backward()
+            scaler.scale(loss).backward()
 
             if args.grad_clip > 0:
+                scaler.unscale_(optimizer)
                 torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_clip)
 
-            optimizer.step()
+            scaler.step(optimizer)
+            scaler.update()
+
             train_losses.append(float(loss.item()))
 
             if batch_idx % args.log_every == 0:
@@ -299,6 +339,7 @@ def train(args: argparse.Namespace) -> None:
             device=device,
             max_batches=args.max_val_batches,
             blank_logit_penalty=current_blank_penalty,
+            amp_enabled=amp_enabled,
         )
 
         row = {
@@ -310,15 +351,16 @@ def train(args: argparse.Namespace) -> None:
         history.append(row)
 
         print(
-            f"epoch={epoch} train_loss={row['train_loss']:.4f} "
+            f"epoch={epoch} "
+            f"train_loss={row['train_loss']:.4f} "
             f"val_loss={val_metrics['loss']:.4f} "
             f"val_cer={val_metrics['cer']:.4f} "
             f"val_wer={val_metrics['wer']:.4f} "
             f"val_exact={val_metrics['exact']:.4f} "
             f"pred_len={val_metrics['pred_len_mean']:.2f} "
             f"empty={val_metrics['pred_empty_ratio']:.3f} "
-            f"blank={val_metrics['argmax_blank_ratio']:.3f}"
-            f"blank_penalty={current_blank_penalty:.3f} "
+            f"blank={val_metrics['argmax_blank_ratio']:.3f} "
+            f"blank_penalty={current_blank_penalty:.3f}"
         )
 
         (out_dir / "history.json").write_text(
@@ -326,29 +368,20 @@ def train(args: argparse.Namespace) -> None:
             encoding="utf-8",
         )
 
-        torch.save(
-            {
-                "model": model.state_dict(),
-                "epoch": epoch,
-                "val_cer": val_metrics["cer"],
-                "blank_logit_penalty": current_blank_penalty,
-                "config": config,
-            },
-            out_dir / "last.pt",
-        )
+        checkpoint = {
+            "model": model.state_dict(),
+            "epoch": epoch,
+            "val_cer": val_metrics["cer"],
+            "blank_logit_penalty": current_blank_penalty,
+            "config": config,
+        }
+
+        torch.save(checkpoint, out_dir / "last.pt")
 
         if val_metrics["cer"] < best_cer:
             best_cer = val_metrics["cer"]
-            torch.save(
-                {
-                    "model": model.state_dict(),
-                    "epoch": epoch,
-                    "val_cer": val_metrics["cer"],
-                    "blank_logit_penalty": current_blank_penalty,
-                    "config": config,
-                },
-                out_dir / "best.pt",
-            )
+            torch.save(checkpoint, out_dir / "best.pt")
+
             (out_dir / "best_val_examples.json").write_text(
                 json.dumps(val_metrics["examples"], ensure_ascii=False, indent=2),
                 encoding="utf-8",
@@ -369,6 +402,7 @@ def main() -> None:
     parser.add_argument("--epochs", type=int, default=3)
     parser.add_argument("--batch_size", type=int, default=32)
     parser.add_argument("--num_workers", type=int, default=2)
+    parser.add_argument("--prefetch_factor", type=int, default=4)
 
     parser.add_argument("--hidden_size", type=int, default=256)
     parser.add_argument("--lstm_layers", type=int, default=2)
@@ -393,6 +427,12 @@ def main() -> None:
     parser.add_argument("--blank_logit_penalty", type=float, default=None)
     parser.add_argument("--blank_logit_penalty_start", type=float, default=0.0)
     parser.add_argument("--blank_logit_penalty_end", type=float, default=0.0)
+
+    parser.add_argument(
+        "--amp",
+        action="store_true",
+        help="Enable CUDA mixed precision for faster training. CTCLoss is still computed in float32.",
+    )
 
     args = parser.parse_args()
     train(args)

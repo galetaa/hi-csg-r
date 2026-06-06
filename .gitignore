@@ -18,3 +18,5 @@ pdf_manifest.json
 /data/processed/
 /data/splits/
 /outputs/
+data/experiments/
+data/experiments/
