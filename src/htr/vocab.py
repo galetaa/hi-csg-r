@@ -10,8 +10,17 @@ class CTCVocab:
         self.blank_token = vocab.get("blank_token", "<blank>")
         self.blank_index = int(vocab.get("blank_index", 0))
         self.char_to_idx = {str(k): int(v) for k, v in vocab["char_to_idx"].items()}
-        self.idx_to_char = {int(k): str(v) for k, v in vocab["idx_to_char"].items()}
+        idx_to_char = vocab["idx_to_char"]
+        if isinstance(idx_to_char, list):
+            self.idx_to_char = {i: str(ch) for i, ch in enumerate(idx_to_char)}
+        else:
+            self.idx_to_char = {int(k): str(v) for k, v in idx_to_char.items()}
         self.num_classes = int(vocab["num_classes"])
+        if len(self.idx_to_char) != self.num_classes:
+            raise ValueError(
+                f"idx_to_char has {len(self.idx_to_char)} entries, "
+                f"but num_classes is {self.num_classes}"
+            )
 
     @classmethod
     def from_path(cls, path: str | Path) -> "CTCVocab":

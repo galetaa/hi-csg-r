@@ -272,7 +272,41 @@ def train(args: argparse.Namespace) -> None:
 
     print(json.dumps(config, ensure_ascii=False, indent=2))
 
-    for epoch in range(1, args.epochs + 1):
+    history = []
+    history_path = out_dir / "history.json"
+    if history_path.exists():
+        history = json.loads(history_path.read_text(encoding="utf-8"))
+
+    best_cer = min(
+        (float(row["val"]["cer"]) for row in history if "val" in row and "cer" in row["val"]),
+        default=float("inf"),
+    )
+
+    start_epoch = 1
+
+    if args.resume:
+        checkpoint = torch.load(args.resume, map_location=device)
+
+        model.load_state_dict(checkpoint["model"])
+        start_epoch = int(checkpoint.get("epoch", 0)) + 1
+
+        if "optimizer" in checkpoint:
+            optimizer.load_state_dict(checkpoint["optimizer"])
+
+        if "scaler" in checkpoint and amp_enabled:
+            scaler.load_state_dict(checkpoint["scaler"])
+
+        best_cer = min(
+            best_cer,
+            float(checkpoint.get("best_cer", checkpoint.get("val_cer", best_cer))),
+        )
+
+        print(
+            f"resumed from {args.resume}; "
+            f"start_epoch={start_epoch}; best_cer={best_cer:.4f}"
+        )
+
+    for epoch in range(start_epoch, args.epochs + 1):
         if args.blank_logit_penalty is not None:
             current_blank_penalty = args.blank_logit_penalty
         else:
@@ -368,15 +402,25 @@ def train(args: argparse.Namespace) -> None:
             encoding="utf-8",
         )
 
+        is_best = val_metrics["cer"] < best_cer
+        if is_best:
+            best_cer = val_metrics["cer"]
+
         checkpoint = {
             "model": model.state_dict(),
+            "optimizer": optimizer.state_dict(),
+            "scaler": scaler.state_dict() if amp_enabled else None,
             "epoch": epoch,
             "val_cer": val_metrics["cer"],
+            "best_cer": best_cer,
             "blank_logit_penalty": current_blank_penalty,
             "config": config,
         }
 
         torch.save(checkpoint, out_dir / "last.pt")
+
+        if is_best:
+            torch.save(checkpoint, out_dir / "best.pt")
 
         if val_metrics["cer"] < best_cer:
             best_cer = val_metrics["cer"]
@@ -427,6 +471,8 @@ def main() -> None:
     parser.add_argument("--blank_logit_penalty", type=float, default=None)
     parser.add_argument("--blank_logit_penalty_start", type=float, default=0.0)
     parser.add_argument("--blank_logit_penalty_end", type=float, default=0.0)
+
+    parser.add_argument("--resume", default=None, help="Path to checkpoint to resume from")
 
     parser.add_argument(
         "--amp",
