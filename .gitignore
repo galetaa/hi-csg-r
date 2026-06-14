@@ -21,6 +21,6 @@ data/experiments/
 
 outputs/**
 !outputs/**/
-!outputs/**/*report.md
+!outputs/**/*report*.md
 
 __pycache__/
