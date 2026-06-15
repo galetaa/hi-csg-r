@@ -32,6 +32,8 @@ Graph-aware models showed lower relative CER degradation under distortions, but 
 
 The correct claim is: graph-aware variants are less sensitive in relative terms, but they are not competitive with the image-only baseline in absolute CER. This supports robustness analysis, not a better HTR system claim.
 
+Because graph-aware models start from substantially worse clean CER, relative degradation alone is not sufficient evidence of better robustness as an HTR system.
+
 ## 3. H2 — Structural graph preservation
 
 ### Verdict
@@ -41,6 +43,8 @@ H2-v1: partial support with school-notebooks preprocessing exception
 ```
 
 Manual audit indicates that HKR and Cyrillic samples generally preserve visible stroke structure. School-notebooks samples are dominated by upstream crop/border/binarization artifacts and should be reported separately.
+
+Important caveat: the H2 audit subset is a diagnostic candidate pool selected across CER/risk quadrants, not a random population sample. Therefore the reported rates should be interpreted as audit evidence and failure-mode characterization, not as dataset-level graph-quality estimates.
 
 | subset | n | critical topology error rate | skeleton follows ink rate | mean graph quality |
 |---|---:|---:|---:|---:|
@@ -59,7 +63,7 @@ The school-notebooks subset is not valid evidence against the graph abstraction 
 H3: partial support
 ```
 
-Global single-feature graph metrics do not strongly explain CER. However, multifeature structural descriptors provide useful high-error detection in stratified subsets.
+Global single-feature graph metrics do not strongly explain CER. However, multifeature structural descriptors provide useful but localized high-error detection in stratified subsets.
 
 | best multifeature signal | value |
 |---|---:|
@@ -77,9 +81,9 @@ The structural descriptor set is useful for finding hard samples, but it should 
 
 ## 5. Safe claims
 
-- Canonical visible-stroke graph descriptors are diagnostically useful in some settings.
+- Canonical visible-stroke graph descriptors are diagnostically useful in some stratified settings.
 - Graph-aware HTR variants are relatively less sensitive to distortions, but not better recognizers in absolute CER.
-- HKR/Cyrillic graph extraction preserves visible stroke structure reasonably well in the audited subset.
+- HKR/Cyrillic graph extraction preserved visible stroke structure reasonably well in the diagnostic audit subset.
 - School-notebooks failures are dominated by upstream crop/binarization border artifacts.
 - The current structural risk score is a hard-sample indicator, not a direct graph-quality score.
 

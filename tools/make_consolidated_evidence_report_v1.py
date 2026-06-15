@@ -65,9 +65,9 @@ def main() -> None:
             "interpretation": h3.get("methodological_interpretation"),
         },
         "safe_claims": [
-            "Canonical visible-stroke graph descriptors are diagnostically useful in some settings.",
+            "Canonical visible-stroke graph descriptors are diagnostically useful in some stratified settings.",
             "Graph-aware HTR variants are relatively less sensitive to distortions, but not better recognizers in absolute CER.",
-            "HKR/Cyrillic graph extraction preserves visible stroke structure reasonably well in the audited subset.",
+            "HKR/Cyrillic graph extraction preserved visible stroke structure reasonably well in the diagnostic audit subset.",
             "School-notebooks failures are dominated by upstream crop/binarization border artifacts.",
             "The current structural risk score is a hard-sample indicator, not a direct graph-quality score.",
         ],
@@ -137,6 +137,11 @@ def main() -> None:
         "This supports robustness analysis, not a better HTR system claim."
     )
     lines.append("")
+    lines.append(
+        "Because graph-aware models start from substantially worse clean CER, relative degradation alone is not sufficient "
+        "evidence of better robustness as an HTR system."
+    )
+    lines.append("")
 
     lines.append("## 3. H2 — Structural graph preservation")
     lines.append("")
@@ -149,6 +154,12 @@ def main() -> None:
     lines.append(
         "Manual audit indicates that HKR and Cyrillic samples generally preserve visible stroke structure. "
         "School-notebooks samples are dominated by upstream crop/border/binarization artifacts and should be reported separately."
+    )
+    lines.append("")
+    lines.append(
+        "Important caveat: the H2 audit subset is a diagnostic candidate pool selected across CER/risk quadrants, "
+        "not a random population sample. Therefore the reported rates should be interpreted as audit evidence "
+        "and failure-mode characterization, not as dataset-level graph-quality estimates."
     )
     lines.append("")
     lines.append("| subset | n | critical topology error rate | skeleton follows ink rate | mean graph quality |")
@@ -193,7 +204,7 @@ def main() -> None:
     lines.append("")
     lines.append(
         "Global single-feature graph metrics do not strongly explain CER. "
-        "However, multifeature structural descriptors provide useful high-error detection in stratified subsets."
+        "However, multifeature structural descriptors provide useful but localized high-error detection in stratified subsets."
     )
     lines.append("")
 

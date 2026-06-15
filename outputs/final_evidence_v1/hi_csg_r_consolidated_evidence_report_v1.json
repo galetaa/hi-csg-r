@@ -1,0 +1,132 @@
+{
+  "overall_verdict": "mixed_partial_support",
+  "h1": {
+    "verdict": "partial_support_only",
+    "reason": "Graph-aware models showed lower relative CER degradation, but worse clean and distorted absolute CER than image-only.",
+    "models": {
+      "image_only": {
+        "clean_cer": 0.08223581816287687,
+        "mean_distorted_cer": 0.11364795221671457,
+        "mean_absolute_cer_delta": 0.03141213405383772,
+        "mean_relative_cer_degradation": 0.3819763061349085,
+        "clean_gap_vs_image_only": 0.0,
+        "clean_relative_gap_vs_image_only": 0.0
+      },
+      "graph_vector_v2": {
+        "clean_cer": 0.1396980739198334,
+        "mean_distorted_cer": 0.16970605587367693,
+        "mean_absolute_cer_delta": 0.03000798195384349,
+        "mean_relative_cer_degradation": 0.2148059820142098,
+        "clean_gap_vs_image_only": 0.05746225575695654,
+        "clean_relative_gap_vs_image_only": 0.6987497302349005
+      },
+      "gated_v2_dist": {
+        "clean_cer": 0.14375845913586674,
+        "mean_distorted_cer": 0.17242963734166233,
+        "mean_absolute_cer_delta": 0.028671178205795587,
+        "mean_relative_cer_degradation": 0.19943993820007724,
+        "clean_gap_vs_image_only": 0.06152264097298987,
+        "clean_relative_gap_vs_image_only": 0.748124629235617
+      }
+    }
+  },
+  "h2": {
+    "verdict": "partial_support_with_preprocessing_exception",
+    "hkr_plus_cyrillic": {
+      "n": 77,
+      "critical_topology_error_rate": 0.025974025974025976,
+      "skeleton_follows_ink_rate": 0.961038961038961,
+      "mean_graph_quality_0_3": 2.8701298701298703
+    },
+    "school_notebooks_decision": {
+      "include_in_graph_topology_claim": false,
+      "reason": "Dominated by upstream crop/border/binarization artifacts.",
+      "border_suppression_v1": "rejected"
+    }
+  },
+  "h3": {
+    "verdict": "partial_support",
+    "main_positive_result": {
+      "group_mode": "dataset_category",
+      "group": "hkr_words|word|unknown",
+      "feature_set": "structural_core",
+      "n": 1090,
+      "positive_n": 231,
+      "negative_n": 859,
+      "high_error_rate": 0.21192660550458717,
+      "high_error_quantile": 0.8,
+      "high_error_threshold_cer": 0.14285714285714285,
+      "feature_n": 30,
+      "features": "fg_fraction;cc_count;cc_area_mean;cc_area_median;cc_area_max_frac;skel_pixels;skel_fraction;skel_components;graph_nodes;graph_edges_8n;graph_avg_degree;graph_endpoint_count;graph_branchpoint_count;graph_isolated_count;endpoint_per_100_skel;branchpoint_per_100_skel;degree_hist_0;degree_hist_1;degree_hist_2;degree_hist_3;degree_hist_4;degree_hist_5plus;dir_h_frac;dir_v_frac;dir_diag_down_frac;dir_diag_up_frac;stroke_width_mean;stroke_width_std;stroke_width_p50;stroke_width_p90",
+      "roc_auc": 0.6732634846720993,
+      "pr_auc": 0.34662030466765187,
+      "pr_auc_lift_over_base_rate": 1.6355676713755,
+      "top20_precision": 0.3761467889908257,
+      "top20_recall": 0.354978354978355,
+      "top20_f1": 0.36525612472160357
+    },
+    "main_negative_result": {
+      "single_feature_global": {
+        "feature": "dir_v_frac",
+        "n": 5563,
+        "spearman_r": -0.10489240073261621,
+        "spearman_p": 4.387173739346413e-15,
+        "pearson_r": -0.07244390823080872,
+        "pearson_p": 6.3320894307573e-08,
+        "abs_spearman_r": 0.10489240073261621,
+        "mean": 0.26578037176455516,
+        "std": 0.09762083264474608,
+        "min": 0.0,
+        "max": 0.9663865546218487
+      },
+      "single_feature_high_error": {
+        "feature": "dir_v_frac",
+        "n": 5563,
+        "high_error_threshold_cer": 0.16666666666666666,
+        "high_error_rate": 0.2045658817184972,
+        "roc_auc_direction_invariant": 0.5657684708031734,
+        "pr_auc": 0.24614088087377572,
+        "direction": "lower_feature_higher_error",
+        "top20_precision": 0.26235399820305483,
+        "top20_recall": 0.2565905096660808,
+        "top20_f1": 0.2594402487783207,
+        "feature_mean": 0.26578037176455516,
+        "feature_std": 0.09762083264474608
+      },
+      "quality_only": {
+        "group_mode": "dataset",
+        "group": "cyrillic_handwriting",
+        "feature_set": "quality_only",
+        "n": 1563,
+        "positive_n": 373,
+        "negative_n": 1190,
+        "high_error_rate": 0.23864363403710812,
+        "high_error_quantile": 0.8,
+        "high_error_threshold_cer": 0.2,
+        "feature_n": 1,
+        "features": "warning_count",
+        "roc_auc": 0.5,
+        "pr_auc": 0.23864363403710812,
+        "pr_auc_lift_over_base_rate": 1.0,
+        "top20_precision": 0.23864363403710812,
+        "top20_recall": 1.0,
+        "top20_f1": 0.3853305785123967
+      }
+    },
+    "interpretation": "Graph scalar features are weak as global individual correlates of CER, but structural multifeature descriptors provide useful high-error detection in stratified subsets. This supports a diagnostic interpretation of graph features, not a claim that graph features improve recognition."
+  },
+  "safe_claims": [
+    "Canonical visible-stroke graph descriptors are diagnostically useful in some stratified settings.",
+    "Graph-aware HTR variants are relatively less sensitive to distortions, but not better recognizers in absolute CER.",
+    "HKR/Cyrillic graph extraction preserved visible stroke structure reasonably well in the diagnostic audit subset.",
+    "School-notebooks failures are dominated by upstream crop/binarization border artifacts.",
+    "The current structural risk score is a hard-sample indicator, not a direct graph-quality score."
+  ],
+  "unsafe_claims": [
+    "Do not claim that graph-aware recognition beats the image-only baseline.",
+    "Do not claim H1 is fully confirmed.",
+    "Do not claim H2 holds uniformly across all datasets.",
+    "Do not claim structural risk is equivalent to graph quality.",
+    "Do not present school-notebooks failures as pure graph-topology failures."
+  ]
+}
