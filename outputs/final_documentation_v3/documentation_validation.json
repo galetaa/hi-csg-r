@@ -1,0 +1,24 @@
+{
+  "version": "hi_csg_r_final_documentation_v3",
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "checked_files": [
+    "00_INDEX.md",
+    "01_EXECUTIVE_SUMMARY.md",
+    "02_METHODS.md",
+    "03_RESULTS.md",
+    "04_DISCUSSION.md",
+    "05_LIMITATIONS.md",
+    "06_CONCLUSION.md",
+    "07_REPRODUCIBILITY.md",
+    "08_FINAL_TABLES.md",
+    "09_FIGURE_PLAN.md",
+    "10_CLAIM_MATRIX.md",
+    "11_EXPERIMENT_REGISTRY.md",
+    "ABSTRACT_RU.md",
+    "ABSTRACT_EN.md",
+    "MANUSCRIPT_FULL.md",
+    "evidence_manifest.json"
+  ]
+}
