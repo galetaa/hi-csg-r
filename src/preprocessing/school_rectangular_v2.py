@@ -1171,3 +1171,394 @@ def whitebalance_lineaware_foreground(
     )
 
     return foreground, normalized, threshold
+
+
+def extract_school_lineaware_v3(
+    row: dict[str, Any],
+    coco_source: SchoolCocoSource,
+) -> dict[str, Any]:
+    ruling_strength = 0.85
+    contrast_gamma = 0.78
+    polygon_dilation_px = 3
+
+    (
+        rectangular_rgb,
+        polygon_mask,
+    ) = coco_source.load_rectangular_rgb_with_polygon_mask(
+        row,
+        target_height=64,
+        extra_padding=0,
+    )
+
+    gray_rectangular = cv2.cvtColor(
+        rectangular_rgb,
+        cv2.COLOR_RGB2GRAY,
+    )
+
+    balanced = robust_paper_white_balance(
+        rectangular_rgb,
+        polygon_mask,
+    )
+
+    balanced_gray = cv2.cvtColor(
+        balanced,
+        cv2.COLOR_RGB2GRAY,
+    )
+
+    background = estimate_rectangular_background(
+        balanced_gray
+    )
+
+    darkness = np.maximum(
+        background.astype(np.float32)
+        - balanced_gray.astype(np.float32),
+        0.0,
+    )
+
+    ruling_response = estimate_horizontal_ruling_response(
+        darkness
+    )
+
+    cleaned_darkness = np.maximum(
+        darkness
+        - ruling_strength * ruling_response,
+        0.0,
+    )
+
+    normalized_gray = contrast_image_from_darkness(
+        cleaned_darkness,
+        polygon_mask,
+        gamma=contrast_gamma,
+    )
+
+    foreground, _ = adaptive_whitened_foreground(
+        normalized_gray,
+        polygon_mask,
+        minimum_threshold=150,
+        maximum_threshold=215,
+        maximum_foreground_fraction=0.30,
+        minimum_component_size=3,
+    )
+
+    filtered_foreground = post_binarization_polygon_filter(
+        foreground,
+        polygon_mask,
+        dilation_px=polygon_dilation_px,
+        minimum_polygon_pixels=3,
+        minimum_overlap_ratio=0.10,
+        minimum_component_size=3,
+    )
+
+    method_metadata = {
+        "school_foreground_method": "rectangular_whitebalance_lineaware_postpoly_v3",
+        "crop_source": "raw_coco_rectangular_bbox",
+        "polygon_filter": "post_binarization",
+        "polygon_dilation_px": polygon_dilation_px,
+        "ruling_strength": ruling_strength,
+        "contrast_gamma": contrast_gamma,
+    }
+
+    return {
+        "gray_rectangular": gray_rectangular,
+        "normalized_gray": normalized_gray,
+        "foreground": filtered_foreground,
+        "polygon_mask": polygon_mask,
+        "ruling_response": ruling_response,
+        "method_metadata": method_metadata,
+    }
+
+
+def lineaware_dual_threshold_foreground(
+    cleaned_darkness: np.ndarray,
+    polygon_mask: np.ndarray,
+    *,
+    strong_sigma: float = 3.2,
+    weak_sigma: float = 1.8,
+    strong_q_frac: float = 0.11,
+    weak_q_frac: float = 0.06,
+    minimum_strong_threshold: float = 3.0,
+    minimum_weak_threshold: float = 1.8,
+    dilation_px: int = 2,
+    minimum_component_size: int = 2,
+    long_horizontal_width_frac: float = 0.35,
+    long_horizontal_max_height: int = 2,
+) -> tuple[np.ndarray, float, float]:
+    """
+    Foreground recovery on top of line-aware darkness.
+    strong mask = reliable ink
+    weak mask   = possible faint ink
+    weak components are kept only if they are supported by:
+      - proximity to strong ink, or
+      - sufficiently strong own darkness
+    """
+    darkness = np.asarray(
+        cleaned_darkness,
+        dtype=np.float32,
+    )
+
+    polygon_mask = np.asarray(
+        polygon_mask,
+        dtype=bool,
+    )
+
+    values = darkness[polygon_mask]
+
+    positive = values[values > 0]
+
+    if positive.size == 0:
+        empty = np.zeros_like(
+            polygon_mask,
+            dtype=bool,
+        )
+        return empty, 0.0, 0.0
+
+    d95 = float(
+        np.quantile(
+            positive,
+            0.95,
+        )
+    )
+
+    # lower-darkness region ~= paper / residual noise
+    noise_region_cutoff = float(
+        np.quantile(
+            values,
+            0.70,
+        )
+    )
+
+    noise_values = values[
+        values <= noise_region_cutoff
+    ]
+
+    if noise_values.size == 0:
+        noise_median = 0.0
+        noise_sigma = 0.0
+    else:
+        noise_median = float(
+            np.median(noise_values)
+        )
+
+        mad = float(
+            np.median(
+                np.abs(
+                    noise_values
+                    - noise_median
+                )
+            )
+        )
+
+        noise_sigma = 1.4826 * mad
+
+    strong_threshold = max(
+        noise_median + strong_sigma * noise_sigma,
+        strong_q_frac * d95,
+        minimum_strong_threshold,
+    )
+
+    weak_threshold = max(
+        noise_median + weak_sigma * noise_sigma,
+        weak_q_frac * d95,
+        minimum_weak_threshold,
+    )
+
+    weak_threshold = min(
+        weak_threshold,
+        strong_threshold,
+    )
+
+    strong = np.logical_and(
+        darkness > strong_threshold,
+        polygon_mask,
+    )
+
+    weak = np.logical_and(
+        darkness > weak_threshold,
+        polygon_mask,
+    )
+
+    strong = remove_small_objects(
+        strong,
+        min_size=minimum_component_size,
+    )
+
+    if dilation_px > 0:
+        kernel_size = 2 * dilation_px + 1
+        kernel = cv2.getStructuringElement(
+            cv2.MORPH_ELLIPSE,
+            (kernel_size, kernel_size),
+        )
+
+        strong_support = cv2.dilate(
+            strong.astype(np.uint8),
+            kernel,
+            iterations=1,
+        ) > 0
+    else:
+        strong_support = strong.copy()
+
+    _, w = polygon_mask.shape
+    long_horizontal_width = max(
+        10,
+        int(round(w * long_horizontal_width_frac)),
+    )
+
+    component_count, labels = cv2.connectedComponents(
+        weak.astype(np.uint8),
+        connectivity=8,
+    )
+
+    result = np.zeros_like(
+        weak,
+        dtype=bool,
+    )
+
+    for component_id in range(1, component_count):
+        component = labels == component_id
+        component_size = int(component.sum())
+
+        if component_size < minimum_component_size:
+            continue
+
+        ys, xs = np.where(component)
+
+        if len(xs) == 0:
+            continue
+
+        x0 = int(xs.min())
+        x1 = int(xs.max())
+        y0 = int(ys.min())
+        y1 = int(ys.max())
+
+        bbox_w = x1 - x0 + 1
+        bbox_h = y1 - y0 + 1
+
+        strong_overlap = int(
+            np.logical_and(
+                component,
+                strong_support,
+            ).sum()
+        )
+
+        component_values = darkness[component]
+        component_mean_darkness = float(
+            component_values.mean()
+        )
+        component_max_darkness = float(
+            component_values.max()
+        )
+
+        # suppress likely horizontal ruling remnants
+        likely_horizontal_ruling = (
+            bbox_h <= long_horizontal_max_height
+            and bbox_w >= long_horizontal_width
+            and strong_overlap == 0
+            and component_mean_darkness < strong_threshold * 1.05
+        )
+
+        if likely_horizontal_ruling:
+            continue
+
+        keep = False
+
+        # obvious continuation of strong ink
+        if strong_overlap > 0:
+            keep = True
+
+        # isolated but still sufficiently dark component
+        elif component_max_darkness >= strong_threshold * 0.90:
+            keep = True
+
+        # slightly weaker but compact, non-horizontal faint component
+        elif (
+            component_mean_darkness >= weak_threshold * 1.25
+            and bbox_h >= 2
+        ):
+            keep = True
+
+        if keep:
+            result[component] = True
+
+    result = remove_small_objects(
+        result,
+        min_size=minimum_component_size,
+    )
+
+    return (
+        result.astype(bool),
+        float(strong_threshold),
+        float(weak_threshold),
+    )
+
+
+def whitebalance_lineaware_foreground_v4(
+    rgb: np.ndarray,
+    polygon_mask: np.ndarray,
+    *,
+    ruling_strength: float = 0.85,
+    contrast_gamma: float = 0.72,
+) -> tuple[np.ndarray, np.ndarray, float, float]:
+    balanced = robust_paper_white_balance(
+        rgb,
+        polygon_mask,
+    )
+
+    gray = cv2.cvtColor(
+        balanced,
+        cv2.COLOR_RGB2GRAY,
+    )
+
+    background = estimate_rectangular_background(
+        gray
+    )
+
+    darkness = np.maximum(
+        background.astype(np.float32)
+        - gray.astype(np.float32),
+        0.0,
+    )
+
+    ruling = estimate_horizontal_ruling_response(
+        darkness
+    )
+
+    cleaned_darkness = np.maximum(
+        darkness
+        - float(ruling_strength) * ruling,
+        0.0,
+    )
+
+    normalized = contrast_image_from_darkness(
+        cleaned_darkness,
+        polygon_mask,
+        gamma=contrast_gamma,
+    )
+
+    contrast_adjusted_darkness = np.maximum(
+        245.0 - normalized.astype(np.float32),
+        0.0,
+    )
+
+    foreground, strong_t, weak_t = (
+        lineaware_dual_threshold_foreground(
+            contrast_adjusted_darkness,
+            polygon_mask,
+            strong_sigma=3.2,
+            weak_sigma=1.8,
+            strong_q_frac=0.11,
+            weak_q_frac=0.06,
+            minimum_strong_threshold=3.0,
+            minimum_weak_threshold=1.8,
+            dilation_px=2,
+            minimum_component_size=2,
+            long_horizontal_width_frac=0.35,
+            long_horizontal_max_height=2,
+        )
+    )
+
+    return (
+        foreground,
+        normalized,
+        strong_t,
+        weak_t,
+    )

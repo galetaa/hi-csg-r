@@ -20,20 +20,14 @@ load_rgb_and_support
 
 from src.preprocessing.school_rectangular_v2 import (
     SchoolCocoSource,
-    adaptive_whitened_foreground,
     post_binarization_polygon_filter,
-    whitebalance_contrast_foreground,
     whitebalance_lineaware_foreground,
-)
-
-from src.preprocessing.school_rectangular_v1 import (
-    robust_global_whiten,
+    whitebalance_lineaware_foreground_v4,
 )
 
 VARIANTS = [
-    "rectangular_global_whiten_adaptive_postpoly_v2",
-    "whitebalance_contrast_postpoly_v3",
     "whitebalance_lineaware_postpoly_v3",
+    "whitebalance_lineaware_postpoly_v4",
 ]
 
 RAW_BY_ID: dict[str, dict[str, Any]] = {}
@@ -232,72 +226,61 @@ def make_variant(
 ) -> tuple[
     np.ndarray,
     np.ndarray,
-    float,
+    str,
 ]:
-    rectangular_gray = cv2.cvtColor(
-        rectangular_rgb,
-        cv2.COLOR_RGB2GRAY,
-    )
-
-    if (
-        name
-        == "rectangular_global_whiten_adaptive_postpoly_v2"
-    ):
-        normalized = robust_global_whiten(
-            rectangular_gray
-        )
-
-        foreground, threshold = (
-            adaptive_whitened_foreground(
-                normalized,
+    if name == "whitebalance_lineaware_postpoly_v3":
+        foreground, normalized, threshold = (
+            whitebalance_lineaware_foreground(
+                rectangular_rgb,
                 polygon_mask,
-                minimum_threshold=150,
-                maximum_threshold=220,
-                maximum_foreground_fraction=0.30,
-                minimum_component_size=3,
+                ruling_strength=0.85,
             )
         )
 
-    elif (
-        name
-        == "whitebalance_contrast_postpoly_v3"
-    ):
-        (
+        filtered = post_binarization_polygon_filter(
             foreground,
-            normalized,
-            threshold,
-        ) = whitebalance_contrast_foreground(
-            rectangular_rgb,
             polygon_mask,
+            dilation_px=3,
+            minimum_polygon_pixels=3,
+            minimum_overlap_ratio=0.10,
+            minimum_component_size=3,
         )
 
-    elif (
-        name
-        == "whitebalance_lineaware_postpoly_v3"
-    ):
-        (
-            foreground,
-            normalized,
-            threshold,
-        ) = whitebalance_lineaware_foreground(
-            rectangular_rgb,
-            polygon_mask,
-            ruling_strength=0.85,
+        label = (
+            f"{name} "
+            f"T={threshold:.1f}"
         )
 
-    else:
-        raise ValueError(name)
+        return filtered, normalized, label
 
-    filtered = post_binarization_polygon_filter(
-        foreground,
-        polygon_mask,
-        dilation_px=3,
-        minimum_polygon_pixels=3,
-        minimum_overlap_ratio=0.10,
-        minimum_component_size=3,
-    )
+    if name == "whitebalance_lineaware_postpoly_v4":
+        foreground, normalized, strong_t, weak_t = (
+            whitebalance_lineaware_foreground_v4(
+                rectangular_rgb,
+                polygon_mask,
+                ruling_strength=0.85,
+                contrast_gamma=0.84,
+            )
+        )
 
-    return filtered, normalized, threshold
+        filtered = post_binarization_polygon_filter(
+            foreground,
+            polygon_mask,
+            dilation_px=3,
+            minimum_polygon_pixels=3,
+            minimum_overlap_ratio=0.10,
+            minimum_component_size=3,
+        )
+
+        label = (
+            f"{name} "
+            f"Ts={strong_t:.1f} "
+            f"Tw={weak_t:.1f}"
+        )
+
+        return filtered, normalized, label
+
+    raise ValueError(name)
 
 
 def fit(img: Image.Image, w: int, h: int) -> Image.Image:
@@ -405,7 +388,7 @@ def prepare_item(row: dict[str, Any], panel_w: int, panel_h: int) -> dict[str, A
             (
                 fg,
                 display_gray,
-                threshold,
+                label,
             ) = make_variant(
                 rectangular_rgb,
                 polygon_mask,
@@ -413,8 +396,6 @@ def prepare_item(row: dict[str, Any], panel_w: int, panel_h: int) -> dict[str, A
             )
 
             skel = skeletonize(fg)
-
-            label = name if threshold is None else f"{name} T={threshold:.1f}"
 
             panel = make_panel(
                 display_gray,
