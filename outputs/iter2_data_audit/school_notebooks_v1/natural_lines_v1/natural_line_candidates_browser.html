@@ -1,0 +1,4472 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>School natural line candidates v1</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f6f7f9;
+      color: #16191f;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 24px;
+    }
+    pre {
+      overflow: auto;
+      background: #111827;
+      color: #e5e7eb;
+      padding: 14px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #d7dce3;
+      border-radius: 8px;
+      padding: 14px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.25;
+    }
+    header p {
+      margin: 3px 0 0;
+      color: #667085;
+      font-size: 12px;
+    }
+    strong {
+      white-space: nowrap;
+      font-size: 13px;
+    }
+    img {
+      display: block;
+      width: 100%;
+      max-height: 220px;
+      object-fit: contain;
+      background: #eceff3;
+      border: 1px solid #e2e6eb;
+    }
+    .missing {
+      padding: 32px;
+      background: #fee2e2;
+      color: #991b1b;
+      border-radius: 4px;
+    }
+    dl {
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      gap: 5px 10px;
+      margin: 12px 0 0;
+      font-size: 13px;
+    }
+    dt {
+      color: #667085;
+    }
+    dd {
+      margin: 0;
+      overflow-wrap: anywhere;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>School natural line candidates v1</h1>
+    <pre>{
+  &quot;graph_root&quot;: &quot;data/experiments/htr_graph_v1/graph_ready/tri10k_mixed_school_lineaware_v3&quot;,
+  &quot;quality_root&quot;: &quot;data/experiments/iter2_quality_manifests/school_notebooks_lineaware_v3&quot;,
+  &quot;school_raw_dir&quot;: &quot;data/interim/school_notebooks&quot;,
+  &quot;min_words&quot;: 2,
+  &quot;splits&quot;: {
+    &quot;train&quot;: {
+      &quot;n_line_groups&quot;: 713,
+      &quot;n_word_instances&quot;: 1478,
+      &quot;n_all_clean_core&quot;: 570,
+      &quot;n_has_hard_real&quot;: 143,
+      &quot;n_has_invalid&quot;: 0,
+      &quot;n_short_groups&quot;: 663,
+      &quot;n_long_groups&quot;: 0,
+      &quot;skipped&quot;: {
+        &quot;missing_group_key&quot;: 283,
+        &quot;below_min_words&quot;: 8239
+      }
+    },
+    &quot;val&quot;: {
+      &quot;n_line_groups&quot;: 282,
+      &quot;n_word_instances&quot;: 599,
+      &quot;n_all_clean_core&quot;: 240,
+      &quot;n_has_hard_real&quot;: 42,
+      &quot;n_has_invalid&quot;: 0,
+      &quot;n_short_groups&quot;: 249,
+      &quot;n_long_groups&quot;: 0,
+      &quot;skipped&quot;: {
+        &quot;missing_group_key&quot;: 40,
+        &quot;below_min_words&quot;: 1361
+      }
+    },
+    &quot;test&quot;: {
+      &quot;n_line_groups&quot;: 253,
+      &quot;n_word_instances&quot;: 537,
+      &quot;n_all_clean_core&quot;: 214,
+      &quot;n_has_hard_real&quot;: 39,
+      &quot;n_has_invalid&quot;: 0,
+      &quot;n_short_groups&quot;: 223,
+      &quot;n_long_groups&quot;: 0,
+      &quot;skipped&quot;: {
+        &quot;missing_group_key&quot;: 73,
+        &quot;below_min_words&quot;: 1390
+      }
+    }
+  },
+  &quot;total&quot;: {
+    &quot;n_line_groups&quot;: 1248,
+    &quot;n_word_instances&quot;: 2614
+  }
+}</pre>
+    <section class="grid">
+      
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_77_11</h2>
+                  <p>val · 2724.jpg · line 11</p>
+                </div>
+                <strong>4 words</strong>
+              </header>
+              <img src="assets/school_line_val_77_11.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>моей нравится она не</dd>
+                <dt>words</dt><dd>моей | нравится | она | не</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0282589, school_notebooks_val_0282658, school_notebooks_val_0282673, school_notebooks_val_0282668</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1042_43</h2>
+                  <p>train · 62_607.JPG · line 43</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_1042_43.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>за то волновало</dd>
+                <dt>words</dt><dd>за | то | волновало</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0181666, school_notebooks_train_0181669, school_notebooks_train_0181682</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_777_407</h2>
+                  <p>train · 39_383.jpeg · line 407</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_777_407.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>так просидел течении</dd>
+                <dt>words</dt><dd>так | просидел | течении</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0136636, school_notebooks_train_0136619, school_notebooks_train_0136634</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_10_41</h2>
+                  <p>test · 2045.jpg · line 41</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_test_10_41.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>1 ск.)- земля, стена</dd>
+                <dt>words</dt><dd>1 ск.)- | земля, | стена</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0297919, school_notebooks_test_0297906, school_notebooks_test_0297916</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_65_28</h2>
+                  <p>val · 2709.jpg · line 28</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_val_65_28.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>снег зелёной каж-</dd>
+                <dt>words</dt><dd>снег | зелёной | каж-</dd>
+                <dt>quality</dt><dd>hard_real | clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0280382, school_notebooks_val_0280433, school_notebooks_val_0280372</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_81_37</h2>
+                  <p>val · 2728.jpg · line 37</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_val_81_37.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>час: часики, часовой,</dd>
+                <dt>words</dt><dd>час: | часики, | часовой,</dd>
+                <dt>quality</dt><dd>clean_core | hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0283606, school_notebooks_val_0283604, school_notebooks_val_0283658</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_16_21</h2>
+                  <p>test · 2115.jpg · line 21</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_test_16_21.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>както раз бабушке</dd>
+                <dt>words</dt><dd>както | раз | бабушке</dd>
+                <dt>quality</dt><dd>hard_real | hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0298960, school_notebooks_test_0298983, school_notebooks_test_0298969</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1484_20</h2>
+                  <p>train · ru_hw2022_18_IMG_6531.JPG · line 20</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_1484_20.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>оказалось запасной коробки</dd>
+                <dt>words</dt><dd>оказалось | запасной | коробки</dd>
+                <dt>quality</dt><dd>clean_core | hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0255159, school_notebooks_train_0255161, school_notebooks_train_0255162</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_189_31</h2>
+                  <p>train · 18_198.JPG · line 31</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_189_31.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>менем своего солнца</dd>
+                <dt>words</dt><dd>менем | своего | солнца</dd>
+                <dt>quality</dt><dd>hard_real | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0034077, school_notebooks_train_0034078, school_notebooks_train_0034081</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_189_25</h2>
+                  <p>train · 18_198.JPG · line 25</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_189_25.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>которые не этого</dd>
+                <dt>words</dt><dd>которые | не | этого</dd>
+                <dt>quality</dt><dd>clean_core | hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0034022, school_notebooks_train_0034024, school_notebooks_train_0034027</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_45_8</h2>
+                  <p>val · 2689.jpg · line 8</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_val_45_8.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>промокли дождя. но</dd>
+                <dt>words</dt><dd>промокли | дождя. | но</dd>
+                <dt>quality</dt><dd>hard_real | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0276930, school_notebooks_val_0276994, school_notebooks_val_0276985</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_149_17</h2>
+                  <p>val · 2803.jpg · line 17</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_val_149_17.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>вительно дорога ли</dd>
+                <dt>words</dt><dd>вительно | дорога | ли</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0296004, school_notebooks_val_0296009, school_notebooks_val_0296010</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_146_15</h2>
+                  <p>val · 2800.jpg · line 15</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_val_146_15.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ния фольклору, этнической</dd>
+                <dt>words</dt><dd>ния | фольклору, | этнической</dd>
+                <dt>quality</dt><dd>hard_real | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0295237, school_notebooks_val_0295252, school_notebooks_val_0295244</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_73_7</h2>
+                  <p>val · 2720.jpg · line 7</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_val_73_7.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>лю крыши частая</dd>
+                <dt>words</dt><dd>лю | крыши | частая</dd>
+                <dt>quality</dt><dd>hard_real | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0281668, school_notebooks_val_0281662, school_notebooks_val_0281655</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_135_7</h2>
+                  <p>test · 2909.jpg · line 7</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_test_135_7.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>кач., мн.ч. и.п.</dd>
+                <dt>words</dt><dd>кач., | мн.ч. | и.п.</dd>
+                <dt>quality</dt><dd>clean_core | hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0320914, school_notebooks_test_0320915, school_notebooks_test_0320916</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_996_13</h2>
+                  <p>train · 59_583.JPG · line 13</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_996_13.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>степены наречий: е,</dd>
+                <dt>words</dt><dd>степены | наречий: | е,</dd>
+                <dt>quality</dt><dd>clean_core | hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0174186, school_notebooks_train_0174187, school_notebooks_train_0174190</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_18_3</h2>
+                  <p>test · 2117.jpg · line 3</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_test_18_3.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>салома, сирень, расстояние</dd>
+                <dt>words</dt><dd>салома, | сирень, | расстояние</dd>
+                <dt>quality</dt><dd>hard_real | hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0299208, school_notebooks_test_0299190, school_notebooks_test_0299203</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_85_16</h2>
+                  <p>test · 2835.jpg · line 16</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_test_85_16.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>сам металлический, (робот-</dd>
+                <dt>words</dt><dd>сам | металлический, | (робот-</dd>
+                <dt>quality</dt><dd>clean_core | hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0311138, school_notebooks_test_0311151, school_notebooks_test_0311166</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1112_6</h2>
+                  <p>train · 69_678.JPG · line 6</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_1112_6.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ступеньках школы. невоскл.,</dd>
+                <dt>words</dt><dd>ступеньках | школы. | невоскл.,</dd>
+                <dt>quality</dt><dd>clean_core | hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0195877, school_notebooks_train_0195876, school_notebooks_train_0195860</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_79_1</h2>
+                  <p>val · 2726.jpg · line 1</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_val_79_1.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>между кот на</dd>
+                <dt>words</dt><dd>между | кот | на</dd>
+                <dt>quality</dt><dd>hard_real | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0283208, school_notebooks_val_0283240, school_notebooks_val_0283241</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_825_2</h2>
+                  <p>train · 43_423.JPG · line 2</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_825_2.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>голых повисли от</dd>
+                <dt>words</dt><dd>голых | повисли | от</dd>
+                <dt>quality</dt><dd>hard_real | clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0145750, school_notebooks_train_0145748, school_notebooks_train_0145745</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1191_30</h2>
+                  <p>train · 79_752.jpg · line 30</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1191_30.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>земли? бурение -</dd>
+                <dt>words</dt><dd>земли? | бурение -</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0209872, school_notebooks_train_0209874</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1189_47</h2>
+                  <p>train · 79_750.jpg · line 47</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1189_47.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>девятнадцатое февраля</dd>
+                <dt>words</dt><dd>девятнадцатое | февраля</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0209600, school_notebooks_train_0209581</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_146_45</h2>
+                  <p>val · 2800.jpg · line 45</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_146_45.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>стоят.&quot; средства</dd>
+                <dt>words</dt><dd>стоят.&quot; | средства</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0295283, school_notebooks_val_0295099</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_147_40</h2>
+                  <p>val · 2801.jpg · line 40</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_147_40.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>внутренний тютчева.</dd>
+                <dt>words</dt><dd>внутренний | тютчева.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0295445, school_notebooks_val_0295541</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1047_40</h2>
+                  <p>train · 62_612.JPG · line 40</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1047_40.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>наливают малой</dd>
+                <dt>words</dt><dd>наливают | малой</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0182991, school_notebooks_train_0182980</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_778_21</h2>
+                  <p>train · 3_44.JPG · line 21</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_778_21.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>вьющееся растение,</dd>
+                <dt>words</dt><dd>вьющееся | растение,</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0136760, school_notebooks_train_0136771</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1304_38</h2>
+                  <p>train · 87_851.JPG · line 38</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1304_38.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>1. на</dd>
+                <dt>words</dt><dd>1. | на</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0226806, school_notebooks_train_0226729</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_690_49</h2>
+                  <p>train · 30_292.jpeg · line 49</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_690_49.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ч- глух.,</dd>
+                <dt>words</dt><dd>ч- | глух.,</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0121212, school_notebooks_train_0121191</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_641_48</h2>
+                  <p>train · 2890.jpg · line 48</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_641_48.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>. у или</dd>
+                <dt>words</dt><dd>. у | или</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0112894, school_notebooks_train_0112940</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_114_39</h2>
+                  <p>test · 2870.jpg · line 39</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_114_39.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>был б ,</dd>
+                <dt>words</dt><dd>был | б ,</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0316991, school_notebooks_test_0317014</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_146_40</h2>
+                  <p>test · 2920.jpg · line 40</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_146_40.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>эмоции, показывая</dd>
+                <dt>words</dt><dd>эмоции, | показывая</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0323552, school_notebooks_test_0323480</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_845_39</h2>
+                  <p>train · 44_443.JPG · line 39</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_845_39.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>во такая</dd>
+                <dt>words</dt><dd>во | такая</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0150318, school_notebooks_train_0150396</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_107_38</h2>
+                  <p>val · 2754.jpg · line 38</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_107_38.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>из овощей:</dd>
+                <dt>words</dt><dd>из | овощей:</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0288466, school_notebooks_val_0288465</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_71_479</h2>
+                  <p>val · 2715.jpg · line 479</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_71_479.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ед. ч.</dd>
+                <dt>words</dt><dd>ед. | ч.</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0281415, school_notebooks_val_0281413</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1193_30</h2>
+                  <p>train · 79_754.jpg · line 30</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1193_30.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>за писменным</dd>
+                <dt>words</dt><dd>за | писменным</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0210261, school_notebooks_train_0210314</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_117_40</h2>
+                  <p>test · 2873.jpg · line 40</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_117_40.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>(сл.сл.), (сл.сл.),</dd>
+                <dt>words</dt><dd>(сл.сл.), | (сл.сл.),</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0317684, school_notebooks_test_0317680</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1115_39</h2>
+                  <p>train · 69_681.JPG · line 39</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1115_39.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>от поверхнос-</dd>
+                <dt>words</dt><dd>от | поверхнос-</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0196542, school_notebooks_train_0196541</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_401_75</h2>
+                  <p>train · 2438.jpg · line 75</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_401_75.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>л. п.</dd>
+                <dt>words</dt><dd>л. | п.</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0070528, school_notebooks_train_0070529</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_40_276</h2>
+                  <p>val · 2684.jpg · line 276</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_40_276.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>водой, возду</dd>
+                <dt>words</dt><dd>водой, | возду</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0276188, school_notebooks_val_0276190</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_803_40</h2>
+                  <p>train · 41_399.JPG · line 40</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_803_40.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>орла. невоскл.,</dd>
+                <dt>words</dt><dd>орла. | невоскл.,</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0141933, school_notebooks_train_0141940</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1532_39</h2>
+                  <p>train · ru_hw2022_4_IMG_7362.JPG · line 39</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1532_39.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>лась добре</dd>
+                <dt>words</dt><dd>лась | добре</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0263609, school_notebooks_train_0263615</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_719_40</h2>
+                  <p>train · 32_321.JPG · line 40</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_719_40.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>золотую вылетевшие</dd>
+                <dt>words</dt><dd>золотую | вылетевшие</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0126913, school_notebooks_train_0126915</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_75_45</h2>
+                  <p>val · 2722.jpg · line 45</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_75_45.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>потом или</dd>
+                <dt>words</dt><dd>потом | или</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0282161, school_notebooks_val_0282157</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_960_32</h2>
+                  <p>train · 54_547.jpeg · line 32</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_960_32.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>(в чёго?</dd>
+                <dt>words</dt><dd>(в | чёго?</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0167981, school_notebooks_train_0167977</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1041_37</h2>
+                  <p>train · 62_606.JPG · line 37</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1041_37.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>реальном явлений</dd>
+                <dt>words</dt><dd>реальном | явлений</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0181380, school_notebooks_train_0181379</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_60_524</h2>
+                  <p>train · 105_1049.JPG · line 524</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_60_524.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>он свой</dd>
+                <dt>words</dt><dd>он | свой</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0010887, school_notebooks_train_0010876</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_82_542</h2>
+                  <p>val · 2729.jpg · line 542</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_82_542.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>колосья- лошадь,</dd>
+                <dt>words</dt><dd>колосья- | лошадь,</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0283664, school_notebooks_val_0283800</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_2_40</h2>
+                  <p>test · 2015.jpg · line 40</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_2_40.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>тут- веки</dd>
+                <dt>words</dt><dd>тут- | веки</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0296610, school_notebooks_test_0296612</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1200_38</h2>
+                  <p>train · 7_106.JPG · line 38</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1200_38.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>шапке сущ</dd>
+                <dt>words</dt><dd>шапке | сущ</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0211674, school_notebooks_train_0211721</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_109_36</h2>
+                  <p>test · 2865.jpg · line 36</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_109_36.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>весна. солнце</dd>
+                <dt>words</dt><dd>весна. | солнце</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0316214, school_notebooks_test_0316223</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_123_39</h2>
+                  <p>train · 11_132.JPG · line 39</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_123_39.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>диких оленей</dd>
+                <dt>words</dt><dd>диких | оленей</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0021315, school_notebooks_train_0021230</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1507_34</h2>
+                  <p>train · ru_hw2022_26_IMG_6261.JPG · line 34</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1507_34.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>2. 2 сл.</dd>
+                <dt>words</dt><dd>2. | 2 сл.</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0259467, school_notebooks_train_0259486</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1103_30</h2>
+                  <p>train · 68_669.JPG · line 30</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1103_30.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>люди. охоту.</dd>
+                <dt>words</dt><dd>люди. | охоту.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0194548, school_notebooks_train_0194520</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_984_431</h2>
+                  <p>train · 58_571.JPG · line 431</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_984_431.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>реками тоже</dd>
+                <dt>words</dt><dd>реками | тоже</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0172124, school_notebooks_train_0172119</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_135_32</h2>
+                  <p>val · 2782.jpg · line 32</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_135_32.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>молодой, бескорыстный</dd>
+                <dt>words</dt><dd>молодой, | бескорыстный</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0293496, school_notebooks_val_0293498</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_145_18</h2>
+                  <p>val · 2799.jpg · line 18</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_145_18.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>мы как:</dd>
+                <dt>words</dt><dd>мы | как:</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0294973, school_notebooks_val_0294965</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_88_36</h2>
+                  <p>test · 2838.jpg · line 36</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_88_36.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>положиться на</dd>
+                <dt>words</dt><dd>положиться | на</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0311717, school_notebooks_test_0311799</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_407_35</h2>
+                  <p>train · 2444.jpg · line 35</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_407_35.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>нашем ёжик.</dd>
+                <dt>words</dt><dd>нашем | ёжик.</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0071620, school_notebooks_train_0071623</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_721_35</h2>
+                  <p>train · 32_324.JPG · line 35</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_721_35.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>сначала трудные</dd>
+                <dt>words</dt><dd>сначала | трудные</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0127321, school_notebooks_train_0127325</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1456_19</h2>
+                  <p>train · 9_115.JPG · line 19</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1456_19.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>природе хочет</dd>
+                <dt>words</dt><dd>природе | хочет</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0250190, school_notebooks_train_0250211</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_845_33</h2>
+                  <p>train · 44_443.JPG · line 33</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_845_33.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>выражения отдельными</dd>
+                <dt>words</dt><dd>выражения | отдельными</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0150442, school_notebooks_train_0150247</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_650_370</h2>
+                  <p>train · 28_271.JPG · line 370</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_650_370.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>поблагодарили которые</dd>
+                <dt>words</dt><dd>поблагодарили | которые</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0114471, school_notebooks_train_0114476</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1031_38</h2>
+                  <p>train · 60_596.jpg · line 38</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1031_38.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>говори смело</dd>
+                <dt>words</dt><dd>говори | смело</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0179428, school_notebooks_train_0179429</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_39_35</h2>
+                  <p>test · 2482.jpg · line 35</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_39_35.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>1. плочет</dd>
+                <dt>words</dt><dd>1. | плочет</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0302706, school_notebooks_test_0302605</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1497_34</h2>
+                  <p>train · ru_hw2022_23_IMG_6077.JPG · line 34</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1497_34.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>2. двусос-</dd>
+                <dt>words</dt><dd>2. | двусос-</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0257609, school_notebooks_train_0257784</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_984_34</h2>
+                  <p>train · 58_571.JPG · line 34</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_984_34.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>литературы, вы</dd>
+                <dt>words</dt><dd>литературы, | вы</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0172171, school_notebooks_train_0172170</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_39_271</h2>
+                  <p>val · 2683.jpg · line 271</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_39_271.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>отпуск то</dd>
+                <dt>words</dt><dd>отпуск | то</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0275828, school_notebooks_val_0275823</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_790_32</h2>
+                  <p>train · 40_386.jpeg · line 32</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_790_32.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>прекрасен, прекрасно.</dd>
+                <dt>words</dt><dd>прекрасен, | прекрасно.</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0139225, school_notebooks_train_0139340</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_15_5</h2>
+                  <p>val · 2653.jpg · line 5</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_15_5.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>хорошо вот</dd>
+                <dt>words</dt><dd>хорошо | вот</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0271523, school_notebooks_val_0271509</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_37_33</h2>
+                  <p>val · 2681.jpg · line 33</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_37_33.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>широких, подби-</dd>
+                <dt>words</dt><dd>широких, | подби-</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0275528, school_notebooks_val_0275564</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_84_30</h2>
+                  <p>test · 2834.jpg · line 30</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_84_30.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>во парк.</dd>
+                <dt>words</dt><dd>во | парк.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0310916, school_notebooks_test_0311036</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1058_459</h2>
+                  <p>train · 64_623.jpg · line 459</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1058_459.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>угрюм. он</dd>
+                <dt>words</dt><dd>угрюм. | он</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0185039, school_notebooks_train_0185045</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_357_21</h2>
+                  <p>train · 23_239.jpg · line 21</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_357_21.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>берёзу окном</dd>
+                <dt>words</dt><dd>берёзу | окном</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0063210, school_notebooks_train_0063211</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_868_26</h2>
+                  <p>train · 46_466.jpeg · line 26</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_868_26.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>какой? чей?</dd>
+                <dt>words</dt><dd>какой? | чей?</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0153323, school_notebooks_train_0153231</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1120_35</h2>
+                  <p>train · 6_91.JPG · line 35</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1120_35.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>подхватила наверх.</dd>
+                <dt>words</dt><dd>подхватила | наверх.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0197430, school_notebooks_train_0197392</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_395_16</h2>
+                  <p>train · 2432.jpg · line 16</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_395_16.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>лиса речку.</dd>
+                <dt>words</dt><dd>лиса | речку.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0069329, school_notebooks_train_0069333</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_84_29</h2>
+                  <p>test · 2834.jpg · line 29</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_84_29.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>место очистки,</dd>
+                <dt>words</dt><dd>место | очистки,</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0310942, school_notebooks_test_0310948</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_689_29</h2>
+                  <p>train · 30_291.jpeg · line 29</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_689_29.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>имена прилагательные</dd>
+                <dt>words</dt><dd>имена | прилагательные</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0120968, school_notebooks_train_0120963</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_176_34</h2>
+                  <p>train · 17_185.JPG · line 34</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_176_34.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ветерок, уснувший</dd>
+                <dt>words</dt><dd>ветерок, | уснувший</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0031259, school_notebooks_train_0031260</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1131_28</h2>
+                  <p>train · 70_692.JPG · line 28</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1131_28.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>судья, героический</dd>
+                <dt>words</dt><dd>судья, | героический</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0199424, school_notebooks_train_0199425</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_11_31</h2>
+                  <p>test · 2046.jpg · line 31</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_11_31.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>весна. ярко</dd>
+                <dt>words</dt><dd>весна. | ярко</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0298139, school_notebooks_test_0298137</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1155_34</h2>
+                  <p>train · 73_716.JPG · line 34</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1155_34.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ушибленное место,</dd>
+                <dt>words</dt><dd>ушибленное | место,</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0203766, school_notebooks_train_0203696</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_839_32</h2>
+                  <p>train · 44_437.JPG · line 32</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_839_32.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ещё просыпается,</dd>
+                <dt>words</dt><dd>ещё | просыпается,</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0148859, school_notebooks_train_0148861</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_16_36</h2>
+                  <p>train · 100_1007.JPG · line 36</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_16_36.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ii еловый-</dd>
+                <dt>words</dt><dd>ii | еловый-</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0003490, school_notebooks_train_0003497</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_105_32</h2>
+                  <p>val · 2752.jpg · line 32</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_105_32.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>лыжах шёл</dd>
+                <dt>words</dt><dd>лыжах | шёл</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0288062, school_notebooks_val_0288054</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_108_27</h2>
+                  <p>val · 2755.jpg · line 27</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_108_27.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>смотрит сидит</dd>
+                <dt>words</dt><dd>смотрит | сидит</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0288588, school_notebooks_val_0288653</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_144_31</h2>
+                  <p>test · 2918.jpg · line 31</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_144_31.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>отговаривали аргументируя</dd>
+                <dt>words</dt><dd>отговаривали | аргументируя</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0323007, school_notebooks_test_0323009</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_37_251</h2>
+                  <p>val · 2681.jpg · line 251</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_37_251.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>гонялся за</dd>
+                <dt>words</dt><dd>гонялся | за</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0275459, school_notebooks_val_0275460</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1120_31</h2>
+                  <p>train · 6_91.JPG · line 31</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1120_31.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>берегу около</dd>
+                <dt>words</dt><dd>берегу | около</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0197443, school_notebooks_train_0197447</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_12_27</h2>
+                  <p>test · 2047.jpg · line 27</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_12_27.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>вырвался, за-</dd>
+                <dt>words</dt><dd>вырвался, | за-</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0298216, school_notebooks_test_0298209</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_139_29</h2>
+                  <p>test · 2913.jpg · line 29</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_139_29.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>этого есть</dd>
+                <dt>words</dt><dd>этого | есть</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0322015, school_notebooks_test_0322017</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_585_25</h2>
+                  <p>train · 2621.jpg · line 25</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_585_25.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>разделяет автора</dd>
+                <dt>words</dt><dd>разделяет | автора</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0101911, school_notebooks_train_0101913</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1288_4</h2>
+                  <p>train · 86_835.JPG · line 4</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1288_4.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>так или</dd>
+                <dt>words</dt><dd>так | или</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0225050, school_notebooks_train_0225045</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_352_25</h2>
+                  <p>train · 2396.jpg · line 25</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_352_25.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>серебрянный колокольчик.</dd>
+                <dt>words</dt><dd>серебрянный | колокольчик.</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0062542, school_notebooks_train_0062536</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_593_634</h2>
+                  <p>train · 2629.jpg · line 634</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_593_634.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>тропинке (1 скл</dd>
+                <dt>words</dt><dd>тропинке | (1 скл</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0103198, school_notebooks_train_0103184</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1049_30</h2>
+                  <p>train · 63_614.JPG · line 30</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1049_30.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>острова, напоминавшего</dd>
+                <dt>words</dt><dd>острова, | напоминавшего</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0183401, school_notebooks_train_0183402</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_177_26</h2>
+                  <p>train · 17_186.JPG · line 26</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_177_26.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>снег долине,</dd>
+                <dt>words</dt><dd>снег | долине,</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0031489, school_notebooks_train_0031491</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1465_19</h2>
+                  <p>train · ru_hw2022_11_IMG_6838.JPG · line 19</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1465_19.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ястреб. когтис-</dd>
+                <dt>words</dt><dd>ястреб. | когтис-</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0251891, school_notebooks_train_0251934</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1061_22</h2>
+                  <p>train · 64_626.jpg · line 22</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1061_22.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>помолчал засвистал,</dd>
+                <dt>words</dt><dd>помолчал | засвистал,</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0185836, school_notebooks_train_0185839</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_21_27</h2>
+                  <p>test · 2120.jpg · line 27</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_21_27.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>сантехник он</dd>
+                <dt>words</dt><dd>сантехник | он</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0299781, school_notebooks_test_0299778</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_485_31</h2>
+                  <p>train · 2528.jpg · line 31</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_485_31.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>голубую открывается</dd>
+                <dt>words</dt><dd>голубую | открывается</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0083793, school_notebooks_train_0083752</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_721_26</h2>
+                  <p>train · 32_324.JPG · line 26</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_721_26.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>вас понятно,</dd>
+                <dt>words</dt><dd>вас | понятно,</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0127331, school_notebooks_train_0127333</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_42_24</h2>
+                  <p>test · 2485.jpg · line 24</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_42_24.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>осени орехи</dd>
+                <dt>words</dt><dd>осени | орехи</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0303327, school_notebooks_test_0303325</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_974_19</h2>
+                  <p>train · 57_561.jpg · line 19</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_974_19.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>1. вывелись.</dd>
+                <dt>words</dt><dd>1. | вывелись.</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0170699, school_notebooks_train_0170638</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_167_14</h2>
+                  <p>train · 16_176.jpg · line 14</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_167_14.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>р- парн.</dd>
+                <dt>words</dt><dd>р- | парн.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0029678, school_notebooks_train_0029829</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_785_31</h2>
+                  <p>train · 3_51.JPG · line 31</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_785_31.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>крысами мышами</dd>
+                <dt>words</dt><dd>крысами | мышами</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0138338, school_notebooks_train_0138307</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_39_28</h2>
+                  <p>val · 2683.jpg · line 28</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_39_28.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>знокомство. кот</dd>
+                <dt>words</dt><dd>знокомство. | кот</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0275854, school_notebooks_val_0275980</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_16_184</h2>
+                  <p>test · 2115.jpg · line 184</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_16_184.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>выйти не</dd>
+                <dt>words</dt><dd>выйти | не</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0298937, school_notebooks_test_0298938</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_258_461</h2>
+                  <p>train · 22_228.JPG · line 461</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_258_461.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>увлекли перенесла</dd>
+                <dt>words</dt><dd>увлекли | перенесла</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0046221, school_notebooks_train_0046284</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_147_25</h2>
+                  <p>val · 2801.jpg · line 25</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_147_25.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>талант ут-</dd>
+                <dt>words</dt><dd>талант | ут-</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0295411, school_notebooks_val_0295404</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_769_25</h2>
+                  <p>train · 38_375.JPG · line 25</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_769_25.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>когда- союз.</dd>
+                <dt>words</dt><dd>когда- | союз.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0135042, school_notebooks_train_0135043</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_112_733</h2>
+                  <p>val · 2759.jpg · line 733</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_112_733.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>наст вр</dd>
+                <dt>words</dt><dd>наст | вр</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0289264, school_notebooks_val_0289263</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1115_25</h2>
+                  <p>train · 69_681.JPG · line 25</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1115_25.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>глубины она</dd>
+                <dt>words</dt><dd>глубины | она</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0196581, school_notebooks_train_0196523</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_766_28</h2>
+                  <p>train · 38_372.JPG · line 28</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_766_28.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ушли стала</dd>
+                <dt>words</dt><dd>ушли | стала</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0134477, school_notebooks_train_0134481</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_53_19</h2>
+                  <p>val · 2697.jpg · line 19</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_53_19.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>потом листочки.</dd>
+                <dt>words</dt><dd>потом | листочки.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0278416, school_notebooks_val_0278437</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_276_607</h2>
+                  <p>train · 2320.jpg · line 607</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_276_607.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>на изображена</dd>
+                <dt>words</dt><dd>на | изображена</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0049003, school_notebooks_train_0048999</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_123_768</h2>
+                  <p>val · 2770.jpg · line 768</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_123_768.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>мы встали</dd>
+                <dt>words</dt><dd>мы | встали</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0291203, school_notebooks_val_0291205</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1087_25</h2>
+                  <p>train · 67_652.jpg · line 25</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1087_25.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>стоит липки.</dd>
+                <dt>words</dt><dd>стоит | липки.</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0190760, school_notebooks_train_0190758</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_20_26</h2>
+                  <p>test · 2119.jpg · line 26</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_20_26.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>солнечный глазах</dd>
+                <dt>words</dt><dd>солнечный | глазах</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0299721, school_notebooks_test_0299613</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_853_18</h2>
+                  <p>train · 45_451.jpg · line 18</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_853_18.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>листьям, травам.</dd>
+                <dt>words</dt><dd>листьям, | травам.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0151262, school_notebooks_train_0151214</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_575_23</h2>
+                  <p>train · 2611.jpg · line 23</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_575_23.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>на подбитых</dd>
+                <dt>words</dt><dd>на | подбитых</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0100519, school_notebooks_train_0100560</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_137_23</h2>
+                  <p>test · 2911.jpg · line 23</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_137_23.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>понравилось: несмело...&quot;,</dd>
+                <dt>words</dt><dd>понравилось: | несмело...&quot;,</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0321238, school_notebooks_test_0321245</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_105_18</h2>
+                  <p>test · 2861.jpg · line 18</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_105_18.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>комноты. мы</dd>
+                <dt>words</dt><dd>комноты. | мы</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0315586, school_notebooks_test_0315580</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_768_353</h2>
+                  <p>train · 38_374.JPG · line 353</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_768_353.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>не перенести</dd>
+                <dt>words</dt><dd>не | перенести</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0134836, school_notebooks_train_0134717</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_575_22</h2>
+                  <p>train · 2611.jpg · line 22</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_575_22.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>мягким пушок.</dd>
+                <dt>words</dt><dd>мягким | пушок.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0100497, school_notebooks_train_0100501</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_868_16</h2>
+                  <p>train · 46_466.jpeg · line 16</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_868_16.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>н. двор</dd>
+                <dt>words</dt><dd>н. | двор</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0153300, school_notebooks_train_0153328</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_80_20</h2>
+                  <p>test · 2830.jpg · line 20</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_80_20.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>согл., глух.,</dd>
+                <dt>words</dt><dd>согл., | глух.,</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0310169, school_notebooks_test_0310303</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1195_554</h2>
+                  <p>train · 7_101.JPG · line 554</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1195_554.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>р. п.</dd>
+                <dt>words</dt><dd>р. | п.</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0210578, school_notebooks_train_0210576</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1347_23</h2>
+                  <p>train · 91_889.jpg · line 23</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1347_23.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>забратся не</dd>
+                <dt>words</dt><dd>забратся | не</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0234166, school_notebooks_train_0234320</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_68_22</h2>
+                  <p>val · 2712.jpg · line 22</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_68_22.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>капельки весело</dd>
+                <dt>words</dt><dd>капельки | весело</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0281058, school_notebooks_val_0281050</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_833_24</h2>
+                  <p>train · 43_431.JPG · line 24</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_833_24.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>далекие легкие</dd>
+                <dt>words</dt><dd>далекие | легкие</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0147689, school_notebooks_train_0147690</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_140_21</h2>
+                  <p>test · 2914.jpg · line 21</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_140_21.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>была она</dd>
+                <dt>words</dt><dd>была | она</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0322366, school_notebooks_test_0322172</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1102_24</h2>
+                  <p>train · 68_668.JPG · line 24</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1102_24.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>1. необычной</dd>
+                <dt>words</dt><dd>1. | необычной</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0194259, school_notebooks_train_0194258</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1100_22</h2>
+                  <p>train · 68_665.JPG · line 22</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1100_22.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>лучики их</dd>
+                <dt>words</dt><dd>лучики | их</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0193699, school_notebooks_train_0193695</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1287_22</h2>
+                  <p>train · 86_834.JPG · line 22</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1287_22.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>по мамы</dd>
+                <dt>words</dt><dd>по | мамы</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0224843, school_notebooks_train_0224982</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_766_26</h2>
+                  <p>train · 38_372.JPG · line 26</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_766_26.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ночлежный дом</dd>
+                <dt>words</dt><dd>ночлежный | дом</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0134358, school_notebooks_train_0134386</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1061_16</h2>
+                  <p>train · 64_626.jpg · line 16</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1061_16.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>на суку.</dd>
+                <dt>words</dt><dd>на | суку.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0185853, school_notebooks_train_0185854</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_285_21</h2>
+                  <p>train · 2329.jpg · line 21</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_285_21.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>стоит липы.</dd>
+                <dt>words</dt><dd>стоит | липы.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0050653, school_notebooks_train_0050732</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_15_19</h2>
+                  <p>test · 2114.jpg · line 19</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_15_19.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>деревянную лопату</dd>
+                <dt>words</dt><dd>деревянную | лопату</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0298742, school_notebooks_test_0298780</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_20_21</h2>
+                  <p>test · 2119.jpg · line 21</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_20_21.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>воды, на</dd>
+                <dt>words</dt><dd>воды, | на</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0299526, school_notebooks_test_0299524</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_840_20</h2>
+                  <p>train · 44_438.JPG · line 20</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_840_20.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>шёл пока</dd>
+                <dt>words</dt><dd>шёл | пока</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0148996, school_notebooks_train_0148994</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_235_22</h2>
+                  <p>train · 2197.jpg · line 22</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_235_22.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>пошли на</dd>
+                <dt>words</dt><dd>пошли | на</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0042811, school_notebooks_train_0042666</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_339_10</h2>
+                  <p>train · 2383.jpg · line 10</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_339_10.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>рассказал об</dd>
+                <dt>words</dt><dd>рассказал | об</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0060090, school_notebooks_train_0060072</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_42_295</h2>
+                  <p>val · 2686.jpg · line 295</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_42_295.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>чонка. он</dd>
+                <dt>words</dt><dd>чонка. | он</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0276521, school_notebooks_val_0276522</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_178_16</h2>
+                  <p>train · 17_187.JPG · line 16</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_178_16.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>на раски-</dd>
+                <dt>words</dt><dd>на | раски-</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0031880, school_notebooks_train_0031806</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_622_13</h2>
+                  <p>train · 2813.jpg · line 13</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_622_13.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>главного на</dd>
+                <dt>words</dt><dd>главного | на</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0109546, school_notebooks_train_0109538</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_320_19</h2>
+                  <p>train · 2364.jpg · line 19</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_320_19.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>отличался исключительной</dd>
+                <dt>words</dt><dd>отличался | исключительной</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0057017, school_notebooks_train_0057018</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1079_18</h2>
+                  <p>train · 66_644.JPG · line 18</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1079_18.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>(где?) на</dd>
+                <dt>words</dt><dd>(где?) | на</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0189318, school_notebooks_train_0189316</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_751_31</h2>
+                  <p>train · 36_355.JPG · line 31</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_751_31.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>(какие?) гл</dd>
+                <dt>words</dt><dd>(какие?) | гл</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0132091, school_notebooks_train_0132095</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_499_16</h2>
+                  <p>train · 2542.jpg · line 16</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_499_16.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>то сделан</dd>
+                <dt>words</dt><dd>то | сделан</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0086836, school_notebooks_train_0086856</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_224_281</h2>
+                  <p>train · 20_219.jpg · line 281</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_224_281.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>соглас числе</dd>
+                <dt>words</dt><dd>соглас | числе</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0040977, school_notebooks_train_0040979</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_69_16</h2>
+                  <p>val · 2713.jpg · line 16</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_69_16.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>весна это</dd>
+                <dt>words</dt><dd>весна | это</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0281128, school_notebooks_val_0281104</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_149_15</h2>
+                  <p>train · 13_158.JPG · line 15</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_149_15.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>значит незаслуженно</dd>
+                <dt>words</dt><dd>значит | незаслуженно</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0027007, school_notebooks_train_0027006</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_41_24</h2>
+                  <p>train · 104_1030.JPG · line 24</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_41_24.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>братишку ещё</dd>
+                <dt>words</dt><dd>братишку | ещё</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0007877, school_notebooks_train_0007850</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_52_13</h2>
+                  <p>val · 2696.jpg · line 13</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_52_13.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>соловья наполняет</dd>
+                <dt>words</dt><dd>соловья | наполняет</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0278306, school_notebooks_val_0278307</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_193_12</h2>
+                  <p>train · 18_202.JPG · line 12</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_193_12.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>пост. - непост.-</dd>
+                <dt>words</dt><dd>пост. - | непост.-</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0034948, school_notebooks_train_0035037</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_111_10</h2>
+                  <p>val · 2758.jpg · line 10</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_111_10.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>надели платья</dd>
+                <dt>words</dt><dd>надели | платья</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0289111, school_notebooks_val_0289112</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_833_16</h2>
+                  <p>train · 43_431.JPG · line 16</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_833_16.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>не понять,</dd>
+                <dt>words</dt><dd>не | понять,</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0147662, school_notebooks_train_0147664</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_6_1</h2>
+                  <p>train · 0_6.jpg · line 1</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_6_1.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>1. князь</dd>
+                <dt>words</dt><dd>1. | князь</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0001281, school_notebooks_train_0001448</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_794_18</h2>
+                  <p>train · 40_390.jpeg · line 18</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_794_18.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>на остроконечной</dd>
+                <dt>words</dt><dd>на | остроконечной</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0139903, school_notebooks_train_0139898</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_968_13</h2>
+                  <p>train · 55_555.JPG · line 13</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_968_13.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>велись жалили</dd>
+                <dt>words</dt><dd>велись | жалили</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0169891, school_notebooks_train_0169895</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_104_11</h2>
+                  <p>val · 2751.jpg · line 11</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_104_11.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>тропика за</dd>
+                <dt>words</dt><dd>тропика | за</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0287842, school_notebooks_val_0287844</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_721_14</h2>
+                  <p>train · 32_324.JPG · line 14</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_721_14.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>время выписывайте</dd>
+                <dt>words</dt><dd>время | выписывайте</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0127369, school_notebooks_train_0127371</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_143_8</h2>
+                  <p>test · 2917.jpg · line 8</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_143_8.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ной наружности,</dd>
+                <dt>words</dt><dd>ной | наружности,</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0322847, school_notebooks_test_0322846</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_980_7</h2>
+                  <p>train · 58_567.JPG · line 7</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_980_7.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>лист жёлтый</dd>
+                <dt>words</dt><dd>лист | жёлтый</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0171255, school_notebooks_train_0171357</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1100_11</h2>
+                  <p>train · 68_665.JPG · line 11</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1100_11.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>пробирался тайгу.</dd>
+                <dt>words</dt><dd>пробирался | тайгу.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0193647, school_notebooks_train_0193645</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_964_367</h2>
+                  <p>train · 54_551.jpeg · line 367</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_964_367.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>полн прил</dd>
+                <dt>words</dt><dd>полн | прил</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0168661, school_notebooks_train_0168662</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_147_14</h2>
+                  <p>train · 13_156.JPG · line 14</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_147_14.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>н- звонк,</dd>
+                <dt>words</dt><dd>н- | звонк,</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0026618, school_notebooks_train_0026494</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_41_17</h2>
+                  <p>val · 2685.jpg · line 17</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_41_17.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>вести, вёл</dd>
+                <dt>words</dt><dd>вести, | вёл</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0276226, school_notebooks_val_0276227</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_687_12</h2>
+                  <p>train · 30_289.jpeg · line 12</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_687_12.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>которая хотела</dd>
+                <dt>words</dt><dd>которая | хотела</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0120259, school_notebooks_train_0120273</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_145_13</h2>
+                  <p>train · 13_154.JPG · line 13</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_145_13.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>р- твёрд</dd>
+                <dt>words</dt><dd>р- | твёрд</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0026092, school_notebooks_train_0026154</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_6_10</h2>
+                  <p>test · 2041.jpg · line 10</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_6_10.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>гладили ежа.</dd>
+                <dt>words</dt><dd>гладили | ежа.</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0297242, school_notebooks_test_0297227</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_73_6</h2>
+                  <p>test · 2823.jpg · line 6</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_73_6.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>появились по</dd>
+                <dt>words</dt><dd>появились | по</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0308336, school_notebooks_test_0308382</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_782_13</h2>
+                  <p>train · 3_48.JPG · line 13</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_782_13.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>на побережье,</dd>
+                <dt>words</dt><dd>на | побережье,</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0137645, school_notebooks_train_0137691</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1042_13</h2>
+                  <p>train · 62_607.JPG · line 13</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1042_13.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>очертания горизонту</dd>
+                <dt>words</dt><dd>очертания | горизонту</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0181599, school_notebooks_train_0181661</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_281_10</h2>
+                  <p>train · 2325.jpg · line 10</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_281_10.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>интересно зверей.</dd>
+                <dt>words</dt><dd>интересно | зверей.</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0050002, school_notebooks_train_0050062</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_45_5</h2>
+                  <p>val · 2689.jpg · line 5</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_45_5.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>кое вся</dd>
+                <dt>words</dt><dd>кое | вся</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0276922, school_notebooks_val_0276939</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_507_12</h2>
+                  <p>train · 2550.jpg · line 12</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_507_12.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ивановича его</dd>
+                <dt>words</dt><dd>ивановича | его</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0088122, school_notebooks_train_0088124</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_69_10</h2>
+                  <p>val · 2713.jpg · line 10</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_69_10.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>моё отношение</dd>
+                <dt>words</dt><dd>моё | отношение</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0281192, school_notebooks_val_0281210</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_188_11</h2>
+                  <p>train · 18_197.JPG · line 11</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_188_11.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>шуба (суффиксальный)</dd>
+                <dt>words</dt><dd>шуба | (суффиксальный)</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0033961, school_notebooks_train_0033960</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_121_7</h2>
+                  <p>train · 11_130.JPG · line 7</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_121_7.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>пасмурные, настоящие</dd>
+                <dt>words</dt><dd>пасмурные, | настоящие</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0020939, school_notebooks_train_0020956</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_140_11</h2>
+                  <p>val · 2787.jpg · line 11</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_140_11.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>вдохновения, поэт</dd>
+                <dt>words</dt><dd>вдохновения, | поэт</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0294421, school_notebooks_val_0294295</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_872_9</h2>
+                  <p>train · 47_470.JPG · line 9</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_872_9.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>погрузился, но</dd>
+                <dt>words</dt><dd>погрузился, | но</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0154177, school_notebooks_train_0154176</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1254_4</h2>
+                  <p>train · 83_801.JPG · line 4</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1254_4.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>мёд, пчёлами.</dd>
+                <dt>words</dt><dd>мёд, | пчёлами.</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0219843, school_notebooks_train_0219988</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_692_7</h2>
+                  <p>train · 30_294.jpeg · line 7</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_692_7.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>речь синего</dd>
+                <dt>words</dt><dd>речь | синего</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0121734, school_notebooks_train_0121764</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_139_8</h2>
+                  <p>test · 2913.jpg · line 8</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_139_8.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>слегка различались.</dd>
+                <dt>words</dt><dd>слегка | различались.</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0321922, school_notebooks_test_0321927</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1508_9</h2>
+                  <p>train · ru_hw2022_26_IMG_6281.JPG · line 9</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1508_9.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>постараться помочь.</dd>
+                <dt>words</dt><dd>постараться | помочь.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0259777, school_notebooks_train_0259778</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1107_8</h2>
+                  <p>train · 69_673.JPG · line 8</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1107_8.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>переплётчики, разочаровал-</dd>
+                <dt>words</dt><dd>переплётчики, | разочаровал-</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0195169, school_notebooks_train_0195171</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_101_11</h2>
+                  <p>val · 2748.jpg · line 11</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_101_11.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>льва николаевича</dd>
+                <dt>words</dt><dd>льва | николаевича</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0287254, school_notebooks_val_0287253</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_865_8</h2>
+                  <p>train · 46_463.jpeg · line 8</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_865_8.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>под птицей</dd>
+                <dt>words</dt><dd>под | птицей</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0152797, school_notebooks_train_0152607</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_146_9</h2>
+                  <p>val · 2800.jpg · line 9</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_146_9.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>эпитетов: теплый&quot;,</dd>
+                <dt>words</dt><dd>эпитетов: | теплый&quot;,</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0295169, school_notebooks_val_0295167</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_946_4</h2>
+                  <p>train · 53_532.JPG · line 4</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_946_4.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>голоском вся-</dd>
+                <dt>words</dt><dd>голоском | вся-</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0166138, school_notebooks_train_0166130</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_263_538</h2>
+                  <p>train · 22_233.JPG · line 538</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_263_538.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>речку описав</dd>
+                <dt>words</dt><dd>речку | описав</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0046936, school_notebooks_train_0047027</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_716_4</h2>
+                  <p>train · 31_318.JPG · line 4</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_716_4.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>вниманием слушал</dd>
+                <dt>words</dt><dd>вниманием | слушал</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0126268, school_notebooks_train_0126267</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1059_6</h2>
+                  <p>train · 64_624.jpg · line 6</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1059_6.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>птичью защищали</dd>
+                <dt>words</dt><dd>птичью | защищали</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0185511, school_notebooks_train_0185506</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1363_6</h2>
+                  <p>train · 93_905.JPG · line 6</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1363_6.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>[в]- парн.</dd>
+                <dt>words</dt><dd>[в]- | парн.</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0236637, school_notebooks_train_0236648</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_136_3</h2>
+                  <p>test · 2910.jpg · line 3</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_136_3.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>много вопросов</dd>
+                <dt>words</dt><dd>много | вопросов</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0321038, school_notebooks_test_0321112</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_116_748</h2>
+                  <p>val · 2763.jpg · line 748</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_116_748.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>очень жизненная.</dd>
+                <dt>words</dt><dd>очень | жизненная.</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0289946, school_notebooks_val_0289933</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_192_3</h2>
+                  <p>train · 18_201.JPG · line 3</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_192_3.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>полом. по-</dd>
+                <dt>words</dt><dd>полом. | по-</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0034793, school_notebooks_train_0034794</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1080_741</h2>
+                  <p>train · 66_645.JPG · line 741</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1080_741.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>на чём?</dd>
+                <dt>words</dt><dd>на | чём?</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0189516, school_notebooks_train_0189520</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_705_6</h2>
+                  <p>train · 31_307.JPG · line 6</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_705_6.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>лесных речонок,</dd>
+                <dt>words</dt><dd>лесных | речонок,</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0124088, school_notebooks_train_0124059</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1113_5</h2>
+                  <p>train · 69_679.JPG · line 5</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1113_5.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>контрольный диктант</dd>
+                <dt>words</dt><dd>контрольный | диктант</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0196188, school_notebooks_train_0196068</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_139_4</h2>
+                  <p>test · 2913.jpg · line 4</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_139_4.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>неприметными, вос-</dd>
+                <dt>words</dt><dd>неприметными, | вос-</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0321939, school_notebooks_test_0321992</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_82_2</h2>
+                  <p>test · 2832.jpg · line 2</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_82_2.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ii и.п.,</dd>
+                <dt>words</dt><dd>ii | и.п.,</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0310681, school_notebooks_test_0310724</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_90_4</h2>
+                  <p>test · 2840.jpg · line 4</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_90_4.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>еловые семена</dd>
+                <dt>words</dt><dd>еловые | семена</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0312153, school_notebooks_test_0312142</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_78_1</h2>
+                  <p>val · 2725.jpg · line 1</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_val_78_1.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>снег погретс</dd>
+                <dt>words</dt><dd>снег | погретс</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0283000, school_notebooks_val_0282996</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_578_1</h2>
+                  <p>train · 2614.jpg · line 1</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_578_1.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>жалости давай</dd>
+                <dt>words</dt><dd>жалости | давай</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0101041, school_notebooks_train_0101044</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_838_3</h2>
+                  <p>train · 44_436.JPG · line 3</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_838_3.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>день мгла,</dd>
+                <dt>words</dt><dd>день | мгла,</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0148444, school_notebooks_train_0148598</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_40_15</h2>
+                  <p>train · 104_1029.JPG · line 15</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_40_15.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>медведя. стала</dd>
+                <dt>words</dt><dd>медведя. | стала</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0007723, school_notebooks_train_0007726</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_60_2</h2>
+                  <p>test · 2804.jpg · line 2</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_60_2.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>холмов, покрытых</dd>
+                <dt>words</dt><dd>холмов, | покрытых</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0306280, school_notebooks_test_0306329</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_12_123</h2>
+                  <p>test · 2047.jpg · line 123</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_12_123.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>наст. врем.</dd>
+                <dt>words</dt><dd>наст. | врем.</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0298332, school_notebooks_test_0298331</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1200_1</h2>
+                  <p>train · 7_106.JPG · line 1</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1200_1.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>жёлтые тычинки</dd>
+                <dt>words</dt><dd>жёлтые | тычинки</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0211630, school_notebooks_train_0211629</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_188_2</h2>
+                  <p>train · 18_197.JPG · line 2</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_188_2.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ленькие речонки.</dd>
+                <dt>words</dt><dd>ленькие | речонки.</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0033899, school_notebooks_train_0033857</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1174_2</h2>
+                  <p>train · 76_735.jpg · line 2</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1174_2.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>посекретничать со</dd>
+                <dt>words</dt><dd>посекретничать | со</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0207519, school_notebooks_train_0207525</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_453_1</h2>
+                  <p>train · 24_246.JPG · line 1</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_453_1.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>не идти</dd>
+                <dt>words</dt><dd>не | идти</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0078915, school_notebooks_train_0078917</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_263_539</h2>
+                  <p>train · 22_233.JPG · line 539</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_263_539.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>наверх. вынырнул</dd>
+                <dt>words</dt><dd>наверх. | вынырнул</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0047030, school_notebooks_train_0046928</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_266_778</h2>
+                  <p>train · 22_236.JPG · line 778</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_266_778.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>деревом лапами</dd>
+                <dt>words</dt><dd>деревом | лапами</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0047406, school_notebooks_train_0047450</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_121_1</h2>
+                  <p>test · 2877.jpg · line 1</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_test_121_1.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>делают?) стелются</dd>
+                <dt>words</dt><dd>делают?) | стелются</dd>
+                <dt>quality</dt><dd>clean_core | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0318505, school_notebooks_test_0318506</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_843_1</h2>
+                  <p>train · 44_441.JPG · line 1</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_843_1.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>даже от</dd>
+                <dt>words</dt><dd>даже | от</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0149889, school_notebooks_train_0149660</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_261_11</h2>
+                  <p>train · 22_231.JPG · line 11</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_261_11.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>неприхотливое дерево.</dd>
+                <dt>words</dt><dd>неприхотливое | дерево.</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0046742, school_notebooks_train_0046743</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_949_7</h2>
+                  <p>train · 53_535.JPG · line 7</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_949_7.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ты ня</dd>
+                <dt>words</dt><dd>ты | ня</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0166588, school_notebooks_train_0166581</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_751_7</h2>
+                  <p>train · 36_355.JPG · line 7</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_751_7.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>1. пови</dd>
+                <dt>words</dt><dd>1. | пови</dd>
+                <dt>quality</dt><dd>hard_real | clean_core</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0132220, school_notebooks_train_0132086</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1317_4</h2>
+                  <p>train · 88_865.JPG · line 4</p>
+                </div>
+                <strong>2 words</strong>
+              </header>
+              <img src="assets/school_line_train_1317_4.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>море, образовалась</dd>
+                <dt>words</dt><dd>море, | образовалась</dd>
+                <dt>quality</dt><dd>hard_real | hard_real</dd>
+                <dt>flags</dt><dd>has_hard_real, short_group</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0228287, school_notebooks_train_0228285</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_75_629</h2>
+                  <p>test · 2825.jpg · line 629</p>
+                </div>
+                <strong>4 words</strong>
+              </header>
+              <img src="assets/school_line_test_75_629.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>поступил не мог простить</dd>
+                <dt>words</dt><dd>поступил | не | мог | простить</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0308861, school_notebooks_test_0308862, school_notebooks_test_0308867, school_notebooks_test_0308851</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_799_18</h2>
+                  <p>train · 40_395.jpeg · line 18</p>
+                </div>
+                <strong>4 words</strong>
+              </header>
+              <img src="assets/school_line_train_799_18.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>(ж. р., п.) тв.</dd>
+                <dt>words</dt><dd>(ж. | р., | п.) | тв.</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0141139, school_notebooks_train_0141142, school_notebooks_train_0141206, school_notebooks_train_0141232</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_901_13</h2>
+                  <p>train · 4_62.JPG · line 13</p>
+                </div>
+                <strong>4 words</strong>
+              </header>
+              <img src="assets/school_line_train_901_13.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>смолистый; пост. пр: относ ;</dd>
+                <dt>words</dt><dd>смолистый; | пост. | пр: | относ ;</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0159791, school_notebooks_train_0159790, school_notebooks_train_0159789, school_notebooks_train_0159754</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_26_6</h2>
+                  <p>val · 2670.jpg · line 6</p>
+                </div>
+                <strong>4 words</strong>
+              </header>
+              <img src="assets/school_line_val_26_6.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>что неё она добрая,</dd>
+                <dt>words</dt><dd>что | неё | она | добрая,</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0273467, school_notebooks_val_0273369, school_notebooks_val_0273371, school_notebooks_val_0273372</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_418_38</h2>
+                  <p>train · 2455.jpg · line 38</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_418_38.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>непривычно- -раз- -пре-</dd>
+                <dt>words</dt><dd>непривычно- | -раз- | -пре-</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0073516, school_notebooks_train_0073651, school_notebooks_train_0073649</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1046_40</h2>
+                  <p>train · 62_611.JPG · line 40</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_1046_40.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>стить). же хорошо,</dd>
+                <dt>words</dt><dd>стить). | же | хорошо,</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0182538, school_notebooks_train_0182542, school_notebooks_train_0182543</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_1014_38</h2>
+                  <p>train · 5_78.JPG · line 38</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_1014_38.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>реки, как неё</dd>
+                <dt>words</dt><dd>реки, | как | неё</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0176894, school_notebooks_train_0176850, school_notebooks_train_0176863</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_139_42</h2>
+                  <p>test · 2913.jpg · line 42</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_test_139_42.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>учителя в. ф.</dd>
+                <dt>words</dt><dd>учителя | в. | ф.</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0321858, school_notebooks_test_0321840, school_notebooks_test_0321836</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_143_21</h2>
+                  <p>test · 2917.jpg · line 21</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_test_143_21.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>трагичен ли образ</dd>
+                <dt>words</dt><dd>трагичен | ли | образ</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0322880, school_notebooks_test_0322881, school_notebooks_test_0322879</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_34_32</h2>
+                  <p>val · 2678.jpg · line 32</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_val_34_32.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>около 10 часов</dd>
+                <dt>words</dt><dd>около | 10 | часов</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0275111, school_notebooks_val_0275068, school_notebooks_val_0275066</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_95_42</h2>
+                  <p>test · 2845.jpg · line 42</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_test_95_42.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ки бесценный опыт.</dd>
+                <dt>words</dt><dd>ки | бесценный | опыт.</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0313351, school_notebooks_test_0313348, school_notebooks_test_0313346</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_969_13</h2>
+                  <p>train · 55_556.JPG · line 13</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_969_13.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>на рухнув землю,</dd>
+                <dt>words</dt><dd>на | рухнув | землю,</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0170027, school_notebooks_train_0169967, school_notebooks_train_0169968</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_548_38</h2>
+                  <p>train · 2591.jpg · line 38</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_548_38.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>бревно (что оказалось</dd>
+                <dt>words</dt><dd>бревно | (что | оказалось</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0095415, school_notebooks_train_0095417, school_notebooks_train_0095410</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_val_148_39</h2>
+                  <p>val · 2802.jpg · line 39</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_val_148_39.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>подвиг главными героями</dd>
+                <dt>words</dt><dd>подвиг | главными | героями</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_val_0295847, school_notebooks_val_0295857, school_notebooks_val_0295859</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_test_29_41</h2>
+                  <p>test · 2234.jpg · line 41</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_test_29_41.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>абота над ошибками</dd>
+                <dt>words</dt><dd>абота | над | ошибками</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_test_0300835, school_notebooks_test_0300837, school_notebooks_test_0300838</dd>
+              </dl>
+            </article>
+            
+            <article class="card">
+              <header>
+                <div>
+                  <h2>school_line_train_843_39</h2>
+                  <p>train · 44_441.JPG · line 39</p>
+                </div>
+                <strong>3 words</strong>
+              </header>
+              <img src="assets/school_line_train_843_39.jpg" alt="">
+              <dl>
+                <dt>joined</dt><dd>ноги кости. сапог</dd>
+                <dt>words</dt><dd>ноги | кости. | сапог</dd>
+                <dt>quality</dt><dd>clean_core | clean_core | clean_core</dd>
+                <dt>flags</dt><dd>all_clean_core</dd>
+                <dt>samples</dt><dd>school_notebooks_train_0149843, school_notebooks_train_0149845, school_notebooks_train_0149849</dd>
+              </dl>
+            </article>
+            
+    </section>
+  </main>
+</body>
+</html>
