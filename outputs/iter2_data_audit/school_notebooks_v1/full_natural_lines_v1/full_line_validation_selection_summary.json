@@ -1,0 +1,38 @@
+{
+  "seed": 20260622,
+  "requested": {
+    "groups_2_words": 30,
+    "groups_3_words": 30,
+    "groups_4plus_words": 40,
+    "groups_8plus_words": 25,
+    "large_x_gap": 25
+  },
+  "selected": {
+    "groups_2_words": {
+      "target": 30,
+      "available_after_dedup": 13596,
+      "n": 30
+    },
+    "groups_3_words": {
+      "target": 30,
+      "available_after_dedup": 8353,
+      "n": 30
+    },
+    "groups_4plus_words": {
+      "target": 40,
+      "available_after_dedup": 34726,
+      "n": 40
+    },
+    "groups_8plus_words": {
+      "target": 25,
+      "available_after_dedup": 3399,
+      "n": 25
+    },
+    "large_x_gap": {
+      "target": 25,
+      "available_after_dedup": 59949,
+      "n": 25
+    }
+  },
+  "total_selected": 150
+}

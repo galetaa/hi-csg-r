@@ -96,9 +96,17 @@ def crop_line_image(
                 bx1 - crop_x0,
                 by1 - crop_y0,
             ]
+            quality_buckets = row.get("quality_buckets") or []
+            quality_bucket = (
+                quality_buckets[index]
+                if index < len(quality_buckets)
+                else "full_coco"
+            )
             color = (
                 (46, 125, 50)
-                if row["quality_buckets"][index] == "clean_core"
+                if quality_bucket == "clean_core"
+                else (25, 118, 210)
+                if quality_bucket == "full_coco"
                 else (239, 108, 0)
             )
             draw.rectangle(local, outline=color, width=3)
@@ -135,6 +143,11 @@ def render_html(
         flags = ", ".join(row.get("flags") or [])
         words = " | ".join(row.get("texts") or [])
         buckets = " | ".join(row.get("quality_buckets") or [])
+        joined_text = str(
+            row.get("joined_text")
+            or row.get("joined_text_space")
+            or ""
+        )
 
         image_html = (
             f'<img src="{html.escape(image_ref)}" alt="">'
@@ -154,7 +167,7 @@ def render_html(
               </header>
               {image_html}
               <dl>
-                <dt>joined</dt><dd>{html.escape(str(row["joined_text"]))}</dd>
+                <dt>joined</dt><dd>{html.escape(joined_text)}</dd>
                 <dt>words</dt><dd>{html.escape(words)}</dd>
                 <dt>quality</dt><dd>{html.escape(buckets)}</dd>
                 <dt>flags</dt><dd>{html.escape(flags)}</dd>
@@ -292,7 +305,10 @@ def render_annotation_html(
     *,
     image_refs: dict[str, str | None],
     summary: dict[str, Any] | None,
+    annotation_fields: list[str] | None = None,
+    download_name: str = "natural_line_validation_annotations.csv",
 ) -> str:
+    annotation_fields = annotation_fields or ANNOTATION_FIELDS
     cards = []
 
     for index, row in enumerate(rows, start=1):
@@ -302,6 +318,11 @@ def render_annotation_html(
         words = " | ".join(row.get("texts") or [])
         buckets = " | ".join(row.get("quality_buckets") or [])
         stratum = str(row.get("validation_stratum", ""))
+        joined_text = str(
+            row.get("joined_text")
+            or row.get("joined_text_space")
+            or ""
+        )
 
         image_html = (
             f'<img src="{html.escape(image_ref)}" alt="">'
@@ -311,7 +332,7 @@ def render_annotation_html(
 
         controls = []
 
-        for field in ANNOTATION_FIELDS:
+        for field in annotation_fields:
             controls.append(
                 f"""
                 <label class="check">
@@ -333,7 +354,7 @@ def render_annotation_html(
               </header>
               {image_html}
               <dl>
-                <dt>joined</dt><dd>{html.escape(str(row["joined_text"]))}</dd>
+                <dt>joined</dt><dd>{html.escape(joined_text)}</dd>
                 <dt>words</dt><dd>{html.escape(words)}</dd>
                 <dt>quality</dt><dd>{html.escape(buckets)}</dd>
                 <dt>flags</dt><dd>{html.escape(flags)}</dd>
@@ -366,7 +387,8 @@ def render_annotation_html(
         ensure_ascii=False,
     )
 
-    fields_json = json.dumps(ANNOTATION_FIELDS, ensure_ascii=False)
+    fields_json = json.dumps(annotation_fields, ensure_ascii=False)
+    download_name_json = json.dumps(download_name, ensure_ascii=False)
 
     return f"""<!doctype html>
 <html lang="en">
@@ -651,7 +673,7 @@ def render_annotation_html(
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = "natural_line_validation_annotations.csv";
+      link.download = {download_name_json};
       document.body.appendChild(link);
       link.click();
       link.remove();
@@ -662,14 +684,15 @@ def render_annotation_html(
       const state = loadState();
       for (const row of rows) {{
         const existing = state[row.line_group_id] || {{}};
-        state[row.line_group_id] = {{
-          valid_line: existing.valid_line || "1",
-          correct_order: existing.correct_order || "1",
-          missing_words: existing.missing_words || "0",
-          neighbor_noise: existing.neighbor_noise || "0",
-          good_for_train_aug: existing.good_for_train_aug || "1",
-          notes: existing.notes || "",
-        }};
+        const item = {{ notes: existing.notes || "" }};
+        for (const field of fields) {{
+          if (field === "neighbor_noise" || field === "missing_words") {{
+            item[field] = existing[field] || "0";
+          }} else {{
+            item[field] = existing[field] || "1";
+          }}
+        }}
+        state[row.line_group_id] = item;
       }}
       saveState(state);
       restore();
@@ -701,6 +724,15 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=240)
     parser.add_argument("--padding", type=int, default=30)
     parser.add_argument("--annotate", action="store_true")
+    parser.add_argument(
+        "--annotation_fields",
+        default=",".join(ANNOTATION_FIELDS),
+        help="Comma-separated annotation fields before notes.",
+    )
+    parser.add_argument(
+        "--download_name",
+        default="natural_line_validation_annotations.csv",
+    )
     args = parser.parse_args()
 
     rows = read_jsonl(Path(args.candidates))
@@ -730,10 +762,17 @@ def main() -> None:
     )
 
     if args.annotate:
+        annotation_fields = [
+            field.strip()
+            for field in args.annotation_fields.split(",")
+            if field.strip()
+        ]
         html_text = render_annotation_html(
             rows,
             image_refs=image_refs,
             summary=summary,
+            annotation_fields=annotation_fields,
+            download_name=args.download_name,
         )
         out_path = out_dir / "natural_line_annotation_browser.html"
     else:
