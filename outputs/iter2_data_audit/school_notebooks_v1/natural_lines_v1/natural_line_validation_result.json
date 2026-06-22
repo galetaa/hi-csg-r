@@ -1,0 +1,84 @@
+{
+  "annotations_csv": "outputs/iter2_data_audit/school_notebooks_v1/natural_lines_v1/natural_line_validation_annotations_filled.csv",
+  "selection_jsonl": "outputs/iter2_data_audit/school_notebooks_v1/natural_lines_v1/natural_line_validation_selection.jsonl",
+  "criteria": {
+    "valid_line_rate": ">= 0.90",
+    "correct_order_rate": ">= 0.95",
+    "good_for_train_aug_rate": ">= 0.75",
+    "neighbor_noise_rate": "<= 0.15",
+    "missing_words_rate": "diagnostic only"
+  },
+  "overall": {
+    "n": 120,
+    "completed": 120,
+    "valid_line_rate": 0.9833333333333333,
+    "correct_order_rate": 1.0,
+    "missing_words_rate": 0.6166666666666667,
+    "neighbor_noise_rate": 0.0,
+    "good_for_train_aug_rate": 1.0,
+    "accepted": true
+  },
+  "by_stratum": {
+    "all_clean_core": {
+      "n": 40,
+      "completed": 40,
+      "valid_line_rate": 1.0,
+      "correct_order_rate": 1.0,
+      "missing_words_rate": 0.575,
+      "neighbor_noise_rate": 0.0,
+      "good_for_train_aug_rate": 1.0,
+      "accepted": true
+    },
+    "has_hard_real": {
+      "n": 30,
+      "completed": 30,
+      "valid_line_rate": 0.9666666666666667,
+      "correct_order_rate": 1.0,
+      "missing_words_rate": 0.5,
+      "neighbor_noise_rate": 0.0,
+      "good_for_train_aug_rate": 1.0,
+      "accepted": true
+    },
+    "random": {
+      "n": 20,
+      "completed": 20,
+      "valid_line_rate": 1.0,
+      "correct_order_rate": 1.0,
+      "missing_words_rate": 0.65,
+      "neighbor_noise_rate": 0.0,
+      "good_for_train_aug_rate": 1.0,
+      "accepted": true
+    },
+    "short_group": {
+      "n": 30,
+      "completed": 30,
+      "valid_line_rate": 0.9666666666666667,
+      "correct_order_rate": 1.0,
+      "missing_words_rate": 0.7666666666666667,
+      "neighbor_noise_rate": 0.0,
+      "good_for_train_aug_rate": 1.0,
+      "accepted": true
+    }
+  },
+  "value_counts": {
+    "valid_line": {
+      "1": 118,
+      "0": 2
+    },
+    "correct_order": {
+      "1": 120
+    },
+    "missing_words": {
+      "0": 46,
+      "1": 74
+    },
+    "neighbor_noise": {
+      "0": 120
+    },
+    "good_for_train_aug": {
+      "1": 120
+    }
+  },
+  "missing_selection_count": 0,
+  "missing_selection": []
+}

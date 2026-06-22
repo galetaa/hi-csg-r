@@ -278,6 +278,420 @@ def render_html(
 """
 
 
+ANNOTATION_FIELDS = [
+    "valid_line",
+    "correct_order",
+    "missing_words",
+    "neighbor_noise",
+    "good_for_train_aug",
+]
+
+
+def render_annotation_html(
+    rows: list[dict[str, Any]],
+    *,
+    image_refs: dict[str, str | None],
+    summary: dict[str, Any] | None,
+) -> str:
+    cards = []
+
+    for index, row in enumerate(rows, start=1):
+        line_group_id = str(row["line_group_id"])
+        image_ref = image_refs.get(line_group_id)
+        flags = ", ".join(row.get("flags") or [])
+        words = " | ".join(row.get("texts") or [])
+        buckets = " | ".join(row.get("quality_buckets") or [])
+        stratum = str(row.get("validation_stratum", ""))
+
+        image_html = (
+            f'<img src="{html.escape(image_ref)}" alt="">'
+            if image_ref
+            else '<div class="missing">missing source image</div>'
+        )
+
+        controls = []
+
+        for field in ANNOTATION_FIELDS:
+            controls.append(
+                f"""
+                <label class="check">
+                  <input type="checkbox" data-field="{field}">
+                  <span>{field}</span>
+                </label>
+                """
+            )
+
+        cards.append(
+            f"""
+            <article class="card" data-line-group-id="{html.escape(line_group_id)}">
+              <header>
+                <div>
+                  <h2>{index}. {html.escape(line_group_id)}</h2>
+                  <p>{html.escape(str(row["split"]))} · {html.escape(str(row["source_image_file"]))} · line {html.escape(str(row["line_id"]))} · {html.escape(stratum)}</p>
+                </div>
+                <strong>{int(row["n_words"])} words</strong>
+              </header>
+              {image_html}
+              <dl>
+                <dt>joined</dt><dd>{html.escape(str(row["joined_text"]))}</dd>
+                <dt>words</dt><dd>{html.escape(words)}</dd>
+                <dt>quality</dt><dd>{html.escape(buckets)}</dd>
+                <dt>flags</dt><dd>{html.escape(flags)}</dd>
+                <dt>samples</dt><dd>{html.escape(", ".join(row["sample_ids"]))}</dd>
+              </dl>
+              <div class="controls">
+                {''.join(controls)}
+              </div>
+              <textarea data-field="notes" rows="2" placeholder="notes"></textarea>
+            </article>
+            """
+        )
+
+    summary_html = ""
+
+    if summary:
+        summary_html = (
+            "<pre>"
+            + html.escape(json.dumps(summary, ensure_ascii=False, indent=2))
+            + "</pre>"
+        )
+
+    rows_json = json.dumps(
+        [
+            {
+                "line_group_id": row["line_group_id"],
+            }
+            for row in rows
+        ],
+        ensure_ascii=False,
+    )
+
+    fields_json = json.dumps(ANNOTATION_FIELDS, ensure_ascii=False)
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>School natural line validation</title>
+  <style>
+    body {{
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f6f7f9;
+      color: #16191f;
+    }}
+    main {{
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px;
+    }}
+    .topbar {{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin: -24px -24px 18px;
+      padding: 14px 24px;
+      background: rgba(246, 247, 249, 0.96);
+      border-bottom: 1px solid #d7dce3;
+      backdrop-filter: blur(8px);
+    }}
+    h1 {{
+      margin: 0;
+      font-size: 22px;
+    }}
+    .actions {{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }}
+    button {{
+      border: 1px solid #b8c0cc;
+      background: white;
+      color: #172033;
+      border-radius: 6px;
+      padding: 8px 11px;
+      font-weight: 600;
+      cursor: pointer;
+    }}
+    button.primary {{
+      background: #1f6feb;
+      border-color: #1f6feb;
+      color: white;
+    }}
+    #progress {{
+      font-size: 13px;
+      color: #4b5563;
+    }}
+    pre {{
+      overflow: auto;
+      background: #111827;
+      color: #e5e7eb;
+      padding: 14px;
+      border-radius: 6px;
+      font-size: 12px;
+    }}
+    .grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }}
+    .card {{
+      background: white;
+      border: 1px solid #d7dce3;
+      border-radius: 8px;
+      padding: 14px;
+    }}
+    .card.done {{
+      border-color: #2e7d32;
+      box-shadow: 0 0 0 1px #2e7d32 inset;
+    }}
+    header {{
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+    }}
+    h2 {{
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.25;
+    }}
+    header p {{
+      margin: 3px 0 0;
+      color: #667085;
+      font-size: 12px;
+    }}
+    strong {{
+      white-space: nowrap;
+      font-size: 13px;
+    }}
+    img {{
+      display: block;
+      width: 100%;
+      max-height: 220px;
+      object-fit: contain;
+      background: #eceff3;
+      border: 1px solid #e2e6eb;
+    }}
+    .missing {{
+      padding: 32px;
+      background: #fee2e2;
+      color: #991b1b;
+      border-radius: 4px;
+    }}
+    dl {{
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      gap: 5px 10px;
+      margin: 12px 0 0;
+      font-size: 13px;
+    }}
+    dt {{
+      color: #667085;
+    }}
+    dd {{
+      margin: 0;
+      overflow-wrap: anywhere;
+    }}
+    .controls {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }}
+    .check {{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 6px 8px;
+      background: #f8fafc;
+      border: 1px solid #d7dce3;
+      border-radius: 6px;
+      font-size: 13px;
+    }}
+    input[type="checkbox"] {{
+      width: 18px;
+      height: 18px;
+      margin: 0;
+    }}
+    textarea {{
+      box-sizing: border-box;
+      width: 100%;
+      margin-top: 10px;
+      padding: 8px;
+      border: 1px solid #c8d0dc;
+      border-radius: 6px;
+      font: inherit;
+      font-size: 13px;
+      resize: vertical;
+    }}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="topbar">
+      <h1>School natural line validation</h1>
+      <div class="actions">
+        <span id="progress"></span>
+        <button type="button" id="mark-defaults">Mark Defaults</button>
+        <button type="button" id="clear-all">Clear Saved</button>
+        <button type="button" class="primary" id="download-csv">Download CSV</button>
+      </div>
+    </div>
+    {summary_html}
+    <section class="grid">
+      {''.join(cards)}
+    </section>
+  </main>
+  <script>
+    const rows = {rows_json};
+    const fields = {fields_json};
+    const storageKey = "school_natural_line_validation_v1";
+
+    function loadState() {{
+      try {{
+        return JSON.parse(localStorage.getItem(storageKey) || "{{}}");
+      }} catch (error) {{
+        return {{}};
+      }}
+    }}
+
+    function saveState(state) {{
+      localStorage.setItem(storageKey, JSON.stringify(state));
+    }}
+
+    function csvEscape(value) {{
+      const text = String(value ?? "");
+      if (/[",\\n\\r]/.test(text)) {{
+        return '"' + text.replaceAll('"', '""') + '"';
+      }}
+      return text;
+    }}
+
+    function cardState(card) {{
+      const item = {{}};
+      for (const field of fields) {{
+        item[field] = card.querySelector(`[data-field="${{field}}"]`).checked ? "1" : "0";
+      }}
+      item.notes = card.querySelector('[data-field="notes"]').value || "";
+      return item;
+    }}
+
+    function isDone(item) {{
+      return fields.some((field) => item[field] === "1") || Boolean(item.notes);
+    }}
+
+    function updateProgress() {{
+      const state = loadState();
+      let done = 0;
+      for (const row of rows) {{
+        if (isDone(state[row.line_group_id] || {{}})) {{
+          done += 1;
+        }}
+      }}
+      document.getElementById("progress").textContent = `${{done}} / ${{rows.length}} annotated`;
+      for (const card of document.querySelectorAll(".card")) {{
+        const id = card.dataset.lineGroupId;
+        card.classList.toggle("done", isDone(state[id] || {{}}));
+      }}
+    }}
+
+    function restore() {{
+      const state = loadState();
+      for (const card of document.querySelectorAll(".card")) {{
+        const id = card.dataset.lineGroupId;
+        const item = state[id] || {{}};
+        for (const field of fields) {{
+          card.querySelector(`[data-field="${{field}}"]`).checked = item[field] === "1";
+        }}
+        card.querySelector('[data-field="notes"]').value = item.notes || "";
+      }}
+      updateProgress();
+    }}
+
+    function attachAutosave() {{
+      for (const card of document.querySelectorAll(".card")) {{
+        const id = card.dataset.lineGroupId;
+        const save = () => {{
+          const state = loadState();
+          state[id] = cardState(card);
+          saveState(state);
+          updateProgress();
+        }};
+
+        for (const input of card.querySelectorAll("input, textarea")) {{
+          input.addEventListener("change", save);
+          input.addEventListener("input", save);
+        }}
+      }}
+    }}
+
+    function downloadCsv() {{
+      const state = loadState();
+      const header = ["line_group_id", ...fields, "notes"];
+      const lines = [header.join(",")];
+      for (const row of rows) {{
+        const item = state[row.line_group_id] || {{}};
+        lines.push([
+          row.line_group_id,
+          ...fields.map((field) => item[field] || "0"),
+          item.notes || "",
+        ].map(csvEscape).join(","));
+      }}
+      const blob = new Blob([lines.join("\\n") + "\\n"], {{ type: "text/csv;charset=utf-8" }});
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "natural_line_validation_annotations.csv";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }}
+
+    function markDefaults() {{
+      const state = loadState();
+      for (const row of rows) {{
+        const existing = state[row.line_group_id] || {{}};
+        state[row.line_group_id] = {{
+          valid_line: existing.valid_line || "1",
+          correct_order: existing.correct_order || "1",
+          missing_words: existing.missing_words || "0",
+          neighbor_noise: existing.neighbor_noise || "0",
+          good_for_train_aug: existing.good_for_train_aug || "1",
+          notes: existing.notes || "",
+        }};
+      }}
+      saveState(state);
+      restore();
+    }}
+
+    document.getElementById("download-csv").addEventListener("click", downloadCsv);
+    document.getElementById("mark-defaults").addEventListener("click", markDefaults);
+    document.getElementById("clear-all").addEventListener("click", () => {{
+      if (confirm("Clear saved annotations in this browser?")) {{
+        localStorage.removeItem(storageKey);
+        restore();
+      }}
+    }});
+
+    attachAutosave();
+    restore();
+  </script>
+</body>
+</html>
+"""
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--candidates", required=True)
@@ -286,6 +700,7 @@ def main() -> None:
     parser.add_argument("--out_dir", required=True)
     parser.add_argument("--limit", type=int, default=240)
     parser.add_argument("--padding", type=int, default=30)
+    parser.add_argument("--annotate", action="store_true")
     args = parser.parse_args()
 
     rows = read_jsonl(Path(args.candidates))
@@ -314,13 +729,20 @@ def main() -> None:
         else None
     )
 
-    html_text = render_html(
-        rows,
-        image_refs=image_refs,
-        summary=summary,
-    )
-
-    out_path = out_dir / "natural_line_candidates_browser.html"
+    if args.annotate:
+        html_text = render_annotation_html(
+            rows,
+            image_refs=image_refs,
+            summary=summary,
+        )
+        out_path = out_dir / "natural_line_annotation_browser.html"
+    else:
+        html_text = render_html(
+            rows,
+            image_refs=image_refs,
+            summary=summary,
+        )
+        out_path = out_dir / "natural_line_candidates_browser.html"
     out_path.write_text(html_text, encoding="utf-8")
 
     print("wrote:", out_path)

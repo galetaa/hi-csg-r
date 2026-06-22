@@ -12,6 +12,8 @@
 *.log
 *.zip
 *.pdf
+*.jpg
+*.png
 pdf_manifest.json
 /data/raw/
 /data/interim/

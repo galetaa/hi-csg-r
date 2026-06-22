@@ -1,0 +1,38 @@
+{
+  "seed": 20260622,
+  "requested": {
+    "all_clean_core": 40,
+    "has_hard_real": 30,
+    "short_group": 30,
+    "long_group": 20,
+    "random": 20
+  },
+  "selected": {
+    "all_clean_core": {
+      "target": 40,
+      "available_after_dedup": 1024,
+      "n": 40
+    },
+    "has_hard_real": {
+      "target": 30,
+      "available_after_dedup": 224,
+      "n": 30
+    },
+    "short_group": {
+      "target": 30,
+      "available_after_dedup": 1072,
+      "n": 30
+    },
+    "long_group": {
+      "target": 20,
+      "available_after_dedup": 0,
+      "n": 0
+    },
+    "random": {
+      "target": 20,
+      "available_after_dedup": 1148,
+      "n": 20
+    }
+  },
+  "total_selected": 120
+}
