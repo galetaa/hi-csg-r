@@ -1,0 +1,20 @@
+{
+  "n": 80,
+  "completed": 80,
+  "rates": {
+    "readable": 1.0,
+    "correct_crop": 0.6375,
+    "good_for_htr": 1.0
+  },
+  "thresholds": {
+    "readable": 0.95,
+    "correct_crop": 0.95,
+    "good_for_htr": 0.9
+  },
+  "passed": {
+    "readable": true,
+    "correct_crop": false,
+    "good_for_htr": true
+  },
+  "accepted": false
+}
