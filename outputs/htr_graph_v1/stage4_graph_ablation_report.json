@@ -1,0 +1,116 @@
+{
+  "rows": [
+    {
+      "model": "image-only old trainer",
+      "mixed_val": 0.10460753240310658,
+      "cyr_test": 0.19319943785182367,
+      "hkr_test": 0.09562620560768798,
+      "school_test": 0.15749263653013648,
+      "note": "Original tri10k image-only baseline.",
+      "vs_local_gray": {
+        "mixed_val": -0.02056129173762522,
+        "cyr_test": 0.04119385681477093,
+        "hkr_test": -0.04738450829888246,
+        "school_test": 0.05466604723807633
+      }
+    },
+    {
+      "model": "graph-vector v2 lowcap-all",
+      "mixed_val": 0.09912381438475606,
+      "cyr_test": 0.1984,
+      "hkr_test": 0.0879,
+      "school_test": 0.158,
+      "note": "Best global graph-vector fusion. Improves mixed validation and HKR, not robust on Cyrillic/School.",
+      "vs_local_gray": {
+        "mixed_val": 0.03293839624628224,
+        "cyr_test": 0.01538461538461548,
+        "hkr_test": 0.03723986856516977,
+        "school_test": 0.0516206482593037
+      }
+    },
+    {
+      "model": "local gray",
+      "mixed_val": 0.1025,
+      "cyr_test": 0.2015,
+      "hkr_test": 0.0913,
+      "school_test": 0.1666,
+      "note": "Control run using local-channel trainer with grayscale only.",
+      "vs_local_gray": {
+        "mixed_val": 0.0,
+        "cyr_test": 0.0,
+        "hkr_test": 0.0,
+        "school_test": 0.0
+      }
+    },
+    {
+      "model": "local gray+fg",
+      "mixed_val": 0.1068,
+      "cyr_test": 0.2056,
+      "hkr_test": 0.0871,
+      "school_test": 0.1742,
+      "note": "Foreground helps HKR but hurts Cyrillic and School.",
+      "vs_local_gray": {
+        "mixed_val": -0.04195121951219524,
+        "cyr_test": -0.02034739454094289,
+        "hkr_test": 0.046002190580503935,
+        "school_test": -0.04561824729891954
+      }
+    },
+    {
+      "model": "local gray+skel",
+      "mixed_val": 0.1054,
+      "cyr_test": 0.2076,
+      "hkr_test": 0.0872,
+      "school_test": 0.1678,
+      "note": "Skeleton helps HKR but is not robust.",
+      "vs_local_gray": {
+        "mixed_val": -0.02829268292682927,
+        "cyr_test": -0.030272952853597986,
+        "hkr_test": 0.04490690032858714,
+        "school_test": -0.007202881152461024
+      }
+    },
+    {
+      "model": "local gray+dist",
+      "mixed_val": 0.1027,
+      "cyr_test": 0.1995,
+      "hkr_test": 0.0874,
+      "school_test": 0.1681,
+      "note": "Distance channel is the safest local graph channel.",
+      "vs_local_gray": {
+        "mixed_val": -0.001951219512195178,
+        "cyr_test": 0.009925558312655096,
+        "hkr_test": 0.04271631982475357,
+        "school_test": -0.009003601440576239
+      }
+    },
+    {
+      "model": "local gray+fg+skel",
+      "mixed_val": 0.1064,
+      "cyr_test": 0.2043,
+      "hkr_test": 0.0934,
+      "school_test": 0.1744,
+      "note": "Combining fg+skel hurts most domains.",
+      "vs_local_gray": {
+        "mixed_val": -0.038048780487804884,
+        "cyr_test": -0.013895781637717106,
+        "hkr_test": -0.023001095290251815,
+        "school_test": -0.04681872749099641
+      }
+    },
+    {
+      "model": "local gray+fg+skel+dist",
+      "mixed_val": 0.1025,
+      "cyr_test": 0.2003,
+      "hkr_test": 0.0853,
+      "school_test": 0.1683,
+      "note": "Best HKR result among local-channel variants.",
+      "vs_local_gray": {
+        "mixed_val": 0.0,
+        "cyr_test": 0.005955334987593084,
+        "hkr_test": 0.06571741511500553,
+        "school_test": -0.010204081632653104
+      }
+    }
+  ]
+}

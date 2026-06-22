@@ -1,0 +1,73 @@
+{
+  "h3_global_single_feature_supported": false,
+  "h3_multifeature_supported": true,
+  "h3_overall_verdict": "partial_support",
+  "main_positive_result": {
+    "group_mode": "dataset_category",
+    "group": "hkr_words|word|unknown",
+    "feature_set": "structural_core",
+    "n": 1090,
+    "positive_n": 231,
+    "negative_n": 859,
+    "high_error_rate": 0.21192660550458717,
+    "high_error_quantile": 0.8,
+    "high_error_threshold_cer": 0.14285714285714285,
+    "feature_n": 30,
+    "features": "fg_fraction;cc_count;cc_area_mean;cc_area_median;cc_area_max_frac;skel_pixels;skel_fraction;skel_components;graph_nodes;graph_edges_8n;graph_avg_degree;graph_endpoint_count;graph_branchpoint_count;graph_isolated_count;endpoint_per_100_skel;branchpoint_per_100_skel;degree_hist_0;degree_hist_1;degree_hist_2;degree_hist_3;degree_hist_4;degree_hist_5plus;dir_h_frac;dir_v_frac;dir_diag_down_frac;dir_diag_up_frac;stroke_width_mean;stroke_width_std;stroke_width_p50;stroke_width_p90",
+    "roc_auc": 0.6732634846720993,
+    "pr_auc": 0.34662030466765187,
+    "pr_auc_lift_over_base_rate": 1.6355676713755,
+    "top20_precision": 0.3761467889908257,
+    "top20_recall": 0.354978354978355,
+    "top20_f1": 0.36525612472160357
+  },
+  "main_negative_result": {
+    "single_feature_global": {
+      "feature": "dir_v_frac",
+      "n": 5563,
+      "spearman_r": -0.10489240073261621,
+      "spearman_p": 4.387173739346413e-15,
+      "pearson_r": -0.07244390823080872,
+      "pearson_p": 6.3320894307573e-08,
+      "abs_spearman_r": 0.10489240073261621,
+      "mean": 0.26578037176455516,
+      "std": 0.09762083264474608,
+      "min": 0.0,
+      "max": 0.9663865546218487
+    },
+    "single_feature_high_error": {
+      "feature": "dir_v_frac",
+      "n": 5563,
+      "high_error_threshold_cer": 0.16666666666666666,
+      "high_error_rate": 0.2045658817184972,
+      "roc_auc_direction_invariant": 0.5657684708031734,
+      "pr_auc": 0.24614088087377572,
+      "direction": "lower_feature_higher_error",
+      "top20_precision": 0.26235399820305483,
+      "top20_recall": 0.2565905096660808,
+      "top20_f1": 0.2594402487783207,
+      "feature_mean": 0.26578037176455516,
+      "feature_std": 0.09762083264474608
+    },
+    "quality_only": {
+      "group_mode": "dataset",
+      "group": "cyrillic_handwriting",
+      "feature_set": "quality_only",
+      "n": 1563,
+      "positive_n": 373,
+      "negative_n": 1190,
+      "high_error_rate": 0.23864363403710812,
+      "high_error_quantile": 0.8,
+      "high_error_threshold_cer": 0.2,
+      "feature_n": 1,
+      "features": "warning_count",
+      "roc_auc": 0.5,
+      "pr_auc": 0.23864363403710812,
+      "pr_auc_lift_over_base_rate": 1.0,
+      "top20_precision": 0.23864363403710812,
+      "top20_recall": 1.0,
+      "top20_f1": 0.3853305785123967
+    }
+  },
+  "methodological_interpretation": "Graph scalar features are weak as global individual correlates of CER, but structural multifeature descriptors provide useful high-error detection in stratified subsets. This supports a diagnostic interpretation of graph features, not a claim that graph features improve recognition."
+}

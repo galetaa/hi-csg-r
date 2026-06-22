@@ -1,0 +1,190 @@
+{
+  "summaries": {
+    "image_only": {
+      "clean_cer": 0.08223581816287687,
+      "mean_distorted_cer": 0.11364795221671457,
+      "mean_absolute_delta": 0.03141213405383772,
+      "mean_relative_degradation": 0.3819763061349085,
+      "by_distortion": {
+        "blur": {
+          "mean_cer": 0.10350554265088104,
+          "mean_relative_degradation": 0.2586430701750569
+        },
+        "low_contrast": {
+          "mean_cer": 0.11603004873562091,
+          "mean_relative_degradation": 0.41094296047266105
+        },
+        "noise": {
+          "mean_cer": 0.1165872606296367,
+          "mean_relative_degradation": 0.41771874147008686
+        },
+        "thick_strokes": {
+          "mean_cer": 0.09455723222670914,
+          "mean_relative_degradation": 0.14983026057366386
+        },
+        "thin_strokes": {
+          "mean_cer": 0.13755967684072512,
+          "mean_relative_degradation": 0.6727464979830738
+        }
+      }
+    },
+    "graph_frozen_clean": {
+      "clean_cer": 0.1396980739198334,
+      "mean_distorted_cer": 0.16970605587367693,
+      "mean_absolute_delta": 0.03000798195384349,
+      "mean_relative_degradation": 0.2148059820142098,
+      "by_distortion": {
+        "blur": {
+          "mean_cer": 0.16823182370293252,
+          "mean_relative_degradation": 0.20425299349133008
+        },
+        "low_contrast": {
+          "mean_cer": 0.16133958007981952,
+          "mean_relative_degradation": 0.15491628161176532
+        },
+        "noise": {
+          "mean_cer": 0.1558702064896755,
+          "mean_relative_degradation": 0.11576489292989524
+        },
+        "thick_strokes": {
+          "mean_cer": 0.16002082248828733,
+          "mean_relative_degradation": 0.14547622596512158
+        },
+        "thin_strokes": {
+          "mean_cer": 0.20306784660766963,
+          "mean_relative_degradation": 0.4536195160729369
+        }
+      }
+    },
+    "graph_recomputed_v3": {
+      "clean_cer": 0.13942738157209786,
+      "mean_distorted_cer": 0.16970744403956275,
+      "mean_absolute_delta": 0.030280062467464862,
+      "mean_relative_degradation": 0.21717443249701318,
+      "by_distortion": {
+        "blur": {
+          "mean_cer": 0.16823182370293252,
+          "mean_relative_degradation": 0.2065909996017523
+        },
+        "low_contrast": {
+          "mean_cer": 0.16133958007981952,
+          "mean_relative_degradation": 0.15715850258861014
+        },
+        "noise": {
+          "mean_cer": 0.15587714731910463,
+          "mean_relative_degradation": 0.11798088410991643
+        },
+        "thick_strokes": {
+          "mean_cer": 0.16002082248828733,
+          "mean_relative_degradation": 0.14770011947431308
+        },
+        "thin_strokes": {
+          "mean_cer": 0.20306784660766963,
+          "mean_relative_degradation": 0.45644165671047404
+        }
+      }
+    }
+  },
+  "condition_comparison": [
+    {
+      "condition": "blur_medium",
+      "image_only_cer": 0.09651435436714957,
+      "frozen_graph_cer": 0.16183237896928682,
+      "recomputed_graph_cer": 0.16183237896928682
+    },
+    {
+      "condition": "blur_mild",
+      "image_only_cer": 0.08574899495125653,
+      "frozen_graph_cer": 0.14781884435190004,
+      "recomputed_graph_cer": 0.14781884435190004
+    },
+    {
+      "condition": "blur_strong",
+      "image_only_cer": 0.12825327863423705,
+      "frozen_graph_cer": 0.19504424778761062,
+      "recomputed_graph_cer": 0.19504424778761062
+    },
+    {
+      "condition": "clean",
+      "image_only_cer": 0.08223581816287687,
+      "frozen_graph_cer": 0.1396980739198334,
+      "recomputed_graph_cer": 0.13942738157209786
+    },
+    {
+      "condition": "low_contrast_medium",
+      "image_only_cer": 0.11454443032755254,
+      "frozen_graph_cer": 0.15954190525767828,
+      "recomputed_graph_cer": 0.15954190525767828
+    },
+    {
+      "condition": "low_contrast_mild",
+      "image_only_cer": 0.09654659081558581,
+      "frozen_graph_cer": 0.1477147319104633,
+      "recomputed_graph_cer": 0.1477147319104633
+    },
+    {
+      "condition": "low_contrast_strong",
+      "image_only_cer": 0.1369991250637244,
+      "frozen_graph_cer": 0.176762103071317,
+      "recomputed_graph_cer": 0.176762103071317
+    },
+    {
+      "condition": "noise_medium",
+      "image_only_cer": 0.10421801484405335,
+      "frozen_graph_cer": 0.15029672045809475,
+      "recomputed_graph_cer": 0.15029672045809475
+    },
+    {
+      "condition": "noise_mild",
+      "image_only_cer": 0.08446723151847205,
+      "frozen_graph_cer": 0.1415929203539823,
+      "recomputed_graph_cer": 0.14161374284226966
+    },
+    {
+      "condition": "noise_strong",
+      "image_only_cer": 0.1610765355263847,
+      "frozen_graph_cer": 0.1757209786569495,
+      "recomputed_graph_cer": 0.1757209786569495
+    },
+    {
+      "condition": "thick_strokes_medium",
+      "image_only_cer": 0.08692513309819042,
+      "frozen_graph_cer": 0.15021343050494534,
+      "recomputed_graph_cer": 0.15021343050494534
+    },
+    {
+      "condition": "thick_strokes_mild",
+      "image_only_cer": 0.08692513309819042,
+      "frozen_graph_cer": 0.15021343050494534,
+      "recomputed_graph_cer": 0.15021343050494534
+    },
+    {
+      "condition": "thick_strokes_strong",
+      "image_only_cer": 0.10982143048374661,
+      "frozen_graph_cer": 0.17963560645497137,
+      "recomputed_graph_cer": 0.17963560645497137
+    },
+    {
+      "condition": "thin_strokes_medium",
+      "image_only_cer": 0.09470299955193909,
+      "frozen_graph_cer": 0.15608537220197813,
+      "recomputed_graph_cer": 0.15608537220197813
+    },
+    {
+      "condition": "thin_strokes_mild",
+      "image_only_cer": 0.09470299955193909,
+      "frozen_graph_cer": 0.15608537220197813,
+      "recomputed_graph_cer": 0.15608537220197813
+    },
+    {
+      "condition": "thin_strokes_strong",
+      "image_only_cer": 0.2232730314182972,
+      "frozen_graph_cer": 0.2970327954190526,
+      "recomputed_graph_cer": 0.2970327954190526
+    }
+  ],
+  "definitions": {
+    "graph_frozen_clean": "Distorted image evaluated with graph features inherited from the clean manifest.",
+    "graph_recomputed_v3": "Distorted image evaluated with graph features recomputed from the distorted image."
+  }
+}

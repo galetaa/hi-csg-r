@@ -1,0 +1,1202 @@
+{
+  "version": "hi_csg_r_consolidated_evidence_v2",
+  "sources": {
+    "h1_json": "outputs/final_evidence_v1/h1_final_statistical_report_v2.json",
+    "h2_manual_json": "outputs/h2_gold_audit_v1/h2_manual_audit_summary_v2.json",
+    "h2_random_json": "outputs/h2_gold_audit_v1/school_foreground_v3_random/random_100_summary.json",
+    "school_controlled_json": "outputs/final_evidence_v1/school_fg_v3_controlled_conclusion.json",
+    "cross_eval_json": "outputs/htr_graph_v1/cross_eval_v3/cross_eval_report.json",
+    "h3_json": "outputs/h3_graph_quality_v1/after_school_fg_v3_auto/h3_after_school_foreground_v3_summary.json"
+  },
+  "overall_verdict": "mixed_partial_support",
+  "h1": {
+    "verdict": {
+      "strong_h1_supported": false,
+      "partial_h1_supported": true,
+      "relative_robustness_supported": true,
+      "absolute_degradation_advantage_supported": false,
+      "absolute_distorted_htr_advantage_supported": false
+    },
+    "overall": {
+      "n": 5563,
+      "image_clean_cer": 0.0797917751171265,
+      "graph_clean_cer": 0.13942738157209786,
+      "image_distorted_cer": 0.10673885129272948,
+      "graph_distorted_cer": 0.16970744403956273,
+      "image_absolute_degradation": 0.026947076175602977,
+      "graph_absolute_degradation": 0.03028006246746487,
+      "image_relative_degradation": 0.33771746694502425,
+      "graph_relative_degradation": 0.2171744324970132,
+      "relative_advantage": 0.12054303444801104,
+      "absolute_advantage": -0.003332986291861892,
+      "distorted_cer_gap": 0.06296859274683325,
+      "scope": "overall",
+      "bootstrap": {
+        "iterations": 5000,
+        "relative_advantage_ci95": [
+          0.09366322926900955,
+          0.14812272451470215
+        ],
+        "absolute_advantage_ci95": [
+          -0.005279881066836747,
+          -0.0013691607979064964
+        ],
+        "distorted_cer_gap_ci95": [
+          0.060189597860835775,
+          0.06584679273215059
+        ]
+      },
+      "permutation": {
+        "permutations": 20000,
+        "relative_advantage_one_sided_p": 4.999750012499375e-05,
+        "relative_advantage_two_sided_p": 4.999750012499375e-05,
+        "absolute_advantage_one_sided_p": 0.999750012499375
+      }
+    },
+    "datasets": {
+      "dataset:cyrillic_handwriting": {
+        "n": 1563,
+        "image_clean_cer": 0.12178502237958447,
+        "graph_clean_cer": 0.19967933729708062,
+        "image_distorted_cer": 0.14212483577170598,
+        "graph_distorted_cer": 0.22558621150377448,
+        "image_absolute_degradation": 0.020339813392121514,
+        "graph_absolute_degradation": 0.025906874206693853,
+        "image_relative_degradation": 0.16701407935637244,
+        "graph_relative_degradation": 0.1297423887587823,
+        "relative_advantage": 0.03727169059759014,
+        "absolute_advantage": -0.005567060814572339,
+        "distorted_cer_gap": 0.0834613757320685,
+        "scope": "dataset:cyrillic_handwriting",
+        "bootstrap": {
+          "iterations": 5000,
+          "relative_advantage_ci95": [
+            0.0065815941258516395,
+            0.0687977685884366
+          ],
+          "absolute_advantage_ci95": [
+            -0.009372516052567758,
+            -0.0018409188247620516
+          ],
+          "distorted_cer_gap_ci95": [
+            0.07753246037602804,
+            0.08959612975726212
+          ]
+        },
+        "permutation": {
+          "permutations": 20000,
+          "relative_advantage_one_sided_p": 0.0038498075096245186,
+          "relative_advantage_two_sided_p": 0.0087995600219989,
+          "absolute_advantage_one_sided_p": 0.9979001049947502
+        },
+        "relative_status": "supported",
+        "absolute_status": "graph_degrades_more"
+      },
+      "dataset:hkr_words": {
+        "n": 2000,
+        "image_clean_cer": 0.05283517312954052,
+        "graph_clean_cer": 0.08802717237475234,
+        "image_distorted_cer": 0.06776425448941724,
+        "graph_distorted_cer": 0.10480548479416298,
+        "image_absolute_degradation": 0.014929081359876716,
+        "graph_absolute_degradation": 0.016778312419410635,
+        "image_relative_degradation": 0.28255952380952376,
+        "graph_relative_degradation": 0.19060378706680955,
+        "relative_advantage": 0.0919557367427142,
+        "absolute_advantage": -0.0018492310595339193,
+        "distorted_cer_gap": 0.03704123030474574,
+        "scope": "dataset:hkr_words",
+        "bootstrap": {
+          "iterations": 5000,
+          "relative_advantage_ci95": [
+            0.046383217444375416,
+            0.14075327408688057
+          ],
+          "absolute_advantage_ci95": [
+            -0.004212451410157714,
+            0.0005154617522487183
+          ],
+          "distorted_cer_gap_ci95": [
+            0.03388644778542988,
+            0.040360488456577186
+          ]
+        },
+        "permutation": {
+          "permutations": 20000,
+          "relative_advantage_one_sided_p": 4.999750012499375e-05,
+          "relative_advantage_two_sided_p": 4.999750012499375e-05,
+          "absolute_advantage_one_sided_p": 0.935553222338883
+        },
+        "relative_status": "supported",
+        "absolute_status": "inconclusive"
+      },
+      "dataset:school_notebooks_clean": {
+        "n": 2000,
+        "image_clean_cer": 0.07497048406139316,
+        "graph_clean_cer": 0.1552538370720189,
+        "image_distorted_cer": 0.13174228369033564,
+        "graph_distorted_cer": 0.2151908697363243,
+        "image_absolute_degradation": 0.05677179962894248,
+        "graph_absolute_degradation": 0.05993703266430539,
+        "image_relative_degradation": 0.7572553430821146,
+        "graph_relative_degradation": 0.38605830164765526,
+        "relative_advantage": 0.37119704143445936,
+        "absolute_advantage": -0.0031652330353629105,
+        "distorted_cer_gap": 0.08344858604598865,
+        "scope": "dataset:school_notebooks_clean",
+        "bootstrap": {
+          "iterations": 5000,
+          "relative_advantage_ci95": [
+            0.28849759318202084,
+            0.4612812147536411
+          ],
+          "absolute_advantage_ci95": [
+            -0.007889852802599745,
+            0.0016537087145194701
+          ],
+          "distorted_cer_gap_ci95": [
+            0.07806017465538467,
+            0.08856938996831355
+          ]
+        },
+        "permutation": {
+          "permutations": 20000,
+          "relative_advantage_one_sided_p": 4.999750012499375e-05,
+          "relative_advantage_two_sided_p": 4.999750012499375e-05,
+          "absolute_advantage_one_sided_p": 0.9047047647617619
+        },
+        "relative_status": "supported",
+        "absolute_status": "inconclusive"
+      }
+    },
+    "families": {
+      "family:blur": {
+        "n": 5563,
+        "image_clean_cer": 0.0797917751171265,
+        "graph_clean_cer": 0.13942738157209786,
+        "image_distorted_cer": 0.09833073052229742,
+        "graph_distorted_cer": 0.1682318237029325,
+        "image_absolute_degradation": 0.01853895540517092,
+        "graph_absolute_degradation": 0.028804442130834634,
+        "image_relative_degradation": 0.2323416840640223,
+        "graph_relative_degradation": 0.20659099960175228,
+        "relative_advantage": 0.025750684462270024,
+        "absolute_advantage": -0.010265486725663714,
+        "distorted_cer_gap": 0.06990109318063507,
+        "scope": "family:blur",
+        "bootstrap": {
+          "iterations": 5000,
+          "relative_advantage_ci95": [
+            -0.00444610189973385,
+            0.05524059093531783
+          ],
+          "absolute_advantage_ci95": [
+            -0.012923234403673588,
+            -0.007666019412751369
+          ],
+          "distorted_cer_gap_ci95": [
+            0.06663490772712917,
+            0.07328978333777361
+          ]
+        },
+        "permutation": {
+          "permutations": 20000,
+          "relative_advantage_one_sided_p": 0.02839858007099645,
+          "relative_advantage_two_sided_p": 0.05989700514974251,
+          "absolute_advantage_one_sided_p": 1.0
+        },
+        "relative_status": "inconclusive",
+        "absolute_status": "graph_degrades_more"
+      },
+      "family:low_contrast": {
+        "n": 5563,
+        "image_clean_cer": 0.0797917751171265,
+        "graph_clean_cer": 0.13942738157209786,
+        "image_distorted_cer": 0.10468158944993927,
+        "graph_distorted_cer": 0.16133958007981955,
+        "image_absolute_degradation": 0.024889814332812774,
+        "graph_absolute_degradation": 0.021912198507721692,
+        "image_relative_degradation": 0.3119345859429367,
+        "graph_relative_degradation": 0.15715850258861025,
+        "relative_advantage": 0.15477608335432647,
+        "absolute_advantage": 0.0029776158250910817,
+        "distorted_cer_gap": 0.05665799062988028,
+        "scope": "family:low_contrast",
+        "bootstrap": {
+          "iterations": 5000,
+          "relative_advantage_ci95": [
+            0.11867474053505754,
+            0.1916705763590227
+          ],
+          "absolute_advantage_ci95": [
+            2.057584636562226e-05,
+            0.005911123460941932
+          ],
+          "distorted_cer_gap_ci95": [
+            0.05332445660979552,
+            0.059917478517102135
+          ]
+        },
+        "permutation": {
+          "permutations": 20000,
+          "relative_advantage_one_sided_p": 4.999750012499375e-05,
+          "relative_advantage_two_sided_p": 4.999750012499375e-05,
+          "absolute_advantage_one_sided_p": 0.02414879256037198
+        },
+        "relative_status": "supported",
+        "absolute_status": "graph_degrades_less"
+      },
+      "family:noise": {
+        "n": 5563,
+        "image_clean_cer": 0.0797917751171265,
+        "graph_clean_cer": 0.13942738157209786,
+        "image_distorted_cer": 0.105972583723755,
+        "graph_distorted_cer": 0.15587714731910463,
+        "image_absolute_degradation": 0.026180808606628497,
+        "graph_absolute_degradation": 0.016449765747006767,
+        "image_relative_degradation": 0.32811412665274886,
+        "graph_relative_degradation": 0.11798088410991638,
+        "relative_advantage": 0.2101332425428325,
+        "absolute_advantage": 0.00973104285962173,
+        "distorted_cer_gap": 0.04990456359534963,
+        "scope": "family:noise",
+        "bootstrap": {
+          "iterations": 5000,
+          "relative_advantage_ci95": [
+            0.17949153408017407,
+            0.24112521062199005
+          ],
+          "absolute_advantage_ci95": [
+            0.007391638060462845,
+            0.012066920199863022
+          ],
+          "distorted_cer_gap_ci95": [
+            0.046676878754258126,
+            0.053093420099442554
+          ]
+        },
+        "permutation": {
+          "permutations": 20000,
+          "relative_advantage_one_sided_p": 4.999750012499375e-05,
+          "relative_advantage_two_sided_p": 4.999750012499375e-05,
+          "absolute_advantage_one_sided_p": 4.999750012499375e-05
+        },
+        "relative_status": "supported",
+        "absolute_status": "graph_degrades_less"
+      },
+      "family:thick_strokes": {
+        "n": 5563,
+        "image_clean_cer": 0.0797917751171265,
+        "graph_clean_cer": 0.13942738157209786,
+        "image_distorted_cer": 0.09150789519347562,
+        "graph_distorted_cer": 0.16002082248828736,
+        "image_absolute_degradation": 0.011716120076349118,
+        "graph_absolute_degradation": 0.020593440916189504,
+        "image_relative_degradation": 0.1468336812804453,
+        "graph_relative_degradation": 0.14770011947431316,
+        "relative_advantage": -0.0008664381938678634,
+        "absolute_advantage": -0.008877320839840386,
+        "distorted_cer_gap": 0.06851292729481175,
+        "scope": "family:thick_strokes",
+        "bootstrap": {
+          "iterations": 5000,
+          "relative_advantage_ci95": [
+            -0.02895797555633263,
+            0.02773275981179056
+          ],
+          "absolute_advantage_ci95": [
+            -0.011531944952661079,
+            -0.006214602222114288
+          ],
+          "distorted_cer_gap_ci95": [
+            0.06519794405582865,
+            0.07197480772267915
+          ]
+        },
+        "permutation": {
+          "permutations": 20000,
+          "relative_advantage_one_sided_p": 0.5296235188240588,
+          "relative_advantage_two_sided_p": 0.9478026098695065,
+          "absolute_advantage_one_sided_p": 1.0
+        },
+        "relative_status": "not_supported",
+        "absolute_status": "graph_degrades_more"
+      },
+      "family:thin_strokes": {
+        "n": 5563,
+        "image_clean_cer": 0.0797917751171265,
+        "graph_clean_cer": 0.13942738157209786,
+        "image_distorted_cer": 0.13320145757418012,
+        "graph_distorted_cer": 0.2030678466076696,
+        "image_absolute_degradation": 0.05340968245705362,
+        "graph_absolute_degradation": 0.06364046503557175,
+        "image_relative_degradation": 0.6693632567849687,
+        "graph_relative_degradation": 0.45644165671047393,
+        "relative_advantage": 0.21292160007449473,
+        "absolute_advantage": -0.01023078257851813,
+        "distorted_cer_gap": 0.06986638903348949,
+        "scope": "family:thin_strokes",
+        "bootstrap": {
+          "iterations": 5000,
+          "relative_advantage_ci95": [
+            0.17049570947094425,
+            0.2597480576339477
+          ],
+          "absolute_advantage_ci95": [
+            -0.013211935696424643,
+            -0.007254266602025627
+          ],
+          "distorted_cer_gap_ci95": [
+            0.06649221970982255,
+            0.073310503998779
+          ]
+        },
+        "permutation": {
+          "permutations": 20000,
+          "relative_advantage_one_sided_p": 4.999750012499375e-05,
+          "relative_advantage_two_sided_p": 4.999750012499375e-05,
+          "absolute_advantage_one_sided_p": 1.0
+        },
+        "relative_status": "supported",
+        "absolute_status": "graph_degrades_more"
+      }
+    },
+    "descriptive": {
+      "image_only": {
+        "clean_cer": 0.08223581816287687,
+        "mean_distorted_cer": 0.11364795221671457,
+        "mean_absolute_delta": 0.03141213405383772,
+        "mean_relative_degradation": 0.3819763061349085,
+        "by_distortion": {
+          "blur": {
+            "mean_cer": 0.10350554265088104,
+            "mean_relative_degradation": 0.2586430701750569
+          },
+          "low_contrast": {
+            "mean_cer": 0.11603004873562091,
+            "mean_relative_degradation": 0.41094296047266105
+          },
+          "noise": {
+            "mean_cer": 0.1165872606296367,
+            "mean_relative_degradation": 0.41771874147008686
+          },
+          "thick_strokes": {
+            "mean_cer": 0.09455723222670914,
+            "mean_relative_degradation": 0.14983026057366386
+          },
+          "thin_strokes": {
+            "mean_cer": 0.13755967684072512,
+            "mean_relative_degradation": 0.6727464979830738
+          }
+        }
+      },
+      "graph_frozen_clean": {
+        "clean_cer": 0.1396980739198334,
+        "mean_distorted_cer": 0.16970605587367693,
+        "mean_absolute_delta": 0.03000798195384349,
+        "mean_relative_degradation": 0.2148059820142098,
+        "by_distortion": {
+          "blur": {
+            "mean_cer": 0.16823182370293252,
+            "mean_relative_degradation": 0.20425299349133008
+          },
+          "low_contrast": {
+            "mean_cer": 0.16133958007981952,
+            "mean_relative_degradation": 0.15491628161176532
+          },
+          "noise": {
+            "mean_cer": 0.1558702064896755,
+            "mean_relative_degradation": 0.11576489292989524
+          },
+          "thick_strokes": {
+            "mean_cer": 0.16002082248828733,
+            "mean_relative_degradation": 0.14547622596512158
+          },
+          "thin_strokes": {
+            "mean_cer": 0.20306784660766963,
+            "mean_relative_degradation": 0.4536195160729369
+          }
+        }
+      },
+      "graph_recomputed_v3": {
+        "clean_cer": 0.13942738157209786,
+        "mean_distorted_cer": 0.16970744403956275,
+        "mean_absolute_delta": 0.030280062467464862,
+        "mean_relative_degradation": 0.21717443249701318,
+        "by_distortion": {
+          "blur": {
+            "mean_cer": 0.16823182370293252,
+            "mean_relative_degradation": 0.2065909996017523
+          },
+          "low_contrast": {
+            "mean_cer": 0.16133958007981952,
+            "mean_relative_degradation": 0.15715850258861014
+          },
+          "noise": {
+            "mean_cer": 0.15587714731910463,
+            "mean_relative_degradation": 0.11798088410991643
+          },
+          "thick_strokes": {
+            "mean_cer": 0.16002082248828733,
+            "mean_relative_degradation": 0.14770011947431308
+          },
+          "thin_strokes": {
+            "mean_cer": 0.20306784660766963,
+            "mean_relative_degradation": 0.45644165671047404
+          }
+        }
+      }
+    }
+  },
+  "h2": {
+    "verdict": {
+      "visible_structure": "partial_support",
+      "school_foreground_repair": "independently_supported_on_random_test_sample",
+      "uniform_population_level_topology": "not_established"
+    },
+    "hkr_plus_cyrillic": {
+      "n": 77,
+      "skeleton_follows_ink_rate": 0.961038961038961,
+      "usable_rate": 0.961038961038961,
+      "mean_graph_quality_0_3": 2.8701298701298703,
+      "critical_topology_error_rate": 0.025974025974025976,
+      "border_artifact_rate": 0.0,
+      "mean_cer": 0.19672186013406712,
+      "mean_structural_risk_score": 0.4830964024110408,
+      "failure_stage_counts": {
+        "ok": 77
+      },
+      "quality_counts": {
+        "3": 71,
+        "2": 4,
+        "0": 2
+      },
+      "border_artifact_counts": {
+        "0": 77
+      },
+      "critical_counts": {
+        "0": 75,
+        "1": 2
+      },
+      "exclusion_reason_counts": {
+        "too_short": 5,
+        "ok": 71,
+        "background_dominates": 1
+      }
+    },
+    "by_dataset_original": {
+      "cyrillic_handwriting": {
+        "n": 37,
+        "usable_rate": 0.9459459459459459,
+        "critical_topology_error_rate": 0.05405405405405406,
+        "skeleton_follows_ink_rate": 0.918918918918919,
+        "border_artifact_rate": 0.0,
+        "mean_graph_quality_0_3": 2.7567567567567566,
+        "mean_cer": 0.26388589585184014,
+        "mean_structural_risk_score": 0.467390400825114,
+        "failure_stage_counts": {
+          "ok": 37
+        },
+        "quality_counts": {
+          "2": 3,
+          "3": 32,
+          "0": 2
+        },
+        "critical_counts": {
+          "0": 35,
+          "1": 2
+        },
+        "border_artifact_counts": {
+          "0": 37
+        },
+        "exclusion_reason_counts": {
+          "ok": 34,
+          "background_dominates": 1,
+          "too_short": 2
+        }
+      },
+      "hkr_words": {
+        "n": 40,
+        "usable_rate": 0.975,
+        "critical_topology_error_rate": 0.0,
+        "skeleton_follows_ink_rate": 1.0,
+        "border_artifact_rate": 0.0,
+        "mean_graph_quality_0_3": 2.975,
+        "mean_cer": 0.13459512709512708,
+        "mean_structural_risk_score": 0.49762445387802307,
+        "failure_stage_counts": {
+          "ok": 40
+        },
+        "quality_counts": {
+          "3": 39,
+          "2": 1
+        },
+        "critical_counts": {
+          "0": 40
+        },
+        "border_artifact_counts": {
+          "0": 40
+        },
+        "exclusion_reason_counts": {
+          "too_short": 3,
+          "ok": 37
+        }
+      },
+      "school_notebooks_clean": {
+        "n": 23,
+        "usable_rate": 0.782608695652174,
+        "critical_topology_error_rate": 0.9565217391304348,
+        "skeleton_follows_ink_rate": 0.0,
+        "border_artifact_rate": 1.0,
+        "mean_graph_quality_0_3": 0.8260869565217391,
+        "mean_cer": 0.1757935301413562,
+        "mean_structural_risk_score": 0.5671141495931245,
+        "failure_stage_counts": {
+          "binarization": 23
+        },
+        "quality_counts": {
+          "1": 17,
+          "0": 5,
+          "2": 1
+        },
+        "critical_counts": {
+          "1": 22,
+          "0": 1
+        },
+        "border_artifact_counts": {
+          "1": 23
+        },
+        "exclusion_reason_counts": {
+          "ok": 18,
+          "illegible_or_bad_crop": 3,
+          "too_short": 1,
+          "non_text_fragment": 1
+        }
+      }
+    },
+    "old_school_audit": {
+      "n": 23,
+      "usable_rate": 0.782608695652174,
+      "critical_topology_error_rate": 0.9565217391304348,
+      "skeleton_follows_ink_rate": 0.0,
+      "border_artifact_rate": 1.0,
+      "mean_graph_quality_0_3": 0.8260869565217391,
+      "mean_cer": 0.1757935301413562,
+      "mean_structural_risk_score": 0.5671141495931245,
+      "failure_stage_counts": {
+        "binarization": 23
+      },
+      "quality_counts": {
+        "1": 17,
+        "0": 5,
+        "2": 1
+      },
+      "critical_counts": {
+        "1": 22,
+        "0": 1
+      },
+      "border_artifact_counts": {
+        "1": 23
+      },
+      "exclusion_reason_counts": {
+        "ok": 18,
+        "illegible_or_bad_crop": 3,
+        "too_short": 1,
+        "non_text_fragment": 1
+      }
+    },
+    "random_validation": {
+      "annotations_csv": "outputs/h2_gold_audit_v1/school_foreground_v3_random/random_100_browser_annotations.csv",
+      "n": 100,
+      "missing_required_fields": {
+        "best_variant": 0,
+        "fix_grade": 0,
+        "real_ink_erased": 0,
+        "border_artifact_after": 0,
+        "skeleton_follows_ink_after": 0
+      },
+      "variant_counts": {
+        "school_dark_auto": 100
+      },
+      "fix_grade_counts": {
+        "good_fix": 92,
+        "partial_fix": 8
+      },
+      "metrics": {
+        "auto_selected": {
+          "count": 100,
+          "n": 100,
+          "rate": 1.0,
+          "wilson_95_low": 0.9630051925239981,
+          "wilson_95_high": 0.9999999999999999
+        },
+        "good_fix": {
+          "count": 92,
+          "n": 100,
+          "rate": 0.92,
+          "wilson_95_low": 0.8500173312059693,
+          "wilson_95_high": 0.9589070305141891
+        },
+        "partial_fix": {
+          "count": 8,
+          "n": 100,
+          "rate": 0.08,
+          "wilson_95_low": 0.04109296948581091,
+          "wilson_95_high": 0.14998266879403072
+        },
+        "bad_fix": {
+          "count": 0,
+          "n": 100,
+          "rate": 0.0,
+          "wilson_95_low": 0.0,
+          "wilson_95_high": 0.03699480747600191
+        },
+        "real_ink_erased": {
+          "count": 4,
+          "n": 100,
+          "rate": 0.04,
+          "wilson_95_low": 0.015663050551848016,
+          "wilson_95_high": 0.09837217232607373
+        },
+        "background_artifact_after": {
+          "count": 7,
+          "n": 100,
+          "rate": 0.07,
+          "wilson_95_low": 0.034318824364064096,
+          "wilson_95_high": 0.13749671006529757
+        },
+        "skeleton_follows_ink_after": {
+          "count": 96,
+          "n": 100,
+          "rate": 0.96,
+          "wilson_95_low": 0.9016278276739262,
+          "wilson_95_high": 0.984336949448152
+        },
+        "strict_good": {
+          "count": 89,
+          "n": 100,
+          "rate": 0.89,
+          "wilson_95_low": 0.8136853697209698,
+          "wilson_95_high": 0.9374586804477487
+        },
+        "strict_usable": {
+          "count": 89,
+          "n": 100,
+          "rate": 0.89,
+          "wilson_95_low": 0.8136853697209698,
+          "wilson_95_high": 0.9374586804477487
+        }
+      },
+      "annotation_inconsistencies": [
+        {
+          "sample_id": "school_notebooks_test_0305762",
+          "target": "тем",
+          "reasons": [
+            "good_fix_with_remaining_artifact"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_test_0322172",
+          "target": "она",
+          "reasons": [
+            "good_fix_with_remaining_artifact"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_test_0323236",
+          "target": "не",
+          "reasons": [
+            "good_fix_with_erased_ink"
+          ]
+        }
+      ],
+      "verdict": "independent_random_validation_supports_school_dark_auto"
+    },
+    "controlled_conclusion": {
+      "verdict": {
+        "school_dark_auto": "accepted_for_graph_extraction",
+        "graph_fusion_v3_checkpoint": "rejected",
+        "graph_fusion_v2_checkpoint": "retained",
+        "h1_historical_results": "unchanged",
+        "domain_specific_normalization": "not_justified"
+      },
+      "controlled_effects": {
+        "v3_features_on_old_checkpoint_cer_delta": -0.0002706923477355516,
+        "v3_features_on_new_checkpoint_cer_delta": -0.0005830296720458206,
+        "new_checkpoint_on_old_features_cer_delta": 0.014263404476834995,
+        "new_checkpoint_on_v3_features_cer_delta": 0.013951067152524727,
+        "school_v3_features_on_old_checkpoint_cer_delta": -0.0010963062911114874,
+        "school_v3_features_on_new_checkpoint_cer_delta": -0.0023612750885478317
+      },
+      "h2_update": {
+        "old_school_notebooks": {
+          "n": 23,
+          "usable_rate": 0.782608695652174,
+          "critical_topology_error_rate": 0.9565217391304348,
+          "skeleton_follows_ink_rate": 0.0,
+          "border_artifact_rate": 1.0,
+          "mean_graph_quality_0_3": 0.8260869565217391,
+          "mean_cer": 0.1757935301413562,
+          "mean_structural_risk_score": 0.5671141495931245,
+          "failure_stage_counts": {
+            "binarization": 23
+          },
+          "quality_counts": {
+            "1": 17,
+            "0": 5,
+            "2": 1
+          },
+          "critical_counts": {
+            "1": 22,
+            "0": 1
+          },
+          "border_artifact_counts": {
+            "1": 23
+          },
+          "exclusion_reason_counts": {
+            "ok": 18,
+            "illegible_or_bad_crop": 3,
+            "too_short": 1,
+            "non_text_fragment": 1
+          }
+        },
+        "foreground_v3": {
+          "n": 23,
+          "selected_method": "school_dark_auto",
+          "good_fix_rate": 0.8260869565217391,
+          "partial_fix_rate": 0.08695652173913043,
+          "bad_fix_rate": 0.08695652173913043,
+          "real_ink_erased_rate": 0.0,
+          "background_artifact_after_rate": 0.17391304347826086,
+          "skeleton_follows_ink_after_rate": 0.8260869565217391
+        },
+        "verdict": "school_notebooks_preprocessing_failure_partially_repaired"
+      },
+      "h3_after_v3": {
+        "group": "hkr_words|word|unknown",
+        "feature_set": "structural_core",
+        "n": 1090,
+        "feature_n": 30,
+        "positive_n": 231,
+        "negative_n": 859,
+        "base_rate": 0.21192660550458717,
+        "high_error_quantile": 0.8,
+        "high_error_threshold": 0.14285714285714285,
+        "roc_auc": 0.6722706862404185,
+        "pr_auc": 0.3531880412592186,
+        "pr_auc_lift_over_base_rate": 1.6665582899244513,
+        "top20_precision": 0.3853211009174312,
+        "top20_recall": 0.36363636363636365
+      }
+    }
+  },
+  "h3": {
+    "verdict": "localized_partial_support",
+    "structural_core": {
+      "group": "hkr_words|word|unknown",
+      "feature_set": "structural_core",
+      "n": 1090,
+      "feature_n": 30,
+      "positive_n": 231,
+      "negative_n": 859,
+      "base_rate": 0.21192660550458717,
+      "high_error_quantile": 0.8,
+      "high_error_threshold": 0.14285714285714285,
+      "roc_auc": 0.6722706862404185,
+      "pr_auc": 0.3531880412592186,
+      "pr_auc_lift_over_base_rate": 1.6665582899244513,
+      "top20_precision": 0.3853211009174312,
+      "top20_recall": 0.36363636363636365
+    },
+    "best_global_correlation": {
+      "feature": "graph_endpoint_count",
+      "spearman_r": 0.09811047054309327,
+      "abs_spearman_r": 0.09811047054309327,
+      "p_value": 2.2392724095602263e-13,
+      "n": 5563
+    },
+    "dataset_summary": {
+      "cyrillic_handwriting": {
+        "n": 1563,
+        "mean_cer": 0.120339248697951,
+        "median_cer": 0.07142857142857142,
+        "nonzero_cer_rate": 0.5342290467050543
+      },
+      "hkr_words": {
+        "n": 2000,
+        "mean_cer": 0.0581598088035975,
+        "median_cer": 0.0,
+        "nonzero_cer_rate": 0.3455
+      },
+      "school_notebooks_clean": {
+        "n": 2000,
+        "mean_cer": 0.07653399655899655,
+        "median_cer": 0.0,
+        "nonzero_cer_rate": 0.2815
+      }
+    }
+  },
+  "recognition": {
+    "runs": {
+      "old_model_old_features": {
+        "n": 5563,
+        "cer": 0.1396980739198334,
+        "wer": 0.4904219691895512,
+        "exact": 0.43897177781772423,
+        "pred_len_mean": 8.512133740787345,
+        "pred_empty_ratio": 0.0,
+        "argmax_blank_ratio": 0.8355929139551699,
+        "grouped": {
+          "hkr_words": {
+            "n": 2000,
+            "cer": 0.08802717237475234,
+            "wer": 0.3637751985339035,
+            "exact": 0.497,
+            "pred_len_mean": 10.513,
+            "pred_empty_ratio": 0.0
+          },
+          "cyrillic_handwriting": {
+            "n": 1563,
+            "cer": 0.19967933729708062,
+            "wer": 0.6763218390804597,
+            "exact": 0.2706333973128599,
+            "pred_len_mean": 9.361484325015995,
+            "pred_empty_ratio": 0.0
+          },
+          "school_notebooks_clean": {
+            "n": 2000,
+            "cer": 0.15635014336313038,
+            "wer": 0.4955357142857143,
+            "exact": 0.5125,
+            "pred_len_mean": 5.8475,
+            "pred_empty_ratio": 0.0
+          }
+        },
+        "out_dir": "outputs/robustness_v1/graph_vector_v2/clean",
+        "blank_logit_penalty": -0.4,
+        "checkpoint_epoch": 71,
+        "checkpoint_val_cer": 0.098847348049849,
+        "graph_feature_dim": 39,
+        "graph_feature_names": [
+          "width",
+          "height",
+          "aspect_ratio",
+          "fg_fraction",
+          "bbox_x0_frac",
+          "bbox_y0_frac",
+          "bbox_w_frac",
+          "bbox_h_frac",
+          "bbox_area_frac",
+          "cc_count",
+          "cc_area_mean",
+          "cc_area_median",
+          "cc_area_max_frac",
+          "skel_pixels",
+          "skel_fraction",
+          "skel_components",
+          "graph_nodes",
+          "graph_edges_8n",
+          "graph_avg_degree",
+          "graph_endpoint_count",
+          "graph_branchpoint_count",
+          "graph_isolated_count",
+          "endpoint_per_100_skel",
+          "branchpoint_per_100_skel",
+          "degree_hist_0",
+          "degree_hist_1",
+          "degree_hist_2",
+          "degree_hist_3",
+          "degree_hist_4",
+          "degree_hist_5plus",
+          "dir_h_frac",
+          "dir_v_frac",
+          "dir_diag_down_frac",
+          "dir_diag_up_frac",
+          "stroke_width_mean",
+          "stroke_width_std",
+          "stroke_width_p50",
+          "stroke_width_p90",
+          "warning_count"
+        ]
+      },
+      "old_model_new_features": {
+        "n": 5563,
+        "cer": 0.13942738157209786,
+        "wer": 0.4897521768251842,
+        "exact": 0.43969081430882617,
+        "pred_len_mean": 8.512313499910121,
+        "pred_empty_ratio": 0.0,
+        "argmax_blank_ratio": 0.8356062056058866,
+        "grouped": {
+          "hkr_words": {
+            "n": 2000,
+            "cer": 0.08802717237475234,
+            "wer": 0.3637751985339035,
+            "exact": 0.497,
+            "pred_len_mean": 10.513,
+            "pred_empty_ratio": 0.0
+          },
+          "cyrillic_handwriting": {
+            "n": 1563,
+            "cer": 0.19967933729708062,
+            "wer": 0.6763218390804597,
+            "exact": 0.2706333973128599,
+            "pred_len_mean": 9.361484325015995,
+            "pred_empty_ratio": 0.0
+          },
+          "school_notebooks_clean": {
+            "n": 2000,
+            "cer": 0.1552538370720189,
+            "wer": 0.4930555555555556,
+            "exact": 0.5145,
+            "pred_len_mean": 5.848,
+            "pred_empty_ratio": 0.0
+          }
+        },
+        "out_dir": "outputs/htr_graph_v1/cross_eval_v3/old_model_new_features",
+        "blank_logit_penalty": -0.4,
+        "checkpoint_epoch": 71,
+        "checkpoint_val_cer": 0.098847348049849,
+        "graph_feature_dim": 39,
+        "graph_feature_names": [
+          "width",
+          "height",
+          "aspect_ratio",
+          "fg_fraction",
+          "bbox_x0_frac",
+          "bbox_y0_frac",
+          "bbox_w_frac",
+          "bbox_h_frac",
+          "bbox_area_frac",
+          "cc_count",
+          "cc_area_mean",
+          "cc_area_median",
+          "cc_area_max_frac",
+          "skel_pixels",
+          "skel_fraction",
+          "skel_components",
+          "graph_nodes",
+          "graph_edges_8n",
+          "graph_avg_degree",
+          "graph_endpoint_count",
+          "graph_branchpoint_count",
+          "graph_isolated_count",
+          "endpoint_per_100_skel",
+          "branchpoint_per_100_skel",
+          "degree_hist_0",
+          "degree_hist_1",
+          "degree_hist_2",
+          "degree_hist_3",
+          "degree_hist_4",
+          "degree_hist_5plus",
+          "dir_h_frac",
+          "dir_v_frac",
+          "dir_diag_down_frac",
+          "dir_diag_up_frac",
+          "stroke_width_mean",
+          "stroke_width_std",
+          "stroke_width_p50",
+          "stroke_width_p90",
+          "warning_count"
+        ]
+      },
+      "new_model_old_features": {
+        "n": 5563,
+        "cer": 0.1539614783966684,
+        "wer": 0.5236436704621568,
+        "exact": 0.40625561747258676,
+        "pred_len_mean": 8.419737551680749,
+        "pred_empty_ratio": 0.0,
+        "argmax_blank_ratio": 0.8357603887542001,
+        "grouped": {
+          "hkr_words": {
+            "n": 2000,
+            "cer": 0.10184923105953392,
+            "wer": 0.40806353084911423,
+            "exact": 0.4435,
+            "pred_len_mean": 10.4055,
+            "pred_empty_ratio": 0.0
+          },
+          "cyrillic_handwriting": {
+            "n": 1563,
+            "cer": 0.21758300487674528,
+            "wer": 0.704367816091954,
+            "exact": 0.25015994881637876,
+            "pred_len_mean": 9.206014075495842,
+            "pred_empty_ratio": 0.0
+          },
+          "school_notebooks_clean": {
+            "n": 2000,
+            "cer": 0.16680721875527071,
+            "wer": 0.5163690476190477,
+            "exact": 0.491,
+            "pred_len_mean": 5.8195,
+            "pred_empty_ratio": 0.0
+          }
+        },
+        "out_dir": "outputs/htr_graph_v1/cross_eval_v3/new_model_old_features",
+        "blank_logit_penalty": -0.4,
+        "checkpoint_epoch": 78,
+        "checkpoint_val_cer": 0.11207519884309472,
+        "graph_feature_dim": 39,
+        "graph_feature_names": [
+          "width",
+          "height",
+          "aspect_ratio",
+          "fg_fraction",
+          "bbox_x0_frac",
+          "bbox_y0_frac",
+          "bbox_w_frac",
+          "bbox_h_frac",
+          "bbox_area_frac",
+          "cc_count",
+          "cc_area_mean",
+          "cc_area_median",
+          "cc_area_max_frac",
+          "skel_pixels",
+          "skel_fraction",
+          "skel_components",
+          "graph_nodes",
+          "graph_edges_8n",
+          "graph_avg_degree",
+          "graph_endpoint_count",
+          "graph_branchpoint_count",
+          "graph_isolated_count",
+          "endpoint_per_100_skel",
+          "branchpoint_per_100_skel",
+          "degree_hist_0",
+          "degree_hist_1",
+          "degree_hist_2",
+          "degree_hist_3",
+          "degree_hist_4",
+          "degree_hist_5plus",
+          "dir_h_frac",
+          "dir_v_frac",
+          "dir_diag_down_frac",
+          "dir_diag_up_frac",
+          "stroke_width_mean",
+          "stroke_width_std",
+          "stroke_width_p50",
+          "stroke_width_p90",
+          "warning_count"
+        ]
+      },
+      "new_model_new_features": {
+        "n": 5563,
+        "cer": 0.15337844872462258,
+        "wer": 0.5219022103148024,
+        "exact": 0.408232967823117,
+        "pred_len_mean": 8.423152975013481,
+        "pred_empty_ratio": 0.0,
+        "argmax_blank_ratio": 0.8356593722087533,
+        "grouped": {
+          "hkr_words": {
+            "n": 2000,
+            "cer": 0.10184923105953392,
+            "wer": 0.40806353084911423,
+            "exact": 0.4435,
+            "pred_len_mean": 10.4055,
+            "pred_empty_ratio": 0.0
+          },
+          "cyrillic_handwriting": {
+            "n": 1563,
+            "cer": 0.21758300487674528,
+            "wer": 0.704367816091954,
+            "exact": 0.25015994881637876,
+            "pred_len_mean": 9.206014075495842,
+            "pred_empty_ratio": 0.0
+          },
+          "school_notebooks_clean": {
+            "n": 2000,
+            "cer": 0.16444594366672288,
+            "wer": 0.5099206349206349,
+            "exact": 0.4965,
+            "pred_len_mean": 5.829,
+            "pred_empty_ratio": 0.0
+          }
+        },
+        "out_dir": "outputs/htr_graph_v1/tri10k_graph_fusion_v3_school_fg_auto/test_eval_penalty_m04",
+        "blank_logit_penalty": -0.4,
+        "checkpoint_epoch": 78,
+        "checkpoint_val_cer": 0.11207519884309472,
+        "graph_feature_dim": 39,
+        "graph_feature_names": [
+          "width",
+          "height",
+          "aspect_ratio",
+          "fg_fraction",
+          "bbox_x0_frac",
+          "bbox_y0_frac",
+          "bbox_w_frac",
+          "bbox_h_frac",
+          "bbox_area_frac",
+          "cc_count",
+          "cc_area_mean",
+          "cc_area_median",
+          "cc_area_max_frac",
+          "skel_pixels",
+          "skel_fraction",
+          "skel_components",
+          "graph_nodes",
+          "graph_edges_8n",
+          "graph_avg_degree",
+          "graph_endpoint_count",
+          "graph_branchpoint_count",
+          "graph_isolated_count",
+          "endpoint_per_100_skel",
+          "branchpoint_per_100_skel",
+          "degree_hist_0",
+          "degree_hist_1",
+          "degree_hist_2",
+          "degree_hist_3",
+          "degree_hist_4",
+          "degree_hist_5plus",
+          "dir_h_frac",
+          "dir_v_frac",
+          "dir_diag_down_frac",
+          "dir_diag_up_frac",
+          "stroke_width_mean",
+          "stroke_width_std",
+          "stroke_width_p50",
+          "stroke_width_p90",
+          "warning_count"
+        ]
+      }
+    },
+    "contrasts": {
+      "feature_swap_on_old_model": {
+        "overall_cer_delta": -0.0002706923477355516,
+        "meaning": "Effect of replacing old features by v3 features at inference for the old model."
+      },
+      "feature_swap_on_new_model": {
+        "overall_cer_delta": -0.0005830296720458206,
+        "meaning": "Dependence of the new model on v3 rather than old features."
+      },
+      "training_change_on_old_features": {
+        "overall_cer_delta": 0.014263404476834995,
+        "meaning": "Difference between training runs while both are evaluated with old features."
+      },
+      "training_change_on_new_features": {
+        "overall_cer_delta": 0.013951067152524727,
+        "meaning": "Difference between training runs while both are evaluated with v3 features."
+      }
+    }
+  },
+  "safe_claims": [
+    "The graph-vector model has a statistically supported relative robustness advantage under the tested distortions.",
+    "The graph-vector model remains worse than the image-only baseline in clean and distorted absolute CER.",
+    "`school_dark_auto` substantially repairs School Notebooks foreground extraction on an independently sampled test subset.",
+    "Foreground repair improves visible structural extraction but does not materially improve graph-fusion recognition.",
+    "Multifeature graph descriptors provide localized value for high-error sample triage.",
+    "The generated graph describes visible static stroke structure, not the true writing trajectory."
+  ],
+  "unsafe_claims": [
+    "Do not claim graph-aware recognition is superior to image-only recognition.",
+    "Do not claim that strong H1 is confirmed.",
+    "Do not claim uniform topology preservation across all datasets and acquisition settings.",
+    "Do not treat the random-100 School Notebooks result as evidence for all handwriting domains.",
+    "Do not claim that foreground v3 improves recognition accuracy in a practically meaningful way.",
+    "Do not describe structural risk as direct graph-quality ground truth.",
+    "Do not describe the graph as reconstructed pen trajectory."
+  ]
+}

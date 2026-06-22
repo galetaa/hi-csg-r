@@ -1,0 +1,107 @@
+{
+  "source_metrics_csv": "outputs/graph_pilot_v2/graph_quality_metrics_v1.csv",
+  "primary_variants": {
+    "iam": "otsu",
+    "cyrillic_handwriting": "otsu",
+    "hkr_words": "otsu",
+    "school_notebooks": "sauvola",
+    "hwr200": "otsu_gridless",
+    "hkr_forms": "otsu_gridless"
+  },
+  "clean_subset": {
+    "path": "outputs/graph_pilot_v2/clean_graph_subset_v1.jsonl",
+    "count": 40,
+    "by_dataset": {
+      "iam": 10,
+      "cyrillic_handwriting": 10,
+      "hkr_words": 10,
+      "school_notebooks": 10
+    },
+    "by_method": {
+      "otsu": 30,
+      "sauvola": 10
+    },
+    "metrics_by_dataset": {
+      "cyrillic_handwriting": {
+        "n": 10,
+        "skeleton_pixels_mean": 549.0,
+        "nodes_per_1k_skeleton_mean": 86.09895438276996,
+        "components_per_1k_skeleton_mean": 24.103980378125527,
+        "junctions_per_1k_skeleton_mean": 30.19118999592855,
+        "warning_risk_score_mean": 0.0
+      },
+      "hkr_words": {
+        "n": 10,
+        "skeleton_pixels_mean": 785.2,
+        "nodes_per_1k_skeleton_mean": 60.45030030393144,
+        "components_per_1k_skeleton_mean": 11.980519574186504,
+        "junctions_per_1k_skeleton_mean": 25.000400827767585,
+        "warning_risk_score_mean": 0.0
+      },
+      "iam": {
+        "n": 10,
+        "skeleton_pixels_mean": 2663.6,
+        "nodes_per_1k_skeleton_mean": 47.852255385268634,
+        "components_per_1k_skeleton_mean": 10.488746118127498,
+        "junctions_per_1k_skeleton_mean": 18.597176782287036,
+        "warning_risk_score_mean": 0.0
+      },
+      "school_notebooks": {
+        "n": 10,
+        "skeleton_pixels_mean": 1194.4,
+        "nodes_per_1k_skeleton_mean": 79.3434840977559,
+        "components_per_1k_skeleton_mean": 26.19138656049168,
+        "junctions_per_1k_skeleton_mean": 27.086392515990887,
+        "warning_risk_score_mean": 0.0
+      }
+    }
+  },
+  "page_stress_subset": {
+    "path": "outputs/graph_pilot_v2/page_stress_graph_subset_v1.jsonl",
+    "count": 19,
+    "by_dataset": {
+      "hwr200": 9,
+      "hkr_forms": 10
+    },
+    "by_method": {
+      "otsu_gridless": 19
+    },
+    "metrics_by_dataset": {
+      "hkr_forms": {
+        "n": 10,
+        "skeleton_pixels_mean": 50183.7,
+        "nodes_per_1k_skeleton_mean": 164.18330702146264,
+        "components_per_1k_skeleton_mean": 85.53848591379963,
+        "junctions_per_1k_skeleton_mean": 28.070284378283795,
+        "warning_risk_score_mean": 65.0
+      },
+      "hwr200": {
+        "n": 9,
+        "skeleton_pixels_mean": 75214.44444444444,
+        "nodes_per_1k_skeleton_mean": 146.0503953503772,
+        "components_per_1k_skeleton_mean": 74.52590978366061,
+        "junctions_per_1k_skeleton_mean": 30.795423469144062,
+        "warning_risk_score_mean": 58.333333333333336
+      }
+    }
+  },
+  "review_subset": {
+    "path": "outputs/graph_pilot_v2/review_graph_subset_v1.jsonl",
+    "count": 0,
+    "by_dataset": {},
+    "by_method": {},
+    "metrics_by_dataset": {}
+  },
+  "rejected_reasons": {
+    "not_primary_variant": 29,
+    "foreground_too_high": 7,
+    "has_warnings": 5,
+    "warning_risk_positive": 5
+  },
+  "notes": [
+    "clean_graph_subset_v1 contains only crop/line datasets and primary variants.",
+    "page_stress_graph_subset_v1 contains HWR200/HKR Forms primary page-level stress variants.",
+    "Component filtering is not applied to clean crop/line graphs.",
+    "Page stress graphs are not considered clean canonical stroke graphs."
+  ]
+}

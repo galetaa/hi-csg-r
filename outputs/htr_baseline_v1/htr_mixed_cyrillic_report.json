@@ -1,0 +1,290 @@
+{
+  "single": {
+    "cyrillic_handwriting": {
+      "title": "Cyrillic Handwriting",
+      "splits": {
+        "val": {
+          "n": 7232,
+          "cer": 0.08085436907536696,
+          "wer": 0.3268436578171092,
+          "exact": 0.6645464601769911,
+          "pred_len": 7.409430309734513,
+          "empty": 0.0,
+          "blank": 0.8250148275589346,
+          "penalty": -0.4,
+          "epoch": 63,
+          "checkpoint_val_cer": 0.0810908965262766
+        },
+        "test": {
+          "n": 1563,
+          "cer": 0.14053150582338028,
+          "wer": 0.5470036255065046,
+          "exact": 0.39859245041586694,
+          "pred_len": 9.431222008957134,
+          "empty": 0.0,
+          "blank": 0.8313251761503886,
+          "penalty": -0.4,
+          "epoch": 63,
+          "checkpoint_val_cer": 0.0810908965262766
+        }
+      }
+    },
+    "hkr_words": {
+      "title": "HKR Words",
+      "splits": {
+        "val": {
+          "n": 6494,
+          "cer": 0.1310928369219005,
+          "wer": 0.4641797556719077,
+          "exact": 0.4314752078842008,
+          "pred_len": 10.154296273483215,
+          "empty": 0.0,
+          "blank": 0.8277222904441847,
+          "penalty": -0.6,
+          "epoch": 72,
+          "checkpoint_val_cer": 0.13101144310783036
+        },
+        "test": {
+          "n": 6495,
+          "cer": 0.1525421159570027,
+          "wer": 0.5186425455478618,
+          "exact": 0.371824480369515,
+          "pred_len": 10.273903002309469,
+          "empty": 0.0,
+          "blank": 0.8350919906713865,
+          "penalty": -0.6,
+          "epoch": 72,
+          "checkpoint_val_cer": 0.13101144310783036
+        }
+      }
+    },
+    "school_notebooks_clean": {
+      "title": "School Notebooks Clean",
+      "splits": {
+        "val": {
+          "n": 24214,
+          "cer": 0.04924816684279359,
+          "wer": 0.1947495938988464,
+          "exact": 0.8094077806227802,
+          "pred_len": 5.9176096473114725,
+          "empty": 0.0,
+          "blank": 0.8445514278326323,
+          "penalty": -0.2,
+          "epoch": 47,
+          "checkpoint_val_cer": 0.04932361069038134
+        },
+        "test": {
+          "n": 24623,
+          "cer": 0.08377374948852143,
+          "wer": 0.30601470170166106,
+          "exact": 0.6997522641432806,
+          "pred_len": 5.828656134508386,
+          "empty": 0.0,
+          "blank": 0.8289094952792924,
+          "penalty": -0.2,
+          "epoch": 47,
+          "checkpoint_val_cer": 0.04932361069038134
+        }
+      }
+    }
+  },
+  "mixed": {
+    "balanced50k": {
+      "title": "Mixed Cyrillic balanced50k v1",
+      "description": "Balanced training: 50k samples from each Cyrillic dataset.",
+      "splits": {
+        "cyrillic_handwriting": {
+          "val": {
+            "n": 7232,
+            "cer": 0.07727801940147991,
+            "wer": 0.31949207227138654,
+            "exact": 0.6709070796460177,
+            "pred_len": 7.423396017699115,
+            "empty": 0.0,
+            "blank": 0.8389699032452722,
+            "penalty": -0.2,
+            "epoch": 47,
+            "checkpoint_val_cer": 0.06657137128836879
+          },
+          "test": {
+            "n": 1563,
+            "cer": 0.12805299160456846,
+            "wer": 0.5198336532309659,
+            "exact": 0.4344209852847089,
+            "pred_len": 9.445297504798464,
+            "empty": 0.0,
+            "blank": 0.8446804464367019,
+            "penalty": -0.2,
+            "epoch": 47,
+            "checkpoint_val_cer": 0.06657137128836879
+          }
+        },
+        "hkr_words": {
+          "val": {
+            "n": 6494,
+            "cer": 0.060912835850983345,
+            "wer": 0.26515501488553345,
+            "exact": 0.6569140745303357,
+            "pred_len": 10.241607637819525,
+            "empty": 0.0,
+            "blank": 0.8582071303615033,
+            "penalty": -0.2,
+            "epoch": 47,
+            "checkpoint_val_cer": 0.06657137128836879
+          },
+          "test": {
+            "n": 6495,
+            "cer": 0.06910687283741551,
+            "wer": 0.31290736463946417,
+            "exact": 0.6127790608160123,
+            "pred_len": 10.434334103156274,
+            "empty": 0.0,
+            "blank": 0.8629834882561136,
+            "penalty": -0.2,
+            "epoch": 47,
+            "checkpoint_val_cer": 0.06657137128836879
+          }
+        },
+        "school_notebooks_clean": {
+          "val": {
+            "n": 24214,
+            "cer": 0.06152935847935926,
+            "wer": 0.2361719115663115,
+            "exact": 0.7667052118609069,
+            "pred_len": 5.924341290162716,
+            "empty": 0.0,
+            "blank": 0.8439437943527824,
+            "penalty": -0.2,
+            "epoch": 47,
+            "checkpoint_val_cer": 0.06657137128836879
+          },
+          "test": {
+            "n": 24623,
+            "cer": 0.10017002452562954,
+            "wer": 0.34522600820371196,
+            "exact": 0.6587337042602445,
+            "pred_len": 5.860252609348983,
+            "empty": 0.0,
+            "blank": 0.8282294536580677,
+            "penalty": -0.2,
+            "epoch": 47,
+            "checkpoint_val_cer": 0.06657137128836879
+          }
+        }
+      }
+    },
+    "natural_full": {
+      "title": "Mixed Cyrillic natural-full v1",
+      "description": "Natural full training: all available train samples from each Cyrillic dataset.",
+      "splits": {
+        "cyrillic_handwriting": {
+          "val": {
+            "n": 7232,
+            "cer": 0.07225412843380646,
+            "wer": 0.293922842920354,
+            "exact": 0.6962112831858407,
+            "pred_len": 7.416067477876106,
+            "empty": 0.0,
+            "blank": 0.8351766506062327,
+            "penalty": -0.4,
+            "epoch": 46,
+            "checkpoint_val_cer": 0.05389584135257089
+          },
+          "test": {
+            "n": 1563,
+            "cer": 0.12079026677701254,
+            "wer": 0.49364470036255037,
+            "exact": 0.4561740243122201,
+            "pred_len": 9.402431222008957,
+            "empty": 0.0,
+            "blank": 0.8417742221580921,
+            "penalty": -0.4,
+            "epoch": 46,
+            "checkpoint_val_cer": 0.05389584135257089
+          }
+        },
+        "hkr_words": {
+          "val": {
+            "n": 6494,
+            "cer": 0.05654034949081926,
+            "wer": 0.2554614515963435,
+            "exact": 0.672928857406837,
+            "pred_len": 10.253618724976901,
+            "empty": 0.0,
+            "blank": 0.8522480986654343,
+            "penalty": -0.4,
+            "epoch": 46,
+            "checkpoint_val_cer": 0.05389584135257089
+          },
+          "test": {
+            "n": 6495,
+            "cer": 0.06230800708538979,
+            "wer": 0.28669489350782495,
+            "exact": 0.641108545034642,
+            "pred_len": 10.434488067744418,
+            "empty": 0.0,
+            "blank": 0.859535742537347,
+            "penalty": -0.4,
+            "epoch": 46,
+            "checkpoint_val_cer": 0.05389584135257089
+          }
+        },
+        "school_notebooks_clean": {
+          "val": {
+            "n": 24214,
+            "cer": 0.043232136246178936,
+            "wer": 0.17933151620274776,
+            "exact": 0.8252250764020814,
+            "pred_len": 5.9266127033947305,
+            "empty": 0.0,
+            "blank": 0.8399324661211582,
+            "penalty": -0.4,
+            "epoch": 46,
+            "checkpoint_val_cer": 0.05389584135257089
+          },
+          "test": {
+            "n": 24623,
+            "cer": 0.07444094508606701,
+            "wer": 0.27417455224789833,
+            "exact": 0.7326889493562929,
+            "pred_len": 5.8526580839052915,
+            "empty": 0.0,
+            "blank": 0.8241184176225025,
+            "penalty": -0.4,
+            "epoch": 46,
+            "checkpoint_val_cer": 0.05389584135257089
+          }
+        }
+      }
+    }
+  },
+  "comparison": {
+    "cyrillic_handwriting": {
+      "title": "Cyrillic Handwriting",
+      "single_test_cer": 0.14053150582338028,
+      "balanced50k_test_cer": 0.12805299160456846,
+      "natural_full_test_cer": 0.12079026677701254,
+      "balanced_vs_single_rel_improvement": 0.08879513633401749,
+      "natural_vs_single_rel_improvement": 0.14047553913766844,
+      "natural_vs_balanced_rel_improvement": 0.0567165572357999
+    },
+    "hkr_words": {
+      "title": "HKR Words",
+      "single_test_cer": 0.1525421159570027,
+      "balanced50k_test_cer": 0.06910687283741551,
+      "natural_full_test_cer": 0.06230800708538979,
+      "balanced_vs_single_rel_improvement": 0.5469652928054651,
+      "natural_vs_single_rel_improvement": 0.5915357100267794,
+      "natural_vs_balanced_rel_improvement": 0.09838190432984997
+    },
+    "school_notebooks_clean": {
+      "title": "School Notebooks Clean",
+      "single_test_cer": 0.08377374948852143,
+      "balanced50k_test_cer": 0.10017002452562954,
+      "natural_full_test_cer": 0.07444094508606701,
+      "balanced_vs_single_rel_improvement": -0.19572091660233862,
+      "natural_vs_single_rel_improvement": 0.11140487872914398,
+      "natural_vs_balanced_rel_improvement": 0.256854079465454
+    }
+  }
+}

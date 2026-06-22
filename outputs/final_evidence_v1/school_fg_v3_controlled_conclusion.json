@@ -1,0 +1,77 @@
+{
+  "verdict": {
+    "school_dark_auto": "accepted_for_graph_extraction",
+    "graph_fusion_v3_checkpoint": "rejected",
+    "graph_fusion_v2_checkpoint": "retained",
+    "h1_historical_results": "unchanged",
+    "domain_specific_normalization": "not_justified"
+  },
+  "controlled_effects": {
+    "v3_features_on_old_checkpoint_cer_delta": -0.0002706923477355516,
+    "v3_features_on_new_checkpoint_cer_delta": -0.0005830296720458206,
+    "new_checkpoint_on_old_features_cer_delta": 0.014263404476834995,
+    "new_checkpoint_on_v3_features_cer_delta": 0.013951067152524727,
+    "school_v3_features_on_old_checkpoint_cer_delta": -0.0010963062911114874,
+    "school_v3_features_on_new_checkpoint_cer_delta": -0.0023612750885478317
+  },
+  "h2_update": {
+    "old_school_notebooks": {
+      "n": 23,
+      "usable_rate": 0.782608695652174,
+      "critical_topology_error_rate": 0.9565217391304348,
+      "skeleton_follows_ink_rate": 0.0,
+      "border_artifact_rate": 1.0,
+      "mean_graph_quality_0_3": 0.8260869565217391,
+      "mean_cer": 0.1757935301413562,
+      "mean_structural_risk_score": 0.5671141495931245,
+      "failure_stage_counts": {
+        "binarization": 23
+      },
+      "quality_counts": {
+        "1": 17,
+        "0": 5,
+        "2": 1
+      },
+      "critical_counts": {
+        "1": 22,
+        "0": 1
+      },
+      "border_artifact_counts": {
+        "1": 23
+      },
+      "exclusion_reason_counts": {
+        "ok": 18,
+        "illegible_or_bad_crop": 3,
+        "too_short": 1,
+        "non_text_fragment": 1
+      }
+    },
+    "foreground_v3": {
+      "n": 23,
+      "selected_method": "school_dark_auto",
+      "good_fix_rate": 0.8260869565217391,
+      "partial_fix_rate": 0.08695652173913043,
+      "bad_fix_rate": 0.08695652173913043,
+      "real_ink_erased_rate": 0.0,
+      "background_artifact_after_rate": 0.17391304347826086,
+      "skeleton_follows_ink_after_rate": 0.8260869565217391
+    },
+    "verdict": "school_notebooks_preprocessing_failure_partially_repaired"
+  },
+  "h3_after_v3": {
+    "group": "hkr_words|word|unknown",
+    "feature_set": "structural_core",
+    "n": 1090,
+    "feature_n": 30,
+    "positive_n": 231,
+    "negative_n": 859,
+    "base_rate": 0.21192660550458717,
+    "high_error_quantile": 0.8,
+    "high_error_threshold": 0.14285714285714285,
+    "roc_auc": 0.6722706862404185,
+    "pr_auc": 0.3531880412592186,
+    "pr_auc_lift_over_base_rate": 1.6665582899244513,
+    "top20_precision": 0.3853211009174312,
+    "top20_recall": 0.36363636363636365
+  }
+}

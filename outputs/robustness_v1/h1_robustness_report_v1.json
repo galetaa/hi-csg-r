@@ -1,0 +1,31 @@
+{
+  "strict_h1_supported": false,
+  "partial_robustness_signal": true,
+  "reason": "Graph-aware models reduce relative CER degradation, but their clean CER and distorted CER remain substantially worse than image-only.",
+  "models": {
+    "image_only": {
+      "clean_cer": 0.08223581816287687,
+      "mean_distorted_cer": 0.11364795221671457,
+      "mean_absolute_cer_delta": 0.03141213405383772,
+      "mean_relative_cer_degradation": 0.3819763061349085,
+      "clean_gap_vs_image_only": 0.0,
+      "clean_relative_gap_vs_image_only": 0.0
+    },
+    "graph_vector_v2": {
+      "clean_cer": 0.1396980739198334,
+      "mean_distorted_cer": 0.16970605587367693,
+      "mean_absolute_cer_delta": 0.03000798195384349,
+      "mean_relative_cer_degradation": 0.2148059820142098,
+      "clean_gap_vs_image_only": 0.05746225575695654,
+      "clean_relative_gap_vs_image_only": 0.6987497302349005
+    },
+    "gated_v2_dist": {
+      "clean_cer": 0.14375845913586674,
+      "mean_distorted_cer": 0.17242963734166233,
+      "mean_absolute_cer_delta": 0.028671178205795587,
+      "mean_relative_cer_degradation": 0.19943993820007724,
+      "clean_gap_vs_image_only": 0.06152264097298987,
+      "clean_relative_gap_vs_image_only": 0.748124629235617
+    }
+  }
+}

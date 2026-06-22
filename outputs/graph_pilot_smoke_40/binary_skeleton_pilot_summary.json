@@ -1,0 +1,3981 @@
+[
+  {
+    "pilot_id": "pilot_iam_0001",
+    "sample_id": "iam_line_013310",
+    "dataset": "iam",
+    "level": "line",
+    "input_image_path": "data/processed/iam/feature_images/iam_line_013310.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0001",
+    "scale": 0.97442143727162,
+    "methods": {
+      "otsu": {
+        "sample_id": "iam_line_013310",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 134,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 186.0
+        },
+        "foreground_ratio": 0.06748600746268657,
+        "foreground_pixels": 14469,
+        "skeleton_pixels": 2979,
+        "scale": 0.97442143727162,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0001",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_013310.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0001/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0001/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0001/skeleton_otsu.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "iam_line_013310",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 134,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.06915111940298507,
+        "foreground_pixels": 14826,
+        "skeleton_pixels": 2994,
+        "scale": 0.97442143727162,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0001",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_013310.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0001/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0001/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0001/skeleton_sauvola.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "iam_line_013310",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 134,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.07111940298507463,
+        "foreground_pixels": 15248,
+        "skeleton_pixels": 3023,
+        "scale": 0.97442143727162,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0001",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_013310.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0001/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0001/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0001/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_iam_0002",
+    "sample_id": "iam_line_002233",
+    "dataset": "iam",
+    "level": "line",
+    "input_image_path": "data/processed/iam/feature_images/iam_line_002233.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0002",
+    "scale": 0.9029345372460497,
+    "methods": {
+      "otsu": {
+        "sample_id": "iam_line_002233",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 111,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 156.0
+        },
+        "foreground_ratio": 0.10833896396396396,
+        "foreground_pixels": 19241,
+        "skeleton_pixels": 3228,
+        "scale": 0.9029345372460497,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0002",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_002233.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0002/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0002/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0002/skeleton_otsu.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "iam_line_002233",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 111,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.11172297297297297,
+        "foreground_pixels": 19842,
+        "skeleton_pixels": 3262,
+        "scale": 0.9029345372460497,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0002",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_002233.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0002/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0002/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0002/skeleton_sauvola.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "iam_line_002233",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 111,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.10820945945945946,
+        "foreground_pixels": 19218,
+        "skeleton_pixels": 3380,
+        "scale": 0.9029345372460497,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0002",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_002233.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0002/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0002/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0002/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_iam_0003",
+    "sample_id": "iam_line_000470",
+    "dataset": "iam",
+    "level": "line",
+    "input_image_path": "data/processed/iam/feature_images/iam_line_000470.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0003",
+    "scale": 0.8658008658008658,
+    "methods": {
+      "otsu": {
+        "sample_id": "iam_line_000470",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 144,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 182.0
+        },
+        "foreground_ratio": 0.07568576388888888,
+        "foreground_pixels": 17438,
+        "skeleton_pixels": 3366,
+        "scale": 0.8658008658008658,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0003",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_000470.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0003/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0003/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0003/skeleton_otsu.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "iam_line_000470",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 144,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.07664930555555556,
+        "foreground_pixels": 17660,
+        "skeleton_pixels": 3355,
+        "scale": 0.8658008658008658,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0003",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_000470.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0003/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0003/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0003/skeleton_sauvola.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "iam_line_000470",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 144,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.07795572916666667,
+        "foreground_pixels": 17961,
+        "skeleton_pixels": 3405,
+        "scale": 0.8658008658008658,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0003",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_000470.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0003/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0003/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0003/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_iam_0004",
+    "sample_id": "iam_line_005576",
+    "dataset": "iam",
+    "level": "line",
+    "input_image_path": "data/processed/iam/feature_images/iam_line_005576.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0004",
+    "scale": 0.9501187648456056,
+    "methods": {
+      "otsu": {
+        "sample_id": "iam_line_005576",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 120,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 171.0
+        },
+        "foreground_ratio": 0.09956770833333334,
+        "foreground_pixels": 19117,
+        "skeleton_pixels": 3979,
+        "scale": 0.9501187648456056,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0004",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_005576.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0004/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0004/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0004/skeleton_otsu.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "iam_line_005576",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 120,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.10044270833333334,
+        "foreground_pixels": 19285,
+        "skeleton_pixels": 4017,
+        "scale": 0.9501187648456056,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0004",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_005576.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0004/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0004/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0004/skeleton_sauvola.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "iam_line_005576",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 120,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.10441666666666667,
+        "foreground_pixels": 20048,
+        "skeleton_pixels": 4520,
+        "scale": 0.9501187648456056,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0004",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_005576.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0004/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0004/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0004/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_iam_0005",
+    "sample_id": "iam_line_004933",
+    "dataset": "iam",
+    "level": "line",
+    "input_image_path": "data/processed/iam/feature_images/iam_line_004933.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0005",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "iam_line_004933",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1591,
+        "image_height": 89,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 180.0
+        },
+        "foreground_ratio": 0.10346824483223752,
+        "foreground_pixels": 14651,
+        "skeleton_pixels": 2813,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_iam_0005",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_004933.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0005/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0005/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0005/skeleton_otsu.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "iam_line_004933",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1591,
+        "image_height": 89,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.1043510194281033,
+        "foreground_pixels": 14776,
+        "skeleton_pixels": 2792,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_iam_0005",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_004933.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0005/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0005/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0005/skeleton_sauvola.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "iam_line_004933",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1591,
+        "image_height": 89,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.10604594665216563,
+        "foreground_pixels": 15016,
+        "skeleton_pixels": 2851,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_iam_0005",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_004933.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0005/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0005/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0005/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_iam_0006",
+    "sample_id": "iam_line_004474",
+    "dataset": "iam",
+    "level": "line",
+    "input_image_path": "data/processed/iam/feature_images/iam_line_004474.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0006",
+    "scale": 0.8556149732620321,
+    "methods": {
+      "otsu": {
+        "sample_id": "iam_line_004474",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 88,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 150.0
+        },
+        "foreground_ratio": 0.15691051136363637,
+        "foreground_pixels": 22093,
+        "skeleton_pixels": 2438,
+        "scale": 0.8556149732620321,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0006",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_004474.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0006/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0006/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0006/skeleton_otsu.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "iam_line_004474",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 88,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.15761363636363637,
+        "foreground_pixels": 22192,
+        "skeleton_pixels": 2433,
+        "scale": 0.8556149732620321,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0006",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_004474.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0006/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0006/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0006/skeleton_sauvola.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "iam_line_004474",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 88,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.153984375,
+        "foreground_pixels": 21681,
+        "skeleton_pixels": 2480,
+        "scale": 0.8556149732620321,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0006",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_004474.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0006/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0006/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0006/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_iam_0007",
+    "sample_id": "iam_line_002761",
+    "dataset": "iam",
+    "level": "line",
+    "input_image_path": "data/processed/iam/feature_images/iam_line_002761.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0007",
+    "scale": 0.9876543209876543,
+    "methods": {
+      "otsu": {
+        "sample_id": "iam_line_002761",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 147,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 180.0
+        },
+        "foreground_ratio": 0.07463860544217688,
+        "foreground_pixels": 17555,
+        "skeleton_pixels": 3223,
+        "scale": 0.9876543209876543,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0007",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_002761.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0007/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0007/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0007/skeleton_otsu.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "iam_line_002761",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 147,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.07261904761904762,
+        "foreground_pixels": 17080,
+        "skeleton_pixels": 3294,
+        "scale": 0.9876543209876543,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0007",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_002761.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0007/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0007/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0007/skeleton_sauvola.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "iam_line_002761",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 147,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.07490646258503401,
+        "foreground_pixels": 17618,
+        "skeleton_pixels": 3518,
+        "scale": 0.9876543209876543,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0007",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_002761.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0007/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0007/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0007/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_iam_0008",
+    "sample_id": "iam_line_002026",
+    "dataset": "iam",
+    "level": "line",
+    "input_image_path": "data/processed/iam/feature_images/iam_line_002026.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0008",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "iam_line_002026",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1160,
+        "image_height": 128,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 153.0
+        },
+        "foreground_ratio": 0.07401670258620689,
+        "foreground_pixels": 10990,
+        "skeleton_pixels": 1873,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_iam_0008",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_002026.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0008/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0008/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0008/skeleton_otsu.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "iam_line_002026",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1160,
+        "image_height": 128,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.07921605603448276,
+        "foreground_pixels": 11762,
+        "skeleton_pixels": 1876,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_iam_0008",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_002026.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0008/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0008/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0008/skeleton_sauvola.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "iam_line_002026",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1160,
+        "image_height": 128,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.07749191810344827,
+        "foreground_pixels": 11506,
+        "skeleton_pixels": 1952,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_iam_0008",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_002026.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0008/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0008/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0008/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_iam_0009",
+    "sample_id": "iam_line_011209",
+    "dataset": "iam",
+    "level": "line",
+    "input_image_path": "data/processed/iam/feature_images/iam_line_011209.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0009",
+    "scale": 0.857449088960343,
+    "methods": {
+      "otsu": {
+        "sample_id": "iam_line_011209",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 155,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 182.0
+        },
+        "foreground_ratio": 0.08344354838709678,
+        "foreground_pixels": 20694,
+        "skeleton_pixels": 4036,
+        "scale": 0.857449088960343,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0009",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_011209.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0009/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0009/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0009/skeleton_otsu.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "iam_line_011209",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 155,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.08191129032258064,
+        "foreground_pixels": 20314,
+        "skeleton_pixels": 4072,
+        "scale": 0.857449088960343,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0009",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_011209.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0009/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0009/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0009/skeleton_sauvola.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "iam_line_011209",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 155,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.08325,
+        "foreground_pixels": 20646,
+        "skeleton_pixels": 4162,
+        "scale": 0.857449088960343,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0009",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_011209.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0009/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0009/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0009/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_iam_0010",
+    "sample_id": "iam_line_001709",
+    "dataset": "iam",
+    "level": "line",
+    "input_image_path": "data/processed/iam/feature_images/iam_line_001709.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0010",
+    "scale": 0.9019165727170236,
+    "methods": {
+      "otsu": {
+        "sample_id": "iam_line_001709",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 85,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 157.0
+        },
+        "foreground_ratio": 0.11549264705882353,
+        "foreground_pixels": 15707,
+        "skeleton_pixels": 3062,
+        "scale": 0.9019165727170236,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0010",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_001709.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0010/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0010/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0010/skeleton_otsu.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "iam_line_001709",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 85,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.12566911764705882,
+        "foreground_pixels": 17091,
+        "skeleton_pixels": 3079,
+        "scale": 0.9019165727170236,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0010",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_001709.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0010/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0010/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0010/skeleton_sauvola.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "iam_line_001709",
+        "dataset": "iam",
+        "level": "line",
+        "image_width": 1600,
+        "image_height": 85,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.12217647058823529,
+        "foreground_pixels": 16616,
+        "skeleton_pixels": 3124,
+        "scale": 0.9019165727170236,
+        "warnings": [
+          "large_page_scaled"
+        ],
+        "pilot_id": "pilot_iam_0010",
+        "input_image_path": "data/processed/iam/feature_images/iam_line_001709.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0010/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0010/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/iam/pilot_iam_0010/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "iam",
+          "line",
+          "random_train_val",
+          "segmentation_ok"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_cyr_word_0001",
+    "sample_id": "cyr_word_028708",
+    "dataset": "cyrillic_handwriting",
+    "level": "word",
+    "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_028708.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0001",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "cyr_word_028708",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 256,
+        "image_height": 64,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 116.0
+        },
+        "foreground_ratio": 0.179931640625,
+        "foreground_pixels": 2948,
+        "skeleton_pixels": 708,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0001",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_028708.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0001/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0001/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0001/skeleton_otsu.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "cyr_word_028708",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 256,
+        "image_height": 64,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.1429443359375,
+        "foreground_pixels": 2342,
+        "skeleton_pixels": 573,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0001",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_028708.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0001/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0001/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0001/skeleton_sauvola.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "cyr_word_028708",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 256,
+        "image_height": 64,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.190673828125,
+        "foreground_pixels": 3124,
+        "skeleton_pixels": 900,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0001",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_028708.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0001/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0001/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0001/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_cyr_word_0002",
+    "sample_id": "cyr_word_064475",
+    "dataset": "cyrillic_handwriting",
+    "level": "word",
+    "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_064475.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0002",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "cyr_word_064475",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 174,
+        "image_height": 77,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 119.0
+        },
+        "foreground_ratio": 0.1218838632631736,
+        "foreground_pixels": 1633,
+        "skeleton_pixels": 367,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0002",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_064475.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0002/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0002/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0002/skeleton_otsu.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "cyr_word_064475",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 174,
+        "image_height": 77,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.09516345723242275,
+        "foreground_pixels": 1275,
+        "skeleton_pixels": 352,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0002",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_064475.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0002/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0002/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0002/skeleton_sauvola.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "cyr_word_064475",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 174,
+        "image_height": 77,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.11621137483206449,
+        "foreground_pixels": 1557,
+        "skeleton_pixels": 376,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0002",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_064475.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0002/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0002/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0002/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_cyr_word_0003",
+    "sample_id": "cyr_word_066681",
+    "dataset": "cyrillic_handwriting",
+    "level": "word",
+    "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_066681.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0003",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "cyr_word_066681",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 608,
+        "image_height": 166,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 117.0
+        },
+        "foreground_ratio": 0.09454264426125555,
+        "foreground_pixels": 9542,
+        "skeleton_pixels": 2094,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0003",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_066681.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0003/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0003/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0003/skeleton_otsu.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "cyr_word_066681",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 608,
+        "image_height": 166,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.09284836715282181,
+        "foreground_pixels": 9371,
+        "skeleton_pixels": 2363,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0003",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_066681.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0003/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0003/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0003/skeleton_sauvola.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "cyr_word_066681",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 608,
+        "image_height": 166,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.1616697051363348,
+        "foreground_pixels": 16317,
+        "skeleton_pixels": 6365,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0003",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_066681.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0003/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0003/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0003/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_cyr_word_0004",
+    "sample_id": "cyr_word_046405",
+    "dataset": "cyrillic_handwriting",
+    "level": "word",
+    "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_046405.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0004",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "cyr_word_046405",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 225,
+        "image_height": 79,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 198.0
+        },
+        "foreground_ratio": 0.1309704641350211,
+        "foreground_pixels": 2328,
+        "skeleton_pixels": 512,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0004",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_046405.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0004/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0004/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0004/skeleton_otsu.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "cyr_word_046405",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 225,
+        "image_height": 79,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.11037974683544304,
+        "foreground_pixels": 1962,
+        "skeleton_pixels": 501,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0004",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_046405.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0004/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0004/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0004/skeleton_sauvola.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "cyr_word_046405",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 225,
+        "image_height": 79,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.1648945147679325,
+        "foreground_pixels": 2931,
+        "skeleton_pixels": 772,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0004",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_046405.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0004/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0004/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0004/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_cyr_word_0005",
+    "sample_id": "cyr_word_033137",
+    "dataset": "cyrillic_handwriting",
+    "level": "word",
+    "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_033137.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0005",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "cyr_word_033137",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 256,
+        "image_height": 64,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 127.0
+        },
+        "foreground_ratio": 0.18475341796875,
+        "foreground_pixels": 3027,
+        "skeleton_pixels": 883,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0005",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_033137.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0005/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0005/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0005/skeleton_otsu.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "cyr_word_033137",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 256,
+        "image_height": 64,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.18505859375,
+        "foreground_pixels": 3032,
+        "skeleton_pixels": 993,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0005",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_033137.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0005/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0005/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0005/skeleton_sauvola.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "cyr_word_033137",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 256,
+        "image_height": 64,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.232666015625,
+        "foreground_pixels": 3812,
+        "skeleton_pixels": 1160,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0005",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_033137.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0005/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0005/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0005/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_cyr_word_0006",
+    "sample_id": "cyr_word_010506",
+    "dataset": "cyrillic_handwriting",
+    "level": "word",
+    "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_010506.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0006",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "cyr_word_010506",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 197,
+        "image_height": 52,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 183.0
+        },
+        "foreground_ratio": 0.1866458414681765,
+        "foreground_pixels": 1912,
+        "skeleton_pixels": 417,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0006",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_010506.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0006/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0006/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0006/skeleton_otsu.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "cyr_word_010506",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 197,
+        "image_height": 52,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.14427957828973056,
+        "foreground_pixels": 1478,
+        "skeleton_pixels": 392,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0006",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_010506.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0006/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0006/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0006/skeleton_sauvola.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "cyr_word_010506",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 197,
+        "image_height": 52,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.21895743850058572,
+        "foreground_pixels": 2243,
+        "skeleton_pixels": 656,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0006",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_010506.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0006/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0006/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0006/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_cyr_word_0007",
+    "sample_id": "cyr_word_019134",
+    "dataset": "cyrillic_handwriting",
+    "level": "word",
+    "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_019134.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0007",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "cyr_word_019134",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 38,
+        "image_height": 24,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 146.0
+        },
+        "foreground_ratio": 0.11951754385964912,
+        "foreground_pixels": 109,
+        "skeleton_pixels": 53,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0007",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_019134.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0007/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0007/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0007/skeleton_otsu.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "cyr_word_019134",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 38,
+        "image_height": 24,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 23,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.14035087719298245,
+        "foreground_pixels": 128,
+        "skeleton_pixels": 59,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0007",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_019134.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0007/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0007/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0007/skeleton_sauvola.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "cyr_word_019134",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 38,
+        "image_height": 24,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 23,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.17324561403508773,
+        "foreground_pixels": 158,
+        "skeleton_pixels": 77,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0007",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_019134.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0007/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0007/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0007/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_cyr_word_0008",
+    "sample_id": "cyr_word_010276",
+    "dataset": "cyrillic_handwriting",
+    "level": "word",
+    "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_010276.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0008",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "cyr_word_010276",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 120,
+        "image_height": 64,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 151.0
+        },
+        "foreground_ratio": 0.10338541666666666,
+        "foreground_pixels": 794,
+        "skeleton_pixels": 333,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0008",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_010276.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0008/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0008/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0008/skeleton_otsu.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "cyr_word_010276",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 120,
+        "image_height": 64,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.10572916666666667,
+        "foreground_pixels": 812,
+        "skeleton_pixels": 340,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0008",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_010276.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0008/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0008/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0008/skeleton_sauvola.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "cyr_word_010276",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 120,
+        "image_height": 64,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.115234375,
+        "foreground_pixels": 885,
+        "skeleton_pixels": 347,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0008",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_010276.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0008/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0008/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0008/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_cyr_word_0009",
+    "sample_id": "cyr_word_017881",
+    "dataset": "cyrillic_handwriting",
+    "level": "word",
+    "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_017881.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0009",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "cyr_word_017881",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 143,
+        "image_height": 68,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 164.0
+        },
+        "foreground_ratio": 0.06437679967091732,
+        "foreground_pixels": 626,
+        "skeleton_pixels": 334,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0009",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_017881.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0009/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0009/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0009/skeleton_otsu.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "cyr_word_017881",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 143,
+        "image_height": 68,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.06735911147675853,
+        "foreground_pixels": 655,
+        "skeleton_pixels": 333,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0009",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_017881.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0009/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0009/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0009/skeleton_sauvola.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "cyr_word_017881",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 143,
+        "image_height": 68,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.07568901686548746,
+        "foreground_pixels": 736,
+        "skeleton_pixels": 335,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0009",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_017881.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0009/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0009/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0009/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_cyr_word_0010",
+    "sample_id": "cyr_word_054506",
+    "dataset": "cyrillic_handwriting",
+    "level": "word",
+    "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_054506.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0010",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "cyr_word_054506",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 197,
+        "image_height": 50,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 11.0
+        },
+        "foreground_ratio": 0.24944162436548223,
+        "foreground_pixels": 2457,
+        "skeleton_pixels": 469,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0010",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_054506.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0010/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0010/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0010/skeleton_otsu.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "cyr_word_054506",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 197,
+        "image_height": 50,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.24974619289340103,
+        "foreground_pixels": 2460,
+        "skeleton_pixels": 461,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0010",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_054506.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0010/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0010/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0010/skeleton_sauvola.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "cyr_word_054506",
+        "dataset": "cyrillic_handwriting",
+        "level": "word",
+        "image_width": 197,
+        "image_height": 50,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.24974619289340103,
+        "foreground_pixels": 2460,
+        "skeleton_pixels": 461,
+        "scale": 1.0,
+        "warnings": [],
+        "pilot_id": "pilot_cyr_word_0010",
+        "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_054506.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0010/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0010/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/cyrillic_handwriting/pilot_cyr_word_0010/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "cyrillic_handwriting",
+          "word",
+          "random_train_val"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hwr200_0001",
+    "sample_id": "hwr200_document_condition_000319",
+    "dataset": "hwr200",
+    "level": "page_from_document_condition",
+    "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_000319/page_001.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0001",
+    "scale": 0.6846384253316218,
+    "methods": {
+      "otsu": {
+        "sample_id": "hwr200_document_condition_000319",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1112,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 196.0
+        },
+        "foreground_ratio": 0.1511769334532374,
+        "foreground_pixels": 268974,
+        "skeleton_pixels": 120623,
+        "scale": 0.6846384253316218,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0001",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_000319/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0001/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0001/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0001/skeleton_otsu.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "scan",
+          "first_valid_page"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hwr200_document_condition_000319",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1112,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.12441097122302158,
+        "foreground_pixels": 221352,
+        "skeleton_pixels": 118636,
+        "scale": 0.6846384253316218,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0001",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_000319/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0001/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0001/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0001/skeleton_sauvola.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "scan",
+          "first_valid_page"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hwr200_document_condition_000319",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1112,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.15115950989208632,
+        "foreground_pixels": 268943,
+        "skeleton_pixels": 124413,
+        "scale": 0.6846384253316218,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0001",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_000319/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0001/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0001/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0001/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "scan",
+          "first_valid_page"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hwr200_0002",
+    "sample_id": "hwr200_document_condition_000320",
+    "dataset": "hwr200",
+    "level": "page_from_document_condition",
+    "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_000320/page_001.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0002",
+    "scale": 0.3968253968253968,
+    "methods": {
+      "otsu": {
+        "sample_id": "hwr200_document_condition_000320",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1200,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 135.0
+        },
+        "foreground_ratio": 0.13259114583333334,
+        "foreground_pixels": 254575,
+        "skeleton_pixels": 139021,
+        "scale": 0.3968253968253968,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0002",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_000320/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0002/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0002/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0002/skeleton_otsu.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_light",
+          "first_valid_page"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hwr200_document_condition_000320",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1200,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.14403645833333334,
+        "foreground_pixels": 276550,
+        "skeleton_pixels": 134328,
+        "scale": 0.3968253968253968,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0002",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_000320/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0002/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0002/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0002/skeleton_sauvola.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_light",
+          "first_valid_page"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hwr200_document_condition_000320",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1200,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.1522765625,
+        "foreground_pixels": 292371,
+        "skeleton_pixels": 138531,
+        "scale": 0.3968253968253968,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0002",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_000320/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0002/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0002/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0002/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_light",
+          "first_valid_page"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hwr200_0003",
+    "sample_id": "hwr200_document_condition_000321",
+    "dataset": "hwr200",
+    "level": "page_from_document_condition",
+    "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_000321/page_001.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0003",
+    "scale": 0.3968253968253968,
+    "methods": {
+      "otsu": {
+        "sample_id": "hwr200_document_condition_000321",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1600,
+        "image_height": 1200,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 125.0
+        },
+        "foreground_ratio": 0.3142109375,
+        "foreground_pixels": 603285,
+        "skeleton_pixels": 117051,
+        "scale": 0.3968253968253968,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0003",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_000321/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0003/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0003/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0003/skeleton_otsu.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_dark",
+          "first_valid_page"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hwr200_document_condition_000321",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1600,
+        "image_height": 1200,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.12470260416666666,
+        "foreground_pixels": 239429,
+        "skeleton_pixels": 118056,
+        "scale": 0.3968253968253968,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0003",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_000321/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0003/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0003/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0003/skeleton_sauvola.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_dark",
+          "first_valid_page"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hwr200_document_condition_000321",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1600,
+        "image_height": 1200,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.13408177083333334,
+        "foreground_pixels": 257437,
+        "skeleton_pixels": 119732,
+        "scale": 0.3968253968253968,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0003",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_000321/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0003/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0003/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0003/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_dark",
+          "first_valid_page"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hwr200_0004",
+    "sample_id": "hwr200_document_condition_008527",
+    "dataset": "hwr200",
+    "level": "page_from_document_condition",
+    "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_008527/page_001.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0004",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "hwr200_document_condition_008527",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 654,
+        "image_height": 800,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 170.0
+        },
+        "foreground_ratio": 0.1371788990825688,
+        "foreground_pixels": 71772,
+        "skeleton_pixels": 40200,
+        "scale": 1.0,
+        "warnings": [
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0004",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_008527/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0004/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0004/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0004/skeleton_otsu.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "scan",
+          "first_valid_page"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hwr200_document_condition_008527",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 654,
+        "image_height": 800,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.15056766055045873,
+        "foreground_pixels": 78777,
+        "skeleton_pixels": 42311,
+        "scale": 1.0,
+        "warnings": [
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0004",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_008527/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0004/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0004/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0004/skeleton_sauvola.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "scan",
+          "first_valid_page"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hwr200_document_condition_008527",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 654,
+        "image_height": 800,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.1498375382262997,
+        "foreground_pixels": 78395,
+        "skeleton_pixels": 42286,
+        "scale": 1.0,
+        "warnings": [
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0004",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_008527/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0004/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0004/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0004/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "scan",
+          "first_valid_page"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hwr200_0005",
+    "sample_id": "hwr200_document_condition_008528",
+    "dataset": "hwr200",
+    "level": "page_from_document_condition",
+    "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_008528/page_001.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0005",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "hwr200_document_condition_008528",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 654,
+        "image_height": 800,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 135.0
+        },
+        "foreground_ratio": 0.15048738532110092,
+        "foreground_pixels": 78735,
+        "skeleton_pixels": 40879,
+        "scale": 1.0,
+        "warnings": [
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0005",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_008528/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0005/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0005/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0005/skeleton_otsu.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_light",
+          "first_valid_page"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hwr200_document_condition_008528",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 654,
+        "image_height": 800,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.16407683486238533,
+        "foreground_pixels": 85845,
+        "skeleton_pixels": 46160,
+        "scale": 1.0,
+        "warnings": [
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0005",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_008528/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0005/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0005/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0005/skeleton_sauvola.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_light",
+          "first_valid_page"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hwr200_document_condition_008528",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 654,
+        "image_height": 800,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.1800611620795107,
+        "foreground_pixels": 94208,
+        "skeleton_pixels": 48420,
+        "scale": 1.0,
+        "warnings": [
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0005",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_008528/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0005/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0005/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0005/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_light",
+          "first_valid_page"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hwr200_0006",
+    "sample_id": "hwr200_document_condition_008529",
+    "dataset": "hwr200",
+    "level": "page_from_document_condition",
+    "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_008529/page_001.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0006",
+    "scale": 1.0,
+    "methods": {
+      "otsu": {
+        "sample_id": "hwr200_document_condition_008529",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 600,
+        "image_height": 800,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 79.0
+        },
+        "foreground_ratio": 0.14966041666666666,
+        "foreground_pixels": 71837,
+        "skeleton_pixels": 34453,
+        "scale": 1.0,
+        "warnings": [
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0006",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_008529/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0006/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0006/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0006/skeleton_otsu.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_dark",
+          "first_valid_page"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hwr200_document_condition_008529",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 600,
+        "image_height": 800,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.146575,
+        "foreground_pixels": 70356,
+        "skeleton_pixels": 39606,
+        "scale": 1.0,
+        "warnings": [
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0006",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_008529/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0006/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0006/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0006/skeleton_sauvola.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_dark",
+          "first_valid_page"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hwr200_document_condition_008529",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 600,
+        "image_height": 800,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.14548541666666667,
+        "foreground_pixels": 69833,
+        "skeleton_pixels": 40137,
+        "scale": 1.0,
+        "warnings": [
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0006",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_008529/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0006/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0006/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0006/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_dark",
+          "first_valid_page"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hwr200_0007",
+    "sample_id": "hwr200_document_condition_003595",
+    "dataset": "hwr200",
+    "level": "page_from_document_condition",
+    "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003595/page_001.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0007",
+    "scale": 0.78125,
+    "methods": {
+      "otsu": {
+        "sample_id": "hwr200_document_condition_003595",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1004,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 185.0
+        },
+        "foreground_ratio": 0.10738670318725099,
+        "foreground_pixels": 172506,
+        "skeleton_pixels": 54494,
+        "scale": 0.78125,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0007",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003595/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0007/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0007/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0007/skeleton_otsu.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "scan",
+          "first_valid_page"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hwr200_document_condition_003595",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1004,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.11096551294820717,
+        "foreground_pixels": 178255,
+        "skeleton_pixels": 56371,
+        "scale": 0.78125,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0007",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003595/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0007/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0007/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0007/skeleton_sauvola.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "scan",
+          "first_valid_page"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hwr200_document_condition_003595",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1004,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.16772223605577688,
+        "foreground_pixels": 269429,
+        "skeleton_pixels": 97588,
+        "scale": 0.78125,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0007",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003595/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0007/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0007/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0007/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "scan",
+          "first_valid_page"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hwr200_0008",
+    "sample_id": "hwr200_document_condition_003596",
+    "dataset": "hwr200",
+    "level": "page_from_document_condition",
+    "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003596/page_001.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0008",
+    "scale": 0.3968253968253968,
+    "methods": {
+      "otsu": {
+        "sample_id": "hwr200_document_condition_003596",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1200,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 145.0
+        },
+        "foreground_ratio": 0.26017864583333333,
+        "foreground_pixels": 499543,
+        "skeleton_pixels": 104850,
+        "scale": 0.3968253968253968,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0008",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003596/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0008/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0008/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0008/skeleton_otsu.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_light",
+          "first_valid_page"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hwr200_document_condition_003596",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1200,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.14436145833333333,
+        "foreground_pixels": 277174,
+        "skeleton_pixels": 108726,
+        "scale": 0.3968253968253968,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0008",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003596/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0008/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0008/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0008/skeleton_sauvola.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_light",
+          "first_valid_page"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hwr200_document_condition_003596",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1200,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.20345885416666668,
+        "foreground_pixels": 390641,
+        "skeleton_pixels": 150067,
+        "scale": 0.3968253968253968,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0008",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003596/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0008/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0008/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0008/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_light",
+          "first_valid_page"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hwr200_0009",
+    "sample_id": "hwr200_document_condition_003597",
+    "dataset": "hwr200",
+    "level": "page_from_document_condition",
+    "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003597/page_001.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0009",
+    "scale": 0.3968253968253968,
+    "methods": {
+      "otsu": {
+        "sample_id": "hwr200_document_condition_003597",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1200,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 134.0
+        },
+        "foreground_ratio": 0.29681145833333333,
+        "foreground_pixels": 569878,
+        "skeleton_pixels": 95220,
+        "scale": 0.3968253968253968,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0009",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003597/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0009/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0009/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0009/skeleton_otsu.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_dark",
+          "first_valid_page"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hwr200_document_condition_003597",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1200,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.14497083333333333,
+        "foreground_pixels": 278344,
+        "skeleton_pixels": 114530,
+        "scale": 0.3968253968253968,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0009",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003597/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0009/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0009/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0009/skeleton_sauvola.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_dark",
+          "first_valid_page"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hwr200_document_condition_003597",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1200,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.18658072916666665,
+        "foreground_pixels": 358235,
+        "skeleton_pixels": 143293,
+        "scale": 0.3968253968253968,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0009",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003597/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0009/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0009/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0009/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "photo_dark",
+          "first_valid_page"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hwr200_0010",
+    "sample_id": "hwr200_document_condition_003454",
+    "dataset": "hwr200",
+    "level": "page_from_document_condition",
+    "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003454/page_001.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0010",
+    "scale": 0.8052340211373931,
+    "methods": {
+      "otsu": {
+        "sample_id": "hwr200_document_condition_003454",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1169,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 197.0
+        },
+        "foreground_ratio": 0.18649967921300256,
+        "foreground_pixels": 348829,
+        "skeleton_pixels": 84740,
+        "scale": 0.8052340211373931,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0010",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003454/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0010/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0010/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0010/skeleton_otsu.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "scan",
+          "first_valid_page"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hwr200_document_condition_003454",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1169,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.09006843455945253,
+        "foreground_pixels": 168464,
+        "skeleton_pixels": 58902,
+        "scale": 0.8052340211373931,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0010",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003454/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0010/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0010/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0010/skeleton_sauvola.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "scan",
+          "first_valid_page"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hwr200_document_condition_003454",
+        "dataset": "hwr200",
+        "level": "page_from_document_condition",
+        "image_width": 1169,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.10877459366980326,
+        "foreground_pixels": 203452,
+        "skeleton_pixels": 74957,
+        "scale": 0.8052340211373931,
+        "warnings": [
+          "large_page_scaled",
+          "hwr200_page"
+        ],
+        "pilot_id": "pilot_hwr200_0010",
+        "input_image_path": "data/processed/hwr200/feature_pages/hwr200_document_condition_003454/page_001.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0010/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0010/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hwr200/pilot_hwr200_0010/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hwr200",
+          "document_triplet",
+          "scan",
+          "first_valid_page"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hkr_forms_0001",
+    "sample_id": "hkr_forms_page_000931",
+    "dataset": "hkr_forms",
+    "level": "form_page",
+    "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000931.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0001",
+    "scale": 0.45623039635015683,
+    "methods": {
+      "otsu": {
+        "sample_id": "hkr_forms_page_000931",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 189.0
+        },
+        "foreground_ratio": 0.07611958443854995,
+        "foreground_pixels": 137746,
+        "skeleton_pixels": 61255,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0001",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000931.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0001/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0001/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0001/skeleton_otsu.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hkr_forms_page_000931",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.08584714854111405,
+        "foreground_pixels": 155349,
+        "skeleton_pixels": 64546,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0001",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000931.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0001/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0001/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0001/skeleton_sauvola.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hkr_forms_page_000931",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.09699988947833775,
+        "foreground_pixels": 175531,
+        "skeleton_pixels": 67577,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0001",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000931.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0001/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0001/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0001/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hkr_forms_0002",
+    "sample_id": "hkr_forms_page_001054",
+    "dataset": "hkr_forms",
+    "level": "form_page",
+    "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001054.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0002",
+    "scale": 0.45623039635015683,
+    "methods": {
+      "otsu": {
+        "sample_id": "hkr_forms_page_001054",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 192.0
+        },
+        "foreground_ratio": 0.08729056145004421,
+        "foreground_pixels": 157961,
+        "skeleton_pixels": 70011,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0002",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001054.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0002/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0002/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0002/skeleton_otsu.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hkr_forms_page_001054",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.09559350132625995,
+        "foreground_pixels": 172986,
+        "skeleton_pixels": 73011,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0002",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001054.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0002/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0002/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0002/skeleton_sauvola.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hkr_forms_page_001054",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.10914787798408489,
+        "foreground_pixels": 197514,
+        "skeleton_pixels": 76990,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0002",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001054.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0002/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0002/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0002/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hkr_forms_0003",
+    "sample_id": "hkr_forms_page_000121",
+    "dataset": "hkr_forms",
+    "level": "form_page",
+    "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000121.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0003",
+    "scale": 0.45623039635015683,
+    "methods": {
+      "otsu": {
+        "sample_id": "hkr_forms_page_000121",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 185.0
+        },
+        "foreground_ratio": 0.08518015030946065,
+        "foreground_pixels": 154142,
+        "skeleton_pixels": 62785,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0003",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000121.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0003/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0003/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0003/skeleton_otsu.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hkr_forms_page_000121",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.09379089301503095,
+        "foreground_pixels": 169724,
+        "skeleton_pixels": 63951,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0003",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000121.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0003/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0003/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0003/skeleton_sauvola.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hkr_forms_page_000121",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.1005393457117595,
+        "foreground_pixels": 181936,
+        "skeleton_pixels": 64590,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0003",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000121.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0003/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0003/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0003/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hkr_forms_0004",
+    "sample_id": "hkr_forms_page_001528",
+    "dataset": "hkr_forms",
+    "level": "form_page",
+    "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001528.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0004",
+    "scale": 0.45623039635015683,
+    "methods": {
+      "otsu": {
+        "sample_id": "hkr_forms_page_001528",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 206.0
+        },
+        "foreground_ratio": 0.06259836427939876,
+        "foreground_pixels": 113278,
+        "skeleton_pixels": 62548,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0004",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001528.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0004/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0004/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0004/skeleton_otsu.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hkr_forms_page_001528",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.0602000442086649,
+        "foreground_pixels": 108938,
+        "skeleton_pixels": 62709,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0004",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001528.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0004/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0004/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0004/skeleton_sauvola.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hkr_forms_page_001528",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.08095159151193634,
+        "foreground_pixels": 146490,
+        "skeleton_pixels": 69335,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0004",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001528.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0004/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0004/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0004/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hkr_forms_0005",
+    "sample_id": "hkr_forms_page_001483",
+    "dataset": "hkr_forms",
+    "level": "form_page",
+    "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001483.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0005",
+    "scale": 0.45623039635015683,
+    "methods": {
+      "otsu": {
+        "sample_id": "hkr_forms_page_001483",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 193.0
+        },
+        "foreground_ratio": 0.07336262157382847,
+        "foreground_pixels": 132757,
+        "skeleton_pixels": 64341,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0005",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001483.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0005/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0005/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0005/skeleton_otsu.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hkr_forms_page_001483",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.08148596374889479,
+        "foreground_pixels": 147457,
+        "skeleton_pixels": 65884,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0005",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001483.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0005/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0005/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0005/skeleton_sauvola.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hkr_forms_page_001483",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.09411085322723253,
+        "foreground_pixels": 170303,
+        "skeleton_pixels": 68602,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0005",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001483.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0005/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0005/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0005/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hkr_forms_0006",
+    "sample_id": "hkr_forms_page_001466",
+    "dataset": "hkr_forms",
+    "level": "form_page",
+    "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001466.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0006",
+    "scale": 0.45623039635015683,
+    "methods": {
+      "otsu": {
+        "sample_id": "hkr_forms_page_001466",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 197.0
+        },
+        "foreground_ratio": 0.09644064986737401,
+        "foreground_pixels": 174519,
+        "skeleton_pixels": 85344,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0006",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001466.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0006/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0006/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0006/skeleton_otsu.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hkr_forms_page_001466",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.10117484526967285,
+        "foreground_pixels": 183086,
+        "skeleton_pixels": 87259,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0006",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001466.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0006/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0006/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0006/skeleton_sauvola.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hkr_forms_page_001466",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.11775309460654289,
+        "foreground_pixels": 213086,
+        "skeleton_pixels": 90117,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0006",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_001466.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0006/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0006/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0006/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hkr_forms_0007",
+    "sample_id": "hkr_forms_page_000226",
+    "dataset": "hkr_forms",
+    "level": "form_page",
+    "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000226.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0007",
+    "scale": 0.45623039635015683,
+    "methods": {
+      "otsu": {
+        "sample_id": "hkr_forms_page_000226",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 190.0
+        },
+        "foreground_ratio": 0.07020335985853227,
+        "foreground_pixels": 127040,
+        "skeleton_pixels": 56167,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0007",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000226.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0007/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0007/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0007/skeleton_otsu.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hkr_forms_page_000226",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.07804045092838197,
+        "foreground_pixels": 141222,
+        "skeleton_pixels": 57462,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0007",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000226.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0007/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0007/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0007/skeleton_sauvola.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hkr_forms_page_000226",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.08637323165340406,
+        "foreground_pixels": 156301,
+        "skeleton_pixels": 58742,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0007",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000226.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0007/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0007/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0007/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hkr_forms_0008",
+    "sample_id": "hkr_forms_page_000137",
+    "dataset": "hkr_forms",
+    "level": "form_page",
+    "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000137.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0008",
+    "scale": 0.45623039635015683,
+    "methods": {
+      "otsu": {
+        "sample_id": "hkr_forms_page_000137",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 189.0
+        },
+        "foreground_ratio": 0.07244308134394341,
+        "foreground_pixels": 131093,
+        "skeleton_pixels": 59338,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0008",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000137.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0008/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0008/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0008/skeleton_otsu.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hkr_forms_page_000137",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.0813986516357206,
+        "foreground_pixels": 147299,
+        "skeleton_pixels": 60947,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0008",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000137.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0008/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0008/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0008/skeleton_sauvola.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hkr_forms_page_000137",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.09069407603890363,
+        "foreground_pixels": 164120,
+        "skeleton_pixels": 62358,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0008",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000137.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0008/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0008/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0008/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hkr_forms_0009",
+    "sample_id": "hkr_forms_page_000912",
+    "dataset": "hkr_forms",
+    "level": "form_page",
+    "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000912.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0009",
+    "scale": 0.45623039635015683,
+    "methods": {
+      "otsu": {
+        "sample_id": "hkr_forms_page_000912",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 190.0
+        },
+        "foreground_ratio": 0.07854664014146773,
+        "foreground_pixels": 142138,
+        "skeleton_pixels": 62552,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0009",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000912.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0009/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0009/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0009/skeleton_otsu.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hkr_forms_page_000912",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.08735024314765694,
+        "foreground_pixels": 158069,
+        "skeleton_pixels": 65401,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0009",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000912.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0009/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0009/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0009/skeleton_sauvola.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hkr_forms_page_000912",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.09885831122900088,
+        "foreground_pixels": 178894,
+        "skeleton_pixels": 68941,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0009",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000912.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0009/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0009/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0009/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      }
+    }
+  },
+  {
+    "pilot_id": "pilot_hkr_forms_0010",
+    "sample_id": "hkr_forms_page_000770",
+    "dataset": "hkr_forms",
+    "level": "form_page",
+    "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000770.png",
+    "output_dir": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010",
+    "scale": 0.45623039635015683,
+    "methods": {
+      "otsu": {
+        "sample_id": "hkr_forms_page_000770",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "otsu",
+        "threshold_info": {
+          "threshold": 201.0
+        },
+        "foreground_ratio": 0.054067749778956675,
+        "foreground_pixels": 97841,
+        "skeleton_pixels": 56169,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0010",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000770.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/binary_otsu.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/skeleton_otsu.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "sauvola": {
+        "sample_id": "hkr_forms_page_000770",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "sauvola",
+        "threshold_info": {
+          "window_size": 25,
+          "k": 0.2
+        },
+        "foreground_ratio": 0.056111295313881523,
+        "foreground_pixels": 101539,
+        "skeleton_pixels": 56333,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0010",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000770.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/binary_sauvola.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/skeleton_sauvola.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      },
+      "adaptive_gaussian": {
+        "sample_id": "hkr_forms_page_000770",
+        "dataset": "hkr_forms",
+        "level": "form_page",
+        "image_width": 1131,
+        "image_height": 1600,
+        "binarization": "adaptive_gaussian",
+        "threshold_info": {
+          "block_size": 35,
+          "offset": 10.0
+        },
+        "foreground_ratio": 0.06785145888594164,
+        "foreground_pixels": 122784,
+        "skeleton_pixels": 57485,
+        "scale": 0.45623039635015683,
+        "warnings": [
+          "large_page_scaled",
+          "hkr_forms_page",
+          "hkr_possible_form_grid"
+        ],
+        "pilot_id": "pilot_hkr_forms_0010",
+        "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000770.png",
+        "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/feature_scaled.png",
+        "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/binary_adaptive_gaussian.png",
+        "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/skeleton_adaptive_gaussian.png",
+        "selection_reason": [
+          "hkr_forms",
+          "form_page",
+          "random_train_val",
+          "page_stress"
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,139 @@
+{
+  "h2_v1_verdict": "partial_support_with_preprocessing_exception",
+  "overall": {
+    "n": 100,
+    "usable_rate": 0.92,
+    "critical_topology_error_rate": 0.24,
+    "skeleton_follows_ink_rate": 0.74,
+    "border_artifact_rate": 0.23,
+    "mean_graph_quality_0_3": 2.4,
+    "mean_cer": 0.19190834423574366,
+    "mean_structural_risk_score": 0.50242048426292,
+    "failure_stage_counts": {
+      "ok": 77,
+      "binarization": 23
+    },
+    "quality_counts": {
+      "2": 5,
+      "3": 71,
+      "0": 7,
+      "1": 17
+    },
+    "critical_counts": {
+      "0": 76,
+      "1": 24
+    },
+    "border_artifact_counts": {
+      "0": 77,
+      "1": 23
+    },
+    "exclusion_reason_counts": {
+      "ok": 89,
+      "too_short": 6,
+      "background_dominates": 1,
+      "illegible_or_bad_crop": 3,
+      "non_text_fragment": 1
+    }
+  },
+  "by_dataset": {
+    "cyrillic_handwriting": {
+      "n": 37,
+      "usable_rate": 0.9459459459459459,
+      "critical_topology_error_rate": 0.05405405405405406,
+      "skeleton_follows_ink_rate": 0.918918918918919,
+      "border_artifact_rate": 0.0,
+      "mean_graph_quality_0_3": 2.7567567567567566,
+      "mean_cer": 0.26388589585184014,
+      "mean_structural_risk_score": 0.467390400825114,
+      "failure_stage_counts": {
+        "ok": 37
+      },
+      "quality_counts": {
+        "2": 3,
+        "3": 32,
+        "0": 2
+      },
+      "critical_counts": {
+        "0": 35,
+        "1": 2
+      },
+      "border_artifact_counts": {
+        "0": 37
+      },
+      "exclusion_reason_counts": {
+        "ok": 34,
+        "background_dominates": 1,
+        "too_short": 2
+      }
+    },
+    "hkr_words": {
+      "n": 40,
+      "usable_rate": 0.975,
+      "critical_topology_error_rate": 0.0,
+      "skeleton_follows_ink_rate": 1.0,
+      "border_artifact_rate": 0.0,
+      "mean_graph_quality_0_3": 2.975,
+      "mean_cer": 0.13459512709512708,
+      "mean_structural_risk_score": 0.49762445387802307,
+      "failure_stage_counts": {
+        "ok": 40
+      },
+      "quality_counts": {
+        "3": 39,
+        "2": 1
+      },
+      "critical_counts": {
+        "0": 40
+      },
+      "border_artifact_counts": {
+        "0": 40
+      },
+      "exclusion_reason_counts": {
+        "too_short": 3,
+        "ok": 37
+      }
+    },
+    "school_notebooks_clean": {
+      "n": 23,
+      "usable_rate": 0.782608695652174,
+      "critical_topology_error_rate": 0.9565217391304348,
+      "skeleton_follows_ink_rate": 0.0,
+      "border_artifact_rate": 1.0,
+      "mean_graph_quality_0_3": 0.8260869565217391,
+      "mean_cer": 0.1757935301413562,
+      "mean_structural_risk_score": 0.5671141495931245,
+      "failure_stage_counts": {
+        "binarization": 23
+      },
+      "quality_counts": {
+        "1": 17,
+        "0": 5,
+        "2": 1
+      },
+      "critical_counts": {
+        "1": 22,
+        "0": 1
+      },
+      "border_artifact_counts": {
+        "1": 23
+      },
+      "exclusion_reason_counts": {
+        "ok": 18,
+        "illegible_or_bad_crop": 3,
+        "too_short": 1,
+        "non_text_fragment": 1
+      }
+    }
+  },
+  "hkr_plus_cyrillic": {
+    "n": 77,
+    "critical_topology_error_rate": 0.025974025974025976,
+    "skeleton_follows_ink_rate": 0.961038961038961,
+    "mean_graph_quality_0_3": 2.8701298701298703
+  },
+  "school_notebooks_decision": {
+    "include_in_graph_topology_claim": false,
+    "reason": "Dominated by upstream crop/border/binarization artifacts.",
+    "border_suppression_v1": "rejected"
+  }
+}

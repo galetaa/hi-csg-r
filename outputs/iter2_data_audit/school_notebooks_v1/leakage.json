@@ -1,0 +1,13 @@
+{
+  "cross_split_exact_hash_count": 0,
+  "cross_split_dhash_count": 1,
+  "cross_split_page_count": 0,
+  "cross_split_exact_hashes": {},
+  "cross_split_dhashes": {
+    "303f2913274b0301": [
+      "train",
+      "val"
+    ]
+  },
+  "cross_split_pages": {}
+}

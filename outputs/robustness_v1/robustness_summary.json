@@ -1,0 +1,389 @@
+{
+  "num_rows": 48,
+  "models": {
+    "gated_v2_dist": {
+      "clean": {
+        "model": "gated_v2_dist",
+        "condition": "clean",
+        "distortion": "clean",
+        "level": "clean",
+        "n": 5563,
+        "cer": 0.14375845913586674,
+        "wer": 0.5056932350971199,
+        "exact": 0.42387201150458387,
+        "clean_n": 5563,
+        "clean_cer": 0.14375845913586674,
+        "clean_wer": 0.5056932350971199,
+        "clean_exact": 0.42387201150458387,
+        "absolute_cer_delta": 0.0,
+        "relative_cer_degradation": 0.0,
+        "summary_path": "outputs/robustness_v1/gated_v2_dist/clean/summary.json",
+        "robustness_advantage_vs_image_only": 0.0
+      },
+      "num_distorted_conditions": 15,
+      "mean_distorted_cer": 0.17242963734166233,
+      "mean_absolute_cer_delta": 0.028671178205795587,
+      "mean_relative_cer_degradation": 0.19943993820007724,
+      "by_distortion": {
+        "blur": {
+          "conditions": [
+            "blur_medium",
+            "blur_mild",
+            "blur_strong"
+          ],
+          "mean_cer": 0.16993926774249524,
+          "mean_relative_cer_degradation": 0.18211664735419078,
+          "mean_robustness_advantage_vs_image_only": 0.07652642282086615
+        },
+        "low_contrast": {
+          "conditions": [
+            "low_contrast_medium",
+            "low_contrast_mild",
+            "low_contrast_strong"
+          ],
+          "mean_cer": 0.16406732604546242,
+          "mean_relative_cer_degradation": 0.14127076091154878,
+          "mean_robustness_advantage_vs_image_only": 0.2696721995611122
+        },
+        "noise": {
+          "conditions": [
+            "noise_medium",
+            "noise_mild",
+            "noise_strong"
+          ],
+          "mean_cer": 0.1633940655908381,
+          "mean_relative_cer_degradation": 0.136587485515643,
+          "mean_robustness_advantage_vs_image_only": 0.2811312559544438
+        },
+        "thick_strokes": {
+          "conditions": [
+            "thick_strokes_medium",
+            "thick_strokes_mild",
+            "thick_strokes_strong"
+          ],
+          "mean_cer": 0.16251258025334028,
+          "mean_relative_cer_degradation": 0.130455774430282,
+          "mean_robustness_advantage_vs_image_only": 0.019374486143381855
+        },
+        "thin_strokes": {
+          "conditions": [
+            "thin_strokes_medium",
+            "thin_strokes_mild",
+            "thin_strokes_strong"
+          ],
+          "mean_cer": 0.20223494707617562,
+          "mean_relative_cer_degradation": 0.40676902278872157,
+          "mean_robustness_advantage_vs_image_only": 0.26597747519435216
+        }
+      },
+      "by_level": {
+        "medium": {
+          "conditions": [
+            "blur_medium",
+            "low_contrast_medium",
+            "noise_medium",
+            "thick_strokes_medium",
+            "thin_strokes_medium"
+          ],
+          "mean_cer": 0.15843831337844874,
+          "mean_relative_cer_degradation": 0.10211471610660483,
+          "mean_robustness_advantage_vs_image_only": 0.10637312602736995
+        },
+        "mild": {
+          "conditions": [
+            "blur_mild",
+            "low_contrast_mild",
+            "noise_mild",
+            "thick_strokes_mild",
+            "thin_strokes_mild"
+          ],
+          "mean_cer": 0.15137948984903696,
+          "mean_relative_cer_degradation": 0.05301274623406721,
+          "mean_robustness_advantage_vs_image_only": 0.03748762198105158
+        },
+        "strong": {
+          "conditions": [
+            "blur_strong",
+            "low_contrast_strong",
+            "noise_strong",
+            "thick_strokes_strong",
+            "thin_strokes_strong"
+          ],
+          "mean_cer": 0.20747110879750127,
+          "mean_relative_cer_degradation": 0.44319235225955966,
+          "mean_robustness_advantage_vs_image_only": 0.40374835579607227
+        }
+      }
+    },
+    "graph_vector_v2": {
+      "clean": {
+        "model": "graph_vector_v2",
+        "condition": "clean",
+        "distortion": "clean",
+        "level": "clean",
+        "n": 5563,
+        "cer": 0.1396980739198334,
+        "wer": 0.4904219691895512,
+        "exact": 0.43897177781772423,
+        "clean_n": 5563,
+        "clean_cer": 0.1396980739198334,
+        "clean_wer": 0.4904219691895512,
+        "clean_exact": 0.43897177781772423,
+        "absolute_cer_delta": 0.0,
+        "relative_cer_degradation": 0.0,
+        "summary_path": "outputs/robustness_v1/graph_vector_v2/clean/summary.json",
+        "robustness_advantage_vs_image_only": 0.0
+      },
+      "num_distorted_conditions": 15,
+      "mean_distorted_cer": 0.16970605587367693,
+      "mean_absolute_cer_delta": 0.03000798195384349,
+      "mean_relative_cer_degradation": 0.2148059820142098,
+      "by_distortion": {
+        "blur": {
+          "conditions": [
+            "blur_medium",
+            "blur_mild",
+            "blur_strong"
+          ],
+          "mean_cer": 0.16823182370293252,
+          "mean_relative_cer_degradation": 0.20425299349133008,
+          "mean_robustness_advantage_vs_image_only": 0.05439007668372684
+        },
+        "low_contrast": {
+          "conditions": [
+            "low_contrast_medium",
+            "low_contrast_mild",
+            "low_contrast_strong"
+          ],
+          "mean_cer": 0.16133958007981952,
+          "mean_relative_cer_degradation": 0.15491628161176532,
+          "mean_robustness_advantage_vs_image_only": 0.25602667886089564
+        },
+        "noise": {
+          "conditions": [
+            "noise_medium",
+            "noise_mild",
+            "noise_strong"
+          ],
+          "mean_cer": 0.1558702064896755,
+          "mean_relative_cer_degradation": 0.11576489292989524,
+          "mean_robustness_advantage_vs_image_only": 0.30195384854019164
+        },
+        "thick_strokes": {
+          "conditions": [
+            "thick_strokes_medium",
+            "thick_strokes_mild",
+            "thick_strokes_strong"
+          ],
+          "mean_cer": 0.16002082248828733,
+          "mean_relative_cer_degradation": 0.14547622596512158,
+          "mean_robustness_advantage_vs_image_only": 0.004354034608542279
+        },
+        "thin_strokes": {
+          "conditions": [
+            "thin_strokes_medium",
+            "thin_strokes_mild",
+            "thin_strokes_strong"
+          ],
+          "mean_cer": 0.20306784660766963,
+          "mean_relative_cer_degradation": 0.4536195160729369,
+          "mean_robustness_advantage_vs_image_only": 0.21912698191013683
+        }
+      },
+      "by_level": {
+        "medium": {
+          "conditions": [
+            "blur_medium",
+            "low_contrast_medium",
+            "noise_medium",
+            "thick_strokes_medium",
+            "thin_strokes_medium"
+          ],
+          "mean_cer": 0.1555939614783967,
+          "mean_relative_cer_degradation": 0.11378744969444035,
+          "mean_robustness_advantage_vs_image_only": 0.09470039243953443
+        },
+        "mild": {
+          "conditions": [
+            "blur_mild",
+            "low_contrast_mild",
+            "noise_mild",
+            "thick_strokes_mild",
+            "thin_strokes_mild"
+          ],
+          "mean_cer": 0.1486850598646538,
+          "mean_relative_cer_degradation": 0.06433149500670747,
+          "mean_robustness_advantage_vs_image_only": 0.026168873208411325
+        },
+        "strong": {
+          "conditions": [
+            "blur_strong",
+            "low_contrast_strong",
+            "noise_strong",
+            "thick_strokes_strong",
+            "thin_strokes_strong"
+          ],
+          "mean_cer": 0.20483914627798022,
+          "mean_relative_cer_degradation": 0.46629900134148167,
+          "mean_robustness_advantage_vs_image_only": 0.3806417067141502
+        }
+      }
+    },
+    "image_only": {
+      "clean": {
+        "model": "image_only",
+        "condition": "clean",
+        "distortion": "clean",
+        "level": "clean",
+        "n": 5563,
+        "cer": 0.08223581816287687,
+        "wer": 0.3350230690874226,
+        "exact": 0.6244831925220204,
+        "clean_n": 5563,
+        "clean_cer": 0.08223581816287687,
+        "clean_wer": 0.3350230690874226,
+        "clean_exact": 0.6244831925220204,
+        "absolute_cer_delta": 0.0,
+        "relative_cer_degradation": 0.0,
+        "summary_path": "outputs/robustness_v1/image_only/clean/summary.json",
+        "robustness_advantage_vs_image_only": 0.0
+      },
+      "num_distorted_conditions": 15,
+      "mean_distorted_cer": 0.11364795221671457,
+      "mean_absolute_cer_delta": 0.03141213405383772,
+      "mean_relative_cer_degradation": 0.3819763061349085,
+      "by_distortion": {
+        "blur": {
+          "conditions": [
+            "blur_medium",
+            "blur_mild",
+            "blur_strong"
+          ],
+          "mean_cer": 0.10350554265088104,
+          "mean_relative_cer_degradation": 0.2586430701750569,
+          "mean_robustness_advantage_vs_image_only": 0.0
+        },
+        "low_contrast": {
+          "conditions": [
+            "low_contrast_medium",
+            "low_contrast_mild",
+            "low_contrast_strong"
+          ],
+          "mean_cer": 0.11603004873562091,
+          "mean_relative_cer_degradation": 0.41094296047266105,
+          "mean_robustness_advantage_vs_image_only": 0.0
+        },
+        "noise": {
+          "conditions": [
+            "noise_medium",
+            "noise_mild",
+            "noise_strong"
+          ],
+          "mean_cer": 0.1165872606296367,
+          "mean_relative_cer_degradation": 0.41771874147008686,
+          "mean_robustness_advantage_vs_image_only": 0.0
+        },
+        "thick_strokes": {
+          "conditions": [
+            "thick_strokes_medium",
+            "thick_strokes_mild",
+            "thick_strokes_strong"
+          ],
+          "mean_cer": 0.09455723222670914,
+          "mean_relative_cer_degradation": 0.14983026057366386,
+          "mean_robustness_advantage_vs_image_only": 0.0
+        },
+        "thin_strokes": {
+          "conditions": [
+            "thin_strokes_medium",
+            "thin_strokes_mild",
+            "thin_strokes_strong"
+          ],
+          "mean_cer": 0.13755967684072512,
+          "mean_relative_cer_degradation": 0.6727464979830738,
+          "mean_robustness_advantage_vs_image_only": 0.0
+        }
+      },
+      "by_level": {
+        "medium": {
+          "conditions": [
+            "blur_medium",
+            "low_contrast_medium",
+            "noise_medium",
+            "thick_strokes_medium",
+            "thin_strokes_medium"
+          ],
+          "mean_cer": 0.099380986437777,
+          "mean_relative_cer_degradation": 0.20848784213397478,
+          "mean_robustness_advantage_vs_image_only": 0.0
+        },
+        "mild": {
+          "conditions": [
+            "blur_mild",
+            "low_contrast_mild",
+            "noise_mild",
+            "thick_strokes_mild",
+            "thin_strokes_mild"
+          ],
+          "mean_cer": 0.08967818998708876,
+          "mean_relative_cer_degradation": 0.09050036821511878,
+          "mean_robustness_advantage_vs_image_only": 0.0
+        },
+        "strong": {
+          "conditions": [
+            "blur_strong",
+            "low_contrast_strong",
+            "noise_strong",
+            "thick_strokes_strong",
+            "thin_strokes_strong"
+          ],
+          "mean_cer": 0.15188468022527798,
+          "mean_relative_cer_degradation": 0.8469407080556319,
+          "mean_robustness_advantage_vs_image_only": 0.0
+        }
+      }
+    }
+  },
+  "verdict": {
+    "criterion": "H1 is supported only if a graph-aware model has lower relative CER degradation than image-only across multiple distortion families, not just one isolated condition.",
+    "models": {
+      "graph_vector_v2": {
+        "clean_cer": 0.1396980739198334,
+        "image_only_clean_cer": 0.08223581816287687,
+        "mean_relative_cer_degradation": 0.2148059820142098,
+        "image_only_mean_relative_cer_degradation": 0.3819763061349085,
+        "mean_degradation_advantage_vs_image_only": 0.1671703241206987,
+        "better_distortion_families_than_image_only": [
+          "blur",
+          "low_contrast",
+          "noise",
+          "thick_strokes",
+          "thin_strokes"
+        ],
+        "worse_distortion_families_than_image_only": [],
+        "strict_interpretation": "potential_partial_H1_support"
+      },
+      "gated_v2_dist": {
+        "clean_cer": 0.14375845913586674,
+        "image_only_clean_cer": 0.08223581816287687,
+        "mean_relative_cer_degradation": 0.19943993820007724,
+        "image_only_mean_relative_cer_degradation": 0.3819763061349085,
+        "mean_degradation_advantage_vs_image_only": 0.18253636793483127,
+        "better_distortion_families_than_image_only": [
+          "blur",
+          "low_contrast",
+          "noise",
+          "thick_strokes",
+          "thin_strokes"
+        ],
+        "worse_distortion_families_than_image_only": [],
+        "strict_interpretation": "potential_partial_H1_support"
+      }
+    }
+  },
+  "definitions": {
+    "absolute_cer_delta": "CER(condition) - CER(clean)",
+    "relative_cer_degradation": "(CER(condition) - CER(clean)) / CER(clean)",
+    "robustness_advantage_vs_image_only": "image_only_relative_degradation - model_relative_degradation; positive means the model degraded less than image-only"
+  }
+}

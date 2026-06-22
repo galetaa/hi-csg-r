@@ -1,0 +1,402 @@
+{
+  "runs": {
+    "iam": {
+      "title": "IAM full v1",
+      "dataset": "IAM",
+      "level": "line",
+      "language": "en",
+      "note": "English line-level dataset. Exact match is less comparable with word-level datasets.",
+      "splits": {
+        "train": {
+          "n": 11134,
+          "cer": 0.0007167616823019173,
+          "wer": 0.003717254264993576,
+          "exact": 0.9718879109035388,
+          "pred_len": 43.22354948805461,
+          "empty": 0.0,
+          "blank": 0.6853853435626565,
+          "penalty": -0.5,
+          "checkpoint_epoch": 76,
+          "checkpoint_val_cer": 0.06699550696201605
+        },
+        "val": {
+          "n": 1180,
+          "cer": 0.06700994512899658,
+          "wer": 0.22772088053743073,
+          "exact": 0.25084745762711863,
+          "pred_len": 42.7135593220339,
+          "empty": 0.0,
+          "blank": 0.6730997918238077,
+          "penalty": -0.5,
+          "checkpoint_epoch": 76,
+          "checkpoint_val_cer": 0.06699550696201605
+        },
+        "test": {
+          "n": 1039,
+          "cer": 0.06366733557681778,
+          "wer": 0.2202036934378109,
+          "exact": 0.2685274302213667,
+          "pred_len": 43.6390760346487,
+          "empty": 0.0,
+          "blank": 0.6799522749199406,
+          "penalty": -0.5,
+          "checkpoint_epoch": 76,
+          "checkpoint_val_cer": 0.06699550696201605
+        }
+      },
+      "grouped": {
+        "train": {
+          "iam|line|None": {
+            "n": 11134,
+            "cer": 0.0007167616823019173,
+            "wer": 0.003717254264993576,
+            "exact": 0.9718879109035388
+          }
+        },
+        "val": {
+          "iam|line|None": {
+            "n": 1180,
+            "cer": 0.06700994512899658,
+            "wer": 0.22772088053743073,
+            "exact": 0.25084745762711863
+          }
+        },
+        "test": {
+          "iam|line|None": {
+            "n": 1039,
+            "cer": 0.06366733557681778,
+            "wer": 0.2202036934378109,
+            "exact": 0.2685274302213667
+          }
+        }
+      }
+    },
+    "cyrillic_handwriting": {
+      "title": "Cyrillic Handwriting full v1",
+      "dataset": "Cyrillic Handwriting",
+      "level": "word/phrase",
+      "language": "ru",
+      "note": "Russian word/phrase crop dataset. Test remains harder than validation.",
+      "splits": {
+        "train": {
+          "n": 65031,
+          "cer": 0.003706065303965444,
+          "wer": 0.02407210919920241,
+          "exact": 0.9728898525318694,
+          "pred_len": 7.467776906398487,
+          "empty": 0.0,
+          "blank": 0.8212456303145738,
+          "penalty": -0.4,
+          "checkpoint_epoch": 63,
+          "checkpoint_val_cer": 0.0810908965262766
+        },
+        "val": {
+          "n": 7232,
+          "cer": 0.08085436907536696,
+          "wer": 0.3268436578171092,
+          "exact": 0.6645464601769911,
+          "pred_len": 7.409430309734513,
+          "empty": 0.0,
+          "blank": 0.8250148275589346,
+          "penalty": -0.4,
+          "checkpoint_epoch": 63,
+          "checkpoint_val_cer": 0.0810908965262766
+        },
+        "test": {
+          "n": 1563,
+          "cer": 0.14053150582338028,
+          "wer": 0.5470036255065046,
+          "exact": 0.39859245041586694,
+          "pred_len": 9.431222008957134,
+          "empty": 0.0,
+          "blank": 0.8313251761503886,
+          "penalty": -0.4,
+          "checkpoint_epoch": 63,
+          "checkpoint_val_cer": 0.0810908965262766
+        }
+      },
+      "grouped": {
+        "train": {
+          "cyrillic_handwriting|word|None": {
+            "n": 58434,
+            "cer": 0.0033365634975320497,
+            "wer": 0.02233288838689804,
+            "exact": 0.9781976246705685
+          },
+          "cyrillic_handwriting|phrase|None": {
+            "n": 6597,
+            "cer": 0.006978987625797989,
+            "wer": 0.03947754029609423,
+            "exact": 0.9258753979081401
+          }
+        },
+        "val": {
+          "cyrillic_handwriting|word|None": {
+            "n": 6522,
+            "cer": 0.07920823434245845,
+            "wer": 0.32444035571910457,
+            "exact": 0.681999386691199
+          },
+          "cyrillic_handwriting|phrase|None": {
+            "n": 710,
+            "cer": 0.09597562362188826,
+            "wer": 0.34892018779342726,
+            "exact": 0.504225352112676
+          }
+        },
+        "test": {
+          "cyrillic_handwriting|word|None": {
+            "n": 1100,
+            "cer": 0.13058726146183952,
+            "wer": 0.5527272727272727,
+            "exact": 0.4627272727272727
+          },
+          "cyrillic_handwriting|phrase|None": {
+            "n": 463,
+            "cer": 0.16415714037563764,
+            "wer": 0.5334053275737941,
+            "exact": 0.24622030237580994
+          }
+        }
+      }
+    },
+    "hkr_words": {
+      "title": "HKR Words full v1",
+      "dataset": "HKR Words",
+      "level": "word/phrase",
+      "language": "ru_kk",
+      "note": "Text-grouped split; val/test are stable and close.",
+      "splits": {
+        "train": {
+          "n": 51954,
+          "cer": 0.0028537487974202467,
+          "wer": 0.017722729080853736,
+          "exact": 0.9713785271586404,
+          "pred_len": 11.168321977133619,
+          "empty": 0.0,
+          "blank": 0.8060789301657753,
+          "penalty": -0.6,
+          "checkpoint_epoch": 72,
+          "checkpoint_val_cer": 0.13101144310783036
+        },
+        "val": {
+          "n": 6494,
+          "cer": 0.1310928369219005,
+          "wer": 0.4641797556719077,
+          "exact": 0.4314752078842008,
+          "pred_len": 10.154296273483215,
+          "empty": 0.0,
+          "blank": 0.8277222904441847,
+          "penalty": -0.6,
+          "checkpoint_epoch": 72,
+          "checkpoint_val_cer": 0.13101144310783036
+        },
+        "test": {
+          "n": 6495,
+          "cer": 0.1525421159570027,
+          "wer": 0.5186425455478618,
+          "exact": 0.371824480369515,
+          "pred_len": 10.273903002309469,
+          "empty": 0.0,
+          "blank": 0.8350919906713865,
+          "penalty": -0.6,
+          "checkpoint_epoch": 72,
+          "checkpoint_val_cer": 0.13101144310783036
+        }
+      },
+      "grouped": {
+        "train": {
+          "hkr_words|phrase|None": {
+            "n": 23884,
+            "cer": 0.0035080127172161775,
+            "wer": 0.018998771841679148,
+            "exact": 0.9568748953274159
+          },
+          "hkr_words|word|None": {
+            "n": 28070,
+            "cer": 0.0022970534122971485,
+            "wer": 0.01663697898111863,
+            "exact": 0.9837192732454578
+          }
+        },
+        "val": {
+          "hkr_words|phrase|None": {
+            "n": 2965,
+            "cer": 0.09084108410548487,
+            "wer": 0.32997751545812265,
+            "exact": 0.4327150084317032
+          },
+          "hkr_words|word|None": {
+            "n": 3529,
+            "cer": 0.16491160912384978,
+            "wer": 0.5769339756304902,
+            "exact": 0.4304335505809011
+          }
+        },
+        "test": {
+          "hkr_words|phrase|None": {
+            "n": 2938,
+            "cer": 0.10035795444546103,
+            "wer": 0.3323973224415716,
+            "exact": 0.4196732471068754
+          },
+          "hkr_words|word|None": {
+            "n": 3557,
+            "cer": 0.19564503035703149,
+            "wer": 0.6724768062974417,
+            "exact": 0.3323025021085184
+          }
+        }
+      }
+    },
+    "school_notebooks": {
+      "title": "School Notebooks full v1",
+      "dataset": "School Notebooks Clean",
+      "level": "word/phrase",
+      "language": "ru",
+      "note": "Largest Russian crop dataset. Category breakdown is mandatory.",
+      "splits": {
+        "train": {
+          "n": 234833,
+          "cer": 0.006103460132414311,
+          "wer": 0.03717877121593805,
+          "exact": 0.9629822043750239,
+          "pred_len": 5.862161621237219,
+          "empty": 0.0,
+          "blank": 0.8314443210032484,
+          "penalty": -0.2,
+          "checkpoint_epoch": 47,
+          "checkpoint_val_cer": 0.04932361069038134
+        },
+        "val": {
+          "n": 24214,
+          "cer": 0.04924816684279359,
+          "wer": 0.1947495938988464,
+          "exact": 0.8094077806227802,
+          "pred_len": 5.9176096473114725,
+          "empty": 0.0,
+          "blank": 0.8445514278326323,
+          "penalty": -0.2,
+          "checkpoint_epoch": 47,
+          "checkpoint_val_cer": 0.04932361069038134
+        },
+        "test": {
+          "n": 24623,
+          "cer": 0.08377374948852143,
+          "wer": 0.30601470170166106,
+          "exact": 0.6997522641432806,
+          "pred_len": 5.828656134508386,
+          "empty": 0.0,
+          "blank": 0.8289094952792924,
+          "penalty": -0.2,
+          "checkpoint_epoch": 47,
+          "checkpoint_val_cer": 0.04932361069038134
+        }
+      },
+      "grouped": {
+        "train": {
+          "school_notebooks_clean|word|pupil_text": {
+            "n": 217278,
+            "cer": 0.00556926778751011,
+            "wer": 0.035291193770193026,
+            "exact": 0.9652380820883845
+          },
+          "school_notebooks_clean|word|pupil_comment": {
+            "n": 9900,
+            "cer": 0.010964200081624327,
+            "wer": 0.03878787878787879,
+            "exact": 0.9612121212121212
+          },
+          "school_notebooks_clean|phrase|pupil_text": {
+            "n": 3344,
+            "cer": 0.026964365059060403,
+            "wer": 0.1705449703804967,
+            "exact": 0.8065191387559809
+          },
+          "school_notebooks_clean|word|teacher_comment": {
+            "n": 4224,
+            "cer": 0.0049400075145813755,
+            "wer": 0.021543560606060608,
+            "exact": 0.9789299242424242
+          },
+          "school_notebooks_clean|phrase|teacher_comment": {
+            "n": 86,
+            "cer": 0.04224973992415852,
+            "wer": 0.20348837209302326,
+            "exact": 0.7674418604651163
+          },
+          "school_notebooks_clean|phrase|pupil_comment": {
+            "n": 1,
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0
+          }
+        },
+        "val": {
+          "school_notebooks_clean|word|pupil_text": {
+            "n": 22396,
+            "cer": 0.04160242086560233,
+            "wer": 0.17672798714056082,
+            "exact": 0.827245936774424
+          },
+          "school_notebooks_clean|word|teacher_comment": {
+            "n": 576,
+            "cer": 0.09704495276646015,
+            "wer": 0.234375,
+            "exact": 0.7743055555555556
+          },
+          "school_notebooks_clean|phrase|pupil_text": {
+            "n": 308,
+            "cer": 0.1694663696692922,
+            "wer": 0.9632034632034631,
+            "exact": 0.032467532467532464
+          },
+          "school_notebooks_clean|word|pupil_comment": {
+            "n": 928,
+            "cer": 0.1615467955177007,
+            "wer": 0.3448275862068966,
+            "exact": 0.6637931034482759
+          },
+          "school_notebooks_clean|phrase|teacher_comment": {
+            "n": 6,
+            "cer": 0.45972222222222214,
+            "wer": 1.0,
+            "exact": 0.0
+          }
+        },
+        "test": {
+          "school_notebooks_clean|word|pupil_comment": {
+            "n": 1224,
+            "cer": 0.16419063416612437,
+            "wer": 0.35947712418300654,
+            "exact": 0.6454248366013072
+          },
+          "school_notebooks_clean|word|pupil_text": {
+            "n": 22818,
+            "cer": 0.07925411696534636,
+            "wer": 0.30243667280217373,
+            "exact": 0.7038303094048558
+          },
+          "school_notebooks_clean|word|teacher_comment": {
+            "n": 436,
+            "cer": 0.06823146272687557,
+            "wer": 0.18577981651376146,
+            "exact": 0.8142201834862385
+          },
+          "school_notebooks_clean|phrase|pupil_text": {
+            "n": 144,
+            "cer": 0.16126624147457472,
+            "wer": 0.7777777777777778,
+            "exact": 0.1736111111111111
+          },
+          "school_notebooks_clean|phrase|teacher_comment": {
+            "n": 1,
+            "cer": 0.4,
+            "wer": 1.0,
+            "exact": 0.0
+          }
+        }
+      }
+    }
+  }
+}
