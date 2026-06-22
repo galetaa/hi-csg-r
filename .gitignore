@@ -18,7 +18,7 @@ pdf_manifest.json
 /data/processed/
 /data/splits/
 data/experiments/
-
+!data/**/summary.json
 outputs/**
 !outputs/**/
 !outputs/**/*.md

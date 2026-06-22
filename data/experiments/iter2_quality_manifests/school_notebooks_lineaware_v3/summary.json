@@ -1,0 +1,102 @@
+{
+  "graph_root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed_school_lineaware_v3",
+  "out_root": "data/experiments/iter2_quality_manifests/school_notebooks_lineaware_v3",
+  "splits": {
+    "train": {
+      "n": 10000,
+      "bucket_counts": {
+        "clean_core": 8783,
+        "hard_real": 1217,
+        "invalid_or_review": 0
+      },
+      "bucket_rates": {
+        "clean_core": 0.8783,
+        "hard_real": 0.1217,
+        "invalid_or_review": 0.0
+      },
+      "reason_counts": {
+        "ruling_high": 388,
+        "dir_h_high": 145,
+        "fg_high": 112,
+        "cc_high": 244,
+        "skel_low": 100,
+        "stroke_width_high": 293,
+        "skel_high": 66,
+        "fg_low": 80
+      }
+    },
+    "val": {
+      "n": 2000,
+      "bucket_counts": {
+        "clean_core": 1796,
+        "hard_real": 204,
+        "invalid_or_review": 0
+      },
+      "bucket_rates": {
+        "clean_core": 0.898,
+        "hard_real": 0.102,
+        "invalid_or_review": 0.0
+      },
+      "reason_counts": {
+        "ruling_high": 42,
+        "dir_h_high": 85,
+        "cc_high": 36,
+        "stroke_width_high": 38,
+        "skel_high": 10,
+        "skel_low": 4,
+        "fg_high": 11,
+        "fg_low": 13
+      }
+    },
+    "test": {
+      "n": 2000,
+      "bucket_counts": {
+        "clean_core": 1764,
+        "hard_real": 236,
+        "invalid_or_review": 0
+      },
+      "bucket_rates": {
+        "clean_core": 0.882,
+        "hard_real": 0.118,
+        "invalid_or_review": 0.0
+      },
+      "reason_counts": {
+        "skel_high": 60,
+        "ruling_high": 47,
+        "cc_high": 35,
+        "dir_h_high": 62,
+        "stroke_width_high": 42,
+        "fg_high": 17,
+        "fg_low": 11,
+        "skel_low": 3
+      }
+    }
+  },
+  "rules": {
+    "clean_core": {
+      "warning_count": "== 0",
+      "fg_fraction": [
+        0.055,
+        0.175
+      ],
+      "skel_fraction": [
+        0.015,
+        0.065
+      ],
+      "cc_count": "<= 12",
+      "dir_h_frac": "<= 0.50",
+      "stroke_width_mean": "<= 5.0",
+      "ruling_response_mean": "<= 22.0",
+      "text_len": ">= 2"
+    },
+    "invalid_or_review": {
+      "fg_fraction": [
+        "< 0.015",
+        "> 0.28"
+      ],
+      "skel_fraction": "< 0.003",
+      "cc_count": "> 45",
+      "stroke_width_mean": "> 8.0"
+    }
+  }
+}
