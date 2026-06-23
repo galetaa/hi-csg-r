@@ -43,7 +43,21 @@ def vocab_characters(path: Path) -> set[str]:
     return chars
 
 
-def normalize_line_row(row: dict[str, Any]) -> dict[str, Any]:
+def augmentation_source_from_out_root(out_root: Path) -> str:
+    name = out_root.name
+
+    for size in ["2k", "5k", "10k"]:
+        if f"_{size}_" in f"_{name}_":
+            return f"school_full_line_raw_context_v1_sampled_{size}"
+
+    return "school_full_line_raw_context_v1_sampled"
+
+
+def normalize_line_row(
+    row: dict[str, Any],
+    *,
+    augmentation_source: str,
+) -> dict[str, Any]:
     row = dict(row)
 
     text = str(
@@ -60,7 +74,7 @@ def normalize_line_row(row: dict[str, Any]) -> dict[str, Any]:
 
     row["dataset"] = "school_notebooks_line"
     row["source_dataset"] = "school_notebooks_clean"
-    row["augmentation_source"] = "school_full_line_raw_context_v1_sampled_5k"
+    row["augmentation_source"] = augmentation_source
     row["source_type"] = "natural_line_group"
     row["level"] = "line"
 
@@ -82,6 +96,7 @@ def main() -> None:
     base_root = Path(args.base_root)
     line_train_path = Path(args.line_train_jsonl)
     out_root = Path(args.out_root)
+    augmentation_source = augmentation_source_from_out_root(out_root)
 
     base_train = read_jsonl(base_root / "train.jsonl")
     line_rows_raw = read_jsonl(line_train_path)
@@ -92,7 +107,10 @@ def main() -> None:
     line_train = []
 
     for row in line_rows_raw:
-        normalized = normalize_line_row(row)
+        normalized = normalize_line_row(
+            row,
+            augmentation_source=augmentation_source,
+        )
 
         if allowed_chars is not None:
             missing = sorted(set(normalized["text"]) - allowed_chars)
@@ -145,7 +163,7 @@ def main() -> None:
             str(row.get("dataset", ""))
             for row in merged_train
         )),
-        "augmentation_source": "school_full_line_raw_context_v1_sampled_5k",
+        "augmentation_source": augmentation_source,
         "line_crop_quality_note": (
             "Rendered line images are raw natural-line crops with contextual overlap; "
             "sanity gate: readable=100%, good_for_htr=100%, strict correct_crop=63.8%."
