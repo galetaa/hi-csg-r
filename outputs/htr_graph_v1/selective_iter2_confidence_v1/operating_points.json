@@ -1,0 +1,127 @@
+{
+  "model": "plus_10k_context",
+  "risk_method": "confidence_graph",
+  "threshold_source": "val school coverage",
+  "operating_points": {
+    "strict": {
+      "target_school_coverage": 0.5,
+      "threshold": 0.2916880724922044,
+      "val": {
+        "all": {
+          "n_total": 6000,
+          "n_accepted": 1884,
+          "coverage": 0.314,
+          "cer": 0.02876606172784517,
+          "wer": 0.11863057324840764,
+          "exact": 0.8795116772823779
+        },
+        "school": {
+          "n_total": 2000,
+          "n_accepted": 1000,
+          "coverage": 0.5,
+          "cer": 0.028550779775779772,
+          "wer": 0.113,
+          "exact": 0.887
+        }
+      },
+      "test": {
+        "all": {
+          "n_total": 5563,
+          "n_accepted": 1276,
+          "coverage": 0.22937264066151358,
+          "cer": 0.051940174941742336,
+          "wer": 0.20363113897596655,
+          "exact": 0.7899686520376176
+        },
+        "school": {
+          "n_total": 2000,
+          "n_accepted": 781,
+          "coverage": 0.3905,
+          "cer": 0.049145377314391406,
+          "wer": 0.19078104993597952,
+          "exact": 0.8143405889884763
+        }
+      }
+    },
+    "balanced": {
+      "target_school_coverage": 0.8,
+      "threshold": 0.5787041281831651,
+      "val": {
+        "all": {
+          "n_total": 6000,
+          "n_accepted": 4020,
+          "coverage": 0.67,
+          "cer": 0.04790062846775221,
+          "wer": 0.2099502487562189,
+          "exact": 0.7728855721393035
+        },
+        "school": {
+          "n_total": 2000,
+          "n_accepted": 1600,
+          "coverage": 0.8,
+          "cer": 0.04538617458929958,
+          "wer": 0.189375,
+          "exact": 0.811875
+        }
+      },
+      "test": {
+        "all": {
+          "n_total": 5563,
+          "n_accepted": 3103,
+          "coverage": 0.5577925579723171,
+          "cer": 0.06765616468995751,
+          "wer": 0.2958427328391879,
+          "exact": 0.6799871092491138
+        },
+        "school": {
+          "n_total": 2000,
+          "n_accepted": 1323,
+          "coverage": 0.6615,
+          "cer": 0.06850422819810574,
+          "wer": 0.2834467120181406,
+          "exact": 0.7248677248677249
+        }
+      }
+    },
+    "broad": {
+      "target_school_coverage": 0.9,
+      "threshold": 0.7788449172384991,
+      "val": {
+        "all": {
+          "n_total": 6000,
+          "n_accepted": 5024,
+          "coverage": 0.8373333333333334,
+          "cer": 0.06144236964486301,
+          "wer": 0.2754279458598726,
+          "exact": 0.6954617834394905
+        },
+        "school": {
+          "n_total": 2000,
+          "n_accepted": 1800,
+          "coverage": 0.9,
+          "cer": 0.05720337609920943,
+          "wer": 0.24222222222222223,
+          "exact": 0.76
+        }
+      },
+      "test": {
+        "all": {
+          "n_total": 5563,
+          "n_accepted": 4214,
+          "coverage": 0.7575049433758764,
+          "cer": 0.08635744482108731,
+          "wer": 0.374703369719981,
+          "exact": 0.5811580446131941
+        },
+        "school": {
+          "n_total": 2000,
+          "n_accepted": 1559,
+          "coverage": 0.7795,
+          "cer": 0.08453876143100005,
+          "wer": 0.3434894162924952,
+          "exact": 0.6651699807568955
+        }
+      }
+    }
+  }
+}
