@@ -1,0 +1,36 @@
+{
+  "seed": 42,
+  "target_total": 200,
+  "actual_total": 200,
+  "targets": {
+    "clean_core_correct": 40,
+    "hard_real_correct": 40,
+    "hard_real_error": 40,
+    "high_confidence_error": 30,
+    "rejected_correct_low_confidence": 30,
+    "numeric_mixed_rare_format": 20
+  },
+  "actual_counts": {
+    "clean_core_correct": 40,
+    "hard_real_correct": 40,
+    "hard_real_error": 40,
+    "high_confidence_error": 30,
+    "rejected_correct_low_confidence": 30,
+    "numeric_mixed_rare_format": 20
+  },
+  "dataset_counts": {
+    "school_notebooks_clean": 156,
+    "cyrillic_handwriting": 18,
+    "hkr_words": 26
+  },
+  "token_type_counts": {
+    "alpha": 123,
+    "mixed": 74,
+    "numeric": 3
+  },
+  "notes": [
+    "Samples are selected from test split for structural gold annotation.",
+    "Predictions/risk use plus_10k_context confidence_graph artifacts.",
+    "Duplicate sample_ids are removed across strata by priority order."
+  ]
+}

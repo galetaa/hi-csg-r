@@ -208,6 +208,14 @@ def main() -> None:
         }
 
     write_json(out_root / "operating_points.json", result)
+    write_jsonl(
+        val_rows,
+        out_root / "operating_point_val_rows.jsonl",
+    )
+    write_jsonl(
+        test_rows,
+        out_root / "operating_point_test_rows.jsonl",
+    )
 
     strict_threshold = result["operating_points"]["strict"]["threshold"]
     accepted_errors = [

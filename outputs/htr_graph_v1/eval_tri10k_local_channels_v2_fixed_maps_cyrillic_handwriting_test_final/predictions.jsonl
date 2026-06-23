@@ -1,0 +1,1563 @@
+{"sample_id": "cyr_phrase_072291", "dataset": "cyrillic_handwriting", "target": "1 класса", "pred": "1 класса"}
+{"sample_id": "cyr_phrase_072292", "dataset": "cyrillic_handwriting", "target": "г. ульяновск", "pred": "г. улояновек"}
+{"sample_id": "cyr_phrase_072293", "dataset": "cyrillic_handwriting", "target": "на место", "pred": "на место"}
+{"sample_id": "cyr_phrase_072297", "dataset": "cyrillic_handwriting", "target": "было только", "pred": "было только"}
+{"sample_id": "cyr_phrase_072299", "dataset": "cyrillic_handwriting", "target": "просрочив все сроки", "pred": "просрогив все сроки"}
+{"sample_id": "cyr_phrase_072300", "dataset": "cyrillic_handwriting", "target": "которые для", "pred": "которые длия"}
+{"sample_id": "cyr_phrase_072302", "dataset": "cyrillic_handwriting", "target": "отправления были", "pred": "отправления были"}
+{"sample_id": "cyr_phrase_072304", "dataset": "cyrillic_handwriting", "target": "просьба разобраться", "pred": "просьба разобраться"}
+{"sample_id": "cyr_phrase_072305", "dataset": "cyrillic_handwriting", "target": "в ситуации,", "pred": "в ситуацим,"}
+{"sample_id": "cyr_phrase_072306", "dataset": "cyrillic_handwriting", "target": "30. 08. 2004", "pred": "30.08.го0й"}
+{"sample_id": "cyr_phrase_072307", "dataset": "cyrillic_handwriting", "target": "дав обратную", "pred": "дав обратную"}
+{"sample_id": "cyr_phrase_072309", "dataset": "cyrillic_handwriting", "target": "а также", "pred": "а также"}
+{"sample_id": "cyr_phrase_072310", "dataset": "cyrillic_handwriting", "target": "которые были", "pred": "которые были"}
+{"sample_id": "cyr_phrase_072311", "dataset": "cyrillic_handwriting", "target": "оплачены за", "pred": "оплячены за"}
+{"sample_id": "cyr_phrase_072313", "dataset": "cyrillic_handwriting", "target": "1 класса", "pred": "1 класед"}
+{"sample_id": "cyr_phrase_072314", "dataset": "cyrillic_handwriting", "target": "данные по", "pred": "данные по"}
+{"sample_id": "cyr_phrase_072317", "dataset": "cyrillic_handwriting", "target": "выдан овд", "pred": "водан овю"}
+{"sample_id": "cyr_phrase_072319", "dataset": "cyrillic_handwriting", "target": "контакты для", "pred": "коитакты для"}
+{"sample_id": "cyr_phrase_072320", "dataset": "cyrillic_handwriting", "target": "анна сергеевна", "pred": "анне серчеевия"}
+{"sample_id": "cyr_phrase_072321", "dataset": "cyrillic_handwriting", "target": "7.10.2017 г.", "pred": "710.201 г."}
+{"sample_id": "cyr_phrase_072324", "dataset": "cyrillic_handwriting", "target": "10 июня 2016г.", "pred": "1о илюна2аг."}
+{"sample_id": "cyr_phrase_072325", "dataset": "cyrillic_handwriting", "target": "г. санкт-петербург", "pred": "гсамкт-кетербур"}
+{"sample_id": "cyr_phrase_072326", "dataset": "cyrillic_handwriting", "target": "иванов иван", "pred": "иванов чевок"}
+{"sample_id": "cyr_phrase_072330", "dataset": "cyrillic_handwriting", "target": "паспорт серия", "pred": "посковт сения"}
+{"sample_id": "cyr_phrase_072331", "dataset": "cyrillic_handwriting", "target": "18.03.2007 г", "pred": "18.03. 2007 г"}
+{"sample_id": "cyr_phrase_072333", "dataset": "cyrillic_handwriting", "target": "по адресу", "pred": "но адрееу"}
+{"sample_id": "cyr_phrase_072337", "dataset": "cyrillic_handwriting", "target": "паспорт серия", "pred": "пасконт сеня,"}
+{"sample_id": "cyr_phrase_072339", "dataset": "cyrillic_handwriting", "target": "г. севаевск", "pred": "2, севаевак,"}
+{"sample_id": "cyr_phrase_072340", "dataset": "cyrillic_handwriting", "target": "денежную сумму", "pred": "демнную сумму"}
+{"sample_id": "cyr_phrase_072341", "dataset": "cyrillic_handwriting", "target": "ул. ленина", "pred": "уул. бенина"}
+{"sample_id": "cyr_phrase_072345", "dataset": "cyrillic_handwriting", "target": "иванов и.и.", "pred": "ивановии."}
+{"sample_id": "cyr_phrase_072351", "dataset": "cyrillic_handwriting", "target": "ноября 2016", "pred": "нопбря2016"}
+{"sample_id": "cyr_phrase_072352", "dataset": "cyrillic_handwriting", "target": "в размере 334 000", "pred": "в размере в34о0о"}
+{"sample_id": "cyr_phrase_072355", "dataset": "cyrillic_handwriting", "target": "овд юшного", "pred": "бь ювиного"}
+{"sample_id": "cyr_phrase_072357", "dataset": "cyrillic_handwriting", "target": "ложкин юрий", "pred": "лочикин юрий"}
+{"sample_id": "cyr_phrase_072358", "dataset": "cyrillic_handwriting", "target": "94 04", "pred": "9404"}
+{"sample_id": "cyr_phrase_072360", "dataset": "cyrillic_handwriting", "target": "овд р-на", "pred": "о60р-на"}
+{"sample_id": "cyr_phrase_072361", "dataset": "cyrillic_handwriting", "target": "16.08.2004 г.", "pred": "16.08.2004г."}
+{"sample_id": "cyr_phrase_072362", "dataset": "cyrillic_handwriting", "target": "г. киров", "pred": "ткиров"}
+{"sample_id": "cyr_phrase_072363", "dataset": "cyrillic_handwriting", "target": "триста тридцать", "pred": "триста тридцаль"}
+{"sample_id": "cyr_phrase_072365", "dataset": "cyrillic_handwriting", "target": "шкода фабия", "pred": "шкода фабия"}
+{"sample_id": "cyr_phrase_072367", "dataset": "cyrillic_handwriting", "target": "445 тысяч", "pred": "4 4б тыеди"}
+{"sample_id": "cyr_phrase_072368", "dataset": "cyrillic_handwriting", "target": "три тысячи девятьсот", "pred": "три тисяти деретьот"}
+{"sample_id": "cyr_phrase_072374", "dataset": "cyrillic_handwriting", "target": "по району", "pred": "по райоку"}
+{"sample_id": "cyr_phrase_072378", "dataset": "cyrillic_handwriting", "target": "код подразделения", "pred": "нод подраждоления"}
+{"sample_id": "cyr_phrase_072380", "dataset": "cyrillic_handwriting", "target": "по адресу", "pred": "но порей"}
+{"sample_id": "cyr_phrase_072382", "dataset": "cyrillic_handwriting", "target": "доверяю получать", "pred": "доворяю помрать"}
+{"sample_id": "cyr_phrase_072385", "dataset": "cyrillic_handwriting", "target": "на моё имя", "pred": "на мое имя,"}
+{"sample_id": "cyr_phrase_072387", "dataset": "cyrillic_handwriting", "target": "по адресу", "pred": "но адрну"}
+{"sample_id": "cyr_phrase_072388", "dataset": "cyrillic_handwriting", "target": "в качестве задатка", "pred": "в качестве задатка"}
+{"sample_id": "cyr_phrase_072389", "dataset": "cyrillic_handwriting", "target": "г. москва,", "pred": "г.мослва"}
+{"sample_id": "cyr_phrase_072390", "dataset": "cyrillic_handwriting", "target": "127 572,", "pred": "107572,"}
+{"sample_id": "cyr_phrase_072392", "dataset": "cyrillic_handwriting", "target": "овд района", "pred": "опд района"}
+{"sample_id": "cyr_phrase_072393", "dataset": "cyrillic_handwriting", "target": "г. москвы,", "pred": "г. мовы,"}
+{"sample_id": "cyr_phrase_072394", "dataset": "cyrillic_handwriting", "target": "под подразделения", "pred": "под подразделения"}
+{"sample_id": "cyr_phrase_072396", "dataset": "cyrillic_handwriting", "target": "по адресу", "pred": "по адрку"}
+{"sample_id": "cyr_phrase_072399", "dataset": "cyrillic_handwriting", "target": "25. 01. 2016.", "pred": "21.01.2016."}
+{"sample_id": "cyr_phrase_072402", "dataset": "cyrillic_handwriting", "target": "за автомобиль", "pred": "да авыиюбиль"}
+{"sample_id": "cyr_phrase_072406", "dataset": "cyrillic_handwriting", "target": "12.09.2013 г.", "pred": "12.09.20/13г."}
+{"sample_id": "cyr_phrase_072410", "dataset": "cyrillic_handwriting", "target": "за период практики", "pred": "за певлое пратили"}
+{"sample_id": "cyr_phrase_072411", "dataset": "cyrillic_handwriting", "target": "савченко и. а.", "pred": "совенюиа"}
+{"sample_id": "cyr_phrase_072412", "dataset": "cyrillic_handwriting", "target": "с составленным", "pred": "ссбтавланныт"}
+{"sample_id": "cyr_phrase_072414", "dataset": "cyrillic_handwriting", "target": "на основе", "pred": "ла основе"}
+{"sample_id": "cyr_phrase_072420", "dataset": "cyrillic_handwriting", "target": "и предложены", "pred": "и предложены"}
+{"sample_id": "cyr_phrase_072424", "dataset": "cyrillic_handwriting", "target": "фоменко в.а.", "pred": "днинко в.."}
+{"sample_id": "cyr_phrase_072425", "dataset": "cyrillic_handwriting", "target": "савченко и.а.", "pred": "савинко ия."}
+{"sample_id": "cyr_phrase_072432", "dataset": "cyrillic_handwriting", "target": "на предприятий", "pred": "на паиптият"}
+{"sample_id": "cyr_phrase_072438", "dataset": "cyrillic_handwriting", "target": "выбор технологий", "pred": "внид тохноговии"}
+{"sample_id": "cyr_phrase_072440", "dataset": "cyrillic_handwriting", "target": "23 марта 2012г.", "pred": "23 мартабон,"}
+{"sample_id": "cyr_phrase_072441", "dataset": "cyrillic_handwriting", "target": "г. санкт-петербург", "pred": "2.самкткетерд"}
+{"sample_id": "cyr_phrase_072443", "dataset": "cyrillic_handwriting", "target": "сумму в срок", "pred": "умиу вгрок,"}
+{"sample_id": "cyr_phrase_072445", "dataset": "cyrillic_handwriting", "target": "22. 07. 2010", "pred": "21.07. 2010г."}
+{"sample_id": "cyr_phrase_072447", "dataset": "cyrillic_handwriting", "target": "пр просвещения", "pred": "пр. просвещини"}
+{"sample_id": "cyr_phrase_072449", "dataset": "cyrillic_handwriting", "target": "40 06 799", "pred": "10 06 799"}
+{"sample_id": "cyr_phrase_072451", "dataset": "cyrillic_handwriting", "target": "до 30 июня 2009 года", "pred": "до3о жонт ясоя гды"}
+{"sample_id": "cyr_phrase_072452", "dataset": "cyrillic_handwriting", "target": "санкт - петербурга", "pred": "санкм-бемертура"}
+{"sample_id": "cyr_phrase_072454", "dataset": "cyrillic_handwriting", "target": "14. 12. 2003г", "pred": "м.н.200з,"}
+{"sample_id": "cyr_phrase_072455", "dataset": "cyrillic_handwriting", "target": "по адресу", "pred": "по адлесу"}
+{"sample_id": "cyr_phrase_072456", "dataset": "cyrillic_handwriting", "target": "санкт - петербург", "pred": "сонкг-камерду"}
+{"sample_id": "cyr_phrase_072457", "dataset": "cyrillic_handwriting", "target": "деньги в сумме", "pred": "дельги в сумме"}
+{"sample_id": "cyr_phrase_072459", "dataset": "cyrillic_handwriting", "target": "рублей в счет", "pred": "лутяет в оиет"}
+{"sample_id": "cyr_phrase_072460", "dataset": "cyrillic_handwriting", "target": "стоимости квартиры", "pred": "стогемости кваржир"}
+{"sample_id": "cyr_phrase_072463", "dataset": "cyrillic_handwriting", "target": "24 июня 2009 г.", "pred": "24 шапя вор9,"}
+{"sample_id": "cyr_phrase_072466", "dataset": "cyrillic_handwriting", "target": "по договору", "pred": "по золовору"}
+{"sample_id": "cyr_phrase_072467", "dataset": "cyrillic_handwriting", "target": "претензий не имею.", "pred": "претещий не иенего,"}
+{"sample_id": "cyr_phrase_072469", "dataset": "cyrillic_handwriting", "target": "бугрова в.г.", "pred": "буровов.ч."}
+{"sample_id": "cyr_phrase_072471", "dataset": "cyrillic_handwriting", "target": "04. 01. 1992 г.", "pred": "ох.01.1982г."}
+{"sample_id": "cyr_phrase_072477", "dataset": "cyrillic_handwriting", "target": "в части увеличения", "pred": "в валч увелучения"}
+{"sample_id": "cyr_phrase_072478", "dataset": "cyrillic_handwriting", "target": "выпуска продукции", "pred": "выпуска-иродукуни"}
+{"sample_id": "cyr_phrase_072479", "dataset": "cyrillic_handwriting", "target": "г. иркутск", "pred": "г.рчужск"}
+{"sample_id": "cyr_phrase_072481", "dataset": "cyrillic_handwriting", "target": "г. иркутск", "pred": "г.ркутск"}
+{"sample_id": "cyr_phrase_072484", "dataset": "cyrillic_handwriting", "target": "мустафаева ф. м", "pred": "мустафсеварк,"}
+{"sample_id": "cyr_phrase_072485", "dataset": "cyrillic_handwriting", "target": "максимов р. н", "pred": "максимов р.н"}
+{"sample_id": "cyr_phrase_072487", "dataset": "cyrillic_handwriting", "target": "мамедов д. х", "pred": "мамедовд.х"}
+{"sample_id": "cyr_phrase_072488", "dataset": "cyrillic_handwriting", "target": "07 042000", "pred": "о704а0а"}
+{"sample_id": "cyr_phrase_072489", "dataset": "cyrillic_handwriting", "target": "момедова а.э.", "pred": "момедовааз"}
+{"sample_id": "cyr_phrase_072490", "dataset": "cyrillic_handwriting", "target": "мамедов а г", "pred": "мамововяр"}
+{"sample_id": "cyr_phrase_072491", "dataset": "cyrillic_handwriting", "target": "яхьяева э.а.", "pred": "2льяево дяа."}
+{"sample_id": "cyr_phrase_072492", "dataset": "cyrillic_handwriting", "target": "яхьев м я", "pred": "яхьяев, мя"}
+{"sample_id": "cyr_phrase_072493", "dataset": "cyrillic_handwriting", "target": "розбекова с. б.", "pred": "юзбекова с. б."}
+{"sample_id": "cyr_phrase_072494", "dataset": "cyrillic_handwriting", "target": "абдуллаева с. с.", "pred": "абдуллоевасв."}
+{"sample_id": "cyr_phrase_072500", "dataset": "cyrillic_handwriting", "target": "от услуг", "pred": "от услуг"}
+{"sample_id": "cyr_phrase_072501", "dataset": "cyrillic_handwriting", "target": "гор омск", "pred": "гор имех"}
+{"sample_id": "cyr_phrase_072506", "dataset": "cyrillic_handwriting", "target": "вас изьять дело", "pred": "пос изъять, дело"}
+{"sample_id": "cyr_phrase_072510", "dataset": "cyrillic_handwriting", "target": "г. барнаула", "pred": "г.воднаула"}
+{"sample_id": "cyr_phrase_072512", "dataset": "cyrillic_handwriting", "target": "15 сентября", "pred": "1бсентября"}
+{"sample_id": "cyr_phrase_072514", "dataset": "cyrillic_handwriting", "target": "омская обл.", "pred": "слотч яе обл."}
+{"sample_id": "cyr_phrase_072515", "dataset": "cyrillic_handwriting", "target": "25 октября", "pred": "а5онтября"}
+{"sample_id": "cyr_phrase_072521", "dataset": "cyrillic_handwriting", "target": "наталья константинова", "pred": "наталья константиновка"}
+{"sample_id": "cyr_phrase_072522", "dataset": "cyrillic_handwriting", "target": "проходила практика", "pred": "проходила практлу"}
+{"sample_id": "cyr_phrase_072523", "dataset": "cyrillic_handwriting", "target": "в качестве", "pred": "в качеетве"}
+{"sample_id": "cyr_phrase_072524", "dataset": "cyrillic_handwriting", "target": "классного руководителя", "pred": "класного руководитеяя"}
+{"sample_id": "cyr_phrase_072525", "dataset": "cyrillic_handwriting", "target": "в 6 классе", "pred": "в б классе"}
+{"sample_id": "cyr_phrase_072526", "dataset": "cyrillic_handwriting", "target": "в браке", "pred": "в ббаке"}
+{"sample_id": "cyr_phrase_072529", "dataset": "cyrillic_handwriting", "target": "г. барнаула", "pred": "г.барнаца"}
+{"sample_id": "cyr_phrase_072530", "dataset": "cyrillic_handwriting", "target": "с первого дня", "pred": "с первойдия"}
+{"sample_id": "cyr_phrase_072532", "dataset": "cyrillic_handwriting", "target": "студентке удалось", "pred": "студенынее удалось"}
+{"sample_id": "cyr_phrase_072540", "dataset": "cyrillic_handwriting", "target": "с детьми,", "pred": "с детьми"}
+{"sample_id": "cyr_phrase_072549", "dataset": "cyrillic_handwriting", "target": "на каждого", "pred": "на - каждою"}
+{"sample_id": "cyr_phrase_072550", "dataset": "cyrillic_handwriting", "target": "члена детского", "pred": "члена дежекого"}
+{"sample_id": "cyr_phrase_072559", "dataset": "cyrillic_handwriting", "target": "в качестве", "pred": "вкачести"}
+{"sample_id": "cyr_phrase_072561", "dataset": "cyrillic_handwriting", "target": "онинская обл", "pred": "бшкаяоал"}
+{"sample_id": "cyr_phrase_072562", "dataset": "cyrillic_handwriting", "target": "с учащимся", "pred": "с учащимися"}
+{"sample_id": "cyr_phrase_072564", "dataset": "cyrillic_handwriting", "target": "этические беседы", "pred": "этиеские беседы"}
+{"sample_id": "cyr_phrase_072568", "dataset": "cyrillic_handwriting", "target": "в организации", "pred": "в организации"}
+{"sample_id": "cyr_phrase_072570", "dataset": "cyrillic_handwriting", "target": "по лицею", "pred": "по лицею"}
+{"sample_id": "cyr_phrase_072571", "dataset": "cyrillic_handwriting", "target": "в организации", "pred": "в организауии"}
+{"sample_id": "cyr_phrase_072573", "dataset": "cyrillic_handwriting", "target": "ул ленина 11", "pred": "умозовстейочхспоуов"}
+{"sample_id": "cyr_phrase_072579", "dataset": "cyrillic_handwriting", "target": "заречнева е.н", "pred": "заречиева ен"}
+{"sample_id": "cyr_phrase_072580", "dataset": "cyrillic_handwriting", "target": "савилова н.в.", "pred": "савилова и.в"}
+{"sample_id": "cyr_phrase_072582", "dataset": "cyrillic_handwriting", "target": "для нужд", "pred": "дя нужд"}
+{"sample_id": "cyr_phrase_072586", "dataset": "cyrillic_handwriting", "target": "киселева в.а.", "pred": "киелевара."}
+{"sample_id": "cyr_phrase_072587", "dataset": "cyrillic_handwriting", "target": "триста тысяч", "pred": "тристатнсяч"}
+{"sample_id": "cyr_phrase_072588", "dataset": "cyrillic_handwriting", "target": "долларов сша", "pred": "днаровсжд"}
+{"sample_id": "cyr_phrase_072589", "dataset": "cyrillic_handwriting", "target": "22.03.2006 г.", "pred": "22.03.2005 г."}
+{"sample_id": "cyr_phrase_072590", "dataset": "cyrillic_handwriting", "target": "свистунов а.т.", "pred": "свбуноват"}
+{"sample_id": "cyr_phrase_072591", "dataset": "cyrillic_handwriting", "target": "г. москва", "pred": "г.моства"}
+{"sample_id": "cyr_phrase_072594", "dataset": "cyrillic_handwriting", "target": "гор. воронеж", "pred": "гор. воронее"}
+{"sample_id": "cyr_phrase_072597", "dataset": "cyrillic_handwriting", "target": "гор. челябинск", "pred": "гор. челябинс"}
+{"sample_id": "cyr_phrase_072599", "dataset": "cyrillic_handwriting", "target": "прошу вернуть", "pred": "прому вернуть"}
+{"sample_id": "cyr_phrase_072600", "dataset": "cyrillic_handwriting", "target": "денежные средства", "pred": "дененные срудства"}
+{"sample_id": "cyr_phrase_072602", "dataset": "cyrillic_handwriting", "target": "на номера", "pred": "на помеда"}
+{"sample_id": "cyr_phrase_072609", "dataset": "cyrillic_handwriting", "target": "лебеденко н.н.", "pred": "петеденко ны."}
+{"sample_id": "cyr_phrase_072611", "dataset": "cyrillic_handwriting", "target": "история операции", "pred": "шсториюе операций"}
+{"sample_id": "cyr_phrase_072612", "dataset": "cyrillic_handwriting", "target": "и детализацию по", "pred": "и резализацию но"}
+{"sample_id": "cyr_phrase_072613", "dataset": "cyrillic_handwriting", "target": "ним предоставляю", "pred": "ним предоспавляю"}
+{"sample_id": "cyr_phrase_072615", "dataset": "cyrillic_handwriting", "target": "в распечатанном", "pred": "в распечатанном"}
+{"sample_id": "cyr_phrase_072617", "dataset": "cyrillic_handwriting", "target": "в конечестве", "pred": "б соличестве"}
+{"sample_id": "cyr_phrase_072620", "dataset": "cyrillic_handwriting", "target": "по каждому", "pred": "но кахрону"}
+{"sample_id": "cyr_phrase_072623", "dataset": "cyrillic_handwriting", "target": "информацию можно", "pred": "ифодмацию можно"}
+{"sample_id": "cyr_phrase_072624", "dataset": "cyrillic_handwriting", "target": "узнать у", "pred": "уузнать у"}
+{"sample_id": "cyr_phrase_072631", "dataset": "cyrillic_handwriting", "target": "14 ноября 2007г.", "pred": "( наября 2бо7г."}
+{"sample_id": "cyr_phrase_072633", "dataset": "cyrillic_handwriting", "target": "в размере", "pred": "в размере"}
+{"sample_id": "cyr_phrase_072635", "dataset": "cyrillic_handwriting", "target": "в договоре", "pred": "в зоговоре"}
+{"sample_id": "cyr_phrase_072636", "dataset": "cyrillic_handwriting", "target": "а именно", "pred": "а именно"}
+{"sample_id": "cyr_phrase_072637", "dataset": "cyrillic_handwriting", "target": "02 декабря 1980 г.", "pred": "0я аекавр9 ладол."}
+{"sample_id": "cyr_phrase_072638", "dataset": "cyrillic_handwriting", "target": "условия поставки", "pred": "условия поставк)"}
+{"sample_id": "cyr_phrase_072639", "dataset": "cyrillic_handwriting", "target": "для зачисления", "pred": "для загмеления"}
+{"sample_id": "cyr_phrase_072641", "dataset": "cyrillic_handwriting", "target": "4272 2903 8396 6819", "pred": "4272290383966919"}
+{"sample_id": "cyr_phrase_072647", "dataset": "cyrillic_handwriting", "target": "27.11.2016 г", "pred": "27м 2016г"}
+{"sample_id": "cyr_phrase_072648", "dataset": "cyrillic_handwriting", "target": "г. воронеж", "pred": "творонежс"}
+{"sample_id": "cyr_phrase_072649", "dataset": "cyrillic_handwriting", "target": "мне было", "pred": "мне быю"}
+{"sample_id": "cyr_phrase_072650", "dataset": "cyrillic_handwriting", "target": "в помещении", "pred": "в помецение"}
+{"sample_id": "cyr_phrase_072653", "dataset": "cyrillic_handwriting", "target": "в качестве лида", "pred": "в почесве миза"}
+{"sample_id": "cyr_phrase_072654", "dataset": "cyrillic_handwriting", "target": "регистрации в качестве", "pred": "режетрауни в пелестве"}
+{"sample_id": "cyr_phrase_072656", "dataset": "cyrillic_handwriting", "target": "в соответствие", "pred": "в сооввеквие"}
+{"sample_id": "cyr_phrase_072657", "dataset": "cyrillic_handwriting", "target": "бандура д. в.", "pred": "даждуда о.в"}
+{"sample_id": "cyr_phrase_072661", "dataset": "cyrillic_handwriting", "target": "в городе", "pred": "с горде"}
+{"sample_id": "cyr_phrase_072662", "dataset": "cyrillic_handwriting", "target": "не управлял", "pred": "не управлел"}
+{"sample_id": "cyr_phrase_072663", "dataset": "cyrillic_handwriting", "target": "в данный момент", "pred": "в дапный момент"}
+{"sample_id": "cyr_phrase_072671", "dataset": "cyrillic_handwriting", "target": "мне стало", "pred": "мне стало"}
+{"sample_id": "cyr_phrase_072673", "dataset": "cyrillic_handwriting", "target": "на должность", "pred": "на дастеость"}
+{"sample_id": "cyr_phrase_072676", "dataset": "cyrillic_handwriting", "target": "галяева а. м.", "pred": "гаклева а.м."}
+{"sample_id": "cyr_phrase_072680", "dataset": "cyrillic_handwriting", "target": "на этих документах", "pred": "нао эта дотриленбах"}
+{"sample_id": "cyr_phrase_072682", "dataset": "cyrillic_handwriting", "target": "дата и", "pred": "рбта и"}
+{"sample_id": "cyr_phrase_072683", "dataset": "cyrillic_handwriting", "target": "кроме того,", "pred": "кроме того,"}
+{"sample_id": "cyr_phrase_072684", "dataset": "cyrillic_handwriting", "target": "13 января 2012г", "pred": "1з3 ливаря воа."}
+{"sample_id": "cyr_phrase_072685", "dataset": "cyrillic_handwriting", "target": "в избирательной", "pred": "в избирательной"}
+{"sample_id": "cyr_phrase_072688", "dataset": "cyrillic_handwriting", "target": "прошу вас", "pred": "прому вай"}
+{"sample_id": "cyr_phrase_072689", "dataset": "cyrillic_handwriting", "target": "08 февраля 2012г.", "pred": "ов феврачя дог"}
+{"sample_id": "cyr_phrase_072702", "dataset": "cyrillic_handwriting", "target": "медведеву д.а.", "pred": "ледведеву д.н."}
+{"sample_id": "cyr_phrase_072703", "dataset": "cyrillic_handwriting", "target": "саватюгина а.л.", "pred": "саватночина я. п."}
+{"sample_id": "cyr_phrase_072706", "dataset": "cyrillic_handwriting", "target": "уманцу о.а.", "pred": "уманцу о.а."}
+{"sample_id": "cyr_phrase_072709", "dataset": "cyrillic_handwriting", "target": "во время", "pred": "во время"}
+{"sample_id": "cyr_phrase_072711", "dataset": "cyrillic_handwriting", "target": "дополнительно сообщу", "pred": "дололнительно сообиу"}
+{"sample_id": "cyr_phrase_072712", "dataset": "cyrillic_handwriting", "target": "даценко с.н.", "pred": "даценно сн."}
+{"sample_id": "cyr_phrase_072713", "dataset": "cyrillic_handwriting", "target": "в ввиду", "pred": "в виду"}
+{"sample_id": "cyr_phrase_072714", "dataset": "cyrillic_handwriting", "target": "по февраль 2005 г.", "pred": "по ровраль 2оо5о"}
+{"sample_id": "cyr_phrase_072718", "dataset": "cyrillic_handwriting", "target": "не выплачиваю", "pred": "не выплачиваю"}
+{"sample_id": "cyr_phrase_072721", "dataset": "cyrillic_handwriting", "target": "фомина в. л", "pred": "домина в. л"}
+{"sample_id": "cyr_phrase_072722", "dataset": "cyrillic_handwriting", "target": "генеральному директору", "pred": "ренеральному директору"}
+{"sample_id": "cyr_phrase_072724", "dataset": "cyrillic_handwriting", "target": "от ткача 5 разряда", "pred": "от тсача б разряда"}
+{"sample_id": "cyr_phrase_072725", "dataset": "cyrillic_handwriting", "target": "об образовательных", "pred": "в овпазовательних"}
+{"sample_id": "cyr_phrase_072727", "dataset": "cyrillic_handwriting", "target": "л. м. петровой", "pred": "1.м. петровой"}
+{"sample_id": "cyr_phrase_072728", "dataset": "cyrillic_handwriting", "target": "платоновой в.а.", "pred": "п катоновой в.а"}
+{"sample_id": "cyr_phrase_072731", "dataset": "cyrillic_handwriting", "target": "должность инженера", "pred": "должность инженера"}
+{"sample_id": "cyr_phrase_072733", "dataset": "cyrillic_handwriting", "target": "1 февраля 1965г.", "pred": "1февраля1965 г."}
+{"sample_id": "cyr_phrase_072737", "dataset": "cyrillic_handwriting", "target": "вас расторгнуть", "pred": "вас расторгнуть"}
+{"sample_id": "cyr_phrase_072739", "dataset": "cyrillic_handwriting", "target": "и вернуть деньги", "pred": "ивернуть деньчи"}
+{"sample_id": "cyr_phrase_072740", "dataset": "cyrillic_handwriting", "target": "в мае 1942 г.", "pred": "в мае 1919г."}
+{"sample_id": "cyr_phrase_072741", "dataset": "cyrillic_handwriting", "target": "по полюсу", "pred": "по полюсу"}
+{"sample_id": "cyr_phrase_072747", "dataset": "cyrillic_handwriting", "target": "26. 03. 2014", "pred": "26.03.2014"}
+{"sample_id": "cyr_phrase_072748", "dataset": "cyrillic_handwriting", "target": "сидоренко с. в.", "pred": "сидоренно св"}
+{"sample_id": "cyr_phrase_072749", "dataset": "cyrillic_handwriting", "target": "прошу разрешения", "pred": "брошу лезриения"}
+{"sample_id": "cyr_phrase_072751", "dataset": "cyrillic_handwriting", "target": "в семье", "pred": "в семые"}
+{"sample_id": "cyr_phrase_072752", "dataset": "cyrillic_handwriting", "target": "коржова с.н.", "pred": "коржевасн."}
+{"sample_id": "cyr_phrase_072754", "dataset": "cyrillic_handwriting", "target": "долженко л. у.", "pred": "долженко л.4."}
+{"sample_id": "cyr_phrase_072755", "dataset": "cyrillic_handwriting", "target": "с материалами", "pred": "с нахрнылание"}
+{"sample_id": "cyr_phrase_072756", "dataset": "cyrillic_handwriting", "target": "гражданского дела", "pred": "гражданского дела"}
+{"sample_id": "cyr_phrase_072757", "dataset": "cyrillic_handwriting", "target": "прошу разрешения", "pred": "прошу разрешениея"}
+{"sample_id": "cyr_phrase_072759", "dataset": "cyrillic_handwriting", "target": "28 декабря 2006 г.", "pred": "28икабргоов."}
+{"sample_id": "cyr_phrase_072760", "dataset": "cyrillic_handwriting", "target": "председателю суда", "pred": "председатело суда"}
+{"sample_id": "cyr_phrase_072761", "dataset": "cyrillic_handwriting", "target": "в 1942г", "pred": "в 19уф"}
+{"sample_id": "cyr_phrase_072765", "dataset": "cyrillic_handwriting", "target": "прошу оказать", "pred": "прому оказить"}
+{"sample_id": "cyr_phrase_072767", "dataset": "cyrillic_handwriting", "target": "стипендию получаю", "pred": "отипендию полуш"}
+{"sample_id": "cyr_phrase_072768", "dataset": "cyrillic_handwriting", "target": "не получаю", "pred": "не логугаю."}
+{"sample_id": "cyr_phrase_072770", "dataset": "cyrillic_handwriting", "target": "факультета мгу", "pred": "фикучьтста мту"}
+{"sample_id": "cyr_phrase_072772", "dataset": "cyrillic_handwriting", "target": "кафедра зоологии", "pred": "вафедны зоологии"}
+{"sample_id": "cyr_phrase_072779", "dataset": "cyrillic_handwriting", "target": "по стоимости", "pred": "по стаености"}
+{"sample_id": "cyr_phrase_072780", "dataset": "cyrillic_handwriting", "target": "школы 17", "pred": "шнолы 1х"}
+{"sample_id": "cyr_phrase_072781", "dataset": "cyrillic_handwriting", "target": "на сим карте", "pred": "но сием карте"}
+{"sample_id": "cyr_phrase_072783", "dataset": "cyrillic_handwriting", "target": "телефон чист", "pred": "теледон чест"}
+{"sample_id": "cyr_phrase_072784", "dataset": "cyrillic_handwriting", "target": "как с нуля", "pred": "как в непя,"}
+{"sample_id": "cyr_phrase_072788", "dataset": "cyrillic_handwriting", "target": "телефон был сдан", "pred": "телерон был сдан"}
+{"sample_id": "cyr_phrase_072789", "dataset": "cyrillic_handwriting", "target": "проверку качества,", "pred": "проверюу качества,"}
+{"sample_id": "cyr_phrase_072790", "dataset": "cyrillic_handwriting", "target": "пришлю заключение", "pred": "приуюо заключение"}
+{"sample_id": "cyr_phrase_072791", "dataset": "cyrillic_handwriting", "target": "о том что дефект", "pred": "о том что дедект"}
+{"sample_id": "cyr_phrase_072793", "dataset": "cyrillic_handwriting", "target": "в этот же день", "pred": "в этот же день"}
+{"sample_id": "cyr_phrase_072794", "dataset": "cyrillic_handwriting", "target": "при осмотре", "pred": "при оснотре"}
+{"sample_id": "cyr_phrase_072797", "dataset": "cyrillic_handwriting", "target": "дефект остался", "pred": "рефект остиля"}
+{"sample_id": "cyr_phrase_072799", "dataset": "cyrillic_handwriting", "target": "данные есть", "pred": "фанные есть"}
+{"sample_id": "cyr_phrase_072800", "dataset": "cyrillic_handwriting", "target": "сразу же их нет.", "pred": "оразу чнее их нет."}
+{"sample_id": "cyr_phrase_072801", "dataset": "cyrillic_handwriting", "target": "в 1959г.", "pred": "в 19839г."}
+{"sample_id": "cyr_phrase_072802", "dataset": "cyrillic_handwriting", "target": "поступила на", "pred": "поступила на"}
+{"sample_id": "cyr_phrase_072803", "dataset": "cyrillic_handwriting", "target": "ханидуллине л.ф.", "pred": "ханидулеенол.ф"}
+{"sample_id": "cyr_phrase_072804", "dataset": "cyrillic_handwriting", "target": "в отдел архитектуры", "pred": "в от дел архитанды"}
+{"sample_id": "cyr_phrase_072805", "dataset": "cyrillic_handwriting", "target": "была произведена", "pred": "была прочводена"}
+{"sample_id": "cyr_phrase_072807", "dataset": "cyrillic_handwriting", "target": "по территории", "pred": "по ивратории"}
+{"sample_id": "cyr_phrase_072808", "dataset": "cyrillic_handwriting", "target": "по периметру", "pred": "по перулитру"}
+{"sample_id": "cyr_phrase_072809", "dataset": "cyrillic_handwriting", "target": "не верно", "pred": "не воорго"}
+{"sample_id": "cyr_phrase_072810", "dataset": "cyrillic_handwriting", "target": "что обнаружилось", "pred": "это обиаручилось"}
+{"sample_id": "cyr_phrase_072811", "dataset": "cyrillic_handwriting", "target": "факультет двгу", "pred": "факильтет дөту"}
+{"sample_id": "cyr_phrase_072812", "dataset": "cyrillic_handwriting", "target": "не было", "pred": "не бамо"}
+{"sample_id": "cyr_phrase_072813", "dataset": "cyrillic_handwriting", "target": "зая вление", "pred": "бавнние"}
+{"sample_id": "cyr_phrase_072814", "dataset": "cyrillic_handwriting", "target": "прошу уволить", "pred": "громеу уволишь"}
+{"sample_id": "cyr_phrase_072817", "dataset": "cyrillic_handwriting", "target": "на действия", "pred": "на дебствия"}
+{"sample_id": "cyr_phrase_072818", "dataset": "cyrillic_handwriting", "target": "закончила учебу", "pred": "законгила учебу"}
+{"sample_id": "cyr_phrase_072819", "dataset": "cyrillic_handwriting", "target": "19.08.2018 г.", "pred": "19. 08.3018 г."}
+{"sample_id": "cyr_phrase_072820", "dataset": "cyrillic_handwriting", "target": "полиция в составе", "pred": "полиция в состове"}
+{"sample_id": "cyr_phrase_072823", "dataset": "cyrillic_handwriting", "target": "принять меры", "pred": "принеть меры"}
+{"sample_id": "cyr_phrase_072824", "dataset": "cyrillic_handwriting", "target": "студент группы", "pred": "студент групны"}
+{"sample_id": "cyr_phrase_072826", "dataset": "cyrillic_handwriting", "target": "в двту в 1964 г", "pred": "в двту в 1964г"}
+{"sample_id": "cyr_phrase_072828", "dataset": "cyrillic_handwriting", "target": "максимовой т. в", "pred": "мокаиловой т.в"}
+{"sample_id": "cyr_phrase_072832", "dataset": "cyrillic_handwriting", "target": "большого количества", "pred": "большого колиества"}
+{"sample_id": "cyr_phrase_072834", "dataset": "cyrillic_handwriting", "target": "по направлению", "pred": "по направлению"}
+{"sample_id": "cyr_phrase_072839", "dataset": "cyrillic_handwriting", "target": "от инженера", "pred": "\" инненера"}
+{"sample_id": "cyr_phrase_072840", "dataset": "cyrillic_handwriting", "target": "15.09.03 г", "pred": "15.09.03г"}
+{"sample_id": "cyr_phrase_072841", "dataset": "cyrillic_handwriting", "target": "сильный туман", "pred": "сильный уман"}
+{"sample_id": "cyr_phrase_072842", "dataset": "cyrillic_handwriting", "target": "на улице был", "pred": "на улце был"}
+{"sample_id": "cyr_phrase_072843", "dataset": "cyrillic_handwriting", "target": "автобус двигался", "pred": "автобуг двигался"}
+{"sample_id": "cyr_phrase_072844", "dataset": "cyrillic_handwriting", "target": "очень медленно", "pred": "очень медленно"}
+{"sample_id": "cyr_phrase_072849", "dataset": "cyrillic_handwriting", "target": "безбородов л.а.", "pred": "резбородовл.2а"}
+{"sample_id": "cyr_phrase_072854", "dataset": "cyrillic_handwriting", "target": "в связи с чем", "pred": "в связн с чем"}
+{"sample_id": "cyr_phrase_072855", "dataset": "cyrillic_handwriting", "target": "вышел из дома", "pred": "вышел из дома"}
+{"sample_id": "cyr_phrase_072856", "dataset": "cyrillic_handwriting", "target": "опоздал на работу", "pred": "опоздал наработу"}
+{"sample_id": "cyr_phrase_072858", "dataset": "cyrillic_handwriting", "target": "по распределению", "pred": "по распределению"}
+{"sample_id": "cyr_phrase_072859", "dataset": "cyrillic_handwriting", "target": "на 15 минут", "pred": "на1 б лиенуй"}
+{"sample_id": "cyr_phrase_072860", "dataset": "cyrillic_handwriting", "target": "опозданий и", "pred": "опозданий и"}
+{"sample_id": "cyr_phrase_072861", "dataset": "cyrillic_handwriting", "target": "с абсолютной", "pred": "с абсолютной"}
+{"sample_id": "cyr_phrase_072862", "dataset": "cyrillic_handwriting", "target": "перед работой", "pred": "перед работой."}
+{"sample_id": "cyr_phrase_072864", "dataset": "cyrillic_handwriting", "target": "безбородов л.а.", "pred": "безбородов л.х."}
+{"sample_id": "cyr_phrase_072869", "dataset": "cyrillic_handwriting", "target": "06. 12. 10", "pred": "0в.1г2.10"}
+{"sample_id": "cyr_phrase_072871", "dataset": "cyrillic_handwriting", "target": "10. 12. 10", "pred": "10.12.10"}
+{"sample_id": "cyr_phrase_072875", "dataset": "cyrillic_handwriting", "target": "а еще у", "pred": "нещеу"}
+{"sample_id": "cyr_phrase_072876", "dataset": "cyrillic_handwriting", "target": "в шрм", "pred": "в чирм"}
+{"sample_id": "cyr_phrase_072877", "dataset": "cyrillic_handwriting", "target": "с ноября 1966 года", "pred": "с ноября 19бвгода"}
+{"sample_id": "cyr_phrase_072878", "dataset": "cyrillic_handwriting", "target": "по август 1968 года", "pred": "по август 1до8 года"}
+{"sample_id": "cyr_phrase_072879", "dataset": "cyrillic_handwriting", "target": "не работала", "pred": "не работала"}
+{"sample_id": "cyr_phrase_072911", "dataset": "cyrillic_handwriting", "target": "отождествлять с", "pred": "отождествлять с"}
+{"sample_id": "cyr_phrase_072923", "dataset": "cyrillic_handwriting", "target": "более мелкие", "pred": "балее мелкие"}
+{"sample_id": "cyr_phrase_072938", "dataset": "cyrillic_handwriting", "target": "доп. тел.:53-48-82", "pred": "дом. тел б9н8я2"}
+{"sample_id": "cyr_phrase_072939", "dataset": "cyrillic_handwriting", "target": "моб.: 375-44-794", "pred": "моб.: 27ыин-эак"}
+{"sample_id": "cyr_phrase_072941", "dataset": "cyrillic_handwriting", "target": "15 мая", "pred": "15мая"}
+{"sample_id": "cyr_phrase_072942", "dataset": "cyrillic_handwriting", "target": "д. 8, кв. 51", "pred": "д.8,каз."}
+{"sample_id": "cyr_phrase_072956", "dataset": "cyrillic_handwriting", "target": "они могут", "pred": "они могут"}
+{"sample_id": "cyr_phrase_072979", "dataset": "cyrillic_handwriting", "target": "для проведения", "pred": "для проведения"}
+{"sample_id": "cyr_phrase_073012", "dataset": "cyrillic_handwriting", "target": "на основании", "pred": "на основании"}
+{"sample_id": "cyr_phrase_073063", "dataset": "cyrillic_handwriting", "target": "пример 2", "pred": "примерг"}
+{"sample_id": "cyr_phrase_073128", "dataset": "cyrillic_handwriting", "target": "300.000(триста тысяч)", "pred": "3за02000(пристатнсяч)"}
+{"sample_id": "cyr_phrase_073129", "dataset": "cyrillic_handwriting", "target": ") долларов сша", "pred": "доиаров сща"}
+{"sample_id": "cyr_phrase_073131", "dataset": "cyrillic_handwriting", "target": "10 июня 2016 г.", "pred": "1оченя гаы."}
+{"sample_id": "cyr_phrase_073135", "dataset": "cyrillic_handwriting", "target": "городского округа", "pred": "гбрддекагажруга"}
+{"sample_id": "cyr_phrase_073136", "dataset": "cyrillic_handwriting", "target": "округа краснодара", "pred": "прупакрабра"}
+{"sample_id": "cyr_phrase_073146", "dataset": "cyrillic_handwriting", "target": "своими действиями", "pred": "евощвлдляствивли"}
+{"sample_id": "cyr_phrase_073148", "dataset": "cyrillic_handwriting", "target": "иванов и.и.", "pred": "иванови.ч."}
+{"sample_id": "cyr_phrase_073153", "dataset": "cyrillic_handwriting", "target": "13 ноября 1992 года", "pred": "13 ноя бра л992 года"}
+{"sample_id": "cyr_phrase_073154", "dataset": "cyrillic_handwriting", "target": "31 июня 2012 года", "pred": "за люня 2ол2 года"}
+{"sample_id": "cyr_phrase_073158", "dataset": "cyrillic_handwriting", "target": "кредит на", "pred": "кредит на"}
+{"sample_id": "cyr_phrase_073160", "dataset": "cyrillic_handwriting", "target": "увеличить плату", "pred": "увеличитаь илагу"}
+{"sample_id": "cyr_phrase_073162", "dataset": "cyrillic_handwriting", "target": "по собственному", "pred": "по собставенному"}
+{"sample_id": "cyr_phrase_073237", "dataset": "cyrillic_handwriting", "target": "явная схема", "pred": "явная скенк"}
+{"sample_id": "cyr_phrase_073311", "dataset": "cyrillic_handwriting", "target": "нижний уголок", "pred": "нижний утолок"}
+{"sample_id": "cyr_phrase_073402", "dataset": "cyrillic_handwriting", "target": "выбор был", "pred": "выборбыл,"}
+{"sample_id": "cyr_phrase_073403", "dataset": "cyrillic_handwriting", "target": "не существует", "pred": "не сущестеует"}
+{"sample_id": "cyr_phrase_073404", "dataset": "cyrillic_handwriting", "target": "система лп", "pred": "сиотема ля"}
+{"sample_id": "cyr_phrase_073405", "dataset": "cyrillic_handwriting", "target": "уже совершившее", "pred": "уже совориешее"}
+{"sample_id": "cyr_phrase_073406", "dataset": "cyrillic_handwriting", "target": "но не криминально", "pred": "но не кричимально"}
+{"sample_id": "cyr_phrase_073407", "dataset": "cyrillic_handwriting", "target": "свойства личности", "pred": "свойства личности"}
+{"sample_id": "cyr_phrase_073408", "dataset": "cyrillic_handwriting", "target": "другими лицами", "pred": "другими мщами"}
+{"sample_id": "cyr_phrase_073411", "dataset": "cyrillic_handwriting", "target": "с автором", "pred": "с автором"}
+{"sample_id": "cyr_phrase_073413", "dataset": "cyrillic_handwriting", "target": "18.00 олимпиада", "pred": "1ябо олинтода"}
+{"sample_id": "cyr_phrase_073414", "dataset": "cyrillic_handwriting", "target": "далеко и навсегда", "pred": "фамеко и накида"}
+{"sample_id": "cyr_phrase_073415", "dataset": "cyrillic_handwriting", "target": "моя самая", "pred": "мая самая"}
+{"sample_id": "cyr_phrase_073416", "dataset": "cyrillic_handwriting", "target": "строим ддт", "pred": "спран 3ф т"}
+{"sample_id": "cyr_phrase_073417", "dataset": "cyrillic_handwriting", "target": "в стенах", "pred": "в стеках"}
+{"sample_id": "cyr_phrase_073419", "dataset": "cyrillic_handwriting", "target": "я, шахматова", "pred": "я жахматова"}
+{"sample_id": "cyr_phrase_073421", "dataset": "cyrillic_handwriting", "target": "в связи", "pred": "в связи"}
+{"sample_id": "cyr_phrase_073422", "dataset": "cyrillic_handwriting", "target": "с рождением ребенка", "pred": "с рождением ребенка,"}
+{"sample_id": "cyr_phrase_073423", "dataset": "cyrillic_handwriting", "target": "в 1968 году", "pred": "в 1968 году"}
+{"sample_id": "cyr_phrase_073424", "dataset": "cyrillic_handwriting", "target": "к своим", "pred": "к своим"}
+{"sample_id": "cyr_phrase_073426", "dataset": "cyrillic_handwriting", "target": "с сентября 1968 года", "pred": "с сеитебя 1968года"}
+{"sample_id": "cyr_phrase_073429", "dataset": "cyrillic_handwriting", "target": "5 сентября 1969г", "pred": "5 сеитября 1969г"}
+{"sample_id": "cyr_phrase_073430", "dataset": "cyrillic_handwriting", "target": "со значениями", "pred": "со зиачением"}
+{"sample_id": "cyr_phrase_073433", "dataset": "cyrillic_handwriting", "target": "детскую больницу", "pred": "детскую больницу"}
+{"sample_id": "cyr_phrase_073434", "dataset": "cyrillic_handwriting", "target": "сабалина ю. с.", "pred": "сабалина ю,с."}
+{"sample_id": "cyr_phrase_073435", "dataset": "cyrillic_handwriting", "target": "степанова н. м.", "pred": "степанова н м."}
+{"sample_id": "cyr_phrase_073438", "dataset": "cyrillic_handwriting", "target": "проходила учебную", "pred": "прожорили учебную"}
+{"sample_id": "cyr_phrase_073439", "dataset": "cyrillic_handwriting", "target": "практику в", "pred": "практику в"}
+{"sample_id": "cyr_phrase_073441", "dataset": "cyrillic_handwriting", "target": "качестве помощника", "pred": "ка чевтве комощника"}
+{"sample_id": "cyr_phrase_073445", "dataset": "cyrillic_handwriting", "target": "за время", "pred": "за время"}
+{"sample_id": "cyr_phrase_073447", "dataset": "cyrillic_handwriting", "target": "с работой", "pred": "с даботой"}
+{"sample_id": "cyr_phrase_073452", "dataset": "cyrillic_handwriting", "target": "а также", "pred": "а такгие"}
+{"sample_id": "cyr_phrase_073458", "dataset": "cyrillic_handwriting", "target": "в ходе", "pred": "в поре"}
+{"sample_id": "cyr_phrase_073465", "dataset": "cyrillic_handwriting", "target": "мед карту", "pred": "мго харту"}
+{"sample_id": "cyr_phrase_073481", "dataset": "cyrillic_handwriting", "target": "двадцать одна", "pred": "овпакт дна"}
+{"sample_id": "cyr_phrase_073488", "dataset": "cyrillic_handwriting", "target": "по ул. водная", "pred": "потда водная"}
+{"sample_id": "cyr_phrase_073490", "dataset": "cyrillic_handwriting", "target": "ген. директор", "pred": "чен оректор"}
+{"sample_id": "cyr_phrase_073491", "dataset": "cyrillic_handwriting", "target": "29 апреля 2006", "pred": "а9п апделяяров"}
+{"sample_id": "cyr_phrase_073494", "dataset": "cyrillic_handwriting", "target": "зарутдинова с. г.", "pred": "зарутдиноваст."}
+{"sample_id": "cyr_phrase_073495", "dataset": "cyrillic_handwriting", "target": "форд фокус", "pred": "форя фенус"}
+{"sample_id": "cyr_phrase_073496", "dataset": "cyrillic_handwriting", "target": "сдам легковой", "pred": "сдам легковой"}
+{"sample_id": "cyr_phrase_073499", "dataset": "cyrillic_handwriting", "target": "авиабилеты сое-и", "pred": "овамийном сос-ке цдет"}
+{"sample_id": "cyr_phrase_073501", "dataset": "cyrillic_handwriting", "target": "фонарь зад", "pred": "фонарвь заю"}
+{"sample_id": "cyr_phrase_073503", "dataset": "cyrillic_handwriting", "target": "крышка багажн.", "pred": "крышна баахн."}
+{"sample_id": "cyr_phrase_073504", "dataset": "cyrillic_handwriting", "target": "стекло зад", "pred": "степлозад"}
+{"sample_id": "cyr_phrase_073507", "dataset": "cyrillic_handwriting", "target": "полка салона за", "pred": "полна салонатдо"}
+{"sample_id": "cyr_phrase_073508", "dataset": "cyrillic_handwriting", "target": "на лечение", "pred": "на лечение?"}
+{"sample_id": "cyr_phrase_073510", "dataset": "cyrillic_handwriting", "target": "камера зад. вида", "pred": "камеразав. виба"}
+{"sample_id": "cyr_phrase_073515", "dataset": "cyrillic_handwriting", "target": "22.04.16 г.", "pred": "дд.пдтв"}
+{"sample_id": "cyr_phrase_073517", "dataset": "cyrillic_handwriting", "target": "на левом", "pred": "на меном"}
+{"sample_id": "cyr_phrase_073531", "dataset": "cyrillic_handwriting", "target": "12 сентября 2006 г.", "pred": "1 сентября воовг."}
+{"sample_id": "cyr_phrase_073533", "dataset": "cyrillic_handwriting", "target": "костареву а в", "pred": "костареву лв"}
+{"sample_id": "cyr_phrase_073534", "dataset": "cyrillic_handwriting", "target": "от егоровой аа", "pred": "от сровой аа"}
+{"sample_id": "cyr_phrase_073536", "dataset": "cyrillic_handwriting", "target": "по адресу", "pred": "ро идресу"}
+{"sample_id": "cyr_phrase_073538", "dataset": "cyrillic_handwriting", "target": "получила посылку", "pred": "получила посалюд"}
+{"sample_id": "cyr_phrase_073539", "dataset": "cyrillic_handwriting", "target": "2 июня 2018 года", "pred": "2 люнягогегода"}
+{"sample_id": "cyr_phrase_073541", "dataset": "cyrillic_handwriting", "target": "в отделении", "pred": "в. отдемний"}
+{"sample_id": "cyr_phrase_073543", "dataset": "cyrillic_handwriting", "target": "почты россии", "pred": "погты росси"}
+{"sample_id": "cyr_phrase_073544", "dataset": "cyrillic_handwriting", "target": "посылка находилась", "pred": "носплно находиавь"}
+{"sample_id": "cyr_phrase_073545", "dataset": "cyrillic_handwriting", "target": "в коробке", "pred": "в колобе"}
+{"sample_id": "cyr_phrase_073550", "dataset": "cyrillic_handwriting", "target": "внутри я обнаружила", "pred": "вкутри я обкаружила"}
+{"sample_id": "cyr_phrase_073551", "dataset": "cyrillic_handwriting", "target": "подранные почтовые", "pred": "родраниие почтов"}
+{"sample_id": "cyr_phrase_073552", "dataset": "cyrillic_handwriting", "target": "костюм спорт", "pred": "костюмспорр"}
+{"sample_id": "cyr_phrase_073554", "dataset": "cyrillic_handwriting", "target": "покусанные продукты", "pred": "покусанеые проруко"}
+{"sample_id": "cyr_phrase_073555", "dataset": "cyrillic_handwriting", "target": "похожие на следы", "pred": "похожие на следы"}
+{"sample_id": "cyr_phrase_073557", "dataset": "cyrillic_handwriting", "target": "также в посылке", "pred": "также в посынке"}
+{"sample_id": "cyr_phrase_073558", "dataset": "cyrillic_handwriting", "target": "была обнаружена", "pred": "былд обидруещт"}
+{"sample_id": "cyr_phrase_073567", "dataset": "cyrillic_handwriting", "target": "2/06/ 2018", "pred": "2/06 /а018-"}
+{"sample_id": "cyr_phrase_073568", "dataset": "cyrillic_handwriting", "target": "егорову а к", "pred": "елорову др"}
+{"sample_id": "cyr_phrase_073569", "dataset": "cyrillic_handwriting", "target": "егоровой александре", "pred": "сгоровой рнисанере"}
+{"sample_id": "cyr_phrase_073571", "dataset": "cyrillic_handwriting", "target": "за время", "pred": "за внемя"}
+{"sample_id": "cyr_phrase_073580", "dataset": "cyrillic_handwriting", "target": "по русскому языку", "pred": "по русскому яриу"}
+{"sample_id": "cyr_phrase_073581", "dataset": "cyrillic_handwriting", "target": "владение методикой", "pred": "владение методикой"}
+{"sample_id": "cyr_phrase_073582", "dataset": "cyrillic_handwriting", "target": "преподавания этих", "pred": "преподавания отих"}
+{"sample_id": "cyr_phrase_073584", "dataset": "cyrillic_handwriting", "target": "владеет навыками", "pred": "владеет навысами"}
+{"sample_id": "cyr_phrase_073587", "dataset": "cyrillic_handwriting", "target": "различных вариантов", "pred": "различных вариантов"}
+{"sample_id": "cyr_phrase_073590", "dataset": "cyrillic_handwriting", "target": "крепл. 75мм", "pred": "юнепи чтт"}
+{"sample_id": "cyr_phrase_073594", "dataset": "cyrillic_handwriting", "target": "его содержания", "pred": "его содертания"}
+{"sample_id": "cyr_phrase_073597", "dataset": "cyrillic_handwriting", "target": "в современных", "pred": "в современых"}
+{"sample_id": "cyr_phrase_073602", "dataset": "cyrillic_handwriting", "target": "и воспитания", "pred": "и востетания"}
+{"sample_id": "cyr_phrase_073606", "dataset": "cyrillic_handwriting", "target": "приемы подачи", "pred": "приено подачи"}
+{"sample_id": "cyr_phrase_073610", "dataset": "cyrillic_handwriting", "target": "на своих уроках", "pred": "на своихуроках"}
+{"sample_id": "cyr_phrase_073613", "dataset": "cyrillic_handwriting", "target": "пять рублей", "pred": "петъалкубееет"}
+{"sample_id": "cyr_phrase_073614", "dataset": "cyrillic_handwriting", "target": "что положительно", "pred": "что полежительно"}
+{"sample_id": "cyr_phrase_073615", "dataset": "cyrillic_handwriting", "target": "сказывалось на", "pred": "сказывалось на"}
+{"sample_id": "cyr_phrase_073618", "dataset": "cyrillic_handwriting", "target": "к изучаемому", "pred": "к изучаемому"}
+{"sample_id": "cyr_phrase_073621", "dataset": "cyrillic_handwriting", "target": "особенности детей", "pred": "особеннести детей,"}
+{"sample_id": "cyr_phrase_073624", "dataset": "cyrillic_handwriting", "target": "белова о.а.", "pred": "беловяол"}
+{"sample_id": "cyr_phrase_073625", "dataset": "cyrillic_handwriting", "target": "на своих", "pred": "на своеех"}
+{"sample_id": "cyr_phrase_073627", "dataset": "cyrillic_handwriting", "target": "отношения с детьми", "pred": "отношения с детьмн"}
+{"sample_id": "cyr_phrase_073629", "dataset": "cyrillic_handwriting", "target": "на основе уважения", "pred": "на осно уважения"}
+{"sample_id": "cyr_phrase_073632", "dataset": "cyrillic_handwriting", "target": "поддерживать любой", "pred": "подуезвдеват любой"}
+{"sample_id": "cyr_phrase_073633", "dataset": "cyrillic_handwriting", "target": "их успех", "pred": "их устех"}
+{"sample_id": "cyr_phrase_073639", "dataset": "cyrillic_handwriting", "target": "а.с. пушкин", "pred": "тс пуйий"}
+{"sample_id": "cyr_phrase_073640", "dataset": "cyrillic_handwriting", "target": "зимнее утро", "pred": "зимнее утро"}
+{"sample_id": "cyr_phrase_073641", "dataset": "cyrillic_handwriting", "target": "александрова виктора", "pred": "пленоторово виктора"}
+{"sample_id": "cyr_phrase_073643", "dataset": "cyrillic_handwriting", "target": "чувашская республика", "pred": "узвомская реслубрика"}
+{"sample_id": "cyr_phrase_073645", "dataset": "cyrillic_handwriting", "target": "петровой ольге", "pred": "петровой ольге"}
+{"sample_id": "cyr_phrase_073648", "dataset": "cyrillic_handwriting", "target": "прошу отменить", "pred": "преми отменить"}
+{"sample_id": "cyr_phrase_073649", "dataset": "cyrillic_handwriting", "target": "26.02.2018 года", "pred": "26.02.2018года"}
+{"sample_id": "cyr_phrase_073650", "dataset": "cyrillic_handwriting", "target": "20.11.2017 года", "pred": "20.11.2017 годд"}
+{"sample_id": "cyr_phrase_073651", "dataset": "cyrillic_handwriting", "target": "15.11.2017 года", "pred": "15.11.2017 годз"}
+{"sample_id": "cyr_phrase_073652", "dataset": "cyrillic_handwriting", "target": "06.11.2017 года", "pred": "06.11.2017 гозе"}
+{"sample_id": "cyr_phrase_073659", "dataset": "cyrillic_handwriting", "target": "в связи с тем", "pred": "в связи с тем"}
+{"sample_id": "cyr_phrase_073660", "dataset": "cyrillic_handwriting", "target": "что автомашина", "pred": "гто автомамина"}
+{"sample_id": "cyr_phrase_073661", "dataset": "cyrillic_handwriting", "target": "была продана", "pred": "была продани"}
+{"sample_id": "cyr_phrase_073662", "dataset": "cyrillic_handwriting", "target": "с ограниченной", "pred": "сограничепной"}
+{"sample_id": "cyr_phrase_073664", "dataset": "cyrillic_handwriting", "target": "на основании", "pred": "на основании"}
+{"sample_id": "cyr_phrase_073668", "dataset": "cyrillic_handwriting", "target": "22 сентября 2017 года", "pred": "элинтября 2012года"}
+{"sample_id": "cyr_phrase_073669", "dataset": "cyrillic_handwriting", "target": "уплаченные мною", "pred": "уплаченные мною"}
+{"sample_id": "cyr_phrase_073670", "dataset": "cyrillic_handwriting", "target": "деньги прошу", "pred": "уесныи прошу"}
+{"sample_id": "cyr_phrase_073671", "dataset": "cyrillic_handwriting", "target": "вернуть на", "pred": "вернуть на"}
+{"sample_id": "cyr_phrase_073678", "dataset": "cyrillic_handwriting", "target": "инн 7707083893", "pred": "иныэто1083893"}
+{"sample_id": "cyr_phrase_073679", "dataset": "cyrillic_handwriting", "target": "кпп 212902001", "pred": "кло 212я02001."}
+{"sample_id": "cyr_phrase_073680", "dataset": "cyrillic_handwriting", "target": "александров в. а.", "pred": "алняюряа."}
+{"sample_id": "cyr_phrase_073681", "dataset": "cyrillic_handwriting", "target": "бубенцов а. в", "pred": "бубенцев я. в"}
+{"sample_id": "cyr_phrase_073684", "dataset": "cyrillic_handwriting", "target": "ковалёв а.м.", "pred": "ковалев ам."}
+{"sample_id": "cyr_phrase_073687", "dataset": "cyrillic_handwriting", "target": "савченко а. в.", "pred": "савченкойв"}
+{"sample_id": "cyr_phrase_073691", "dataset": "cyrillic_handwriting", "target": "ноябрь 2011 г.", "pred": "ноябрь 2011г."}
+{"sample_id": "cyr_phrase_073692", "dataset": "cyrillic_handwriting", "target": "попова б.а", "pred": "болова б."}
+{"sample_id": "cyr_phrase_073694", "dataset": "cyrillic_handwriting", "target": "одна тысяча", "pred": "одна тисяга"}
+{"sample_id": "cyr_phrase_073697", "dataset": "cyrillic_handwriting", "target": "денисовой ольге", "pred": "сденисовой длье"}
+{"sample_id": "cyr_phrase_073698", "dataset": "cyrillic_handwriting", "target": "две тысячи", "pred": "рветысячи"}
+{"sample_id": "cyr_phrase_073700", "dataset": "cyrillic_handwriting", "target": "вяземский ровд", "pred": "вуземским ровд"}
+{"sample_id": "cyr_phrase_073702", "dataset": "cyrillic_handwriting", "target": "с нахождением", "pred": "с нахонеденнем"}
+{"sample_id": "cyr_phrase_073703", "dataset": "cyrillic_handwriting", "target": "блинов м.и.", "pred": "блиновм.и."}
+{"sample_id": "cyr_phrase_073705", "dataset": "cyrillic_handwriting", "target": "иванов иван", "pred": "иванов иван"}
+{"sample_id": "cyr_phrase_073710", "dataset": "cyrillic_handwriting", "target": "вепина ирина", "pred": "всчиначиина"}
+{"sample_id": "cyr_phrase_073717", "dataset": "cyrillic_handwriting", "target": "31 февраля 02", "pred": "32 феброля-он"}
+{"sample_id": "cyr_phrase_073718", "dataset": "cyrillic_handwriting", "target": "сидоровой марии", "pred": "сипоровой марии"}
+{"sample_id": "cyr_phrase_073720", "dataset": "cyrillic_handwriting", "target": "сарваева п.т.", "pred": "фозаваева 1ч."}
+{"sample_id": "cyr_phrase_073721", "dataset": "cyrillic_handwriting", "target": "ул. ленина , 10-10", "pred": "ул.ленина,10-1о"}
+{"sample_id": "cyr_phrase_073726", "dataset": "cyrillic_handwriting", "target": "увд г. сыктывкара", "pred": "ува р.сынтывкара"}
+{"sample_id": "cyr_phrase_073732", "dataset": "cyrillic_handwriting", "target": "лебедева и.а.", "pred": "окбаева чет"}
+{"sample_id": "cyr_phrase_073738", "dataset": "cyrillic_handwriting", "target": "овд индустр. р-на", "pred": "овд индустр р-на"}
+{"sample_id": "cyr_phrase_073739", "dataset": "cyrillic_handwriting", "target": "г. перми", "pred": "2перми"}
+{"sample_id": "cyr_phrase_073742", "dataset": "cyrillic_handwriting", "target": "ноябрь 2012 года", "pred": "ноябрь 2012 года"}
+{"sample_id": "cyr_phrase_073744", "dataset": "cyrillic_handwriting", "target": "лебянеева м и", "pred": "лебянаве ми"}
+{"sample_id": "cyr_phrase_073745", "dataset": "cyrillic_handwriting", "target": "1 класса", "pred": "1класса"}
+{"sample_id": "cyr_phrase_073746", "dataset": "cyrillic_handwriting", "target": "почта россии", "pred": "мегтга расшийи"}
+{"sample_id": "cyr_phrase_073747", "dataset": "cyrillic_handwriting", "target": "москва смоленская", "pred": "москва смеленская"}
+{"sample_id": "cyr_phrase_073749", "dataset": "cyrillic_handwriting", "target": "просрочка сроков", "pred": "просрочно сронов"}
+{"sample_id": "cyr_phrase_073753", "dataset": "cyrillic_handwriting", "target": "петров иван", "pred": "петров иван"}
+{"sample_id": "cyr_phrase_073754", "dataset": "cyrillic_handwriting", "target": "выдан одд", "pred": "впдан овд"}
+{"sample_id": "cyr_phrase_073755", "dataset": "cyrillic_handwriting", "target": "28.09.2017 г.", "pred": "28.09.2017"}
+{"sample_id": "cyr_phrase_073756", "dataset": "cyrillic_handwriting", "target": "из отделения", "pred": "из отделения"}
+{"sample_id": "cyr_phrase_073759", "dataset": "cyrillic_handwriting", "target": "была отправлена", "pred": "была отправлена"}
+{"sample_id": "cyr_phrase_073764", "dataset": "cyrillic_handwriting", "target": "г. кирова", "pred": "т.кирова"}
+{"sample_id": "cyr_phrase_073765", "dataset": "cyrillic_handwriting", "target": "четыре тысячи", "pred": "гетире тыслчи."}
+{"sample_id": "cyr_phrase_073767", "dataset": "cyrillic_handwriting", "target": "был проведен", "pred": "ббы проводен"}
+{"sample_id": "cyr_phrase_073777", "dataset": "cyrillic_handwriting", "target": "не состоит", "pred": "по-щтттуиенестнаять"}
+{"sample_id": "cyr_phrase_073785", "dataset": "cyrillic_handwriting", "target": "детей к", "pred": "детйк"}
+{"sample_id": "cyr_phrase_073793", "dataset": "cyrillic_handwriting", "target": "для голосования", "pred": "для голосованих"}
+{"sample_id": "cyr_phrase_073796", "dataset": "cyrillic_handwriting", "target": "подпись на", "pred": "пуршссв на"}
+{"sample_id": "cyr_phrase_073802", "dataset": "cyrillic_handwriting", "target": "помоги орг", "pred": "\"помоги. орг\""}
+{"sample_id": "cyr_phrase_073803", "dataset": "cyrillic_handwriting", "target": "на базе", "pred": "на ваде"}
+{"sample_id": "cyr_phrase_073805", "dataset": "cyrillic_handwriting", "target": "одну тысячу", "pred": "одну тысягу"}
+{"sample_id": "cyr_phrase_073806", "dataset": "cyrillic_handwriting", "target": "елене анатольевне", "pred": "елене канатолевне"}
+{"sample_id": "cyr_phrase_073812", "dataset": "cyrillic_handwriting", "target": "со мной", "pred": "со мной"}
+{"sample_id": "cyr_phrase_073816", "dataset": "cyrillic_handwriting", "target": "две тысячи", "pred": "дне тычеми"}
+{"sample_id": "cyr_phrase_073824", "dataset": "cyrillic_handwriting", "target": "в присутствии", "pred": "в присухеввии"}
+{"sample_id": "cyr_phrase_073825", "dataset": "cyrillic_handwriting", "target": "меня от", "pred": "меня ом"}
+{"sample_id": "cyr_phrase_073826", "dataset": "cyrillic_handwriting", "target": "г. иркутска", "pred": "г. иркужска"}
+{"sample_id": "cyr_word_051565", "dataset": "cyrillic_handwriting", "target": "деформация", "pred": "дерормация"}
+{"sample_id": "cyr_word_051742", "dataset": "cyrillic_handwriting", "target": "линейное", "pred": "линейное"}
+{"sample_id": "cyr_word_052341", "dataset": "cyrillic_handwriting", "target": "используем", "pred": "испоиуем"}
+{"sample_id": "cyr_word_052359", "dataset": "cyrillic_handwriting", "target": "дисперсия", "pred": "бисперсия"}
+{"sample_id": "cyr_word_052386", "dataset": "cyrillic_handwriting", "target": "принцип", "pred": "принцин"}
+{"sample_id": "cyr_word_052440", "dataset": "cyrillic_handwriting", "target": "порядок", "pred": "порядок"}
+{"sample_id": "cyr_word_052458", "dataset": "cyrillic_handwriting", "target": "равномерно", "pred": "равломерно"}
+{"sample_id": "cyr_word_052479", "dataset": "cyrillic_handwriting", "target": "осуществляется", "pred": "осуществчется"}
+{"sample_id": "cyr_word_052530", "dataset": "cyrillic_handwriting", "target": "через", "pred": "через"}
+{"sample_id": "cyr_word_052549", "dataset": "cyrillic_handwriting", "target": "имеем", "pred": "илеем"}
+{"sample_id": "cyr_word_052566", "dataset": "cyrillic_handwriting", "target": "линейных", "pred": "линейных"}
+{"sample_id": "cyr_word_052585", "dataset": "cyrillic_handwriting", "target": "метод", "pred": "нетод"}
+{"sample_id": "cyr_word_052614", "dataset": "cyrillic_handwriting", "target": "моделей", "pred": "модеей"}
+{"sample_id": "cyr_word_052659", "dataset": "cyrillic_handwriting", "target": "тогда", "pred": "тода"}
+{"sample_id": "cyr_word_052720", "dataset": "cyrillic_handwriting", "target": "сверху", "pred": "сверку"}
+{"sample_id": "cyr_word_052759", "dataset": "cyrillic_handwriting", "target": "ерез", "pred": "еру"}
+{"sample_id": "cyr_word_052779", "dataset": "cyrillic_handwriting", "target": "линейная", "pred": "линатная"}
+{"sample_id": "cyr_word_052800", "dataset": "cyrillic_handwriting", "target": "вероятность", "pred": "верахност"}
+{"sample_id": "cyr_word_052849", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "скема"}
+{"sample_id": "cyr_word_072287", "dataset": "cyrillic_handwriting", "target": "ибо", "pred": "ибо"}
+{"sample_id": "cyr_word_072288", "dataset": "cyrillic_handwriting", "target": "осталось", "pred": "осталось"}
+{"sample_id": "cyr_word_072289", "dataset": "cyrillic_handwriting", "target": "поле", "pred": "поле"}
+{"sample_id": "cyr_word_072290", "dataset": "cyrillic_handwriting", "target": "оптическое", "pred": "опическое"}
+{"sample_id": "cyr_word_072294", "dataset": "cyrillic_handwriting", "target": "паспорт", "pred": "поспор'"}
+{"sample_id": "cyr_word_072295", "dataset": "cyrillic_handwriting", "target": "назначение", "pred": "назнячежие"}
+{"sample_id": "cyr_word_072296", "dataset": "cyrillic_handwriting", "target": "отправление", "pred": "отправление"}
+{"sample_id": "cyr_word_072298", "dataset": "cyrillic_handwriting", "target": "6.10.2017г.", "pred": "6.10.201г."}
+{"sample_id": "cyr_word_072301", "dataset": "cyrillic_handwriting", "target": "тогда", "pred": "тодоа"}
+{"sample_id": "cyr_word_072303", "dataset": "cyrillic_handwriting", "target": "критичны.", "pred": "критичны."}
+{"sample_id": "cyr_word_072308", "dataset": "cyrillic_handwriting", "target": "связь", "pred": "связь"}
+{"sample_id": "cyr_word_072312", "dataset": "cyrillic_handwriting", "target": "способ", "pred": "спосод"}
+{"sample_id": "cyr_word_072315", "dataset": "cyrillic_handwriting", "target": "ксерокопия", "pred": "керокопия"}
+{"sample_id": "cyr_word_072316", "dataset": "cyrillic_handwriting", "target": "приложена", "pred": "приложена"}
+{"sample_id": "cyr_word_072318", "dataset": "cyrillic_handwriting", "target": "заявлению", "pred": "заявлению"}
+{"sample_id": "cyr_word_072322", "dataset": "cyrillic_handwriting", "target": "угольник", "pred": "ролылиск"}
+{"sample_id": "cyr_word_072323", "dataset": "cyrillic_handwriting", "target": "расписка", "pred": "расписка"}
+{"sample_id": "cyr_word_072327", "dataset": "cyrillic_handwriting", "target": "15.02.1987г.", "pred": "15.в2.лврву."}
+{"sample_id": "cyr_word_072328", "dataset": "cyrillic_handwriting", "target": "рождения", "pred": "рощдения"}
+{"sample_id": "cyr_word_072329", "dataset": "cyrillic_handwriting", "target": "17.10.2005", "pred": "1гсогор"}
+{"sample_id": "cyr_word_072332", "dataset": "cyrillic_handwriting", "target": "множество", "pred": "мнянество"}
+{"sample_id": "cyr_word_072334", "dataset": "cyrillic_handwriting", "target": "деньги", "pred": "деныге"}
+{"sample_id": "cyr_word_072335", "dataset": "cyrillic_handwriting", "target": "рублей", "pred": "рублеет"}
+{"sample_id": "cyr_word_072336", "dataset": "cyrillic_handwriting", "target": "18.04.1980", "pred": "18.041980."}
+{"sample_id": "cyr_word_072338", "dataset": "cyrillic_handwriting", "target": "зарегистрирован", "pred": "зарезестрилован"}
+{"sample_id": "cyr_word_072342", "dataset": "cyrillic_handwriting", "target": "вышеуказанную", "pred": "вышеуказанную"}
+{"sample_id": "cyr_word_072343", "dataset": "cyrillic_handwriting", "target": "касательная", "pred": "касптельная"}
+{"sample_id": "cyr_word_072344", "dataset": "cyrillic_handwriting", "target": "рублей", "pred": "рублейт"}
+{"sample_id": "cyr_word_072346", "dataset": "cyrillic_handwriting", "target": "28.11.11", "pred": "2941"}
+{"sample_id": "cyr_word_072347", "dataset": "cyrillic_handwriting", "target": "14мг", "pred": "1уит"}
+{"sample_id": "cyr_word_072348", "dataset": "cyrillic_handwriting", "target": "плоскостопие", "pred": "алоскойолия"}
+{"sample_id": "cyr_word_072349", "dataset": "cyrillic_handwriting", "target": "обеих", "pred": "обесх"}
+{"sample_id": "cyr_word_072350", "dataset": "cyrillic_handwriting", "target": "киров", "pred": "ниров"}
+{"sample_id": "cyr_word_072353", "dataset": "cyrillic_handwriting", "target": "вагин", "pred": "вачин"}
+{"sample_id": "cyr_word_072354", "dataset": "cyrillic_handwriting", "target": "рассмотрим", "pred": "рассмотрим"}
+{"sample_id": "cyr_word_072356", "dataset": "cyrillic_handwriting", "target": "25.06.2005.", "pred": "25.06.2005."}
+{"sample_id": "cyr_word_072359", "dataset": "cyrillic_handwriting", "target": "547815", "pred": "547815"}
+{"sample_id": "cyr_word_072364", "dataset": "cyrillic_handwriting", "target": "директориальное", "pred": "месктодилльное"}
+{"sample_id": "cyr_word_072366", "dataset": "cyrillic_handwriting", "target": "паспорт", "pred": "паспорт"}
+{"sample_id": "cyr_word_072369", "dataset": "cyrillic_handwriting", "target": "доверенность", "pred": "доверснноств"}
+{"sample_id": "cyr_word_072370", "dataset": "cyrillic_handwriting", "target": "паспорт", "pred": "паспорт"}
+{"sample_id": "cyr_word_072371", "dataset": "cyrillic_handwriting", "target": "номер", "pred": "комер"}
+{"sample_id": "cyr_word_072372", "dataset": "cyrillic_handwriting", "target": "выдан", "pred": "выдан"}
+{"sample_id": "cyr_word_072373", "dataset": "cyrillic_handwriting", "target": "отделением", "pred": "ожделением"}
+{"sample_id": "cyr_word_072375", "dataset": "cyrillic_handwriting", "target": "событие", "pred": "событае"}
+{"sample_id": "cyr_word_072376", "dataset": "cyrillic_handwriting", "target": "рублей", "pred": "рублей"}
+{"sample_id": "cyr_word_072377", "dataset": "cyrillic_handwriting", "target": "москве", "pred": "моснв"}
+{"sample_id": "cyr_word_072379", "dataset": "cyrillic_handwriting", "target": "проживаю", "pred": "пропиваю"}
+{"sample_id": "cyr_word_072381", "dataset": "cyrillic_handwriting", "target": "квартира", "pred": "кваржира"}
+{"sample_id": "cyr_word_072383", "dataset": "cyrillic_handwriting", "target": "отправления,", "pred": "огправления,"}
+{"sample_id": "cyr_word_072384", "dataset": "cyrillic_handwriting", "target": "приходящие", "pred": "прихадящие"}
+{"sample_id": "cyr_word_072386", "dataset": "cyrillic_handwriting", "target": "любое", "pred": "любое"}
+{"sample_id": "cyr_word_072391", "dataset": "cyrillic_handwriting", "target": "выдан", "pred": "выдан"}
+{"sample_id": "cyr_word_072395", "dataset": "cyrillic_handwriting", "target": "проживающему", "pred": "проживающему"}
+{"sample_id": "cyr_word_072397", "dataset": "cyrillic_handwriting", "target": "новое", "pred": "новое"}
+{"sample_id": "cyr_word_072398", "dataset": "cyrillic_handwriting", "target": "вопрос", "pred": "вопрос"}
+{"sample_id": "cyr_word_072400", "dataset": "cyrillic_handwriting", "target": "30.09.2013", "pred": "30.09. 20153"}
+{"sample_id": "cyr_word_072401", "dataset": "cyrillic_handwriting", "target": "сентябрь,", "pred": "сентябрь,"}
+{"sample_id": "cyr_word_072403", "dataset": "cyrillic_handwriting", "target": "12.09.2013", "pred": "11.04.2013"}
+{"sample_id": "cyr_word_072404", "dataset": "cyrillic_handwriting", "target": "12.09.2013", "pred": "12. 09.2013"}
+{"sample_id": "cyr_word_072405", "dataset": "cyrillic_handwriting", "target": "12.09.2013г", "pred": "18.09.2015.г"}
+{"sample_id": "cyr_word_072407", "dataset": "cyrillic_handwriting", "target": "30.09.2013г", "pred": "30.092013г"}
+{"sample_id": "cyr_word_072408", "dataset": "cyrillic_handwriting", "target": "12.09.2013", "pred": "12.09г201"}
+{"sample_id": "cyr_word_072409", "dataset": "cyrillic_handwriting", "target": "использование", "pred": "исполорование"}
+{"sample_id": "cyr_word_072413", "dataset": "cyrillic_handwriting", "target": "планом", "pred": "планом"}
+{"sample_id": "cyr_word_072415", "dataset": "cyrillic_handwriting", "target": "модели", "pred": "моздели"}
+{"sample_id": "cyr_word_072416", "dataset": "cyrillic_handwriting", "target": "процесса", "pred": "прцесся"}
+{"sample_id": "cyr_word_072417", "dataset": "cyrillic_handwriting", "target": "непустое", "pred": "непустое"}
+{"sample_id": "cyr_word_072418", "dataset": "cyrillic_handwriting", "target": "определены", "pred": "опроделена"}
+{"sample_id": "cyr_word_072419", "dataset": "cyrillic_handwriting", "target": "существующие", "pred": "сущесвующие"}
+{"sample_id": "cyr_word_072421", "dataset": "cyrillic_handwriting", "target": "методы", "pred": "метода"}
+{"sample_id": "cyr_word_072422", "dataset": "cyrillic_handwriting", "target": "отлично", "pred": "отмало"}
+{"sample_id": "cyr_word_072423", "dataset": "cyrillic_handwriting", "target": "автомобиля,", "pred": "овтмобиль,"}
+{"sample_id": "cyr_word_072426", "dataset": "cyrillic_handwriting", "target": "хорошо", "pred": "хорошо"}
+{"sample_id": "cyr_word_072427", "dataset": "cyrillic_handwriting", "target": "метод:", "pred": "метод."}
+{"sample_id": "cyr_word_072428", "dataset": "cyrillic_handwriting", "target": "отлично", "pred": "отлично"}
+{"sample_id": "cyr_word_072429", "dataset": "cyrillic_handwriting", "target": "информационная", "pred": "иыформационная"}
+{"sample_id": "cyr_word_072430", "dataset": "cyrillic_handwriting", "target": "эндогеодинамического", "pred": "ждолодинамического"}
+{"sample_id": "cyr_word_072431", "dataset": "cyrillic_handwriting", "target": "описание", "pred": "отоддоана"}
+{"sample_id": "cyr_word_072433", "dataset": "cyrillic_handwriting", "target": "параметра", "pred": "параметра"}
+{"sample_id": "cyr_word_072434", "dataset": "cyrillic_handwriting", "target": "формирование", "pred": "тормирования"}
+{"sample_id": "cyr_word_072435", "dataset": "cyrillic_handwriting", "target": "значения", "pred": "злаченя"}
+{"sample_id": "cyr_word_072436", "dataset": "cyrillic_handwriting", "target": "выбор", "pred": "кнгор"}
+{"sample_id": "cyr_word_072437", "dataset": "cyrillic_handwriting", "target": "аргументам", "pred": "аргииентам"}
+{"sample_id": "cyr_word_072439", "dataset": "cyrillic_handwriting", "target": "расписка.", "pred": "расниска"}
+{"sample_id": "cyr_word_072442", "dataset": "cyrillic_handwriting", "target": "бугрова", "pred": "бугрова"}
+{"sample_id": "cyr_word_072444", "dataset": "cyrillic_handwriting", "target": "кривые", "pred": "кривои"}
+{"sample_id": "cyr_word_072446", "dataset": "cyrillic_handwriting", "target": "санкт-петербург", "pred": "самкт- кемертур"}
+{"sample_id": "cyr_word_072448", "dataset": "cyrillic_handwriting", "target": "паспорт", "pred": "паенорт"}
+{"sample_id": "cyr_word_072450", "dataset": "cyrillic_handwriting", "target": "выдан", "pred": "впдам"}
+{"sample_id": "cyr_word_072453", "dataset": "cyrillic_handwriting", "target": "случай", "pred": "случай"}
+{"sample_id": "cyr_word_072458", "dataset": "cyrillic_handwriting", "target": "два", "pred": "дво"}
+{"sample_id": "cyr_word_072461", "dataset": "cyrillic_handwriting", "target": "расположенной", "pred": "расноложеной"}
+{"sample_id": "cyr_word_072462", "dataset": "cyrillic_handwriting", "target": "адресу", "pred": "адлесу"}
+{"sample_id": "cyr_word_072464", "dataset": "cyrillic_handwriting", "target": "второго", "pred": "второго"}
+{"sample_id": "cyr_word_072465", "dataset": "cyrillic_handwriting", "target": "санкт-петербург", "pred": "сомн-кемертут"}
+{"sample_id": "cyr_word_072468", "dataset": "cyrillic_handwriting", "target": "23.03.2012г.", "pred": "23.03.2012 ."}
+{"sample_id": "cyr_word_072470", "dataset": "cyrillic_handwriting", "target": "михаилу", "pred": "михаилу"}
+{"sample_id": "cyr_word_072472", "dataset": "cyrillic_handwriting", "target": "16.12.1991г.", "pred": "16.2.19912г."}
+{"sample_id": "cyr_word_072473", "dataset": "cyrillic_handwriting", "target": "содействие", "pred": "по оказанию"}
+{"sample_id": "cyr_word_072474", "dataset": "cyrillic_handwriting", "target": "промышленным", "pred": "промиуленным"}
+{"sample_id": "cyr_word_072475", "dataset": "cyrillic_handwriting", "target": "пространство", "pred": "простелнство"}
+{"sample_id": "cyr_word_072476", "dataset": "cyrillic_handwriting", "target": "иванов", "pred": "иванов"}
+{"sample_id": "cyr_word_072480", "dataset": "cyrillic_handwriting", "target": "одиннадцатого", "pred": "единадцатого"}
+{"sample_id": "cyr_word_072482", "dataset": "cyrillic_handwriting", "target": "иванову", "pred": "иваноту"}
+{"sample_id": "cyr_word_072483", "dataset": "cyrillic_handwriting", "target": "мамедов.р.г.", "pred": "мамедов. рп."}
+{"sample_id": "cyr_word_072486", "dataset": "cyrillic_handwriting", "target": "любой", "pred": "любой"}
+{"sample_id": "cyr_word_072495", "dataset": "cyrillic_handwriting", "target": "наталью", "pred": "патальа"}
+{"sample_id": "cyr_word_072496", "dataset": "cyrillic_handwriting", "target": "заявление.", "pred": "заявление"}
+{"sample_id": "cyr_word_072497", "dataset": "cyrillic_handwriting", "target": "разрешино", "pred": "разрешмимо"}
+{"sample_id": "cyr_word_072498", "dataset": "cyrillic_handwriting", "target": "покажем", "pred": "покажыем"}
+{"sample_id": "cyr_word_072499", "dataset": "cyrillic_handwriting", "target": "08.09.16г.", "pred": "08.09.16г"}
+{"sample_id": "cyr_word_072502", "dataset": "cyrillic_handwriting", "target": "отказываюсь", "pred": "отка зываюсь"}
+{"sample_id": "cyr_word_072503", "dataset": "cyrillic_handwriting", "target": "адвокатов", "pred": "адвонатов"}
+{"sample_id": "cyr_word_072504", "dataset": "cyrillic_handwriting", "target": "свои", "pred": "свои"}
+{"sample_id": "cyr_word_072505", "dataset": "cyrillic_handwriting", "target": "прошу", "pred": "прому"}
+{"sample_id": "cyr_word_072507", "dataset": "cyrillic_handwriting", "target": "копию,", "pred": "конию"}
+{"sample_id": "cyr_word_072508", "dataset": "cyrillic_handwriting", "target": "ткачевой", "pred": "тначевой"}
+{"sample_id": "cyr_word_072509", "dataset": "cyrillic_handwriting", "target": "измеримость", "pred": "умериность"}
+{"sample_id": "cyr_word_072511", "dataset": "cyrillic_handwriting", "target": "железнодорожного", "pred": "железнодоротною"}
+{"sample_id": "cyr_word_072513", "dataset": "cyrillic_handwriting", "target": "октябрь,", "pred": "октлбрь,"}
+{"sample_id": "cyr_word_072516", "dataset": "cyrillic_handwriting", "target": "савилова", "pred": "савилово"}
+{"sample_id": "cyr_word_072517", "dataset": "cyrillic_handwriting", "target": "абузова", "pred": "свбузова"}
+{"sample_id": "cyr_word_072518", "dataset": "cyrillic_handwriting", "target": "шаталова", "pred": "шаталова"}
+{"sample_id": "cyr_word_072519", "dataset": "cyrillic_handwriting", "target": "обласова", "pred": "обласова"}
+{"sample_id": "cyr_word_072520", "dataset": "cyrillic_handwriting", "target": "вопрос", "pred": "вопрос"}
+{"sample_id": "cyr_word_072527", "dataset": "cyrillic_handwriting", "target": "мбоу", "pred": "летоу"}
+{"sample_id": "cyr_word_072528", "dataset": "cyrillic_handwriting", "target": "лицей", "pred": "лицей"}
+{"sample_id": "cyr_word_072531", "dataset": "cyrillic_handwriting", "target": "дама", "pred": "дама"}
+{"sample_id": "cyr_word_072533", "dataset": "cyrillic_handwriting", "target": "наладить", "pred": "наладить"}
+{"sample_id": "cyr_word_072534", "dataset": "cyrillic_handwriting", "target": "доброжелательно-", "pred": "доброжелательно-"}
+{"sample_id": "cyr_word_072535", "dataset": "cyrillic_handwriting", "target": "требовательные", "pred": "тгребовательные"}
+{"sample_id": "cyr_word_072536", "dataset": "cyrillic_handwriting", "target": "наталье", "pred": "наталья"}
+{"sample_id": "cyr_word_072537", "dataset": "cyrillic_handwriting", "target": "срок", "pred": "срок"}
+{"sample_id": "cyr_word_072538", "dataset": "cyrillic_handwriting", "target": "ивановы", "pred": "рсетелевтщат"}
+{"sample_id": "cyr_word_072539", "dataset": "cyrillic_handwriting", "target": "смогла", "pred": "смогла"}
+{"sample_id": "cyr_word_072541", "dataset": "cyrillic_handwriting", "target": "психологическим", "pred": "пчколошеке"}
+{"sample_id": "cyr_word_072542", "dataset": "cyrillic_handwriting", "target": "сделаем", "pred": "сденаем"}
+{"sample_id": "cyr_word_072543", "dataset": "cyrillic_handwriting", "target": "индивидуально", "pred": "индивидуально"}
+{"sample_id": "cyr_word_072544", "dataset": "cyrillic_handwriting", "target": "их", "pred": "их"}
+{"sample_id": "cyr_word_072545", "dataset": "cyrillic_handwriting", "target": "особенности", "pred": "особениести"}
+{"sample_id": "cyr_word_072546", "dataset": "cyrillic_handwriting", "target": "учитывая", "pred": "учитыгвая"}
+{"sample_id": "cyr_word_072547", "dataset": "cyrillic_handwriting", "target": "индивидуальные", "pred": "индивиддальные"}
+{"sample_id": "cyr_word_072548", "dataset": "cyrillic_handwriting", "target": "воздействия", "pred": "воздействия"}
+{"sample_id": "cyr_word_072551", "dataset": "cyrillic_handwriting", "target": "коллектива", "pred": "коллестива"}
+{"sample_id": "cyr_word_072552", "dataset": "cyrillic_handwriting", "target": "применяем", "pred": "примемсеем"}
+{"sample_id": "cyr_word_072553", "dataset": "cyrillic_handwriting", "target": "методикой", "pred": "ляетодикой"}
+{"sample_id": "cyr_word_072554", "dataset": "cyrillic_handwriting", "target": "воспитательных", "pred": "воспитателених"}
+{"sample_id": "cyr_word_072555", "dataset": "cyrillic_handwriting", "target": "умением", "pred": "умением"}
+{"sample_id": "cyr_word_072556", "dataset": "cyrillic_handwriting", "target": "использовать", "pred": "использовашь"}
+{"sample_id": "cyr_word_072557", "dataset": "cyrillic_handwriting", "target": "разнообразные", "pred": "разнеофраунае"}
+{"sample_id": "cyr_word_072558", "dataset": "cyrillic_handwriting", "target": "работы", "pred": "работы"}
+{"sample_id": "cyr_word_072560", "dataset": "cyrillic_handwriting", "target": "студентка", "pred": "студентка"}
+{"sample_id": "cyr_word_072563", "dataset": "cyrillic_handwriting", "target": "теорема", "pred": "теореша"}
+{"sample_id": "cyr_word_072565", "dataset": "cyrillic_handwriting", "target": "подготовку", "pred": "подоневку"}
+{"sample_id": "cyr_word_072566", "dataset": "cyrillic_handwriting", "target": "мероприятиям", "pred": "мерскриетия,"}
+{"sample_id": "cyr_word_072567", "dataset": "cyrillic_handwriting", "target": "проверяла", "pred": "проверяла"}
+{"sample_id": "cyr_word_072569", "dataset": "cyrillic_handwriting", "target": "дежурств", "pred": "деждритв"}
+{"sample_id": "cyr_word_072572", "dataset": "cyrillic_handwriting", "target": "знакомилась", "pred": "знакомилась"}
+{"sample_id": "cyr_word_072574", "dataset": "cyrillic_handwriting", "target": "плотность", "pred": "плотность"}
+{"sample_id": "cyr_word_072575", "dataset": "cyrillic_handwriting", "target": "документации", "pred": "докуместуии"}
+{"sample_id": "cyr_word_072576", "dataset": "cyrillic_handwriting", "target": "классного", "pred": "плаесного"}
+{"sample_id": "cyr_word_072577", "dataset": "cyrillic_handwriting", "target": "планов.", "pred": "планов."}
+{"sample_id": "cyr_word_072578", "dataset": "cyrillic_handwriting", "target": "рекомендую", "pred": "рекомеждурду"}
+{"sample_id": "cyr_word_072581", "dataset": "cyrillic_handwriting", "target": "оценкой", "pred": "оуекой"}
+{"sample_id": "cyr_word_072583", "dataset": "cyrillic_handwriting", "target": "основные", "pred": "остовные"}
+{"sample_id": "cyr_word_072584", "dataset": "cyrillic_handwriting", "target": "избирательной", "pred": "избирательной"}
+{"sample_id": "cyr_word_072585", "dataset": "cyrillic_handwriting", "target": "получил", "pred": "получы"}
+{"sample_id": "cyr_word_072592", "dataset": "cyrillic_handwriting", "target": "24.11.1986", "pred": "24.11.1996."}
+{"sample_id": "cyr_word_072593", "dataset": "cyrillic_handwriting", "target": "свойства", "pred": "войства"}
+{"sample_id": "cyr_word_072595", "dataset": "cyrillic_handwriting", "target": "иванова", "pred": "иважови"}
+{"sample_id": "cyr_word_072596", "dataset": "cyrillic_handwriting", "target": "сидорову", "pred": "сидорову"}
+{"sample_id": "cyr_word_072598", "dataset": "cyrillic_handwriting", "target": "советская", "pred": "советская"}
+{"sample_id": "cyr_word_072601", "dataset": "cyrillic_handwriting", "target": "перечисленные", "pred": "порезиеленные"}
+{"sample_id": "cyr_word_072603", "dataset": "cyrillic_handwriting", "target": "яндекс-кошелька", "pred": "яндекс-кошелька"}
+{"sample_id": "cyr_word_072604", "dataset": "cyrillic_handwriting", "target": "15.09.2020", "pred": "15.09.90г0"}
+{"sample_id": "cyr_word_072605", "dataset": "cyrillic_handwriting", "target": "деформация", "pred": "дерормация"}
+{"sample_id": "cyr_word_072606", "dataset": "cyrillic_handwriting", "target": "523739", "pred": "528739"}
+{"sample_id": "cyr_word_072607", "dataset": "cyrillic_handwriting", "target": "12.08.2012", "pred": "180820т12"}
+{"sample_id": "cyr_word_072608", "dataset": "cyrillic_handwriting", "target": "88007008000", "pred": "180оходооо"}
+{"sample_id": "cyr_word_072610", "dataset": "cyrillic_handwriting", "target": "выдан", "pred": "выдал"}
+{"sample_id": "cyr_word_072614", "dataset": "cyrillic_handwriting", "target": "шейка", "pred": "шейха,"}
+{"sample_id": "cyr_word_072616", "dataset": "cyrillic_handwriting", "target": "виде", "pred": "виде"}
+{"sample_id": "cyr_word_072618", "dataset": "cyrillic_handwriting", "target": "10.04.2000", "pred": "7804.200о."}
+{"sample_id": "cyr_word_072619", "dataset": "cyrillic_handwriting", "target": "детализация", "pred": "деталзация"}
+{"sample_id": "cyr_word_072621", "dataset": "cyrillic_handwriting", "target": "незаконному", "pred": "незаковноту"}
+{"sample_id": "cyr_word_072622", "dataset": "cyrillic_handwriting", "target": "более", "pred": "более"}
+{"sample_id": "cyr_word_072625", "dataset": "cyrillic_handwriting", "target": "линейное", "pred": "линейное"}
+{"sample_id": "cyr_word_072626", "dataset": "cyrillic_handwriting", "target": "яндекс-деньги", "pred": "энрек деньги"}
+{"sample_id": "cyr_word_072627", "dataset": "cyrillic_handwriting", "target": "контролер", "pred": "контралр"}
+{"sample_id": "cyr_word_072628", "dataset": "cyrillic_handwriting", "target": "смоленское", "pred": "столенскя"}
+{"sample_id": "cyr_word_072629", "dataset": "cyrillic_handwriting", "target": "заместитель", "pred": "заляститель"}
+{"sample_id": "cyr_word_072630", "dataset": "cyrillic_handwriting", "target": "г.пенза", "pred": "2пепза"}
+{"sample_id": "cyr_word_072632", "dataset": "cyrillic_handwriting", "target": "сходится", "pred": "(ходинся"}
+{"sample_id": "cyr_word_072634", "dataset": "cyrillic_handwriting", "target": "обязательств", "pred": "обязательств"}
+{"sample_id": "cyr_word_072640", "dataset": "cyrillic_handwriting", "target": "ожиданию", "pred": "отидакйю"}
+{"sample_id": "cyr_word_072642", "dataset": "cyrillic_handwriting", "target": "30101810100000000716", "pred": "30101810100000000716"}
+{"sample_id": "cyr_word_072643", "dataset": "cyrillic_handwriting", "target": "30232810481100000009", "pred": "30232810481190000009"}
+{"sample_id": "cyr_word_072644", "dataset": "cyrillic_handwriting", "target": "44525716", "pred": "044525716"}
+{"sample_id": "cyr_word_072645", "dataset": "cyrillic_handwriting", "target": "разрыв", "pred": "радрав"}
+{"sample_id": "cyr_word_072646", "dataset": "cyrillic_handwriting", "target": "проводить", "pred": "тководннойт"}
+{"sample_id": "cyr_word_072651", "dataset": "cyrillic_handwriting", "target": "стандартизование", "pred": "стайдартизованиие"}
+{"sample_id": "cyr_word_072652", "dataset": "cyrillic_handwriting", "target": "избирательного", "pred": "избиратонского"}
+{"sample_id": "cyr_word_072655", "dataset": "cyrillic_handwriting", "target": "аналогичные", "pred": "алалогичные"}
+{"sample_id": "cyr_word_072658", "dataset": "cyrillic_handwriting", "target": "заявление", "pred": "заявление"}
+{"sample_id": "cyr_word_072659", "dataset": "cyrillic_handwriting", "target": "разведена", "pred": "разверьна"}
+{"sample_id": "cyr_word_072660", "dataset": "cyrillic_handwriting", "target": "сходимость", "pred": "сходемость"}
+{"sample_id": "cyr_word_072664", "dataset": "cyrillic_handwriting", "target": "морозова", "pred": "морозодл"}
+{"sample_id": "cyr_word_072665", "dataset": "cyrillic_handwriting", "target": "генеральному", "pred": "ремеральнееу"}
+{"sample_id": "cyr_word_072666", "dataset": "cyrillic_handwriting", "target": "российской", "pred": "фоесианой"}
+{"sample_id": "cyr_word_072667", "dataset": "cyrillic_handwriting", "target": "заявление", "pred": "зоявлеете"}
+{"sample_id": "cyr_word_072668", "dataset": "cyrillic_handwriting", "target": "березкин", "pred": "перезкие"}
+{"sample_id": "cyr_word_072669", "dataset": "cyrillic_handwriting", "target": "совпадает", "pred": "совимдает"}
+{"sample_id": "cyr_word_072670", "dataset": "cyrillic_handwriting", "target": "08.02.2012г", "pred": "ов. 02. 2ога"}
+{"sample_id": "cyr_word_072672", "dataset": "cyrillic_handwriting", "target": "представлением", "pred": "представивелем"}
+{"sample_id": "cyr_word_072674", "dataset": "cyrillic_handwriting", "target": "главы", "pred": "главы"}
+{"sample_id": "cyr_word_072675", "dataset": "cyrillic_handwriting", "target": "документы", "pred": "долушейты"}
+{"sample_id": "cyr_word_072677", "dataset": "cyrillic_handwriting", "target": "означает", "pred": "оначает"}
+{"sample_id": "cyr_word_072678", "dataset": "cyrillic_handwriting", "target": "березкина", "pred": "березкина"}
+{"sample_id": "cyr_word_072679", "dataset": "cyrillic_handwriting", "target": "наизусть", "pred": "полдидела"}
+{"sample_id": "cyr_word_072681", "dataset": "cyrillic_handwriting", "target": "имеется", "pred": "имеевая"}
+{"sample_id": "cyr_word_072686", "dataset": "cyrillic_handwriting", "target": "суммы,", "pred": "суммы,"}
+{"sample_id": "cyr_word_072687", "dataset": "cyrillic_handwriting", "target": "произведена", "pred": "произвеека"}
+{"sample_id": "cyr_word_072690", "dataset": "cyrillic_handwriting", "target": "заявление", "pred": "заявление"}
+{"sample_id": "cyr_word_072691", "dataset": "cyrillic_handwriting", "target": "прошу", "pred": "прошу"}
+{"sample_id": "cyr_word_072692", "dataset": "cyrillic_handwriting", "target": "должности", "pred": "должности"}
+{"sample_id": "cyr_word_072693", "dataset": "cyrillic_handwriting", "target": "государственной", "pred": "государственной"}
+{"sample_id": "cyr_word_072694", "dataset": "cyrillic_handwriting", "target": "гражданкой", "pred": "гражеданской"}
+{"sample_id": "cyr_word_072695", "dataset": "cyrillic_handwriting", "target": "службы", "pred": "служби"}
+{"sample_id": "cyr_word_072696", "dataset": "cyrillic_handwriting", "target": "оператор", "pred": "опеатор"}
+{"sample_id": "cyr_word_072697", "dataset": "cyrillic_handwriting", "target": "совокупность", "pred": "совонуматть"}
+{"sample_id": "cyr_word_072698", "dataset": "cyrillic_handwriting", "target": "заместителя", "pred": "заместителя"}
+{"sample_id": "cyr_word_072699", "dataset": "cyrillic_handwriting", "target": "министра", "pred": "министра"}
+{"sample_id": "cyr_word_072700", "dataset": "cyrillic_handwriting", "target": "просрочкой", "pred": "просрочкои"}
+{"sample_id": "cyr_word_072701", "dataset": "cyrillic_handwriting", "target": "финансов", "pred": "деинансов"}
+{"sample_id": "cyr_word_072704", "dataset": "cyrillic_handwriting", "target": "заявление.", "pred": "заявления."}
+{"sample_id": "cyr_word_072705", "dataset": "cyrillic_handwriting", "target": "используем", "pred": "испоиуем"}
+{"sample_id": "cyr_word_072707", "dataset": "cyrillic_handwriting", "target": "июля", "pred": "июпя"}
+{"sample_id": "cyr_word_072708", "dataset": "cyrillic_handwriting", "target": "желательно", "pred": "нелательно"}
+{"sample_id": "cyr_word_072710", "dataset": "cyrillic_handwriting", "target": "предположительно", "pred": "предполежигсельно"}
+{"sample_id": "cyr_word_072715", "dataset": "cyrillic_handwriting", "target": "дисперсия", "pred": "бисперсия"}
+{"sample_id": "cyr_word_072716", "dataset": "cyrillic_handwriting", "target": "которому", "pred": "кеторому"}
+{"sample_id": "cyr_word_072717", "dataset": "cyrillic_handwriting", "target": "макарова", "pred": "макнрова"}
+{"sample_id": "cyr_word_072719", "dataset": "cyrillic_handwriting", "target": "алименты", "pred": "алименты"}
+{"sample_id": "cyr_word_072720", "dataset": "cyrillic_handwriting", "target": "приглашается", "pred": "прилагается"}
+{"sample_id": "cyr_word_072723", "dataset": "cyrillic_handwriting", "target": "принцип", "pred": "принцин"}
+{"sample_id": "cyr_word_072726", "dataset": "cyrillic_handwriting", "target": "программах", "pred": "програмшах"}
+{"sample_id": "cyr_word_072729", "dataset": "cyrillic_handwriting", "target": "директора", "pred": "дияктора"}
+{"sample_id": "cyr_word_072730", "dataset": "cyrillic_handwriting", "target": "заявление", "pred": "заявлене"}
+{"sample_id": "cyr_word_072732", "dataset": "cyrillic_handwriting", "target": "собака", "pred": "собака"}
+{"sample_id": "cyr_word_072734", "dataset": "cyrillic_handwriting", "target": "заявление", "pred": "заявление"}
+{"sample_id": "cyr_word_072735", "dataset": "cyrillic_handwriting", "target": "сидоренко", "pred": "сидоренно"}
+{"sample_id": "cyr_word_072736", "dataset": "cyrillic_handwriting", "target": "прошу", "pred": "прошу"}
+{"sample_id": "cyr_word_072738", "dataset": "cyrillic_handwriting", "target": "договор", "pred": "договор"}
+{"sample_id": "cyr_word_072742", "dataset": "cyrillic_handwriting", "target": "транспортного", "pred": "транспортного"}
+{"sample_id": "cyr_word_072743", "dataset": "cyrillic_handwriting", "target": "порядок", "pred": "порядок"}
+{"sample_id": "cyr_word_072744", "dataset": "cyrillic_handwriting", "target": "средства", "pred": "средства"}
+{"sample_id": "cyr_word_072745", "dataset": "cyrillic_handwriting", "target": "причина", "pred": "причина"}
+{"sample_id": "cyr_word_072746", "dataset": "cyrillic_handwriting", "target": "отказ", "pred": "отказ"}
+{"sample_id": "cyr_word_072750", "dataset": "cyrillic_handwriting", "target": "заявление", "pred": "заявниме"}
+{"sample_id": "cyr_word_072753", "dataset": "cyrillic_handwriting", "target": "равномерно", "pred": "равломерно"}
+{"sample_id": "cyr_word_072758", "dataset": "cyrillic_handwriting", "target": "сделать", "pred": "срелать"}
+{"sample_id": "cyr_word_072762", "dataset": "cyrillic_handwriting", "target": "осуществляется", "pred": "осуществчется"}
+{"sample_id": "cyr_word_072763", "dataset": "cyrillic_handwriting", "target": "переводом", "pred": "кереворбк"}
+{"sample_id": "cyr_word_072764", "dataset": "cyrillic_handwriting", "target": "медицинского", "pred": "медщискоо"}
+{"sample_id": "cyr_word_072766", "dataset": "cyrillic_handwriting", "target": "заявление", "pred": "заявнение"}
+{"sample_id": "cyr_word_072769", "dataset": "cyrillic_handwriting", "target": "через", "pred": "через"}
+{"sample_id": "cyr_word_072771", "dataset": "cyrillic_handwriting", "target": "академику", "pred": "академику"}
+{"sample_id": "cyr_word_072773", "dataset": "cyrillic_handwriting", "target": "беспозвоночных", "pred": "беснозвоноеных"}
+{"sample_id": "cyr_word_072774", "dataset": "cyrillic_handwriting", "target": "заявление", "pred": "заявление"}
+{"sample_id": "cyr_word_072775", "dataset": "cyrillic_handwriting", "target": "13.09.19", "pred": "13.0919"}
+{"sample_id": "cyr_word_072776", "dataset": "cyrillic_handwriting", "target": "преобретен", "pred": "преобретем"}
+{"sample_id": "cyr_word_072777", "dataset": "cyrillic_handwriting", "target": "смартфон", "pred": "снартрок"}
+{"sample_id": "cyr_word_072778", "dataset": "cyrillic_handwriting", "target": "имеем", "pred": "илеем"}
+{"sample_id": "cyr_word_072782", "dataset": "cyrillic_handwriting", "target": "данных", "pred": "данных"}
+{"sample_id": "cyr_word_072785", "dataset": "cyrillic_handwriting", "target": "27.09.19", "pred": "27.09.19"}
+{"sample_id": "cyr_word_072786", "dataset": "cyrillic_handwriting", "target": "обозначим", "pred": "обозиачим"}
+{"sample_id": "cyr_word_072787", "dataset": "cyrillic_handwriting", "target": "линейных", "pred": "линейных"}
+{"sample_id": "cyr_word_072792", "dataset": "cyrillic_handwriting", "target": "обнаружен", "pred": "обнаружен"}
+{"sample_id": "cyr_word_072795", "dataset": "cyrillic_handwriting", "target": "консультантом", "pred": "кожультантом"}
+{"sample_id": "cyr_word_072796", "dataset": "cyrillic_handwriting", "target": "магазина", "pred": "магарено"}
+{"sample_id": "cyr_word_072798", "dataset": "cyrillic_handwriting", "target": "метод", "pred": "нетод"}
+{"sample_id": "cyr_word_072806", "dataset": "cyrillic_handwriting", "target": "моделей", "pred": "модеей"}
+{"sample_id": "cyr_word_072815", "dataset": "cyrillic_handwriting", "target": "18.10.2018", "pred": "11.10.2015"}
+{"sample_id": "cyr_word_072816", "dataset": "cyrillic_handwriting", "target": "жалоба", "pred": "жалоба"}
+{"sample_id": "cyr_word_072821", "dataset": "cyrillic_handwriting", "target": "тогда", "pred": "тода"}
+{"sample_id": "cyr_word_072822", "dataset": "cyrillic_handwriting", "target": "сотрудники", "pred": "соргдуднаки"}
+{"sample_id": "cyr_word_072825", "dataset": "cyrillic_handwriting", "target": "расписка.", "pred": "расписка"}
+{"sample_id": "cyr_word_072827", "dataset": "cyrillic_handwriting", "target": "объяснительная", "pred": "объяекитаяьное"}
+{"sample_id": "cyr_word_072829", "dataset": "cyrillic_handwriting", "target": "сверху", "pred": "сверку"}
+{"sample_id": "cyr_word_072830", "dataset": "cyrillic_handwriting", "target": "личности", "pred": "мыности"}
+{"sample_id": "cyr_word_072831", "dataset": "cyrillic_handwriting", "target": "настроения", "pred": "постросия"}
+{"sample_id": "cyr_word_072833", "dataset": "cyrillic_handwriting", "target": "времени", "pred": "бремеали"}
+{"sample_id": "cyr_word_072835", "dataset": "cyrillic_handwriting", "target": "пришла", "pred": "жишла"}
+{"sample_id": "cyr_word_072836", "dataset": "cyrillic_handwriting", "target": "отступами", "pred": "оступими"}
+{"sample_id": "cyr_word_072837", "dataset": "cyrillic_handwriting", "target": "объяснительная", "pred": "объяскительная"}
+{"sample_id": "cyr_word_072838", "dataset": "cyrillic_handwriting", "target": "начальнику", "pred": "начальнику"}
+{"sample_id": "cyr_word_072845", "dataset": "cyrillic_handwriting", "target": "автобуса", "pred": "автобуса"}
+{"sample_id": "cyr_word_072846", "dataset": "cyrillic_handwriting", "target": "государственной", "pred": "государайвенной"}
+{"sample_id": "cyr_word_072847", "dataset": "cyrillic_handwriting", "target": "ерез", "pred": "еру"}
+{"sample_id": "cyr_word_072848", "dataset": "cyrillic_handwriting", "target": "15/09/03", "pred": "15109105"}
+{"sample_id": "cyr_word_072850", "dataset": "cyrillic_handwriting", "target": "объяснительная", "pred": "обоъяснительная"}
+{"sample_id": "cyr_word_072851", "dataset": "cyrillic_handwriting", "target": "сегодня", "pred": "сегодня"}
+{"sample_id": "cyr_word_072852", "dataset": "cyrillic_handwriting", "target": "28.10.2016", "pred": "2в.10-016"}
+{"sample_id": "cyr_word_072853", "dataset": "cyrillic_handwriting", "target": "занимался", "pred": "занимался"}
+{"sample_id": "cyr_word_072857", "dataset": "cyrillic_handwriting", "target": "линейная", "pred": "линатная"}
+{"sample_id": "cyr_word_072863", "dataset": "cyrillic_handwriting", "target": "28.10.2016", "pred": "28.10.2016"}
+{"sample_id": "cyr_word_072865", "dataset": "cyrillic_handwriting", "target": "вероятность", "pred": "верахноят"}
+{"sample_id": "cyr_word_072866", "dataset": "cyrillic_handwriting", "target": "объяснительная", "pred": "объяаиичельная"}
+{"sample_id": "cyr_word_072867", "dataset": "cyrillic_handwriting", "target": "специалистов", "pred": "спиталистов"}
+{"sample_id": "cyr_word_072868", "dataset": "cyrillic_handwriting", "target": "месте", "pred": "месте"}
+{"sample_id": "cyr_word_072870", "dataset": "cyrillic_handwriting", "target": "сказала", "pred": "сказала"}
+{"sample_id": "cyr_word_072872", "dataset": "cyrillic_handwriting", "target": "рассмотрим", "pred": "расмотрим"}
+{"sample_id": "cyr_word_072873", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "слвллс"}
+{"sample_id": "cyr_word_072874", "dataset": "cyrillic_handwriting", "target": "предоставить", "pred": "предоставить"}
+{"sample_id": "cyr_word_072880", "dataset": "cyrillic_handwriting", "target": "аддитивный", "pred": "аддитивной"}
+{"sample_id": "cyr_word_072881", "dataset": "cyrillic_handwriting", "target": "был", "pred": "был"}
+{"sample_id": "cyr_word_072882", "dataset": "cyrillic_handwriting", "target": "устойчивость", "pred": "устойчивость"}
+{"sample_id": "cyr_word_072883", "dataset": "cyrillic_handwriting", "target": "абсолютно", "pred": "абсолютно"}
+{"sample_id": "cyr_word_072884", "dataset": "cyrillic_handwriting", "target": "пусть", "pred": "пусть"}
+{"sample_id": "cyr_word_072885", "dataset": "cyrillic_handwriting", "target": "первого", "pred": "первото"}
+{"sample_id": "cyr_word_072886", "dataset": "cyrillic_handwriting", "target": "схемой", "pred": "схемой"}
+{"sample_id": "cyr_word_072887", "dataset": "cyrillic_handwriting", "target": "устойчива", "pred": "уснойчива"}
+{"sample_id": "cyr_word_072888", "dataset": "cyrillic_handwriting", "target": "суммарную", "pred": "суннарнуюо"}
+{"sample_id": "cyr_word_072889", "dataset": "cyrillic_handwriting", "target": "предположим", "pred": "предибложим"}
+{"sample_id": "cyr_word_072890", "dataset": "cyrillic_handwriting", "target": "трудно", "pred": "сгрудно"}
+{"sample_id": "cyr_word_072891", "dataset": "cyrillic_handwriting", "target": "нет", "pred": "нег"}
+{"sample_id": "cyr_word_072892", "dataset": "cyrillic_handwriting", "target": "решения", "pred": "реша"}
+{"sample_id": "cyr_word_072893", "dataset": "cyrillic_handwriting", "target": "вопрос", "pred": "вопрое"}
+{"sample_id": "cyr_word_072894", "dataset": "cyrillic_handwriting", "target": "заметить", "pred": "замешеиь"}
+{"sample_id": "cyr_word_072895", "dataset": "cyrillic_handwriting", "target": "хотя", "pred": "хотя"}
+{"sample_id": "cyr_word_072896", "dataset": "cyrillic_handwriting", "target": "получаем", "pred": "получаем"}
+{"sample_id": "cyr_word_072897", "dataset": "cyrillic_handwriting", "target": "задачи", "pred": "запии"}
+{"sample_id": "cyr_word_072898", "dataset": "cyrillic_handwriting", "target": "этого", "pred": "этоо"}
+{"sample_id": "cyr_word_072899", "dataset": "cyrillic_handwriting", "target": "определим", "pred": "ределим"}
+{"sample_id": "cyr_word_072900", "dataset": "cyrillic_handwriting", "target": "сверху", "pred": "аерку"}
+{"sample_id": "cyr_word_072901", "dataset": "cyrillic_handwriting", "target": "найдем", "pred": "найден"}
+{"sample_id": "cyr_word_072902", "dataset": "cyrillic_handwriting", "target": "достаточно", "pred": "достаточно"}
+{"sample_id": "cyr_word_072903", "dataset": "cyrillic_handwriting", "target": "если", "pred": "сти"}
+{"sample_id": "cyr_word_072904", "dataset": "cyrillic_handwriting", "target": "поскольку", "pred": "поскольму"}
+{"sample_id": "cyr_word_072905", "dataset": "cyrillic_handwriting", "target": "первую", "pred": "первую"}
+{"sample_id": "cyr_word_072906", "dataset": "cyrillic_handwriting", "target": "(результат", "pred": "(результат"}
+{"sample_id": "cyr_word_072907", "dataset": "cyrillic_handwriting", "target": "предположим:", "pred": "предполапем"}
+{"sample_id": "cyr_word_072908", "dataset": "cyrillic_handwriting", "target": "анализ", "pred": "анаму"}
+{"sample_id": "cyr_word_072909", "dataset": "cyrillic_handwriting", "target": "заметим", "pred": "заметин,"}
+{"sample_id": "cyr_word_072910", "dataset": "cyrillic_handwriting", "target": "алгоритм", "pred": "аториты"}
+{"sample_id": "cyr_word_072912", "dataset": "cyrillic_handwriting", "target": "сходимость", "pred": "сходимость"}
+{"sample_id": "cyr_word_072913", "dataset": "cyrillic_handwriting", "target": "полушага", "pred": "полушата"}
+{"sample_id": "cyr_word_072914", "dataset": "cyrillic_handwriting", "target": "любые", "pred": "любые"}
+{"sample_id": "cyr_word_072915", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "севыс"}
+{"sample_id": "cyr_word_072916", "dataset": "cyrillic_handwriting", "target": "для", "pred": "эля"}
+{"sample_id": "cyr_word_072917", "dataset": "cyrillic_handwriting", "target": "приведем", "pred": "привдем"}
+{"sample_id": "cyr_word_072918", "dataset": "cyrillic_handwriting", "target": "этой", "pred": "этой"}
+{"sample_id": "cyr_word_072919", "dataset": "cyrillic_handwriting", "target": "реализации", "pred": "реплизтым"}
+{"sample_id": "cyr_word_072920", "dataset": "cyrillic_handwriting", "target": "коэффициент", "pred": "поэффициент"}
+{"sample_id": "cyr_word_072921", "dataset": "cyrillic_handwriting", "target": "изоморфизм", "pred": "изомор физн"}
+{"sample_id": "cyr_word_072922", "dataset": "cyrillic_handwriting", "target": "оператор", "pred": "оператор"}
+{"sample_id": "cyr_word_072924", "dataset": "cyrillic_handwriting", "target": "пропорциональности", "pred": "пропорцйоиалвнои"}
+{"sample_id": "cyr_word_072925", "dataset": "cyrillic_handwriting", "target": "след", "pred": "спед"}
+{"sample_id": "cyr_word_072926", "dataset": "cyrillic_handwriting", "target": "узлы", "pred": "узлы"}
+{"sample_id": "cyr_word_072927", "dataset": "cyrillic_handwriting", "target": "устойчивость", "pred": "устойчивосчь"}
+{"sample_id": "cyr_word_072928", "dataset": "cyrillic_handwriting", "target": "экономичной", "pred": "экономичной"}
+{"sample_id": "cyr_word_072929", "dataset": "cyrillic_handwriting", "target": "каждом", "pred": "кахдом"}
+{"sample_id": "cyr_word_072930", "dataset": "cyrillic_handwriting", "target": "будем", "pred": "оуаен"}
+{"sample_id": "cyr_word_072931", "dataset": "cyrillic_handwriting", "target": "на", "pred": "на"}
+{"sample_id": "cyr_word_072932", "dataset": "cyrillic_handwriting", "target": "говорить", "pred": "говоричь,"}
+{"sample_id": "cyr_word_072933", "dataset": "cyrillic_handwriting", "target": "хотим", "pred": "хотим"}
+{"sample_id": "cyr_word_072934", "dataset": "cyrillic_handwriting", "target": "нужно", "pred": "нушино"}
+{"sample_id": "cyr_word_072935", "dataset": "cyrillic_handwriting", "target": "форма", "pred": "форма"}
+{"sample_id": "cyr_word_072936", "dataset": "cyrillic_handwriting", "target": "сравнивать", "pred": "сравневать"}
+{"sample_id": "cyr_word_072937", "dataset": "cyrillic_handwriting", "target": "заявление", "pred": "заявление"}
+{"sample_id": "cyr_word_072940", "dataset": "cyrillic_handwriting", "target": "расщепления", "pred": "расиенления"}
+{"sample_id": "cyr_word_072943", "dataset": "cyrillic_handwriting", "target": "горизонт", "pred": "оризонт"}
+{"sample_id": "cyr_word_072944", "dataset": "cyrillic_handwriting", "target": "введём", "pred": "ввелёя"}
+{"sample_id": "cyr_word_072945", "dataset": "cyrillic_handwriting", "target": "нормальной", "pred": "нормалькой"}
+{"sample_id": "cyr_word_072946", "dataset": "cyrillic_handwriting", "target": "операторы", "pred": "энератирт"}
+{"sample_id": "cyr_word_072947", "dataset": "cyrillic_handwriting", "target": "устойчиво", "pred": "устойчиво"}
+{"sample_id": "cyr_word_072948", "dataset": "cyrillic_handwriting", "target": "равновесие", "pred": "равловми"}
+{"sample_id": "cyr_word_072949", "dataset": "cyrillic_handwriting", "target": "она", "pred": "она"}
+{"sample_id": "cyr_word_072950", "dataset": "cyrillic_handwriting", "target": "вдоль", "pred": "вдом"}
+{"sample_id": "cyr_word_072951", "dataset": "cyrillic_handwriting", "target": "может", "pred": "монт"}
+{"sample_id": "cyr_word_072952", "dataset": "cyrillic_handwriting", "target": "если", "pred": "ем"}
+{"sample_id": "cyr_word_072953", "dataset": "cyrillic_handwriting", "target": "положительная", "pred": "положительная"}
+{"sample_id": "cyr_word_072954", "dataset": "cyrillic_handwriting", "target": "система", "pred": "систена"}
+{"sample_id": "cyr_word_072955", "dataset": "cyrillic_handwriting", "target": "пластичность", "pred": "мастичнестий"}
+{"sample_id": "cyr_word_072957", "dataset": "cyrillic_handwriting", "target": "однако", "pred": "однако"}
+{"sample_id": "cyr_word_072958", "dataset": "cyrillic_handwriting", "target": "если", "pred": "еем"}
+{"sample_id": "cyr_word_072959", "dataset": "cyrillic_handwriting", "target": "находится", "pred": "кахазиост"}
+{"sample_id": "cyr_word_072960", "dataset": "cyrillic_handwriting", "target": "тензор:", "pred": "тензор:"}
+{"sample_id": "cyr_word_072961", "dataset": "cyrillic_handwriting", "target": "другой", "pred": "другой"}
+{"sample_id": "cyr_word_072962", "dataset": "cyrillic_handwriting", "target": "жестко.", "pred": "жестно-"}
+{"sample_id": "cyr_word_072963", "dataset": "cyrillic_handwriting", "target": "способ", "pred": "способ"}
+{"sample_id": "cyr_word_072964", "dataset": "cyrillic_handwriting", "target": "аналогично", "pred": "сиальчлчо"}
+{"sample_id": "cyr_word_072965", "dataset": "cyrillic_handwriting", "target": "содержит", "pred": "содоржит"}
+{"sample_id": "cyr_word_072966", "dataset": "cyrillic_handwriting", "target": "разлагается", "pred": "резлоннения"}
+{"sample_id": "cyr_word_072967", "dataset": "cyrillic_handwriting", "target": "авторизация", "pred": "авторизация"}
+{"sample_id": "cyr_word_072968", "dataset": "cyrillic_handwriting", "target": "разрешение", "pred": "разрамение"}
+{"sample_id": "cyr_word_072969", "dataset": "cyrillic_handwriting", "target": "преобразования", "pred": "преобразования"}
+{"sample_id": "cyr_word_072970", "dataset": "cyrillic_handwriting", "target": "перехода", "pred": "перохода"}
+{"sample_id": "cyr_word_072971", "dataset": "cyrillic_handwriting", "target": "ненулевой", "pred": "ненулевой"}
+{"sample_id": "cyr_word_072972", "dataset": "cyrillic_handwriting", "target": "вид", "pred": "всу"}
+{"sample_id": "cyr_word_072973", "dataset": "cyrillic_handwriting", "target": "вектора", "pred": "вектора"}
+{"sample_id": "cyr_word_072974", "dataset": "cyrillic_handwriting", "target": "такой", "pred": "такой"}
+{"sample_id": "cyr_word_072975", "dataset": "cyrillic_handwriting", "target": "замена", "pred": "залена"}
+{"sample_id": "cyr_word_072976", "dataset": "cyrillic_handwriting", "target": "матрица", "pred": "матрица"}
+{"sample_id": "cyr_word_072977", "dataset": "cyrillic_handwriting", "target": "выразим", "pred": "вируж"}
+{"sample_id": "cyr_word_072978", "dataset": "cyrillic_handwriting", "target": "имеет", "pred": "неет"}
+{"sample_id": "cyr_word_072980", "dataset": "cyrillic_handwriting", "target": "скаляр", "pred": "скалар"}
+{"sample_id": "cyr_word_072981", "dataset": "cyrillic_handwriting", "target": "перейдем", "pred": "перестуем"}
+{"sample_id": "cyr_word_072982", "dataset": "cyrillic_handwriting", "target": "число", "pred": "чило"}
+{"sample_id": "cyr_word_072983", "dataset": "cyrillic_handwriting", "target": "тензор", "pred": "жезор"}
+{"sample_id": "cyr_word_072984", "dataset": "cyrillic_handwriting", "target": "вектор", "pred": "вектор"}
+{"sample_id": "cyr_word_072985", "dataset": "cyrillic_handwriting", "target": "результат", "pred": "разультая"}
+{"sample_id": "cyr_word_072986", "dataset": "cyrillic_handwriting", "target": "ковектор", "pred": "ковектор"}
+{"sample_id": "cyr_word_072987", "dataset": "cyrillic_handwriting", "target": "выборка", "pred": "выборка"}
+{"sample_id": "cyr_word_072988", "dataset": "cyrillic_handwriting", "target": "ранг", "pred": "ранг"}
+{"sample_id": "cyr_word_072989", "dataset": "cyrillic_handwriting", "target": "подставим", "pred": "подставм"}
+{"sample_id": "cyr_word_072990", "dataset": "cyrillic_handwriting", "target": "нормальная", "pred": "кормальная"}
+{"sample_id": "cyr_word_072991", "dataset": "cyrillic_handwriting", "target": "тензора", "pred": "тензора"}
+{"sample_id": "cyr_word_072992", "dataset": "cyrillic_handwriting", "target": "двух", "pred": "двух"}
+{"sample_id": "cyr_word_072993", "dataset": "cyrillic_handwriting", "target": "сеточная", "pred": "сеточная"}
+{"sample_id": "cyr_word_072994", "dataset": "cyrillic_handwriting", "target": "переменных", "pred": "перемянных"}
+{"sample_id": "cyr_word_072995", "dataset": "cyrillic_handwriting", "target": "функция", "pred": "функция"}
+{"sample_id": "cyr_word_072996", "dataset": "cyrillic_handwriting", "target": "сходится", "pred": "сходится"}
+{"sample_id": "cyr_word_072997", "dataset": "cyrillic_handwriting", "target": "безусловная", "pred": "безуелавпая"}
+{"sample_id": "cyr_word_072998", "dataset": "cyrillic_handwriting", "target": "разностная", "pred": "разностая"}
+{"sample_id": "cyr_word_072999", "dataset": "cyrillic_handwriting", "target": "погрешность", "pred": "погремность"}
+{"sample_id": "cyr_word_073000", "dataset": "cyrillic_handwriting", "target": "аппроксимация", "pred": "атроксимащии"}
+{"sample_id": "cyr_word_073001", "dataset": "cyrillic_handwriting", "target": "покажем", "pred": "покашем"}
+{"sample_id": "cyr_word_073002", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "скема"}
+{"sample_id": "cyr_word_073003", "dataset": "cyrillic_handwriting", "target": "зависит", "pred": "зависит"}
+{"sample_id": "cyr_word_073004", "dataset": "cyrillic_handwriting", "target": "погрешность", "pred": "потремность"}
+{"sample_id": "cyr_word_073005", "dataset": "cyrillic_handwriting", "target": "разностная", "pred": "разностная"}
+{"sample_id": "cyr_word_073006", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "скема"}
+{"sample_id": "cyr_word_073007", "dataset": "cyrillic_handwriting", "target": "правый", "pred": "правый"}
+{"sample_id": "cyr_word_073008", "dataset": "cyrillic_handwriting", "target": "оценим", "pred": "оценим"}
+{"sample_id": "cyr_word_073009", "dataset": "cyrillic_handwriting", "target": "нижний", "pred": "няянний"}
+{"sample_id": "cyr_word_073010", "dataset": "cyrillic_handwriting", "target": "получаем", "pred": "полугаем"}
+{"sample_id": "cyr_word_073011", "dataset": "cyrillic_handwriting", "target": "уголок", "pred": "утолок"}
+{"sample_id": "cyr_word_073013", "dataset": "cyrillic_handwriting", "target": "характеристика", "pred": "хоракстеристика"}
+{"sample_id": "cyr_word_073014", "dataset": "cyrillic_handwriting", "target": "верхний", "pred": "верхний"}
+{"sample_id": "cyr_word_073015", "dataset": "cyrillic_handwriting", "target": "правый", "pred": "правый"}
+{"sample_id": "cyr_word_073016", "dataset": "cyrillic_handwriting", "target": "уголок", "pred": "уголок"}
+{"sample_id": "cyr_word_073017", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "скема"}
+{"sample_id": "cyr_word_073018", "dataset": "cyrillic_handwriting", "target": "рассматривать", "pred": "расснатривать"}
+{"sample_id": "cyr_word_073019", "dataset": "cyrillic_handwriting", "target": "подставим", "pred": "подставим"}
+{"sample_id": "cyr_word_073020", "dataset": "cyrillic_handwriting", "target": "разностную", "pred": "разностную"}
+{"sample_id": "cyr_word_073021", "dataset": "cyrillic_handwriting", "target": "схему", "pred": "скему"}
+{"sample_id": "cyr_word_073022", "dataset": "cyrillic_handwriting", "target": "сеточная", "pred": "сеточная"}
+{"sample_id": "cyr_word_073023", "dataset": "cyrillic_handwriting", "target": "матрица", "pred": "матрица"}
+{"sample_id": "cyr_word_073024", "dataset": "cyrillic_handwriting", "target": "будем", "pred": "будом"}
+{"sample_id": "cyr_word_073025", "dataset": "cyrillic_handwriting", "target": "область", "pred": "область"}
+{"sample_id": "cyr_word_073026", "dataset": "cyrillic_handwriting", "target": "мы", "pred": "мо"}
+{"sample_id": "cyr_word_073027", "dataset": "cyrillic_handwriting", "target": "норма", "pred": "норма"}
+{"sample_id": "cyr_word_073028", "dataset": "cyrillic_handwriting", "target": "проектирования", "pred": "проектирования"}
+{"sample_id": "cyr_word_073029", "dataset": "cyrillic_handwriting", "target": "оператор", "pred": "оператов"}
+{"sample_id": "cyr_word_073030", "dataset": "cyrillic_handwriting", "target": "-точная", "pred": "точная"}
+{"sample_id": "cyr_word_073031", "dataset": "cyrillic_handwriting", "target": "норма", "pred": "корма"}
+{"sample_id": "cyr_word_073032", "dataset": "cyrillic_handwriting", "target": "согласована", "pred": "сопасована"}
+{"sample_id": "cyr_word_073033", "dataset": "cyrillic_handwriting", "target": "максимум", "pred": "макоклим"}
+{"sample_id": "cyr_word_073034", "dataset": "cyrillic_handwriting", "target": "попробуем", "pred": "попробумм"}
+{"sample_id": "cyr_word_073035", "dataset": "cyrillic_handwriting", "target": "что", "pred": "что"}
+{"sample_id": "cyr_word_073036", "dataset": "cyrillic_handwriting", "target": "проблема", "pred": "проблема"}
+{"sample_id": "cyr_word_073037", "dataset": "cyrillic_handwriting", "target": "-норма", "pred": "-корма"}
+{"sample_id": "cyr_word_073038", "dataset": "cyrillic_handwriting", "target": "согласована", "pred": "сопасована"}
+{"sample_id": "cyr_word_073039", "dataset": "cyrillic_handwriting", "target": "сеточная", "pred": "сеточная"}
+{"sample_id": "cyr_word_073040", "dataset": "cyrillic_handwriting", "target": "-норма", "pred": "ккорма"}
+{"sample_id": "cyr_word_073041", "dataset": "cyrillic_handwriting", "target": "что", "pred": "что"}
+{"sample_id": "cyr_word_073042", "dataset": "cyrillic_handwriting", "target": "сходимость", "pred": "сходкелясть"}
+{"sample_id": "cyr_word_073043", "dataset": "cyrillic_handwriting", "target": "порядок", "pred": "порядок"}
+{"sample_id": "cyr_word_073044", "dataset": "cyrillic_handwriting", "target": "задача", "pred": "задача"}
+{"sample_id": "cyr_word_073045", "dataset": "cyrillic_handwriting", "target": "аппроксимация", "pred": "аппроксимация"}
+{"sample_id": "cyr_word_073046", "dataset": "cyrillic_handwriting", "target": "если", "pred": "если"}
+{"sample_id": "cyr_word_073047", "dataset": "cyrillic_handwriting", "target": "имеет", "pred": "имет"}
+{"sample_id": "cyr_word_073048", "dataset": "cyrillic_handwriting", "target": "аппроксимирует", "pred": "атроксимирует"}
+{"sample_id": "cyr_word_073049", "dataset": "cyrillic_handwriting", "target": "теорема", "pred": "теорема"}
+{"sample_id": "cyr_word_073050", "dataset": "cyrillic_handwriting", "target": "устойчива", "pred": "устоячива"}
+{"sample_id": "cyr_word_073051", "dataset": "cyrillic_handwriting", "target": "сходимость", "pred": "оходимости"}
+{"sample_id": "cyr_word_073052", "dataset": "cyrillic_handwriting", "target": "очевидно", "pred": "огевидий"}
+{"sample_id": "cyr_word_073053", "dataset": "cyrillic_handwriting", "target": "лекция", "pred": "1скция"}
+{"sample_id": "cyr_word_073054", "dataset": "cyrillic_handwriting", "target": ".2020", "pred": "202о"}
+{"sample_id": "cyr_word_073055", "dataset": "cyrillic_handwriting", "target": "прямоугольник", "pred": "примоггольник"}
+{"sample_id": "cyr_word_073056", "dataset": "cyrillic_handwriting", "target": "рс", "pred": "рс"}
+{"sample_id": "cyr_word_073057", "dataset": "cyrillic_handwriting", "target": "собственный", "pred": "собствшиыи"}
+{"sample_id": "cyr_word_073058", "dataset": "cyrillic_handwriting", "target": "данным", "pred": "дапным"}
+{"sample_id": "cyr_word_073059", "dataset": "cyrillic_handwriting", "target": "ячейка", "pred": "ячейка"}
+{"sample_id": "cyr_word_073060", "dataset": "cyrillic_handwriting", "target": "что", "pred": "что"}
+{"sample_id": "cyr_word_073061", "dataset": "cyrillic_handwriting", "target": "рс", "pred": "т"}
+{"sample_id": "cyr_word_073062", "dataset": "cyrillic_handwriting", "target": "сетки", "pred": "сетки."}
+{"sample_id": "cyr_word_073064", "dataset": "cyrillic_handwriting", "target": "пусть", "pred": "пусть"}
+{"sample_id": "cyr_word_073065", "dataset": "cyrillic_handwriting", "target": "условие", "pred": "условия"}
+{"sample_id": "cyr_word_073066", "dataset": "cyrillic_handwriting", "target": "покажем", "pred": "почашем"}
+{"sample_id": "cyr_word_073067", "dataset": "cyrillic_handwriting", "target": "для", "pred": "зля"}
+{"sample_id": "cyr_word_073068", "dataset": "cyrillic_handwriting", "target": "акт", "pred": "лкг"}
+{"sample_id": "cyr_word_073069", "dataset": "cyrillic_handwriting", "target": "если", "pred": "еслл"}
+{"sample_id": "cyr_word_073070", "dataset": "cyrillic_handwriting", "target": "устойчивость", "pred": "устьенивость"}
+{"sample_id": "cyr_word_073071", "dataset": "cyrillic_handwriting", "target": "сети", "pred": "если"}
+{"sample_id": "cyr_word_073072", "dataset": "cyrillic_handwriting", "target": "устойчивость", "pred": "устой чивости"}
+{"sample_id": "cyr_word_073073", "dataset": "cyrillic_handwriting", "target": "лемма", "pred": "лемма"}
+{"sample_id": "cyr_word_073074", "dataset": "cyrillic_handwriting", "target": "нормальная", "pred": "пормальная"}
+{"sample_id": "cyr_word_073075", "dataset": "cyrillic_handwriting", "target": "05.11.2020", "pred": "0б. 1.гого"}
+{"sample_id": "cyr_word_073076", "dataset": "cyrillic_handwriting", "target": "выполнено", "pred": "вылолисло"}
+{"sample_id": "cyr_word_073077", "dataset": "cyrillic_handwriting", "target": "перестановочный", "pred": "перестановочип"}
+{"sample_id": "cyr_word_073078", "dataset": "cyrillic_handwriting", "target": "вычислений", "pred": "вычислание"}
+{"sample_id": "cyr_word_073079", "dataset": "cyrillic_handwriting", "target": "тогда", "pred": "тода"}
+{"sample_id": "cyr_word_073080", "dataset": "cyrillic_handwriting", "target": "признак", "pred": "признак,"}
+{"sample_id": "cyr_word_073081", "dataset": "cyrillic_handwriting", "target": "если", "pred": "если"}
+{"sample_id": "cyr_word_073082", "dataset": "cyrillic_handwriting", "target": "тогда", "pred": "тогда"}
+{"sample_id": "cyr_word_073083", "dataset": "cyrillic_handwriting", "target": "методы", "pred": "медды"}
+{"sample_id": "cyr_word_073084", "dataset": "cyrillic_handwriting", "target": "15.10.2020", "pred": "1.10.гого"}
+{"sample_id": "cyr_word_073085", "dataset": "cyrillic_handwriting", "target": "методы", "pred": "методы"}
+{"sample_id": "cyr_word_073086", "dataset": "cyrillic_handwriting", "target": "лемма", "pred": "лемма"}
+{"sample_id": "cyr_word_073087", "dataset": "cyrillic_handwriting", "target": "при", "pred": "при"}
+{"sample_id": "cyr_word_073088", "dataset": "cyrillic_handwriting", "target": "новую", "pred": "новуюо"}
+{"sample_id": "cyr_word_073089", "dataset": "cyrillic_handwriting", "target": "условие", "pred": "услие"}
+{"sample_id": "cyr_word_073090", "dataset": "cyrillic_handwriting", "target": "условие", "pred": "ксловей"}
+{"sample_id": "cyr_word_073091", "dataset": "cyrillic_handwriting", "target": "лекция", "pred": "\"кпни:к"}
+{"sample_id": "cyr_word_073092", "dataset": "cyrillic_handwriting", "target": "если", "pred": "если"}
+{"sample_id": "cyr_word_073093", "dataset": "cyrillic_handwriting", "target": "если", "pred": "ссли"}
+{"sample_id": "cyr_word_073094", "dataset": "cyrillic_handwriting", "target": "трюк", "pred": "трок"}
+{"sample_id": "cyr_word_073095", "dataset": "cyrillic_handwriting", "target": "оценка", "pred": "сценка"}
+{"sample_id": "cyr_word_073096", "dataset": "cyrillic_handwriting", "target": "если", "pred": "если"}
+{"sample_id": "cyr_word_073097", "dataset": "cyrillic_handwriting", "target": "методы", "pred": "методы"}
+{"sample_id": "cyr_word_073098", "dataset": "cyrillic_handwriting", "target": "разрешимости", "pred": "раремимости"}
+{"sample_id": "cyr_word_073099", "dataset": "cyrillic_handwriting", "target": "условие", "pred": "услови"}
+{"sample_id": "cyr_word_073100", "dataset": "cyrillic_handwriting", "target": "условие", "pred": "словие"}
+{"sample_id": "cyr_word_073101", "dataset": "cyrillic_handwriting", "target": "место", "pred": "мито"}
+{"sample_id": "cyr_word_073102", "dataset": "cyrillic_handwriting", "target": "иметь", "pred": "шмет"}
+{"sample_id": "cyr_word_073103", "dataset": "cyrillic_handwriting", "target": "-характеристик", "pred": "карантеристия"}
+{"sample_id": "cyr_word_073104", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "стема"}
+{"sample_id": "cyr_word_073105", "dataset": "cyrillic_handwriting", "target": "неявная", "pred": "неявная"}
+{"sample_id": "cyr_word_073106", "dataset": "cyrillic_handwriting", "target": "лекция", "pred": "ленция."}
+{"sample_id": "cyr_word_073107", "dataset": "cyrillic_handwriting", "target": "методы", "pred": "методы"}
+{"sample_id": "cyr_word_073108", "dataset": "cyrillic_handwriting", "target": "данные", "pred": "данные"}
+{"sample_id": "cyr_word_073109", "dataset": "cyrillic_handwriting", "target": "вычислений.", "pred": "вычискений."}
+{"sample_id": "cyr_word_073110", "dataset": "cyrillic_handwriting", "target": "можно", "pred": "мошно"}
+{"sample_id": "cyr_word_073111", "dataset": "cyrillic_handwriting", "target": "схему", "pred": "схему"}
+{"sample_id": "cyr_word_073112", "dataset": "cyrillic_handwriting", "target": "публичное", "pred": "публичное"}
+{"sample_id": "cyr_word_073113", "dataset": "cyrillic_handwriting", "target": "право", "pred": "право"}
+{"sample_id": "cyr_word_073114", "dataset": "cyrillic_handwriting", "target": "особое", "pred": "особое"}
+{"sample_id": "cyr_word_073115", "dataset": "cyrillic_handwriting", "target": "касается", "pred": "касается"}
+{"sample_id": "cyr_word_073116", "dataset": "cyrillic_handwriting", "target": "недвижимость", "pred": "недвитимость"}
+{"sample_id": "cyr_word_073117", "dataset": "cyrillic_handwriting", "target": "защита", "pred": "пащита"}
+{"sample_id": "cyr_word_073118", "dataset": "cyrillic_handwriting", "target": "интеллектуальное", "pred": "интеллетуальное"}
+{"sample_id": "cyr_word_073119", "dataset": "cyrillic_handwriting", "target": "объявление", "pred": "объевлание"}
+{"sample_id": "cyr_word_073120", "dataset": "cyrillic_handwriting", "target": "конституц", "pred": "коиститциц,"}
+{"sample_id": "cyr_word_073121", "dataset": "cyrillic_handwriting", "target": "полу", "pred": "попу"}
+{"sample_id": "cyr_word_073122", "dataset": "cyrillic_handwriting", "target": "право", "pred": "право"}
+{"sample_id": "cyr_word_073123", "dataset": "cyrillic_handwriting", "target": "договорное", "pred": "договорное"}
+{"sample_id": "cyr_word_073124", "dataset": "cyrillic_handwriting", "target": "контракты", "pred": "контраклы"}
+{"sample_id": "cyr_word_073125", "dataset": "cyrillic_handwriting", "target": "процессуальное", "pred": "практупльное"}
+{"sample_id": "cyr_word_073126", "dataset": "cyrillic_handwriting", "target": "законы", "pred": "законы"}
+{"sample_id": "cyr_word_073127", "dataset": "cyrillic_handwriting", "target": "миграционное", "pred": "нпраонное"}
+{"sample_id": "cyr_word_073130", "dataset": "cyrillic_handwriting", "target": "избирательной", "pred": "изберательной"}
+{"sample_id": "cyr_word_073132", "dataset": "cyrillic_handwriting", "target": "чили", "pred": "чили"}
+{"sample_id": "cyr_word_073133", "dataset": "cyrillic_handwriting", "target": "населения", "pred": "насления"}
+{"sample_id": "cyr_word_073134", "dataset": "cyrillic_handwriting", "target": "численность", "pred": "численность"}
+{"sample_id": "cyr_word_073137", "dataset": "cyrillic_handwriting", "target": "благовещенск", "pred": "влаговеенчск"}
+{"sample_id": "cyr_word_073138", "dataset": "cyrillic_handwriting", "target": "чебоксары", "pred": "чебокаары"}
+{"sample_id": "cyr_word_073139", "dataset": "cyrillic_handwriting", "target": "чита", "pred": "чита"}
+{"sample_id": "cyr_word_073140", "dataset": "cyrillic_handwriting", "target": "иркутск", "pred": "иргужск"}
+{"sample_id": "cyr_word_073141", "dataset": "cyrillic_handwriting", "target": "определим", "pred": "опредеим"}
+{"sample_id": "cyr_word_073142", "dataset": "cyrillic_handwriting", "target": "говорить", "pred": "говоричь"}
+{"sample_id": "cyr_word_073143", "dataset": "cyrillic_handwriting", "target": "кострома", "pred": "кострана"}
+{"sample_id": "cyr_word_073144", "dataset": "cyrillic_handwriting", "target": "красноярск", "pred": "краснарск"}
+{"sample_id": "cyr_word_073145", "dataset": "cyrillic_handwriting", "target": "курск", "pred": "кприк"}
+{"sample_id": "cyr_word_073147", "dataset": "cyrillic_handwriting", "target": "приобретать", "pred": "придбритать."}
+{"sample_id": "cyr_word_073149", "dataset": "cyrillic_handwriting", "target": "михаил", "pred": "михаил"}
+{"sample_id": "cyr_word_073150", "dataset": "cyrillic_handwriting", "target": "обязательства", "pred": "эбкзатеьства"}
+{"sample_id": "cyr_word_073151", "dataset": "cyrillic_handwriting", "target": "имущество", "pred": "инущества"}
+{"sample_id": "cyr_word_073152", "dataset": "cyrillic_handwriting", "target": "дальнейших", "pred": "дальнейших"}
+{"sample_id": "cyr_word_073155", "dataset": "cyrillic_handwriting", "target": "советник", "pred": "советик"}
+{"sample_id": "cyr_word_073156", "dataset": "cyrillic_handwriting", "target": "защита", "pred": "защита"}
+{"sample_id": "cyr_word_073157", "dataset": "cyrillic_handwriting", "target": "01.10.1992", "pred": "оллол9яе"}
+{"sample_id": "cyr_word_073159", "dataset": "cyrillic_handwriting", "target": "исследований", "pred": "исмдований"}
+{"sample_id": "cyr_word_073161", "dataset": "cyrillic_handwriting", "target": "автомобиль", "pred": "автомобиль"}
+{"sample_id": "cyr_word_073163", "dataset": "cyrillic_handwriting", "target": "цена", "pred": "цена"}
+{"sample_id": "cyr_word_073164", "dataset": "cyrillic_handwriting", "target": "задержанный", "pred": "падержанный"}
+{"sample_id": "cyr_word_073165", "dataset": "cyrillic_handwriting", "target": "делать", "pred": "делать"}
+{"sample_id": "cyr_word_073166", "dataset": "cyrillic_handwriting", "target": "продажа", "pred": "продана"}
+{"sample_id": "cyr_word_073167", "dataset": "cyrillic_handwriting", "target": "сумма", "pred": "сима"}
+{"sample_id": "cyr_word_073168", "dataset": "cyrillic_handwriting", "target": "покупка", "pred": "покупка"}
+{"sample_id": "cyr_word_073169", "dataset": "cyrillic_handwriting", "target": "получать", "pred": "получать"}
+{"sample_id": "cyr_word_073170", "dataset": "cyrillic_handwriting", "target": "надо,", "pred": "надо,"}
+{"sample_id": "cyr_word_073171", "dataset": "cyrillic_handwriting", "target": "недорогой", "pred": "недорогой"}
+{"sample_id": "cyr_word_073172", "dataset": "cyrillic_handwriting", "target": "примерная", "pred": "примерная"}
+{"sample_id": "cyr_word_073173", "dataset": "cyrillic_handwriting", "target": "данном", "pred": "данном"}
+{"sample_id": "cyr_word_073174", "dataset": "cyrillic_handwriting", "target": "на", "pred": "на"}
+{"sample_id": "cyr_word_073175", "dataset": "cyrillic_handwriting", "target": "луче", "pred": "луче"}
+{"sample_id": "cyr_word_073176", "dataset": "cyrillic_handwriting", "target": "ветер", "pred": "вепер"}
+{"sample_id": "cyr_word_073177", "dataset": "cyrillic_handwriting", "target": "поверхости", "pred": "поворхости"}
+{"sample_id": "cyr_word_073178", "dataset": "cyrillic_handwriting", "target": "задать", "pred": "задать"}
+{"sample_id": "cyr_word_073179", "dataset": "cyrillic_handwriting", "target": "можно", "pred": "мотнь"}
+{"sample_id": "cyr_word_073180", "dataset": "cyrillic_handwriting", "target": "круг", "pred": "круг"}
+{"sample_id": "cyr_word_073181", "dataset": "cyrillic_handwriting", "target": "для", "pred": "дл]"}
+{"sample_id": "cyr_word_073182", "dataset": "cyrillic_handwriting", "target": "определим", "pred": "опреднми"}
+{"sample_id": "cyr_word_073183", "dataset": "cyrillic_handwriting", "target": "скалярное", "pred": "скалерное"}
+{"sample_id": "cyr_word_073184", "dataset": "cyrillic_handwriting", "target": "поле", "pred": "поле"}
+{"sample_id": "cyr_word_073185", "dataset": "cyrillic_handwriting", "target": "жидкость", "pred": "инедность"}
+{"sample_id": "cyr_word_073186", "dataset": "cyrillic_handwriting", "target": "пример,", "pred": "пример"}
+{"sample_id": "cyr_word_073187", "dataset": "cyrillic_handwriting", "target": "на", "pred": "на"}
+{"sample_id": "cyr_word_073188", "dataset": "cyrillic_handwriting", "target": "поле", "pred": "поло"}
+{"sample_id": "cyr_word_073189", "dataset": "cyrillic_handwriting", "target": "скоростей", "pred": "скорослей"}
+{"sample_id": "cyr_word_073190", "dataset": "cyrillic_handwriting", "target": "треугольник", "pred": "труколних"}
+{"sample_id": "cyr_word_073191", "dataset": "cyrillic_handwriting", "target": "высоты", "pred": "высоты"}
+{"sample_id": "cyr_word_073192", "dataset": "cyrillic_handwriting", "target": "разностная", "pred": "разностная"}
+{"sample_id": "cyr_word_073193", "dataset": "cyrillic_handwriting", "target": "однопараметрическое", "pred": "опнопарлмотрическое"}
+{"sample_id": "cyr_word_073194", "dataset": "cyrillic_handwriting", "target": "сеточная", "pred": "сеточная"}
+{"sample_id": "cyr_word_073195", "dataset": "cyrillic_handwriting", "target": "координата", "pred": "коордмныта"}
+{"sample_id": "cyr_word_073196", "dataset": "cyrillic_handwriting", "target": "поле", "pred": "пон"}
+{"sample_id": "cyr_word_073197", "dataset": "cyrillic_handwriting", "target": "норма", "pred": "норма"}
+{"sample_id": "cyr_word_073198", "dataset": "cyrillic_handwriting", "target": "прямоугольнике", "pred": "прямочтольнике"}
+{"sample_id": "cyr_word_073199", "dataset": "cyrillic_handwriting", "target": "сеток", "pred": "сетон"}
+{"sample_id": "cyr_word_073200", "dataset": "cyrillic_handwriting", "target": "семейство", "pred": "семайсгво"}
+{"sample_id": "cyr_word_073201", "dataset": "cyrillic_handwriting", "target": "примеры", "pred": "примеры"}
+{"sample_id": "cyr_word_073202", "dataset": "cyrillic_handwriting", "target": "чуть", "pred": "чуть"}
+{"sample_id": "cyr_word_073203", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "схема"}
+{"sample_id": "cyr_word_073204", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "скемо-"}
+{"sample_id": "cyr_word_073205", "dataset": "cyrillic_handwriting", "target": "чуть", "pred": "лучь"}
+{"sample_id": "cyr_word_073206", "dataset": "cyrillic_handwriting", "target": "нумерация", "pred": "нумерация"}
+{"sample_id": "cyr_word_073207", "dataset": "cyrillic_handwriting", "target": "всем", "pred": "всан"}
+{"sample_id": "cyr_word_073208", "dataset": "cyrillic_handwriting", "target": "сетка", "pred": "сетка"}
+{"sample_id": "cyr_word_073209", "dataset": "cyrillic_handwriting", "target": "функций", "pred": "ожнкуий"}
+{"sample_id": "cyr_word_073210", "dataset": "cyrillic_handwriting", "target": "векторная", "pred": "векгорная"}
+{"sample_id": "cyr_word_073211", "dataset": "cyrillic_handwriting", "target": "знаем", "pred": "знаем"}
+{"sample_id": "cyr_word_073212", "dataset": "cyrillic_handwriting", "target": "сеточном", "pred": "сеточном"}
+{"sample_id": "cyr_word_073213", "dataset": "cyrillic_handwriting", "target": "параметр", "pred": "пардметр"}
+{"sample_id": "cyr_word_073214", "dataset": "cyrillic_handwriting", "target": "уравнение", "pred": "уравнение"}
+{"sample_id": "cyr_word_073215", "dataset": "cyrillic_handwriting", "target": "движения", "pred": "авижения"}
+{"sample_id": "cyr_word_073216", "dataset": "cyrillic_handwriting", "target": "сеточных", "pred": "сеточых"}
+{"sample_id": "cyr_word_073217", "dataset": "cyrillic_handwriting", "target": "пространства", "pred": "простиранства"}
+{"sample_id": "cyr_word_073218", "dataset": "cyrillic_handwriting", "target": "свойствами", "pred": "свойствами"}
+{"sample_id": "cyr_word_073219", "dataset": "cyrillic_handwriting", "target": "векторное", "pred": "векторна"}
+{"sample_id": "cyr_word_073220", "dataset": "cyrillic_handwriting", "target": "ячейка", "pred": "эиейка"}
+{"sample_id": "cyr_word_073221", "dataset": "cyrillic_handwriting", "target": "вспомогательной", "pred": "вспомотачельной"}
+{"sample_id": "cyr_word_073222", "dataset": "cyrillic_handwriting", "target": "проектирования", "pred": "проектирования"}
+{"sample_id": "cyr_word_073223", "dataset": "cyrillic_handwriting", "target": "равномерная", "pred": "равномеркая"}
+{"sample_id": "cyr_word_073224", "dataset": "cyrillic_handwriting", "target": "погрешность", "pred": "погреитость"}
+{"sample_id": "cyr_word_073225", "dataset": "cyrillic_handwriting", "target": "норма", "pred": "норма"}
+{"sample_id": "cyr_word_073226", "dataset": "cyrillic_handwriting", "target": "функции", "pred": "оцикуми"}
+{"sample_id": "cyr_word_073227", "dataset": "cyrillic_handwriting", "target": "нельзя", "pred": "иельза"}
+{"sample_id": "cyr_word_073228", "dataset": "cyrillic_handwriting", "target": "по", "pred": "по"}
+{"sample_id": "cyr_word_073229", "dataset": "cyrillic_handwriting", "target": "вложении,", "pred": "влохеним,"}
+{"sample_id": "cyr_word_073230", "dataset": "cyrillic_handwriting", "target": "явная", "pred": "9внае"}
+{"sample_id": "cyr_word_073231", "dataset": "cyrillic_handwriting", "target": "обладает", "pred": "обладает"}
+{"sample_id": "cyr_word_073232", "dataset": "cyrillic_handwriting", "target": "решения", "pred": "решения"}
+{"sample_id": "cyr_word_073233", "dataset": "cyrillic_handwriting", "target": "проектирования", "pred": "проектировам"}
+{"sample_id": "cyr_word_073234", "dataset": "cyrillic_handwriting", "target": "связь", "pred": "связь"}
+{"sample_id": "cyr_word_073235", "dataset": "cyrillic_handwriting", "target": "неявная", "pred": "неявная"}
+{"sample_id": "cyr_word_073236", "dataset": "cyrillic_handwriting", "target": "выходными", "pred": "входными"}
+{"sample_id": "cyr_word_073238", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "скема"}
+{"sample_id": "cyr_word_073239", "dataset": "cyrillic_handwriting", "target": "этой", "pred": "ютой"}
+{"sample_id": "cyr_word_073240", "dataset": "cyrillic_handwriting", "target": "умножать", "pred": "уннохать"}
+{"sample_id": "cyr_word_073241", "dataset": "cyrillic_handwriting", "target": "уголок", "pred": "утолок"}
+{"sample_id": "cyr_word_073242", "dataset": "cyrillic_handwriting", "target": "сеточной", "pred": "сеточной"}
+{"sample_id": "cyr_word_073243", "dataset": "cyrillic_handwriting", "target": "правый", "pred": "правпа"}
+{"sample_id": "cyr_word_073244", "dataset": "cyrillic_handwriting", "target": "значениями", "pred": "значениями"}
+{"sample_id": "cyr_word_073245", "dataset": "cyrillic_handwriting", "target": "функции", "pred": "функуки"}
+{"sample_id": "cyr_word_073246", "dataset": "cyrillic_handwriting", "target": "хотим", "pred": "хотим"}
+{"sample_id": "cyr_word_073247", "dataset": "cyrillic_handwriting", "target": "данными", "pred": "дакными"}
+{"sample_id": "cyr_word_073248", "dataset": "cyrillic_handwriting", "target": "найти", "pred": "найти"}
+{"sample_id": "cyr_word_073249", "dataset": "cyrillic_handwriting", "target": "сдвиг", "pred": "совиг"}
+{"sample_id": "cyr_word_073250", "dataset": "cyrillic_handwriting", "target": "уравнение", "pred": "урлвнение"}
+{"sample_id": "cyr_word_073251", "dataset": "cyrillic_handwriting", "target": "верхний", "pred": "оерхний"}
+{"sample_id": "cyr_word_073252", "dataset": "cyrillic_handwriting", "target": "свести", "pred": "свесчи"}
+{"sample_id": "cyr_word_073253", "dataset": "cyrillic_handwriting", "target": "непрерывного", "pred": "непрерывного"}
+{"sample_id": "cyr_word_073254", "dataset": "cyrillic_handwriting", "target": "решения", "pred": "решения"}
+{"sample_id": "cyr_word_073255", "dataset": "cyrillic_handwriting", "target": "ошибка", "pred": "ошиека"}
+{"sample_id": "cyr_word_073256", "dataset": "cyrillic_handwriting", "target": "будем", "pred": "буасм"}
+{"sample_id": "cyr_word_073257", "dataset": "cyrillic_handwriting", "target": "можно", "pred": "мочло"}
+{"sample_id": "cyr_word_073258", "dataset": "cyrillic_handwriting", "target": "рассматривать", "pred": "рассматривать"}
+{"sample_id": "cyr_word_073259", "dataset": "cyrillic_handwriting", "target": "движения", "pred": "двишения"}
+{"sample_id": "cyr_word_073260", "dataset": "cyrillic_handwriting", "target": "неявная", "pred": "неявная"}
+{"sample_id": "cyr_word_073261", "dataset": "cyrillic_handwriting", "target": "полу", "pred": "полу"}
+{"sample_id": "cyr_word_073262", "dataset": "cyrillic_handwriting", "target": "чили", "pred": "хилия"}
+{"sample_id": "cyr_word_073263", "dataset": "cyrillic_handwriting", "target": "скалярное", "pred": "скаляриае"}
+{"sample_id": "cyr_word_073264", "dataset": "cyrillic_handwriting", "target": "новую", "pred": "повую"}
+{"sample_id": "cyr_word_073265", "dataset": "cyrillic_handwriting", "target": "говорить", "pred": "говорить"}
+{"sample_id": "cyr_word_073266", "dataset": "cyrillic_handwriting", "target": "оператор", "pred": "операгор"}
+{"sample_id": "cyr_word_073267", "dataset": "cyrillic_handwriting", "target": "сетку", "pred": "сетку"}
+{"sample_id": "cyr_word_073268", "dataset": "cyrillic_handwriting", "target": "это", "pred": "это"}
+{"sample_id": "cyr_word_073269", "dataset": "cyrillic_handwriting", "target": "функция", "pred": "функуия"}
+{"sample_id": "cyr_word_073270", "dataset": "cyrillic_handwriting", "target": "тождественный", "pred": "тохдитвенный"}
+{"sample_id": "cyr_word_073271", "dataset": "cyrillic_handwriting", "target": "чисто", "pred": "инсто"}
+{"sample_id": "cyr_word_073272", "dataset": "cyrillic_handwriting", "target": "элементов", "pred": "эленентов"}
+{"sample_id": "cyr_word_073273", "dataset": "cyrillic_handwriting", "target": "разными", "pred": "разими"}
+{"sample_id": "cyr_word_073274", "dataset": "cyrillic_handwriting", "target": "каждый", "pred": "кахвый"}
+{"sample_id": "cyr_word_073275", "dataset": "cyrillic_handwriting", "target": "сеточная", "pred": "сеточиая"}
+{"sample_id": "cyr_word_073276", "dataset": "cyrillic_handwriting", "target": "сетка", "pred": "сетка"}
+{"sample_id": "cyr_word_073277", "dataset": "cyrillic_handwriting", "target": "предполагаем", "pred": "предлопагаем"}
+{"sample_id": "cyr_word_073278", "dataset": "cyrillic_handwriting", "target": "вид", "pred": "вир"}
+{"sample_id": "cyr_word_073279", "dataset": "cyrillic_handwriting", "target": "выполнено", "pred": "выполнено"}
+{"sample_id": "cyr_word_073280", "dataset": "cyrillic_handwriting", "target": "вопрос", "pred": "вопрое"}
+{"sample_id": "cyr_word_073281", "dataset": "cyrillic_handwriting", "target": "стандартный", "pred": "станаартный"}
+{"sample_id": "cyr_word_073282", "dataset": "cyrillic_handwriting", "target": "прямоугольнике", "pred": "прямоугольнике"}
+{"sample_id": "cyr_word_073283", "dataset": "cyrillic_handwriting", "target": "пусть", "pred": "пусть"}
+{"sample_id": "cyr_word_073284", "dataset": "cyrillic_handwriting", "target": "поле", "pred": "пом"}
+{"sample_id": "cyr_word_073285", "dataset": "cyrillic_handwriting", "target": "далее", "pred": "залее"}
+{"sample_id": "cyr_word_073286", "dataset": "cyrillic_handwriting", "target": "сеточное", "pred": "сеточное"}
+{"sample_id": "cyr_word_073287", "dataset": "cyrillic_handwriting", "target": "теперь", "pred": "теперь"}
+{"sample_id": "cyr_word_073288", "dataset": "cyrillic_handwriting", "target": "проксимация", "pred": "прокеиноцил"}
+{"sample_id": "cyr_word_073289", "dataset": "cyrillic_handwriting", "target": "а", "pred": "ап"}
+{"sample_id": "cyr_word_073290", "dataset": "cyrillic_handwriting", "target": "значениями", "pred": "знаминями"}
+{"sample_id": "cyr_word_073291", "dataset": "cyrillic_handwriting", "target": "безусловна:", "pred": "безусловиа:"}
+{"sample_id": "cyr_word_073292", "dataset": "cyrillic_handwriting", "target": "я", "pred": "7"}
+{"sample_id": "cyr_word_073293", "dataset": "cyrillic_handwriting", "target": "объем", "pred": "объем"}
+{"sample_id": "cyr_word_073294", "dataset": "cyrillic_handwriting", "target": "сеточная", "pred": "сеточная"}
+{"sample_id": "cyr_word_073295", "dataset": "cyrillic_handwriting", "target": "задача", "pred": "задла"}
+{"sample_id": "cyr_word_073296", "dataset": "cyrillic_handwriting", "target": "вектор", "pred": "вектор"}
+{"sample_id": "cyr_word_073297", "dataset": "cyrillic_handwriting", "target": "раньше", "pred": "тальше"}
+{"sample_id": "cyr_word_073298", "dataset": "cyrillic_handwriting", "target": "хотим", "pred": "хотим"}
+{"sample_id": "cyr_word_073299", "dataset": "cyrillic_handwriting", "target": "функцией", "pred": "руикцией"}
+{"sample_id": "cyr_word_073300", "dataset": "cyrillic_handwriting", "target": "состоят", "pred": "состоят"}
+{"sample_id": "cyr_word_073301", "dataset": "cyrillic_handwriting", "target": "сеточной", "pred": "иточной"}
+{"sample_id": "cyr_word_073302", "dataset": "cyrillic_handwriting", "target": "порядка", "pred": "порядка"}
+{"sample_id": "cyr_word_073303", "dataset": "cyrillic_handwriting", "target": "отображение", "pred": "отобржиеие"}
+{"sample_id": "cyr_word_073304", "dataset": "cyrillic_handwriting", "target": "под", "pred": "под"}
+{"sample_id": "cyr_word_073305", "dataset": "cyrillic_handwriting", "target": "говорить", "pred": "говоричь"}
+{"sample_id": "cyr_word_073306", "dataset": "cyrillic_handwriting", "target": "одних", "pred": "одлик"}
+{"sample_id": "cyr_word_073307", "dataset": "cyrillic_handwriting", "target": "тех", "pred": "чех"}
+{"sample_id": "cyr_word_073308", "dataset": "cyrillic_handwriting", "target": "точке", "pred": "точке"}
+{"sample_id": "cyr_word_073309", "dataset": "cyrillic_handwriting", "target": "и", "pred": "и"}
+{"sample_id": "cyr_word_073310", "dataset": "cyrillic_handwriting", "target": "сход", "pred": "схов"}
+{"sample_id": "cyr_word_073312", "dataset": "cyrillic_handwriting", "target": "понимали", "pred": "полимали"}
+{"sample_id": "cyr_word_073313", "dataset": "cyrillic_handwriting", "target": "будем", "pred": "будем"}
+{"sample_id": "cyr_word_073314", "dataset": "cyrillic_handwriting", "target": "элементов", "pred": "желинсов"}
+{"sample_id": "cyr_word_073315", "dataset": "cyrillic_handwriting", "target": "явная", "pred": "28нaя"}
+{"sample_id": "cyr_word_073316", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "цена"}
+{"sample_id": "cyr_word_073317", "dataset": "cyrillic_handwriting", "target": "аппроксимируем", "pred": "апрокшмирции"}
+{"sample_id": "cyr_word_073318", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "схема"}
+{"sample_id": "cyr_word_073319", "dataset": "cyrillic_handwriting", "target": "что", "pred": "чго"}
+{"sample_id": "cyr_word_073320", "dataset": "cyrillic_handwriting", "target": "погрешность", "pred": "погрежнось"}
+{"sample_id": "cyr_word_073321", "dataset": "cyrillic_handwriting", "target": "схемы", "pred": "скемы"}
+{"sample_id": "cyr_word_073322", "dataset": "cyrillic_handwriting", "target": "условие", "pred": "условие"}
+{"sample_id": "cyr_word_073323", "dataset": "cyrillic_handwriting", "target": "условие", "pred": "условие"}
+{"sample_id": "cyr_word_073324", "dataset": "cyrillic_handwriting", "target": "двуслойной", "pred": "абуслойной"}
+{"sample_id": "cyr_word_073325", "dataset": "cyrillic_handwriting", "target": "аппроксимации", "pred": "апроксинации"}
+{"sample_id": "cyr_word_073326", "dataset": "cyrillic_handwriting", "target": "первая", "pred": "первая"}
+{"sample_id": "cyr_word_073327", "dataset": "cyrillic_handwriting", "target": "форма", "pred": "форма"}
+{"sample_id": "cyr_word_073328", "dataset": "cyrillic_handwriting", "target": "каноническая", "pred": "каноническая"}
+{"sample_id": "cyr_word_073329", "dataset": "cyrillic_handwriting", "target": "разностной", "pred": "разносной"}
+{"sample_id": "cyr_word_073330", "dataset": "cyrillic_handwriting", "target": "погрешность", "pred": "погреноть"}
+{"sample_id": "cyr_word_073331", "dataset": "cyrillic_handwriting", "target": "безусловно", "pred": "безусповно"}
+{"sample_id": "cyr_word_073332", "dataset": "cyrillic_handwriting", "target": "правыи", "pred": "правыи"}
+{"sample_id": "cyr_word_073333", "dataset": "cyrillic_handwriting", "target": "посмотрим", "pred": "посмотрим"}
+{"sample_id": "cyr_word_073334", "dataset": "cyrillic_handwriting", "target": "апроксимирует", "pred": "апрокшинирцет"}
+{"sample_id": "cyr_word_073335", "dataset": "cyrillic_handwriting", "target": "апроксимации.", "pred": "апроксинаии."}
+{"sample_id": "cyr_word_073336", "dataset": "cyrillic_handwriting", "target": "есть", "pred": "есиь"}
+{"sample_id": "cyr_word_073337", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "схена"}
+{"sample_id": "cyr_word_073338", "dataset": "cyrillic_handwriting", "target": "дан", "pred": "дан"}
+{"sample_id": "cyr_word_073339", "dataset": "cyrillic_handwriting", "target": "безусловна", "pred": "берусковна"}
+{"sample_id": "cyr_word_073340", "dataset": "cyrillic_handwriting", "target": "эквивалентность", "pred": "жвивалитность"}
+{"sample_id": "cyr_word_073341", "dataset": "cyrillic_handwriting", "target": "число", "pred": "чиао"}
+{"sample_id": "cyr_word_073342", "dataset": "cyrillic_handwriting", "target": "вершин", "pred": "вериин"}
+{"sample_id": "cyr_word_073343", "dataset": "cyrillic_handwriting", "target": "ряд", "pred": "1гд"}
+{"sample_id": "cyr_word_073344", "dataset": "cyrillic_handwriting", "target": "рассмотрим", "pred": "рассоотрим"}
+{"sample_id": "cyr_word_073345", "dataset": "cyrillic_handwriting", "target": "за", "pred": "за,"}
+{"sample_id": "cyr_word_073346", "dataset": "cyrillic_handwriting", "target": "рёбер", "pred": "лебор"}
+{"sample_id": "cyr_word_073347", "dataset": "cyrillic_handwriting", "target": "граней", "pred": "граней"}
+{"sample_id": "cyr_word_073348", "dataset": "cyrillic_handwriting", "target": "строка", "pred": "строка"}
+{"sample_id": "cyr_word_073349", "dataset": "cyrillic_handwriting", "target": "дискретный", "pred": "эисиретны"}
+{"sample_id": "cyr_word_073350", "dataset": "cyrillic_handwriting", "target": "кривые", "pred": "риволе"}
+{"sample_id": "cyr_word_073351", "dataset": "cyrillic_handwriting", "target": "число", "pred": "число,"}
+{"sample_id": "cyr_word_073352", "dataset": "cyrillic_handwriting", "target": "различных", "pred": "рзиннн"}
+{"sample_id": "cyr_word_073353", "dataset": "cyrillic_handwriting", "target": "конечно", "pred": "плчио"}
+{"sample_id": "cyr_word_073354", "dataset": "cyrillic_handwriting", "target": "будем", "pred": "бужем"}
+{"sample_id": "cyr_word_073355", "dataset": "cyrillic_handwriting", "target": "аналог", "pred": "аналор"}
+{"sample_id": "cyr_word_073356", "dataset": "cyrillic_handwriting", "target": "число", "pred": "число"}
+{"sample_id": "cyr_word_073357", "dataset": "cyrillic_handwriting", "target": "кривая", "pred": "ривая"}
+{"sample_id": "cyr_word_073358", "dataset": "cyrillic_handwriting", "target": "первая", "pred": "первя"}
+{"sample_id": "cyr_word_073359", "dataset": "cyrillic_handwriting", "target": "одному", "pred": "одному"}
+{"sample_id": "cyr_word_073360", "dataset": "cyrillic_handwriting", "target": "как", "pred": "нак"}
+{"sample_id": "cyr_word_073361", "dataset": "cyrillic_handwriting", "target": "если", "pred": "еом"}
+{"sample_id": "cyr_word_073362", "dataset": "cyrillic_handwriting", "target": "кроме", "pred": "кроне"}
+{"sample_id": "cyr_word_073363", "dataset": "cyrillic_handwriting", "target": "случаи", "pred": "лучан"}
+{"sample_id": "cyr_word_073364", "dataset": "cyrillic_handwriting", "target": "вторая", "pred": "воория"}
+{"sample_id": "cyr_word_073365", "dataset": "cyrillic_handwriting", "target": "случая:", "pred": "служя."}
+{"sample_id": "cyr_word_073366", "dataset": "cyrillic_handwriting", "target": "погрешность", "pred": "погрешнось"}
+{"sample_id": "cyr_word_073367", "dataset": "cyrillic_handwriting", "target": "возможны", "pred": "возмонны"}
+{"sample_id": "cyr_word_073368", "dataset": "cyrillic_handwriting", "target": "текста", "pred": "текста"}
+{"sample_id": "cyr_word_073369", "dataset": "cyrillic_handwriting", "target": "так", "pred": "так"}
+{"sample_id": "cyr_word_073370", "dataset": "cyrillic_handwriting", "target": "самая", "pred": "семая"}
+{"sample_id": "cyr_word_073371", "dataset": "cyrillic_handwriting", "target": "интуиция", "pred": "иитущие."}
+{"sample_id": "cyr_word_073372", "dataset": "cyrillic_handwriting", "target": "сложность", "pred": "лонмоеть"}
+{"sample_id": "cyr_word_073373", "dataset": "cyrillic_handwriting", "target": "сферу", "pred": "сореу"}
+{"sample_id": "cyr_word_073374", "dataset": "cyrillic_handwriting", "target": "гаусса", "pred": "гаусся"}
+{"sample_id": "cyr_word_073375", "dataset": "cyrillic_handwriting", "target": "сжатия", "pred": "сжапия"}
+{"sample_id": "cyr_word_073376", "dataset": "cyrillic_handwriting", "target": "отображается", "pred": "оображятая"}
+{"sample_id": "cyr_word_073377", "dataset": "cyrillic_handwriting", "target": "расскладывать", "pred": "раскпадывать"}
+{"sample_id": "cyr_word_073378", "dataset": "cyrillic_handwriting", "target": "методы", "pred": "мотюды"}
+{"sample_id": "cyr_word_073379", "dataset": "cyrillic_handwriting", "target": "точка", "pred": "точла"}
+{"sample_id": "cyr_word_073380", "dataset": "cyrillic_handwriting", "target": "оператор", "pred": "оператор"}
+{"sample_id": "cyr_word_073381", "dataset": "cyrillic_handwriting", "target": "эллипс", "pred": "жллике"}
+{"sample_id": "cyr_word_073382", "dataset": "cyrillic_handwriting", "target": "сложности", "pred": "соктбпи,"}
+{"sample_id": "cyr_word_073383", "dataset": "cyrillic_handwriting", "target": "пространство", "pred": "простришило"}
+{"sample_id": "cyr_word_073384", "dataset": "cyrillic_handwriting", "target": "скоростей", "pred": "скоростей"}
+{"sample_id": "cyr_word_073385", "dataset": "cyrillic_handwriting", "target": "целая", "pred": "целая"}
+{"sample_id": "cyr_word_073386", "dataset": "cyrillic_handwriting", "target": "окрестность", "pred": "опрестость."}
+{"sample_id": "cyr_word_073387", "dataset": "cyrillic_handwriting", "target": "отображения", "pred": "отображеия"}
+{"sample_id": "cyr_word_073388", "dataset": "cyrillic_handwriting", "target": "будем", "pred": "будем"}
+{"sample_id": "cyr_word_073389", "dataset": "cyrillic_handwriting", "target": "шар", "pred": "шар,"}
+{"sample_id": "cyr_word_073390", "dataset": "cyrillic_handwriting", "target": "сфера", "pred": "сфера"}
+{"sample_id": "cyr_word_073391", "dataset": "cyrillic_handwriting", "target": "точки", "pred": "точм"}
+{"sample_id": "cyr_word_073392", "dataset": "cyrillic_handwriting", "target": "множества", "pred": "миожоета,"}
+{"sample_id": "cyr_word_073393", "dataset": "cyrillic_handwriting", "target": "этого", "pred": "этого"}
+{"sample_id": "cyr_word_073394", "dataset": "cyrillic_handwriting", "target": "функция", "pred": "фуикцна,"}
+{"sample_id": "cyr_word_073395", "dataset": "cyrillic_handwriting", "target": "кодирование", "pred": "кодирование"}
+{"sample_id": "cyr_word_073396", "dataset": "cyrillic_handwriting", "target": "задачи", "pred": "здачи"}
+{"sample_id": "cyr_word_073397", "dataset": "cyrillic_handwriting", "target": "расстояние", "pred": "расстоями"}
+{"sample_id": "cyr_word_073398", "dataset": "cyrillic_handwriting", "target": "нормы", "pred": "кормы"}
+{"sample_id": "cyr_word_073399", "dataset": "cyrillic_handwriting", "target": "условия", "pred": "условия"}
+{"sample_id": "cyr_word_073400", "dataset": "cyrillic_handwriting", "target": "разные", "pred": "разиые"}
+{"sample_id": "cyr_word_073401", "dataset": "cyrillic_handwriting", "target": "крещение", "pred": "крещение"}
+{"sample_id": "cyr_word_073409", "dataset": "cyrillic_handwriting", "target": "обозначения", "pred": "обозиачим"}
+{"sample_id": "cyr_word_073410", "dataset": "cyrillic_handwriting", "target": "авторский", "pred": "аоторский"}
+{"sample_id": "cyr_word_073412", "dataset": "cyrillic_handwriting", "target": "суббота,", "pred": "суббота,"}
+{"sample_id": "cyr_word_073418", "dataset": "cyrillic_handwriting", "target": "свердловским", "pred": "свердловским"}
+{"sample_id": "cyr_word_073420", "dataset": "cyrillic_handwriting", "target": "функция", "pred": "функуия"}
+{"sample_id": "cyr_word_073425", "dataset": "cyrillic_handwriting", "target": "родителям", "pred": "родителям."}
+{"sample_id": "cyr_word_073427", "dataset": "cyrillic_handwriting", "target": "математики", "pred": "математики"}
+{"sample_id": "cyr_word_073428", "dataset": "cyrillic_handwriting", "target": "теоретической", "pred": "тетретической"}
+{"sample_id": "cyr_word_073431", "dataset": "cyrillic_handwriting", "target": "педиатрического", "pred": "малатрического"}
+{"sample_id": "cyr_word_073432", "dataset": "cyrillic_handwriting", "target": "ангарскую", "pred": "ангарскую"}
+{"sample_id": "cyr_word_073436", "dataset": "cyrillic_handwriting", "target": "детская", "pred": "депякия"}
+{"sample_id": "cyr_word_073437", "dataset": "cyrillic_handwriting", "target": "атлашкина", "pred": "атлашкина"}
+{"sample_id": "cyr_word_073440", "dataset": "cyrillic_handwriting", "target": "сеточная", "pred": "сеточноя"}
+{"sample_id": "cyr_word_073442", "dataset": "cyrillic_handwriting", "target": "интернет-фонда", "pred": "интернет - фоида"}
+{"sample_id": "cyr_word_073443", "dataset": "cyrillic_handwriting", "target": "сестры", "pred": "сестры"}
+{"sample_id": "cyr_word_073444", "dataset": "cyrillic_handwriting", "target": "городская", "pred": "городская"}
+{"sample_id": "cyr_word_073446", "dataset": "cyrillic_handwriting", "target": "ознакомилась", "pred": "ознакомилаое"}
+{"sample_id": "cyr_word_073448", "dataset": "cyrillic_handwriting", "target": "поликлиники", "pred": "поликмкя"}
+{"sample_id": "cyr_word_073449", "dataset": "cyrillic_handwriting", "target": "показала", "pred": "показала"}
+{"sample_id": "cyr_word_073450", "dataset": "cyrillic_handwriting", "target": "схему", "pred": "сему"}
+{"sample_id": "cyr_word_073451", "dataset": "cyrillic_handwriting", "target": "себя", "pred": "себя"}
+{"sample_id": "cyr_word_073453", "dataset": "cyrillic_handwriting", "target": "получила", "pred": "получила"}
+{"sample_id": "cyr_word_073454", "dataset": "cyrillic_handwriting", "target": "углубила", "pred": "углубила"}
+{"sample_id": "cyr_word_073455", "dataset": "cyrillic_handwriting", "target": "усовершенствовала", "pred": "тусовершиенствовины"}
+{"sample_id": "cyr_word_073456", "dataset": "cyrillic_handwriting", "target": "свои", "pred": "свои"}
+{"sample_id": "cyr_word_073457", "dataset": "cyrillic_handwriting", "target": "знания", "pred": "злания"}
+{"sample_id": "cyr_word_073459", "dataset": "cyrillic_handwriting", "target": "работы", "pred": "пабота"}
+{"sample_id": "cyr_word_073460", "dataset": "cyrillic_handwriting", "target": "выписывала", "pred": "выслисывала"}
+{"sample_id": "cyr_word_073461", "dataset": "cyrillic_handwriting", "target": "доказать", "pred": "гоназать"}
+{"sample_id": "cyr_word_073462", "dataset": "cyrillic_handwriting", "target": "что", "pred": "что"}
+{"sample_id": "cyr_word_073463", "dataset": "cyrillic_handwriting", "target": "направления", "pred": "направления"}
+{"sample_id": "cyr_word_073464", "dataset": "cyrillic_handwriting", "target": "заносила", "pred": "залосеа"}
+{"sample_id": "cyr_word_073466", "dataset": "cyrillic_handwriting", "target": "долларов", "pred": "делларов"}
+{"sample_id": "cyr_word_073467", "dataset": "cyrillic_handwriting", "target": "больных", "pred": "рольных,"}
+{"sample_id": "cyr_word_073468", "dataset": "cyrillic_handwriting", "target": "проводила", "pred": "провоила"}
+{"sample_id": "cyr_word_073469", "dataset": "cyrillic_handwriting", "target": "покровов", "pred": "пакровов"}
+{"sample_id": "cyr_word_073470", "dataset": "cyrillic_handwriting", "target": "видимых", "pred": "сидимых"}
+{"sample_id": "cyr_word_073471", "dataset": "cyrillic_handwriting", "target": "слизистых", "pred": "слистоя,"}
+{"sample_id": "cyr_word_073472", "dataset": "cyrillic_handwriting", "target": "больных", "pred": "тольные"}
+{"sample_id": "cyr_word_073473", "dataset": "cyrillic_handwriting", "target": "разностную", "pred": "разностнуюо"}
+{"sample_id": "cyr_word_073474", "dataset": "cyrillic_handwriting", "target": "претензии", "pred": "претензяи"}
+{"sample_id": "cyr_word_073475", "dataset": "cyrillic_handwriting", "target": "выполняла", "pred": "выпояббна"}
+{"sample_id": "cyr_word_073476", "dataset": "cyrillic_handwriting", "target": "проезд", "pred": "проезо"}
+{"sample_id": "cyr_word_073477", "dataset": "cyrillic_handwriting", "target": "суточные", "pred": "суточнья"}
+{"sample_id": "cyr_word_073478", "dataset": "cyrillic_handwriting", "target": "тридцать", "pred": "тидцать"}
+{"sample_id": "cyr_word_073479", "dataset": "cyrillic_handwriting", "target": "проживание", "pred": "рроживание"}
+{"sample_id": "cyr_word_073480", "dataset": "cyrillic_handwriting", "target": "могилев-минск", "pred": "минск-моссе"}
+{"sample_id": "cyr_word_073482", "dataset": "cyrillic_handwriting", "target": "двести", "pred": "ввести"}
+{"sample_id": "cyr_word_073483", "dataset": "cyrillic_handwriting", "target": "221000", "pred": "22лобо"}
+{"sample_id": "cyr_word_073484", "dataset": "cyrillic_handwriting", "target": "уголок", "pred": "уголок"}
+{"sample_id": "cyr_word_073485", "dataset": "cyrillic_handwriting", "target": "тысяча", "pred": "тысяся"}
+{"sample_id": "cyr_word_073486", "dataset": "cyrillic_handwriting", "target": "рублей", "pred": "рублей"}
+{"sample_id": "cyr_word_073487", "dataset": "cyrillic_handwriting", "target": "свирской", "pred": "свирской"}
+{"sample_id": "cyr_word_073489", "dataset": "cyrillic_handwriting", "target": "девятьсот,", "pred": "девятьсет,"}
+{"sample_id": "cyr_word_073492", "dataset": "cyrillic_handwriting", "target": "правый", "pred": "правый"}
+{"sample_id": "cyr_word_073493", "dataset": "cyrillic_handwriting", "target": "выдан", "pred": "впгран"}
+{"sample_id": "cyr_word_073497", "dataset": "cyrillic_handwriting", "target": "фиолетовый", "pred": "фиолетовый"}
+{"sample_id": "cyr_word_073498", "dataset": "cyrillic_handwriting", "target": "рублей", "pred": "рублей"}
+{"sample_id": "cyr_word_073500", "dataset": "cyrillic_handwriting", "target": "верхний", "pred": "вержии"}
+{"sample_id": "cyr_word_073502", "dataset": "cyrillic_handwriting", "target": "разбит", "pred": "назбит"}
+{"sample_id": "cyr_word_073505", "dataset": "cyrillic_handwriting", "target": "наруш", "pred": "наруш"}
+{"sample_id": "cyr_word_073506", "dataset": "cyrillic_handwriting", "target": "расколота", "pred": "насполота"}
+{"sample_id": "cyr_word_073509", "dataset": "cyrillic_handwriting", "target": "деформация", "pred": "осрормация"}
+{"sample_id": "cyr_word_073511", "dataset": "cyrillic_handwriting", "target": "погрешность", "pred": "погрешность"}
+{"sample_id": "cyr_word_073512", "dataset": "cyrillic_handwriting", "target": "заглушка", "pred": "заглушна"}
+{"sample_id": "cyr_word_073513", "dataset": "cyrillic_handwriting", "target": "расколоты", "pred": "расколожые"}
+{"sample_id": "cyr_word_073514", "dataset": "cyrillic_handwriting", "target": "отсутствует", "pred": "ожужствует"}
+{"sample_id": "cyr_word_073516", "dataset": "cyrillic_handwriting", "target": "отрицает", "pred": "ожрииаеей"}
+{"sample_id": "cyr_word_073518", "dataset": "cyrillic_handwriting", "target": "исковое", "pred": "йсвро"}
+{"sample_id": "cyr_word_073519", "dataset": "cyrillic_handwriting", "target": "письмо", "pred": "нисфмо"}
+{"sample_id": "cyr_word_073520", "dataset": "cyrillic_handwriting", "target": "конверт", "pred": "аднвер"}
+{"sample_id": "cyr_word_073521", "dataset": "cyrillic_handwriting", "target": "постановка", "pred": "посталовна"}
+{"sample_id": "cyr_word_073522", "dataset": "cyrillic_handwriting", "target": "протокол", "pred": "птохол"}
+{"sample_id": "cyr_word_073523", "dataset": "cyrillic_handwriting", "target": "описание", "pred": "описинисе"}
+{"sample_id": "cyr_word_073524", "dataset": "cyrillic_handwriting", "target": "протокол", "pred": "ародовол"}
+{"sample_id": "cyr_word_073525", "dataset": "cyrillic_handwriting", "target": "справка", "pred": "справта"}
+{"sample_id": "cyr_word_073526", "dataset": "cyrillic_handwriting", "target": "решение", "pred": "феение"}
+{"sample_id": "cyr_word_073527", "dataset": "cyrillic_handwriting", "target": "решение", "pred": "решение"}
+{"sample_id": "cyr_word_073528", "dataset": "cyrillic_handwriting", "target": "заявление", "pred": "злевление"}
+{"sample_id": "cyr_word_073529", "dataset": "cyrillic_handwriting", "target": "уведомление", "pred": "уводвмниие"}
+{"sample_id": "cyr_word_073530", "dataset": "cyrillic_handwriting", "target": "ошибка", "pred": "ошибка"}
+{"sample_id": "cyr_word_073532", "dataset": "cyrillic_handwriting", "target": "начальники", "pred": "назалькниа"}
+{"sample_id": "cyr_word_073535", "dataset": "cyrillic_handwriting", "target": "проживающего", "pred": "прогииваей"}
+{"sample_id": "cyr_word_073537", "dataset": "cyrillic_handwriting", "target": "заявление", "pred": "заявление"}
+{"sample_id": "cyr_word_073540", "dataset": "cyrillic_handwriting", "target": "поле.", "pred": "пои."}
+{"sample_id": "cyr_word_073542", "dataset": "cyrillic_handwriting", "target": "футболке", "pred": "фуболке"}
+{"sample_id": "cyr_word_073546", "dataset": "cyrillic_handwriting", "target": "обклееной", "pred": "обклаеной"}
+{"sample_id": "cyr_word_073547", "dataset": "cyrillic_handwriting", "target": "скотчем", "pred": "скотчем"}
+{"sample_id": "cyr_word_073548", "dataset": "cyrillic_handwriting", "target": "140960", "pred": "14од9во"}
+{"sample_id": "cyr_word_073549", "dataset": "cyrillic_handwriting", "target": "задачи", "pred": "задачи"}
+{"sample_id": "cyr_word_073553", "dataset": "cyrillic_handwriting", "target": "упаковочные", "pred": "учановочные"}
+{"sample_id": "cyr_word_073556", "dataset": "cyrillic_handwriting", "target": "присутствия", "pred": "приучствия"}
+{"sample_id": "cyr_word_073559", "dataset": "cyrillic_handwriting", "target": "земля", "pred": "зилели"}
+{"sample_id": "cyr_word_073560", "dataset": "cyrillic_handwriting", "target": "введем", "pred": "выден"}
+{"sample_id": "cyr_word_073561", "dataset": "cyrillic_handwriting", "target": "данные", "pred": "данные"}
+{"sample_id": "cyr_word_073562", "dataset": "cyrillic_handwriting", "target": "прошу", "pred": "прошу"}
+{"sample_id": "cyr_word_073563", "dataset": "cyrillic_handwriting", "target": "причину", "pred": "пригищ"}
+{"sample_id": "cyr_word_073564", "dataset": "cyrillic_handwriting", "target": "произошедшего", "pred": "прогдомедшеюо"}
+{"sample_id": "cyr_word_073565", "dataset": "cyrillic_handwriting", "target": "посылка", "pred": "погылка"}
+{"sample_id": "cyr_word_073566", "dataset": "cyrillic_handwriting", "target": "футболке", "pred": "фойболкя"}
+{"sample_id": "cyr_word_073570", "dataset": "cyrillic_handwriting", "target": "александровне", "pred": "трексанорооне"}
+{"sample_id": "cyr_word_073572", "dataset": "cyrillic_handwriting", "target": "педагогическом", "pred": "педагогической"}
+{"sample_id": "cyr_word_073573", "dataset": "cyrillic_handwriting", "target": "теплопроводности", "pred": "теппопроводноои"}
+{"sample_id": "cyr_word_073574", "dataset": "cyrillic_handwriting", "target": "практики", "pred": "пракимки"}
+{"sample_id": "cyr_word_073575", "dataset": "cyrillic_handwriting", "target": "наталья", "pred": "намальх"}
+{"sample_id": "cyr_word_073576", "dataset": "cyrillic_handwriting", "target": "высокий", "pred": "высокий"}
+{"sample_id": "cyr_word_073577", "dataset": "cyrillic_handwriting", "target": "теоретический", "pred": "теоретечеси"}
+{"sample_id": "cyr_word_073578", "dataset": "cyrillic_handwriting", "target": "подготовки", "pred": "подлотовки"}
+{"sample_id": "cyr_word_073579", "dataset": "cyrillic_handwriting", "target": "футболке", "pred": "уубокя"}
+{"sample_id": "cyr_word_073583", "dataset": "cyrillic_handwriting", "target": "предметов", "pred": "предметиов"}
+{"sample_id": "cyr_word_073585", "dataset": "cyrillic_handwriting", "target": "уравнение", "pred": "уравнение"}
+{"sample_id": "cyr_word_073586", "dataset": "cyrillic_handwriting", "target": "разработки", "pred": "разрабомку"}
+{"sample_id": "cyr_word_073588", "dataset": "cyrillic_handwriting", "target": "урока", "pred": "урока,"}
+{"sample_id": "cyr_word_073589", "dataset": "cyrillic_handwriting", "target": "способна", "pred": "спосовна"}
+{"sample_id": "cyr_word_073591", "dataset": "cyrillic_handwriting", "target": "поиск", "pred": "полск"}
+{"sample_id": "cyr_word_073592", "dataset": "cyrillic_handwriting", "target": "оптимального", "pred": "оптимального"}
+{"sample_id": "cyr_word_073593", "dataset": "cyrillic_handwriting", "target": "отборе", "pred": "отбора"}
+{"sample_id": "cyr_word_073595", "dataset": "cyrillic_handwriting", "target": "оценка", "pred": "оценка"}
+{"sample_id": "cyr_word_073596", "dataset": "cyrillic_handwriting", "target": "свободно", "pred": "свободно"}
+{"sample_id": "cyr_word_073598", "dataset": "cyrillic_handwriting", "target": "концепциях", "pred": "конценциех"}
+{"sample_id": "cyr_word_073599", "dataset": "cyrillic_handwriting", "target": "заявления", "pred": "заявления"}
+{"sample_id": "cyr_word_073600", "dataset": "cyrillic_handwriting", "target": "ксерокопия", "pred": "ксерокопия"}
+{"sample_id": "cyr_word_073601", "dataset": "cyrillic_handwriting", "target": "лыжи", "pred": "анте"}
+{"sample_id": "cyr_word_073603", "dataset": "cyrillic_handwriting", "target": "умеет", "pred": "умеет"}
+{"sample_id": "cyr_word_073604", "dataset": "cyrillic_handwriting", "target": "методы", "pred": "методы"}
+{"sample_id": "cyr_word_073605", "dataset": "cyrillic_handwriting", "target": "схема", "pred": "скема"}
+{"sample_id": "cyr_word_073607", "dataset": "cyrillic_handwriting", "target": "учебного", "pred": "учетного"}
+{"sample_id": "cyr_word_073608", "dataset": "cyrillic_handwriting", "target": "материала", "pred": "матершала"}
+{"sample_id": "cyr_word_073609", "dataset": "cyrillic_handwriting", "target": "студентка", "pred": "студениа"}
+{"sample_id": "cyr_word_073611", "dataset": "cyrillic_handwriting", "target": "практиковала", "pred": "пракиковала"}
+{"sample_id": "cyr_word_073612", "dataset": "cyrillic_handwriting", "target": "методы", "pred": "методы"}
+{"sample_id": "cyr_word_073616", "dataset": "cyrillic_handwriting", "target": "ошибка", "pred": "ошибки"}
+{"sample_id": "cyr_word_073617", "dataset": "cyrillic_handwriting", "target": "отношением", "pred": "отношении"}
+{"sample_id": "cyr_word_073619", "dataset": "cyrillic_handwriting", "target": "константиновна", "pred": "конетантиновна"}
+{"sample_id": "cyr_word_073620", "dataset": "cyrillic_handwriting", "target": "старалась", "pred": "старалась"}
+{"sample_id": "cyr_word_073622", "dataset": "cyrillic_handwriting", "target": "создавать", "pred": "создавал"}
+{"sample_id": "cyr_word_073623", "dataset": "cyrillic_handwriting", "target": "психологическую", "pred": "пикологическую"}
+{"sample_id": "cyr_word_073626", "dataset": "cyrillic_handwriting", "target": "вероятность", "pred": "вероятность"}
+{"sample_id": "cyr_word_073628", "dataset": "cyrillic_handwriting", "target": "строила", "pred": "стройла"}
+{"sample_id": "cyr_word_073630", "dataset": "cyrillic_handwriting", "target": "старалась", "pred": "етаралась"}
+{"sample_id": "cyr_word_073631", "dataset": "cyrillic_handwriting", "target": "детей,", "pred": "детей)"}
+{"sample_id": "cyr_word_073634", "dataset": "cyrillic_handwriting", "target": "эллипс.", "pred": "эллипе"}
+{"sample_id": "cyr_word_073635", "dataset": "cyrillic_handwriting", "target": "отлично", "pred": "отлично"}
+{"sample_id": "cyr_word_073636", "dataset": "cyrillic_handwriting", "target": "правописание", "pred": "травойсйнит"}
+{"sample_id": "cyr_word_073637", "dataset": "cyrillic_handwriting", "target": "слов", "pred": "слыв"}
+{"sample_id": "cyr_word_073638", "dataset": "cyrillic_handwriting", "target": "суффиксы", "pred": "оуфорикен"}
+{"sample_id": "cyr_word_073642", "dataset": "cyrillic_handwriting", "target": "анатольевича", "pred": "анатерывича"}
+{"sample_id": "cyr_word_073644", "dataset": "cyrillic_handwriting", "target": "точек", "pred": "точен"}
+{"sample_id": "cyr_word_073646", "dataset": "cyrillic_handwriting", "target": "чебоксарский", "pred": "небожорский"}
+{"sample_id": "cyr_word_073647", "dataset": "cyrillic_handwriting", "target": "89170640110", "pred": "2910640110"}
+{"sample_id": "cyr_word_073653", "dataset": "cyrillic_handwriting", "target": "18810121180226992869", "pred": "188101211802ль992869"}
+{"sample_id": "cyr_word_073654", "dataset": "cyrillic_handwriting", "target": "значит,", "pred": "зааит"}
+{"sample_id": "cyr_word_073655", "dataset": "cyrillic_handwriting", "target": "18810121171120969759", "pred": "18810121г1х09ь69759"}
+{"sample_id": "cyr_word_073656", "dataset": "cyrillic_handwriting", "target": "18810121171115992242", "pred": "188101г117115998я42"}
+{"sample_id": "cyr_word_073657", "dataset": "cyrillic_handwriting", "target": "г.перми", "pred": "гпперми"}
+{"sample_id": "cyr_word_073658", "dataset": "cyrillic_handwriting", "target": "18810121171106972617", "pred": "1821о12ыг10692гыя"}
+{"sample_id": "cyr_word_073663", "dataset": "cyrillic_handwriting", "target": "транстехсервис", "pred": "транстехсервие"}
+{"sample_id": "cyr_word_073665", "dataset": "cyrillic_handwriting", "target": "пусть", "pred": "эуеть"}
+{"sample_id": "cyr_word_073666", "dataset": "cyrillic_handwriting", "target": "геометрическое", "pred": "геаметриеское"}
+{"sample_id": "cyr_word_073667", "dataset": "cyrillic_handwriting", "target": "8170000210", "pred": "8170000210"}
+{"sample_id": "cyr_word_073672", "dataset": "cyrillic_handwriting", "target": "александров", "pred": "алсхсяндров"}
+{"sample_id": "cyr_word_073673", "dataset": "cyrillic_handwriting", "target": "анатольевич", "pred": "апатольевш"}
+{"sample_id": "cyr_word_073674", "dataset": "cyrillic_handwriting", "target": "40817810475041318063", "pred": "909.17981007г041318063"}
+{"sample_id": "cyr_word_073675", "dataset": "cyrillic_handwriting", "target": "длины", "pred": "длины"}
+{"sample_id": "cyr_word_073676", "dataset": "cyrillic_handwriting", "target": "сбербанк", "pred": "барбае"}
+{"sample_id": "cyr_word_073677", "dataset": "cyrillic_handwriting", "target": "30101810300000000609", "pred": "за10171азвововоовод"}
+{"sample_id": "cyr_word_073682", "dataset": "cyrillic_handwriting", "target": "01.08.2016", "pred": "01.09.2016"}
+{"sample_id": "cyr_word_073683", "dataset": "cyrillic_handwriting", "target": "01.08.2016.", "pred": "о1 ояголь."}
+{"sample_id": "cyr_word_073685", "dataset": "cyrillic_handwriting", "target": "содержащие", "pred": "содержащие"}
+{"sample_id": "cyr_word_073686", "dataset": "cyrillic_handwriting", "target": "01.08.2016", "pred": "о1.о8.201ь"}
+{"sample_id": "cyr_word_073688", "dataset": "cyrillic_handwriting", "target": "01.08.2016", "pred": "оло8.20"}
+{"sample_id": "cyr_word_073689", "dataset": "cyrillic_handwriting", "target": "яковлева", "pred": "яновшво"}
+{"sample_id": "cyr_word_073690", "dataset": "cyrillic_handwriting", "target": "01.08.2016", "pred": "осодеоть"}
+{"sample_id": "cyr_word_073693", "dataset": "cyrillic_handwriting", "target": "01.08.2016", "pred": "01.0з.каб"}
+{"sample_id": "cyr_word_073695", "dataset": "cyrillic_handwriting", "target": "способ", "pred": "способ"}
+{"sample_id": "cyr_word_073696", "dataset": "cyrillic_handwriting", "target": "благотворительный", "pred": "благотворительныей"}
+{"sample_id": "cyr_word_073699", "dataset": "cyrillic_handwriting", "target": "-алиевадм.", "pred": "пмяводм."}
+{"sample_id": "cyr_word_073701", "dataset": "cyrillic_handwriting", "target": "паспорту", "pred": "распоргу"}
+{"sample_id": "cyr_word_073704", "dataset": "cyrillic_handwriting", "target": "31.05.10", "pred": "7.05.10"}
+{"sample_id": "cyr_word_073706", "dataset": "cyrillic_handwriting", "target": "называется", "pred": "нарывяетае"}
+{"sample_id": "cyr_word_073707", "dataset": "cyrillic_handwriting", "target": "29.02.1901г", "pred": "2дб0гдбхр"}
+{"sample_id": "cyr_word_073708", "dataset": "cyrillic_handwriting", "target": "муж", "pred": "муж"}
+{"sample_id": "cyr_word_073709", "dataset": "cyrillic_handwriting", "target": "женат.", "pred": "хужат."}
+{"sample_id": "cyr_word_073711", "dataset": "cyrillic_handwriting", "target": "озагс", "pred": "охае"}
+{"sample_id": "cyr_word_073712", "dataset": "cyrillic_handwriting", "target": "гор.мытищи", "pred": "2от мнчене"}
+{"sample_id": "cyr_word_073713", "dataset": "cyrillic_handwriting", "target": "отец", "pred": "оец"}
+{"sample_id": "cyr_word_073714", "dataset": "cyrillic_handwriting", "target": "плоскости", "pred": "плоскости"}
+{"sample_id": "cyr_word_073715", "dataset": "cyrillic_handwriting", "target": "обменом", "pred": "обженом"}
+{"sample_id": "cyr_word_073716", "dataset": "cyrillic_handwriting", "target": "утратой", "pred": "ктратой"}
+{"sample_id": "cyr_word_073719", "dataset": "cyrillic_handwriting", "target": "ивановны", "pred": "ивлковны"}
+{"sample_id": "cyr_word_073722", "dataset": "cyrillic_handwriting", "target": "место", "pred": "место"}
+{"sample_id": "cyr_word_073723", "dataset": "cyrillic_handwriting", "target": "8701", "pred": "в7ол"}
+{"sample_id": "cyr_word_073724", "dataset": "cyrillic_handwriting", "target": "123456", "pred": "183 1бб"}
+{"sample_id": "cyr_word_073725", "dataset": "cyrillic_handwriting", "target": "16.12.2002", "pred": "16.18.90 08."}
+{"sample_id": "cyr_word_073727", "dataset": "cyrillic_handwriting", "target": "01.03.2006", "pred": "олоз.0бв"}
+{"sample_id": "cyr_word_073728", "dataset": "cyrillic_handwriting", "target": "сидорова", "pred": "снеорбва"}
+{"sample_id": "cyr_word_073729", "dataset": "cyrillic_handwriting", "target": "товарный", "pred": "поварныйа"}
+{"sample_id": "cyr_word_073730", "dataset": "cyrillic_handwriting", "target": "кассовый", "pred": "кассовый"}
+{"sample_id": "cyr_word_073731", "dataset": "cyrillic_handwriting", "target": "02.03.2006", "pred": "о2бъл0б6"}
+{"sample_id": "cyr_word_073733", "dataset": "cyrillic_handwriting", "target": "является", "pred": "является"}
+{"sample_id": "cyr_word_073734", "dataset": "cyrillic_handwriting", "target": "02.03.2006", "pred": "о8.0з.эд0в"}
+{"sample_id": "cyr_word_073735", "dataset": "cyrillic_handwriting", "target": "5704", "pred": "5704"}
+{"sample_id": "cyr_word_073736", "dataset": "cyrillic_handwriting", "target": "570000", "pred": "510000"}
+{"sample_id": "cyr_word_073737", "dataset": "cyrillic_handwriting", "target": "05.04.1999г", "pred": "05.04.1999г"}
+{"sample_id": "cyr_word_073740", "dataset": "cyrillic_handwriting", "target": "кривая,", "pred": "кривая,"}
+{"sample_id": "cyr_word_073741", "dataset": "cyrillic_handwriting", "target": "ноября", "pred": "ноябра"}
+{"sample_id": "cyr_word_073743", "dataset": "cyrillic_handwriting", "target": "03.11.2011г.", "pred": "03.м.2011.."}
+{"sample_id": "cyr_word_073748", "dataset": "cyrillic_handwriting", "target": "москва,", "pred": "москва"}
+{"sample_id": "cyr_word_073750", "dataset": "cyrillic_handwriting", "target": "претензии", "pred": "претеизии"}
+{"sample_id": "cyr_word_073751", "dataset": "cyrillic_handwriting", "target": "все", "pred": "все"}
+{"sample_id": "cyr_word_073752", "dataset": "cyrillic_handwriting", "target": "причина", "pred": "причика"}
+{"sample_id": "cyr_word_073757", "dataset": "cyrillic_handwriting", "target": "121099,", "pred": "121095"}
+{"sample_id": "cyr_word_073758", "dataset": "cyrillic_handwriting", "target": "смоленская", "pred": "смоленская"}
+{"sample_id": "cyr_word_073760", "dataset": "cyrillic_handwriting", "target": "посылка", "pred": "посыика"}
+{"sample_id": "cyr_word_073761", "dataset": "cyrillic_handwriting", "target": "чеков", "pred": "чеков"}
+{"sample_id": "cyr_word_073762", "dataset": "cyrillic_handwriting", "target": "связи", "pred": "свиези"}
+{"sample_id": "cyr_word_073763", "dataset": "cyrillic_handwriting", "target": "егор", "pred": "егор"}
+{"sample_id": "cyr_word_073766", "dataset": "cyrillic_handwriting", "target": "построенной", "pred": "построенной"}
+{"sample_id": "cyr_word_073768", "dataset": "cyrillic_handwriting", "target": "проблемы", "pred": "дроблемы"}
+{"sample_id": "cyr_word_073769", "dataset": "cyrillic_handwriting", "target": "предметной", "pred": "предматной"}
+{"sample_id": "cyr_word_073770", "dataset": "cyrillic_handwriting", "target": "область", "pred": "облость,"}
+{"sample_id": "cyr_word_073771", "dataset": "cyrillic_handwriting", "target": "октября", "pred": "охтября"}
+{"sample_id": "cyr_word_073772", "dataset": "cyrillic_handwriting", "target": "натальи", "pred": "матальи"}
+{"sample_id": "cyr_word_073773", "dataset": "cyrillic_handwriting", "target": "района", "pred": "растона"}
+{"sample_id": "cyr_word_073774", "dataset": "cyrillic_handwriting", "target": "ноябрь,", "pred": "ноядрь"}
+{"sample_id": "cyr_word_073775", "dataset": "cyrillic_handwriting", "target": "елена", "pred": "слена"}
+{"sample_id": "cyr_word_073776", "dataset": "cyrillic_handwriting", "target": "ольга", "pred": "ольга"}
+{"sample_id": "cyr_word_073778", "dataset": "cyrillic_handwriting", "target": "борис", "pred": "кодис"}
+{"sample_id": "cyr_word_073779", "dataset": "cyrillic_handwriting", "target": "средства", "pred": "средетв"}
+{"sample_id": "cyr_word_073780", "dataset": "cyrillic_handwriting", "target": "проведения", "pred": "проведение"}
+{"sample_id": "cyr_word_073781", "dataset": "cyrillic_handwriting", "target": "мероприятий", "pred": "мароприятий"}
+{"sample_id": "cyr_word_073782", "dataset": "cyrillic_handwriting", "target": "формы", "pred": "фрориы"}
+{"sample_id": "cyr_word_073783", "dataset": "cyrillic_handwriting", "target": "классного", "pred": "кажною"}
+{"sample_id": "cyr_word_073784", "dataset": "cyrillic_handwriting", "target": "проводила", "pred": "проводила"}
+{"sample_id": "cyr_word_073786", "dataset": "cyrillic_handwriting", "target": "субботников", "pred": "субботнисов."}
+{"sample_id": "cyr_word_073787", "dataset": "cyrillic_handwriting", "target": "школьного", "pred": "ипольного"}
+{"sample_id": "cyr_word_073788", "dataset": "cyrillic_handwriting", "target": "журнала", "pred": "журкала"}
+{"sample_id": "cyr_word_073789", "dataset": "cyrillic_handwriting", "target": "компании", "pred": "компаним"}
+{"sample_id": "cyr_word_073790", "dataset": "cyrillic_handwriting", "target": "моего", "pred": "тоего"}
+{"sample_id": "cyr_word_073791", "dataset": "cyrillic_handwriting", "target": "сберегательного", "pred": "сберсгательного"}
+{"sample_id": "cyr_word_073792", "dataset": "cyrillic_handwriting", "target": "отказано", "pred": "отказане"}
+{"sample_id": "cyr_word_073794", "dataset": "cyrillic_handwriting", "target": "прокурору", "pred": "прожуроу"}
+{"sample_id": "cyr_word_073795", "dataset": "cyrillic_handwriting", "target": "отметка", "pred": "отшетка"}
+{"sample_id": "cyr_word_073797", "dataset": "cyrillic_handwriting", "target": "подделка", "pred": "подделка"}
+{"sample_id": "cyr_word_073798", "dataset": "cyrillic_handwriting", "target": "освободить", "pred": "освободить"}
+{"sample_id": "cyr_word_073799", "dataset": "cyrillic_handwriting", "target": "рувд", "pred": "ру82"}
+{"sample_id": "cyr_word_073800", "dataset": "cyrillic_handwriting", "target": "людмила", "pred": "люзмила"}
+{"sample_id": "cyr_word_073801", "dataset": "cyrillic_handwriting", "target": "анастасия", "pred": "анастасия"}
+{"sample_id": "cyr_word_073804", "dataset": "cyrillic_handwriting", "target": "прохождения", "pred": "пролонуаеиия"}
+{"sample_id": "cyr_word_073807", "dataset": "cyrillic_handwriting", "target": "обучения", "pred": "обучения"}
+{"sample_id": "cyr_word_073808", "dataset": "cyrillic_handwriting", "target": "детей", "pred": "дешей"}
+{"sample_id": "cyr_word_073809", "dataset": "cyrillic_handwriting", "target": "район", "pred": "район"}
+{"sample_id": "cyr_word_073810", "dataset": "cyrillic_handwriting", "target": "постановления", "pred": "постановшения:"}
+{"sample_id": "cyr_word_073811", "dataset": "cyrillic_handwriting", "target": "петр", "pred": "летр"}
+{"sample_id": "cyr_word_073813", "dataset": "cyrillic_handwriting", "target": "владимирович", "pred": "блядимирович"}
+{"sample_id": "cyr_word_073814", "dataset": "cyrillic_handwriting", "target": "анализ", "pred": "ачам"}
+{"sample_id": "cyr_word_073815", "dataset": "cyrillic_handwriting", "target": "иркутская", "pred": "иргутская"}
+{"sample_id": "cyr_word_073817", "dataset": "cyrillic_handwriting", "target": "декабрь", "pred": "декабрь"}
+{"sample_id": "cyr_word_073818", "dataset": "cyrillic_handwriting", "target": "александровна", "pred": "мексондровка"}
+{"sample_id": "cyr_word_073819", "dataset": "cyrillic_handwriting", "target": "владимировна", "pred": "владимировя"}
+{"sample_id": "cyr_word_073820", "dataset": "cyrillic_handwriting", "target": "иванович", "pred": "ивонович"}
+{"sample_id": "cyr_word_073821", "dataset": "cyrillic_handwriting", "target": "общественным", "pred": "общешольнымя"}
+{"sample_id": "cyr_word_073822", "dataset": "cyrillic_handwriting", "target": "питания", "pred": "пестание"}
+{"sample_id": "cyr_word_073823", "dataset": "cyrillic_handwriting", "target": "банка", "pred": "бапна"}
+{"sample_id": "cyr_word_073827", "dataset": "cyrillic_handwriting", "target": "андреевна,", "pred": "аидреевка,"}
+{"sample_id": "cyr_word_073828", "dataset": "cyrillic_handwriting", "target": "юрьевна", "pred": "юрьевка"}
+{"sample_id": "cyr_word_073829", "dataset": "cyrillic_handwriting", "target": "девяносто)", "pred": "девяносто)"}
+{"sample_id": "cyr_word_073830", "dataset": "cyrillic_handwriting", "target": "васильевича", "pred": "васпльевнка"}

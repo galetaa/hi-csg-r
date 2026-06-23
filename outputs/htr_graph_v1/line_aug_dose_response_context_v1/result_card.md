@@ -47,3 +47,5 @@ The effect is dose-dependent. The +2k augmentation is not enough to produce a st
 +10k gives the best overall CER and School CER, while +5k gives slightly better School WER/exact. There is no clear HKR/Cyrillic degradation: their CER deltas are small and their confidence intervals include zero.
 
 Current recommendation: keep +10k as the best CER-oriented candidate and +5k as the conservative candidate with stronger School exact/WER. The next decision should depend on whether CER or exact/WER is the primary selection metric.
+
+Operating-point stratification shows that confidence_graph is effective as a risk ranking method but not coverage-fair under a single global threshold. Strict/balanced thresholds accept School samples much more often than HKR/Cyrillic and reject numeric/mixed tokens more often than alphabetic tokens. Very short samples are accepted more readily, so the remaining short-token errors are better described as overconfident ambiguity errors rather than low-confidence failures.
