@@ -21,6 +21,7 @@ def build_result() -> dict[str, Any]:
     selective = read_json("outputs/htr_graph_v1/selective_iter2_confidence_v1/selective_summary.json")
     operating = read_json("outputs/htr_graph_v1/selective_iter2_confidence_v1/operating_points.json")
     gold = read_json("outputs/iter2_structural_gold_v1/annotation_summary.json")
+    graph_fusion = read_json("outputs/htr_graph_v1/graph_fusion_iter2_context10k_v1/summary.json")
 
     return {
         "title": "Iteration 2 package: data-centric HTR improvement with structural diagnostics",
@@ -84,17 +85,19 @@ def build_result() -> dict[str, Any]:
             "htr_error_explained_by_structure": gold["overall"]["htr_error_explained_by_structure"],
             "all_acceptance_passed": gold["overall"]["all_acceptance_passed"],
         },
+        "graph_fusion_pilot": graph_fusion,
         "main_conclusion": [
             "corrected foreground extraction",
             "natural-line context augmentation gives statistically supported CER gains",
             "confidence-aware selective prediction works strongly",
-            "structural graph features are useful for diagnostics and confidence calibration, but graph-fusion recognition superiority is not yet established",
+            "structural graph features are useful for diagnostics and confidence calibration",
+            "simple graph-fusion provides School-specific gains, especially on hard_real, but naive global fusion is not stable across the mixed dataset",
         ],
         "main_limitations": [
             "training comparison is still mostly single-seed",
             "contextual line crops are not clean isolated line crops",
             "structural gold is a diagnostic usability check, not a pixel-level topology benchmark",
-            "graph branch has not yet been shown to improve recognition over image-only + line augmentation",
+            "naive global graph fusion hurts non-School datasets and should not be treated as the universal canonical recognizer",
             "global selective thresholds are not group-fair",
         ],
     }
@@ -105,6 +108,9 @@ def build_md(result: dict[str, Any]) -> str:
     bootstrap = result["line_augmentation_paired_bootstrap"]
     selective = result["selective_prediction"]
     gold = result["structural_gold"]
+    graph = result["graph_fusion_pilot"]
+    graph_vs_image = graph["paired_vs_image10k"]
+    graph_models = graph["models"]
 
     lines = [
         f"# {result['title']}",
@@ -118,7 +124,8 @@ def build_md(result: dict[str, Any]) -> str:
         "- built natural-line contextual augmentation;",
         "- obtained statistically supported image-only HTR gains;",
         "- validated confidence-aware selective prediction;",
-        "- confirmed that the current structural extraction is not the main bottleneck on the diagnostic gold subset.",
+        "- confirmed that the current structural extraction is not the main bottleneck on the diagnostic gold subset;",
+        "- tested a single graph-fusion pilot and found targeted School benefit but mixed-dataset instability.",
         "",
         "## 2. Accepted preprocessing",
         "",
@@ -251,15 +258,39 @@ def build_md(result: dict[str, Any]) -> str:
         "- foreground/skeleton/graph extraction is usable on the diagnostic subset;",
         "- remaining errors are primarily model/ambiguity/token-level rather than extraction failures.",
         "",
-        "## 8. Main conclusion",
+        "## 8. Graph-fusion pilot",
+        "",
+        "The graph-fusion pilot produced a mixed result. Compared with the image-only +10k model, graph-fusion significantly improved School CER, with the strongest gain on hard_real samples, but significantly degraded HKR and Cyrillic CER. Overall CER was statistically neutral/slightly negative. Zero-graph ablation substantially reduced performance, indicating that the graph branch was actively used.",
+        "",
+        "Compared to image-only +10k seed42:",
+        f"- overall ΔCER: {fmt(graph_vs_image['bootstrap']['overall']['mean_delta_cer_per_sample'])}, CI [{fmt(graph_vs_image['bootstrap']['overall']['ci95_low'])}, {fmt(graph_vs_image['bootstrap']['overall']['ci95_high'])}]",
+        f"- School ΔCER: {fmt(graph_vs_image['bootstrap']['school_notebooks_clean']['mean_delta_cer_per_sample'])}, CI [{fmt(graph_vs_image['bootstrap']['school_notebooks_clean']['ci95_low'])}, {fmt(graph_vs_image['bootstrap']['school_notebooks_clean']['ci95_high'])}]",
+        f"- HKR ΔCER: {fmt(graph_vs_image['bootstrap']['hkr_words']['mean_delta_cer_per_sample'])}, CI [{fmt(graph_vs_image['bootstrap']['hkr_words']['ci95_low'])}, {fmt(graph_vs_image['bootstrap']['hkr_words']['ci95_high'])}]",
+        f"- Cyrillic ΔCER: {fmt(graph_vs_image['bootstrap']['cyrillic_handwriting']['mean_delta_cer_per_sample'])}, CI [{fmt(graph_vs_image['bootstrap']['cyrillic_handwriting']['ci95_low'])}, {fmt(graph_vs_image['bootstrap']['cyrillic_handwriting']['ci95_high'])}]",
+        "",
+        "School hard_real:",
+        f"- CER {fmt(graph_vs_image['by_school_quality_bucket']['hard_real']['baseline']['cer'])} -> {fmt(graph_vs_image['by_school_quality_bucket']['hard_real']['candidate']['cer'])}",
+        f"- exact {fmt(graph_vs_image['by_school_quality_bucket']['hard_real']['baseline']['exact'])} -> {fmt(graph_vs_image['by_school_quality_bucket']['hard_real']['candidate']['exact'])}",
+        "",
+        "Zero-graph ablation:",
+        f"- normal graph-fusion CER: {fmt(graph_models['graph_fusion']['cer'])}",
+        f"- zero-graph CER: {fmt(graph_models['zero_graph']['cer'])}",
+        "",
+        "Interpretation:",
+        "- graph features contain recognition-relevant structural signal for School;",
+        "- naive ungated late fusion is not safe as a universal mixed-dataset recognizer;",
+        "- a future controlled variant would be dataset-gated graph fusion, but it is not part of Iteration 2.",
+        "",
+        "## 9. Main conclusion",
         "",
         "Iteration 2 demonstrates a data-centric HTR improvement:",
         "- corrected foreground extraction;",
         "- natural-line context augmentation gives statistically supported CER gains;",
         "- confidence-aware selective prediction works strongly;",
-        "- structural graph features are useful for diagnostics and confidence calibration, but graph-fusion recognition superiority is not yet established.",
+        "- structural graph features are useful for diagnostics and confidence calibration;",
+        "- graph fusion provides School-specific gains, especially on hard_real, but naive global fusion harms non-School datasets.",
         "",
-        "## 9. Main limitations",
+        "## 10. Main limitations",
         "",
     ])
     for item in result["main_limitations"]:
@@ -287,6 +318,16 @@ def build_artifact_index() -> str:
             "outputs/htr_graph_v1/tri10k_image_only_plus_school_lines_10k_context_v1",
             "outputs/htr_graph_v1/line_aug_dose_response_context_v1/summary.md",
             "outputs/htr_graph_v1/line_aug_dose_response_context_v1/paired_5k_vs_10k.md",
+        ],
+        "Graph Fusion Pilot": [
+            "data/experiments/htr_graph_v1/graph_fusion_ready/tri10k_mixed_plus_school_lines_10k_context_v1/summary.json",
+            "outputs/htr_graph_v1/tri10k_graph_fusion_plus_school_lines_10k_context_v1/best.pt",
+            "outputs/htr_graph_v1/eval_tri10k_graph_fusion_plus_school_lines_10k_context_v1_test_final/summary.json",
+            "outputs/htr_graph_v1/eval_tri10k_graph_fusion_plus_school_lines_10k_context_v1_test_final_zero_graph/summary.json",
+            "outputs/htr_graph_v1/graph_fusion_iter2_context10k_v1/summary.md",
+            "outputs/htr_graph_v1/graph_fusion_iter2_context10k_v1/paired_vs_image10k.md",
+            "outputs/htr_graph_v1/graph_fusion_iter2_context10k_v1/paired_vs_baseline.md",
+            "outputs/htr_graph_v1/graph_fusion_iter2_context10k_v1/result_card.md",
         ],
         "Selective Prediction": [
             "outputs/htr_graph_v1/selective_iter2_lineaug_v1/selective_summary.md",

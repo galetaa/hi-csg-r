@@ -9,7 +9,8 @@ Main result:
 - built natural-line contextual augmentation;
 - obtained statistically supported image-only HTR gains;
 - validated confidence-aware selective prediction;
-- confirmed that the current structural extraction is not the main bottleneck on the diagnostic gold subset.
+- confirmed that the current structural extraction is not the main bottleneck on the diagnostic gold subset;
+- tested a single graph-fusion pilot and found targeted School benefit but mixed-dataset instability.
 
 ## 2. Accepted preprocessing
 
@@ -116,18 +117,42 @@ Conclusion:
 - foreground/skeleton/graph extraction is usable on the diagnostic subset;
 - remaining errors are primarily model/ambiguity/token-level rather than extraction failures.
 
-## 8. Main conclusion
+## 8. Graph-fusion pilot
+
+The graph-fusion pilot produced a mixed result. Compared with the image-only +10k model, graph-fusion significantly improved School CER, with the strongest gain on hard_real samples, but significantly degraded HKR and Cyrillic CER. Overall CER was statistically neutral/slightly negative. Zero-graph ablation substantially reduced performance, indicating that the graph branch was actively used.
+
+Compared to image-only +10k seed42:
+- overall ΔCER: 0.0036, CI [-0.0003, 0.0076]
+- School ΔCER: -0.0100, CI [-0.0172, -0.0027]
+- HKR ΔCER: 0.0123, CI [0.0070, 0.0176]
+- Cyrillic ΔCER: 0.0101, CI [0.0023, 0.0181]
+
+School hard_real:
+- CER 0.2057 -> 0.1794
+- exact 0.4025 -> 0.4407
+
+Zero-graph ablation:
+- normal graph-fusion CER: 0.1338
+- zero-graph CER: 0.1536
+
+Interpretation:
+- graph features contain recognition-relevant structural signal for School;
+- naive ungated late fusion is not safe as a universal mixed-dataset recognizer;
+- a future controlled variant would be dataset-gated graph fusion, but it is not part of Iteration 2.
+
+## 9. Main conclusion
 
 Iteration 2 demonstrates a data-centric HTR improvement:
 - corrected foreground extraction;
 - natural-line context augmentation gives statistically supported CER gains;
 - confidence-aware selective prediction works strongly;
-- structural graph features are useful for diagnostics and confidence calibration, but graph-fusion recognition superiority is not yet established.
+- structural graph features are useful for diagnostics and confidence calibration;
+- graph fusion provides School-specific gains, especially on hard_real, but naive global fusion harms non-School datasets.
 
-## 9. Main limitations
+## 10. Main limitations
 
 - training comparison is still mostly single-seed;
 - contextual line crops are not clean isolated line crops;
 - structural gold is a diagnostic usability check, not a pixel-level topology benchmark;
-- graph branch has not yet been shown to improve recognition over image-only + line augmentation;
+- naive global graph fusion hurts non-School datasets and should not be treated as the universal canonical recognizer;
 - global selective thresholds are not group-fair;

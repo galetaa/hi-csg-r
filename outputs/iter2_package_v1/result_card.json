@@ -511,17 +511,1761 @@
     },
     "all_acceptance_passed": true
   },
+  "graph_fusion_pilot": {
+    "models": {
+      "baseline_image_only": {
+        "n": 5563,
+        "cer": 0.1390733992712129,
+        "wer": 0.48894842598794375,
+        "exact": 0.44112888729103,
+        "grouped": {
+          "hkr_words": {
+            "n": 2000,
+            "cer": 0.09562620560768798,
+            "wer": 0.4000416666666667,
+            "exact": 0.501
+          },
+          "cyrillic_handwriting": {
+            "n": 1563,
+            "cer": 0.1931994378518241,
+            "wer": 0.6732778844103221,
+            "exact": 0.28150991682661547
+          },
+          "school_notebooks_clean": {
+            "n": 2000,
+            "cer": 0.15749263653013645,
+            "wer": 0.50175,
+            "exact": 0.506
+          }
+        }
+      },
+      "image_only_10k": {
+        "n": 5563,
+        "cer": 0.13512656651861718,
+        "wer": 0.4924261489603935,
+        "exact": 0.46359877763796514,
+        "pred_len_mean": 8.587632572353048,
+        "pred_empty_ratio": 0.0,
+        "argmax_blank_ratio": 0.8362519337230699,
+        "grouped": {
+          "hkr_words": {
+            "n": 2000,
+            "cer": 0.09171769317284048,
+            "wer": 0.37983333333333336,
+            "exact": 0.5245
+          },
+          "cyrillic_handwriting": {
+            "n": 1563,
+            "cer": 0.18580688289497263,
+            "wer": 0.6629558541266795,
+            "exact": 0.2891874600127959
+          },
+          "school_notebooks_clean": {
+            "n": 2000,
+            "cer": 0.1389287726162724,
+            "wer": 0.47175,
+            "exact": 0.539
+          }
+        },
+        "examples": [
+          {
+            "sample_id": "hkr_words_043599",
+            "target": "где цветут моих",
+            "pred": "где цветут моих",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "phrase",
+            "category": null
+          },
+          {
+            "sample_id": "hkr_words_053384",
+            "target": "но ты не снизошло",
+            "pred": "но ты не снизошло",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "phrase",
+            "category": null
+          },
+          {
+            "sample_id": "cyr_word_073525",
+            "target": "справка",
+            "pred": "спривхы",
+            "cer": 0.42857142857142855,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "hkr_words_016081",
+            "target": "павлодарская",
+            "pred": "пывлодорская",
+            "cer": 0.16666666666666666,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "hkr_words_030911",
+            "target": "заводской",
+            "pred": "заводскай",
+            "cer": 0.1111111111111111,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "school_notebooks_test_0307431",
+            "target": "было",
+            "pred": "было",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "hkr_words_045386",
+            "target": "свет она.",
+            "pred": "свет они.",
+            "cer": 0.1111111111111111,
+            "wer": 0.5,
+            "exact": 0.0,
+            "level": "phrase",
+            "category": null
+          },
+          {
+            "sample_id": "school_notebooks_test_0309227",
+            "target": "либо -",
+            "pred": "либо-",
+            "cer": 0.16666666666666666,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "phrase",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "hkr_words_053971",
+            "target": "о нежности, о славе,",
+            "pred": "о нежности, о славе,",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "phrase",
+            "category": null
+          },
+          {
+            "sample_id": "school_notebooks_test_0313004",
+            "target": "аустер-",
+            "pred": "пусбер-",
+            "cer": 0.2857142857142857,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "hkr_words_062461",
+            "target": "опять, как",
+            "pred": "опять, как",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "phrase",
+            "category": null
+          },
+          {
+            "sample_id": "school_notebooks_test_0312613",
+            "target": "жизни",
+            "pred": "жизни",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "cyr_phrase_072767",
+            "target": "стипендию получаю",
+            "pred": "стипендию полугаю",
+            "cer": 0.058823529411764705,
+            "wer": 0.5,
+            "exact": 0.0,
+            "level": "phrase",
+            "category": null
+          },
+          {
+            "sample_id": "school_notebooks_test_0298209",
+            "target": "за-",
+            "pred": "за",
+            "cer": 0.3333333333333333,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "school_notebooks_test_0318947",
+            "target": "1ск",
+            "pred": "1ск",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "word",
+            "category": "pupil_comment"
+          },
+          {
+            "sample_id": "school_notebooks_test_0301406",
+            "target": "ёлочка.",
+            "pred": "ёлочка.",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "cyr_word_073589",
+            "target": "способна",
+            "pred": "спососна",
+            "cer": 0.125,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "hkr_words_011657",
+            "target": "молдавия",
+            "pred": "магдавия",
+            "cer": 0.25,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "school_notebooks_test_0321809",
+            "target": "всю",
+            "pred": "всю",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "cyr_word_072619",
+            "target": "детализация",
+            "pred": "дстализация",
+            "cer": 0.09090909090909091,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "cyr_phrase_072858",
+            "target": "по распределению",
+            "pred": "по распределению",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "phrase",
+            "category": null
+          },
+          {
+            "sample_id": "hkr_words_050474",
+            "target": "до полярных льдов,",
+            "pred": "го полярных лсодов,",
+            "cer": 0.16666666666666666,
+            "wer": 0.6666666666666666,
+            "exact": 0.0,
+            "level": "phrase",
+            "category": null
+          },
+          {
+            "sample_id": "school_notebooks_test_0298681",
+            "target": "зверью,",
+            "pred": "девраго,",
+            "cer": 0.8571428571428571,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "school_notebooks_test_0302336",
+            "target": "четырнадцатое",
+            "pred": "уетирнадцатое",
+            "cer": 0.15384615384615385,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "hkr_words_016376",
+            "target": "павлодарская",
+            "pred": "павлодарская",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "hkr_words_013406",
+            "target": "актюбинская",
+            "pred": "акрюбинская",
+            "cer": 0.09090909090909091,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "hkr_words_043028",
+            "target": "законов судьбы.",
+            "pred": "законов судьбы.",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "phrase",
+            "category": null
+          },
+          {
+            "sample_id": "hkr_words_029822",
+            "target": "аксу",
+            "pred": "аксу",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "cyr_word_073069",
+            "target": "если",
+            "pred": "еслл",
+            "cer": 0.25,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "school_notebooks_test_0296429",
+            "target": "уперев",
+            "pred": "уперов",
+            "cer": 0.16666666666666666,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "school_notebooks_test_0300588",
+            "target": "грачей",
+            "pred": "грачей",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "cyr_word_073483",
+            "target": "221000",
+            "pred": "2г1000",
+            "cer": 0.16666666666666666,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "cyr_word_073394",
+            "target": "функция",
+            "pred": "фдикция",
+            "cer": 0.2857142857142857,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "cyr_word_073013",
+            "target": "характеристика",
+            "pred": "характеристника",
+            "cer": 0.07142857142857142,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "hkr_words_003425",
+            "target": "но волчат не тронул,",
+            "pred": "но волчат не терокул,",
+            "cer": 0.1,
+            "wer": 0.25,
+            "exact": 0.0,
+            "level": "phrase",
+            "category": null
+          },
+          {
+            "sample_id": "school_notebooks_test_0312984",
+            "target": "это",
+            "pred": "это",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "hkr_words_046800",
+            "target": "не разлучит.",
+            "pred": "не разлучит,",
+            "cer": 0.08333333333333333,
+            "wer": 0.5,
+            "exact": 0.0,
+            "level": "phrase",
+            "category": null
+          },
+          {
+            "sample_id": "school_notebooks_test_0306388",
+            "target": "близкое",
+            "pred": "близное",
+            "cer": 0.14285714285714285,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "hkr_words_035561",
+            "target": "люди.",
+            "pred": "люди,",
+            "cer": 0.2,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "hkr_words_023508",
+            "target": "актюбинская",
+            "pred": "актюбинская",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "school_notebooks_test_0322949",
+            "target": "его",
+            "pred": "его",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "cyr_word_073224",
+            "target": "погрешность",
+            "pred": "погремность",
+            "cer": 0.09090909090909091,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "cyr_word_073055",
+            "target": "прямоугольник",
+            "pred": "промодгольник",
+            "cer": 0.15384615384615385,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "school_notebooks_test_0300510",
+            "target": "колючки",
+            "pred": "кольоики",
+            "cer": 0.42857142857142855,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "school_notebooks_test_0299778",
+            "target": "он",
+            "pred": "оы",
+            "cer": 0.5,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "hkr_words_055152",
+            "target": "как некогда в",
+            "pred": "как некогда .в",
+            "cer": 0.07692307692307693,
+            "wer": 0.3333333333333333,
+            "exact": 0.0,
+            "level": "phrase",
+            "category": null
+          },
+          {
+            "sample_id": "hkr_words_013698",
+            "target": "актюбинская",
+            "pred": "алтюбиненая",
+            "cer": 0.2727272727272727,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "hkr_words_022880",
+            "target": "район",
+            "pred": "райок",
+            "cer": 0.2,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          },
+          {
+            "sample_id": "school_notebooks_test_0311166",
+            "target": "(робот-",
+            "pred": "(робот-",
+            "cer": 0.0,
+            "wer": 0.0,
+            "exact": 1.0,
+            "level": "word",
+            "category": "pupil_text"
+          },
+          {
+            "sample_id": "hkr_words_011535",
+            "target": "молдавия",
+            "pred": "молдывие",
+            "cer": 0.25,
+            "wer": 1.0,
+            "exact": 0.0,
+            "level": "word",
+            "category": null
+          }
+        ]
+      },
+      "graph_fusion": {
+        "n": 5563,
+        "cer": 0.13380530973451327,
+        "wer": 0.4786336235766912,
+        "exact": 0.4562286536041704,
+        "pred_len_mean": 8.538738090958116,
+        "pred_empty_ratio": 0.0,
+        "argmax_blank_ratio": 0.8279927480753689,
+        "grouped": {
+          "hkr_words": {
+            "n": 2000,
+            "cer": 0.09198981035946788,
+            "wer": 0.3830177153329261,
+            "exact": 0.4755,
+            "pred_len_mean": 10.527,
+            "pred_empty_ratio": 0.0
+          },
+          "cyrillic_handwriting": {
+            "n": 1563,
+            "cer": 0.1997461420268555,
+            "wer": 0.662528735632184,
+            "exact": 0.2821497120921305,
+            "pred_len_mean": 9.401791426743442,
+            "pred_empty_ratio": 0.0
+          },
+          "school_notebooks_clean": {
+            "n": 2000,
+            "cer": 0.12531624219935908,
+            "wer": 0.435515873015873,
+            "exact": 0.573,
+            "pred_len_mean": 5.876,
+            "pred_empty_ratio": 0.0
+          }
+        },
+        "out_dir": "outputs/htr_graph_v1/eval_tri10k_graph_fusion_plus_school_lines_10k_context_v1_test_final",
+        "blank_logit_penalty": -0.481012658227848,
+        "checkpoint_epoch": 76,
+        "checkpoint_val_cer": 0.09308408829909404,
+        "graph_feature_dim": 39,
+        "graph_feature_names": [
+          "width",
+          "height",
+          "aspect_ratio",
+          "fg_fraction",
+          "bbox_x0_frac",
+          "bbox_y0_frac",
+          "bbox_w_frac",
+          "bbox_h_frac",
+          "bbox_area_frac",
+          "cc_count",
+          "cc_area_mean",
+          "cc_area_median",
+          "cc_area_max_frac",
+          "skel_pixels",
+          "skel_fraction",
+          "skel_components",
+          "graph_nodes",
+          "graph_edges_8n",
+          "graph_avg_degree",
+          "graph_endpoint_count",
+          "graph_branchpoint_count",
+          "graph_isolated_count",
+          "endpoint_per_100_skel",
+          "branchpoint_per_100_skel",
+          "degree_hist_0",
+          "degree_hist_1",
+          "degree_hist_2",
+          "degree_hist_3",
+          "degree_hist_4",
+          "degree_hist_5plus",
+          "dir_h_frac",
+          "dir_v_frac",
+          "dir_diag_down_frac",
+          "dir_diag_up_frac",
+          "stroke_width_mean",
+          "stroke_width_std",
+          "stroke_width_p50",
+          "stroke_width_p90",
+          "warning_count"
+        ],
+        "zero_graph": false
+      },
+      "zero_graph": {
+        "n": 5563,
+        "cer": 0.1535866736074961,
+        "wer": 0.5366376423308774,
+        "exact": 0.4152435736113608,
+        "pred_len_mean": 8.534244112888729,
+        "pred_empty_ratio": 0.0,
+        "argmax_blank_ratio": 0.8309062779124665,
+        "grouped": {
+          "hkr_words": {
+            "n": 2000,
+            "cer": 0.10661383149353712,
+            "wer": 0.43188759926695175,
+            "exact": 0.4325,
+            "pred_len_mean": 10.5055,
+            "pred_empty_ratio": 0.0
+          },
+          "cyrillic_handwriting": {
+            "n": 1563,
+            "cer": 0.23161199812946756,
+            "wer": 0.7567816091954023,
+            "exact": 0.23032629558541268,
+            "pred_len_mean": 9.44977607165707,
+            "pred_empty_ratio": 0.0
+          },
+          "school_notebooks_clean": {
+            "n": 2000,
+            "cer": 0.13906223646483387,
+            "wer": 0.46924603174603174,
+            "exact": 0.5425,
+            "pred_len_mean": 5.8475,
+            "pred_empty_ratio": 0.0
+          }
+        },
+        "out_dir": "outputs/htr_graph_v1/eval_tri10k_graph_fusion_plus_school_lines_10k_context_v1_test_final_zero_graph",
+        "blank_logit_penalty": -0.481012658227848,
+        "checkpoint_epoch": 76,
+        "checkpoint_val_cer": 0.09308408829909404,
+        "graph_feature_dim": 39,
+        "graph_feature_names": [
+          "width",
+          "height",
+          "aspect_ratio",
+          "fg_fraction",
+          "bbox_x0_frac",
+          "bbox_y0_frac",
+          "bbox_w_frac",
+          "bbox_h_frac",
+          "bbox_area_frac",
+          "cc_count",
+          "cc_area_mean",
+          "cc_area_median",
+          "cc_area_max_frac",
+          "skel_pixels",
+          "skel_fraction",
+          "skel_components",
+          "graph_nodes",
+          "graph_edges_8n",
+          "graph_avg_degree",
+          "graph_endpoint_count",
+          "graph_branchpoint_count",
+          "graph_isolated_count",
+          "endpoint_per_100_skel",
+          "branchpoint_per_100_skel",
+          "degree_hist_0",
+          "degree_hist_1",
+          "degree_hist_2",
+          "degree_hist_3",
+          "degree_hist_4",
+          "degree_hist_5plus",
+          "dir_h_frac",
+          "dir_v_frac",
+          "dir_diag_down_frac",
+          "dir_diag_up_frac",
+          "stroke_width_mean",
+          "stroke_width_std",
+          "stroke_width_p50",
+          "stroke_width_p90",
+          "warning_count"
+        ],
+        "zero_graph": true
+      }
+    },
+    "paired_vs_image10k": {
+      "n_common": 5563,
+      "overall": {
+        "n": 5563,
+        "wins": 1228,
+        "losses": 1372,
+        "ties": 2963,
+        "baseline": {
+          "n": 5563,
+          "cer": 0.12718375845913588,
+          "wer": 0.46872069658405896,
+          "exact": 0.46359877763796514
+        },
+        "candidate": {
+          "n": 5563,
+          "cer": 0.13380530973451327,
+          "wer": 0.4786336235766912,
+          "exact": 0.4562286536041704
+        },
+        "delta_cer": 0.006621551275377391,
+        "delta_wer": 0.009912926992632243,
+        "delta_exact": -0.007370124033794723,
+        "mean_delta_cer_per_sample": 0.003649192176859221,
+        "median_delta_cer_per_sample": 0.0,
+        "p05_delta_cer_per_sample": -0.25,
+        "p95_delta_cer_per_sample": 0.25
+      },
+      "by_dataset": {
+        "hkr_words": {
+          "n": 2000,
+          "wins": 407,
+          "losses": 527,
+          "ties": 1066,
+          "baseline": {
+            "n": 2000,
+            "cer": 0.08392301160486838,
+            "wer": 0.3472816127061698,
+            "exact": 0.5245
+          },
+          "candidate": {
+            "n": 2000,
+            "cer": 0.09198981035946788,
+            "wer": 0.3830177153329261,
+            "exact": 0.4755
+          },
+          "delta_cer": 0.008066798754599494,
+          "delta_wer": 0.035736102626756305,
+          "delta_exact": -0.04899999999999999,
+          "mean_delta_cer_per_sample": 0.012267633362079956,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.16666666666666666,
+          "p95_delta_cer_per_sample": 0.230995475113122
+        },
+        "cyrillic_handwriting": {
+          "n": 1563,
+          "wins": 405,
+          "losses": 492,
+          "ties": 666,
+          "baseline": {
+            "n": 1563,
+            "cer": 0.18357939742133744,
+            "wer": 0.6473563218390804,
+            "exact": 0.2891874600127959
+          },
+          "candidate": {
+            "n": 1563,
+            "cer": 0.1997461420268555,
+            "wer": 0.662528735632184,
+            "exact": 0.2821497120921305
+          },
+          "delta_cer": 0.016166744605518063,
+          "delta_wer": 0.015172413793103523,
+          "delta_exact": -0.00703774792066536,
+          "mean_delta_cer_per_sample": 0.010118259568367422,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.2222222222222222,
+          "p95_delta_cer_per_sample": 0.25
+        },
+        "school_notebooks_clean": {
+          "n": 2000,
+          "wins": 416,
+          "losses": 353,
+          "ties": 1231,
+          "baseline": {
+            "n": 2000,
+            "cer": 0.13332771124978918,
+            "wer": 0.4732142857142857,
+            "exact": 0.539
+          },
+          "candidate": {
+            "n": 2000,
+            "cer": 0.12531624219935908,
+            "wer": 0.435515873015873,
+            "exact": 0.573
+          },
+          "delta_cer": -0.008011469050430098,
+          "delta_wer": -0.037698412698412676,
+          "delta_exact": 0.03399999999999992,
+          "mean_delta_cer_per_sample": -0.010024825174825175,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.3333333333333333,
+          "p95_delta_cer_per_sample": 0.25
+        }
+      },
+      "by_school_quality_bucket": {
+        "clean_core": {
+          "n": 1764,
+          "wins": 345,
+          "losses": 308,
+          "ties": 1111,
+          "baseline": {
+            "n": 1764,
+            "cer": 0.12325871841675473,
+            "wer": 0.45531197301854975,
+            "exact": 0.5572562358276644
+          },
+          "candidate": {
+            "n": 1764,
+            "cer": 0.117782688058411,
+            "wer": 0.41877459246767845,
+            "exact": 0.590702947845805
+          },
+          "delta_cer": -0.005476030358343736,
+          "delta_wer": -0.0365373805508713,
+          "delta_exact": 0.033446712018140645,
+          "mean_delta_cer_per_sample": -0.008981387722884319,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.3333333333333333,
+          "p95_delta_cer_per_sample": 0.25
+        },
+        "hard_real": {
+          "n": 236,
+          "wins": 71,
+          "losses": 45,
+          "ties": 120,
+          "baseline": {
+            "n": 236,
+            "cer": 0.2056590752242926,
+            "wer": 0.6075949367088608,
+            "exact": 0.4025423728813559
+          },
+          "candidate": {
+            "n": 236,
+            "cer": 0.17943409247757075,
+            "wer": 0.5611814345991561,
+            "exact": 0.4406779661016949
+          },
+          "delta_cer": -0.02622498274672186,
+          "delta_wer": -0.04641350210970463,
+          "delta_exact": 0.03813559322033899,
+          "mean_delta_cer_per_sample": -0.017824077993569522,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.3333333333333333,
+          "p95_delta_cer_per_sample": 0.3333333333333333
+        },
+        "invalid_or_review": {
+          "n": 0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 0,
+          "baseline": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "candidate": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "delta_cer": null,
+          "delta_wer": null,
+          "delta_exact": null,
+          "mean_delta_cer_per_sample": null
+        },
+        "": {
+          "n": 0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 0,
+          "baseline": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "candidate": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "delta_cer": null,
+          "delta_wer": null,
+          "delta_exact": null,
+          "mean_delta_cer_per_sample": null
+        }
+      },
+      "by_text_len_bucket": {
+        "1-3": {
+          "n": 493,
+          "wins": 75,
+          "losses": 56,
+          "ties": 362,
+          "baseline": {
+            "n": 493,
+            "cer": 0.16626506024096385,
+            "wer": 0.3150684931506849,
+            "exact": 0.6815415821501014
+          },
+          "candidate": {
+            "n": 493,
+            "cer": 0.1493975903614458,
+            "wer": 0.26614481409001955,
+            "exact": 0.7322515212981744
+          },
+          "delta_cer": -0.016867469879518066,
+          "delta_wer": -0.04892367906066536,
+          "delta_exact": 0.05070993914807298,
+          "mean_delta_cer_per_sample": -0.01588911426639621,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.5,
+          "p95_delta_cer_per_sample": 0.33333333333333337
+        },
+        "4-6": {
+          "n": 1538,
+          "wins": 309,
+          "losses": 324,
+          "ties": 905,
+          "baseline": {
+            "n": 1538,
+            "cer": 0.14501547987616098,
+            "wer": 0.49258542875564154,
+            "exact": 0.5143042912873862
+          },
+          "candidate": {
+            "n": 1538,
+            "cer": 0.14687306501547986,
+            "wer": 0.4938749194068343,
+            "exact": 0.5084525357607282
+          },
+          "delta_cer": 0.0018575851393188847,
+          "delta_wer": 0.0012894906511927706,
+          "delta_exact": -0.0058517555266579535,
+          "mean_delta_cer_per_sample": 0.001592977893368011,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.25,
+          "p95_delta_cer_per_sample": 0.25
+        },
+        "7-10": {
+          "n": 1767,
+          "wins": 416,
+          "losses": 477,
+          "ties": 874,
+          "baseline": {
+            "n": 1767,
+            "cer": 0.13954918032786887,
+            "wer": 0.5255298651252408,
+            "exact": 0.4335031126202603
+          },
+          "candidate": {
+            "n": 1767,
+            "cer": 0.1455601092896175,
+            "wer": 0.5476878612716763,
+            "exact": 0.41256366723259763
+          },
+          "delta_cer": 0.006010928961748624,
+          "delta_wer": 0.022157996146435543,
+          "delta_exact": -0.02093944538766268,
+          "mean_delta_cer_per_sample": 0.0053370433251587746,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.2222222222222222,
+          "p95_delta_cer_per_sample": 0.25
+        },
+        "11+": {
+          "n": 1765,
+          "wins": 428,
+          "losses": 515,
+          "ties": 822,
+          "baseline": {
+            "n": 1765,
+            "cer": 0.11165593185123623,
+            "wer": 0.4457469191463781,
+            "exact": 0.3886685552407932
+          },
+          "candidate": {
+            "n": 1765,
+            "cer": 0.12146270517348846,
+            "wer": 0.4610760444845206,
+            "exact": 0.3773371104815864
+          },
+          "delta_cer": 0.00980677332225223,
+          "delta_wer": 0.015329125338142513,
+          "delta_exact": -0.011331444759206777,
+          "mean_delta_cer_per_sample": 0.009208631080819051,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.16666666666666666,
+          "p95_delta_cer_per_sample": 0.18181818181818182
+        }
+      },
+      "by_token_type": {
+        "alpha": {
+          "n": 3729,
+          "wins": 834,
+          "losses": 949,
+          "ties": 1946,
+          "baseline": {
+            "n": 3729,
+            "cer": 0.12140604148974887,
+            "wer": 0.4645471658648818,
+            "exact": 0.46473585411638507
+          },
+          "candidate": {
+            "n": 3729,
+            "cer": 0.12589469853208785,
+            "wer": 0.4848358084082828,
+            "exact": 0.44301421292571735
+          },
+          "delta_cer": 0.004488657042338973,
+          "delta_wer": 0.02028864254340096,
+          "delta_exact": -0.021721641190667718,
+          "mean_delta_cer_per_sample": 0.003992923117108338,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.2222222222222222,
+          "p95_delta_cer_per_sample": 0.24411764705882216
+        },
+        "mixed": {
+          "n": 1316,
+          "wins": 316,
+          "losses": 350,
+          "ties": 650,
+          "baseline": {
+            "n": 1316,
+            "cer": 0.1358928835626572,
+            "wer": 0.5095749649696404,
+            "exact": 0.3844984802431611
+          },
+          "candidate": {
+            "n": 1316,
+            "cer": 0.1449178872614292,
+            "wer": 0.508640822045773,
+            "exact": 0.3974164133738602
+          },
+          "delta_cer": 0.009025003698772016,
+          "delta_wer": -0.0009341429238673982,
+          "delta_exact": 0.01291793313069911,
+          "mean_delta_cer_per_sample": 0.005586359073448199,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.2,
+          "p95_delta_cer_per_sample": 0.2243589743589744
+        },
+        "numeric": {
+          "n": 25,
+          "wins": 3,
+          "losses": 17,
+          "ties": 5,
+          "baseline": {
+            "n": 25,
+            "cer": 0.2103448275862069,
+            "wer": 0.8125,
+            "exact": 0.16
+          },
+          "candidate": {
+            "n": 25,
+            "cer": 0.4482758620689655,
+            "wer": 0.9375,
+            "exact": 0.08
+          },
+          "delta_cer": 0.23793103448275862,
+          "delta_wer": 0.125,
+          "delta_exact": -0.08,
+          "mean_delta_cer_per_sample": 0.23570122275385433,
+          "median_delta_cer_per_sample": 0.16666666666666666,
+          "p05_delta_cer_per_sample": -0.05,
+          "p95_delta_cer_per_sample": 0.8066666666666663
+        },
+        "punctuation": {
+          "n": 0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 0,
+          "baseline": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "candidate": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "delta_cer": null,
+          "delta_wer": null,
+          "delta_exact": null,
+          "mean_delta_cer_per_sample": null
+        },
+        "short_1_3": {
+          "n": 493,
+          "wins": 75,
+          "losses": 56,
+          "ties": 362,
+          "baseline": {
+            "n": 493,
+            "cer": 0.16626506024096385,
+            "wer": 0.3150684931506849,
+            "exact": 0.6815415821501014
+          },
+          "candidate": {
+            "n": 493,
+            "cer": 0.1493975903614458,
+            "wer": 0.26614481409001955,
+            "exact": 0.7322515212981744
+          },
+          "delta_cer": -0.016867469879518066,
+          "delta_wer": -0.04892367906066536,
+          "delta_exact": 0.05070993914807298,
+          "mean_delta_cer_per_sample": -0.01588911426639621,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.5,
+          "p95_delta_cer_per_sample": 0.33333333333333337
+        }
+      },
+      "by_graph_valid": {
+        "True": {
+          "n": 5563,
+          "wins": 1228,
+          "losses": 1372,
+          "ties": 2963,
+          "baseline": {
+            "n": 5563,
+            "cer": 0.12718375845913588,
+            "wer": 0.46872069658405896,
+            "exact": 0.46359877763796514
+          },
+          "candidate": {
+            "n": 5563,
+            "cer": 0.13380530973451327,
+            "wer": 0.4786336235766912,
+            "exact": 0.4562286536041704
+          },
+          "delta_cer": 0.006621551275377391,
+          "delta_wer": 0.009912926992632243,
+          "delta_exact": -0.007370124033794723,
+          "mean_delta_cer_per_sample": 0.003649192176859221,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.25,
+          "p95_delta_cer_per_sample": 0.25
+        },
+        "False": {
+          "n": 0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 0,
+          "baseline": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "candidate": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "delta_cer": null,
+          "delta_wer": null,
+          "delta_exact": null,
+          "mean_delta_cer_per_sample": null
+        }
+      },
+      "bootstrap": {
+        "overall": {
+          "n": 5563,
+          "mean_delta_cer_per_sample": 0.003649192176859221,
+          "ci95_low": -0.0003104236921282755,
+          "ci95_high": 0.0075735911510356,
+          "n_bootstrap": 5000
+        },
+        "hkr_words": {
+          "n": 2000,
+          "mean_delta_cer_per_sample": 0.012267633362079956,
+          "ci95_low": 0.006987387013839704,
+          "ci95_high": 0.017614741045525684,
+          "n_bootstrap": 5000
+        },
+        "cyrillic_handwriting": {
+          "n": 1563,
+          "mean_delta_cer_per_sample": 0.010118259568367422,
+          "ci95_low": 0.002332689182044138,
+          "ci95_high": 0.018126779789083763,
+          "n_bootstrap": 5000
+        },
+        "school_notebooks_clean": {
+          "n": 2000,
+          "mean_delta_cer_per_sample": -0.010024825174825175,
+          "ci95_low": -0.01721889835858586,
+          "ci95_high": -0.00267740280552781,
+          "n_bootstrap": 5000
+        }
+      }
+    },
+    "paired_vs_baseline": {
+      "n_common": 5563,
+      "overall": {
+        "n": 5563,
+        "wins": 1389,
+        "losses": 1211,
+        "ties": 2963,
+        "baseline": {
+          "n": 5563,
+          "cer": 0.1390733992712129,
+          "wer": 0.48894842598794375,
+          "exact": 0.44112888729103
+        },
+        "candidate": {
+          "n": 5563,
+          "cer": 0.13380530973451327,
+          "wer": 0.4786336235766912,
+          "exact": 0.4562286536041704
+        },
+        "delta_cer": -0.005268089536699633,
+        "delta_wer": -0.010314802411252544,
+        "delta_exact": 0.015099766313140417,
+        "mean_delta_cer_per_sample": -0.006507075321789301,
+        "median_delta_cer_per_sample": 0.0,
+        "p05_delta_cer_per_sample": -0.25,
+        "p95_delta_cer_per_sample": 0.2222222222222222
+      },
+      "by_dataset": {
+        "hkr_words": {
+          "n": 2000,
+          "wins": 437,
+          "losses": 477,
+          "ties": 1086,
+          "baseline": {
+            "n": 2000,
+            "cer": 0.08920652891782244,
+            "wer": 0.36408063530849116,
+            "exact": 0.501
+          },
+          "candidate": {
+            "n": 2000,
+            "cer": 0.09198981035946788,
+            "wer": 0.3830177153329261,
+            "exact": 0.4755
+          },
+          "delta_cer": 0.002783281441645441,
+          "delta_wer": 0.01893708002443495,
+          "delta_exact": -0.025500000000000023,
+          "mean_delta_cer_per_sample": 0.00835912092723238,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.16666666666666666,
+          "p95_delta_cer_per_sample": 0.2
+        },
+        "cyrillic_handwriting": {
+          "n": 1563,
+          "wins": 434,
+          "losses": 455,
+          "ties": 674,
+          "baseline": {
+            "n": 1563,
+            "cer": 0.1938673258066671,
+            "wer": 0.662528735632184,
+            "exact": 0.28150991682661547
+          },
+          "candidate": {
+            "n": 1563,
+            "cer": 0.1997461420268555,
+            "wer": 0.662528735632184,
+            "exact": 0.2821497120921305
+          },
+          "delta_cer": 0.005878816220188404,
+          "delta_wer": 0.0,
+          "delta_exact": 0.000639795265515053,
+          "mean_delta_cer_per_sample": 0.0027257046115160125,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.25,
+          "p95_delta_cer_per_sample": 0.23076923076923078
+        },
+        "school_notebooks_clean": {
+          "n": 2000,
+          "wins": 518,
+          "losses": 279,
+          "ties": 1203,
+          "baseline": {
+            "n": 2000,
+            "cer": 0.15904874346432787,
+            "wer": 0.5044642857142857,
+            "exact": 0.506
+          },
+          "candidate": {
+            "n": 2000,
+            "cer": 0.12531624219935908,
+            "wer": 0.435515873015873,
+            "exact": 0.573
+          },
+          "delta_cer": -0.033732501264968795,
+          "delta_wer": -0.06894841269841268,
+          "delta_exact": 0.06699999999999995,
+          "mean_delta_cer_per_sample": -0.028588689088689088,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.3333333333333333,
+          "p95_delta_cer_per_sample": 0.22361111111110984
+        }
+      },
+      "by_school_quality_bucket": {
+        "clean_core": {
+          "n": 1764,
+          "wins": 444,
+          "losses": 237,
+          "ties": 1083,
+          "baseline": {
+            "n": 1764,
+            "cer": 0.14929388029589777,
+            "wer": 0.4924114671163575,
+            "exact": 0.5192743764172335
+          },
+          "candidate": {
+            "n": 1764,
+            "cer": 0.117782688058411,
+            "wer": 0.41877459246767845,
+            "exact": 0.590702947845805
+          },
+          "delta_cer": -0.031511192237486774,
+          "delta_wer": -0.07363687464867907,
+          "delta_exact": 0.07142857142857151,
+          "mean_delta_cer_per_sample": -0.027599943203684696,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.3333333333333333,
+          "p95_delta_cer_per_sample": 0.2
+        },
+        "hard_real": {
+          "n": 236,
+          "wins": 74,
+          "losses": 42,
+          "ties": 120,
+          "baseline": {
+            "n": 236,
+            "cer": 0.22912353347135955,
+            "wer": 0.5949367088607594,
+            "exact": 0.4067796610169492
+          },
+          "candidate": {
+            "n": 236,
+            "cer": 0.17943409247757075,
+            "wer": 0.5611814345991561,
+            "exact": 0.4406779661016949
+          },
+          "delta_cer": -0.0496894409937888,
+          "delta_wer": -0.033755274261603296,
+          "delta_exact": 0.03389830508474573,
+          "mean_delta_cer_per_sample": -0.035979145618976124,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.38125,
+          "p95_delta_cer_per_sample": 0.3333333333333333
+        },
+        "invalid_or_review": {
+          "n": 0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 0,
+          "baseline": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "candidate": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "delta_cer": null,
+          "delta_wer": null,
+          "delta_exact": null,
+          "mean_delta_cer_per_sample": null
+        },
+        "": {
+          "n": 0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 0,
+          "baseline": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "candidate": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "delta_cer": null,
+          "delta_wer": null,
+          "delta_exact": null,
+          "mean_delta_cer_per_sample": null
+        }
+      },
+      "by_text_len_bucket": {
+        "1-3": {
+          "n": 493,
+          "wins": 56,
+          "losses": 53,
+          "ties": 384,
+          "baseline": {
+            "n": 493,
+            "cer": 0.15100401606425704,
+            "wer": 0.2837573385518591,
+            "exact": 0.7099391480730223
+          },
+          "candidate": {
+            "n": 493,
+            "cer": 0.1493975903614458,
+            "wer": 0.26614481409001955,
+            "exact": 0.7322515212981744
+          },
+          "delta_cer": -0.0016064257028112483,
+          "delta_wer": -0.01761252446183953,
+          "delta_exact": 0.022312373225152116,
+          "mean_delta_cer_per_sample": -0.0003380662609871527,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.3333333333333333,
+          "p95_delta_cer_per_sample": 0.33333333333333337
+        },
+        "4-6": {
+          "n": 1538,
+          "wins": 335,
+          "losses": 306,
+          "ties": 897,
+          "baseline": {
+            "n": 1538,
+            "cer": 0.15529411764705883,
+            "wer": 0.5003223726627982,
+            "exact": 0.5026007802340702
+          },
+          "candidate": {
+            "n": 1538,
+            "cer": 0.14687306501547986,
+            "wer": 0.4938749194068343,
+            "exact": 0.5084525357607282
+          },
+          "delta_cer": -0.008421052631578968,
+          "delta_wer": -0.006447453255963909,
+          "delta_exact": 0.0058517555266580645,
+          "mean_delta_cer_per_sample": -0.007585609016038146,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.3333333333333333,
+          "p95_delta_cer_per_sample": 0.25
+        },
+        "7-10": {
+          "n": 1767,
+          "wins": 499,
+          "losses": 393,
+          "ties": 875,
+          "baseline": {
+            "n": 1767,
+            "cer": 0.15833333333333333,
+            "wer": 0.5746628131021194,
+            "exact": 0.3831352574985852
+          },
+          "candidate": {
+            "n": 1767,
+            "cer": 0.1455601092896175,
+            "wer": 0.5476878612716763,
+            "exact": 0.41256366723259763
+          },
+          "delta_cer": -0.012773224043715836,
+          "delta_wer": -0.026974951830443072,
+          "delta_exact": 0.02942840973401245,
+          "mean_delta_cer_per_sample": -0.013486898249207247,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.2749999999999996,
+          "p95_delta_cer_per_sample": 0.2
+        },
+        "11+": {
+          "n": 1765,
+          "wins": 499,
+          "losses": 459,
+          "ties": 807,
+          "baseline": {
+            "n": 1765,
+            "cer": 0.12129648867650114,
+            "wer": 0.4616771866546438,
+            "exact": 0.3705382436260623
+          },
+          "candidate": {
+            "n": 1765,
+            "cer": 0.12146270517348846,
+            "wer": 0.4610760444845206,
+            "exact": 0.3773371104815864
+          },
+          "delta_cer": 0.0001662164969873231,
+          "delta_wer": -0.0006011421701231923,
+          "delta_exact": 0.0067988668555241105,
+          "mean_delta_cer_per_sample": -0.0003026501277231422,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.16666666666666666,
+          "p95_delta_cer_per_sample": 0.16666666666666669
+        }
+      },
+      "by_token_type": {
+        "alpha": {
+          "n": 3729,
+          "wins": 933,
+          "losses": 868,
+          "ties": 1928,
+          "baseline": {
+            "n": 3729,
+            "cer": 0.13050467062962515,
+            "wer": 0.4806525831416022,
+            "exact": 0.44006436041834274
+          },
+          "candidate": {
+            "n": 3729,
+            "cer": 0.12589469853208785,
+            "wer": 0.4848358084082828,
+            "exact": 0.44301421292571735
+          },
+          "delta_cer": -0.0046099720975373015,
+          "delta_wer": 0.004183225266680579,
+          "delta_exact": 0.0029498525073746173,
+          "mean_delta_cer_per_sample": -0.005065485361334065,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.25,
+          "p95_delta_cer_per_sample": 0.2
+        },
+        "mixed": {
+          "n": 1316,
+          "wins": 396,
+          "losses": 275,
+          "ties": 645,
+          "baseline": {
+            "n": 1316,
+            "cer": 0.1566060068057405,
+            "wer": 0.5516113965436712,
+            "exact": 0.3487841945288754
+          },
+          "candidate": {
+            "n": 1316,
+            "cer": 0.1449178872614292,
+            "wer": 0.508640822045773,
+            "exact": 0.3974164133738602
+          },
+          "delta_cer": -0.011688119544311287,
+          "delta_wer": -0.042970574497898206,
+          "delta_exact": 0.04863221884498481,
+          "mean_delta_cer_per_sample": -0.016371210932786963,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.25,
+          "p95_delta_cer_per_sample": 0.2
+        },
+        "numeric": {
+          "n": 25,
+          "wins": 4,
+          "losses": 15,
+          "ties": 6,
+          "baseline": {
+            "n": 25,
+            "cer": 0.24482758620689654,
+            "wer": 0.8125,
+            "exact": 0.16
+          },
+          "candidate": {
+            "n": 25,
+            "cer": 0.4482758620689655,
+            "wer": 0.9375,
+            "exact": 0.08
+          },
+          "delta_cer": 0.20344827586206898,
+          "delta_wer": 0.125,
+          "delta_exact": -0.08,
+          "mean_delta_cer_per_sample": 0.17606060606060603,
+          "median_delta_cer_per_sample": 0.16666666666666666,
+          "p05_delta_cer_per_sample": -0.14333333333333337,
+          "p95_delta_cer_per_sample": 0.5363636363636362
+        },
+        "punctuation": {
+          "n": 0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 0,
+          "baseline": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "candidate": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "delta_cer": null,
+          "delta_wer": null,
+          "delta_exact": null,
+          "mean_delta_cer_per_sample": null
+        },
+        "short_1_3": {
+          "n": 493,
+          "wins": 56,
+          "losses": 53,
+          "ties": 384,
+          "baseline": {
+            "n": 493,
+            "cer": 0.15100401606425704,
+            "wer": 0.2837573385518591,
+            "exact": 0.7099391480730223
+          },
+          "candidate": {
+            "n": 493,
+            "cer": 0.1493975903614458,
+            "wer": 0.26614481409001955,
+            "exact": 0.7322515212981744
+          },
+          "delta_cer": -0.0016064257028112483,
+          "delta_wer": -0.01761252446183953,
+          "delta_exact": 0.022312373225152116,
+          "mean_delta_cer_per_sample": -0.0003380662609871527,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.3333333333333333,
+          "p95_delta_cer_per_sample": 0.33333333333333337
+        }
+      },
+      "by_graph_valid": {
+        "True": {
+          "n": 5563,
+          "wins": 1389,
+          "losses": 1211,
+          "ties": 2963,
+          "baseline": {
+            "n": 5563,
+            "cer": 0.1390733992712129,
+            "wer": 0.48894842598794375,
+            "exact": 0.44112888729103
+          },
+          "candidate": {
+            "n": 5563,
+            "cer": 0.13380530973451327,
+            "wer": 0.4786336235766912,
+            "exact": 0.4562286536041704
+          },
+          "delta_cer": -0.005268089536699633,
+          "delta_wer": -0.010314802411252544,
+          "delta_exact": 0.015099766313140417,
+          "mean_delta_cer_per_sample": -0.006507075321789301,
+          "median_delta_cer_per_sample": 0.0,
+          "p05_delta_cer_per_sample": -0.25,
+          "p95_delta_cer_per_sample": 0.2222222222222222
+        },
+        "False": {
+          "n": 0,
+          "wins": 0,
+          "losses": 0,
+          "ties": 0,
+          "baseline": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "candidate": {
+            "n": 0,
+            "cer": null,
+            "wer": null,
+            "exact": null
+          },
+          "delta_cer": null,
+          "delta_wer": null,
+          "delta_exact": null,
+          "mean_delta_cer_per_sample": null
+        }
+      },
+      "bootstrap": {
+        "overall": {
+          "n": 5563,
+          "mean_delta_cer_per_sample": -0.006507075321789301,
+          "ci95_low": -0.010395555592450442,
+          "ci95_high": -0.002795172514175753,
+          "n_bootstrap": 5000
+        },
+        "hkr_words": {
+          "n": 2000,
+          "mean_delta_cer_per_sample": 0.00835912092723238,
+          "ci95_low": 0.003498427280654932,
+          "ci95_high": 0.013278573656628028,
+          "n_bootstrap": 5000
+        },
+        "cyrillic_handwriting": {
+          "n": 1563,
+          "mean_delta_cer_per_sample": 0.0027257046115160125,
+          "ci95_low": -0.004687144828966938,
+          "ci95_high": 0.010342353450352695,
+          "n_bootstrap": 5000
+        },
+        "school_notebooks_clean": {
+          "n": 2000,
+          "mean_delta_cer_per_sample": -0.028588689088689088,
+          "ci95_low": -0.03612763708513708,
+          "ci95_high": -0.021442656579531583,
+          "n_bootstrap": 5000
+        }
+      }
+    },
+    "notes": {
+      "bootstrap_delta": "candidate per-sample CER minus baseline per-sample CER",
+      "aggregate_delta": "candidate aggregate CER minus baseline aggregate CER",
+      "n_bootstrap": 5000,
+      "seed": 42
+    }
+  },
   "main_conclusion": [
     "corrected foreground extraction",
     "natural-line context augmentation gives statistically supported CER gains",
     "confidence-aware selective prediction works strongly",
-    "structural graph features are useful for diagnostics and confidence calibration, but graph-fusion recognition superiority is not yet established"
+    "structural graph features are useful for diagnostics and confidence calibration",
+    "simple graph-fusion provides School-specific gains, especially on hard_real, but naive global fusion is not stable across the mixed dataset"
   ],
   "main_limitations": [
     "training comparison is still mostly single-seed",
     "contextual line crops are not clean isolated line crops",
     "structural gold is a diagnostic usability check, not a pixel-level topology benchmark",
-    "graph branch has not yet been shown to improve recognition over image-only + line augmentation",
+    "naive global graph fusion hurts non-School datasets and should not be treated as the universal canonical recognizer",
     "global selective thresholds are not group-fair"
   ]
 }

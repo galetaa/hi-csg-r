@@ -22,6 +22,17 @@
 - `outputs/htr_graph_v1/line_aug_dose_response_context_v1/summary.md` (exists)
 - `outputs/htr_graph_v1/line_aug_dose_response_context_v1/paired_5k_vs_10k.md` (exists)
 
+## Graph Fusion Pilot
+
+- `data/experiments/htr_graph_v1/graph_fusion_ready/tri10k_mixed_plus_school_lines_10k_context_v1/summary.json` (exists)
+- `outputs/htr_graph_v1/tri10k_graph_fusion_plus_school_lines_10k_context_v1/best.pt` (exists)
+- `outputs/htr_graph_v1/eval_tri10k_graph_fusion_plus_school_lines_10k_context_v1_test_final/summary.json` (exists)
+- `outputs/htr_graph_v1/eval_tri10k_graph_fusion_plus_school_lines_10k_context_v1_test_final_zero_graph/summary.json` (exists)
+- `outputs/htr_graph_v1/graph_fusion_iter2_context10k_v1/summary.md` (exists)
+- `outputs/htr_graph_v1/graph_fusion_iter2_context10k_v1/paired_vs_image10k.md` (exists)
+- `outputs/htr_graph_v1/graph_fusion_iter2_context10k_v1/paired_vs_baseline.md` (exists)
+- `outputs/htr_graph_v1/graph_fusion_iter2_context10k_v1/result_card.md` (exists)
+
 ## Selective Prediction
 
 - `outputs/htr_graph_v1/selective_iter2_lineaug_v1/selective_summary.md` (exists)
