@@ -150,10 +150,15 @@ def compute_graph_stats(
     feats = []
 
     for r in rows:
+        if r.get("graph_valid") is False:
+            continue
         gf = r.get("graph_features")
         if gf is None:
             raise KeyError("Row has no graph_features")
         feats.append([float(gf[i]) for i in selected_indices])
+
+    if not feats:
+        raise RuntimeError(f"No graph_valid rows found in {manifest}")
 
     arr = np.asarray(feats, dtype=np.float32)
     mean = arr.mean(axis=0)
@@ -170,6 +175,7 @@ class GraphHTRDataset(Dataset):
         graph_indices: list[int],
         graph_mean: np.ndarray,
         graph_std: np.ndarray,
+        force_zero_graph: bool = False,
     ):
         self.manifest = Path(manifest)
         self.rows = read_jsonl(self.manifest)
@@ -177,6 +183,7 @@ class GraphHTRDataset(Dataset):
         self.graph_indices = graph_indices
         self.graph_mean = graph_mean.astype(np.float32)
         self.graph_std = graph_std.astype(np.float32)
+        self.force_zero_graph = force_zero_graph
 
     def __len__(self) -> int:
         return len(self.rows)
@@ -200,8 +207,15 @@ class GraphHTRDataset(Dataset):
         if gf is None:
             raise KeyError("Row has no graph_features")
 
-        graph = np.asarray([float(gf[i]) for i in self.graph_indices], dtype=np.float32)
-        graph = (graph - self.graph_mean) / self.graph_std
+        graph_valid = bool(row.get("graph_valid", True))
+
+        if self.force_zero_graph or not graph_valid:
+            graph = np.zeros(len(self.graph_indices), dtype=np.float32)
+            graph_valid = False
+        else:
+            graph = np.asarray([float(gf[i]) for i in self.graph_indices], dtype=np.float32)
+            graph = (graph - self.graph_mean) / self.graph_std
+
         graph = torch.from_numpy(graph).float()
 
         return {
@@ -214,6 +228,7 @@ class GraphHTRDataset(Dataset):
             "dataset": row.get("dataset", row.get("source_dataset", "")),
             "sample_id": row.get("sample_id", str(idx)),
             "graph": graph,
+            "graph_valid": graph_valid,
         }
 
 
@@ -229,6 +244,7 @@ def collate_graph_htr(batch: list[dict[str, Any]]) -> dict[str, Any]:
     datasets = []
     sample_ids = []
     graphs = []
+    graph_valids = []
 
     for x in batch:
         img = x["image"]
@@ -244,6 +260,7 @@ def collate_graph_htr(batch: list[dict[str, Any]]) -> dict[str, Any]:
         datasets.append(x["dataset"])
         sample_ids.append(x["sample_id"])
         graphs.append(x["graph"])
+        graph_valids.append(x["graph_valid"])
 
     return {
         "images": torch.stack(images, dim=0),
@@ -254,6 +271,7 @@ def collate_graph_htr(batch: list[dict[str, Any]]) -> dict[str, Any]:
         "datasets": datasets,
         "sample_ids": sample_ids,
         "graphs": torch.stack(graphs, dim=0),
+        "graph_valids": torch.tensor(graph_valids, dtype=torch.bool),
     }
 
 
@@ -274,7 +292,8 @@ class GraphFusionCRNNCTC(nn.Module):
         blank_bias_init: float = -1.0,
         height_bins: int = 4,
         feature_size: int = 256,
-        graph_embed_dim: int = 64,
+        graph_hidden_dim: int = 64,
+        graph_embed_dim: int = 128,
         graph_dropout: float = 0.1,
     ):
         super().__init__()
@@ -306,11 +325,11 @@ class GraphFusionCRNNCTC(nn.Module):
         visual_dim = 256 * height_bins
 
         self.graph_mlp = nn.Sequential(
-            nn.Linear(graph_dim, graph_embed_dim),
-            nn.LayerNorm(graph_embed_dim),
+            nn.Linear(graph_dim, graph_hidden_dim),
+            nn.LayerNorm(graph_hidden_dim),
             nn.ReLU(inplace=True),
             nn.Dropout(graph_dropout),
-            nn.Linear(graph_embed_dim, graph_embed_dim),
+            nn.Linear(graph_hidden_dim, graph_embed_dim),
             nn.LayerNorm(graph_embed_dim),
             nn.ReLU(inplace=True),
         )
@@ -340,7 +359,13 @@ class GraphFusionCRNNCTC(nn.Module):
     def output_lengths(self, widths: torch.Tensor) -> torch.Tensor:
         return torch.clamp(widths // self.width_downsample, min=1)
 
-    def forward(self, images: torch.Tensor, widths: torch.Tensor, graphs: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
+    def forward(
+        self,
+        images: torch.Tensor,
+        widths: torch.Tensor,
+        graphs: torch.Tensor,
+        graph_valids: torch.Tensor | None = None,
+    ) -> tuple[torch.Tensor, torch.Tensor]:
         feat = self.cnn(images)
 
         # Preserve vertical structure, collapse only to fixed height bins.
@@ -350,6 +375,8 @@ class GraphFusionCRNNCTC(nn.Module):
         visual = feat.permute(0, 3, 1, 2).contiguous().view(b, t, c * h)
 
         g = self.graph_mlp(graphs)
+        if graph_valids is not None:
+            g = g * graph_valids.to(dtype=g.dtype)[:, None]
         g = g[:, None, :].expand(b, t, g.shape[-1])
 
         x = torch.cat([visual, g], dim=-1)
@@ -464,8 +491,9 @@ def evaluate(
         images = batch["images"].to(device)
         widths = batch["widths"].to(device)
         graphs = batch["graphs"].to(device)
+        graph_valids = batch["graph_valids"].to(device)
 
-        logits, out_lens = model(images, widths, graphs)
+        logits, out_lens = model(images, widths, graphs, graph_valids)
         penalized = apply_blank_penalty(logits, vocab.blank_index, blank_penalty)
 
         argmax = penalized.argmax(dim=-1)
@@ -526,10 +554,11 @@ def train_one_epoch(
         images = batch["images"].to(device)
         widths = batch["widths"].to(device)
         graphs = batch["graphs"].to(device)
+        graph_valids = batch["graph_valids"].to(device)
         targets = batch["targets"].to(device)
         target_lengths = batch["target_lengths"].to(device)
 
-        logits, out_lens = model(images, widths, graphs)
+        logits, out_lens = model(images, widths, graphs, graph_valids)
         logits = apply_blank_penalty(logits, model.blank_index, blank_penalty)
 
         log_probs = F.log_softmax(logits, dim=-1).permute(1, 0, 2)
@@ -575,13 +604,21 @@ def build_loaders(
     graph_std: np.ndarray,
     batch_size: int,
     num_workers: int,
+    force_zero_graph: bool = False,
 ):
     train_loader = None
     val_loader = None
     eval_loader = None
 
     if train_manifest is not None:
-        ds = GraphHTRDataset(train_manifest, vocab, graph_indices, graph_mean, graph_std)
+        ds = GraphHTRDataset(
+            train_manifest,
+            vocab,
+            graph_indices,
+            graph_mean,
+            graph_std,
+            force_zero_graph=force_zero_graph,
+        )
         train_loader = DataLoader(
             ds,
             batch_size=batch_size,
@@ -592,7 +629,14 @@ def build_loaders(
         )
 
     if val_manifest is not None:
-        ds = GraphHTRDataset(val_manifest, vocab, graph_indices, graph_mean, graph_std)
+        ds = GraphHTRDataset(
+            val_manifest,
+            vocab,
+            graph_indices,
+            graph_mean,
+            graph_std,
+            force_zero_graph=force_zero_graph,
+        )
         val_loader = DataLoader(
             ds,
             batch_size=batch_size,
@@ -603,7 +647,14 @@ def build_loaders(
         )
 
     if eval_manifest is not None:
-        ds = GraphHTRDataset(eval_manifest, vocab, graph_indices, graph_mean, graph_std)
+        ds = GraphHTRDataset(
+            eval_manifest,
+            vocab,
+            graph_indices,
+            graph_mean,
+            graph_std,
+            force_zero_graph=force_zero_graph,
+        )
         eval_loader = DataLoader(
             ds,
             batch_size=batch_size,
@@ -675,6 +726,7 @@ def cmd_train(args: argparse.Namespace) -> None:
         blank_bias_init=args.blank_bias_init,
         height_bins=args.height_bins,
         feature_size=args.feature_size,
+        graph_hidden_dim=args.graph_hidden_dim,
         graph_embed_dim=args.graph_embed_dim,
         graph_dropout=args.graph_dropout,
     ).to(device)
@@ -703,6 +755,7 @@ def cmd_train(args: argparse.Namespace) -> None:
         "blank_bias_init": args.blank_bias_init,
         "height_bins": args.height_bins,
         "feature_size": args.feature_size,
+        "graph_hidden_dim": args.graph_hidden_dim,
         "graph_embed_dim": args.graph_embed_dim,
         "graph_dropout": args.graph_dropout,
         "vocab": str(args.vocab),
@@ -850,6 +903,7 @@ def load_checkpoint_model(
         blank_bias_init=cfg["blank_bias_init"],
         height_bins=cfg["height_bins"],
         feature_size=cfg["feature_size"],
+        graph_hidden_dim=cfg.get("graph_hidden_dim", cfg["graph_embed_dim"]),
         graph_embed_dim=cfg["graph_embed_dim"],
         graph_dropout=cfg["graph_dropout"],
     ).to(device)
@@ -872,6 +926,11 @@ def cmd_eval(args: argparse.Namespace) -> None:
 
     vocab_path = args.vocab or ckpt["config"]["vocab"]
     vocab = SimpleCTCVocab.from_json(vocab_path)
+    blank_penalty = (
+        float(args.blank_logit_penalty)
+        if args.blank_logit_penalty is not None
+        else float(ckpt["blank_logit_penalty"])
+    )
 
     _, _, eval_loader = build_loaders(
         train_manifest=None,
@@ -883,6 +942,7 @@ def cmd_eval(args: argparse.Namespace) -> None:
         graph_std=graph_std,
         batch_size=args.batch_size,
         num_workers=args.num_workers,
+        force_zero_graph=args.zero_graph,
     )
 
     result = evaluate(
@@ -890,7 +950,7 @@ def cmd_eval(args: argparse.Namespace) -> None:
         loader=eval_loader,
         vocab=vocab,
         device=device,
-        blank_penalty=args.blank_logit_penalty,
+        blank_penalty=blank_penalty,
     )
 
     out_dir = Path(args.out_dir)
@@ -906,11 +966,12 @@ def cmd_eval(args: argparse.Namespace) -> None:
         "argmax_blank_ratio": result["metrics"]["argmax_blank_ratio"],
         "grouped": result["metrics"].get("grouped", {}),
         "out_dir": str(out_dir),
-        "blank_logit_penalty": args.blank_logit_penalty,
+        "blank_logit_penalty": blank_penalty,
         "checkpoint_epoch": ckpt["epoch"],
         "checkpoint_val_cer": ckpt["val"]["cer"],
         "graph_feature_dim": ckpt["config"]["graph_dim"],
         "graph_feature_names": ckpt["config"]["graph_feature_names"],
+        "zero_graph": args.zero_graph,
     }
 
     (out_dir / "summary.json").write_text(
@@ -949,7 +1010,8 @@ def main() -> None:
     train.add_argument("--blank_logit_penalty_end", type=float, default=-0.4)
     train.add_argument("--height_bins", type=int, default=4)
     train.add_argument("--feature_size", type=int, default=256)
-    train.add_argument("--graph_embed_dim", type=int, default=64)
+    train.add_argument("--graph_hidden_dim", type=int, default=64)
+    train.add_argument("--graph_embed_dim", type=int, default=128)
     train.add_argument("--drop_graph_features", default="text_len")
     train.add_argument("--log_every", type=int, default=50)
     train.add_argument("--seed", type=int, default=49)
@@ -964,7 +1026,8 @@ def main() -> None:
     ev.add_argument("--vocab", default=None)
     ev.add_argument("--batch_size", type=int, default=64)
     ev.add_argument("--num_workers", type=int, default=2)
-    ev.add_argument("--blank_logit_penalty", type=float, required=True)
+    ev.add_argument("--blank_logit_penalty", type=float, default=None)
+    ev.add_argument("--zero_graph", action="store_true")
     ev.add_argument("--cpu", action="store_true")
     ev.set_defaults(func=cmd_eval)
 
