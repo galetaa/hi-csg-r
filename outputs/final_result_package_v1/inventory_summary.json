@@ -1,0 +1,12 @@
+{
+  "inventory_rows_n": 633,
+  "required_items_n": 11,
+  "required_found_n": 9,
+  "required_incomplete_n": 0,
+  "required_missing_n": 2,
+  "outputs": {
+    "results_inventory": "outputs/final_result_package_v1/results_inventory.csv",
+    "required_results_check": "outputs/final_result_package_v1/required_results_check.csv",
+    "missing_items": "outputs/final_result_package_v1/missing_items.md"
+  }
+}
