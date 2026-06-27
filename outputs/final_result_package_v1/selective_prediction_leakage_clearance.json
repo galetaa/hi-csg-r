@@ -1,0 +1,26 @@
+{
+  "clearance_status": "PASS_WITH_NOTE",
+  "canonical_check_verdict": "WEAK_PASS_LEAKAGE_REVIEW",
+  "canonical_files_n": 12,
+  "bad_model_files_n": 0,
+  "variant_coverage": {
+    "confidence": true,
+    "graph_or_quality": true,
+    "confidence_graph": true
+  },
+  "leakage_review_files_n": 1,
+  "reviewed_leakage_notes": [
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_confidence_v1/operating_point_strata.md",
+      "hits": [
+        "text_len"
+      ],
+      "review": "`text_len` appears in a post-hoc operating-point stratification/reporting table, not as an evident risk-model feature.",
+      "cleared": true
+    }
+  ],
+  "reasons": [
+    "Canonical +10k artifacts and all required variants were detected; the only leakage-risk hit is `text_len` in a reporting/stratification file."
+  ],
+  "final_interpretation": "Selective prediction is acceptable as a secondary applied result if described as canonical +10k confidence/graph-quality risk analysis. The detected `text_len` occurrence must be described as post-hoc stratification/reporting, not as a model feature."
+}

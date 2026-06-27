@@ -1,0 +1,1871 @@
+{
+  "summary": {
+    "verdict": "WEAK_PASS_LEAKAGE_REVIEW",
+    "reason": "Selective prediction artifacts reference canonical +10k and required variants, but leakage-risk keys were detected. Manual review required.",
+    "files_n": 15,
+    "canonical_files_n": 12,
+    "bad_model_files_n": 0,
+    "leakage_review_files_n": 1,
+    "variant_coverage": {
+      "confidence": true,
+      "graph_or_quality": true,
+      "confidence_graph": true
+    },
+    "canonical_files": [
+      "outputs/htr_graph_v1/selective_iter2_confidence_v1/calibration_bins.csv",
+      "outputs/htr_graph_v1/selective_iter2_confidence_v1/coverage_curves.csv",
+      "outputs/htr_graph_v1/selective_iter2_confidence_v1/operating_point_strata.md",
+      "outputs/htr_graph_v1/selective_iter2_confidence_v1/operating_points.json",
+      "outputs/htr_graph_v1/selective_iter2_confidence_v1/operating_points.md",
+      "outputs/htr_graph_v1/selective_iter2_confidence_v1/risk_table_by_bucket.csv",
+      "outputs/htr_graph_v1/selective_iter2_confidence_v1/selective_summary.json",
+      "outputs/htr_graph_v1/selective_iter2_confidence_v1/selective_summary.md",
+      "outputs/htr_graph_v1/selective_iter2_lineaug_v1/coverage_curves.csv",
+      "outputs/htr_graph_v1/selective_iter2_lineaug_v1/risk_table_by_bucket.csv",
+      "outputs/htr_graph_v1/selective_iter2_lineaug_v1/selective_summary.json",
+      "outputs/htr_graph_v1/selective_iter2_lineaug_v1/selective_summary.md"
+    ],
+    "bad_model_files": [],
+    "leakage_review_files": [
+      {
+        "path": "outputs/htr_graph_v1/selective_iter2_confidence_v1/operating_point_strata.md",
+        "hits": [
+          "text_len"
+        ]
+      }
+    ]
+  },
+  "inspections": [
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_confidence_v1/calibration_bins.csv",
+      "suffix": ".csv",
+      "canonical_path_or_text": true,
+      "canonical_hits": [
+        "10k_context",
+        "plus_10k"
+      ],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [
+          "confidence"
+        ],
+        "graph_or_quality": [
+          "graph"
+        ],
+        "confidence_graph": [
+          "confidence_graph"
+        ]
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "model",
+        "risk_method",
+        "scope",
+        "bin_low",
+        "bin_high",
+        "n",
+        "mean_risk",
+        "error_rate"
+      ],
+      "metrics_sample": {}
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_confidence_v1/coverage_curves.csv",
+      "suffix": ".csv",
+      "canonical_path_or_text": true,
+      "canonical_hits": [
+        "10k_context",
+        "plus_10k"
+      ],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [
+          "confidence"
+        ],
+        "graph_or_quality": [
+          "graph"
+        ],
+        "confidence_graph": [
+          "confidence_graph"
+        ]
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "model",
+        "risk_method",
+        "scope",
+        "coverage",
+        "n",
+        "cer",
+        "wer",
+        "exact",
+        "mean_risk"
+      ],
+      "metrics_sample": {}
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_confidence_v1/operating_point_strata.csv",
+      "suffix": ".csv",
+      "canonical_path_or_text": false,
+      "canonical_hits": [],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [
+          "confidence"
+        ],
+        "graph_or_quality": [
+          "graph"
+        ],
+        "confidence_graph": []
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "operating_point",
+        "threshold",
+        "stratum_type",
+        "stratum",
+        "n_total",
+        "n_accepted",
+        "n_rejected",
+        "coverage",
+        "cer_accepted",
+        "exact_accepted",
+        "mean_risk_all",
+        "mean_risk_accepted"
+      ],
+      "metrics_sample": {}
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_confidence_v1/operating_point_strata.md",
+      "suffix": ".md",
+      "canonical_path_or_text": true,
+      "canonical_hits": [
+        "10k_context",
+        "plus_10k"
+      ],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [
+          "confidence"
+        ],
+        "graph_or_quality": [
+          "graph"
+        ],
+        "confidence_graph": [
+          "confidence_graph"
+        ]
+      },
+      "leakage_risk_key_hits": [
+        "text_len"
+      ],
+      "keys_sample": [
+        "CER",
+        "Operating",
+        "Point",
+        "Rows",
+        "Stratification",
+        "accepted",
+        "alpha",
+        "are",
+        "balanced",
+        "broad",
+        "confidence_graph",
+        "coverage",
+        "cyrillic_handwriting",
+        "dataset",
+        "exact",
+        "for",
+        "hkr_words",
+        "mean",
+        "mixed",
+        "not_short_1_3",
+        "numeric",
+        "plus_10k_context",
+        "risk",
+        "samples",
+        "school_notebooks_clean",
+        "short_1_3",
+        "short_flag",
+        "stratum",
+        "strict",
+        "test",
+        "text_len",
+        "token_type",
+        "type",
+        "with"
+      ],
+      "metrics_sample": {}
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_confidence_v1/operating_points.json",
+      "suffix": ".json",
+      "canonical_path_or_text": true,
+      "canonical_hits": [
+        "10k_context",
+        "plus_10k"
+      ],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [
+          "confidence"
+        ],
+        "graph_or_quality": [
+          "graph"
+        ],
+        "confidence_graph": [
+          "confidence_graph"
+        ]
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "model",
+        "risk_method",
+        "threshold_source",
+        "operating_points",
+        "operating_points.strict",
+        "operating_points.strict.target_school_coverage",
+        "operating_points.strict.threshold",
+        "operating_points.strict.val",
+        "operating_points.strict.val.all",
+        "operating_points.strict.val.all.n_total",
+        "operating_points.strict.val.all.n_accepted",
+        "operating_points.strict.val.all.coverage",
+        "operating_points.strict.val.all.cer",
+        "operating_points.strict.val.all.wer",
+        "operating_points.strict.val.all.exact",
+        "operating_points.strict.val.school",
+        "operating_points.strict.val.school.n_total",
+        "operating_points.strict.val.school.n_accepted",
+        "operating_points.strict.val.school.coverage",
+        "operating_points.strict.val.school.cer",
+        "operating_points.strict.val.school.wer",
+        "operating_points.strict.val.school.exact",
+        "operating_points.strict.test",
+        "operating_points.strict.test.all",
+        "operating_points.strict.test.all.n_total",
+        "operating_points.strict.test.all.n_accepted",
+        "operating_points.strict.test.all.coverage",
+        "operating_points.strict.test.all.cer",
+        "operating_points.strict.test.all.wer",
+        "operating_points.strict.test.all.exact",
+        "operating_points.strict.test.school",
+        "operating_points.strict.test.school.n_total",
+        "operating_points.strict.test.school.n_accepted",
+        "operating_points.strict.test.school.coverage",
+        "operating_points.strict.test.school.cer",
+        "operating_points.strict.test.school.wer",
+        "operating_points.strict.test.school.exact",
+        "operating_points.balanced",
+        "operating_points.balanced.target_school_coverage",
+        "operating_points.balanced.threshold",
+        "operating_points.balanced.val",
+        "operating_points.balanced.val.all",
+        "operating_points.balanced.val.all.n_total",
+        "operating_points.balanced.val.all.n_accepted",
+        "operating_points.balanced.val.all.coverage",
+        "operating_points.balanced.val.all.cer",
+        "operating_points.balanced.val.all.wer",
+        "operating_points.balanced.val.all.exact",
+        "operating_points.balanced.val.school",
+        "operating_points.balanced.val.school.n_total",
+        "operating_points.balanced.val.school.n_accepted",
+        "operating_points.balanced.val.school.coverage",
+        "operating_points.balanced.val.school.cer",
+        "operating_points.balanced.val.school.wer",
+        "operating_points.balanced.val.school.exact",
+        "operating_points.balanced.test",
+        "operating_points.balanced.test.all",
+        "operating_points.balanced.test.all.n_total",
+        "operating_points.balanced.test.all.n_accepted",
+        "operating_points.balanced.test.all.coverage",
+        "operating_points.balanced.test.all.cer",
+        "operating_points.balanced.test.all.wer",
+        "operating_points.balanced.test.all.exact",
+        "operating_points.balanced.test.school",
+        "operating_points.balanced.test.school.n_total",
+        "operating_points.balanced.test.school.n_accepted",
+        "operating_points.balanced.test.school.coverage",
+        "operating_points.balanced.test.school.cer",
+        "operating_points.balanced.test.school.wer",
+        "operating_points.balanced.test.school.exact",
+        "operating_points.broad",
+        "operating_points.broad.target_school_coverage",
+        "operating_points.broad.threshold",
+        "operating_points.broad.val",
+        "operating_points.broad.val.all",
+        "operating_points.broad.val.all.n_total",
+        "operating_points.broad.val.all.n_accepted",
+        "operating_points.broad.val.all.coverage",
+        "operating_points.broad.val.all.cer",
+        "operating_points.broad.val.all.wer"
+      ],
+      "metrics_sample": {
+        "risk_method": "confidence_graph",
+        "operating_points.strict.target_school_coverage": 0.5,
+        "operating_points.strict.val.all.coverage": 0.314,
+        "operating_points.strict.val.all.cer": 0.02876606172784517,
+        "operating_points.strict.val.all.wer": 0.11863057324840764,
+        "operating_points.strict.val.all.exact": 0.8795116772823779,
+        "operating_points.strict.val.school.coverage": 0.5,
+        "operating_points.strict.val.school.cer": 0.028550779775779772,
+        "operating_points.strict.val.school.wer": 0.113,
+        "operating_points.strict.val.school.exact": 0.887,
+        "operating_points.strict.test.all.coverage": 0.22937264066151358,
+        "operating_points.strict.test.all.cer": 0.051940174941742336,
+        "operating_points.strict.test.all.wer": 0.20363113897596655,
+        "operating_points.strict.test.all.exact": 0.7899686520376176,
+        "operating_points.strict.test.school.coverage": 0.3905,
+        "operating_points.strict.test.school.cer": 0.049145377314391406,
+        "operating_points.strict.test.school.wer": 0.19078104993597952,
+        "operating_points.strict.test.school.exact": 0.8143405889884763,
+        "operating_points.balanced.target_school_coverage": 0.8,
+        "operating_points.balanced.val.all.coverage": 0.67,
+        "operating_points.balanced.val.all.cer": 0.04790062846775221,
+        "operating_points.balanced.val.all.wer": 0.2099502487562189,
+        "operating_points.balanced.val.all.exact": 0.7728855721393035,
+        "operating_points.balanced.val.school.coverage": 0.8,
+        "operating_points.balanced.val.school.cer": 0.04538617458929958,
+        "operating_points.balanced.val.school.wer": 0.189375,
+        "operating_points.balanced.val.school.exact": 0.811875,
+        "operating_points.balanced.test.all.coverage": 0.5577925579723171,
+        "operating_points.balanced.test.all.cer": 0.06765616468995751,
+        "operating_points.balanced.test.all.wer": 0.2958427328391879,
+        "operating_points.balanced.test.all.exact": 0.6799871092491138,
+        "operating_points.balanced.test.school.coverage": 0.6615,
+        "operating_points.balanced.test.school.cer": 0.06850422819810574,
+        "operating_points.balanced.test.school.wer": 0.2834467120181406,
+        "operating_points.balanced.test.school.exact": 0.7248677248677249,
+        "operating_points.broad.target_school_coverage": 0.9,
+        "operating_points.broad.val.all.coverage": 0.8373333333333334,
+        "operating_points.broad.val.all.cer": 0.06144236964486301,
+        "operating_points.broad.val.all.wer": 0.2754279458598726,
+        "operating_points.broad.val.all.exact": 0.6954617834394905,
+        "operating_points.broad.val.school.coverage": 0.9,
+        "operating_points.broad.val.school.cer": 0.05720337609920943,
+        "operating_points.broad.val.school.wer": 0.24222222222222223,
+        "operating_points.broad.val.school.exact": 0.76,
+        "operating_points.broad.test.all.coverage": 0.7575049433758764,
+        "operating_points.broad.test.all.cer": 0.08635744482108731,
+        "operating_points.broad.test.all.wer": 0.374703369719981,
+        "operating_points.broad.test.all.exact": 0.5811580446131941,
+        "operating_points.broad.test.school.coverage": 0.7795,
+        "operating_points.broad.test.school.cer": 0.08453876143100005,
+        "operating_points.broad.test.school.wer": 0.3434894162924952,
+        "operating_points.broad.test.school.exact": 0.6651699807568955
+      }
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_confidence_v1/operating_points.md",
+      "suffix": ".md",
+      "canonical_path_or_text": true,
+      "canonical_hits": [
+        "10k_context",
+        "plus_10k"
+      ],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [
+          "confidence"
+        ],
+        "graph_or_quality": [
+          "graph"
+        ],
+        "confidence_graph": [
+          "confidence_graph"
+        ]
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "Audit",
+        "CER",
+        "Confidence",
+        "Error",
+        "Files",
+        "Model",
+        "Operating",
+        "Points",
+        "Risk",
+        "School",
+        "Thresholds",
+        "WER",
+        "accepted",
+        "accepted_errors_high_confidence",
+        "actual",
+        "all",
+        "applied",
+        "are",
+        "balanced",
+        "broad",
+        "confidence_graph",
+        "correct",
+        "coverage",
+        "errors",
+        "exact",
+        "jsonl",
+        "match",
+        "method",
+        "plus_10k_context",
+        "point",
+        "rejected",
+        "rejected_correct_low_confidence",
+        "samples",
+        "school",
+        "scope",
+        "selected",
+        "split",
+        "strict",
+        "target",
+        "test",
+        "then",
+        "threshold",
+        "unchanged",
+        "val",
+        "validation"
+      ],
+      "metrics_sample": {}
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_confidence_v1/result_card.md",
+      "suffix": ".md",
+      "canonical_path_or_text": false,
+      "canonical_hits": [],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [
+          "confidence"
+        ],
+        "graph_or_quality": [
+          "graph",
+          "quality",
+          "foreground"
+        ],
+        "confidence_graph": [
+          "confidence_graph"
+        ]
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "AUC",
+        "Adding",
+        "Aware",
+        "CER",
+        "CTC",
+        "Compared",
+        "Confidence",
+        "Coverage",
+        "ECE",
+        "Feature",
+        "Files",
+        "For",
+        "Interpretation",
+        "Model",
+        "Prediction",
+        "Quality",
+        "Risk",
+        "School",
+        "Selective",
+        "Setup",
+        "The",
+        "WER",
+        "about",
+        "all",
+        "and",
+        "are",
+        "average",
+        "baseline",
+        "blank",
+        "but",
+        "calibration",
+        "calibration_bins",
+        "character",
+        "clear",
+        "compared",
+        "confidence",
+        "confidence_graph",
+        "confidence_predictions",
+        "consistent",
+        "context",
+        "coverage",
+        "coverage_curves",
+        "csv",
+        "decoded",
+        "default",
+        "enough",
+        "entropy",
+        "error",
+        "evaluated",
+        "exact",
+        "feature_only",
+        "features",
+        "fit",
+        "for",
+        "foreground",
+        "frame",
+        "full",
+        "gives",
+        "graph",
+        "improvement",
+        "json",
+        "jsonl",
+        "labels",
+        "length",
+        "level",
+        "main",
+        "margin",
+        "max",
+        "mean",
+        "method",
+        "model",
+        "model_confidence",
+        "models",
+        "not",
+        "now",
+        "only",
+        "overall",
+        "per",
+        "practical",
+        "prediction"
+      ],
+      "metrics_sample": {}
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_confidence_v1/risk_table_by_bucket.csv",
+      "suffix": ".csv",
+      "canonical_path_or_text": true,
+      "canonical_hits": [
+        "10k_context",
+        "plus_10k"
+      ],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [
+          "confidence"
+        ],
+        "graph_or_quality": [
+          "graph",
+          "quality"
+        ],
+        "confidence_graph": [
+          "confidence_graph"
+        ]
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "model",
+        "risk_method",
+        "bucket_type",
+        "bucket",
+        "n",
+        "cer",
+        "wer",
+        "exact"
+      ],
+      "metrics_sample": {}
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_confidence_v1/selective_summary.json",
+      "suffix": ".json",
+      "canonical_path_or_text": true,
+      "canonical_hits": [
+        "10k_context",
+        "plus_10k"
+      ],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [
+          "confidence"
+        ],
+        "graph_or_quality": [
+          "graph",
+          "quality"
+        ],
+        "confidence_graph": [
+          "confidence_graph"
+        ]
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "models",
+        "models.baseline",
+        "models.baseline.overall",
+        "models.baseline.overall.n",
+        "models.baseline.overall.cer",
+        "models.baseline.overall.wer",
+        "models.baseline.overall.exact",
+        "models.baseline.risk_methods",
+        "models.baseline.risk_methods.feature_only",
+        "models.baseline.risk_methods.feature_only.overall",
+        "models.baseline.risk_methods.feature_only.overall.n",
+        "models.baseline.risk_methods.feature_only.overall.cer",
+        "models.baseline.risk_methods.feature_only.overall.wer",
+        "models.baseline.risk_methods.feature_only.overall.exact",
+        "models.baseline.risk_methods.feature_only.risk_auc_exact_error_all",
+        "models.baseline.risk_methods.feature_only.risk_auc_exact_error_school",
+        "models.baseline.risk_methods.feature_only.ece_all",
+        "models.baseline.risk_methods.feature_only.ece_school",
+        "models.baseline.risk_methods.feature_only.bucket_metrics",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:hkr_words",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:hkr_words.n",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:hkr_words.cer",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:hkr_words.wer",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:hkr_words.exact",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting.n",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting.cer",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting.wer",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting.exact",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean.n",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean.cer",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean.wer",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean.exact",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:clean_core",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:clean_core.n",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:clean_core.cer",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:clean_core.wer",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:clean_core.exact",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:hard_real",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:hard_real.n",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:hard_real.cer",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:hard_real.wer",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:hard_real.exact",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review.n",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review.cer",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review.wer",
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review.exact",
+        "models.baseline.risk_methods.model_confidence",
+        "models.baseline.risk_methods.model_confidence.overall",
+        "models.baseline.risk_methods.model_confidence.overall.n",
+        "models.baseline.risk_methods.model_confidence.overall.cer",
+        "models.baseline.risk_methods.model_confidence.overall.wer",
+        "models.baseline.risk_methods.model_confidence.overall.exact",
+        "models.baseline.risk_methods.model_confidence.risk_auc_exact_error_all",
+        "models.baseline.risk_methods.model_confidence.risk_auc_exact_error_school",
+        "models.baseline.risk_methods.model_confidence.ece_all",
+        "models.baseline.risk_methods.model_confidence.ece_school",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words.n",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words.cer",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words.wer",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words.exact",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting.n",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting.cer",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting.wer",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting.exact",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean.n",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean.cer",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean.wer",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean.exact",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core.n",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core.cer",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core.wer",
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core.exact"
+      ],
+      "metrics_sample": {
+        "models.baseline.overall.cer": 0.1451980688497641,
+        "models.baseline.overall.wer": 0.5130475163281203,
+        "models.baseline.overall.exact": 0.4420276829049074,
+        "models.baseline.risk_methods": {
+          "feature_only": {
+            "overall": {
+              "n": 5563,
+              "cer": 0.1451980688497641,
+              "wer": 0.5130475163281203,
+              "exact": 0.4420276829049074
+            },
+            "risk_auc_exact_error_all": 0.6020923558734379,
+            "risk_auc_exact_error_school": 0.621563826509996,
+            "ece_all": 0.06469862032852047,
+            "ece_school": 0.08273387938778871,
+            "bucket_metrics": {
+              "dataset:hkr_words": {
+                "n": 2000,
+                "cer": 0.09465479424900865,
+                "wer": 0.3994583333333333,
+                "exact": 0.5015
+              },
+              "dataset:cyrillic_handwriting": {
+                "n": 1563,
+                "cer": 0.19339568422162923,
+                "wer": 0.6744508423970995,
+                "exact": 0.2827895073576456
+              },
+              "dataset:school_notebooks_clean": {
+                "n": 2000,
+                "cer": 0.15807490703740704,
+                "wer": 0.5005,
+                "exact": 0.507
+              },
+              "school_quality:clean_core": {
+                "n": 1764,
+                "cer": 0.14777567167022948,
+                "wer": 0.485827664399093,
+                "exact": 0.5226757369614512
+              },
+              "school_quality:hard_real": {
+                "n": 236,
+                "cer": 0.23505732732427648,
+                "wer": 0.6101694915254238,
+                "exact": 0.3898305084745763
+              },
+              "school_quality:invalid_or_review": {
+                "n": 0,
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact": 0.0
+              }
+            }
+          },
+          "model_confidence": {
+            "overall": {
+              "n": 5563,
+              "cer": 0.1451980688497641,
+              "wer": 0.5130475163281203,
+              "exact": 0.4420276829049074
+            },
+            "risk_auc_exact_error_all": 0.8019623631683318,
+            "risk_auc_exact_error_school": 0.8143746174250153,
+            "ece_all": 0.044454561234738364,
+            "ece_school": 0.07337766244629382,
+            "bucket_metrics": {
+              "dataset:hkr_words": {
+                "n": 2000,
+                "cer": 0.09465479424900865,
+                "wer": 0.3994583333333333,
+                "exact": 0.5015
+              },
+              "dataset:cyrillic_handwriting": {
+                "n": 1563,
+                "cer": 0.19339568422162923,
+                "wer": 0.6744508423970995,
+                "exact": 0.2827895073576456
+              },
+              "dataset:school_notebooks_clean": {
+                "n": 2000,
+                "cer": 0.15807490703740704,
+                "wer": 0.5005,
+                "exact": 0.507
+              },
+              "school_quality:clean_core": {
+                "n": 1764,
+                "cer": 0.14777567167022948,
+                "wer": 0.485827664399093,
+                "exact": 0.5226757369614512
+              },
+              "school_quality:hard_real": {
+                "n": 236,
+                "cer": 0.23505732732427648,
+                "wer": 0.6101694915254238,
+                "exact": 0.3898305084745763
+              },
+              "school_quality:invalid_or_review": {
+                "n": 0,
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact": 0.0
+              }
+            }
+          },
+          "confidence_graph": {
+            "overall": {
+              "n": 5563,
+              "cer": 0.1451980688497641,
+              "wer": 0.5130475163281203,
+              "exact": 0.4420276829049074
+            },
+            "risk_auc_exact_error_all": 0.814753058405269,
+            "risk_auc_exact_error_school": 0.8219811082972261,
+            "ece_all": 0.017467991848020666,
+            "ece_school": 0.04201881223742551,
+            "bucket_metrics": {
+              "dataset:hkr_words": {
+                "n": 2000,
+                "cer": 0.09465479424900865,
+                "wer": 0.3994583333333333,
+                "exact": 0.5015
+              },
+              "dataset:cyrillic_handwriting": {
+                "n": 1563,
+                "cer": 0.19339568422162923,
+                "wer": 0.6744508423970995,
+                "exact": 0.2827895073576456
+              },
+              "dataset:school_notebooks_clean": {
+                "n": 2000,
+                "cer": 0.15807490703740704,
+                "wer": 0.5005,
+                "exact": 0.507
+              },
+              "school_quality:clean_core": {
+                "n": 1764,
+                "cer": 0.14777567167022948,
+                "wer": 0.485827664399093,
+                "exact": 0.5226757369614512
+              },
+              "school_quality:hard_real": {
+                "n": 236,
+                "cer": 0.23505732732427648,
+                "wer": 0.6101694915254238,
+                "exact": 0.3898305084745763
+              },
+              "school_quality:invalid_or_review": {
+                "n": 0,
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact": 0.0
+              }
+            }
+          }
+        },
+        "models.baseline.risk_methods.feature_only.overall.cer": 0.1451980688497641,
+        "models.baseline.risk_methods.feature_only.overall.wer": 0.5130475163281203,
+        "models.baseline.risk_methods.feature_only.overall.exact": 0.4420276829049074,
+        "models.baseline.risk_methods.feature_only.risk_auc_exact_error_all": 0.6020923558734379,
+        "models.baseline.risk_methods.feature_only.risk_auc_exact_error_school": 0.621563826509996,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:hkr_words.cer": 0.09465479424900865,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:hkr_words.wer": 0.3994583333333333,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:hkr_words.exact": 0.5015,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting.cer": 0.19339568422162923,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting.wer": 0.6744508423970995,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting.exact": 0.2827895073576456,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean.cer": 0.15807490703740704,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean.wer": 0.5005,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean.exact": 0.507,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:clean_core.cer": 0.14777567167022948,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:clean_core.wer": 0.485827664399093,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:clean_core.exact": 0.5226757369614512,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:hard_real.cer": 0.23505732732427648,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:hard_real.wer": 0.6101694915254238,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:hard_real.exact": 0.3898305084745763,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review.cer": 0.0,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review.wer": 0.0,
+        "models.baseline.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review.exact": 0.0,
+        "models.baseline.risk_methods.model_confidence.overall.cer": 0.1451980688497641,
+        "models.baseline.risk_methods.model_confidence.overall.wer": 0.5130475163281203,
+        "models.baseline.risk_methods.model_confidence.overall.exact": 0.4420276829049074,
+        "models.baseline.risk_methods.model_confidence.risk_auc_exact_error_all": 0.8019623631683318,
+        "models.baseline.risk_methods.model_confidence.risk_auc_exact_error_school": 0.8143746174250153,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words.cer": 0.09465479424900865,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words.wer": 0.3994583333333333,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words.exact": 0.5015,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting.cer": 0.19339568422162923,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting.wer": 0.6744508423970995,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting.exact": 0.2827895073576456,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean.cer": 0.15807490703740704,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean.wer": 0.5005,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean.exact": 0.507,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core.cer": 0.14777567167022948,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core.wer": 0.485827664399093,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core.exact": 0.5226757369614512,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:hard_real.cer": 0.23505732732427648,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:hard_real.wer": 0.6101694915254238,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:hard_real.exact": 0.3898305084745763,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:invalid_or_review.cer": 0.0,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:invalid_or_review.wer": 0.0,
+        "models.baseline.risk_methods.model_confidence.bucket_metrics.school_quality:invalid_or_review.exact": 0.0,
+        "models.baseline.risk_methods.confidence_graph.overall.cer": 0.1451980688497641,
+        "models.baseline.risk_methods.confidence_graph.overall.wer": 0.5130475163281203,
+        "models.baseline.risk_methods.confidence_graph.overall.exact": 0.4420276829049074,
+        "models.baseline.risk_methods.confidence_graph.risk_auc_exact_error_all": 0.814753058405269,
+        "models.baseline.risk_methods.confidence_graph.risk_auc_exact_error_school": 0.8219811082972261,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.dataset:hkr_words.cer": 0.09465479424900865,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.dataset:hkr_words.wer": 0.3994583333333333,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.dataset:hkr_words.exact": 0.5015,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.dataset:cyrillic_handwriting.cer": 0.19339568422162923,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.dataset:cyrillic_handwriting.wer": 0.6744508423970995,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.dataset:cyrillic_handwriting.exact": 0.2827895073576456,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.dataset:school_notebooks_clean.cer": 0.15807490703740704,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.dataset:school_notebooks_clean.wer": 0.5005,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.dataset:school_notebooks_clean.exact": 0.507,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.school_quality:clean_core.cer": 0.14777567167022948,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.school_quality:clean_core.wer": 0.485827664399093,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.school_quality:clean_core.exact": 0.5226757369614512,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.school_quality:hard_real.cer": 0.23505732732427648,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.school_quality:hard_real.wer": 0.6101694915254238,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.school_quality:hard_real.exact": 0.3898305084745763,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.school_quality:invalid_or_review.cer": 0.0,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.school_quality:invalid_or_review.wer": 0.0,
+        "models.baseline.risk_methods.confidence_graph.bucket_metrics.school_quality:invalid_or_review.exact": 0.0,
+        "models.plus_5k_context.overall.cer": 0.1359716763477458,
+        "models.plus_5k_context.overall.wer": 0.4907244292647852,
+        "models.plus_5k_context.overall.exact": 0.46054287255078197,
+        "models.plus_5k_context.risk_methods": {
+          "feature_only": {
+            "overall": {
+              "n": 5563,
+              "cer": 0.1359716763477458,
+              "wer": 0.4907244292647852,
+              "exact": 0.46054287255078197
+            },
+            "risk_auc_exact_error_all": 0.612037725650128,
+            "risk_auc_exact_error_school": 0.6279771347989223,
+            "ece_all": 0.047179341685441266,
+            "ece_school": 0.07348737445021487,
+            "bucket_metrics": {
+              "dataset:hkr_words": {
+                "n": 2000,
+                "cer": 0.0910228859676615,
+                "wer": 0.3865,
+                "exact": 0.5145
+              },
+              "dataset:cyrillic_handwriting": {
+                "n": 1563,
+                "cer": 0.18789203114060649,
+                "wer": 0.6570057581573897,
+                "exact": 0.2866282789507358
+              },
+              "dataset:school_notebooks_clean": {
+                "n": 2000,
+                "cer": 0.14034470945720945,
+                "wer": 0.465,
+                "exact": 0.5425
+              },
+              "school_quality:clean_core": {
+                "n": 1764,
+                "cer": 0.13118032603576824,
+                "wer": 0.44501133786848074,
+                "exact": 0.5629251700680272
+              },
+              "school_quality:hard_real": {
+                "n": 236,
+                "cer": 0.20884459231916858,
+                "wer": 0.614406779661017,
+                "exact": 0.3898305084745763
+              },
+              "school_quality:invalid_or_review": {
+                "n": 0,
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact": 0.0
+              }
+            }
+          },
+          "model_confidence": {
+            "overall": {
+              "n": 5563,
+              "cer": 0.1359716763477458,
+              "wer": 0.4907244292647852,
+              "exact": 0.46054287255078197
+            },
+            "risk_auc_exact_error_all": 0.7990275684841976,
+            "risk_auc_exact_error_school": 0.8185480093676816,
+            "ece_all": 0.04389476747647714,
+            "ece_school": 0.08663713617609341,
+            "bucket_metrics": {
+              "dataset:hkr_words": {
+                "n": 2000,
+                "cer": 0.0910228859676615,
+                "wer": 0.3865,
+                "exact": 0.5145
+              },
+              "dataset:cyrillic_handwriting": {
+                "n": 1563,
+                "cer": 0.18789203114060649,
+                "wer": 0.6570057581573897,
+                "exact": 0.2866282789507358
+              },
+              "dataset:school_notebooks_clean": {
+                "n": 2000,
+                "cer": 0.14034470945720945,
+                "wer": 0.465,
+                "exact": 0.5425
+              },
+              "school_quality:clean_core": {
+                "n": 1764,
+                "cer": 0.13118032603576824,
+                "wer": 0.44501133786848074,
+                "exact": 0.5629251700680272
+              },
+              "school_quality:hard_real": {
+                "n": 236,
+                "cer": 0.20884459231916858,
+                "wer": 0.614406779661017,
+                "exact": 0.3898305084745763
+              },
+              "school_quality:invalid_or_review": {
+                "n": 0,
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact": 0.0
+              }
+            }
+          },
+          "confidence_graph": {
+            "overall": {
+              "n": 5563,
+              "cer": 0.1359716763477458,
+              "wer": 0.4907244292647852,
+              "exact": 0.46054287255078197
+            },
+            "risk_auc_exact_error_all": 0.8158108109162676,
+            "risk_auc_exact_error_school": 0.8285895595678778,
+            "ece_all": 0.022643212368739188,
+            "ece_school": 0.027587860084309,
+            "bucket_metrics": {
+              "dataset:hkr_words": {
+                "n": 2000,
+                "cer": 0.0910228859676615,
+                "wer": 0.3865,
+                "exact": 0.5145
+              },
+              "dataset:cyrillic_handwriting": {
+                "n": 1563,
+                "cer": 0.18789203114060649,
+                "wer": 0.6570057581573897,
+                "exact": 0.2866282789507358
+              },
+              "dataset:school_notebooks_clean": {
+                "n": 2000,
+                "cer": 0.14034470945720945,
+                "wer": 0.465,
+                "exact": 0.5425
+              },
+              "school_quality:clean_core": {
+                "n": 1764,
+                "cer": 0.13118032603576824,
+                "wer": 0.44501133786848074,
+                "exact": 0.5629251700680272
+              },
+              "school_quality:hard_real": {
+                "n": 236,
+                "cer": 0.20884459231916858,
+                "wer": 0.614406779661017,
+                "exact": 0.3898305084745763
+              },
+              "school_quality:invalid_or_review": {
+                "n": 0,
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact": 0.0
+              }
+            }
+          }
+        },
+        "models.plus_5k_context.risk_methods.feature_only.overall.cer": 0.1359716763477458,
+        "models.plus_5k_context.risk_methods.feature_only.overall.wer": 0.4907244292647852,
+        "models.plus_5k_context.risk_methods.feature_only.overall.exact": 0.46054287255078197,
+        "models.plus_5k_context.risk_methods.feature_only.risk_auc_exact_error_all": 0.612037725650128,
+        "models.plus_5k_context.risk_methods.feature_only.risk_auc_exact_error_school": 0.6279771347989223,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.dataset:hkr_words.cer": 0.0910228859676615,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.dataset:hkr_words.wer": 0.3865,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.dataset:hkr_words.exact": 0.5145,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting.cer": 0.18789203114060649,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting.wer": 0.6570057581573897,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting.exact": 0.2866282789507358,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean.cer": 0.14034470945720945,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean.wer": 0.465,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean.exact": 0.5425,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.school_quality:clean_core.cer": 0.13118032603576824,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.school_quality:clean_core.wer": 0.44501133786848074,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.school_quality:clean_core.exact": 0.5629251700680272,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.school_quality:hard_real.cer": 0.20884459231916858,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.school_quality:hard_real.wer": 0.614406779661017,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.school_quality:hard_real.exact": 0.3898305084745763,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review.cer": 0.0,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review.wer": 0.0,
+        "models.plus_5k_context.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review.exact": 0.0,
+        "models.plus_5k_context.risk_methods.model_confidence.overall.cer": 0.1359716763477458,
+        "models.plus_5k_context.risk_methods.model_confidence.overall.wer": 0.4907244292647852,
+        "models.plus_5k_context.risk_methods.model_confidence.overall.exact": 0.46054287255078197,
+        "models.plus_5k_context.risk_methods.model_confidence.risk_auc_exact_error_all": 0.7990275684841976,
+        "models.plus_5k_context.risk_methods.model_confidence.risk_auc_exact_error_school": 0.8185480093676816,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words.cer": 0.0910228859676615,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words.wer": 0.3865,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words.exact": 0.5145,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting.cer": 0.18789203114060649,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting.wer": 0.6570057581573897,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting.exact": 0.2866282789507358,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean.cer": 0.14034470945720945,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean.wer": 0.465,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean.exact": 0.5425,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core.cer": 0.13118032603576824,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core.wer": 0.44501133786848074,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core.exact": 0.5629251700680272,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.school_quality:hard_real.cer": 0.20884459231916858,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.school_quality:hard_real.wer": 0.614406779661017,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.school_quality:hard_real.exact": 0.3898305084745763,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.school_quality:invalid_or_review.cer": 0.0,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.school_quality:invalid_or_review.wer": 0.0,
+        "models.plus_5k_context.risk_methods.model_confidence.bucket_metrics.school_quality:invalid_or_review.exact": 0.0,
+        "models.plus_5k_context.risk_methods.confidence_graph.overall.cer": 0.1359716763477458,
+        "models.plus_5k_context.risk_methods.confidence_graph.overall.wer": 0.4907244292647852,
+        "models.plus_5k_context.risk_methods.confidence_graph.overall.exact": 0.46054287255078197,
+        "models.plus_5k_context.risk_methods.confidence_graph.risk_auc_exact_error_all": 0.8158108109162676,
+        "models.plus_5k_context.risk_methods.confidence_graph.risk_auc_exact_error_school": 0.8285895595678778,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.dataset:hkr_words.cer": 0.0910228859676615,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.dataset:hkr_words.wer": 0.3865,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.dataset:hkr_words.exact": 0.5145,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.dataset:cyrillic_handwriting.cer": 0.18789203114060649,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.dataset:cyrillic_handwriting.wer": 0.6570057581573897,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.dataset:cyrillic_handwriting.exact": 0.2866282789507358,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.dataset:school_notebooks_clean.cer": 0.14034470945720945,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.dataset:school_notebooks_clean.wer": 0.465,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.dataset:school_notebooks_clean.exact": 0.5425,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:clean_core.cer": 0.13118032603576824,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:clean_core.wer": 0.44501133786848074,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:clean_core.exact": 0.5629251700680272,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:hard_real.cer": 0.20884459231916858,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:hard_real.wer": 0.614406779661017,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:hard_real.exact": 0.3898305084745763,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:invalid_or_review.cer": 0.0,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:invalid_or_review.wer": 0.0,
+        "models.plus_5k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:invalid_or_review.exact": 0.0,
+        "models.plus_10k_context.overall.cer": 0.13512656651861726,
+        "models.plus_10k_context.overall.wer": 0.4924261489603931,
+        "models.plus_10k_context.overall.exact": 0.46359877763796514,
+        "models.plus_10k_context.risk_methods": {
+          "feature_only": {
+            "overall": {
+              "n": 5563,
+              "cer": 0.13512656651861726,
+              "wer": 0.4924261489603931,
+              "exact": 0.46359877763796514
+            },
+            "risk_auc_exact_error_all": 0.6036449924997427,
+            "risk_auc_exact_error_school": 0.5986884203494057,
+            "ece_all": 0.05694706711203949,
+            "ece_school": 0.08078458016920981,
+            "bucket_metrics": {
+              "dataset:hkr_words": {
+                "n": 2000,
+                "cer": 0.09171769317284023,
+                "wer": 0.3798333333333333,
+                "exact": 0.5245
+              },
+              "dataset:cyrillic_handwriting": {
+                "n": 1563,
+                "cer": 0.18580688289497263,
+                "wer": 0.6629558541266793,
+                "exact": 0.2891874600127959
+              },
+              "dataset:school_notebooks_clean": {
+                "n": 2000,
+                "cer": 0.13892877261627262,
+                "wer": 0.47175,
+                "exact": 0.539
+              },
+              "school_quality:clean_core": {
+                "n": 1764,
+                "cer": 0.12907369620804995,
+                "wer": 0.4537981859410431,
+                "exact": 0.5572562358276644
+              },
+              "school_quality:hard_real": {
+                "n": 236,
+                "cer": 0.21259129288790307,
+                "wer": 0.6059322033898306,
+                "exact": 0.4025423728813559
+              },
+              "school_quality:invalid_or_review": {
+                "n": 0,
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact": 0.0
+              }
+            }
+          },
+          "model_confidence": {
+            "overall": {
+              "n": 5563,
+              "cer": 0.13512656651861726,
+              "wer": 0.4924261489603931,
+              "exact": 0.46359877763796514
+            },
+            "risk_auc_exact_error_all": 0.7966906609062472,
+            "risk_auc_exact_error_school": 0.8198670712615553,
+            "ece_all": 0.03825350180022616,
+            "ece_school": 0.07720372564797252,
+            "bucket_metrics": {
+              "dataset:hkr_words": {
+                "n": 2000,
+                "cer": 0.09171769317284023,
+                "wer": 0.3798333333333333,
+                "exact": 0.5245
+              },
+              "dataset:cyrillic_handwriting": {
+                "n": 1563,
+                "cer": 0.18580688289497263,
+                "wer": 0.6629558541266793,
+                "exact": 0.2891874600127959
+              },
+              "dataset:school_notebooks_clean": {
+                "n": 2000,
+                "cer": 0.13892877261627262,
+                "wer": 0.47175,
+                "exact": 0.539
+              },
+              "school_quality:clean_core": {
+                "n": 1764,
+                "cer": 0.12907369620804995,
+                "wer": 0.4537981859410431,
+                "exact": 0.5572562358276644
+              },
+              "school_quality:hard_real": {
+                "n": 236,
+                "cer": 0.21259129288790307,
+                "wer": 0.6059322033898306,
+                "exact": 0.4025423728813559
+              },
+              "school_quality:invalid_or_review": {
+                "n": 0,
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact": 0.0
+              }
+            }
+          },
+          "confidence_graph": {
+            "overall": {
+              "n": 5563,
+              "cer": 0.13512656651861726,
+              "wer": 0.4924261489603931,
+              "exact": 0.46359877763796514
+            },
+            "risk_auc_exact_error_all": 0.812213672610391,
+            "risk_auc_exact_error_school": 0.8283567222984638,
+            "ece_all": 0.025127802876707357,
+            "ece_school": 0.01975416295880084,
+            "bucket_metrics": {
+              "dataset:hkr_words": {
+                "n": 2000,
+                "cer": 0.09171769317284023,
+                "wer": 0.3798333333333333,
+                "exact": 0.5245
+              },
+              "dataset:cyrillic_handwriting": {
+                "n": 1563,
+                "cer": 0.18580688289497263,
+                "wer": 0.6629558541266793,
+                "exact": 0.2891874600127959
+              },
+              "dataset:school_notebooks_clean": {
+                "n": 2000,
+                "cer": 0.13892877261627262,
+                "wer": 0.47175,
+                "exact": 0.539
+              },
+              "school_quality:clean_core": {
+                "n": 1764,
+                "cer": 0.12907369620804995,
+                "wer": 0.4537981859410431,
+                "exact": 0.5572562358276644
+              },
+              "school_quality:hard_real": {
+                "n": 236,
+                "cer": 0.21259129288790307,
+                "wer": 0.6059322033898306,
+                "exact": 0.4025423728813559
+              },
+              "school_quality:invalid_or_review": {
+                "n": 0,
+                "cer": 0.0,
+                "wer": 0.0,
+                "exact": 0.0
+              }
+            }
+          }
+        },
+        "models.plus_10k_context.risk_methods.feature_only.overall.cer": 0.13512656651861726,
+        "models.plus_10k_context.risk_methods.feature_only.overall.wer": 0.4924261489603931,
+        "models.plus_10k_context.risk_methods.feature_only.overall.exact": 0.46359877763796514,
+        "models.plus_10k_context.risk_methods.feature_only.risk_auc_exact_error_all": 0.6036449924997427,
+        "models.plus_10k_context.risk_methods.feature_only.risk_auc_exact_error_school": 0.5986884203494057,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.dataset:hkr_words.cer": 0.09171769317284023,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.dataset:hkr_words.wer": 0.3798333333333333,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.dataset:hkr_words.exact": 0.5245,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting.cer": 0.18580688289497263,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting.wer": 0.6629558541266793,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.dataset:cyrillic_handwriting.exact": 0.2891874600127959,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean.cer": 0.13892877261627262,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean.wer": 0.47175,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.dataset:school_notebooks_clean.exact": 0.539,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.school_quality:clean_core.cer": 0.12907369620804995,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.school_quality:clean_core.wer": 0.4537981859410431,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.school_quality:clean_core.exact": 0.5572562358276644,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.school_quality:hard_real.cer": 0.21259129288790307,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.school_quality:hard_real.wer": 0.6059322033898306,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.school_quality:hard_real.exact": 0.4025423728813559,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review.cer": 0.0,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review.wer": 0.0,
+        "models.plus_10k_context.risk_methods.feature_only.bucket_metrics.school_quality:invalid_or_review.exact": 0.0,
+        "models.plus_10k_context.risk_methods.model_confidence.overall.cer": 0.13512656651861726,
+        "models.plus_10k_context.risk_methods.model_confidence.overall.wer": 0.4924261489603931,
+        "models.plus_10k_context.risk_methods.model_confidence.overall.exact": 0.46359877763796514,
+        "models.plus_10k_context.risk_methods.model_confidence.risk_auc_exact_error_all": 0.7966906609062472,
+        "models.plus_10k_context.risk_methods.model_confidence.risk_auc_exact_error_school": 0.8198670712615553,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words.cer": 0.09171769317284023,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words.wer": 0.3798333333333333,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.dataset:hkr_words.exact": 0.5245,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting.cer": 0.18580688289497263,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting.wer": 0.6629558541266793,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.dataset:cyrillic_handwriting.exact": 0.2891874600127959,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean.cer": 0.13892877261627262,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean.wer": 0.47175,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.dataset:school_notebooks_clean.exact": 0.539,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core.cer": 0.12907369620804995,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core.wer": 0.4537981859410431,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.school_quality:clean_core.exact": 0.5572562358276644,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.school_quality:hard_real.cer": 0.21259129288790307,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.school_quality:hard_real.wer": 0.6059322033898306,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.school_quality:hard_real.exact": 0.4025423728813559,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.school_quality:invalid_or_review.cer": 0.0,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.school_quality:invalid_or_review.wer": 0.0,
+        "models.plus_10k_context.risk_methods.model_confidence.bucket_metrics.school_quality:invalid_or_review.exact": 0.0,
+        "models.plus_10k_context.risk_methods.confidence_graph.overall.cer": 0.13512656651861726,
+        "models.plus_10k_context.risk_methods.confidence_graph.overall.wer": 0.4924261489603931,
+        "models.plus_10k_context.risk_methods.confidence_graph.overall.exact": 0.46359877763796514,
+        "models.plus_10k_context.risk_methods.confidence_graph.risk_auc_exact_error_all": 0.812213672610391,
+        "models.plus_10k_context.risk_methods.confidence_graph.risk_auc_exact_error_school": 0.8283567222984638,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.dataset:hkr_words.cer": 0.09171769317284023,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.dataset:hkr_words.wer": 0.3798333333333333,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.dataset:hkr_words.exact": 0.5245,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.dataset:cyrillic_handwriting.cer": 0.18580688289497263,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.dataset:cyrillic_handwriting.wer": 0.6629558541266793,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.dataset:cyrillic_handwriting.exact": 0.2891874600127959,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.dataset:school_notebooks_clean.cer": 0.13892877261627262,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.dataset:school_notebooks_clean.wer": 0.47175,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.dataset:school_notebooks_clean.exact": 0.539,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:clean_core.cer": 0.12907369620804995,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:clean_core.wer": 0.4537981859410431,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:clean_core.exact": 0.5572562358276644,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:hard_real.cer": 0.21259129288790307,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:hard_real.wer": 0.6059322033898306,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:hard_real.exact": 0.4025423728813559,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:invalid_or_review.cer": 0.0,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:invalid_or_review.wer": 0.0,
+        "models.plus_10k_context.risk_methods.confidence_graph.bucket_metrics.school_quality:invalid_or_review.exact": 0.0
+      }
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_confidence_v1/selective_summary.md",
+      "suffix": ".md",
+      "canonical_path_or_text": true,
+      "canonical_hits": [
+        "10k_context",
+        "plus_10k"
+      ],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [
+          "confidence"
+        ],
+        "graph_or_quality": [
+          "graph",
+          "quality"
+        ],
+        "confidence_graph": [
+          "confidence_graph"
+        ]
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "AUC",
+        "Aware",
+        "CER",
+        "Confidence",
+        "Coverage",
+        "ECE",
+        "Files",
+        "Iteration",
+        "Prediction",
+        "Quality",
+        "Risk",
+        "School",
+        "Selective",
+        "WER",
+        "all",
+        "and",
+        "are",
+        "baseline",
+        "bucket",
+        "calibration_bins",
+        "clean_core",
+        "confidence_graph",
+        "confidence_predictions",
+        "coverage",
+        "coverage_curves",
+        "csv",
+        "error",
+        "evaluated",
+        "exact",
+        "feature_only",
+        "fit",
+        "hard_real",
+        "json",
+        "jsonl",
+        "labels",
+        "method",
+        "model",
+        "model_confidence",
+        "models",
+        "plus_10k_context",
+        "plus_5k_context",
+        "risk",
+        "risk_table_by_bucket",
+        "school",
+        "scope",
+        "selective_summary",
+        "test",
+        "val"
+      ],
+      "metrics_sample": {}
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_lineaug_v1/coverage_curves.csv",
+      "suffix": ".csv",
+      "canonical_path_or_text": true,
+      "canonical_hits": [
+        "10k_context",
+        "plus_10k"
+      ],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [],
+        "graph_or_quality": [
+          "graph"
+        ],
+        "confidence_graph": []
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "model",
+        "scope",
+        "coverage",
+        "n",
+        "cer",
+        "wer",
+        "exact",
+        "mean_risk_score"
+      ],
+      "metrics_sample": {}
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_lineaug_v1/result_card.md",
+      "suffix": ".md",
+      "canonical_path_or_text": false,
+      "canonical_hits": [],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [
+          "confidence"
+        ],
+        "graph_or_quality": [
+          "graph",
+          "quality",
+          "foreground"
+        ],
+        "confidence_graph": []
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "AUC",
+        "Answers",
+        "Augmentation",
+        "CER",
+        "Current",
+        "Exact",
+        "Feature",
+        "Files",
+        "For",
+        "Improvement",
+        "Individual",
+        "Iteration",
+        "Line",
+        "Main",
+        "Models",
+        "Prediction",
+        "Results",
+        "Risk",
+        "School",
+        "Scope",
+        "Selective",
+        "The",
+        "WER",
+        "about",
+        "after",
+        "all",
+        "analysis",
+        "and",
+        "appears",
+        "are",
+        "augmentation",
+        "baseline",
+        "became",
+        "below",
+        "better",
+        "both",
+        "bucket",
+        "but",
+        "cc_count",
+        "chance",
+        "clean_core",
+        "clearly",
+        "coarse",
+        "compared",
+        "confidence",
+        "context",
+        "contextual",
+        "coverage",
+        "coverage_curves",
+        "crops",
+        "csv",
+        "curves",
+        "delta",
+        "diagnostics",
+        "did",
+        "does",
+        "enough",
+        "error",
+        "exact",
+        "extremeness",
+        "feature",
+        "features",
+        "filter",
+        "filtering",
+        "for",
+        "foreground",
+        "fraction",
+        "graph",
+        "hard_real",
+        "image",
+        "improve",
+        "improves",
+        "json",
+        "level",
+        "line",
+        "low",
+        "lower",
+        "mechanism",
+        "mixed",
+        "model"
+      ],
+      "metrics_sample": {}
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_lineaug_v1/risk_table_by_bucket.csv",
+      "suffix": ".csv",
+      "canonical_path_or_text": true,
+      "canonical_hits": [
+        "10k_context",
+        "plus_10k"
+      ],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [],
+        "graph_or_quality": [
+          "graph",
+          "quality"
+        ],
+        "confidence_graph": []
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "bucket_type",
+        "bucket",
+        "model",
+        "n",
+        "cer",
+        "wer",
+        "exact",
+        "delta_cer_vs_baseline",
+        "delta_wer_vs_baseline",
+        "delta_exact_vs_baseline",
+        "mean_risk_score"
+      ],
+      "metrics_sample": {}
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_lineaug_v1/selective_summary.json",
+      "suffix": ".json",
+      "canonical_path_or_text": true,
+      "canonical_hits": [
+        "10k_context",
+        "plus_10k"
+      ],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [],
+        "graph_or_quality": [
+          "graph"
+        ],
+        "confidence_graph": []
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "n_common",
+        "models",
+        "overall",
+        "overall.baseline",
+        "overall.baseline.n",
+        "overall.baseline.cer",
+        "overall.baseline.wer",
+        "overall.baseline.exact",
+        "overall.baseline.mean_risk_score",
+        "overall.plus_5k_context",
+        "overall.plus_5k_context.n",
+        "overall.plus_5k_context.cer",
+        "overall.plus_5k_context.wer",
+        "overall.plus_5k_context.exact",
+        "overall.plus_5k_context.mean_risk_score",
+        "overall.plus_10k_context",
+        "overall.plus_10k_context.n",
+        "overall.plus_10k_context.cer",
+        "overall.plus_10k_context.wer",
+        "overall.plus_10k_context.exact",
+        "overall.plus_10k_context.mean_risk_score",
+        "school_clean_vs_hard",
+        "school_clean_vs_hard.baseline",
+        "school_clean_vs_hard.baseline.clean_core",
+        "school_clean_vs_hard.baseline.clean_core.n",
+        "school_clean_vs_hard.baseline.clean_core.cer",
+        "school_clean_vs_hard.baseline.clean_core.wer",
+        "school_clean_vs_hard.baseline.clean_core.exact",
+        "school_clean_vs_hard.baseline.clean_core.mean_risk_score",
+        "school_clean_vs_hard.baseline.hard_real",
+        "school_clean_vs_hard.baseline.hard_real.n",
+        "school_clean_vs_hard.baseline.hard_real.cer",
+        "school_clean_vs_hard.baseline.hard_real.wer",
+        "school_clean_vs_hard.baseline.hard_real.exact",
+        "school_clean_vs_hard.baseline.hard_real.mean_risk_score",
+        "school_clean_vs_hard.baseline.invalid_or_review",
+        "school_clean_vs_hard.baseline.invalid_or_review.n",
+        "school_clean_vs_hard.baseline.invalid_or_review.cer",
+        "school_clean_vs_hard.baseline.invalid_or_review.wer",
+        "school_clean_vs_hard.baseline.invalid_or_review.exact",
+        "school_clean_vs_hard.baseline.invalid_or_review.mean_risk_score",
+        "school_clean_vs_hard.plus_5k_context",
+        "school_clean_vs_hard.plus_5k_context.clean_core",
+        "school_clean_vs_hard.plus_5k_context.clean_core.n",
+        "school_clean_vs_hard.plus_5k_context.clean_core.cer",
+        "school_clean_vs_hard.plus_5k_context.clean_core.wer",
+        "school_clean_vs_hard.plus_5k_context.clean_core.exact",
+        "school_clean_vs_hard.plus_5k_context.clean_core.mean_risk_score",
+        "school_clean_vs_hard.plus_5k_context.hard_real",
+        "school_clean_vs_hard.plus_5k_context.hard_real.n",
+        "school_clean_vs_hard.plus_5k_context.hard_real.cer",
+        "school_clean_vs_hard.plus_5k_context.hard_real.wer",
+        "school_clean_vs_hard.plus_5k_context.hard_real.exact",
+        "school_clean_vs_hard.plus_5k_context.hard_real.mean_risk_score",
+        "school_clean_vs_hard.plus_5k_context.invalid_or_review",
+        "school_clean_vs_hard.plus_5k_context.invalid_or_review.n",
+        "school_clean_vs_hard.plus_5k_context.invalid_or_review.cer",
+        "school_clean_vs_hard.plus_5k_context.invalid_or_review.wer",
+        "school_clean_vs_hard.plus_5k_context.invalid_or_review.exact",
+        "school_clean_vs_hard.plus_5k_context.invalid_or_review.mean_risk_score",
+        "school_clean_vs_hard.plus_10k_context",
+        "school_clean_vs_hard.plus_10k_context.clean_core",
+        "school_clean_vs_hard.plus_10k_context.clean_core.n",
+        "school_clean_vs_hard.plus_10k_context.clean_core.cer",
+        "school_clean_vs_hard.plus_10k_context.clean_core.wer",
+        "school_clean_vs_hard.plus_10k_context.clean_core.exact",
+        "school_clean_vs_hard.plus_10k_context.clean_core.mean_risk_score",
+        "school_clean_vs_hard.plus_10k_context.hard_real",
+        "school_clean_vs_hard.plus_10k_context.hard_real.n",
+        "school_clean_vs_hard.plus_10k_context.hard_real.cer",
+        "school_clean_vs_hard.plus_10k_context.hard_real.wer",
+        "school_clean_vs_hard.plus_10k_context.hard_real.exact",
+        "school_clean_vs_hard.plus_10k_context.hard_real.mean_risk_score",
+        "school_clean_vs_hard.plus_10k_context.invalid_or_review",
+        "school_clean_vs_hard.plus_10k_context.invalid_or_review.n",
+        "school_clean_vs_hard.plus_10k_context.invalid_or_review.cer",
+        "school_clean_vs_hard.plus_10k_context.invalid_or_review.wer",
+        "school_clean_vs_hard.plus_10k_context.invalid_or_review.exact",
+        "school_clean_vs_hard.plus_10k_context.invalid_or_review.mean_risk_score",
+        "risk_auc_for_exact_error"
+      ],
+      "metrics_sample": {
+        "overall.baseline.cer": 0.14528283401726577,
+        "overall.baseline.wer": 0.5133770747198754,
+        "overall.baseline.exact": 0.44112888729103,
+        "overall.baseline.mean_risk_score": 0.3301117149697893,
+        "overall.plus_5k_context.cer": 0.1359716763477458,
+        "overall.plus_5k_context.wer": 0.4907244292647851,
+        "overall.plus_5k_context.exact": 0.46054287255078197,
+        "overall.plus_5k_context.mean_risk_score": 0.3301117149697893,
+        "overall.plus_10k_context.cer": 0.13512656651861726,
+        "overall.plus_10k_context.wer": 0.4924261489603931,
+        "overall.plus_10k_context.exact": 0.46359877763796514,
+        "overall.plus_10k_context.mean_risk_score": 0.3301117149697893,
+        "school_clean_vs_hard.baseline.clean_core.cer": 0.14769225168885033,
+        "school_clean_vs_hard.baseline.clean_core.wer": 0.4895124716553288,
+        "school_clean_vs_hard.baseline.clean_core.exact": 0.5192743764172335,
+        "school_clean_vs_hard.baseline.clean_core.mean_risk_score": 0.340755612244898,
+        "school_clean_vs_hard.baseline.hard_real.cer": 0.23074636051330968,
+        "school_clean_vs_hard.baseline.hard_real.wer": 0.5932203389830508,
+        "school_clean_vs_hard.baseline.hard_real.exact": 0.4067796610169492,
+        "school_clean_vs_hard.baseline.hard_real.mean_risk_score": 0.6384304104019701,
+        "school_clean_vs_hard.baseline.invalid_or_review.cer": 0.0,
+        "school_clean_vs_hard.baseline.invalid_or_review.wer": 0.0,
+        "school_clean_vs_hard.baseline.invalid_or_review.exact": 0.0,
+        "school_clean_vs_hard.baseline.invalid_or_review.mean_risk_score": 0.0,
+        "school_clean_vs_hard.plus_5k_context.clean_core.cer": 0.1311803260357682,
+        "school_clean_vs_hard.plus_5k_context.clean_core.wer": 0.44501133786848074,
+        "school_clean_vs_hard.plus_5k_context.clean_core.exact": 0.5629251700680272,
+        "school_clean_vs_hard.plus_5k_context.clean_core.mean_risk_score": 0.340755612244898,
+        "school_clean_vs_hard.plus_5k_context.hard_real.cer": 0.20884459231916858,
+        "school_clean_vs_hard.plus_5k_context.hard_real.wer": 0.614406779661017,
+        "school_clean_vs_hard.plus_5k_context.hard_real.exact": 0.3898305084745763,
+        "school_clean_vs_hard.plus_5k_context.hard_real.mean_risk_score": 0.6384304104019701,
+        "school_clean_vs_hard.plus_5k_context.invalid_or_review.cer": 0.0,
+        "school_clean_vs_hard.plus_5k_context.invalid_or_review.wer": 0.0,
+        "school_clean_vs_hard.plus_5k_context.invalid_or_review.exact": 0.0,
+        "school_clean_vs_hard.plus_5k_context.invalid_or_review.mean_risk_score": 0.0,
+        "school_clean_vs_hard.plus_10k_context.clean_core.cer": 0.12907369620804995,
+        "school_clean_vs_hard.plus_10k_context.clean_core.wer": 0.4537981859410431,
+        "school_clean_vs_hard.plus_10k_context.clean_core.exact": 0.5572562358276644,
+        "school_clean_vs_hard.plus_10k_context.clean_core.mean_risk_score": 0.340755612244898,
+        "school_clean_vs_hard.plus_10k_context.hard_real.cer": 0.21259129288790307,
+        "school_clean_vs_hard.plus_10k_context.hard_real.wer": 0.6059322033898306,
+        "school_clean_vs_hard.plus_10k_context.hard_real.exact": 0.4025423728813559,
+        "school_clean_vs_hard.plus_10k_context.hard_real.mean_risk_score": 0.6384304104019701,
+        "school_clean_vs_hard.plus_10k_context.invalid_or_review.cer": 0.0,
+        "school_clean_vs_hard.plus_10k_context.invalid_or_review.wer": 0.0,
+        "school_clean_vs_hard.plus_10k_context.invalid_or_review.exact": 0.0,
+        "school_clean_vs_hard.plus_10k_context.invalid_or_review.mean_risk_score": 0.0,
+        "risk_auc_for_exact_error": {
+          "baseline": {
+            "all": 0.5036863558043098,
+            "school": 0.4580574602742795
+          },
+          "plus_5k_context": {
+            "all": 0.4964362646747207,
+            "school": 0.47143360781647403
+          },
+          "plus_10k_context": {
+            "all": 0.507055920317433,
+            "school": 0.48000786786810956
+          }
+        },
+        "school_feature_spearman_with_cer": {
+          "baseline": {
+            "risk_score": 0.04467669666917417,
+            "fg_fraction": 0.13862661915665478,
+            "skel_fraction": 0.14457046514261626,
+            "cc_count": 0.19053044663261165,
+            "dir_h_frac": -0.07714659278664819,
+            "stroke_width_mean": -0.05746599236649809,
+            "ruling_response_mean": -0.05383952695988174
+          },
+          "plus_5k_context": {
+            "risk_score": 0.031198432799608197,
+            "fg_fraction": 0.1499537099884275,
+            "skel_fraction": 0.13372093543023383,
+            "cc_count": 0.17731787032946758,
+            "dir_h_frac": -0.027739515934878983,
+            "stroke_width_mean": -0.024164176541044136,
+            "ruling_response_mean": -0.06184410496102623
+          },
+          "plus_10k_context": {
+            "risk_score": 0.05113914378478594,
+            "fg_fraction": 0.1892392163098041,
+            "skel_fraction": 0.1489175832293958,
+            "cc_count": 0.1731904707976177,
+            "dir_h_frac": -0.06616913704228426,
+            "stroke_width_mean": -0.017359735339933836,
+            "ruling_response_mean": -0.027677168419292106
+          }
+        },
+        "school_feature_spearman_with_cer.baseline.risk_score": 0.04467669666917417,
+        "school_feature_spearman_with_cer.plus_5k_context.risk_score": 0.031198432799608197,
+        "school_feature_spearman_with_cer.plus_10k_context.risk_score": 0.05113914378478594
+      }
+    },
+    {
+      "path": "outputs/htr_graph_v1/selective_iter2_lineaug_v1/selective_summary.md",
+      "suffix": ".md",
+      "canonical_path_or_text": true,
+      "canonical_hits": [
+        "10k_context",
+        "plus_10k"
+      ],
+      "bad_model_hits": [],
+      "variant_hits": {
+        "confidence": [],
+        "graph_or_quality": [
+          "graph",
+          "quality",
+          "foreground"
+        ],
+        "confidence_graph": []
+      },
+      "leakage_risk_key_hits": [],
+      "keys_sample": [
+        "AUC",
+        "Augmentation",
+        "CER",
+        "Clean",
+        "Coverage",
+        "Feature",
+        "Files",
+        "Hard",
+        "Iteration",
+        "Line",
+        "Overall",
+        "Prediction",
+        "Predictions",
+        "Risk",
+        "School",
+        "Selective",
+        "Signal",
+        "Spearman",
+        "WER",
+        "all",
+        "and",
+        "are",
+        "baseline",
+        "bucket",
+        "cc_count",
+        "clean_core",
+        "compute",
+        "correlation",
+        "coverage",
+        "coverage_curves",
+        "csv",
+        "dir_h_frac",
+        "exact",
+        "extremeness",
+        "feature",
+        "fg_fraction",
+        "foreground",
+        "graph",
+        "hard_real",
+        "invalid_or_review",
+        "json",
+        "model",
+        "not",
+        "only",
+        "per",
+        "plus_10k_context",
+        "plus_5k_context",
+        "quality",
+        "rho",
+        "risk",
+        "risk_score",
+        "risk_table_by_bucket",
+        "rules",
+        "ruling_response_mean",
+        "sample",
+        "samples",
+        "school",
+        "scope",
+        "score",
+        "selective_summary",
+        "short",
+        "skel_fraction",
+        "stroke_width_mean",
+        "test",
+        "text",
+        "the",
+        "used",
+        "warnings",
+        "with"
+      ],
+      "metrics_sample": {}
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Table 6. Graph-fusion exploratory result
+
+| model | CER | WER | exact | interpretation |
+|---|---|---|---|---|
+| image-only +10k | 0.135127 | 0.492426 | 0.463599 | Primary canonical image-only model. |
+| graph-fusion +10k | 0.133805 | 0.478634 | 0.456229 | Exploratory; CER/WER improve in this run but exact is lower and seed-stability is not established. |
+| zero-graph ablation | 0.153587 | 0.536638 | 0.415244 | Performance degradation suggests graph branch is used. |

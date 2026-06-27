@@ -1,0 +1,7 @@
+# Table 4. Structural gold diagnostic
+
+Structural gold validates diagnostic usability, not full topological correctness.
+
+| n | foreground_ok | skeleton_ok | graph_ok | structural_usable | line_residual_minor_or_dominant | missed_ink_minor | neighbor_noise_minor | false_ink_minor | htr_error_explained_by_structure | interpretation |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 200 | 1.000 | 1.000 | 1.000 | 1.000 | 44 | 17 | 3 | 1 | not_applicable:116; no:84 | Diagnostic usability validated; not a full topology or pen-trajectory benchmark. |

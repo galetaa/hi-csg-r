@@ -1,0 +1,23 @@
+# Final acceptance checklist
+
+- [x] Table 1 dataset roles готова
+- [x] Table 2 primary HTR 3-seed готова
+- [x] Table 3 domain-wise HTR готова
+- [x] Table 4 structural gold diagnostic готова
+- [x] Table 5 selective prediction готова
+- [x] Table 6 graph-fusion exploratory готова
+- [x] Table 7 claims/limitations готова
+- [x] Figure 1 pipeline готова
+- [x] Figure 2 natural-line context готова
+- [x] Figure 3 seed comparison готова
+- [x] Figure 4 domain-wise ΔCER готова
+- [x] Figure 5 selective coverage-risk готова
+- [x] Figure 6 structural example готова
+- [x] allowed_claims.md готов
+- [x] forbidden_claims.md готов
+- [x] final_narrative.md готов
+- [x] appendix reproducibility готов
+- [x] appendix seed confirmation готов
+- [x] appendix structural gold готов
+- [x] appendix selective clearance готов
+- [x] appendix negative results готов

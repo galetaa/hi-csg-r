@@ -1,0 +1,4 @@
+risk_model,ROC_AUC,PR_AUC,CER@90,CER@80,CER@70,CER@50,domain,notes
+feature_only,0.603645,,0.132357,0.133754,0.134980,0.139034,all,Canonical +10k; leakage clearance PASS_WITH_NOTE
+model_confidence,0.796691,,0.107670,0.091126,0.077067,0.056861,all,Canonical +10k; leakage clearance PASS_WITH_NOTE
+confidence_graph,0.812214,,0.107610,0.092165,0.080918,0.063897,all,Canonical +10k; leakage clearance PASS_WITH_NOTE
