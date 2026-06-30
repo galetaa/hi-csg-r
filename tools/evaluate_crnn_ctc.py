@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -9,6 +10,8 @@ from typing import Any
 import torch
 from torch import nn
 from torch.utils.data import DataLoader
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from src.htr.ctc_decode import greedy_decode
 from src.htr.dataset import HTRDataset, collate_htr_batch

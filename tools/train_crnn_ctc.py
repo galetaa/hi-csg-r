@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import random
+import sys
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -10,7 +11,9 @@ from typing import Any
 import numpy as np
 import torch
 from torch import nn
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, Sampler
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from src.htr.ctc_decode import greedy_decode
 from src.htr.dataset import HTRDataset, collate_htr_batch
@@ -28,6 +31,46 @@ def set_seed(seed: int) -> None:
 
 def mean(xs: list[float]) -> float:
     return sum(xs) / len(xs) if xs else 0.0
+
+
+class FixedBatchSampler(Sampler[list[int]]):
+    def __init__(self, batches: list[list[int]]) -> None:
+        self.batches = batches
+
+    def __iter__(self):
+        yield from self.batches
+
+    def __len__(self) -> int:
+        return len(self.batches)
+
+
+def row_width(row: dict[str, Any]) -> int:
+    info = row.get("image_info")
+    if isinstance(info, dict) and info.get("width") is not None:
+        return int(info["width"])
+    return int(row.get("width", 0) or 0)
+
+
+def make_width_bucket_batches(
+    rows: list[dict[str, Any]],
+    *,
+    batch_size: int,
+    shuffle: bool,
+    seed: int,
+) -> list[list[int]]:
+    indices = list(range(len(rows)))
+    indices.sort(key=lambda idx: row_width(rows[idx]))
+
+    batches = [
+        indices[start:start + batch_size]
+        for start in range(0, len(indices), batch_size)
+    ]
+
+    if shuffle:
+        rng = random.Random(seed)
+        rng.shuffle(batches)
+
+    return batches
 
 
 def apply_blank_logit_penalty(
@@ -216,21 +259,47 @@ def train(args: argparse.Namespace) -> None:
         loader_kwargs["persistent_workers"] = True
         loader_kwargs["prefetch_factor"] = args.prefetch_factor
 
-    train_loader = DataLoader(
-        train_ds,
-        batch_size=args.batch_size,
-        shuffle=True,
-        collate_fn=collate_htr_batch,
-        **loader_kwargs,
-    )
+    if args.bucket_by_width:
+        train_batches = make_width_bucket_batches(
+            train_ds.rows,
+            batch_size=args.batch_size,
+            shuffle=True,
+            seed=args.seed,
+        )
+        val_batches = make_width_bucket_batches(
+            val_ds.rows,
+            batch_size=args.batch_size,
+            shuffle=False,
+            seed=args.seed,
+        )
+        train_loader = DataLoader(
+            train_ds,
+            batch_sampler=FixedBatchSampler(train_batches),
+            collate_fn=collate_htr_batch,
+            **loader_kwargs,
+        )
+        val_loader = DataLoader(
+            val_ds,
+            batch_sampler=FixedBatchSampler(val_batches),
+            collate_fn=collate_htr_batch,
+            **loader_kwargs,
+        )
+    else:
+        train_loader = DataLoader(
+            train_ds,
+            batch_size=args.batch_size,
+            shuffle=True,
+            collate_fn=collate_htr_batch,
+            **loader_kwargs,
+        )
 
-    val_loader = DataLoader(
-        val_ds,
-        batch_size=args.batch_size,
-        shuffle=False,
-        collate_fn=collate_htr_batch,
-        **loader_kwargs,
-    )
+        val_loader = DataLoader(
+            val_ds,
+            batch_size=args.batch_size,
+            shuffle=False,
+            collate_fn=collate_htr_batch,
+            **loader_kwargs,
+        )
 
     model = CRNNCTC(
         num_classes=vocab.num_classes,
@@ -270,7 +339,7 @@ def train(args: argparse.Namespace) -> None:
     history = []
     best_cer = float("inf")
 
-    print(json.dumps(config, ensure_ascii=False, indent=2))
+    print(json.dumps(config, ensure_ascii=False, indent=2), flush=True)
 
     history = []
     history_path = out_dir / "history.json"
@@ -293,7 +362,7 @@ def train(args: argparse.Namespace) -> None:
         if "optimizer" in checkpoint:
             optimizer.load_state_dict(checkpoint["optimizer"])
 
-        if "scaler" in checkpoint and amp_enabled:
+        if "scaler" in checkpoint and checkpoint["scaler"] is not None and amp_enabled:
             scaler.load_state_dict(checkpoint["scaler"])
 
         best_cer = min(
@@ -303,7 +372,8 @@ def train(args: argparse.Namespace) -> None:
 
         print(
             f"resumed from {args.resume}; "
-            f"start_epoch={start_epoch}; best_cer={best_cer:.4f}"
+            f"start_epoch={start_epoch}; best_cer={best_cer:.4f}",
+            flush=True,
         )
 
     for epoch in range(start_epoch, args.epochs + 1):
@@ -359,7 +429,8 @@ def train(args: argparse.Namespace) -> None:
             if batch_idx % args.log_every == 0:
                 print(
                     f"epoch={epoch} batch={batch_idx}/{len(train_loader)} "
-                    f"train_loss={mean(train_losses[-args.log_every:]):.4f}"
+                    f"train_loss={mean(train_losses[-args.log_every:]):.4f}",
+                    flush=True,
                 )
 
             if args.max_train_batches is not None and batch_idx >= args.max_train_batches:
@@ -394,7 +465,8 @@ def train(args: argparse.Namespace) -> None:
             f"pred_len={val_metrics['pred_len_mean']:.2f} "
             f"empty={val_metrics['pred_empty_ratio']:.3f} "
             f"blank={val_metrics['argmax_blank_ratio']:.3f} "
-            f"blank_penalty={current_blank_penalty:.3f}"
+            f"blank_penalty={current_blank_penalty:.3f}",
+            flush=True,
         )
 
         (out_dir / "history.json").write_text(
@@ -421,18 +493,13 @@ def train(args: argparse.Namespace) -> None:
 
         if is_best:
             torch.save(checkpoint, out_dir / "best.pt")
-
-        if val_metrics["cer"] < best_cer:
-            best_cer = val_metrics["cer"]
-            torch.save(checkpoint, out_dir / "best.pt")
-
             (out_dir / "best_val_examples.json").write_text(
                 json.dumps(val_metrics["examples"], ensure_ascii=False, indent=2),
                 encoding="utf-8",
             )
 
-    print("best_val_cer:", best_cer)
-    print("wrote:", out_dir)
+    print("best_val_cer:", best_cer, flush=True)
+    print("wrote:", out_dir, flush=True)
 
 
 def main() -> None:
@@ -445,6 +512,7 @@ def main() -> None:
 
     parser.add_argument("--epochs", type=int, default=3)
     parser.add_argument("--batch_size", type=int, default=32)
+    parser.add_argument("--bucket_by_width", action="store_true")
     parser.add_argument("--num_workers", type=int, default=2)
     parser.add_argument("--prefetch_factor", type=int, default=4)
 

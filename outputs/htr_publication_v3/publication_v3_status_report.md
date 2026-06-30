@@ -1,0 +1,181 @@
+# Publication V3 Status Report
+
+## Plan
+
+Full hardening checklist: `docs/publication_hardening_plan_v1.md`.
+
+## Normalized Fixed-Penalty Evaluation
+
+All rows below use fixed test-time `blank_logit_penalty=-0.4`.
+
+| variant | seed | CER | WER | exact | checkpoint epoch | status |
+|---|---:|---:|---:|---:|---:|---|
+| `tri10k_base` | 42 | 0.1461 | 0.5155 | 0.4383 | 72 | complete |
+| `tri10k_base` | 43 | 0.1494 | 0.5147 | 0.4354 | 74 | complete |
+| `tri10k_base` | 44 | 0.1629 | 0.5575 | 0.3960 | 68 | complete |
+| `line_context_10k` | 42 | 0.1353 | 0.4929 | 0.4629 | 73 | complete |
+| `line_context_10k` | 43 | 0.1372 | 0.4935 | 0.4584 | 76 | complete |
+| `line_context_10k` | 44 | 0.1348 | 0.4828 | 0.4710 | 79 | complete |
+| `random_crops_10k_control` | 42 | 0.1339 | 0.4890 | 0.4661 | 75 | complete |
+| `random_crops_10k_control` | 43 | 0.1372 | 0.4880 | 0.4636 | 62 | complete |
+| `random_crops_10k_control` | 44 | 0.1365 | 0.4913 | 0.4634 | 60 | complete |
+| `school_words_10k_control` | 42 | 0.1354 | 0.4864 | 0.4665 | 77 | complete |
+| `school_words_10k_control` | 43 | 0.1365 | 0.4888 | 0.4634 | 75 | complete |
+| `school_words_10k_control` | 44 | 0.1378 | 0.4854 | 0.4683 | 80 | complete |
+
+## Aggregate By Variant
+
+| variant | completed seeds | mean CER | std CER | mean WER | mean exact |
+|---|---|---:|---:|---:|---:|
+| `tri10k_base` | [42, 43, 44] | 0.1528 | 0.0089 | 0.5293 | 0.4232 |
+| `line_context_10k` | [42, 43, 44] | 0.1358 | 0.0013 | 0.4898 | 0.4641 |
+| `random_crops_10k_control` | [42, 43, 44] | 0.1358 | 0.0017 | 0.4894 | 0.4644 |
+| `school_words_10k_control` | [42, 43, 44] | 0.1366 | 0.0012 | 0.4869 | 0.4661 |
+
+## Normalized Line-Context Effect
+
+Mean base CER: 0.1528. Mean line-context CER: 0.1358. Mean delta CER: -0.0170.
+
+| seed | delta CER | 95% CI | School delta CER | School 95% CI |
+|---:|---:|---:|---:|---:|
+| 42 | -0.0108 | [-0.0147, -0.0067] | -0.0190 | [-0.0267, -0.0114] |
+| 43 | -0.0122 | [-0.0163, -0.0081] | -0.0272 | [-0.0351, -0.0195] |
+| 44 | -0.0281 | [-0.0323, -0.0239] | -0.0341 | [-0.0425, -0.0260] |
+
+## External TrOCR Baseline
+
+- model: `microsoft/trocr-base-handwritten`
+- protocol: pretrained zero-shot generation baseline
+- n: 5563
+- CER: 1.2985
+- WER: 1.4753
+- exact: 0.0040
+
+Interpretation: this is an external pretrained zero-shot reference, not a competitive fine-tuned Russian HTR baseline. The result is weak and cannot satisfy a strong-publication baseline requirement by itself.
+
+## Fine-Tuned TrOCR Baseline
+
+- model: `outputs/htr_publication_v3/trocr_finetuned_tri10k_base/best`
+- protocol: decoder-only TrOCR adaptation; encoder frozen due 6GB GPU memory limit
+- n: 5563
+- CER: 1.2657
+- WER: 1.0343
+- exact: 0.0043
+
+Interpretation: this external baseline is complete but weak. It does not outperform the CRNN controls and should be reported as a negative/limited external-baseline result.
+
+## Full Same-Size Control Status
+
+| control variant | seed | status |
+|---|---:|---|
+| `random_crops_10k_control` | 42 | complete |
+| `random_crops_10k_control` | 43 | complete |
+| `random_crops_10k_control` | 44 | complete |
+| `school_words_10k_control` | 42 | complete |
+| `school_words_10k_control` | 43 | complete |
+| `school_words_10k_control` | 44 | complete |
+
+## Validity Addendum
+
+Full addendum report: `outputs/htr_publication_v3/validity_addendum_v1/report.md`.
+
+Claim boundary:
+- No exact train-test sample/image/file duplication was detected by automated audits.
+- At least one high-risk perceptual near-duplicate candidate was detected; it is too small to explain aggregate metrics, but it should be removed or isolated in a strict publication split.
+- Page/source-image overlap exists for at least one variant; page-disjoint stress rows must be cited alongside all-test metrics.
+- The controlled result remains nuanced: line-context beats the base model, but same-size controls are comparable; the defensible claim is an augmentation/data-volume effect, not a proven unique line-context mechanism.
+- Writer-disjoint validation remains unresolved unless reliable writer_id metadata is added.
+
+Metadata leakage audit, train vs test:
+
+| variant | sample_id overlap | image_path overlap | page overlap | line overlap | text overlap |
+|---|---:|---:|---:|---:|---:|
+| `tri10k_base` | 0 | 0 | 14 | 95 | 857 |
+| `line_context_10k` | 0 | 0 | 14 | 95 | 858 |
+| `random_crops_10k_control` | 0 | 0 | 14 | 100 | 959 |
+| `school_words_10k_control` | 0 | 0 | 14 | 95 | 989 |
+
+Visual duplicate audit:
+
+| variant | SHA1 overlap | dHash candidates | train paths hashed | test paths hashed |
+|---|---:|---:|---:|---:|
+| `tri10k_base` | 0 | 1 | 30000 | 5563 |
+| `line_context_10k` | 0 | 1 | 39998 | 5563 |
+| `random_crops_10k_control` | 0 | 1 | 40000 | 5563 |
+| `school_words_10k_control` | 0 | 1 | 40000 | 5563 |
+
+High-risk dHash near-duplicate candidates:
+
+| train sample | test sample | train text | test text | variants |
+|---|---|---|---|---|
+| `cyr_phrase_054903` | `cyr_phrase_073129` | долларов сша | ) долларов сша | `tri10k_base`, `line_context_10k`, `random_crops_10k_control`, `school_words_10k_control` |
+
+Fixed-penalty dose response:
+
+| run | line train n | CER | WER | exact | delta CER vs base |
+|---|---:|---:|---:|---:|---:|
+| `baseline_0_lines` | 0 | 0.1454 | 0.5127 | 0.4411 | 0.0000 |
+| `plus_2k_lines` | 1998 | 0.1447 | 0.5104 | 0.4436 | -0.0007 |
+| `plus_5k_lines` | 4999 | 0.1360 | 0.4902 | 0.4609 | -0.0095 |
+| `plus_10k_lines` | 9998 | 0.1352 | 0.4923 | 0.4636 | -0.0103 |
+
+- Best fixed-penalty dose row is plus_10k_lines with CER=0.1352.
+- Largest incremental CER decrease is plus_2k_lines -> plus_5k_lines (delta -0.0087).
+- The 5k->10k increment is small, consistent with a plateau rather than a linear data-scaling effect.
+
+## Remaining Addendum
+
+Full addendum report: `outputs/htr_publication_v3/remaining_addendum_v1/report.md`.
+
+Strong internal baselines on the same tri10k test:
+
+| baseline | n | CER | WER | exact | checkpoint epoch | status |
+|---|---:|---:|---:|---:|---:|---|
+| `mixed_cyrillic_natural_full_v1` | 5563 | 0.0822 | 0.3350 | 0.6245 | 46 | complete |
+| `mixed_cyrillic_balanced50k_v1` | 5563 | 0.0979 | 0.3853 | 0.5774 | 47 | complete |
+
+Baseline interpretation: The only cached external HuggingFace OCR/HTR model found is TrOCR-base-handwritten. The additional strong baselines are internal CRNN baselines trained on larger in-domain data; they are useful for positioning but are not external SOTA.
+Cached HuggingFace models: `['bert-base-uncased', 'microsoft/trocr-base-handwritten']`.
+
+Page-disjoint HKR+School status:
+- manifest ready: True
+- 3-seed full retrain complete: False
+- run status: `outputs/htr_publication_v3/page_disjoint_hkr_school_v1/run_status.json`
+- full command: `python -u tools/run_page_disjoint_hkr_school_v1.py --seeds 42 43 44 --epochs 80 --num_workers 4`
+
+| variant | seed | last epoch | best exists | eval returncode | status |
+|---|---:|---:|---|---:|---|
+| `page_base` | 42 | 80 | True | 0 | complete |
+| `page_base` | 43 | None | None | None | running |
+
+Annotation reliability:
+- report: `outputs/htr_publication_v3/annotation_reliability_addendum_v1/report.md`
+- repeated annotation overlap n: 40
+- independent package ready: True
+- independent browser: `outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_browser.html`
+- expected filled CSV: `outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_second_filled.csv`
+- independent minimally complete rows: 0
+- formal IAA ready: False
+- weak fields: `['audit_usable', 'ink_visible_ok', 'endpoint_error', 'junction_error', 'critical_topology_error', 'graph_quality_0_3']`
+- claim boundary: The new page-disjoint manifests make the required strict retraining feasible and reproducible. Until the long retrain finishes, they should be reported as prepared/queued rather than final result evidence.
+
+## Publication Assessment
+
+Completed now:
+- fixed-penalty normalized 3-seed base-vs-line evaluation
+- paired CI for normalized base-vs-line comparisons
+- completed 3-seed from-scratch same-size random-crop and School-word controls
+- external pretrained TrOCR zero-shot baseline on the full test split
+- fine-tuned/decode-adapted external TrOCR baseline on the full test split
+- automated metadata leakage, visual duplicate, group-stress, domain, error, and fixed dose-response addendum
+- strict HKR+School page-disjoint manifests and train-page-only line augmentation setup
+- annotation repeated-consistency addendum and Wilson intervals for line-quality checks
+- blind second-annotation package for formal IAA
+- strong data-rich internal CRNN baselines on the same tri10k test
+
+Still missing:
+- formal independent inter-annotator agreement
+- competitive external Russian/Cyrillic HTR baseline beyond cached TrOCR
+- completed 3-seed page-disjoint from-scratch retraining
+
+Verdict: full same-size v3 controls and validity addenda are complete, and strict page-disjoint manifests are prepared; journal-level readiness is still blocked by pending 3-seed page-disjoint retraining, formal independent IAA, lack of a competitive external Russian/Cyrillic HTR baseline.

@@ -1,0 +1,22 @@
+{
+  "source": "outputs/h2_gold_audit_v1/annotations/annotation_100_filled.csv",
+  "browser_source": "outputs/h2_gold_audit_v1/browser_audit_100.html",
+  "out_dir": "outputs/htr_publication_v3/independent_annotation_v1",
+  "seed": 20260630,
+  "n": 100,
+  "precomputed_views_used": 100,
+  "template_csv": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_second_template.csv",
+  "browser": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_browser.html",
+  "protocol": "outputs/htr_publication_v3/independent_annotation_v1/protocol.md",
+  "expected_filled_csv": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_second_filled.csv",
+  "blinding": {
+    "hidden_from_browser": [
+      "previous labels",
+      "cer",
+      "pred",
+      "target",
+      "structural_risk_score",
+      "audit_cell"
+    ]
+  }
+}

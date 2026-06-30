@@ -1,0 +1,434 @@
+{
+  "annotations": "outputs/iter2_structural_gold_v1/annotations_structural_filled.csv",
+  "sample_plan": "outputs/iter2_structural_gold_v1/sample_plan.json",
+  "n": 200,
+  "sample_plan_summary": {
+    "seed": 42,
+    "target_total": 200,
+    "actual_total": 200,
+    "targets": {
+      "clean_core_correct": 40,
+      "hard_real_correct": 40,
+      "hard_real_error": 40,
+      "high_confidence_error": 30,
+      "rejected_correct_low_confidence": 30,
+      "numeric_mixed_rare_format": 20
+    },
+    "actual_counts": {
+      "clean_core_correct": 40,
+      "hard_real_correct": 40,
+      "hard_real_error": 40,
+      "high_confidence_error": 30,
+      "rejected_correct_low_confidence": 30,
+      "numeric_mixed_rare_format": 20
+    },
+    "dataset_counts": {
+      "school_notebooks_clean": 156,
+      "cyrillic_handwriting": 18,
+      "hkr_words": 26
+    },
+    "token_type_counts": {
+      "alpha": 123,
+      "mixed": 74,
+      "numeric": 3
+    },
+    "notes": [
+      "Samples are selected from test split for structural gold annotation.",
+      "Predictions/risk use plus_10k_context confidence_graph artifacts.",
+      "Duplicate sample_ids are removed across strata by priority order."
+    ]
+  },
+  "dataset_counts": {
+    "school_notebooks_clean": 156,
+    "cyrillic_handwriting": 18,
+    "hkr_words": 26
+  },
+  "stratum_counts": {
+    "clean_core_correct": 40,
+    "hard_real_correct": 40,
+    "hard_real_error": 40,
+    "high_confidence_error": 30,
+    "rejected_correct_low_confidence": 30,
+    "numeric_mixed_rare_format": 20
+  },
+  "token_type_counts": {
+    "alpha": 123,
+    "mixed": 74,
+    "numeric": 3
+  },
+  "overall_bool": {
+    "structural_usable": {
+      "n": 200,
+      "count": 200,
+      "rate": 1.0,
+      "wilson95_low": 0.9811539940816791,
+      "wilson95_high": 1.0
+    },
+    "foreground_ok": {
+      "n": 200,
+      "count": 200,
+      "rate": 1.0,
+      "wilson95_low": 0.9811539940816791,
+      "wilson95_high": 1.0
+    },
+    "skeleton_ok": {
+      "n": 200,
+      "count": 200,
+      "rate": 1.0,
+      "wilson95_low": 0.9811539940816791,
+      "wilson95_high": 1.0
+    },
+    "graph_ok": {
+      "n": 200,
+      "count": 200,
+      "rate": 1.0,
+      "wilson95_low": 0.9811539940816791,
+      "wilson95_high": 1.0
+    }
+  },
+  "severity": {
+    "line_residual": {
+      "n": 200,
+      "none": 156,
+      "minor": 21,
+      "severe_or_dominant": 23,
+      "minor_or_more_rate": 0.22,
+      "severe_or_dominant_rate": 0.115
+    },
+    "neighbor_noise": {
+      "n": 200,
+      "none": 197,
+      "minor": 3,
+      "severe_or_dominant": 0,
+      "minor_or_more_rate": 0.015,
+      "severe_or_dominant_rate": 0.0
+    },
+    "missed_ink": {
+      "n": 200,
+      "none": 183,
+      "minor": 17,
+      "severe_or_dominant": 0,
+      "minor_or_more_rate": 0.085,
+      "severe_or_dominant_rate": 0.0
+    },
+    "false_ink": {
+      "n": 200,
+      "none": 199,
+      "minor": 1,
+      "severe_or_dominant": 0,
+      "minor_or_more_rate": 0.005,
+      "severe_or_dominant_rate": 0.0
+    },
+    "false_branches": {
+      "n": 200,
+      "none": 200,
+      "minor": 0,
+      "severe_or_dominant": 0,
+      "minor_or_more_rate": 0.0,
+      "severe_or_dominant_rate": 0.0
+    },
+    "broken_strokes": {
+      "n": 200,
+      "none": 200,
+      "minor": 0,
+      "severe_or_dominant": 0,
+      "minor_or_more_rate": 0.0,
+      "severe_or_dominant_rate": 0.0
+    },
+    "overconnected": {
+      "n": 200,
+      "none": 199,
+      "minor": 1,
+      "severe_or_dominant": 0,
+      "minor_or_more_rate": 0.005,
+      "severe_or_dominant_rate": 0.0
+    },
+    "segmentation_issue": {
+      "n": 200,
+      "none": 200,
+      "minor": 0,
+      "severe_or_dominant": 0,
+      "minor_or_more_rate": 0.0,
+      "severe_or_dominant_rate": 0.0
+    }
+  },
+  "by_dataset": {
+    "cyrillic_handwriting": {
+      "structural_usable": {
+        "n": 18,
+        "count": 18,
+        "rate": 1.0,
+        "wilson95_low": 0.8241154494176252,
+        "wilson95_high": 1.0
+      },
+      "foreground_ok": {
+        "n": 18,
+        "count": 18,
+        "rate": 1.0,
+        "wilson95_low": 0.8241154494176252,
+        "wilson95_high": 1.0
+      },
+      "skeleton_ok": {
+        "n": 18,
+        "count": 18,
+        "rate": 1.0,
+        "wilson95_low": 0.8241154494176252,
+        "wilson95_high": 1.0
+      },
+      "graph_ok": {
+        "n": 18,
+        "count": 18,
+        "rate": 1.0,
+        "wilson95_low": 0.8241154494176252,
+        "wilson95_high": 1.0
+      }
+    },
+    "hkr_words": {
+      "structural_usable": {
+        "n": 26,
+        "count": 26,
+        "rate": 1.0,
+        "wilson95_low": 0.8712669561953784,
+        "wilson95_high": 1.0000000000000002
+      },
+      "foreground_ok": {
+        "n": 26,
+        "count": 26,
+        "rate": 1.0,
+        "wilson95_low": 0.8712669561953784,
+        "wilson95_high": 1.0000000000000002
+      },
+      "skeleton_ok": {
+        "n": 26,
+        "count": 26,
+        "rate": 1.0,
+        "wilson95_low": 0.8712669561953784,
+        "wilson95_high": 1.0000000000000002
+      },
+      "graph_ok": {
+        "n": 26,
+        "count": 26,
+        "rate": 1.0,
+        "wilson95_low": 0.8712669561953784,
+        "wilson95_high": 1.0000000000000002
+      }
+    },
+    "school_notebooks_clean": {
+      "structural_usable": {
+        "n": 156,
+        "count": 156,
+        "rate": 1.0,
+        "wilson95_low": 0.9759662065444789,
+        "wilson95_high": 0.9999999999999999
+      },
+      "foreground_ok": {
+        "n": 156,
+        "count": 156,
+        "rate": 1.0,
+        "wilson95_low": 0.9759662065444789,
+        "wilson95_high": 0.9999999999999999
+      },
+      "skeleton_ok": {
+        "n": 156,
+        "count": 156,
+        "rate": 1.0,
+        "wilson95_low": 0.9759662065444789,
+        "wilson95_high": 0.9999999999999999
+      },
+      "graph_ok": {
+        "n": 156,
+        "count": 156,
+        "rate": 1.0,
+        "wilson95_low": 0.9759662065444789,
+        "wilson95_high": 0.9999999999999999
+      }
+    }
+  },
+  "by_stratum": {
+    "clean_core_correct": {
+      "structural_usable": {
+        "n": 40,
+        "count": 40,
+        "rate": 1.0,
+        "wilson95_low": 0.9123754607496077,
+        "wilson95_high": 1.0
+      },
+      "foreground_ok": {
+        "n": 40,
+        "count": 40,
+        "rate": 1.0,
+        "wilson95_low": 0.9123754607496077,
+        "wilson95_high": 1.0
+      },
+      "skeleton_ok": {
+        "n": 40,
+        "count": 40,
+        "rate": 1.0,
+        "wilson95_low": 0.9123754607496077,
+        "wilson95_high": 1.0
+      },
+      "graph_ok": {
+        "n": 40,
+        "count": 40,
+        "rate": 1.0,
+        "wilson95_low": 0.9123754607496077,
+        "wilson95_high": 1.0
+      }
+    },
+    "hard_real_correct": {
+      "structural_usable": {
+        "n": 40,
+        "count": 40,
+        "rate": 1.0,
+        "wilson95_low": 0.9123754607496077,
+        "wilson95_high": 1.0
+      },
+      "foreground_ok": {
+        "n": 40,
+        "count": 40,
+        "rate": 1.0,
+        "wilson95_low": 0.9123754607496077,
+        "wilson95_high": 1.0
+      },
+      "skeleton_ok": {
+        "n": 40,
+        "count": 40,
+        "rate": 1.0,
+        "wilson95_low": 0.9123754607496077,
+        "wilson95_high": 1.0
+      },
+      "graph_ok": {
+        "n": 40,
+        "count": 40,
+        "rate": 1.0,
+        "wilson95_low": 0.9123754607496077,
+        "wilson95_high": 1.0
+      }
+    },
+    "hard_real_error": {
+      "structural_usable": {
+        "n": 40,
+        "count": 40,
+        "rate": 1.0,
+        "wilson95_low": 0.9123754607496077,
+        "wilson95_high": 1.0
+      },
+      "foreground_ok": {
+        "n": 40,
+        "count": 40,
+        "rate": 1.0,
+        "wilson95_low": 0.9123754607496077,
+        "wilson95_high": 1.0
+      },
+      "skeleton_ok": {
+        "n": 40,
+        "count": 40,
+        "rate": 1.0,
+        "wilson95_low": 0.9123754607496077,
+        "wilson95_high": 1.0
+      },
+      "graph_ok": {
+        "n": 40,
+        "count": 40,
+        "rate": 1.0,
+        "wilson95_low": 0.9123754607496077,
+        "wilson95_high": 1.0
+      }
+    },
+    "high_confidence_error": {
+      "structural_usable": {
+        "n": 30,
+        "count": 30,
+        "rate": 1.0,
+        "wilson95_low": 0.8864829086095221,
+        "wilson95_high": 1.0
+      },
+      "foreground_ok": {
+        "n": 30,
+        "count": 30,
+        "rate": 1.0,
+        "wilson95_low": 0.8864829086095221,
+        "wilson95_high": 1.0
+      },
+      "skeleton_ok": {
+        "n": 30,
+        "count": 30,
+        "rate": 1.0,
+        "wilson95_low": 0.8864829086095221,
+        "wilson95_high": 1.0
+      },
+      "graph_ok": {
+        "n": 30,
+        "count": 30,
+        "rate": 1.0,
+        "wilson95_low": 0.8864829086095221,
+        "wilson95_high": 1.0
+      }
+    },
+    "numeric_mixed_rare_format": {
+      "structural_usable": {
+        "n": 20,
+        "count": 20,
+        "rate": 1.0,
+        "wilson95_low": 0.8388698745050668,
+        "wilson95_high": 0.9999999999999999
+      },
+      "foreground_ok": {
+        "n": 20,
+        "count": 20,
+        "rate": 1.0,
+        "wilson95_low": 0.8388698745050668,
+        "wilson95_high": 0.9999999999999999
+      },
+      "skeleton_ok": {
+        "n": 20,
+        "count": 20,
+        "rate": 1.0,
+        "wilson95_low": 0.8388698745050668,
+        "wilson95_high": 0.9999999999999999
+      },
+      "graph_ok": {
+        "n": 20,
+        "count": 20,
+        "rate": 1.0,
+        "wilson95_low": 0.8388698745050668,
+        "wilson95_high": 0.9999999999999999
+      }
+    },
+    "rejected_correct_low_confidence": {
+      "structural_usable": {
+        "n": 30,
+        "count": 30,
+        "rate": 1.0,
+        "wilson95_low": 0.8864829086095221,
+        "wilson95_high": 1.0
+      },
+      "foreground_ok": {
+        "n": 30,
+        "count": 30,
+        "rate": 1.0,
+        "wilson95_low": 0.8864829086095221,
+        "wilson95_high": 1.0
+      },
+      "skeleton_ok": {
+        "n": 30,
+        "count": 30,
+        "rate": 1.0,
+        "wilson95_low": 0.8864829086095221,
+        "wilson95_high": 1.0
+      },
+      "graph_ok": {
+        "n": 30,
+        "count": 30,
+        "rate": 1.0,
+        "wilson95_low": 0.8864829086095221,
+        "wilson95_high": 1.0
+      }
+    }
+  },
+  "htr_error_explained_by_structure": {
+    "not_applicable": 116,
+    "no": 84
+  },
+  "publication_interpretation": "This addendum supports diagnostic usability only. It does not establish pixel-level or graph-topology ground truth because annotation fields are coarse binary/severity judgments and no inter-annotator agreement is available."
+}

@@ -1,0 +1,144 @@
+{
+  "baseline": "TrOCR",
+  "model_id": "microsoft/trocr-base-handwritten",
+  "protocol": "pretrained zero-shot generation baseline",
+  "manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/test.jsonl",
+  "device": "cpu",
+  "batch_size": 2,
+  "max_samples": 8,
+  "max_new_tokens": 64,
+  "num_beams": 1,
+  "fp16": false,
+  "local_files_only": true,
+  "metrics": {
+    "n": 8,
+    "cer": 1.325011671335201,
+    "wer": 1.6458333333333335,
+    "exact": 0.0,
+    "pred_len_mean": 13.625,
+    "pred_empty_ratio": 0.0,
+    "grouped": {
+      "hkr_words|phrase|None": {
+        "n": 3,
+        "cer": 1.1603485838779957,
+        "wer": 1.388888888888889,
+        "exact": 0.0
+      },
+      "cyrillic_handwriting|word|None": {
+        "n": 1,
+        "cer": 1.2857142857142858,
+        "wer": 1.0,
+        "exact": 0.0
+      },
+      "hkr_words|word|None": {
+        "n": 2,
+        "cer": 1.5,
+        "wer": 2.5,
+        "exact": 0.0
+      },
+      "school_notebooks_clean|word|pupil_text": {
+        "n": 1,
+        "cer": 2.0,
+        "wer": 2.0,
+        "exact": 0.0
+      },
+      "school_notebooks_clean|phrase|pupil_text": {
+        "n": 1,
+        "cer": 0.8333333333333334,
+        "wer": 1.0,
+        "exact": 0.0
+      }
+    },
+    "examples": [
+      {
+        "sample_id": "hkr_words_043599",
+        "dataset": "hkr_words",
+        "target": "где цветут моих",
+        "pred": "Tge ye Benny m. Moux",
+        "cer": 1.2,
+        "wer": 1.6666666666666667,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_053384",
+        "dataset": "hkr_words",
+        "target": "но ты не снизошло",
+        "pred": "to run the Cungoureco",
+        "cer": 1.0588235294117647,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "cyr_word_073525",
+        "dataset": "cyrillic_handwriting",
+        "target": "справка",
+        "pred": "enjectory",
+        "cer": 1.2857142857142858,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_016081",
+        "dataset": "hkr_words",
+        "target": "павлодарская",
+        "pred": "Tombreux guapricus a",
+        "cer": 1.6666666666666667,
+        "wer": 3.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_030911",
+        "dataset": "hkr_words",
+        "target": "заводской",
+        "pred": "3a bogcuconi",
+        "cer": 1.3333333333333333,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0307431",
+        "dataset": "school_notebooks_clean",
+        "target": "было",
+        "pred": "drains .",
+        "cer": 2.0,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "hkr_words_045386",
+        "dataset": "hkr_words",
+        "target": "свет она.",
+        "pred": "chemn o'leu .",
+        "cer": 1.2222222222222223,
+        "wer": 1.5,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0309227",
+        "dataset": "school_notebooks_clean",
+        "target": "либо -",
+        "pred": "audio-",
+        "cer": 0.8333333333333334,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": "pupil_text"
+      }
+    ]
+  },
+  "publication_limitation": "This is an external pretrained zero-shot baseline. It is useful as an off-the-shelf reference, but it is not a substitute for a fine-tuned transformer HTR baseline under the same train/test protocol."
+}

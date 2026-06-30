@@ -1,0 +1,624 @@
+{
+  "baseline": "TrOCR",
+  "model_id": "microsoft/trocr-base-handwritten",
+  "protocol": "pretrained zero-shot generation baseline",
+  "manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/test.jsonl",
+  "device": "cuda",
+  "batch_size": 4,
+  "max_samples": null,
+  "max_new_tokens": 64,
+  "num_beams": 1,
+  "fp16": true,
+  "local_files_only": true,
+  "metrics": {
+    "n": 5563,
+    "cer": 1.2985233942724257,
+    "wer": 1.4752891125891299,
+    "exact": 0.003954700701060579,
+    "pred_len_mean": 11.210318173647313,
+    "pred_empty_ratio": 0.0,
+    "grouped": {
+      "hkr_words|phrase|None": {
+        "n": 910,
+        "cer": 1.1216367532498495,
+        "wer": 1.3183150183150179,
+        "exact": 0.0
+      },
+      "cyrillic_handwriting|word|None": {
+        "n": 1100,
+        "cer": 1.3145892799580852,
+        "wer": 1.56,
+        "exact": 0.01
+      },
+      "hkr_words|word|None": {
+        "n": 1090,
+        "cer": 1.4080448890918396,
+        "wer": 1.7128440366972477,
+        "exact": 0.0
+      },
+      "school_notebooks_clean|word|pupil_text": {
+        "n": 1851,
+        "cer": 1.3502920941535186,
+        "wer": 1.4300378173960022,
+        "exact": 0.004862236628849271
+      },
+      "school_notebooks_clean|phrase|pupil_text": {
+        "n": 16,
+        "cer": 0.9812003968253968,
+        "wer": 0.90625,
+        "exact": 0.0
+      },
+      "cyrillic_handwriting|phrase|None": {
+        "n": 463,
+        "cer": 1.1122079534058216,
+        "wer": 1.2502519798416125,
+        "exact": 0.0021598272138228943
+      },
+      "school_notebooks_clean|word|pupil_comment": {
+        "n": 101,
+        "cer": 1.451815181518152,
+        "wer": 1.3465346534653466,
+        "exact": 0.009900990099009901
+      },
+      "school_notebooks_clean|word|teacher_comment": {
+        "n": 32,
+        "cer": 1.421986607142857,
+        "wer": 1.5,
+        "exact": 0.0
+      }
+    },
+    "examples": [
+      {
+        "sample_id": "hkr_words_043599",
+        "dataset": "hkr_words",
+        "target": "где цветут моих",
+        "pred": "Tge ye Benny m. Moux",
+        "cer": 1.2,
+        "wer": 1.6666666666666667,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_053384",
+        "dataset": "hkr_words",
+        "target": "но ты не снизошло",
+        "pred": "to run the Cungoureco",
+        "cer": 1.0588235294117647,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "cyr_word_073525",
+        "dataset": "cyrillic_handwriting",
+        "target": "справка",
+        "pred": "enjectory",
+        "cer": 1.2857142857142858,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_016081",
+        "dataset": "hkr_words",
+        "target": "павлодарская",
+        "pred": "Tombreux guapricos a",
+        "cer": 1.6666666666666667,
+        "wer": 3.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_030911",
+        "dataset": "hkr_words",
+        "target": "заводской",
+        "pred": "3a bogcuconi",
+        "cer": 1.3333333333333333,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0307431",
+        "dataset": "school_notebooks_clean",
+        "target": "было",
+        "pred": "drains .",
+        "cer": 2.0,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "hkr_words_045386",
+        "dataset": "hkr_words",
+        "target": "свет она.",
+        "pred": "chemn o'leu .",
+        "cer": 1.2222222222222223,
+        "wer": 1.5,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0309227",
+        "dataset": "school_notebooks_clean",
+        "target": "либо -",
+        "pred": "audio-",
+        "cer": 0.8333333333333334,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "hkr_words_053971",
+        "dataset": "hkr_words",
+        "target": "о нежности, о славе,",
+        "pred": "other # Response , O. cerease ,",
+        "cer": 1.3,
+        "wer": 1.75,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0313004",
+        "dataset": "school_notebooks_clean",
+        "target": "аустер-",
+        "pred": "stycrep-",
+        "cer": 1.0,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "hkr_words_062461",
+        "dataset": "hkr_words",
+        "target": "опять, как",
+        "pred": "Onermo ,xxx",
+        "cer": 1.0,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0312613",
+        "dataset": "school_notebooks_clean",
+        "target": "жизни",
+        "pred": "sucuayan",
+        "cer": 1.6,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "cyr_phrase_072767",
+        "dataset": "cyrillic_handwriting",
+        "target": "стипендию получаю",
+        "pred": "Grundergins moneylaws .",
+        "cer": 1.2941176470588236,
+        "wer": 1.5,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0298209",
+        "dataset": "school_notebooks_clean",
+        "target": "за-",
+        "pred": "3a.",
+        "cer": 1.0,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "school_notebooks_test_0318947",
+        "dataset": "school_notebooks_clean",
+        "target": "1ск",
+        "pred": "1ch.",
+        "cer": 1.0,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_comment"
+      },
+      {
+        "sample_id": "school_notebooks_test_0301406",
+        "dataset": "school_notebooks_clean",
+        "target": "ёлочка.",
+        "pred": "discourse",
+        "cer": 1.2857142857142858,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "cyr_word_073589",
+        "dataset": "cyrillic_handwriting",
+        "target": "способна",
+        "pred": "crocorne .",
+        "cer": 1.25,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_011657",
+        "dataset": "hkr_words",
+        "target": "молдавия",
+        "pred": "illangabine",
+        "cer": 1.375,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0321809",
+        "dataset": "school_notebooks_clean",
+        "target": "всю",
+        "pred": "boro .",
+        "cer": 2.0,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "cyr_word_072619",
+        "dataset": "cyrillic_handwriting",
+        "target": "детализация",
+        "pred": "operannique",
+        "cer": 1.0,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "cyr_phrase_072858",
+        "dataset": "cyrillic_handwriting",
+        "target": "по распределению",
+        "pred": "no parimpegenerino",
+        "cer": 1.0625,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_050474",
+        "dataset": "hkr_words",
+        "target": "до полярных льдов,",
+        "pred": "to newspaper , is told",
+        "cer": 1.1111111111111112,
+        "wer": 1.6666666666666667,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0298681",
+        "dataset": "school_notebooks_clean",
+        "target": "зверью,",
+        "pred": "greenwind ,",
+        "cer": 1.4285714285714286,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "school_notebooks_test_0302336",
+        "dataset": "school_notebooks_clean",
+        "target": "четырнадцатое",
+        "pred": "Yenne passage ,",
+        "cer": 1.1538461538461537,
+        "wer": 3.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "hkr_words_016376",
+        "dataset": "hkr_words",
+        "target": "павлодарская",
+        "pred": "tribecogapaceae",
+        "cer": 1.25,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_013406",
+        "dataset": "hkr_words",
+        "target": "актюбинская",
+        "pred": "extemptions of America",
+        "cer": 2.0,
+        "wer": 3.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_043028",
+        "dataset": "hkr_words",
+        "target": "законов судьбы.",
+        "pred": "zarcorlab cygwise .",
+        "cer": 1.1333333333333333,
+        "wer": 1.5,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_029822",
+        "dataset": "hkr_words",
+        "target": "аксу",
+        "pred": "tuxy .",
+        "cer": 1.5,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "cyr_word_073069",
+        "dataset": "cyrillic_handwriting",
+        "target": "если",
+        "pred": "eem",
+        "cer": 1.0,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0296429",
+        "dataset": "school_notebooks_clean",
+        "target": "уперев",
+        "pred": "yrepel",
+        "cer": 1.0,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "school_notebooks_test_0300588",
+        "dataset": "school_notebooks_clean",
+        "target": "грачей",
+        "pred": "unwomen .",
+        "cer": 1.5,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "cyr_word_073483",
+        "dataset": "cyrillic_handwriting",
+        "target": "221000",
+        "pred": "22,000",
+        "cer": 0.16666666666666666,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "cyr_word_073394",
+        "dataset": "cyrillic_handwriting",
+        "target": "функция",
+        "pred": "disguences .",
+        "cer": 1.7142857142857142,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "cyr_word_073013",
+        "dataset": "cyrillic_handwriting",
+        "target": "характеристика",
+        "pred": "xapakrepucruka",
+        "cer": 1.0,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_003425",
+        "dataset": "hkr_words",
+        "target": "но волчат не тронул,",
+        "pred": "to bonzais re reponym ,",
+        "cer": 0.95,
+        "wer": 1.25,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0312984",
+        "dataset": "school_notebooks_clean",
+        "target": "это",
+        "pred": "ymo",
+        "cer": 1.0,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "hkr_words_046800",
+        "dataset": "hkr_words",
+        "target": "не разлучит.",
+        "pred": "He playrum .",
+        "cer": 0.8333333333333334,
+        "wer": 1.5,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0306388",
+        "dataset": "school_notebooks_clean",
+        "target": "близкое",
+        "pred": "simessee .",
+        "cer": 1.4285714285714286,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "hkr_words_035561",
+        "dataset": "hkr_words",
+        "target": "люди.",
+        "pred": "llough ,",
+        "cer": 1.6,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_023508",
+        "dataset": "hkr_words",
+        "target": "актюбинская",
+        "pred": "Hic-modulences",
+        "cer": 1.2727272727272727,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0322949",
+        "dataset": "school_notebooks_clean",
+        "target": "его",
+        "pred": "no",
+        "cer": 1.0,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "cyr_word_073224",
+        "dataset": "cyrillic_handwriting",
+        "target": "погрешность",
+        "pred": "morpetments .",
+        "cer": 1.1818181818181819,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "cyr_word_073055",
+        "dataset": "cyrillic_handwriting",
+        "target": "прямоугольник",
+        "pred": "unnecessary",
+        "cer": 1.0,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0300510",
+        "dataset": "school_notebooks_clean",
+        "target": "колючки",
+        "pred": "minimum",
+        "cer": 1.0,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "school_notebooks_test_0299778",
+        "dataset": "school_notebooks_clean",
+        "target": "он",
+        "pred": "dry .",
+        "cer": 2.5,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "hkr_words_055152",
+        "dataset": "hkr_words",
+        "target": "как некогда в",
+        "pred": "have seencroops to",
+        "cer": 1.2307692307692308,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "phrase",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_013698",
+        "dataset": "hkr_words",
+        "target": "актюбинская",
+        "pred": "African Rescue-",
+        "cer": 1.3636363636363635,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "hkr_words_022880",
+        "dataset": "hkr_words",
+        "target": "район",
+        "pred": "paucore .",
+        "cer": 1.8,
+        "wer": 2.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      },
+      {
+        "sample_id": "school_notebooks_test_0311166",
+        "dataset": "school_notebooks_clean",
+        "target": "(робот-",
+        "pred": "freedom-",
+        "cer": 1.0,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": "pupil_text"
+      },
+      {
+        "sample_id": "hkr_words_011535",
+        "dataset": "hkr_words",
+        "target": "молдавия",
+        "pred": "disengine",
+        "cer": 1.125,
+        "wer": 1.0,
+        "exact": 0.0,
+        "level": "word",
+        "category": null
+      }
+    ]
+  },
+  "publication_limitation": "This is an external pretrained zero-shot baseline. It is useful as an off-the-shelf reference, but it is not a substitute for a fine-tuned transformer HTR baseline under the same train/test protocol."
+}

@@ -1,0 +1,128 @@
+{
+  "package": "independent_annotation_v1_score",
+  "reference": "outputs/h2_gold_audit_v1/annotations/annotation_100_filled.csv",
+  "second": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_second_filled.csv",
+  "reference_rows": 100,
+  "second_rows": 0,
+  "matched_sample_ids": 0,
+  "minimally_complete_rows": 0,
+  "is_formal_iaa_ready": false,
+  "field_metrics": {
+    "audit_usable": {
+      "n_compared": 0,
+      "agreement_count": 0,
+      "agreement_rate": null,
+      "agreement_wilson95_low": null,
+      "agreement_wilson95_high": null,
+      "cohen_kappa": null,
+      "quadratic_weighted_kappa": null,
+      "missing_reference": 0,
+      "missing_second": 0
+    },
+    "ink_visible_ok": {
+      "n_compared": 0,
+      "agreement_count": 0,
+      "agreement_rate": null,
+      "agreement_wilson95_low": null,
+      "agreement_wilson95_high": null,
+      "cohen_kappa": null,
+      "quadratic_weighted_kappa": null,
+      "missing_reference": 0,
+      "missing_second": 0
+    },
+    "skeleton_follows_ink": {
+      "n_compared": 0,
+      "agreement_count": 0,
+      "agreement_rate": null,
+      "agreement_wilson95_low": null,
+      "agreement_wilson95_high": null,
+      "cohen_kappa": null,
+      "quadratic_weighted_kappa": null,
+      "missing_reference": 0,
+      "missing_second": 0
+    },
+    "missed_visible_stroke": {
+      "n_compared": 0,
+      "agreement_count": 0,
+      "agreement_rate": null,
+      "agreement_wilson95_low": null,
+      "agreement_wilson95_high": null,
+      "cohen_kappa": null,
+      "quadratic_weighted_kappa": null,
+      "missing_reference": 0,
+      "missing_second": 0
+    },
+    "spurious_stroke": {
+      "n_compared": 0,
+      "agreement_count": 0,
+      "agreement_rate": null,
+      "agreement_wilson95_low": null,
+      "agreement_wilson95_high": null,
+      "cohen_kappa": null,
+      "quadratic_weighted_kappa": null,
+      "missing_reference": 0,
+      "missing_second": 0
+    },
+    "endpoint_error": {
+      "n_compared": 0,
+      "agreement_count": 0,
+      "agreement_rate": null,
+      "agreement_wilson95_low": null,
+      "agreement_wilson95_high": null,
+      "cohen_kappa": null,
+      "quadratic_weighted_kappa": null,
+      "missing_reference": 0,
+      "missing_second": 0
+    },
+    "junction_error": {
+      "n_compared": 0,
+      "agreement_count": 0,
+      "agreement_rate": null,
+      "agreement_wilson95_low": null,
+      "agreement_wilson95_high": null,
+      "cohen_kappa": null,
+      "quadratic_weighted_kappa": null,
+      "missing_reference": 0,
+      "missing_second": 0
+    },
+    "loop_error": {
+      "n_compared": 0,
+      "agreement_count": 0,
+      "agreement_rate": null,
+      "agreement_wilson95_low": null,
+      "agreement_wilson95_high": null,
+      "cohen_kappa": null,
+      "quadratic_weighted_kappa": null,
+      "missing_reference": 0,
+      "missing_second": 0
+    },
+    "critical_topology_error": {
+      "n_compared": 0,
+      "agreement_count": 0,
+      "agreement_rate": null,
+      "agreement_wilson95_low": null,
+      "agreement_wilson95_high": null,
+      "cohen_kappa": null,
+      "quadratic_weighted_kappa": null,
+      "missing_reference": 0,
+      "missing_second": 0
+    },
+    "graph_quality_0_3": {
+      "n_compared": 0,
+      "agreement_count": 0,
+      "agreement_rate": null,
+      "agreement_wilson95_low": null,
+      "agreement_wilson95_high": null,
+      "cohen_kappa": null,
+      "quadratic_weighted_kappa": null,
+      "missing_reference": 0,
+      "missing_second": 0
+    }
+  },
+  "disagreement_examples": [],
+  "completion_by_row": [],
+  "publication_interpretation": {
+    "supported_if_independent": "If the second CSV was filled by a genuinely independent annotator, these metrics support formal inter-annotator agreement reporting for fields with adequate n.",
+    "not_supported_if_same_annotator_or_ai": "If the second CSV was filled by the same annotator or by an AI assistant, report this as repeated/AI consistency rather than formal independent IAA."
+  }
+}

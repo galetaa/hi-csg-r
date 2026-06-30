@@ -1,0 +1,212 @@
+[
+  {
+    "sample_id": "school_notebooks_val_0273850",
+    "target": "новые",
+    "pred": "новые",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0282339",
+    "target": "4.",
+    "pred": "4.",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "cyr_word_007259",
+    "target": "чные",
+    "pred": "чныс",
+    "cer": 0.25,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "hkr_words_032159",
+    "target": "хромтау",
+    "pred": "промтау",
+    "cer": 0.14285714285714285,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0293505",
+    "target": "очень",
+    "pred": "очень",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "hkr_words_027631",
+    "target": "риддер",
+    "pred": "гиддер",
+    "cer": 0.16666666666666666,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "cyr_word_013770",
+    "target": "07.03.13",
+    "pred": "0703.13",
+    "cer": 0.125,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "hkr_words_049951",
+    "target": "качая колыбель",
+    "pred": "качая колыбель",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "cyr_word_071701",
+    "target": "личные",
+    "pred": "миные",
+    "cer": 0.3333333333333333,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0275147",
+    "target": "дуб",
+    "pred": "дуб",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0275139",
+    "target": "4/5.",
+    "pred": "4/5.",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0276929",
+    "target": "реки",
+    "pred": "реки",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "hkr_words_048696",
+    "target": "и залечила раны,",
+    "pred": "и залечила раны,",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "cyr_word_039057",
+    "target": "выраженной",
+    "pred": "взраженной",
+    "cer": 0.1,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0274287",
+    "target": "уже",
+    "pred": "уже",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "hkr_words_053122",
+    "target": "тебя,",
+    "pred": "тебя,",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0289277",
+    "target": "глаз.",
+    "pred": "глаз.",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "cyr_word_015728",
+    "target": "история",
+    "pred": "иетория",
+    "cer": 0.14285714285714285,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "hkr_words_050015",
+    "target": "могучей и свободной,",
+    "pred": "могучей и свободной,",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "cyr_word_021840",
+    "target": "очвидно,",
+    "pred": "осоведно,",
+    "cer": 0.375,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0285914",
+    "target": "ему",
+    "pred": "смд",
+    "cer": 0.6666666666666666,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "cyr_word_071655",
+    "target": "части",
+    "pred": "части",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0295865",
+    "target": "своей",
+    "pred": "своей",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0294357",
+    "target": "искреннюю,",
+    "pred": "искренню,",
+    "cer": 0.1,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "hkr_words_048676",
+    "target": "и залечила разны,",
+    "pred": "и жоечла разны,",
+    "cer": 0.23529411764705882,
+    "wer": 0.3333333333333333
+  },
+  {
+    "sample_id": "cyr_word_038449",
+    "target": "развитие",
+    "pred": "гразвитие",
+    "cer": 0.125,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0288846",
+    "target": "радостные",
+    "pred": "радостные",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "cyr_word_055154",
+    "target": "валидный",
+    "pred": "всиидный",
+    "cer": 0.25,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0286255",
+    "target": "понимает",
+    "pred": "(ажимась",
+    "cer": 0.625,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0270782",
+    "target": "старик",
+    "pred": "старик",
+    "cer": 0.0,
+    "wer": 0.0
+  }
+]

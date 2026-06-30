@@ -1,0 +1,46 @@
+[
+  {
+    "key": "baseline_0_lines",
+    "manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/test.jsonl",
+    "vocab": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/vocab.json",
+    "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_v1/best.pt",
+    "out_dir": "outputs/htr_publication_v3/dose_response_fixed_m04/baseline_0_lines_test",
+    "line_train_n": 0,
+    "blank_logit_penalty": -0.4,
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "key": "plus_2k_lines",
+    "manifest": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_2k_context_v1/test.jsonl",
+    "vocab": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_2k_context_v1/vocab.json",
+    "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_plus_school_lines_2k_context_v1/best.pt",
+    "out_dir": "outputs/htr_publication_v3/dose_response_fixed_m04/plus_2k_lines_test",
+    "line_train_n": 1998,
+    "blank_logit_penalty": -0.4,
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "key": "plus_5k_lines",
+    "manifest": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_5k_context_v1/test.jsonl",
+    "vocab": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_5k_context_v1/vocab.json",
+    "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_plus_school_lines_5k_context_v1/best.pt",
+    "out_dir": "outputs/htr_publication_v3/dose_response_fixed_m04/plus_5k_lines_test",
+    "line_train_n": 4999,
+    "blank_logit_penalty": -0.4,
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "key": "plus_10k_lines",
+    "manifest": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_10k_context_v1/test.jsonl",
+    "vocab": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_10k_context_v1/vocab.json",
+    "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_plus_school_lines_10k_context_v1/best.pt",
+    "out_dir": "outputs/htr_publication_v3/dose_response_fixed_m04/plus_10k_lines_test",
+    "line_train_n": 9998,
+    "blank_logit_penalty": -0.4,
+    "status": "complete",
+    "returncode": 0
+  }
+]

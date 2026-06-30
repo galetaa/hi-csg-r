@@ -1,0 +1,380 @@
+{
+  "audits": [
+    {
+      "name": "tri10k_base",
+      "root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed",
+      "vocab": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/vocab.json",
+      "vocab_size": 91,
+      "splits": {
+        "train": {
+          "n": 30000,
+          "datasets": {
+            "hkr_words": 10000,
+            "cyrillic_handwriting": 10000,
+            "school_notebooks_clean": 10000
+          },
+          "levels": {
+            "word": 24171,
+            "phrase": 5829
+          },
+          "source_type": {
+            "": 30000
+          },
+          "augmentation_source": {
+            "": 30000
+          },
+          "duplicates": {},
+          "oov_rows": 0,
+          "oov_characters": {},
+          "oov_examples": [],
+          "empty_text_rows": 0
+        },
+        "val": {
+          "n": 6000,
+          "datasets": {
+            "school_notebooks_clean": 2000,
+            "cyrillic_handwriting": 2000,
+            "hkr_words": 2000
+          },
+          "levels": {
+            "word": 4908,
+            "phrase": 1092
+          },
+          "source_type": {
+            "": 6000
+          },
+          "augmentation_source": {
+            "": 6000
+          },
+          "duplicates": {},
+          "oov_rows": 0,
+          "oov_characters": {},
+          "oov_examples": [],
+          "empty_text_rows": 0
+        },
+        "test": {
+          "n": 5563,
+          "datasets": {
+            "hkr_words": 2000,
+            "cyrillic_handwriting": 1563,
+            "school_notebooks_clean": 2000
+          },
+          "levels": {
+            "phrase": 1389,
+            "word": 4174
+          },
+          "source_type": {
+            "": 5563
+          },
+          "augmentation_source": {
+            "": 5563
+          },
+          "duplicates": {},
+          "oov_rows": 0,
+          "oov_characters": {},
+          "oov_examples": [],
+          "empty_text_rows": 0
+        }
+      },
+      "split_overlap": {
+        "train_vs_val": {
+          "n": 0,
+          "examples": []
+        },
+        "train_vs_test": {
+          "n": 0,
+          "examples": []
+        },
+        "val_vs_test": {
+          "n": 0,
+          "examples": []
+        }
+      }
+    },
+    {
+      "name": "line_context_10k",
+      "root": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_10k_context_v1",
+      "vocab": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_10k_context_v1/vocab.json",
+      "vocab_size": 91,
+      "splits": {
+        "train": {
+          "n": 39998,
+          "datasets": {
+            "hkr_words": 10000,
+            "cyrillic_handwriting": 10000,
+            "school_notebooks_clean": 10000,
+            "school_notebooks_line": 9998
+          },
+          "levels": {
+            "word": 24171,
+            "phrase": 5829,
+            "line": 9998
+          },
+          "source_type": {
+            "": 30000,
+            "natural_line_group": 9998
+          },
+          "augmentation_source": {
+            "": 30000,
+            "school_full_line_raw_context_v1_sampled_10k": 9998
+          },
+          "duplicates": {},
+          "oov_rows": 0,
+          "oov_characters": {},
+          "oov_examples": [],
+          "empty_text_rows": 0
+        },
+        "val": {
+          "n": 6000,
+          "datasets": {
+            "school_notebooks_clean": 2000,
+            "cyrillic_handwriting": 2000,
+            "hkr_words": 2000
+          },
+          "levels": {
+            "word": 4908,
+            "phrase": 1092
+          },
+          "source_type": {
+            "": 6000
+          },
+          "augmentation_source": {
+            "": 6000
+          },
+          "duplicates": {},
+          "oov_rows": 0,
+          "oov_characters": {},
+          "oov_examples": [],
+          "empty_text_rows": 0
+        },
+        "test": {
+          "n": 5563,
+          "datasets": {
+            "hkr_words": 2000,
+            "cyrillic_handwriting": 1563,
+            "school_notebooks_clean": 2000
+          },
+          "levels": {
+            "phrase": 1389,
+            "word": 4174
+          },
+          "source_type": {
+            "": 5563
+          },
+          "augmentation_source": {
+            "": 5563
+          },
+          "duplicates": {},
+          "oov_rows": 0,
+          "oov_characters": {},
+          "oov_examples": [],
+          "empty_text_rows": 0
+        }
+      },
+      "split_overlap": {
+        "train_vs_val": {
+          "n": 0,
+          "examples": []
+        },
+        "train_vs_test": {
+          "n": 0,
+          "examples": []
+        },
+        "val_vs_test": {
+          "n": 0,
+          "examples": []
+        }
+      }
+    },
+    {
+      "name": "random_crops_10k_control",
+      "root": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_random_crops_10k_control_v1",
+      "vocab": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_random_crops_10k_control_v1/vocab.json",
+      "vocab_size": 91,
+      "splits": {
+        "train": {
+          "n": 40000,
+          "datasets": {
+            "hkr_words": 13333,
+            "cyrillic_handwriting": 13333,
+            "school_notebooks_clean": 13334
+          },
+          "levels": {
+            "word": 32243,
+            "phrase": 7757
+          },
+          "source_type": {
+            "": 30000,
+            "same_size_crop_control": 10000
+          },
+          "augmentation_source": {
+            "": 30000,
+            "random_mixed_10k": 10000
+          },
+          "duplicates": {},
+          "oov_rows": 0,
+          "oov_characters": {},
+          "oov_examples": [],
+          "empty_text_rows": 0
+        },
+        "val": {
+          "n": 6000,
+          "datasets": {
+            "school_notebooks_clean": 2000,
+            "cyrillic_handwriting": 2000,
+            "hkr_words": 2000
+          },
+          "levels": {
+            "word": 4908,
+            "phrase": 1092
+          },
+          "source_type": {
+            "": 6000
+          },
+          "augmentation_source": {
+            "": 6000
+          },
+          "duplicates": {},
+          "oov_rows": 0,
+          "oov_characters": {},
+          "oov_examples": [],
+          "empty_text_rows": 0
+        },
+        "test": {
+          "n": 5563,
+          "datasets": {
+            "hkr_words": 2000,
+            "cyrillic_handwriting": 1563,
+            "school_notebooks_clean": 2000
+          },
+          "levels": {
+            "phrase": 1389,
+            "word": 4174
+          },
+          "source_type": {
+            "": 5563
+          },
+          "augmentation_source": {
+            "": 5563
+          },
+          "duplicates": {},
+          "oov_rows": 0,
+          "oov_characters": {},
+          "oov_examples": [],
+          "empty_text_rows": 0
+        }
+      },
+      "split_overlap": {
+        "train_vs_val": {
+          "n": 0,
+          "examples": []
+        },
+        "train_vs_test": {
+          "n": 0,
+          "examples": []
+        },
+        "val_vs_test": {
+          "n": 0,
+          "examples": []
+        }
+      }
+    },
+    {
+      "name": "school_words_10k_control",
+      "root": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_words_10k_control_v1",
+      "vocab": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_words_10k_control_v1/vocab.json",
+      "vocab_size": 91,
+      "splits": {
+        "train": {
+          "n": 40000,
+          "datasets": {
+            "hkr_words": 10000,
+            "cyrillic_handwriting": 10000,
+            "school_notebooks_clean": 20000
+          },
+          "levels": {
+            "word": 34171,
+            "phrase": 5829
+          },
+          "source_type": {
+            "": 30000,
+            "same_size_crop_control": 10000
+          },
+          "augmentation_source": {
+            "": 30000,
+            "school_words_10k": 10000
+          },
+          "duplicates": {},
+          "oov_rows": 0,
+          "oov_characters": {},
+          "oov_examples": [],
+          "empty_text_rows": 0
+        },
+        "val": {
+          "n": 6000,
+          "datasets": {
+            "school_notebooks_clean": 2000,
+            "cyrillic_handwriting": 2000,
+            "hkr_words": 2000
+          },
+          "levels": {
+            "word": 4908,
+            "phrase": 1092
+          },
+          "source_type": {
+            "": 6000
+          },
+          "augmentation_source": {
+            "": 6000
+          },
+          "duplicates": {},
+          "oov_rows": 0,
+          "oov_characters": {},
+          "oov_examples": [],
+          "empty_text_rows": 0
+        },
+        "test": {
+          "n": 5563,
+          "datasets": {
+            "hkr_words": 2000,
+            "cyrillic_handwriting": 1563,
+            "school_notebooks_clean": 2000
+          },
+          "levels": {
+            "phrase": 1389,
+            "word": 4174
+          },
+          "source_type": {
+            "": 5563
+          },
+          "augmentation_source": {
+            "": 5563
+          },
+          "duplicates": {},
+          "oov_rows": 0,
+          "oov_characters": {},
+          "oov_examples": [],
+          "empty_text_rows": 0
+        }
+      },
+      "split_overlap": {
+        "train_vs_val": {
+          "n": 0,
+          "examples": []
+        },
+        "train_vs_test": {
+          "n": 0,
+          "examples": []
+        },
+        "val_vs_test": {
+          "n": 0,
+          "examples": []
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Checks sample_id-level split leakage only.",
+    "Does not detect visual near-duplicates, writer overlap, or page-level dependence."
+  ]
+}

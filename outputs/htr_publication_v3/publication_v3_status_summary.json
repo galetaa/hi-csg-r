@@ -1,0 +1,2180 @@
+{
+  "package": "htr_publication_v3",
+  "hardening_plan": "docs/publication_hardening_plan_v1.md",
+  "fixed_penalty_protocol": {
+    "blank_logit_penalty": -0.4,
+    "purpose": "remove mixed test-time penalty selection from earlier summaries"
+  },
+  "eval_rows": [
+    {
+      "variant": "tri10k_base",
+      "seed": 42,
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/tri10k_base_seed42_test/summary.json",
+      "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/tri10k_base_seed42_test/predictions.jsonl",
+      "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_v1/best.pt",
+      "checkpoint_epoch": 72,
+      "checkpoint_val_cer": 0.10474548642413459,
+      "blank_logit_penalty": -0.4,
+      "cer": 0.14610208156056345,
+      "wer": 0.5155491641200796,
+      "exact": 0.43825274132662234
+    },
+    {
+      "variant": "tri10k_base",
+      "seed": 43,
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/tri10k_base_seed43_test/summary.json",
+      "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/tri10k_base_seed43_test/predictions.jsonl",
+      "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_v1_seed43/best.pt",
+      "checkpoint_epoch": 74,
+      "checkpoint_val_cer": 0.10568203005705247,
+      "blank_logit_penalty": -0.4,
+      "cer": 0.14937824134593042,
+      "wer": 0.5147013002576547,
+      "exact": 0.4353765953622146
+    },
+    {
+      "variant": "tri10k_base",
+      "seed": 44,
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/tri10k_base_seed44_test/summary.json",
+      "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/tri10k_base_seed44_test/predictions.jsonl",
+      "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_v1_seed44/best.pt",
+      "checkpoint_epoch": 68,
+      "checkpoint_val_cer": 0.11903821085295417,
+      "blank_logit_penalty": -0.4,
+      "cer": 0.16289623760740551,
+      "wer": 0.5575139313320157,
+      "exact": 0.3960093474743843
+    },
+    {
+      "variant": "line_context_10k",
+      "seed": 42,
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/line_context_10k_seed42_test/summary.json",
+      "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/line_context_10k_seed42_test/predictions.jsonl",
+      "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_plus_school_lines_10k_context_v1/best.pt",
+      "checkpoint_epoch": 73,
+      "checkpoint_val_cer": 0.09504758457064977,
+      "blank_logit_penalty": -0.4,
+      "cer": 0.1353033850557153,
+      "wer": 0.492935466474924,
+      "exact": 0.4628797411468632
+    },
+    {
+      "variant": "line_context_10k",
+      "seed": 43,
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/line_context_10k_seed43_test/summary.json",
+      "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/line_context_10k_seed43_test/predictions.jsonl",
+      "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_plus_school_lines_10k_context_v1_seed43/best.pt",
+      "checkpoint_epoch": 76,
+      "checkpoint_val_cer": 0.09833083475881693,
+      "blank_logit_penalty": -0.4,
+      "cer": 0.13720292346429694,
+      "wer": 0.49354964347773983,
+      "exact": 0.4583857630774762
+    },
+    {
+      "variant": "line_context_10k",
+      "seed": 44,
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/line_context_10k_seed44_test/summary.json",
+      "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/line_context_10k_seed44_test/predictions.jsonl",
+      "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_plus_school_lines_10k_context_v1_seed44/best.pt",
+      "checkpoint_epoch": 79,
+      "checkpoint_val_cer": 0.09655605299170521,
+      "blank_logit_penalty": -0.4,
+      "cer": 0.13483472113747938,
+      "wer": 0.48279105997962735,
+      "exact": 0.47096890167175987
+    },
+    {
+      "variant": "random_crops_10k_control",
+      "seed": 42,
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/random_crops_10k_control_seed42_test/summary.json",
+      "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/random_crops_10k_control_seed42_test/predictions.jsonl",
+      "checkpoint": "outputs/htr_publication_v3/full_same_size_controls/checkpoints/random_crops_10k_control_seed42/best.pt",
+      "checkpoint_epoch": 75,
+      "checkpoint_val_cer": 0.095695710239417,
+      "blank_logit_penalty": -0.4,
+      "cer": 0.13389129666972166,
+      "wer": 0.48902870153993655,
+      "exact": 0.46611540535682183
+    },
+    {
+      "variant": "random_crops_10k_control",
+      "seed": 43,
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/random_crops_10k_control_seed43_test/summary.json",
+      "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/random_crops_10k_control_seed43_test/predictions.jsonl",
+      "checkpoint": "outputs/htr_publication_v3/full_same_size_controls/checkpoints/random_crops_10k_control_seed43/best.pt",
+      "checkpoint_epoch": 62,
+      "checkpoint_val_cer": 0.0981634897710829,
+      "blank_logit_penalty": -0.4,
+      "cer": 0.13716438618234084,
+      "wer": 0.4879531427886634,
+      "exact": 0.46359877763796514
+    },
+    {
+      "variant": "random_crops_10k_control",
+      "seed": 44,
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/random_crops_10k_control_seed44_test/summary.json",
+      "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/random_crops_10k_control_seed44_test/predictions.jsonl",
+      "checkpoint": "outputs/htr_publication_v3/full_same_size_controls/checkpoints/random_crops_10k_control_seed44/best.pt",
+      "checkpoint_epoch": 60,
+      "checkpoint_val_cer": 0.09667412880360157,
+      "blank_logit_penalty": -0.4,
+      "cer": 0.1364783637014911,
+      "wer": 0.49133261429684233,
+      "exact": 0.46341901851518963
+    },
+    {
+      "variant": "school_words_10k_control",
+      "seed": 42,
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/school_words_10k_control_seed42_test/summary.json",
+      "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/school_words_10k_control_seed42_test/predictions.jsonl",
+      "checkpoint": "outputs/htr_publication_v3/full_same_size_controls/checkpoints/school_words_10k_control_seed42/best.pt",
+      "checkpoint_epoch": 77,
+      "checkpoint_val_cer": 0.0971151889676032,
+      "blank_logit_penalty": -0.4,
+      "cer": 0.13541568157565373,
+      "wer": 0.48637425849361876,
+      "exact": 0.4664749236023728
+    },
+    {
+      "variant": "school_words_10k_control",
+      "seed": 43,
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/school_words_10k_control_seed43_test/summary.json",
+      "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/school_words_10k_control_seed43_test/predictions.jsonl",
+      "checkpoint": "outputs/htr_publication_v3/full_same_size_controls/checkpoints/school_words_10k_control_seed43/best.pt",
+      "checkpoint_epoch": 75,
+      "checkpoint_val_cer": 0.09946794529660309,
+      "blank_logit_penalty": -0.4,
+      "cer": 0.13649373706635046,
+      "wer": 0.4888399544610222,
+      "exact": 0.46341901851518963
+    },
+    {
+      "variant": "school_words_10k_control",
+      "seed": 44,
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/school_words_10k_control_seed44_test/summary.json",
+      "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/school_words_10k_control_seed44_test/predictions.jsonl",
+      "checkpoint": "outputs/htr_publication_v3/full_same_size_controls/checkpoints/school_words_10k_control_seed44/best.pt",
+      "checkpoint_epoch": 80,
+      "checkpoint_val_cer": 0.09866230967788439,
+      "blank_logit_penalty": -0.4,
+      "cer": 0.13777256595967283,
+      "wer": 0.4854455030259454,
+      "exact": 0.4682725148301276
+    }
+  ],
+  "aggregates": [
+    {
+      "variant": "tri10k_base",
+      "completed_seeds": [
+        42,
+        43,
+        44
+      ],
+      "n_completed": 3,
+      "mean_cer": 0.15279218683796647,
+      "std_cer": 0.008902369751833799,
+      "mean_wer": 0.5292547985699166,
+      "mean_exact": 0.42321289472107376
+    },
+    {
+      "variant": "line_context_10k",
+      "completed_seeds": [
+        42,
+        43,
+        44
+      ],
+      "n_completed": 3,
+      "mean_cer": 0.13578034321916388,
+      "std_cer": 0.0012540782999662364,
+      "mean_wer": 0.4897587233107637,
+      "mean_exact": 0.46407813529869973
+    },
+    {
+      "variant": "random_crops_10k_control",
+      "completed_seeds": [
+        42,
+        43,
+        44
+      ],
+      "n_completed": 3,
+      "mean_cer": 0.13584468218451787,
+      "std_cer": 0.001726106293980628,
+      "mean_wer": 0.4894381528751474,
+      "mean_exact": 0.46437773383665887
+    },
+    {
+      "variant": "school_words_10k_control",
+      "completed_seeds": [
+        42,
+        43,
+        44
+      ],
+      "n_completed": 3,
+      "mean_cer": 0.13656066153389235,
+      "std_cer": 0.0011798665870237591,
+      "mean_wer": 0.4868865719935288,
+      "mean_exact": 0.46605548564923
+    }
+  ],
+  "normalized_line_vs_base": {
+    "mean_delta_cer": -0.01701184361880259,
+    "base_mean_cer": 0.15279218683796647,
+    "line_mean_cer": 0.13578034321916388,
+    "base_completed_seeds": [
+      42,
+      43,
+      44
+    ],
+    "line_completed_seeds": [
+      42,
+      43,
+      44
+    ],
+    "paired_by_seed": [
+      {
+        "seed": 42,
+        "n": 5563,
+        "delta_cer": -0.01079869650484794,
+        "ci95_low": -0.014709724909132492,
+        "ci95_high": -0.006744327645411468,
+        "school_delta_cer": -0.019019758019758016,
+        "school_ci95_low": -0.0266681805000555,
+        "school_ci95_high": -0.011423060481185486,
+        "dataset_delta_cer": {
+          "cyrillic_handwriting": -0.00823744107149145,
+          "hkr_words": -0.0045792561111059555,
+          "school_notebooks_clean": -0.019019758019758016
+        }
+      },
+      {
+        "seed": 43,
+        "n": 5563,
+        "delta_cer": -0.012175317881633492,
+        "ci95_low": -0.01629426578903935,
+        "ci95_high": -0.008081549810806834,
+        "school_delta_cer": -0.027171244033744033,
+        "school_ci95_low": -0.03507899097430347,
+        "school_ci95_high": -0.019504575702075706,
+        "dataset_delta_cer": {
+          "cyrillic_handwriting": -0.00797644955373306,
+          "hkr_words": -0.00046080732777714184,
+          "school_notebooks_clean": -0.027171244033744033
+        }
+      },
+      {
+        "seed": 44,
+        "n": 5563,
+        "delta_cer": -0.028061516469926138,
+        "ci95_low": -0.03229726007203483,
+        "ci95_high": -0.023886077389888263,
+        "school_delta_cer": -0.03411830461205462,
+        "school_ci95_low": -0.04245566473457098,
+        "school_ci95_high": -0.025992850430819184,
+        "dataset_delta_cer": {
+          "cyrillic_handwriting": -0.025747713050574893,
+          "hkr_words": -0.023812965700020654,
+          "school_notebooks_clean": -0.03411830461205462
+        }
+      }
+    ]
+  },
+  "trocr_zero_shot": {
+    "baseline": "TrOCR",
+    "model_id": "microsoft/trocr-base-handwritten",
+    "protocol": "pretrained zero-shot generation baseline",
+    "manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/test.jsonl",
+    "device": "cuda",
+    "batch_size": 4,
+    "max_samples": null,
+    "max_new_tokens": 64,
+    "num_beams": 1,
+    "fp16": true,
+    "local_files_only": true,
+    "metrics": {
+      "n": 5563,
+      "cer": 1.2985233942724257,
+      "wer": 1.4752891125891299,
+      "exact": 0.003954700701060579,
+      "pred_len_mean": 11.210318173647313,
+      "pred_empty_ratio": 0.0,
+      "grouped": {
+        "hkr_words|phrase|None": {
+          "n": 910,
+          "cer": 1.1216367532498495,
+          "wer": 1.3183150183150179,
+          "exact": 0.0
+        },
+        "cyrillic_handwriting|word|None": {
+          "n": 1100,
+          "cer": 1.3145892799580852,
+          "wer": 1.56,
+          "exact": 0.01
+        },
+        "hkr_words|word|None": {
+          "n": 1090,
+          "cer": 1.4080448890918396,
+          "wer": 1.7128440366972477,
+          "exact": 0.0
+        },
+        "school_notebooks_clean|word|pupil_text": {
+          "n": 1851,
+          "cer": 1.3502920941535186,
+          "wer": 1.4300378173960022,
+          "exact": 0.004862236628849271
+        },
+        "school_notebooks_clean|phrase|pupil_text": {
+          "n": 16,
+          "cer": 0.9812003968253968,
+          "wer": 0.90625,
+          "exact": 0.0
+        },
+        "cyrillic_handwriting|phrase|None": {
+          "n": 463,
+          "cer": 1.1122079534058216,
+          "wer": 1.2502519798416125,
+          "exact": 0.0021598272138228943
+        },
+        "school_notebooks_clean|word|pupil_comment": {
+          "n": 101,
+          "cer": 1.451815181518152,
+          "wer": 1.3465346534653466,
+          "exact": 0.009900990099009901
+        },
+        "school_notebooks_clean|word|teacher_comment": {
+          "n": 32,
+          "cer": 1.421986607142857,
+          "wer": 1.5,
+          "exact": 0.0
+        }
+      },
+      "examples": [
+        {
+          "sample_id": "hkr_words_043599",
+          "dataset": "hkr_words",
+          "target": "где цветут моих",
+          "pred": "Tge ye Benny m. Moux",
+          "cer": 1.2,
+          "wer": 1.6666666666666667,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_053384",
+          "dataset": "hkr_words",
+          "target": "но ты не снизошло",
+          "pred": "to run the Cungoureco",
+          "cer": 1.0588235294117647,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "cyr_word_073525",
+          "dataset": "cyrillic_handwriting",
+          "target": "справка",
+          "pred": "enjectory",
+          "cer": 1.2857142857142858,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_016081",
+          "dataset": "hkr_words",
+          "target": "павлодарская",
+          "pred": "Tombreux guapricos a",
+          "cer": 1.6666666666666667,
+          "wer": 3.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_030911",
+          "dataset": "hkr_words",
+          "target": "заводской",
+          "pred": "3a bogcuconi",
+          "cer": 1.3333333333333333,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0307431",
+          "dataset": "school_notebooks_clean",
+          "target": "было",
+          "pred": "drains .",
+          "cer": 2.0,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_045386",
+          "dataset": "hkr_words",
+          "target": "свет она.",
+          "pred": "chemn o'leu .",
+          "cer": 1.2222222222222223,
+          "wer": 1.5,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0309227",
+          "dataset": "school_notebooks_clean",
+          "target": "либо -",
+          "pred": "audio-",
+          "cer": 0.8333333333333334,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_053971",
+          "dataset": "hkr_words",
+          "target": "о нежности, о славе,",
+          "pred": "other # Response , O. cerease ,",
+          "cer": 1.3,
+          "wer": 1.75,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0313004",
+          "dataset": "school_notebooks_clean",
+          "target": "аустер-",
+          "pred": "stycrep-",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_062461",
+          "dataset": "hkr_words",
+          "target": "опять, как",
+          "pred": "Onermo ,xxx",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0312613",
+          "dataset": "school_notebooks_clean",
+          "target": "жизни",
+          "pred": "sucuayan",
+          "cer": 1.6,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "cyr_phrase_072767",
+          "dataset": "cyrillic_handwriting",
+          "target": "стипендию получаю",
+          "pred": "Grundergins moneylaws .",
+          "cer": 1.2941176470588236,
+          "wer": 1.5,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0298209",
+          "dataset": "school_notebooks_clean",
+          "target": "за-",
+          "pred": "3a.",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "school_notebooks_test_0318947",
+          "dataset": "school_notebooks_clean",
+          "target": "1ск",
+          "pred": "1ch.",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_comment"
+        },
+        {
+          "sample_id": "school_notebooks_test_0301406",
+          "dataset": "school_notebooks_clean",
+          "target": "ёлочка.",
+          "pred": "discourse",
+          "cer": 1.2857142857142858,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "cyr_word_073589",
+          "dataset": "cyrillic_handwriting",
+          "target": "способна",
+          "pred": "crocorne .",
+          "cer": 1.25,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_011657",
+          "dataset": "hkr_words",
+          "target": "молдавия",
+          "pred": "illangabine",
+          "cer": 1.375,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0321809",
+          "dataset": "school_notebooks_clean",
+          "target": "всю",
+          "pred": "boro .",
+          "cer": 2.0,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "cyr_word_072619",
+          "dataset": "cyrillic_handwriting",
+          "target": "детализация",
+          "pred": "operannique",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "cyr_phrase_072858",
+          "dataset": "cyrillic_handwriting",
+          "target": "по распределению",
+          "pred": "no parimpegenerino",
+          "cer": 1.0625,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_050474",
+          "dataset": "hkr_words",
+          "target": "до полярных льдов,",
+          "pred": "to newspaper , is told",
+          "cer": 1.1111111111111112,
+          "wer": 1.6666666666666667,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0298681",
+          "dataset": "school_notebooks_clean",
+          "target": "зверью,",
+          "pred": "greenwind ,",
+          "cer": 1.4285714285714286,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "school_notebooks_test_0302336",
+          "dataset": "school_notebooks_clean",
+          "target": "четырнадцатое",
+          "pred": "Yenne passage ,",
+          "cer": 1.1538461538461537,
+          "wer": 3.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_016376",
+          "dataset": "hkr_words",
+          "target": "павлодарская",
+          "pred": "tribecogapaceae",
+          "cer": 1.25,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_013406",
+          "dataset": "hkr_words",
+          "target": "актюбинская",
+          "pred": "extemptions of America",
+          "cer": 2.0,
+          "wer": 3.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_043028",
+          "dataset": "hkr_words",
+          "target": "законов судьбы.",
+          "pred": "zarcorlab cygwise .",
+          "cer": 1.1333333333333333,
+          "wer": 1.5,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_029822",
+          "dataset": "hkr_words",
+          "target": "аксу",
+          "pred": "tuxy .",
+          "cer": 1.5,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "cyr_word_073069",
+          "dataset": "cyrillic_handwriting",
+          "target": "если",
+          "pred": "eem",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0296429",
+          "dataset": "school_notebooks_clean",
+          "target": "уперев",
+          "pred": "yrepel",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "school_notebooks_test_0300588",
+          "dataset": "school_notebooks_clean",
+          "target": "грачей",
+          "pred": "unwomen .",
+          "cer": 1.5,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "cyr_word_073483",
+          "dataset": "cyrillic_handwriting",
+          "target": "221000",
+          "pred": "22,000",
+          "cer": 0.16666666666666666,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "cyr_word_073394",
+          "dataset": "cyrillic_handwriting",
+          "target": "функция",
+          "pred": "disguences .",
+          "cer": 1.7142857142857142,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "cyr_word_073013",
+          "dataset": "cyrillic_handwriting",
+          "target": "характеристика",
+          "pred": "xapakrepucruka",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_003425",
+          "dataset": "hkr_words",
+          "target": "но волчат не тронул,",
+          "pred": "to bonzais re reponym ,",
+          "cer": 0.95,
+          "wer": 1.25,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0312984",
+          "dataset": "school_notebooks_clean",
+          "target": "это",
+          "pred": "ymo",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_046800",
+          "dataset": "hkr_words",
+          "target": "не разлучит.",
+          "pred": "He playrum .",
+          "cer": 0.8333333333333334,
+          "wer": 1.5,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0306388",
+          "dataset": "school_notebooks_clean",
+          "target": "близкое",
+          "pred": "simessee .",
+          "cer": 1.4285714285714286,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_035561",
+          "dataset": "hkr_words",
+          "target": "люди.",
+          "pred": "llough ,",
+          "cer": 1.6,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_023508",
+          "dataset": "hkr_words",
+          "target": "актюбинская",
+          "pred": "Hic-modulences",
+          "cer": 1.2727272727272727,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0322949",
+          "dataset": "school_notebooks_clean",
+          "target": "его",
+          "pred": "no",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "cyr_word_073224",
+          "dataset": "cyrillic_handwriting",
+          "target": "погрешность",
+          "pred": "morpetments .",
+          "cer": 1.1818181818181819,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "cyr_word_073055",
+          "dataset": "cyrillic_handwriting",
+          "target": "прямоугольник",
+          "pred": "unnecessary",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0300510",
+          "dataset": "school_notebooks_clean",
+          "target": "колючки",
+          "pred": "minimum",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "school_notebooks_test_0299778",
+          "dataset": "school_notebooks_clean",
+          "target": "он",
+          "pred": "dry .",
+          "cer": 2.5,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_055152",
+          "dataset": "hkr_words",
+          "target": "как некогда в",
+          "pred": "have seencroops to",
+          "cer": 1.2307692307692308,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_013698",
+          "dataset": "hkr_words",
+          "target": "актюбинская",
+          "pred": "African Rescue-",
+          "cer": 1.3636363636363635,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_022880",
+          "dataset": "hkr_words",
+          "target": "район",
+          "pred": "paucore .",
+          "cer": 1.8,
+          "wer": 2.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0311166",
+          "dataset": "school_notebooks_clean",
+          "target": "(робот-",
+          "pred": "freedom-",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_011535",
+          "dataset": "hkr_words",
+          "target": "молдавия",
+          "pred": "disengine",
+          "cer": 1.125,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        }
+      ]
+    },
+    "publication_limitation": "This is an external pretrained zero-shot baseline. It is useful as an off-the-shelf reference, but it is not a substitute for a fine-tuned transformer HTR baseline under the same train/test protocol."
+  },
+  "trocr_finetuned": {
+    "baseline": "TrOCR",
+    "model_id": "outputs/htr_publication_v3/trocr_finetuned_tri10k_base/best",
+    "protocol": "decoder-only TrOCR adaptation; encoder frozen due 6GB GPU memory limit",
+    "manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/test.jsonl",
+    "device": "cuda",
+    "batch_size": 4,
+    "max_samples": null,
+    "max_new_tokens": 96,
+    "num_beams": 1,
+    "fp16": true,
+    "local_files_only": true,
+    "metrics": {
+      "n": 5563,
+      "cer": 1.2657019030836423,
+      "wer": 1.0343280004793578,
+      "exact": 0.004314218946611541,
+      "pred_len_mean": 13.287434837317994,
+      "pred_empty_ratio": 0.0008987956138774043,
+      "grouped": {
+        "hkr_words|phrase|None": {
+          "n": 910,
+          "cer": 1.2638927438702892,
+          "wer": 1.1815018315018313,
+          "exact": 0.0
+        },
+        "cyrillic_handwriting|word|None": {
+          "n": 1100,
+          "cer": 1.1136315183042231,
+          "wer": 1.0018181818181817,
+          "exact": 0.0036363636363636364
+        },
+        "hkr_words|word|None": {
+          "n": 1090,
+          "cer": 1.0257675861345594,
+          "wer": 1.0174311926605504,
+          "exact": 0.0
+        },
+        "school_notebooks_clean|word|pupil_text": {
+          "n": 1851,
+          "cer": 1.2873393556740393,
+          "wer": 0.9902755267423015,
+          "exact": 0.010264721772015126
+        },
+        "school_notebooks_clean|phrase|pupil_text": {
+          "n": 16,
+          "cer": 0.899454365079365,
+          "wer": 1.0,
+          "exact": 0.0
+        },
+        "cyrillic_handwriting|phrase|None": {
+          "n": 463,
+          "cer": 1.417174247460477,
+          "wer": 1.0514038876889849,
+          "exact": 0.0
+        },
+        "school_notebooks_clean|word|pupil_comment": {
+          "n": 101,
+          "cer": 3.574752475247525,
+          "wer": 0.9900990099009901,
+          "exact": 0.009900990099009901
+        },
+        "school_notebooks_clean|word|teacher_comment": {
+          "n": 32,
+          "cer": 4.169308035714286,
+          "wer": 1.0,
+          "exact": 0.0
+        }
+      },
+      "examples": [
+        {
+          "sample_id": "hkr_words_043599",
+          "dataset": "hkr_words",
+          "target": "где цветут моих",
+          "pred": "�д еуттттттт��и",
+          "cer": 0.7333333333333333,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_053384",
+          "dataset": "hkr_words",
+          "target": "но ты не снизошло",
+          "pred": "н �ы еснси�он�о�о",
+          "cer": 0.5882352941176471,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "cyr_word_073525",
+          "dataset": "cyrillic_handwriting",
+          "target": "справка",
+          "pred": "срвкаа",
+          "cer": 0.42857142857142855,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_016081",
+          "dataset": "hkr_words",
+          "target": "павлодарская",
+          "pred": "�ыьл�о�ооосакя",
+          "cer": 0.8333333333333334,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_030911",
+          "dataset": "hkr_words",
+          "target": "заводской",
+          "pred": "�ао�дн��н���������������������������������������������",
+          "cer": 5.777777777777778,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0307431",
+          "dataset": "school_notebooks_clean",
+          "target": "было",
+          "pred": "�ыооо",
+          "cer": 0.75,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_045386",
+          "dataset": "hkr_words",
+          "target": "свет она.",
+          "pred": "сеи �иии",
+          "cer": 0.6666666666666666,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0309227",
+          "dataset": "school_notebooks_clean",
+          "target": "либо -",
+          "pred": "н������о",
+          "cer": 1.3333333333333333,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_053971",
+          "dataset": "hkr_words",
+          "target": "о нежности, о славе,",
+          "pred": "о��енсаи,����саь",
+          "cer": 0.65,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0313004",
+          "dataset": "school_notebooks_clean",
+          "target": "аустер-",
+          "pred": "ает��р",
+          "cer": 0.7142857142857143,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_062461",
+          "dataset": "hkr_words",
+          "target": "опять, как",
+          "pred": "о�яьььь� � �н�����������",
+          "cer": 2.0,
+          "wer": 1.5,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0312613",
+          "dataset": "school_notebooks_clean",
+          "target": "жизни",
+          "pred": "�и���уи",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "cyr_phrase_072767",
+          "dataset": "cyrillic_handwriting",
+          "target": "стипендию получаю",
+          "pred": "сиеееееееенао�� �о�уаь",
+          "cer": 0.9411764705882353,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0298209",
+          "dataset": "school_notebooks_clean",
+          "target": "за-",
+          "pred": "�а",
+          "cer": 0.6666666666666666,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "school_notebooks_test_0318947",
+          "dataset": "school_notebooks_clean",
+          "target": "1ск",
+          "pred": "(к",
+          "cer": 0.6666666666666666,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_comment"
+        },
+        {
+          "sample_id": "school_notebooks_test_0301406",
+          "dataset": "school_notebooks_clean",
+          "target": "ёлочка.",
+          "pred": "�л�кк",
+          "cer": 0.7142857142857143,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "cyr_word_073589",
+          "dataset": "cyrillic_handwriting",
+          "target": "способна",
+          "pred": "соо�о�н",
+          "cer": 0.5,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_011657",
+          "dataset": "hkr_words",
+          "target": "молдавия",
+          "pred": "м�аааии",
+          "cer": 0.625,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0321809",
+          "dataset": "school_notebooks_clean",
+          "target": "всю",
+          "pred": "вн",
+          "cer": 0.6666666666666666,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "cyr_word_072619",
+          "dataset": "cyrillic_handwriting",
+          "target": "детализация",
+          "pred": "дса�и��аья",
+          "cer": 0.6363636363636364,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "cyr_phrase_072858",
+          "dataset": "cyrillic_handwriting",
+          "target": "по распределению",
+          "pred": "�ор�рддеееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееее",
+          "cer": 5.6875,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_050474",
+          "dataset": "hkr_words",
+          "target": "до полярных льдов,",
+          "pred": "�о�ирыыыы���� �оо�о�,",
+          "cer": 0.9444444444444444,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0298681",
+          "dataset": "school_notebooks_clean",
+          "target": "зверью,",
+          "pred": "ден�о�о�,",
+          "cer": 1.1428571428571428,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "school_notebooks_test_0302336",
+          "dataset": "school_notebooks_clean",
+          "target": "четырнадцатое",
+          "pred": "�елрраа�д�����тттры",
+          "cer": 1.0769230769230769,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_016376",
+          "dataset": "hkr_words",
+          "target": "павлодарская",
+          "pred": "�ал�������рдрррррррррррррррррррррррррррркя",
+          "cer": 3.1666666666666665,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_013406",
+          "dataset": "hkr_words",
+          "target": "актюбинская",
+          "pred": "ато�исссссакя",
+          "cer": 0.7272727272727273,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_043028",
+          "dataset": "hkr_words",
+          "target": "законов судьбы.",
+          "pred": "�акн���с уь�ы�.....",
+          "cer": 0.8666666666666667,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_029822",
+          "dataset": "hkr_words",
+          "target": "аксу",
+          "pred": "аау",
+          "cer": 0.5,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "cyr_word_073069",
+          "dataset": "cyrillic_handwriting",
+          "target": "если",
+          "pred": "ел",
+          "cer": 0.5,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0296429",
+          "dataset": "school_notebooks_clean",
+          "target": "уперев",
+          "pred": "уеееееееееее",
+          "cer": 1.5,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "school_notebooks_test_0300588",
+          "dataset": "school_notebooks_clean",
+          "target": "грачей",
+          "pred": "�р���ееееи",
+          "cer": 1.3333333333333333,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "cyr_word_073483",
+          "dataset": "cyrillic_handwriting",
+          "target": "221000",
+          "pred": "2000",
+          "cer": 0.3333333333333333,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "cyr_word_073394",
+          "dataset": "cyrillic_handwriting",
+          "target": "функция",
+          "pred": "рик�ины..",
+          "cer": 1.1428571428571428,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "cyr_word_073013",
+          "dataset": "cyrillic_handwriting",
+          "target": "характеристика",
+          "pred": "�ааатрриитр�т�иск",
+          "cer": 0.7857142857142857,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_003425",
+          "dataset": "hkr_words",
+          "target": "но волчат не тронул,",
+          "pred": "н �о��а�т����� �р�рррррррроууууууууууууууууууууууууууууууууууууууууууууууууууу",
+          "cer": 3.5,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0312984",
+          "dataset": "school_notebooks_clean",
+          "target": "это",
+          "pred": "�т",
+          "cer": 0.6666666666666666,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_046800",
+          "dataset": "hkr_words",
+          "target": "не разлучит.",
+          "pred": "н �ау��и,",
+          "cer": 0.6666666666666666,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0306388",
+          "dataset": "school_notebooks_clean",
+          "target": "близкое",
+          "pred": "�л����не",
+          "cer": 0.8571428571428571,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_035561",
+          "dataset": "hkr_words",
+          "target": "люди.",
+          "pred": "лди",
+          "cer": 0.4,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_023508",
+          "dataset": "hkr_words",
+          "target": "актюбинская",
+          "pred": "ат�о�исккккккя",
+          "cer": 0.9090909090909091,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0322949",
+          "dataset": "school_notebooks_clean",
+          "target": "его",
+          "pred": "н",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "cyr_word_073224",
+          "dataset": "cyrillic_handwriting",
+          "target": "погрешность",
+          "pred": "�ориолот",
+          "cer": 0.6363636363636364,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "cyr_word_073055",
+          "dataset": "cyrillic_handwriting",
+          "target": "прямоугольник",
+          "pred": "�рмо�уо�ь��и",
+          "cer": 0.6153846153846154,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0300510",
+          "dataset": "school_notebooks_clean",
+          "target": "колючки",
+          "pred": "клн�иииии",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "school_notebooks_test_0299778",
+          "dataset": "school_notebooks_clean",
+          "target": "он",
+          "pred": "о",
+          "cer": 0.5,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_055152",
+          "dataset": "hkr_words",
+          "target": "как некогда в",
+          "pred": "ккк���к�д �ыьььььь�",
+          "cer": 1.2307692307692308,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "phrase",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_013698",
+          "dataset": "hkr_words",
+          "target": "актюбинская",
+          "pred": "атр�ы������тнкккккккккя",
+          "cer": 1.7272727272727273,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "hkr_words_022880",
+          "dataset": "hkr_words",
+          "target": "район",
+          "pred": "рл����о",
+          "cer": 1.2,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        },
+        {
+          "sample_id": "school_notebooks_test_0311166",
+          "dataset": "school_notebooks_clean",
+          "target": "(робот-",
+          "pred": "(р������а-",
+          "cer": 1.0,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": "pupil_text"
+        },
+        {
+          "sample_id": "hkr_words_011535",
+          "dataset": "hkr_words",
+          "target": "молдавия",
+          "pred": "м�яььыье",
+          "cer": 0.875,
+          "wer": 1.0,
+          "exact": 0.0,
+          "level": "word",
+          "category": null
+        }
+      ]
+    },
+    "publication_limitation": "This is an external TrOCR adaptation baseline, but not full end-to-end fine-tuning. The encoder was frozen because full TrOCR-base fine-tuning did not fit in 6GB GPU memory. The resulting test quality is weak and should be treated as a negative/limited external baseline."
+  },
+  "validity_addendum": {
+    "out_json": "outputs/htr_publication_v3/validity_addendum_v1/summary.json",
+    "out_md": "outputs/htr_publication_v3/validity_addendum_v1/report.md",
+    "exact_metadata_leakage_flag_variants": [],
+    "page_overlap_flag_variants": [
+      "tri10k_base",
+      "line_context_10k",
+      "random_crops_10k_control",
+      "school_words_10k_control"
+    ],
+    "exact_visual_file_duplicate_flag_variants": [],
+    "high_risk_visual_near_duplicate_flag_variants": [
+      "line_context_10k",
+      "random_crops_10k_control",
+      "school_words_10k_control",
+      "tri10k_base"
+    ],
+    "high_risk_visual_near_duplicate_pairs": [
+      {
+        "dhash": "068939b6a7226a02",
+        "train_path": "data/processed/cyrillic_handwriting/ocr_images/cyr_phrase_054903.png",
+        "test_path": "data/processed/cyrillic_handwriting/ocr_images/cyr_phrase_073129.png",
+        "train_sample_id": "cyr_phrase_054903",
+        "test_sample_id": "cyr_phrase_073129",
+        "train_split": "train",
+        "test_split": "test",
+        "train_source_dataset": "cyrillic_handwriting",
+        "test_source_dataset": "cyrillic_handwriting",
+        "train_text": "долларов сша",
+        "test_text": ") долларов сша",
+        "text_relation": "one_text_contains_the_other",
+        "risk": "high_near_duplicate_risk",
+        "seen_in_variants": [
+          "tri10k_base",
+          "line_context_10k",
+          "random_crops_10k_control",
+          "school_words_10k_control"
+        ]
+      }
+    ],
+    "claim_boundary": [
+      "No exact train-test sample/image/file duplication was detected by automated audits.",
+      "At least one high-risk perceptual near-duplicate candidate was detected; it is too small to explain aggregate metrics, but it should be removed or isolated in a strict publication split.",
+      "Page/source-image overlap exists for at least one variant; page-disjoint stress rows must be cited alongside all-test metrics.",
+      "The controlled result remains nuanced: line-context beats the base model, but same-size controls are comparable; the defensible claim is an augmentation/data-volume effect, not a proven unique line-context mechanism.",
+      "Writer-disjoint validation remains unresolved unless reliable writer_id metadata is added."
+    ],
+    "next_required_for_journal_level": [
+      "retrain/evaluate a true page-disjoint or writer-disjoint split if metadata and compute allow",
+      "add annotation reliability evidence for the school-line corpus",
+      "add a competitive external Russian/Cyrillic HTR baseline beyond decoder-only TrOCR adaptation"
+    ],
+    "dose_response_ready": true,
+    "metadata_rows": [
+      {
+        "variant": "tri10k_base",
+        "sample_id_overlap": 0,
+        "image_path_overlap": 0,
+        "page_overlap": 14,
+        "line_overlap": 95,
+        "text_overlap": 857
+      },
+      {
+        "variant": "line_context_10k",
+        "sample_id_overlap": 0,
+        "image_path_overlap": 0,
+        "page_overlap": 14,
+        "line_overlap": 95,
+        "text_overlap": 858
+      },
+      {
+        "variant": "random_crops_10k_control",
+        "sample_id_overlap": 0,
+        "image_path_overlap": 0,
+        "page_overlap": 14,
+        "line_overlap": 100,
+        "text_overlap": 959
+      },
+      {
+        "variant": "school_words_10k_control",
+        "sample_id_overlap": 0,
+        "image_path_overlap": 0,
+        "page_overlap": 14,
+        "line_overlap": 95,
+        "text_overlap": 989
+      }
+    ],
+    "visual_rows": [
+      {
+        "variant": "tri10k_base",
+        "sha1_overlap": 0,
+        "dhash_candidate_overlap": 1,
+        "train_paths_hashed": 30000,
+        "test_paths_hashed": 5563
+      },
+      {
+        "variant": "line_context_10k",
+        "sha1_overlap": 0,
+        "dhash_candidate_overlap": 1,
+        "train_paths_hashed": 39998,
+        "test_paths_hashed": 5563
+      },
+      {
+        "variant": "random_crops_10k_control",
+        "sha1_overlap": 0,
+        "dhash_candidate_overlap": 1,
+        "train_paths_hashed": 40000,
+        "test_paths_hashed": 5563
+      },
+      {
+        "variant": "school_words_10k_control",
+        "sha1_overlap": 0,
+        "dhash_candidate_overlap": 1,
+        "train_paths_hashed": 40000,
+        "test_paths_hashed": 5563
+      }
+    ],
+    "stress_rows": [
+      {
+        "variant": "tri10k_base",
+        "subset": "all_test",
+        "n_min": 5563,
+        "n_max": 5563,
+        "mean_cer": 0.15279218683796644,
+        "std_cer": 0.008902369751833799,
+        "mean_wer": 0.5292547985699166,
+        "mean_exact": 0.42321289472107376
+      },
+      {
+        "variant": "tri10k_base",
+        "subset": "all_test_minus_high_risk_visual_near_duplicates",
+        "n_min": 5562,
+        "n_max": 5562,
+        "mean_cer": 0.15278113082799746,
+        "std_cer": 0.008894223955468218,
+        "mean_wer": 0.5292500699188945,
+        "mean_exact": 0.423288984777658
+      },
+      {
+        "variant": "tri10k_base",
+        "subset": "page_disjoint_from_train",
+        "n_min": 2000,
+        "n_max": 2000,
+        "mean_cer": 0.16414740930365904,
+        "std_cer": 0.006359963381644232,
+        "mean_wer": 0.5132499999999999,
+        "mean_exact": 0.4948333333333333
+      },
+      {
+        "variant": "tri10k_base",
+        "subset": "page_seen_in_train",
+        "n_min": 2000,
+        "n_max": 2000,
+        "mean_cer": 0.10115844801196973,
+        "std_cer": 0.008823985783262406,
+        "mean_wer": 0.42172222222222255,
+        "mean_exact": 0.4761666666666667
+      },
+      {
+        "variant": "line_context_10k",
+        "subset": "all_test",
+        "n_min": 5563,
+        "n_max": 5563,
+        "mean_cer": 0.13578034321916388,
+        "std_cer": 0.0012540782999662364,
+        "mean_wer": 0.4897587233107637,
+        "mean_exact": 0.46407813529869973
+      },
+      {
+        "variant": "line_context_10k",
+        "subset": "all_test_minus_high_risk_visual_near_duplicates",
+        "n_min": 5562,
+        "n_max": 5562,
+        "mean_cer": 0.13577479012253538,
+        "std_cer": 0.001256765389172265,
+        "mean_wer": 0.4897668704303009,
+        "mean_exact": 0.4641615725758121
+      },
+      {
+        "variant": "line_context_10k",
+        "subset": "page_disjoint_from_train",
+        "n_min": 2000,
+        "n_max": 2000,
+        "mean_cer": 0.1373776404151401,
+        "std_cer": 0.001545798574149947,
+        "mean_wer": 0.457,
+        "mean_exact": 0.5516666666666667
+      },
+      {
+        "variant": "line_context_10k",
+        "subset": "page_seen_in_train",
+        "n_min": 2000,
+        "n_max": 2000,
+        "mean_cer": 0.09154077163233516,
+        "std_cer": 0.003998582972469145,
+        "mean_wer": 0.3847500000000002,
+        "mean_exact": 0.5161666666666666
+      },
+      {
+        "variant": "random_crops_10k_control",
+        "subset": "all_test",
+        "n_min": 5563,
+        "n_max": 5563,
+        "mean_cer": 0.13584468218451787,
+        "std_cer": 0.001726106293980628,
+        "mean_wer": 0.48943815287514747,
+        "mean_exact": 0.46437773383665887
+      },
+      {
+        "variant": "random_crops_10k_control",
+        "subset": "all_test_minus_high_risk_visual_near_duplicates",
+        "n_min": 5562,
+        "n_max": 5562,
+        "mean_cer": 0.13583485990686747,
+        "std_cer": 0.0017191506618946866,
+        "mean_wer": 0.4894062887051022,
+        "mean_exact": 0.4644612249790243
+      },
+      {
+        "variant": "random_crops_10k_control",
+        "subset": "page_disjoint_from_train",
+        "n_min": 2000,
+        "n_max": 2000,
+        "mean_cer": 0.14479285529285515,
+        "std_cer": 0.0027096152419231077,
+        "mean_wer": 0.4771666666666667,
+        "mean_exact": 0.5293333333333333
+      },
+      {
+        "variant": "random_crops_10k_control",
+        "subset": "page_seen_in_train",
+        "n_min": 2000,
+        "n_max": 2000,
+        "mean_cer": 0.08817467632270272,
+        "std_cer": 0.0012383052045758143,
+        "mean_wer": 0.37034722222222244,
+        "mean_exact": 0.5316666666666666
+      },
+      {
+        "variant": "school_words_10k_control",
+        "subset": "all_test",
+        "n_min": 5563,
+        "n_max": 5563,
+        "mean_cer": 0.13656066153389235,
+        "std_cer": 0.0011798665870237591,
+        "mean_wer": 0.48688657199352875,
+        "mean_exact": 0.46605548564923005
+      },
+      {
+        "variant": "school_words_10k_control",
+        "subset": "all_test_minus_high_risk_visual_near_duplicates",
+        "n_min": 5562,
+        "n_max": 5562,
+        "mean_cer": 0.13654240648596688,
+        "std_cer": 0.0011676438499346065,
+        "mean_wer": 0.48687422589795853,
+        "mean_exact": 0.4661392784370131
+      },
+      {
+        "variant": "school_words_10k_control",
+        "subset": "page_disjoint_from_train",
+        "n_min": 2000,
+        "n_max": 2000,
+        "mean_cer": 0.13706395595145582,
+        "std_cer": 0.00040932995710827225,
+        "mean_wer": 0.4484166666666667,
+        "mean_exact": 0.5538333333333334
+      },
+      {
+        "variant": "school_words_10k_control",
+        "subset": "page_seen_in_train",
+        "n_min": 2000,
+        "n_max": 2000,
+        "mean_cer": 0.09328656793484584,
+        "std_cer": 0.0011447910116227315,
+        "mean_wer": 0.3839861111111113,
+        "mean_exact": 0.519
+      }
+    ],
+    "dose_response_rows": [
+      {
+        "key": "baseline_0_lines",
+        "line_train_n": 0,
+        "status": "complete",
+        "summary": "outputs/htr_publication_v3/dose_response_fixed_m04/baseline_0_lines_test/summary.json",
+        "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_v1/best.pt",
+        "checkpoint_epoch": 72,
+        "checkpoint_val_cer": 0.10474548642413459,
+        "blank_logit_penalty": -0.4,
+        "n": 5563,
+        "cer": 0.14542916869987776,
+        "wer": 0.5127479177901616,
+        "exact": 0.44112888729103,
+        "delta_cer_vs_baseline": 0.0,
+        "relative_cer_change_vs_baseline": 0.0
+      },
+      {
+        "key": "plus_2k_lines",
+        "line_train_n": 1998,
+        "status": "complete",
+        "summary": "outputs/htr_publication_v3/dose_response_fixed_m04/plus_2k_lines_test/summary.json",
+        "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_plus_school_lines_2k_context_v1/best.pt",
+        "checkpoint_epoch": 71,
+        "checkpoint_val_cer": 0.10026686584332482,
+        "blank_logit_penalty": -0.4,
+        "n": 5563,
+        "cer": 0.1447000702216432,
+        "wer": 0.5104320210917375,
+        "exact": 0.44364551500988675,
+        "delta_cer_vs_baseline": -0.0007290984782345744,
+        "relative_cer_change_vs_baseline": -0.005013426706297243
+      },
+      {
+        "key": "plus_5k_lines",
+        "line_train_n": 4999,
+        "status": "complete",
+        "summary": "outputs/htr_publication_v3/dose_response_fixed_m04/plus_5k_lines_test/summary.json",
+        "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_plus_school_lines_5k_context_v1/best.pt",
+        "checkpoint_epoch": 79,
+        "checkpoint_val_cer": 0.09853117263924879,
+        "blank_logit_penalty": -0.4,
+        "n": 5563,
+        "cer": 0.1359641754099915,
+        "wer": 0.4902300916771525,
+        "exact": 0.46090239079633294,
+        "delta_cer_vs_baseline": -0.009464993289886259,
+        "relative_cer_change_vs_baseline": -0.06508318361785571
+      },
+      {
+        "key": "plus_10k_lines",
+        "line_train_n": 9998,
+        "status": "complete",
+        "summary": "outputs/htr_publication_v3/dose_response_fixed_m04/plus_10k_lines_test/summary.json",
+        "checkpoint": "outputs/htr_graph_v1/tri10k_image_only_plus_school_lines_10k_context_v1/best.pt",
+        "checkpoint_epoch": 73,
+        "checkpoint_val_cer": 0.09504758457064977,
+        "blank_logit_penalty": -0.4,
+        "n": 5563,
+        "cer": 0.13517276053917968,
+        "wer": 0.49233626939900577,
+        "exact": 0.46359877763796514,
+        "delta_cer_vs_baseline": -0.010256408160698088,
+        "relative_cer_change_vs_baseline": -0.07052511028144734
+      }
+    ],
+    "dose_response_interpretation": [
+      "Best fixed-penalty dose row is plus_10k_lines with CER=0.1352.",
+      "Largest incremental CER decrease is plus_2k_lines -> plus_5k_lines (delta -0.0087).",
+      "The 5k->10k increment is small, consistent with a plateau rather than a linear data-scaling effect."
+    ],
+    "line_vs_random_dataset_delta_cer": {
+      "cyrillic_handwriting": {
+        "delta_cer": 0.004952221031286119,
+        "baseline_mean_cer": 0.1853927727199983,
+        "contender_mean_cer": 0.1903449937512844,
+        "n_min": 1563
+      },
+      "hkr_words": {
+        "delta_cer": 0.003366095309632444,
+        "baseline_mean_cer": 0.08817467632270272,
+        "contender_mean_cer": 0.09154077163233516,
+        "n_min": 2000
+      },
+      "school_notebooks_clean": {
+        "delta_cer": -0.007415214877715043,
+        "baseline_mean_cer": 0.14479285529285515,
+        "contender_mean_cer": 0.1373776404151401,
+        "n_min": 2000
+      }
+    },
+    "line_vs_school_words_dataset_delta_cer": {
+      "cyrillic_handwriting": {
+        "delta_cer": -0.0009447774198225178,
+        "baseline_mean_cer": 0.19128977117110693,
+        "contender_mean_cer": 0.1903449937512844,
+        "n_min": 1563
+      },
+      "hkr_words": {
+        "delta_cer": -0.001745796302510677,
+        "baseline_mean_cer": 0.09328656793484584,
+        "contender_mean_cer": 0.09154077163233516,
+        "n_min": 2000
+      },
+      "school_notebooks_clean": {
+        "delta_cer": 0.0003136844636842939,
+        "baseline_mean_cer": 0.13706395595145582,
+        "contender_mean_cer": 0.1373776404151401,
+        "n_min": 2000
+      }
+    }
+  },
+  "remaining_addendum": {
+    "out_json": "outputs/htr_publication_v3/remaining_addendum_v1/summary.json",
+    "out_md": "outputs/htr_publication_v3/remaining_addendum_v1/report.md",
+    "page_manifest_ready": true,
+    "page_full_retrain_complete": false,
+    "page_run_status": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/run_status.json",
+    "page_run_status_rows": [
+      {
+        "variant": "page_base",
+        "seed": 42,
+        "manifest_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1",
+        "checkpoint_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_base_seed42",
+        "eval_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed42_test",
+        "target_epochs": 80,
+        "batch_size": 8,
+        "prefetch_factor": 2,
+        "bucket_by_width": true,
+        "cuda_alloc_conf": "expandable_segments:True",
+        "last_epoch_before": null,
+        "train_returncode": 0,
+        "eval_returncode": 0,
+        "status": "complete",
+        "last_epoch_after": 80,
+        "best_exists": true
+      },
+      {
+        "variant": "page_base",
+        "seed": 43,
+        "manifest_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1",
+        "checkpoint_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_base_seed43",
+        "eval_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed43_test",
+        "target_epochs": 80,
+        "batch_size": 8,
+        "prefetch_factor": 2,
+        "bucket_by_width": true,
+        "cuda_alloc_conf": "expandable_segments:True",
+        "last_epoch_before": null,
+        "train_returncode": null,
+        "eval_returncode": null,
+        "status": "running"
+      }
+    ],
+    "page_completed_model_evals": [
+      {
+        "variant": "page_base",
+        "seed": 42,
+        "manifest_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1",
+        "checkpoint_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_base_seed42",
+        "eval_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed42_test",
+        "target_epochs": 80,
+        "batch_size": 8,
+        "prefetch_factor": 2,
+        "bucket_by_width": true,
+        "cuda_alloc_conf": "expandable_segments:True",
+        "last_epoch_before": null,
+        "train_returncode": 0,
+        "eval_returncode": 0,
+        "status": "complete",
+        "last_epoch_after": 80,
+        "best_exists": true
+      }
+    ],
+    "page_recommended_full_command": "python -u tools/run_page_disjoint_hkr_school_v1.py --seeds 42 43 44 --epochs 80 --num_workers 4",
+    "strong_internal_baselines": [
+      {
+        "name": "mixed_cyrillic_natural_full_v1",
+        "status": "complete",
+        "summary": "outputs/htr_publication_v3/strong_internal_baselines/mixed_cyrillic_natural_full_v1_tri10k_test_fixed_m04/summary.json",
+        "checkpoint": "outputs/htr_baseline_v1/mixed_cyrillic_natural_full_v1/best.pt",
+        "checkpoint_epoch": 46,
+        "checkpoint_val_cer": 0.05389584135257089,
+        "blank_logit_penalty": -0.4,
+        "n": 5563,
+        "cer": 0.08215208421252419,
+        "wer": 0.3350230690874226,
+        "exact": 0.6244831925220204
+      },
+      {
+        "name": "mixed_cyrillic_balanced50k_v1",
+        "status": "complete",
+        "summary": "outputs/htr_publication_v3/strong_internal_baselines/mixed_cyrillic_balanced50k_v1_tri10k_test_fixed_m04/summary.json",
+        "checkpoint": "outputs/htr_baseline_v1/mixed_cyrillic_balanced50k_v1/best.pt",
+        "checkpoint_epoch": 47,
+        "checkpoint_val_cer": 0.06657137128836879,
+        "blank_logit_penalty": -0.4,
+        "n": 5563,
+        "cer": 0.09792085787413547,
+        "wer": 0.38532865959614054,
+        "exact": 0.5773863023548446
+      }
+    ],
+    "strong_internal_baseline_interpretation": "The only cached external HuggingFace OCR/HTR model found is TrOCR-base-handwritten. The additional strong baselines are internal CRNN baselines trained on larger in-domain data; they are useful for positioning but are not external SOTA.",
+    "cached_hf_models": [
+      "bert-base-uncased",
+      "microsoft/trocr-base-handwritten"
+    ],
+    "annotation_report": "outputs/htr_publication_v3/annotation_reliability_addendum_v1/report.md",
+    "annotation_overlap_n": 40,
+    "independent_annotation_package_ready": true,
+    "formal_iaa_ready": false,
+    "independent_annotation_browser": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_browser.html",
+    "independent_annotation_expected_filled_csv": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_second_filled.csv",
+    "independent_annotation_minimally_complete_rows": 0,
+    "weak_annotation_fields": [
+      "audit_usable",
+      "ink_visible_ok",
+      "endpoint_error",
+      "junction_error",
+      "critical_topology_error",
+      "graph_quality_0_3"
+    ],
+    "still_not_fully_solved": [
+      "formal independent inter-annotator agreement",
+      "competitive external Russian/Cyrillic HTR baseline beyond cached TrOCR",
+      "completed 3-seed page-disjoint from-scratch retraining"
+    ],
+    "strict_claim_boundary": "The new page-disjoint manifests make the required strict retraining feasible and reproducible. Until the long retrain finishes, they should be reported as prepared/queued rather than final result evidence."
+  },
+  "full_control_status": {
+    "required_control_variants": [
+      "random_crops_10k_control",
+      "school_words_10k_control"
+    ],
+    "completed": [
+      {
+        "variant": "random_crops_10k_control",
+        "seed": 42,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/random_crops_10k_control_seed42_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/random_crops_10k_control_seed42_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/full_same_size_controls/checkpoints/random_crops_10k_control_seed42/best.pt",
+        "checkpoint_epoch": 75,
+        "checkpoint_val_cer": 0.095695710239417,
+        "blank_logit_penalty": -0.4,
+        "cer": 0.13389129666972166,
+        "wer": 0.48902870153993655,
+        "exact": 0.46611540535682183
+      },
+      {
+        "variant": "random_crops_10k_control",
+        "seed": 43,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/random_crops_10k_control_seed43_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/random_crops_10k_control_seed43_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/full_same_size_controls/checkpoints/random_crops_10k_control_seed43/best.pt",
+        "checkpoint_epoch": 62,
+        "checkpoint_val_cer": 0.0981634897710829,
+        "blank_logit_penalty": -0.4,
+        "cer": 0.13716438618234084,
+        "wer": 0.4879531427886634,
+        "exact": 0.46359877763796514
+      },
+      {
+        "variant": "random_crops_10k_control",
+        "seed": 44,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/random_crops_10k_control_seed44_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/random_crops_10k_control_seed44_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/full_same_size_controls/checkpoints/random_crops_10k_control_seed44/best.pt",
+        "checkpoint_epoch": 60,
+        "checkpoint_val_cer": 0.09667412880360157,
+        "blank_logit_penalty": -0.4,
+        "cer": 0.1364783637014911,
+        "wer": 0.49133261429684233,
+        "exact": 0.46341901851518963
+      },
+      {
+        "variant": "school_words_10k_control",
+        "seed": 42,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/school_words_10k_control_seed42_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/school_words_10k_control_seed42_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/full_same_size_controls/checkpoints/school_words_10k_control_seed42/best.pt",
+        "checkpoint_epoch": 77,
+        "checkpoint_val_cer": 0.0971151889676032,
+        "blank_logit_penalty": -0.4,
+        "cer": 0.13541568157565373,
+        "wer": 0.48637425849361876,
+        "exact": 0.4664749236023728
+      },
+      {
+        "variant": "school_words_10k_control",
+        "seed": 43,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/school_words_10k_control_seed43_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/school_words_10k_control_seed43_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/full_same_size_controls/checkpoints/school_words_10k_control_seed43/best.pt",
+        "checkpoint_epoch": 75,
+        "checkpoint_val_cer": 0.09946794529660309,
+        "blank_logit_penalty": -0.4,
+        "cer": 0.13649373706635046,
+        "wer": 0.4888399544610222,
+        "exact": 0.46341901851518963
+      },
+      {
+        "variant": "school_words_10k_control",
+        "seed": 44,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/school_words_10k_control_seed44_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/full_same_size_controls/eval_fixed_m04/school_words_10k_control_seed44_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/full_same_size_controls/checkpoints/school_words_10k_control_seed44/best.pt",
+        "checkpoint_epoch": 80,
+        "checkpoint_val_cer": 0.09866230967788439,
+        "blank_logit_penalty": -0.4,
+        "cer": 0.13777256595967283,
+        "wer": 0.4854455030259454,
+        "exact": 0.4682725148301276
+      }
+    ],
+    "missing": [],
+    "historical_interrupted_attempts": [
+      {
+        "variant": "random_crops_10k_control",
+        "seed": 42,
+        "out_dir": "outputs/htr_publication_v3/full_same_size_controls/checkpoints/random_crops_10k_control_seed42",
+        "status": "interrupted before epoch 1 checkpoint",
+        "observed_progress": "stdout flushed after interrupt showed epoch 1 reached approximately batch 950/2500"
+      }
+    ],
+    "compute_estimate": {
+      "observed": "approximately 950/2500 epoch-1 batches in roughly 8-10 interactive minutes before interrupt",
+      "estimated_epoch_time_minutes": "25-30",
+      "estimated_one_80_epoch_model_hours": "33-40",
+      "estimated_six_missing_models_days": "8-10",
+      "interpretation": "Strict full controls are feasible with a long dedicated compute window, but not feasible to complete inside the current interactive review session."
+    }
+  },
+  "publication_assessment": {
+    "improved_now": [
+      "fixed-penalty normalized 3-seed base-vs-line evaluation",
+      "paired CI for normalized base-vs-line comparisons",
+      "completed 3-seed from-scratch same-size random-crop and School-word controls",
+      "external pretrained TrOCR zero-shot baseline on the full test split",
+      "fine-tuned/decode-adapted external TrOCR baseline on the full test split",
+      "automated metadata leakage, visual duplicate, group-stress, domain, error, and fixed dose-response addendum",
+      "strict HKR+School page-disjoint manifests and train-page-only line augmentation setup",
+      "annotation repeated-consistency addendum and Wilson intervals for line-quality checks",
+      "blind second-annotation package for formal IAA",
+      "strong data-rich internal CRNN baselines on the same tri10k test"
+    ],
+    "still_missing_for_strong_publication": [
+      "formal independent inter-annotator agreement",
+      "competitive external Russian/Cyrillic HTR baseline beyond cached TrOCR",
+      "completed 3-seed page-disjoint from-scratch retraining"
+    ],
+    "verdict": "full same-size v3 controls and validity addenda are complete, and strict page-disjoint manifests are prepared; journal-level readiness is still blocked by pending 3-seed page-disjoint retraining, formal independent IAA, lack of a competitive external Russian/Cyrillic HTR baseline"
+  }
+}

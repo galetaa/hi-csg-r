@@ -1,0 +1,64 @@
+{
+  "git": {
+    "head": {
+      "cmd": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stdout": "35fcb36b55d719b362a91c80cdd8efb96253d99d",
+      "stderr": ""
+    },
+    "branch": {
+      "cmd": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "returncode": 0,
+      "stdout": "main",
+      "stderr": ""
+    },
+    "status_short": {
+      "cmd": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "returncode": 0,
+      "stdout": "M tools/evaluate_crnn_ctc.py\n M tools/train_crnn_ctc.py\n?? chats/\n?? docs/publication_hardening_plan_v1.md\n?? outputs/htr_publication_v2/\n?? outputs/htr_publication_v3/\n?? tools/audit_htr_manifest_integrity_v1.py\n?? tools/build_annotation_reliability_addendum_v1.py\n?? tools/build_full_same_size_control_comparisons_v1.py\n?? tools/build_publication_v2_report.py\n?? tools/build_publication_v3_remaining_addendum_v1.py\n?? tools/build_publication_v3_status_report.py\n?? tools/build_publication_v3_validity_addendum_v1.py\n?? tools/build_same_size_aug_controls_v1.py\n?? tools/build_structural_gold_strict_addendum_v1.py\n?? tools/create_page_disjoint_hkr_school_manifests_v1.py\n?? tools/evaluate_trocr_baseline_v1.py\n?? tools/run_full_same_size_controls_v1.py\n?? tools/run_page_disjoint_hkr_school_v1.py\n?? tools/run_publication_v3_dose_fixed_eval_v1.py\n?? tools/run_publication_v3_long_pipeline.py\n?? tools/train_trocr_baseline_v1.py\n?? tools/write_publication_repro_snapshot_v1.py",
+      "stderr": ""
+    },
+    "diff_stat": {
+      "cmd": [
+        "git",
+        "diff",
+        "--stat"
+      ],
+      "returncode": 0,
+      "stdout": "tools/evaluate_crnn_ctc.py |   3 ++\n tools/train_crnn_ctc.py    | 124 +++++++++++++++++++++++++++++++++++----------\n 2 files changed, 99 insertions(+), 28 deletions(-)",
+      "stderr": ""
+    }
+  },
+  "environment": {
+    "python_version": "3.11.12 (main, Apr 18 2025, 15:15:27) [GCC 12.2.0]",
+    "python_executable": "/home/galetka/.pyenv/versions/3.11.12/bin/python",
+    "platform": "Linux-6.12.94+deb13-amd64-x86_64-with-glibc2.41",
+    "torch": {
+      "available": true,
+      "version": "2.9.0+cu128",
+      "cuda_available": false,
+      "cuda_version": "12.8",
+      "device_count": 0,
+      "device_names": []
+    },
+    "transformers_version": "4.57.1",
+    "numpy_version": "2.2.6"
+  },
+  "pip_freeze": {
+    "path": "outputs/htr_publication_v3/pip_freeze.txt",
+    "returncode": 0,
+    "stderr": "WARNING: The directory '/home/galetka/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag."
+  }
+}

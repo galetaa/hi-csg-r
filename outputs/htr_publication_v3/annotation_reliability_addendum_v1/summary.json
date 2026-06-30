@@ -1,0 +1,735 @@
+{
+  "package": "annotation_reliability_addendum_v1",
+  "repeated_annotation_consistency": {
+    "pilot_40": "outputs/h2_gold_audit_v1/annotations/annotation_pilot_40_filled.csv",
+    "annotation_100": "outputs/h2_gold_audit_v1/annotations/annotation_100_filled.csv",
+    "overlap_n": 40,
+    "overlap_sample_ids": [
+      "cyr_phrase_072319",
+      "cyr_phrase_072374",
+      "cyr_phrase_072454",
+      "cyr_phrase_072689",
+      "cyr_phrase_073406",
+      "cyr_phrase_073408",
+      "cyr_phrase_073411",
+      "cyr_phrase_073481",
+      "cyr_phrase_073499",
+      "cyr_phrase_073515",
+      "cyr_phrase_073568",
+      "cyr_phrase_073582",
+      "cyr_word_072462",
+      "cyr_word_072646",
+      "cyr_word_073262",
+      "cyr_word_073289",
+      "cyr_word_073292",
+      "cyr_word_073709",
+      "hkr_words_001175",
+      "hkr_words_011544",
+      "hkr_words_011881",
+      "hkr_words_013364",
+      "hkr_words_013525",
+      "hkr_words_016269",
+      "hkr_words_016278",
+      "hkr_words_016409",
+      "hkr_words_016429",
+      "hkr_words_016436",
+      "hkr_words_022803",
+      "hkr_words_023269",
+      "hkr_words_023274",
+      "hkr_words_024120",
+      "hkr_words_027124",
+      "hkr_words_029668",
+      "hkr_words_034700",
+      "hkr_words_053216",
+      "hkr_words_060367",
+      "hkr_words_060421",
+      "school_notebooks_test_0307270",
+      "school_notebooks_test_0321914"
+    ],
+    "fields": {
+      "audit_usable": {
+        "n_overlap_nonempty": 40,
+        "agreement_count": 36,
+        "agreement_rate": 0.9,
+        "agreement_wilson95_low": 0.7694792561952611,
+        "agreement_wilson95_high": 0.9604211124044252,
+        "cohen_kappa": 0.2857142857142859,
+        "quadratic_weighted_kappa": null
+      },
+      "ink_visible_ok": {
+        "n_overlap_nonempty": 40,
+        "agreement_count": 35,
+        "agreement_rate": 0.875,
+        "agreement_wilson95_low": 0.7388757932976187,
+        "agreement_wilson95_high": 0.9454058022645873,
+        "cohen_kappa": -0.06382978723404312,
+        "quadratic_weighted_kappa": null
+      },
+      "skeleton_follows_ink": {
+        "n_overlap_nonempty": 40,
+        "agreement_count": 37,
+        "agreement_rate": 0.925,
+        "agreement_wilson95_low": 0.8013546984090248,
+        "agreement_wilson95_high": 0.9741644432281419,
+        "cohen_kappa": 0.6250000000000003,
+        "quadratic_weighted_kappa": null
+      },
+      "missed_visible_stroke": {
+        "n_overlap_nonempty": 35,
+        "agreement_count": 35,
+        "agreement_rate": 1.0,
+        "agreement_wilson95_low": 0.9010957324106112,
+        "agreement_wilson95_high": 1.0,
+        "cohen_kappa": 1.0,
+        "quadratic_weighted_kappa": null
+      },
+      "spurious_stroke": {
+        "n_overlap_nonempty": 34,
+        "agreement_count": 33,
+        "agreement_rate": 0.9705882352941176,
+        "agreement_wilson95_low": 0.8508409778365519,
+        "agreement_wilson95_high": 0.9947892280744034,
+        "cohen_kappa": 0.6530612244897958,
+        "quadratic_weighted_kappa": null
+      },
+      "endpoint_error": {
+        "n_overlap_nonempty": 37,
+        "agreement_count": 35,
+        "agreement_rate": 0.9459459459459459,
+        "agreement_wilson95_low": 0.822950349364601,
+        "agreement_wilson95_high": 0.9850493372294601,
+        "cohen_kappa": 0.4714285714285713,
+        "quadratic_weighted_kappa": null
+      },
+      "junction_error": {
+        "n_overlap_nonempty": 37,
+        "agreement_count": 30,
+        "agreement_rate": 0.8108108108108109,
+        "agreement_wilson95_low": 0.6579498842904441,
+        "agreement_wilson95_high": 0.9052014124266288,
+        "cohen_kappa": 0.0,
+        "quadratic_weighted_kappa": null
+      },
+      "loop_error": {
+        "n_overlap_nonempty": 35,
+        "agreement_count": 35,
+        "agreement_rate": 1.0,
+        "agreement_wilson95_low": 0.9010957324106112,
+        "agreement_wilson95_high": 1.0,
+        "cohen_kappa": 1.0,
+        "quadratic_weighted_kappa": null
+      },
+      "critical_topology_error": {
+        "n_overlap_nonempty": 40,
+        "agreement_count": 36,
+        "agreement_rate": 0.9,
+        "agreement_wilson95_low": 0.7694792561952611,
+        "agreement_wilson95_high": 0.9604211124044252,
+        "cohen_kappa": 0.44444444444444436,
+        "quadratic_weighted_kappa": null
+      },
+      "graph_quality_0_3": {
+        "n_overlap_nonempty": 40,
+        "agreement_count": 32,
+        "agreement_rate": 0.8,
+        "agreement_wilson95_low": 0.6524239261814333,
+        "agreement_wilson95_high": 0.8950013502683314,
+        "cohen_kappa": 0.3495934959349597,
+        "quadratic_weighted_kappa": 0.6124031007751938
+      }
+    },
+    "disagreement_examples": [
+      {
+        "sample_id": "cyr_word_073289",
+        "field": "audit_usable",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "cyr_word_073292",
+        "field": "audit_usable",
+        "pilot_40": "0",
+        "annotation_100": "1"
+      },
+      {
+        "sample_id": "hkr_words_023274",
+        "field": "audit_usable",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "school_notebooks_test_0321914",
+        "field": "audit_usable",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "cyr_word_073289",
+        "field": "ink_visible_ok",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "cyr_word_073292",
+        "field": "ink_visible_ok",
+        "pilot_40": "0",
+        "annotation_100": "1"
+      },
+      {
+        "sample_id": "cyr_word_073709",
+        "field": "ink_visible_ok",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "hkr_words_011544",
+        "field": "ink_visible_ok",
+        "pilot_40": "0",
+        "annotation_100": "1"
+      },
+      {
+        "sample_id": "school_notebooks_test_0321914",
+        "field": "ink_visible_ok",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "cyr_word_073292",
+        "field": "skeleton_follows_ink",
+        "pilot_40": "0",
+        "annotation_100": "1"
+      },
+      {
+        "sample_id": "cyr_word_073709",
+        "field": "skeleton_follows_ink",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "school_notebooks_test_0321914",
+        "field": "skeleton_follows_ink",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "hkr_words_023269",
+        "field": "spurious_stroke",
+        "pilot_40": "0",
+        "annotation_100": "1"
+      },
+      {
+        "sample_id": "cyr_phrase_073515",
+        "field": "endpoint_error",
+        "pilot_40": "0",
+        "annotation_100": "1"
+      },
+      {
+        "sample_id": "school_notebooks_test_0321914",
+        "field": "endpoint_error",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "cyr_phrase_072374",
+        "field": "junction_error",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "cyr_phrase_073481",
+        "field": "junction_error",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "cyr_word_072646",
+        "field": "junction_error",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "cyr_word_073709",
+        "field": "junction_error",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "hkr_words_011544",
+        "field": "junction_error",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "hkr_words_016436",
+        "field": "junction_error",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "school_notebooks_test_0321914",
+        "field": "junction_error",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "cyr_phrase_073515",
+        "field": "critical_topology_error",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "cyr_word_073292",
+        "field": "critical_topology_error",
+        "pilot_40": "1",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "school_notebooks_test_0307270",
+        "field": "critical_topology_error",
+        "pilot_40": "0",
+        "annotation_100": "1"
+      },
+      {
+        "sample_id": "school_notebooks_test_0321914",
+        "field": "critical_topology_error",
+        "pilot_40": "0",
+        "annotation_100": "1"
+      },
+      {
+        "sample_id": "cyr_phrase_073481",
+        "field": "graph_quality_0_3",
+        "pilot_40": "2",
+        "annotation_100": "3"
+      },
+      {
+        "sample_id": "cyr_phrase_073515",
+        "field": "graph_quality_0_3",
+        "pilot_40": "1",
+        "annotation_100": "2"
+      },
+      {
+        "sample_id": "cyr_word_073289",
+        "field": "graph_quality_0_3",
+        "pilot_40": "2",
+        "annotation_100": "0"
+      },
+      {
+        "sample_id": "cyr_word_073292",
+        "field": "graph_quality_0_3",
+        "pilot_40": "0",
+        "annotation_100": "2"
+      },
+      {
+        "sample_id": "hkr_words_011544",
+        "field": "graph_quality_0_3",
+        "pilot_40": "2",
+        "annotation_100": "3"
+      },
+      {
+        "sample_id": "hkr_words_023269",
+        "field": "graph_quality_0_3",
+        "pilot_40": "3",
+        "annotation_100": "2"
+      },
+      {
+        "sample_id": "school_notebooks_test_0307270",
+        "field": "graph_quality_0_3",
+        "pilot_40": "3",
+        "annotation_100": "1"
+      },
+      {
+        "sample_id": "school_notebooks_test_0321914",
+        "field": "graph_quality_0_3",
+        "pilot_40": "2",
+        "annotation_100": "0"
+      }
+    ],
+    "interpretation": "This is repeated-annotation consistency on overlapping samples. It is useful reliability evidence, but it is not a formal inter-annotator agreement unless the two files are confirmed to be independent annotators."
+  },
+  "independent_annotation_v1": {
+    "package_root": "outputs/htr_publication_v3/independent_annotation_v1",
+    "manifest": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_manifest.json",
+    "score_summary": "outputs/htr_publication_v3/independent_annotation_v1/scored/summary.json",
+    "score_report": "outputs/htr_publication_v3/independent_annotation_v1/scored/report.md",
+    "browser": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_browser.html",
+    "template_csv": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_second_template.csv",
+    "protocol": "outputs/htr_publication_v3/independent_annotation_v1/protocol.md",
+    "expected_filled_csv": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_second_filled.csv",
+    "manifest_data": {
+      "source": "outputs/h2_gold_audit_v1/annotations/annotation_100_filled.csv",
+      "browser_source": "outputs/h2_gold_audit_v1/browser_audit_100.html",
+      "out_dir": "outputs/htr_publication_v3/independent_annotation_v1",
+      "seed": 20260630,
+      "n": 100,
+      "precomputed_views_used": 100,
+      "template_csv": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_second_template.csv",
+      "browser": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_browser.html",
+      "protocol": "outputs/htr_publication_v3/independent_annotation_v1/protocol.md",
+      "expected_filled_csv": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_second_filled.csv",
+      "blinding": {
+        "hidden_from_browser": [
+          "previous labels",
+          "cer",
+          "pred",
+          "target",
+          "structural_risk_score",
+          "audit_cell"
+        ]
+      }
+    },
+    "score_data": {
+      "package": "independent_annotation_v1_score",
+      "reference": "outputs/h2_gold_audit_v1/annotations/annotation_100_filled.csv",
+      "second": "outputs/htr_publication_v3/independent_annotation_v1/blind_annotation_second_filled.csv",
+      "reference_rows": 100,
+      "second_rows": 0,
+      "matched_sample_ids": 0,
+      "minimally_complete_rows": 0,
+      "is_formal_iaa_ready": false,
+      "field_metrics": {
+        "audit_usable": {
+          "n_compared": 0,
+          "agreement_count": 0,
+          "agreement_rate": null,
+          "agreement_wilson95_low": null,
+          "agreement_wilson95_high": null,
+          "cohen_kappa": null,
+          "quadratic_weighted_kappa": null,
+          "missing_reference": 0,
+          "missing_second": 0
+        },
+        "ink_visible_ok": {
+          "n_compared": 0,
+          "agreement_count": 0,
+          "agreement_rate": null,
+          "agreement_wilson95_low": null,
+          "agreement_wilson95_high": null,
+          "cohen_kappa": null,
+          "quadratic_weighted_kappa": null,
+          "missing_reference": 0,
+          "missing_second": 0
+        },
+        "skeleton_follows_ink": {
+          "n_compared": 0,
+          "agreement_count": 0,
+          "agreement_rate": null,
+          "agreement_wilson95_low": null,
+          "agreement_wilson95_high": null,
+          "cohen_kappa": null,
+          "quadratic_weighted_kappa": null,
+          "missing_reference": 0,
+          "missing_second": 0
+        },
+        "missed_visible_stroke": {
+          "n_compared": 0,
+          "agreement_count": 0,
+          "agreement_rate": null,
+          "agreement_wilson95_low": null,
+          "agreement_wilson95_high": null,
+          "cohen_kappa": null,
+          "quadratic_weighted_kappa": null,
+          "missing_reference": 0,
+          "missing_second": 0
+        },
+        "spurious_stroke": {
+          "n_compared": 0,
+          "agreement_count": 0,
+          "agreement_rate": null,
+          "agreement_wilson95_low": null,
+          "agreement_wilson95_high": null,
+          "cohen_kappa": null,
+          "quadratic_weighted_kappa": null,
+          "missing_reference": 0,
+          "missing_second": 0
+        },
+        "endpoint_error": {
+          "n_compared": 0,
+          "agreement_count": 0,
+          "agreement_rate": null,
+          "agreement_wilson95_low": null,
+          "agreement_wilson95_high": null,
+          "cohen_kappa": null,
+          "quadratic_weighted_kappa": null,
+          "missing_reference": 0,
+          "missing_second": 0
+        },
+        "junction_error": {
+          "n_compared": 0,
+          "agreement_count": 0,
+          "agreement_rate": null,
+          "agreement_wilson95_low": null,
+          "agreement_wilson95_high": null,
+          "cohen_kappa": null,
+          "quadratic_weighted_kappa": null,
+          "missing_reference": 0,
+          "missing_second": 0
+        },
+        "loop_error": {
+          "n_compared": 0,
+          "agreement_count": 0,
+          "agreement_rate": null,
+          "agreement_wilson95_low": null,
+          "agreement_wilson95_high": null,
+          "cohen_kappa": null,
+          "quadratic_weighted_kappa": null,
+          "missing_reference": 0,
+          "missing_second": 0
+        },
+        "critical_topology_error": {
+          "n_compared": 0,
+          "agreement_count": 0,
+          "agreement_rate": null,
+          "agreement_wilson95_low": null,
+          "agreement_wilson95_high": null,
+          "cohen_kappa": null,
+          "quadratic_weighted_kappa": null,
+          "missing_reference": 0,
+          "missing_second": 0
+        },
+        "graph_quality_0_3": {
+          "n_compared": 0,
+          "agreement_count": 0,
+          "agreement_rate": null,
+          "agreement_wilson95_low": null,
+          "agreement_wilson95_high": null,
+          "cohen_kappa": null,
+          "quadratic_weighted_kappa": null,
+          "missing_reference": 0,
+          "missing_second": 0
+        }
+      },
+      "disagreement_examples": [],
+      "completion_by_row": [],
+      "publication_interpretation": {
+        "supported_if_independent": "If the second CSV was filled by a genuinely independent annotator, these metrics support formal inter-annotator agreement reporting for fields with adequate n.",
+        "not_supported_if_same_annotator_or_ai": "If the second CSV was filled by the same annotator or by an AI assistant, report this as repeated/AI consistency rather than formal independent IAA."
+      }
+    },
+    "package_ready": true,
+    "second_csv_exists": false,
+    "minimally_complete_rows": 0,
+    "matched_sample_ids": 0,
+    "formal_iaa_ready": false,
+    "interpretation": "The blind second-annotation package is prepared. It becomes formal IAA evidence only after a genuinely independent annotator fills the expected CSV and the scorer reports adequate overlap."
+  },
+  "line_quality_audits": {
+    "full_natural_lines_150": {
+      "path": "outputs/iter2_data_audit/school_notebooks_v1/full_natural_lines_v1/annotations_filled.csv",
+      "n_rows": 150,
+      "positive_fields": {
+        "valid_line": {
+          "n": 150,
+          "count": 145,
+          "rate": 0.9666666666666667,
+          "wilson95_low": 0.9243471574929044,
+          "wilson95_high": 0.9856797793044249
+        },
+        "correct_order": {
+          "n": 150,
+          "count": 149,
+          "rate": 0.9933333333333333,
+          "wilson95_low": 0.9632062470660241,
+          "wilson95_high": 0.9988222289768665
+        },
+        "complete_enough": {
+          "n": 150,
+          "count": 125,
+          "rate": 0.8333333333333334,
+          "wilson95_low": 0.7655327510904788,
+          "wilson95_high": 0.8844864894790421
+        },
+        "good_for_line_train": {
+          "n": 150,
+          "count": 149,
+          "rate": 0.9933333333333333,
+          "wilson95_low": 0.9632062470660241,
+          "wilson95_high": 0.9988222289768665
+        }
+      },
+      "negative_issue_fields": {
+        "neighbor_noise": {
+          "n": 150,
+          "count": 8,
+          "rate": 0.05333333333333334,
+          "wilson95_low": 0.027269212890132462,
+          "wilson95_high": 0.1017050047467096
+        }
+      }
+    },
+    "rendered_line_sanity_80": {
+      "path": "outputs/iter2_data_audit/school_notebooks_v1/rendered_line_sanity_v1/annotations_filled.csv",
+      "n_rows": 80,
+      "positive_fields": {
+        "readable": {
+          "n": 80,
+          "count": 80,
+          "rate": 1.0,
+          "wilson95_low": 0.954180263735425,
+          "wilson95_high": 1.0
+        },
+        "correct_crop": {
+          "n": 80,
+          "count": 51,
+          "rate": 0.6375,
+          "wilson95_low": 0.5281059097698362,
+          "wilson95_high": 0.7342936627574055
+        },
+        "good_for_htr": {
+          "n": 80,
+          "count": 80,
+          "rate": 1.0,
+          "wilson95_low": 0.954180263735425,
+          "wilson95_high": 1.0
+        }
+      },
+      "negative_issue_fields": {}
+    },
+    "natural_lines_120": {
+      "path": "outputs/iter2_data_audit/school_notebooks_v1/natural_lines_v1/natural_line_validation_annotations_filled.csv",
+      "n_rows": 120,
+      "positive_fields": {
+        "valid_line": {
+          "n": 120,
+          "count": 118,
+          "rate": 0.9833333333333333,
+          "wilson95_low": 0.9412628731870861,
+          "wilson95_high": 0.9954175314588486
+        },
+        "correct_order": {
+          "n": 120,
+          "count": 120,
+          "rate": 1.0,
+          "wilson95_low": 0.9689797289440706,
+          "wilson95_high": 1.0
+        },
+        "good_for_train_aug": {
+          "n": 120,
+          "count": 120,
+          "rate": 1.0,
+          "wilson95_low": 0.9689797289440706,
+          "wilson95_high": 1.0
+        }
+      },
+      "negative_issue_fields": {
+        "missing_words": {
+          "n": 120,
+          "count": 74,
+          "rate": 0.6166666666666667,
+          "wilson95_low": 0.5273391477284313,
+          "wilson95_high": 0.6987561223585186
+        },
+        "neighbor_noise": {
+          "n": 120,
+          "count": 0,
+          "rate": 0.0,
+          "wilson95_low": -3.469446951953614e-18,
+          "wilson95_high": 0.031020271055929513
+        }
+      }
+    },
+    "lineaware_quality_gate_120": {
+      "path": "outputs/iter2_data_audit/school_notebooks_v1/lineaware_quality_gate/lineaware_quality_gate_annotations.csv",
+      "n_rows": 120,
+      "positive_fields": {
+        "usable": {
+          "n": 120,
+          "count": 115,
+          "rate": 0.9583333333333334,
+          "wilson95_low": 0.9061578707045692,
+          "wilson95_high": 0.9820735474941622
+        },
+        "skeleton_follows_ink": {
+          "n": 120,
+          "count": 120,
+          "rate": 1.0,
+          "wilson95_low": 0.9689797289440706,
+          "wilson95_high": 1.0
+        }
+      },
+      "negative_issue_fields": {
+        "ink_loss": {
+          "n": 120,
+          "count": 6,
+          "rate": 0.05,
+          "wilson95_low": 0.023114049304474235,
+          "wilson95_high": 0.10480419464586234
+        },
+        "line_residual": {
+          "n": 120,
+          "count": 9,
+          "rate": 0.075,
+          "wilson95_low": 0.039956662006448734,
+          "wilson95_high": 0.13641056839109136
+        }
+      }
+    }
+  },
+  "publication_interpretation": {
+    "strongest_supported_claim": "The existing filled audits provide quantitative quality-control rates and repeated-annotation consistency for a 40-sample overlap. A blind second-annotation package is prepared but is not itself agreement evidence.",
+    "not_supported": "A formal inter-annotator agreement claim is not supported until a genuinely independent second annotator fills the blind package and the scoring report shows adequate agreement.",
+    "weak_reliability_fields": [
+      {
+        "field": "audit_usable",
+        "n_overlap_nonempty": 40,
+        "agreement_count": 36,
+        "agreement_rate": 0.9,
+        "agreement_wilson95_low": 0.7694792561952611,
+        "agreement_wilson95_high": 0.9604211124044252,
+        "cohen_kappa": 0.2857142857142859,
+        "quadratic_weighted_kappa": null
+      },
+      {
+        "field": "ink_visible_ok",
+        "n_overlap_nonempty": 40,
+        "agreement_count": 35,
+        "agreement_rate": 0.875,
+        "agreement_wilson95_low": 0.7388757932976187,
+        "agreement_wilson95_high": 0.9454058022645873,
+        "cohen_kappa": -0.06382978723404312,
+        "quadratic_weighted_kappa": null
+      },
+      {
+        "field": "endpoint_error",
+        "n_overlap_nonempty": 37,
+        "agreement_count": 35,
+        "agreement_rate": 0.9459459459459459,
+        "agreement_wilson95_low": 0.822950349364601,
+        "agreement_wilson95_high": 0.9850493372294601,
+        "cohen_kappa": 0.4714285714285713,
+        "quadratic_weighted_kappa": null
+      },
+      {
+        "field": "junction_error",
+        "n_overlap_nonempty": 37,
+        "agreement_count": 30,
+        "agreement_rate": 0.8108108108108109,
+        "agreement_wilson95_low": 0.6579498842904441,
+        "agreement_wilson95_high": 0.9052014124266288,
+        "cohen_kappa": 0.0,
+        "quadratic_weighted_kappa": null
+      },
+      {
+        "field": "critical_topology_error",
+        "n_overlap_nonempty": 40,
+        "agreement_count": 36,
+        "agreement_rate": 0.9,
+        "agreement_wilson95_low": 0.7694792561952611,
+        "agreement_wilson95_high": 0.9604211124044252,
+        "cohen_kappa": 0.44444444444444436,
+        "quadratic_weighted_kappa": null
+      },
+      {
+        "field": "graph_quality_0_3",
+        "n_overlap_nonempty": 40,
+        "agreement_count": 32,
+        "agreement_rate": 0.8,
+        "agreement_wilson95_low": 0.6524239261814333,
+        "agreement_wilson95_high": 0.8950013502683314,
+        "cohen_kappa": 0.3495934959349597,
+        "quadratic_weighted_kappa": 0.6124031007751938
+      }
+    ],
+    "formal_iaa_ready": false,
+    "remaining_requirement": "Have a second independent annotator fill the blind package and rerun `python tools/score_independent_annotation_v1.py`."
+  }
+}

@@ -1,0 +1,1485 @@
+{
+  "package": "htr_publication_v2",
+  "status": "strengthened but not journal-complete",
+  "primary_v1_tables": {
+    "htr_3seed": "outputs/final_result_package_v1/thesis_tables/table_2_primary_htr_3seed.md",
+    "domainwise": "outputs/final_result_package_v1/thesis_tables/table_3_domainwise_htr.md"
+  },
+  "diagnostic_protocol": {
+    "type": "auxiliary fine-tune control",
+    "resume_checkpoint": "outputs/htr_graph_v1/tri10k_image_only_v1/last.pt",
+    "epochs": "81-83",
+    "seed": 42,
+    "blank_logit_penalty": -0.4,
+    "max_train_batches": 500,
+    "limitation": "not a replacement for full from-scratch 3-seed same-size controls"
+  },
+  "control_manifests": [
+    {
+      "base_root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed",
+      "line_train_jsonl": "data/experiments/iter2_line_corpus/school_notebooks_full_line_v1_sampled_10k_rendered/train.jsonl",
+      "out_root": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_10k_context_v1",
+      "base_train_n": 30000,
+      "line_train_input_n": 10000,
+      "line_train_n": 9998,
+      "line_train_oov_filtered_n": 2,
+      "line_train_oov_filtered_examples": [
+        {
+          "sample_id": "school_full_line_train_1097_46",
+          "text": "проволочную поднялся 2_?",
+          "missing_characters": [
+            "_"
+          ]
+        },
+        {
+          "sample_id": "school_full_line_train_665_28",
+          "text": "ь- [_]-",
+          "missing_characters": [
+            "_"
+          ]
+        }
+      ],
+      "merged_train_n": 39998,
+      "dataset_counts": {
+        "hkr_words": 10000,
+        "cyrillic_handwriting": 10000,
+        "school_notebooks_clean": 10000,
+        "school_notebooks_line": 9998
+      },
+      "augmentation_source": "school_full_line_raw_context_v1_sampled_10k",
+      "line_crop_quality_note": "Rendered line images are raw natural-line crops with contextual overlap; sanity gate: readable=100%, good_for_htr=100%, strict correct_crop=63.8%."
+    },
+    {
+      "control": "random_mixed_10k",
+      "base_root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed",
+      "source_roots": {
+        "cyrillic_handwriting": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting",
+        "hkr_words": "data/experiments/htr_baseline_v1_ctc_ready/hkr_words",
+        "school_notebooks_clean": "data/experiments/htr_baseline_v1_ctc_ready/school_notebooks_clean"
+      },
+      "out_root": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_random_crops_10k_control_v1",
+      "seed": 20260627,
+      "target_total": 10000,
+      "base_train_n": 30000,
+      "merged_train_n": 40000,
+      "merged_by_dataset": {
+        "hkr_words": 13333,
+        "cyrillic_handwriting": 13333,
+        "school_notebooks_clean": 13334
+      },
+      "target_by_dataset": {
+        "cyrillic_handwriting": 3333,
+        "hkr_words": 3333,
+        "school_notebooks_clean": 3334
+      },
+      "candidate_counts": {
+        "cyrillic_handwriting": 55023,
+        "hkr_words": 41954,
+        "school_notebooks_clean": 224786
+      },
+      "selected_n": 10000,
+      "selected_by_dataset": {
+        "hkr_words": 3333,
+        "cyrillic_handwriting": 3333,
+        "school_notebooks_clean": 3334
+      },
+      "oov_rejected_n": 55,
+      "oov_rejected_examples": [
+        {
+          "sample_id": "cyr_word_042590",
+          "dataset": "cyrillic_handwriting",
+          "text": "«подъезд»",
+          "missing_characters": [
+            "«",
+            "»"
+          ]
+        },
+        {
+          "sample_id": "cyr_word_042591",
+          "dataset": "cyrillic_handwriting",
+          "text": "подъезд»",
+          "missing_characters": [
+            "»"
+          ]
+        },
+        {
+          "sample_id": "cyr_word_042592",
+          "dataset": "cyrillic_handwriting",
+          "text": "«подъезд»",
+          "missing_characters": [
+            "«",
+            "»"
+          ]
+        },
+        {
+          "sample_id": "cyr_word_042593",
+          "dataset": "cyrillic_handwriting",
+          "text": "«подъезд»",
+          "missing_characters": [
+            "«",
+            "»"
+          ]
+        },
+        {
+          "sample_id": "cyr_word_042594",
+          "dataset": "cyrillic_handwriting",
+          "text": "«подъезд»",
+          "missing_characters": [
+            "«",
+            "»"
+          ]
+        },
+        {
+          "sample_id": "cyr_word_043783",
+          "dataset": "cyrillic_handwriting",
+          "text": "«йодированный",
+          "missing_characters": [
+            "«"
+          ]
+        },
+        {
+          "sample_id": "cyr_phrase_045319",
+          "dataset": "cyrillic_handwriting",
+          "text": "компоненты x, y",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "cyr_word_058690",
+          "dataset": "cyrillic_handwriting",
+          "text": "«русал»",
+          "missing_characters": [
+            "«",
+            "»"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018748",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018775",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018782",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018786",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018811",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018848",
+          "dataset": "school_notebooks_clean",
+          "text": "jason",
+          "missing_characters": [
+            "j"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018877",
+          "dataset": "school_notebooks_clean",
+          "text": "jonuary,",
+          "missing_characters": [
+            "j"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018882",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019006",
+          "dataset": "school_notebooks_clean",
+          "text": "jonrai",
+          "missing_characters": [
+            "j"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019039",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019107",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019111",
+          "dataset": "school_notebooks_clean",
+          "text": "january,",
+          "missing_characters": [
+            "j"
+          ]
+        }
+      ],
+      "interpretation": "Same-size image-only augmentation control. It tests whether the natural-line context gain can be explained by adding the same number of ordinary crop training samples."
+    },
+    {
+      "control": "school_words_10k",
+      "base_root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed",
+      "source_roots": {
+        "cyrillic_handwriting": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting",
+        "hkr_words": "data/experiments/htr_baseline_v1_ctc_ready/hkr_words",
+        "school_notebooks_clean": "data/experiments/htr_baseline_v1_ctc_ready/school_notebooks_clean"
+      },
+      "out_root": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_words_10k_control_v1",
+      "seed": 20260627,
+      "target_total": 10000,
+      "base_train_n": 30000,
+      "merged_train_n": 40000,
+      "merged_by_dataset": {
+        "hkr_words": 10000,
+        "cyrillic_handwriting": 10000,
+        "school_notebooks_clean": 20000
+      },
+      "target_by_dataset": {
+        "school_notebooks_clean": 10000
+      },
+      "candidate_counts": {
+        "school_notebooks_clean_word": 221483
+      },
+      "selected_n": 10000,
+      "selected_by_dataset": {
+        "school_notebooks_clean": 10000
+      },
+      "selected_by_category": {
+        "pupil_text": 9390,
+        "pupil_comment": 420,
+        "teacher_comment": 190
+      },
+      "oov_rejected_n": 45,
+      "oov_rejected_examples": [
+        {
+          "sample_id": "school_notebooks_train_0018748",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018775",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018782",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018786",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018811",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018848",
+          "dataset": "school_notebooks_clean",
+          "text": "jason",
+          "missing_characters": [
+            "j"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018877",
+          "dataset": "school_notebooks_clean",
+          "text": "jonuary,",
+          "missing_characters": [
+            "j"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0018882",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019006",
+          "dataset": "school_notebooks_clean",
+          "text": "jonrai",
+          "missing_characters": [
+            "j"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019039",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019107",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019111",
+          "dataset": "school_notebooks_clean",
+          "text": "january,",
+          "missing_characters": [
+            "j"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019310",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019316",
+          "dataset": "school_notebooks_clean",
+          "text": "exn",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019445",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019451",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019466",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019469",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019480",
+          "dataset": "school_notebooks_clean",
+          "text": "ex",
+          "missing_characters": [
+            "x"
+          ]
+        },
+        {
+          "sample_id": "school_notebooks_train_0019489",
+          "dataset": "school_notebooks_clean",
+          "text": "pizz",
+          "missing_characters": [
+            "z"
+          ]
+        }
+      ],
+      "interpretation": "Same-size image-only augmentation control. It tests whether the natural-line context gain can be explained by adding the same number of ordinary crop training samples."
+    }
+  ],
+  "diagnostic_runs": [
+    {
+      "key": "base_continue",
+      "label": "base continuation",
+      "summary": "outputs/htr_publication_v2/diagnostic_finetune_3x500/eval_base_continue_v1_test/summary.json",
+      "checkpoint": "outputs/htr_publication_v2/diagnostic_finetune_3x500/base_continue_v1/last.pt",
+      "checkpoint_epoch": 83,
+      "checkpoint_val_cer": 0.10784636166531095,
+      "train_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/train.jsonl",
+      "train_size": 30000,
+      "val_size": 6000,
+      "seed": 42,
+      "epochs": 83,
+      "max_train_batches": 500,
+      "batch_size": 16,
+      "blank_logit_penalty": -0.4,
+      "test_n": 5563,
+      "test_cer": 0.14757471023598548,
+      "test_wer": 0.521397327581042,
+      "test_exact": 0.43411828150278625,
+      "interpretation": "same checkpoint, continued on original tri10k base manifest"
+    },
+    {
+      "key": "line_context_10k",
+      "label": "natural-line context +10k",
+      "summary": "outputs/htr_publication_v2/diagnostic_finetune_3x500/eval_line_context_10k_v1_test/summary.json",
+      "checkpoint": "outputs/htr_publication_v2/diagnostic_finetune_3x500/line_context_10k_v1/last.pt",
+      "checkpoint_epoch": 83,
+      "checkpoint_val_cer": 0.10571895246689242,
+      "train_manifest": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_10k_context_v1/train.jsonl",
+      "train_size": 39998,
+      "val_size": 6000,
+      "seed": 42,
+      "epochs": 83,
+      "max_train_batches": 500,
+      "batch_size": 16,
+      "blank_logit_penalty": -0.4,
+      "test_n": 5563,
+      "test_cer": 0.14371077269546367,
+      "test_wer": 0.5175834381928218,
+      "test_exact": 0.44184792378213195,
+      "interpretation": "same-size target method: +9998 rendered natural-line context crops"
+    },
+    {
+      "key": "random_crops_10k_control",
+      "label": "random crop control +10k",
+      "summary": "outputs/htr_publication_v2/diagnostic_finetune_3x500/eval_random_crops_10k_control_v1_test/summary.json",
+      "checkpoint": "outputs/htr_publication_v2/diagnostic_finetune_3x500/random_crops_10k_control_v1/last.pt",
+      "checkpoint_epoch": 83,
+      "checkpoint_val_cer": 0.10825237376329681,
+      "train_manifest": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_random_crops_10k_control_v1/train.jsonl",
+      "train_size": 40000,
+      "val_size": 6000,
+      "seed": 42,
+      "epochs": 83,
+      "max_train_batches": 500,
+      "batch_size": 16,
+      "blank_logit_penalty": -0.4,
+      "test_n": 5563,
+      "test_cer": 0.14871407597498532,
+      "test_wer": 0.5187968122715565,
+      "test_exact": 0.43429804062556177,
+      "interpretation": "same-size image-only control: balanced ordinary crop samples"
+    },
+    {
+      "key": "school_words_10k_control",
+      "label": "School word crop control +10k",
+      "summary": "outputs/htr_publication_v2/diagnostic_finetune_3x500/eval_school_words_10k_control_v1_test/summary.json",
+      "checkpoint": "outputs/htr_publication_v2/diagnostic_finetune_3x500/school_words_10k_control_v1/last.pt",
+      "checkpoint_epoch": 83,
+      "checkpoint_val_cer": 0.11422356142837309,
+      "train_manifest": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_words_10k_control_v1/train.jsonl",
+      "train_size": 40000,
+      "val_size": 6000,
+      "seed": 42,
+      "epochs": 83,
+      "max_train_batches": 500,
+      "batch_size": 16,
+      "blank_logit_penalty": -0.4,
+      "test_n": 5563,
+      "test_cer": 0.1553741127463796,
+      "test_wer": 0.5303673078075384,
+      "test_exact": 0.42459104799568576,
+      "interpretation": "same-size image-only control: extra School word crops without line context"
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "key": "line_vs_base",
+      "label": "line context vs base continuation",
+      "path": "outputs/htr_publication_v2/diagnostic_finetune_3x500/paired_line_vs_base.json",
+      "delta_definition": "line - base",
+      "n": 5563,
+      "wins": 1143,
+      "losses": 1018,
+      "ties": 3402,
+      "mean_delta_cer": -0.0038639375405222173,
+      "ci95_low": -0.0070694464605753895,
+      "ci95_high": -0.0006087170879586674,
+      "delta_wer": -0.0038138893882198044,
+      "delta_exact": 0.007729642279345694,
+      "school_delta_cer": -0.013702063214563215,
+      "school_ci95_low": -0.020113889686702188,
+      "school_ci95_high": -0.0072457346819846825,
+      "dataset_delta_cer": {
+        "cyrillic_handwriting": 0.0030446806155731004,
+        "hkr_words": 0.0005751030445302892,
+        "school_notebooks_clean": -0.013702063214563215
+      }
+    },
+    {
+      "key": "line_vs_random",
+      "label": "line context vs random crop control",
+      "path": "outputs/htr_publication_v2/diagnostic_finetune_3x500/paired_line_vs_random.json",
+      "delta_definition": "line - random",
+      "n": 5563,
+      "wins": 1205,
+      "losses": 1037,
+      "ties": 3321,
+      "mean_delta_cer": -0.005003303279521814,
+      "ci95_low": -0.008390214076935493,
+      "ci95_high": -0.0016135791151706185,
+      "delta_wer": -0.0012133740787344527,
+      "delta_exact": 0.007549883156570181,
+      "school_delta_cer": -0.01615167471417471,
+      "school_ci95_low": -0.022590012036574538,
+      "school_ci95_high": -0.00952073294760795,
+      "dataset_delta_cer": {
+        "cyrillic_handwriting": 0.0036114324305199204,
+        "hkr_words": -0.0005873478022665333,
+        "school_notebooks_clean": -0.01615167471417471
+      }
+    },
+    {
+      "key": "line_vs_school_words",
+      "label": "line context vs School word control",
+      "path": "outputs/htr_publication_v2/diagnostic_finetune_3x500/paired_line_vs_school_words.json",
+      "delta_definition": "line - School words",
+      "n": 5563,
+      "wins": 1281,
+      "losses": 964,
+      "ties": 3318,
+      "mean_delta_cer": -0.011663340050916023,
+      "ci95_low": -0.01513529626659629,
+      "ci95_high": -0.008278750683763396,
+      "delta_wer": -0.012783869614716337,
+      "delta_exact": 0.01725687578644619,
+      "school_delta_cer": -0.014482085969585968,
+      "school_ci95_low": -0.021467247995060498,
+      "school_ci95_high": -0.0077116642732267746,
+      "dataset_delta_cer": {
+        "cyrillic_handwriting": -0.009000127824296041,
+        "hkr_words": -0.010925894487349595,
+        "school_notebooks_clean": -0.014482085969585968
+      }
+    },
+    {
+      "key": "random_vs_base",
+      "label": "random crop control vs base continuation",
+      "path": "outputs/htr_publication_v2/diagnostic_finetune_3x500/paired_random_vs_base.json",
+      "delta_definition": "random - base",
+      "n": 5563,
+      "wins": 1087,
+      "losses": 1142,
+      "ties": 3334,
+      "mean_delta_cer": 0.0011393657389995979,
+      "ci95_low": -0.0022595994792275957,
+      "ci95_high": 0.004503274529490212,
+      "delta_wer": -0.0026005153094853517,
+      "delta_exact": 0.00017975912277551354,
+      "school_delta_cer": 0.0024496114996114997,
+      "school_ci95_low": -0.004258985875235876,
+      "school_ci95_high": 0.009211147533022532,
+      "dataset_delta_cer": {
+        "cyrillic_handwriting": -0.0005667518149468201,
+        "hkr_words": 0.0011624508467968228,
+        "school_notebooks_clean": 0.0024496114996114997
+      }
+    },
+    {
+      "key": "school_words_vs_base",
+      "label": "School word control vs base continuation",
+      "path": "outputs/htr_publication_v2/diagnostic_finetune_3x500/paired_school_words_vs_base.json",
+      "delta_definition": "School words - base",
+      "n": 5563,
+      "wins": 1076,
+      "losses": 1271,
+      "ties": 3216,
+      "mean_delta_cer": 0.007799402510393807,
+      "ci95_low": 0.004098681722122638,
+      "ci95_high": 0.011444594786050439,
+      "delta_wer": 0.008969980226496532,
+      "delta_exact": -0.009527233507100497,
+      "school_delta_cer": 0.0007800227550227539,
+      "school_ci95_low": -0.006366349587912088,
+      "school_ci95_high": 0.007652123362748359,
+      "dataset_delta_cer": {
+        "cyrillic_handwriting": 0.01204480843986914,
+        "hkr_words": 0.011500997531879886,
+        "school_notebooks_clean": 0.0007800227550227539
+      }
+    }
+  ],
+  "manifest_integrity_audit": {
+    "audits": [
+      {
+        "name": "tri10k_base",
+        "root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed",
+        "vocab": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/vocab.json",
+        "vocab_size": 91,
+        "splits": {
+          "train": {
+            "n": 30000,
+            "datasets": {
+              "hkr_words": 10000,
+              "cyrillic_handwriting": 10000,
+              "school_notebooks_clean": 10000
+            },
+            "levels": {
+              "word": 24171,
+              "phrase": 5829
+            },
+            "source_type": {
+              "": 30000
+            },
+            "augmentation_source": {
+              "": 30000
+            },
+            "duplicates": {},
+            "oov_rows": 0,
+            "oov_characters": {},
+            "oov_examples": [],
+            "empty_text_rows": 0
+          },
+          "val": {
+            "n": 6000,
+            "datasets": {
+              "school_notebooks_clean": 2000,
+              "cyrillic_handwriting": 2000,
+              "hkr_words": 2000
+            },
+            "levels": {
+              "word": 4908,
+              "phrase": 1092
+            },
+            "source_type": {
+              "": 6000
+            },
+            "augmentation_source": {
+              "": 6000
+            },
+            "duplicates": {},
+            "oov_rows": 0,
+            "oov_characters": {},
+            "oov_examples": [],
+            "empty_text_rows": 0
+          },
+          "test": {
+            "n": 5563,
+            "datasets": {
+              "hkr_words": 2000,
+              "cyrillic_handwriting": 1563,
+              "school_notebooks_clean": 2000
+            },
+            "levels": {
+              "phrase": 1389,
+              "word": 4174
+            },
+            "source_type": {
+              "": 5563
+            },
+            "augmentation_source": {
+              "": 5563
+            },
+            "duplicates": {},
+            "oov_rows": 0,
+            "oov_characters": {},
+            "oov_examples": [],
+            "empty_text_rows": 0
+          }
+        },
+        "split_overlap": {
+          "train_vs_val": {
+            "n": 0,
+            "examples": []
+          },
+          "train_vs_test": {
+            "n": 0,
+            "examples": []
+          },
+          "val_vs_test": {
+            "n": 0,
+            "examples": []
+          }
+        }
+      },
+      {
+        "name": "line_context_10k",
+        "root": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_10k_context_v1",
+        "vocab": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_10k_context_v1/vocab.json",
+        "vocab_size": 91,
+        "splits": {
+          "train": {
+            "n": 39998,
+            "datasets": {
+              "hkr_words": 10000,
+              "cyrillic_handwriting": 10000,
+              "school_notebooks_clean": 10000,
+              "school_notebooks_line": 9998
+            },
+            "levels": {
+              "word": 24171,
+              "phrase": 5829,
+              "line": 9998
+            },
+            "source_type": {
+              "": 30000,
+              "natural_line_group": 9998
+            },
+            "augmentation_source": {
+              "": 30000,
+              "school_full_line_raw_context_v1_sampled_10k": 9998
+            },
+            "duplicates": {},
+            "oov_rows": 0,
+            "oov_characters": {},
+            "oov_examples": [],
+            "empty_text_rows": 0
+          },
+          "val": {
+            "n": 6000,
+            "datasets": {
+              "school_notebooks_clean": 2000,
+              "cyrillic_handwriting": 2000,
+              "hkr_words": 2000
+            },
+            "levels": {
+              "word": 4908,
+              "phrase": 1092
+            },
+            "source_type": {
+              "": 6000
+            },
+            "augmentation_source": {
+              "": 6000
+            },
+            "duplicates": {},
+            "oov_rows": 0,
+            "oov_characters": {},
+            "oov_examples": [],
+            "empty_text_rows": 0
+          },
+          "test": {
+            "n": 5563,
+            "datasets": {
+              "hkr_words": 2000,
+              "cyrillic_handwriting": 1563,
+              "school_notebooks_clean": 2000
+            },
+            "levels": {
+              "phrase": 1389,
+              "word": 4174
+            },
+            "source_type": {
+              "": 5563
+            },
+            "augmentation_source": {
+              "": 5563
+            },
+            "duplicates": {},
+            "oov_rows": 0,
+            "oov_characters": {},
+            "oov_examples": [],
+            "empty_text_rows": 0
+          }
+        },
+        "split_overlap": {
+          "train_vs_val": {
+            "n": 0,
+            "examples": []
+          },
+          "train_vs_test": {
+            "n": 0,
+            "examples": []
+          },
+          "val_vs_test": {
+            "n": 0,
+            "examples": []
+          }
+        }
+      },
+      {
+        "name": "random_crops_10k_control",
+        "root": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_random_crops_10k_control_v1",
+        "vocab": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_random_crops_10k_control_v1/vocab.json",
+        "vocab_size": 91,
+        "splits": {
+          "train": {
+            "n": 40000,
+            "datasets": {
+              "hkr_words": 13333,
+              "cyrillic_handwriting": 13333,
+              "school_notebooks_clean": 13334
+            },
+            "levels": {
+              "word": 32243,
+              "phrase": 7757
+            },
+            "source_type": {
+              "": 30000,
+              "same_size_crop_control": 10000
+            },
+            "augmentation_source": {
+              "": 30000,
+              "random_mixed_10k": 10000
+            },
+            "duplicates": {},
+            "oov_rows": 0,
+            "oov_characters": {},
+            "oov_examples": [],
+            "empty_text_rows": 0
+          },
+          "val": {
+            "n": 6000,
+            "datasets": {
+              "school_notebooks_clean": 2000,
+              "cyrillic_handwriting": 2000,
+              "hkr_words": 2000
+            },
+            "levels": {
+              "word": 4908,
+              "phrase": 1092
+            },
+            "source_type": {
+              "": 6000
+            },
+            "augmentation_source": {
+              "": 6000
+            },
+            "duplicates": {},
+            "oov_rows": 0,
+            "oov_characters": {},
+            "oov_examples": [],
+            "empty_text_rows": 0
+          },
+          "test": {
+            "n": 5563,
+            "datasets": {
+              "hkr_words": 2000,
+              "cyrillic_handwriting": 1563,
+              "school_notebooks_clean": 2000
+            },
+            "levels": {
+              "phrase": 1389,
+              "word": 4174
+            },
+            "source_type": {
+              "": 5563
+            },
+            "augmentation_source": {
+              "": 5563
+            },
+            "duplicates": {},
+            "oov_rows": 0,
+            "oov_characters": {},
+            "oov_examples": [],
+            "empty_text_rows": 0
+          }
+        },
+        "split_overlap": {
+          "train_vs_val": {
+            "n": 0,
+            "examples": []
+          },
+          "train_vs_test": {
+            "n": 0,
+            "examples": []
+          },
+          "val_vs_test": {
+            "n": 0,
+            "examples": []
+          }
+        }
+      },
+      {
+        "name": "school_words_10k_control",
+        "root": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_words_10k_control_v1",
+        "vocab": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_words_10k_control_v1/vocab.json",
+        "vocab_size": 91,
+        "splits": {
+          "train": {
+            "n": 40000,
+            "datasets": {
+              "hkr_words": 10000,
+              "cyrillic_handwriting": 10000,
+              "school_notebooks_clean": 20000
+            },
+            "levels": {
+              "word": 34171,
+              "phrase": 5829
+            },
+            "source_type": {
+              "": 30000,
+              "same_size_crop_control": 10000
+            },
+            "augmentation_source": {
+              "": 30000,
+              "school_words_10k": 10000
+            },
+            "duplicates": {},
+            "oov_rows": 0,
+            "oov_characters": {},
+            "oov_examples": [],
+            "empty_text_rows": 0
+          },
+          "val": {
+            "n": 6000,
+            "datasets": {
+              "school_notebooks_clean": 2000,
+              "cyrillic_handwriting": 2000,
+              "hkr_words": 2000
+            },
+            "levels": {
+              "word": 4908,
+              "phrase": 1092
+            },
+            "source_type": {
+              "": 6000
+            },
+            "augmentation_source": {
+              "": 6000
+            },
+            "duplicates": {},
+            "oov_rows": 0,
+            "oov_characters": {},
+            "oov_examples": [],
+            "empty_text_rows": 0
+          },
+          "test": {
+            "n": 5563,
+            "datasets": {
+              "hkr_words": 2000,
+              "cyrillic_handwriting": 1563,
+              "school_notebooks_clean": 2000
+            },
+            "levels": {
+              "phrase": 1389,
+              "word": 4174
+            },
+            "source_type": {
+              "": 5563
+            },
+            "augmentation_source": {
+              "": 5563
+            },
+            "duplicates": {},
+            "oov_rows": 0,
+            "oov_characters": {},
+            "oov_examples": [],
+            "empty_text_rows": 0
+          }
+        },
+        "split_overlap": {
+          "train_vs_val": {
+            "n": 0,
+            "examples": []
+          },
+          "train_vs_test": {
+            "n": 0,
+            "examples": []
+          },
+          "val_vs_test": {
+            "n": 0,
+            "examples": []
+          }
+        }
+      }
+    ],
+    "limitations": [
+      "Checks sample_id-level split leakage only.",
+      "Does not detect visual near-duplicates, writer overlap, or page-level dependence."
+    ]
+  },
+  "reproducibility_snapshot": {
+    "json": "outputs/htr_publication_v2/reproducibility_snapshot_v1.json",
+    "md": "outputs/htr_publication_v2/reproducibility_snapshot_v1.md",
+    "pip_freeze": "outputs/htr_publication_v2/pip_freeze.txt"
+  },
+  "structural": {
+    "annotations": "outputs/iter2_structural_gold_v1/annotations_structural_filled.csv",
+    "sample_plan": "outputs/iter2_structural_gold_v1/sample_plan.json",
+    "n": 200,
+    "sample_plan_summary": {
+      "seed": 42,
+      "target_total": 200,
+      "actual_total": 200,
+      "targets": {
+        "clean_core_correct": 40,
+        "hard_real_correct": 40,
+        "hard_real_error": 40,
+        "high_confidence_error": 30,
+        "rejected_correct_low_confidence": 30,
+        "numeric_mixed_rare_format": 20
+      },
+      "actual_counts": {
+        "clean_core_correct": 40,
+        "hard_real_correct": 40,
+        "hard_real_error": 40,
+        "high_confidence_error": 30,
+        "rejected_correct_low_confidence": 30,
+        "numeric_mixed_rare_format": 20
+      },
+      "dataset_counts": {
+        "school_notebooks_clean": 156,
+        "cyrillic_handwriting": 18,
+        "hkr_words": 26
+      },
+      "token_type_counts": {
+        "alpha": 123,
+        "mixed": 74,
+        "numeric": 3
+      },
+      "notes": [
+        "Samples are selected from test split for structural gold annotation.",
+        "Predictions/risk use plus_10k_context confidence_graph artifacts.",
+        "Duplicate sample_ids are removed across strata by priority order."
+      ]
+    },
+    "dataset_counts": {
+      "school_notebooks_clean": 156,
+      "cyrillic_handwriting": 18,
+      "hkr_words": 26
+    },
+    "stratum_counts": {
+      "clean_core_correct": 40,
+      "hard_real_correct": 40,
+      "hard_real_error": 40,
+      "high_confidence_error": 30,
+      "rejected_correct_low_confidence": 30,
+      "numeric_mixed_rare_format": 20
+    },
+    "token_type_counts": {
+      "alpha": 123,
+      "mixed": 74,
+      "numeric": 3
+    },
+    "overall_bool": {
+      "structural_usable": {
+        "n": 200,
+        "count": 200,
+        "rate": 1.0,
+        "wilson95_low": 0.9811539940816791,
+        "wilson95_high": 1.0
+      },
+      "foreground_ok": {
+        "n": 200,
+        "count": 200,
+        "rate": 1.0,
+        "wilson95_low": 0.9811539940816791,
+        "wilson95_high": 1.0
+      },
+      "skeleton_ok": {
+        "n": 200,
+        "count": 200,
+        "rate": 1.0,
+        "wilson95_low": 0.9811539940816791,
+        "wilson95_high": 1.0
+      },
+      "graph_ok": {
+        "n": 200,
+        "count": 200,
+        "rate": 1.0,
+        "wilson95_low": 0.9811539940816791,
+        "wilson95_high": 1.0
+      }
+    },
+    "severity": {
+      "line_residual": {
+        "n": 200,
+        "none": 156,
+        "minor": 21,
+        "severe_or_dominant": 23,
+        "minor_or_more_rate": 0.22,
+        "severe_or_dominant_rate": 0.115
+      },
+      "neighbor_noise": {
+        "n": 200,
+        "none": 197,
+        "minor": 3,
+        "severe_or_dominant": 0,
+        "minor_or_more_rate": 0.015,
+        "severe_or_dominant_rate": 0.0
+      },
+      "missed_ink": {
+        "n": 200,
+        "none": 183,
+        "minor": 17,
+        "severe_or_dominant": 0,
+        "minor_or_more_rate": 0.085,
+        "severe_or_dominant_rate": 0.0
+      },
+      "false_ink": {
+        "n": 200,
+        "none": 199,
+        "minor": 1,
+        "severe_or_dominant": 0,
+        "minor_or_more_rate": 0.005,
+        "severe_or_dominant_rate": 0.0
+      },
+      "false_branches": {
+        "n": 200,
+        "none": 200,
+        "minor": 0,
+        "severe_or_dominant": 0,
+        "minor_or_more_rate": 0.0,
+        "severe_or_dominant_rate": 0.0
+      },
+      "broken_strokes": {
+        "n": 200,
+        "none": 200,
+        "minor": 0,
+        "severe_or_dominant": 0,
+        "minor_or_more_rate": 0.0,
+        "severe_or_dominant_rate": 0.0
+      },
+      "overconnected": {
+        "n": 200,
+        "none": 199,
+        "minor": 1,
+        "severe_or_dominant": 0,
+        "minor_or_more_rate": 0.005,
+        "severe_or_dominant_rate": 0.0
+      },
+      "segmentation_issue": {
+        "n": 200,
+        "none": 200,
+        "minor": 0,
+        "severe_or_dominant": 0,
+        "minor_or_more_rate": 0.0,
+        "severe_or_dominant_rate": 0.0
+      }
+    },
+    "by_dataset": {
+      "cyrillic_handwriting": {
+        "structural_usable": {
+          "n": 18,
+          "count": 18,
+          "rate": 1.0,
+          "wilson95_low": 0.8241154494176252,
+          "wilson95_high": 1.0
+        },
+        "foreground_ok": {
+          "n": 18,
+          "count": 18,
+          "rate": 1.0,
+          "wilson95_low": 0.8241154494176252,
+          "wilson95_high": 1.0
+        },
+        "skeleton_ok": {
+          "n": 18,
+          "count": 18,
+          "rate": 1.0,
+          "wilson95_low": 0.8241154494176252,
+          "wilson95_high": 1.0
+        },
+        "graph_ok": {
+          "n": 18,
+          "count": 18,
+          "rate": 1.0,
+          "wilson95_low": 0.8241154494176252,
+          "wilson95_high": 1.0
+        }
+      },
+      "hkr_words": {
+        "structural_usable": {
+          "n": 26,
+          "count": 26,
+          "rate": 1.0,
+          "wilson95_low": 0.8712669561953784,
+          "wilson95_high": 1.0000000000000002
+        },
+        "foreground_ok": {
+          "n": 26,
+          "count": 26,
+          "rate": 1.0,
+          "wilson95_low": 0.8712669561953784,
+          "wilson95_high": 1.0000000000000002
+        },
+        "skeleton_ok": {
+          "n": 26,
+          "count": 26,
+          "rate": 1.0,
+          "wilson95_low": 0.8712669561953784,
+          "wilson95_high": 1.0000000000000002
+        },
+        "graph_ok": {
+          "n": 26,
+          "count": 26,
+          "rate": 1.0,
+          "wilson95_low": 0.8712669561953784,
+          "wilson95_high": 1.0000000000000002
+        }
+      },
+      "school_notebooks_clean": {
+        "structural_usable": {
+          "n": 156,
+          "count": 156,
+          "rate": 1.0,
+          "wilson95_low": 0.9759662065444789,
+          "wilson95_high": 0.9999999999999999
+        },
+        "foreground_ok": {
+          "n": 156,
+          "count": 156,
+          "rate": 1.0,
+          "wilson95_low": 0.9759662065444789,
+          "wilson95_high": 0.9999999999999999
+        },
+        "skeleton_ok": {
+          "n": 156,
+          "count": 156,
+          "rate": 1.0,
+          "wilson95_low": 0.9759662065444789,
+          "wilson95_high": 0.9999999999999999
+        },
+        "graph_ok": {
+          "n": 156,
+          "count": 156,
+          "rate": 1.0,
+          "wilson95_low": 0.9759662065444789,
+          "wilson95_high": 0.9999999999999999
+        }
+      }
+    },
+    "by_stratum": {
+      "clean_core_correct": {
+        "structural_usable": {
+          "n": 40,
+          "count": 40,
+          "rate": 1.0,
+          "wilson95_low": 0.9123754607496077,
+          "wilson95_high": 1.0
+        },
+        "foreground_ok": {
+          "n": 40,
+          "count": 40,
+          "rate": 1.0,
+          "wilson95_low": 0.9123754607496077,
+          "wilson95_high": 1.0
+        },
+        "skeleton_ok": {
+          "n": 40,
+          "count": 40,
+          "rate": 1.0,
+          "wilson95_low": 0.9123754607496077,
+          "wilson95_high": 1.0
+        },
+        "graph_ok": {
+          "n": 40,
+          "count": 40,
+          "rate": 1.0,
+          "wilson95_low": 0.9123754607496077,
+          "wilson95_high": 1.0
+        }
+      },
+      "hard_real_correct": {
+        "structural_usable": {
+          "n": 40,
+          "count": 40,
+          "rate": 1.0,
+          "wilson95_low": 0.9123754607496077,
+          "wilson95_high": 1.0
+        },
+        "foreground_ok": {
+          "n": 40,
+          "count": 40,
+          "rate": 1.0,
+          "wilson95_low": 0.9123754607496077,
+          "wilson95_high": 1.0
+        },
+        "skeleton_ok": {
+          "n": 40,
+          "count": 40,
+          "rate": 1.0,
+          "wilson95_low": 0.9123754607496077,
+          "wilson95_high": 1.0
+        },
+        "graph_ok": {
+          "n": 40,
+          "count": 40,
+          "rate": 1.0,
+          "wilson95_low": 0.9123754607496077,
+          "wilson95_high": 1.0
+        }
+      },
+      "hard_real_error": {
+        "structural_usable": {
+          "n": 40,
+          "count": 40,
+          "rate": 1.0,
+          "wilson95_low": 0.9123754607496077,
+          "wilson95_high": 1.0
+        },
+        "foreground_ok": {
+          "n": 40,
+          "count": 40,
+          "rate": 1.0,
+          "wilson95_low": 0.9123754607496077,
+          "wilson95_high": 1.0
+        },
+        "skeleton_ok": {
+          "n": 40,
+          "count": 40,
+          "rate": 1.0,
+          "wilson95_low": 0.9123754607496077,
+          "wilson95_high": 1.0
+        },
+        "graph_ok": {
+          "n": 40,
+          "count": 40,
+          "rate": 1.0,
+          "wilson95_low": 0.9123754607496077,
+          "wilson95_high": 1.0
+        }
+      },
+      "high_confidence_error": {
+        "structural_usable": {
+          "n": 30,
+          "count": 30,
+          "rate": 1.0,
+          "wilson95_low": 0.8864829086095221,
+          "wilson95_high": 1.0
+        },
+        "foreground_ok": {
+          "n": 30,
+          "count": 30,
+          "rate": 1.0,
+          "wilson95_low": 0.8864829086095221,
+          "wilson95_high": 1.0
+        },
+        "skeleton_ok": {
+          "n": 30,
+          "count": 30,
+          "rate": 1.0,
+          "wilson95_low": 0.8864829086095221,
+          "wilson95_high": 1.0
+        },
+        "graph_ok": {
+          "n": 30,
+          "count": 30,
+          "rate": 1.0,
+          "wilson95_low": 0.8864829086095221,
+          "wilson95_high": 1.0
+        }
+      },
+      "numeric_mixed_rare_format": {
+        "structural_usable": {
+          "n": 20,
+          "count": 20,
+          "rate": 1.0,
+          "wilson95_low": 0.8388698745050668,
+          "wilson95_high": 0.9999999999999999
+        },
+        "foreground_ok": {
+          "n": 20,
+          "count": 20,
+          "rate": 1.0,
+          "wilson95_low": 0.8388698745050668,
+          "wilson95_high": 0.9999999999999999
+        },
+        "skeleton_ok": {
+          "n": 20,
+          "count": 20,
+          "rate": 1.0,
+          "wilson95_low": 0.8388698745050668,
+          "wilson95_high": 0.9999999999999999
+        },
+        "graph_ok": {
+          "n": 20,
+          "count": 20,
+          "rate": 1.0,
+          "wilson95_low": 0.8388698745050668,
+          "wilson95_high": 0.9999999999999999
+        }
+      },
+      "rejected_correct_low_confidence": {
+        "structural_usable": {
+          "n": 30,
+          "count": 30,
+          "rate": 1.0,
+          "wilson95_low": 0.8864829086095221,
+          "wilson95_high": 1.0
+        },
+        "foreground_ok": {
+          "n": 30,
+          "count": 30,
+          "rate": 1.0,
+          "wilson95_low": 0.8864829086095221,
+          "wilson95_high": 1.0
+        },
+        "skeleton_ok": {
+          "n": 30,
+          "count": 30,
+          "rate": 1.0,
+          "wilson95_low": 0.8864829086095221,
+          "wilson95_high": 1.0
+        },
+        "graph_ok": {
+          "n": 30,
+          "count": 30,
+          "rate": 1.0,
+          "wilson95_low": 0.8864829086095221,
+          "wilson95_high": 1.0
+        }
+      }
+    },
+    "htr_error_explained_by_structure": {
+      "not_applicable": 116,
+      "no": 84
+    },
+    "publication_interpretation": "This addendum supports diagnostic usability only. It does not establish pixel-level or graph-topology ground truth because annotation fields are coarse binary/severity judgments and no inter-annotator agreement is available."
+  },
+  "stronger_internal_baseline_report": "outputs/htr_baseline_v1/htr_mixed_cyrillic_report.md",
+  "publication_assessment": {
+    "scientific_level_after_v2": "stronger thesis / focused conference-workshop level",
+    "can_make_scientific_claims": "partially",
+    "main_value": "empirical evidence that natural-line context augmentation improves Russian offline HTR beyond ordinary same-size crop augmentation in diagnostic controls",
+    "main_risk": "same-size controls are not full independent 3-seed from-scratch experiments and external SOTA baselines are absent",
+    "first_priority": "run full from-scratch same-size controls over multiple seeds or explicitly scope the claim to diagnostic evidence"
+  }
+}

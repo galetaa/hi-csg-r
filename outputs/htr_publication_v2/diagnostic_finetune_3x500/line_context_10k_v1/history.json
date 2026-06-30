@@ -1,0 +1,830 @@
+[
+  {
+    "epoch": 81,
+    "train_loss": 0.4971787384934723,
+    "val": {
+      "loss": 0.5896856713294983,
+      "cer": 0.10875574156014907,
+      "wer": 0.4054722222222224,
+      "exact": 0.5593333333333333,
+      "grouped": {
+        "school_notebooks_clean|word|pupil_text": {
+          "n": 1851,
+          "cer": 0.09442358469911151,
+          "wer": 0.3652079956780119,
+          "exact": 0.6380334954078877
+        },
+        "school_notebooks_clean|word|teacher_comment": {
+          "n": 54,
+          "cer": 0.18203329592218476,
+          "wer": 0.42592592592592593,
+          "exact": 0.5740740740740741
+        },
+        "cyrillic_handwriting|word|None": {
+          "n": 1823,
+          "cer": 0.12575389319968358,
+          "wer": 0.471749862863412,
+          "exact": 0.5364783324190894
+        },
+        "hkr_words|word|None": {
+          "n": 1101,
+          "cer": 0.08344939700525544,
+          "wer": 0.368755676657584,
+          "exact": 0.6330608537693007
+        },
+        "hkr_words|phrase|None": {
+          "n": 899,
+          "cer": 0.09090761335631813,
+          "wer": 0.3335187245087133,
+          "exact": 0.43270300333704115
+        },
+        "school_notebooks_clean|phrase|pupil_text": {
+          "n": 16,
+          "cer": 0.19616884851259855,
+          "wer": 1.0,
+          "exact": 0.0
+        },
+        "school_notebooks_clean|word|pupil_comment": {
+          "n": 79,
+          "cer": 0.40492766726943946,
+          "wer": 0.7088607594936709,
+          "exact": 0.3037974683544304
+        },
+        "cyrillic_handwriting|phrase|None": {
+          "n": 177,
+          "cer": 0.16918379095714361,
+          "wer": 0.5423728813559322,
+          "exact": 0.3163841807909605
+        }
+      },
+      "examples": [
+        {
+          "sample_id": "school_notebooks_val_0273850",
+          "target": "новые",
+          "pred": "новые",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0282339",
+          "target": "4.",
+          "pred": "4",
+          "cer": 0.5,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "cyr_word_007259",
+          "target": "чные",
+          "pred": "чныс",
+          "cer": 0.25,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "hkr_words_032159",
+          "target": "хромтау",
+          "pred": "дромтау",
+          "cer": 0.14285714285714285,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0293505",
+          "target": "очень",
+          "pred": "очень",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "hkr_words_027631",
+          "target": "риддер",
+          "pred": "гиддер",
+          "cer": 0.16666666666666666,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "cyr_word_013770",
+          "target": "07.03.13",
+          "pred": "07.03. 13",
+          "cer": 0.125,
+          "wer": 2.0
+        },
+        {
+          "sample_id": "hkr_words_049951",
+          "target": "качая колыбель",
+          "pred": "качая колыбель",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_071701",
+          "target": "личные",
+          "pred": "мичные",
+          "cer": 0.16666666666666666,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0275147",
+          "target": "дуб",
+          "pred": "дуб",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0275139",
+          "target": "4/5.",
+          "pred": "4/5.",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0276929",
+          "target": "реки",
+          "pred": "рекл",
+          "cer": 0.25,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "hkr_words_048696",
+          "target": "и залечила раны,",
+          "pred": "и залечила раны,",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_039057",
+          "target": "выраженной",
+          "pred": "враженной",
+          "cer": 0.1,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0274287",
+          "target": "уже",
+          "pred": "уже",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "hkr_words_053122",
+          "target": "тебя,",
+          "pred": "тебя,",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0289277",
+          "target": "глаз.",
+          "pred": "глаз.",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_015728",
+          "target": "история",
+          "pred": "история",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "hkr_words_050015",
+          "target": "могучей и свободной,",
+          "pred": "могучей и свободной,",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_021840",
+          "target": "очвидно,",
+          "pred": "оствидню.",
+          "cer": 0.5,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0285914",
+          "target": "ему",
+          "pred": "смщ",
+          "cer": 0.6666666666666666,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "cyr_word_071655",
+          "target": "части",
+          "pred": "чассти",
+          "cer": 0.2,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0295865",
+          "target": "своей",
+          "pred": "свосй",
+          "cer": 0.2,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0294357",
+          "target": "искреннюю,",
+          "pred": "иокреннюко,",
+          "cer": 0.3,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "hkr_words_048676",
+          "target": "и залечила разны,",
+          "pred": "и дллочила разны,",
+          "cer": 0.17647058823529413,
+          "wer": 0.3333333333333333
+        },
+        {
+          "sample_id": "cyr_word_038449",
+          "target": "развитие",
+          "pred": "развитие",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0288846",
+          "target": "радостные",
+          "pred": "радостные",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_055154",
+          "target": "валидный",
+          "pred": "вемедный",
+          "cer": 0.375,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0286255",
+          "target": "понимает",
+          "pred": "пакшма",
+          "cer": 0.625,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0270782",
+          "target": "старик",
+          "pred": "старик",
+          "cer": 0.0,
+          "wer": 0.0
+        }
+      ],
+      "pred_len_mean": 7.7515,
+      "pred_empty_ratio": 0.0,
+      "argmax_blank_ratio": 0.8415527979767777
+    },
+    "blank_logit_penalty": -0.4
+  },
+  {
+    "epoch": 82,
+    "train_loss": 0.3543810702310875,
+    "val": {
+      "loss": 0.5699662002970775,
+      "cer": 0.10674127333319802,
+      "wer": 0.4015416666666668,
+      "exact": 0.5666666666666667,
+      "grouped": {
+        "school_notebooks_clean|word|pupil_text": {
+          "n": 1851,
+          "cer": 0.08592938890750887,
+          "wer": 0.34143706104808214,
+          "exact": 0.6645056726094003
+        },
+        "school_notebooks_clean|word|teacher_comment": {
+          "n": 54,
+          "cer": 0.17572818128373682,
+          "wer": 0.46296296296296297,
+          "exact": 0.5555555555555556
+        },
+        "cyrillic_handwriting|word|None": {
+          "n": 1823,
+          "cer": 0.12848292858336074,
+          "wer": 0.47558968732857926,
+          "exact": 0.5386725178277565
+        },
+        "hkr_words|word|None": {
+          "n": 1101,
+          "cer": 0.09053553672082301,
+          "wer": 0.3960036330608538,
+          "exact": 0.6085376930063578
+        },
+        "hkr_words|phrase|None": {
+          "n": 899,
+          "cer": 0.08625734840186242,
+          "wer": 0.3192436040044495,
+          "exact": 0.45161290322580644
+        },
+        "school_notebooks_clean|phrase|pupil_text": {
+          "n": 16,
+          "cer": 0.223004165972916,
+          "wer": 1.0,
+          "exact": 0.0
+        },
+        "school_notebooks_clean|word|pupil_comment": {
+          "n": 79,
+          "cer": 0.37105183845690176,
+          "wer": 0.6455696202531646,
+          "exact": 0.35443037974683544
+        },
+        "cyrillic_handwriting|phrase|None": {
+          "n": 177,
+          "cer": 0.15577681637310242,
+          "wer": 0.5381355932203391,
+          "exact": 0.3050847457627119
+        }
+      },
+      "examples": [
+        {
+          "sample_id": "school_notebooks_val_0273850",
+          "target": "новые",
+          "pred": "новые",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0282339",
+          "target": "4.",
+          "pred": "4",
+          "cer": 0.5,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "cyr_word_007259",
+          "target": "чные",
+          "pred": "ныс",
+          "cer": 0.5,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "hkr_words_032159",
+          "target": "хромтау",
+          "pred": "кромтау",
+          "cer": 0.14285714285714285,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0293505",
+          "target": "очень",
+          "pred": "очень",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "hkr_words_027631",
+          "target": "риддер",
+          "pred": "гиддер",
+          "cer": 0.16666666666666666,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "cyr_word_013770",
+          "target": "07.03.13",
+          "pred": "07.03. 13",
+          "cer": 0.125,
+          "wer": 2.0
+        },
+        {
+          "sample_id": "hkr_words_049951",
+          "target": "качая колыбель",
+          "pred": "качая колыбель",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_071701",
+          "target": "личные",
+          "pred": "ичные",
+          "cer": 0.16666666666666666,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0275147",
+          "target": "дуб",
+          "pred": "дуб",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0275139",
+          "target": "4/5.",
+          "pred": "4/5.",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0276929",
+          "target": "реки",
+          "pred": "реки",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "hkr_words_048696",
+          "target": "и залечила раны,",
+          "pred": "и залечила раны,",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_039057",
+          "target": "выраженной",
+          "pred": "враженной",
+          "cer": 0.1,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0274287",
+          "target": "уже",
+          "pred": "уже",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "hkr_words_053122",
+          "target": "тебя,",
+          "pred": "тебя,",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0289277",
+          "target": "глаз.",
+          "pred": "глаз.",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_015728",
+          "target": "история",
+          "pred": "история",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "hkr_words_050015",
+          "target": "могучей и свободной,",
+          "pred": "могучей и свободной,",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_021840",
+          "target": "очвидно,",
+          "pred": "освидно,",
+          "cer": 0.125,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0285914",
+          "target": "ему",
+          "pred": "смз",
+          "cer": 0.6666666666666666,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "cyr_word_071655",
+          "target": "части",
+          "pred": "чессти",
+          "cer": 0.4,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0295865",
+          "target": "своей",
+          "pred": "своей",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0294357",
+          "target": "искреннюю,",
+          "pred": "покреннюко,",
+          "cer": 0.4,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "hkr_words_048676",
+          "target": "и залечила разны,",
+          "pred": "и дллочила разны,",
+          "cer": 0.17647058823529413,
+          "wer": 0.3333333333333333
+        },
+        {
+          "sample_id": "cyr_word_038449",
+          "target": "развитие",
+          "pred": "развитие",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0288846",
+          "target": "радостные",
+          "pred": "радостные",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_055154",
+          "target": "валидный",
+          "pred": "веледный",
+          "cer": 0.25,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0286255",
+          "target": "понимает",
+          "pred": "похлили",
+          "cer": 0.75,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0270782",
+          "target": "старик",
+          "pred": "старик",
+          "cer": 0.0,
+          "wer": 0.0
+        }
+      ],
+      "pred_len_mean": 7.764833333333334,
+      "pred_empty_ratio": 0.0,
+      "argmax_blank_ratio": 0.8449808664602154
+    },
+    "blank_logit_penalty": -0.4
+  },
+  {
+    "epoch": 83,
+    "train_loss": 0.33231763876229525,
+    "val": {
+      "loss": 0.5417955839236578,
+      "cer": 0.10571895246689242,
+      "wer": 0.40501388888888906,
+      "exact": 0.5633333333333334,
+      "grouped": {
+        "school_notebooks_clean|word|pupil_text": {
+          "n": 1851,
+          "cer": 0.08624906892735093,
+          "wer": 0.35170178282009723,
+          "exact": 0.6564019448946515
+        },
+        "school_notebooks_clean|word|teacher_comment": {
+          "n": 54,
+          "cer": 0.1564814814814815,
+          "wer": 0.35185185185185186,
+          "exact": 0.6666666666666666
+        },
+        "cyrillic_handwriting|word|None": {
+          "n": 1823,
+          "cer": 0.13023814317899665,
+          "wer": 0.48985189248491495,
+          "exact": 0.5277015907844212
+        },
+        "hkr_words|word|None": {
+          "n": 1101,
+          "cer": 0.08161856813082984,
+          "wer": 0.36966394187102636,
+          "exact": 0.6348773841961853
+        },
+        "hkr_words|phrase|None": {
+          "n": 899,
+          "cer": 0.08926099231822493,
+          "wer": 0.33481646273637367,
+          "exact": 0.42380422691879865
+        },
+        "school_notebooks_clean|phrase|pupil_text": {
+          "n": 16,
+          "cer": 0.1778776778776779,
+          "wer": 0.9375,
+          "exact": 0.0625
+        },
+        "school_notebooks_clean|word|pupil_comment": {
+          "n": 79,
+          "cer": 0.3643911995177818,
+          "wer": 0.6835443037974683,
+          "exact": 0.3291139240506329
+        },
+        "cyrillic_handwriting|phrase|None": {
+          "n": 177,
+          "cer": 0.15283576264091525,
+          "wer": 0.5089453860640301,
+          "exact": 0.3389830508474576
+        }
+      },
+      "examples": [
+        {
+          "sample_id": "school_notebooks_val_0273850",
+          "target": "новые",
+          "pred": "новые",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0282339",
+          "target": "4.",
+          "pred": "4",
+          "cer": 0.5,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "cyr_word_007259",
+          "target": "чные",
+          "pred": "чныс",
+          "cer": 0.25,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "hkr_words_032159",
+          "target": "хромтау",
+          "pred": "кромстау",
+          "cer": 0.2857142857142857,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0293505",
+          "target": "очень",
+          "pred": "очень",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "hkr_words_027631",
+          "target": "риддер",
+          "pred": "риддер",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_013770",
+          "target": "07.03.13",
+          "pred": "07.03. 13",
+          "cer": 0.125,
+          "wer": 2.0
+        },
+        {
+          "sample_id": "hkr_words_049951",
+          "target": "качая колыбель",
+          "pred": "качая колыбель",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_071701",
+          "target": "личные",
+          "pred": "ичные",
+          "cer": 0.16666666666666666,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0275147",
+          "target": "дуб",
+          "pred": "дуб",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0275139",
+          "target": "4/5.",
+          "pred": "4/5.",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0276929",
+          "target": "реки",
+          "pred": "реки",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "hkr_words_048696",
+          "target": "и залечила раны,",
+          "pred": "и залечила раны.",
+          "cer": 0.0625,
+          "wer": 0.3333333333333333
+        },
+        {
+          "sample_id": "cyr_word_039057",
+          "target": "выраженной",
+          "pred": "враженной",
+          "cer": 0.1,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0274287",
+          "target": "уже",
+          "pred": "уже",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "hkr_words_053122",
+          "target": "тебя,",
+          "pred": "тебя,",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0289277",
+          "target": "глаз.",
+          "pred": "глаз.",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_015728",
+          "target": "история",
+          "pred": "иетория",
+          "cer": 0.14285714285714285,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "hkr_words_050015",
+          "target": "могучей и свободной,",
+          "pred": "могучей и свободной,",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "cyr_word_021840",
+          "target": "очвидно,",
+          "pred": "оствидно,",
+          "cer": 0.25,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0285914",
+          "target": "ему",
+          "pred": "смз",
+          "cer": 0.6666666666666666,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "cyr_word_071655",
+          "target": "части",
+          "pred": "чисти",
+          "cer": 0.2,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0295865",
+          "target": "своей",
+          "pred": "своей",
+          "cer": 0.0,
+          "wer": 0.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0294357",
+          "target": "искреннюю,",
+          "pred": "покреннююо,",
+          "cer": 0.3,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "hkr_words_048676",
+          "target": "и залечила разны,",
+          "pred": "и далочила разны,",
+          "cer": 0.11764705882352941,
+          "wer": 0.3333333333333333
+        },
+        {
+          "sample_id": "cyr_word_038449",
+          "target": "развитие",
+          "pred": "рразвитие",
+          "cer": 0.125,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0288846",
+          "target": "радостные",
+          "pred": "гадостные",
+          "cer": 0.1111111111111111,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "cyr_word_055154",
+          "target": "валидный",
+          "pred": "велледный",
+          "cer": 0.375,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0286255",
+          "target": "понимает",
+          "pred": "похлимаи",
+          "cer": 0.5,
+          "wer": 1.0
+        },
+        {
+          "sample_id": "school_notebooks_val_0270782",
+          "target": "старик",
+          "pred": "старик",
+          "cer": 0.0,
+          "wer": 0.0
+        }
+      ],
+      "pred_len_mean": 7.772166666666666,
+      "pred_empty_ratio": 0.0,
+      "argmax_blank_ratio": 0.8458057056078887
+    },
+    "blank_logit_penalty": -0.4
+  }
+]

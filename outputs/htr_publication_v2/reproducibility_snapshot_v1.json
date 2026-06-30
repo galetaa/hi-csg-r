@@ -1,0 +1,66 @@
+{
+  "git": {
+    "head": {
+      "cmd": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stdout": "35fcb36b55d719b362a91c80cdd8efb96253d99d",
+      "stderr": ""
+    },
+    "branch": {
+      "cmd": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "returncode": 0,
+      "stdout": "main",
+      "stderr": ""
+    },
+    "status_short": {
+      "cmd": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "returncode": 0,
+      "stdout": "M tools/train_crnn_ctc.py\n?? chats/\n?? outputs/htr_publication_v2/\n?? tools/audit_htr_manifest_integrity_v1.py\n?? tools/build_publication_v2_report.py\n?? tools/build_same_size_aug_controls_v1.py\n?? tools/build_structural_gold_strict_addendum_v1.py\n?? tools/write_publication_repro_snapshot_v1.py",
+      "stderr": ""
+    },
+    "diff_stat": {
+      "cmd": [
+        "git",
+        "diff",
+        "--stat"
+      ],
+      "returncode": 0,
+      "stdout": "tools/train_crnn_ctc.py | 101 ++++++++++++++++++++++++++++++++++++++++--------\n 1 file changed, 84 insertions(+), 17 deletions(-)",
+      "stderr": ""
+    }
+  },
+  "environment": {
+    "python_version": "3.11.12 (main, Apr 18 2025, 15:15:27) [GCC 12.2.0]",
+    "python_executable": "/home/galetka/.pyenv/versions/3.11.12/bin/python",
+    "platform": "Linux-6.12.94+deb13-amd64-x86_64-with-glibc2.41",
+    "torch": {
+      "available": true,
+      "version": "2.9.0+cu128",
+      "cuda_available": true,
+      "cuda_version": "12.8",
+      "device_count": 1,
+      "device_names": [
+        "NVIDIA GeForce RTX 3060 Laptop GPU"
+      ]
+    },
+    "transformers_version": "4.57.1",
+    "numpy_version": "2.2.6"
+  },
+  "pip_freeze": {
+    "path": "outputs/htr_publication_v2/pip_freeze.txt",
+    "returncode": 0,
+    "stderr": ""
+  }
+}
