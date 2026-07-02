@@ -18,6 +18,8 @@ FIXED_TEST_PENALTY = -0.4
 VARIANTS = {
     "page_base": DATA_ROOT / "page_disjoint_hkr_school_base_v1",
     "page_line_10k": DATA_ROOT / "page_disjoint_hkr_school_plus_lines_10k_v1",
+    "page_random_crops_8k_control": DATA_ROOT / "page_disjoint_hkr_school_random_crops_8k_control_v1",
+    "page_school_words_8k_control": DATA_ROOT / "page_disjoint_hkr_school_school_words_8k_control_v1",
 }
 
 

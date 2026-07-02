@@ -1,0 +1,167 @@
+[
+  {
+    "key": "line_vs_base",
+    "seed": 42,
+    "baseline": "page_base",
+    "augmented": "page_line_10k",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed42_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed42_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_base_seed42.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_base_seed42.md",
+    "status": "exists"
+  },
+  {
+    "key": "line_vs_random_crops_control",
+    "seed": 42,
+    "baseline": "page_random_crops_8k_control",
+    "augmented": "page_line_10k",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed42_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed42_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_random_crops_control_seed42.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_random_crops_control_seed42.md",
+    "status": "missing_predictions"
+  },
+  {
+    "key": "line_vs_school_words_control",
+    "seed": 42,
+    "baseline": "page_school_words_8k_control",
+    "augmented": "page_line_10k",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed42_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed42_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_school_words_control_seed42.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_school_words_control_seed42.md",
+    "status": "missing_predictions"
+  },
+  {
+    "key": "random_crops_control_vs_base",
+    "seed": 42,
+    "baseline": "page_base",
+    "augmented": "page_random_crops_8k_control",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed42_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed42_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/random_crops_control_vs_base_seed42.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/random_crops_control_vs_base_seed42.md",
+    "status": "missing_predictions"
+  },
+  {
+    "key": "school_words_control_vs_base",
+    "seed": 42,
+    "baseline": "page_base",
+    "augmented": "page_school_words_8k_control",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed42_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed42_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/school_words_control_vs_base_seed42.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/school_words_control_vs_base_seed42.md",
+    "status": "missing_predictions"
+  },
+  {
+    "key": "line_vs_base",
+    "seed": 43,
+    "baseline": "page_base",
+    "augmented": "page_line_10k",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed43_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed43_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_base_seed43.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_base_seed43.md",
+    "status": "exists"
+  },
+  {
+    "key": "line_vs_random_crops_control",
+    "seed": 43,
+    "baseline": "page_random_crops_8k_control",
+    "augmented": "page_line_10k",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed43_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed43_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_random_crops_control_seed43.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_random_crops_control_seed43.md",
+    "status": "missing_predictions"
+  },
+  {
+    "key": "line_vs_school_words_control",
+    "seed": 43,
+    "baseline": "page_school_words_8k_control",
+    "augmented": "page_line_10k",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed43_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed43_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_school_words_control_seed43.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_school_words_control_seed43.md",
+    "status": "missing_predictions"
+  },
+  {
+    "key": "random_crops_control_vs_base",
+    "seed": 43,
+    "baseline": "page_base",
+    "augmented": "page_random_crops_8k_control",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed43_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed43_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/random_crops_control_vs_base_seed43.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/random_crops_control_vs_base_seed43.md",
+    "status": "missing_predictions"
+  },
+  {
+    "key": "school_words_control_vs_base",
+    "seed": 43,
+    "baseline": "page_base",
+    "augmented": "page_school_words_8k_control",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed43_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed43_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/school_words_control_vs_base_seed43.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/school_words_control_vs_base_seed43.md",
+    "status": "missing_predictions"
+  },
+  {
+    "key": "line_vs_base",
+    "seed": 44,
+    "baseline": "page_base",
+    "augmented": "page_line_10k",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed44_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed44_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_base_seed44.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_base_seed44.md",
+    "status": "exists"
+  },
+  {
+    "key": "line_vs_random_crops_control",
+    "seed": 44,
+    "baseline": "page_random_crops_8k_control",
+    "augmented": "page_line_10k",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed44_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed44_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_random_crops_control_seed44.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_random_crops_control_seed44.md",
+    "status": "missing_predictions"
+  },
+  {
+    "key": "line_vs_school_words_control",
+    "seed": 44,
+    "baseline": "page_school_words_8k_control",
+    "augmented": "page_line_10k",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed44_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed44_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_school_words_control_seed44.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_school_words_control_seed44.md",
+    "status": "missing_predictions"
+  },
+  {
+    "key": "random_crops_control_vs_base",
+    "seed": 44,
+    "baseline": "page_base",
+    "augmented": "page_random_crops_8k_control",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed44_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed44_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/random_crops_control_vs_base_seed44.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/random_crops_control_vs_base_seed44.md",
+    "status": "missing_predictions"
+  },
+  {
+    "key": "school_words_control_vs_base",
+    "seed": 44,
+    "baseline": "page_base",
+    "augmented": "page_school_words_8k_control",
+    "baseline_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed44_test/predictions.jsonl",
+    "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed44_test/predictions.jsonl",
+    "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/school_words_control_vs_base_seed44.json",
+    "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/school_words_control_vs_base_seed44.md",
+    "status": "missing_predictions"
+  }
+]

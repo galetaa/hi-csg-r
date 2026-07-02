@@ -11,6 +11,13 @@ The only cached external HuggingFace OCR/HTR model found is TrOCR-base-handwritt
 
 Cached HuggingFace models: `['bert-base-uncased', 'microsoft/trocr-base-handwritten']`.
 
+External baseline availability:
+- report: `outputs/htr_publication_v3/external_baseline_availability_v1/report.md`
+- competitive external Russian/Cyrillic baseline available locally: False
+- prepared EasyOCR wrapper: `tools/evaluate_easyocr_baseline_v1.py`
+- EasyOCR command after install: `python tools/evaluate_easyocr_baseline_v1.py --manifest data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1/test.jsonl --out_dir outputs/htr_publication_v3/external_easyocr_page_disjoint_test_v1`
+- boundary: Only TrOCR-base-handwritten is cached locally as an external HTR/OCR model. The completed external TrOCR zero-shot and decoder-only adaptation baselines are weak. No EasyOCR, Tesseract, Kraken, PaddleOCR, docTR, or Calamari runtime is available locally.
+
 ## Page-Disjoint HKR+School Split
 
 - base manifest root: `data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1`
@@ -20,11 +27,69 @@ Cached HuggingFace models: `['bert-base-uncased', 'microsoft/trocr-base-handwrit
 - train-vs-test page overlap: []
 - cyrillic limitation: cyrillic_handwriting is excluded because it has no page_id/source_image_file/writer_id metadata.
 - full retrain command: `python -u tools/run_page_disjoint_hkr_school_v1.py --seeds 42 43 44 --epochs 80 --num_workers 4`
+- control retrain command: `python -u tools/run_page_disjoint_hkr_school_v1.py --variants page_random_crops_8k_control page_school_words_8k_control --seeds 42 43 44 --epochs 80 --num_workers 4`
+- control comparison command: `python tools/build_page_disjoint_control_comparisons_v1.py`
+
+Page-disjoint same-size control manifests:
+
+| control | train n | added n | train-vs-test page overlap | ready |
+|---|---:|---:|---|---:|
+| `page_random_crops_8k_control` | 28014 | 8014 | [] | True |
+| `page_school_words_8k_control` | 28014 | 8014 | [] | True |
 
 | variant | seed | last epoch | best exists | eval returncode | status |
 |---|---:|---:|---|---:|---|
-| `page_base` | 42 | 80 | True | 0 | complete |
-| `page_base` | 43 | None | None | None | running |
+| `page_random_crops_8k_control` | 42 | None | None | None | running |
+
+Page-disjoint fixed-penalty evaluation:
+
+| variant | seed | n | CER | WER | exact | checkpoint epoch |
+|---|---:|---:|---:|---:|---:|---:|
+| `page_base` | 42 | 4000 | 0.1429 | 0.4617 | 0.4135 | 78 |
+| `page_base` | 43 | 4000 | 0.1620 | 0.5113 | 0.3573 | 79 |
+| `page_base` | 44 | 4000 | 0.1400 | 0.4562 | 0.4130 | 64 |
+| `page_line_10k` | 42 | 4000 | 0.1330 | 0.4365 | 0.4373 | 53 |
+| `page_line_10k` | 43 | 4000 | 0.1217 | 0.4122 | 0.4640 | 70 |
+| `page_line_10k` | 44 | 4000 | 0.1265 | 0.4193 | 0.4552 | 69 |
+| `page_random_crops_8k_control` | 42 | n/a | n/a | n/a | n/a | n/a |
+| `page_random_crops_8k_control` | 43 | n/a | n/a | n/a | n/a | n/a |
+| `page_random_crops_8k_control` | 44 | n/a | n/a | n/a | n/a | n/a |
+| `page_school_words_8k_control` | 42 | n/a | n/a | n/a | n/a | n/a |
+| `page_school_words_8k_control` | 43 | n/a | n/a | n/a | n/a | n/a |
+| `page_school_words_8k_control` | 44 | n/a | n/a | n/a | n/a | n/a |
+
+Page-disjoint aggregate:
+
+| variant | completed seeds | mean CER | std CER | mean WER | mean exact |
+|---|---|---:|---:|---:|---:|
+| `page_base` | [42, 43, 44] | 0.1483 | 0.0119 | 0.4764 | 0.3946 |
+| `page_line_10k` | [42, 43, 44] | 0.1271 | 0.0057 | 0.4227 | 0.4522 |
+| `page_random_crops_8k_control` | [] | n/a | n/a | n/a | n/a |
+| `page_school_words_8k_control` | [] | n/a | n/a | n/a | n/a |
+
+Mean `page_line_10k - page_base` delta: CER -0.0212, WER -0.0537, exact 0.0576.
+
+Mean `page_line_10k - control` deltas:
+
+| control | delta CER | delta WER | delta exact |
+|---|---:|---:|---:|
+| `page_random_crops_8k_control` | n/a | n/a | n/a |
+| `page_school_words_8k_control` | n/a | n/a | n/a |
+
+Page-disjoint paired line-vs-base comparison:
+
+| seed | n | delta CER | 95% CI | School delta CER | School 95% CI | delta WER | delta exact |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| 42 | 4000 | -0.0099 | [-0.0147, -0.0051] | -0.0180 | [-0.0263, -0.0098] | -0.0253 | 0.0238 |
+| 43 | 4000 | -0.0403 | [-0.0450, -0.0357] | -0.0396 | [-0.0482, -0.0316] | -0.0990 | 0.1068 |
+| 44 | 4000 | -0.0135 | [-0.0181, -0.0089] | -0.0177 | [-0.0255, -0.0097] | -0.0369 | 0.0423 |
+
+Page-disjoint paired line-vs-control comparison:
+
+| comparison | seed | n | delta CER | 95% CI | School delta CER | School 95% CI | delta WER | delta exact |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| `line_vs_random_crops_control` | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
+| `line_vs_school_words_control` | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
 
 ## Annotation Reliability
 
@@ -57,10 +122,13 @@ Independent annotation package:
 
 - Added: page-disjoint HKR+School manifests with zero train/val/test page overlap
 - Added: page-disjoint line augmentation restricted to train pages
+- Added: page-disjoint same-size random-crop and School-word control manifests
+- Added: completed 3-seed page-disjoint base-vs-line retraining
 - Added: annotation repeated-consistency and line-quality Wilson intervals
 - Added: blind second-annotation package for formal IAA
 - Added: strong data-rich internal CRNN baselines on the same tri10k test
 - Still not fully solved: formal independent inter-annotator agreement
 - Still not fully solved: competitive external Russian/Cyrillic HTR baseline beyond cached TrOCR
-- Still not fully solved: completed 3-seed page-disjoint from-scratch retraining
-- Claim boundary: The new page-disjoint manifests make the required strict retraining feasible and reproducible. Until the long retrain finishes, they should be reported as prepared/queued rather than final result evidence.
+- Still not fully solved: completed 3-seed page-disjoint same-size controls
+- Still not fully solved: paired page-disjoint line-vs-control CIs
+- Claim boundary: The strict page-disjoint base-vs-line effect is supported if base/line evaluations are complete, but uniqueness of natural-line context remains unproven until the page-disjoint same-size controls and paired line-vs-control comparisons finish.

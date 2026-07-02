@@ -171,11 +171,24 @@ def remaining_digest() -> dict[str, Any] | None:
         "out_json": str(REMAINING_ROOT / "summary.json"),
         "out_md": str(REMAINING_ROOT / "report.md"),
         "page_manifest_ready": page["is_manifest_ready"],
+        "page_control_manifest_ready": page.get("is_control_manifest_ready"),
+        "page_base_line_retrain_complete": page.get("is_base_line_retrain_complete"),
+        "page_control_retrain_complete": page.get("is_control_retrain_complete"),
         "page_full_retrain_complete": page["is_full_retrain_complete"],
         "page_run_status": page["run_status"],
         "page_run_status_rows": page["run_status_rows"] or [],
         "page_completed_model_evals": page["completed_model_evals"],
+        "page_eval_rows": page.get("eval_rows", []),
+        "page_aggregates": page.get("aggregates", []),
+        "page_paired_line_vs_base": page.get("paired_line_vs_base", []),
+        "page_paired_line_vs_controls": page.get("paired_line_vs_controls", {}),
+        "page_mean_delta_cer": page.get("mean_delta_cer"),
+        "page_mean_delta_wer": page.get("mean_delta_wer"),
+        "page_mean_delta_exact": page.get("mean_delta_exact"),
+        "page_line_vs_control_mean_deltas": page.get("line_vs_control_mean_deltas", {}),
         "page_recommended_full_command": page["recommended_full_command"],
+        "page_recommended_control_command": page.get("recommended_control_command"),
+        "page_recommended_control_comparison_command": page.get("recommended_control_comparison_command"),
         "strong_internal_baselines": baselines["rows"],
         "strong_internal_baseline_interpretation": baselines["interpretation"],
         "cached_hf_models": baselines["cached_hf_models"],
@@ -257,6 +270,8 @@ def build_summary() -> dict[str, Any]:
     validity_complete = validity is not None
     remaining = remaining_digest()
     remaining_complete = remaining is not None
+    page_base_line_complete = bool(remaining and remaining.get("page_base_line_retrain_complete"))
+    page_controls_complete = bool(remaining and remaining.get("page_control_retrain_complete"))
     page_retrain_complete = bool(remaining and remaining["page_full_retrain_complete"])
     formal_iaa_ready = bool(remaining and remaining.get("formal_iaa_ready"))
 
@@ -274,8 +289,18 @@ def build_summary() -> dict[str, Any]:
     else:
         still_missing.append("inter-annotator agreement or repeated-annotation reliability evidence")
 
-    if controls_complete and finetuned_complete and remaining_complete and not page_retrain_complete:
-        blockers = ["pending 3-seed page-disjoint retraining"]
+    if controls_complete and finetuned_complete and remaining_complete and page_retrain_complete:
+        blockers = []
+        if not formal_iaa_ready:
+            blockers.append("formal independent IAA")
+        blockers.append("lack of a competitive external Russian/Cyrillic HTR baseline")
+        verdict = (
+            "full same-size v3 controls, validity addenda, and strict 3-seed page-disjoint "
+            "HKR+School retraining are complete; journal-level readiness is still mainly blocked by "
+            + ", ".join(blockers)
+        )
+    elif controls_complete and finetuned_complete and remaining_complete and not page_retrain_complete:
+        blockers = ["pending 3-seed page-disjoint same-size controls and paired line-vs-control comparisons"]
         if not formal_iaa_ready:
             blockers.append("formal independent IAA")
         blockers.append("lack of a competitive external Russian/Cyrillic HTR baseline")
@@ -362,7 +387,10 @@ def build_summary() -> dict[str, Any]:
                 "external pretrained TrOCR zero-shot baseline on the full test split",
                 "fine-tuned/decode-adapted external TrOCR baseline on the full test split" if finetuned_complete else None,
                 "automated metadata leakage, visual duplicate, group-stress, domain, error, and fixed dose-response addendum" if validity_complete else None,
-                "strict HKR+School page-disjoint manifests and train-page-only line augmentation setup" if remaining_complete else None,
+                "completed strict 3-seed HKR+School page-disjoint base-vs-line retraining" if page_base_line_complete else None,
+                "prepared strict page-disjoint same-size control manifests" if remaining and remaining.get("page_control_manifest_ready") else None,
+                "completed strict 3-seed HKR+School page-disjoint same-size controls" if page_controls_complete else None,
+                "strict HKR+School page-disjoint manifests and train-page-only line augmentation setup" if remaining_complete and not page_retrain_complete else None,
                 "annotation repeated-consistency addendum and Wilson intervals for line-quality checks" if remaining_complete else None,
                 "blind second-annotation package for formal IAA" if remaining and remaining["independent_annotation_package_ready"] else None,
                 "strong data-rich internal CRNN baselines on the same tri10k test" if remaining_complete else None,
@@ -608,9 +636,14 @@ def build_md(summary: dict[str, Any]) -> str:
             "",
             "Page-disjoint HKR+School status:",
             f"- manifest ready: {remaining['page_manifest_ready']}",
-            f"- 3-seed full retrain complete: {remaining['page_full_retrain_complete']}",
+            f"- control manifest ready: {remaining['page_control_manifest_ready']}",
+            f"- 3-seed base-vs-line retrain complete: {remaining['page_base_line_retrain_complete']}",
+            f"- 3-seed same-size controls complete: {remaining['page_control_retrain_complete']}",
+            f"- full strict page-disjoint package complete: {remaining['page_full_retrain_complete']}",
             f"- run status: `{remaining['page_run_status']}`",
             f"- full command: `{remaining['page_recommended_full_command']}`",
+            f"- control command: `{remaining['page_recommended_control_command']}`",
+            f"- control comparison command: `{remaining['page_recommended_control_comparison_command']}`",
         ])
         if remaining["page_run_status_rows"]:
             lines.extend([
@@ -623,6 +656,94 @@ def build_md(summary: dict[str, Any]) -> str:
                     f"| `{row['variant']}` | {row['seed']} | {row.get('last_epoch_after')} | "
                     f"{row.get('best_exists')} | {row.get('eval_returncode')} | {row.get('status')} |"
                 )
+        if remaining.get("page_eval_rows"):
+            lines.extend([
+                "",
+                "Page-disjoint fixed-penalty evaluation:",
+                "",
+                "| variant | seed | n | CER | WER | exact | checkpoint epoch |",
+                "|---|---:|---:|---:|---:|---:|---:|",
+            ])
+            for row in remaining["page_eval_rows"]:
+                if row.get("exists"):
+                    lines.append(
+                        f"| `{row['variant']}` | {row['seed']} | {row['n']} | {fmt(row['cer'])} | "
+                        f"{fmt(row['wer'])} | {fmt(row['exact'])} | {row['checkpoint_epoch']} |"
+                    )
+                else:
+                    lines.append(
+                        f"| `{row['variant']}` | {row['seed']} | n/a | n/a | n/a | n/a | n/a |"
+                    )
+        if remaining.get("page_aggregates"):
+            lines.extend([
+                "",
+                "Page-disjoint aggregate:",
+                "",
+                "| variant | completed seeds | mean CER | std CER | mean WER | mean exact |",
+                "|---|---|---:|---:|---:|---:|",
+            ])
+            for row in remaining["page_aggregates"]:
+                lines.append(
+                    f"| `{row['variant']}` | {row['completed_seeds']} | {fmt(row['mean_cer'])} | "
+                    f"{fmt(row['std_cer'])} | {fmt(row['mean_wer'])} | {fmt(row['mean_exact'])} |"
+                )
+            lines.extend([
+                "",
+                f"Mean `page_line_10k - page_base` delta: CER {fmt(remaining.get('page_mean_delta_cer'))}, "
+                f"WER {fmt(remaining.get('page_mean_delta_wer'))}, exact {fmt(remaining.get('page_mean_delta_exact'))}.",
+            ])
+            if remaining.get("page_line_vs_control_mean_deltas"):
+                lines.extend([
+                    "",
+                    "Mean `page_line_10k - control` deltas:",
+                    "",
+                    "| control | delta CER | delta WER | delta exact |",
+                    "|---|---:|---:|---:|",
+                ])
+                for control_variant, deltas in remaining["page_line_vs_control_mean_deltas"].items():
+                    if deltas is None:
+                        lines.append(f"| `{control_variant}` | n/a | n/a | n/a |")
+                        continue
+                    lines.append(
+                        f"| `{control_variant}` | {fmt(deltas['mean_delta_cer'])} | "
+                        f"{fmt(deltas['mean_delta_wer'])} | {fmt(deltas['mean_delta_exact'])} |"
+                    )
+        if remaining.get("page_paired_line_vs_base"):
+            lines.extend([
+                "",
+                "Page-disjoint paired line-vs-base comparison:",
+                "",
+                "| seed | n | delta CER | 95% CI | School delta CER | School 95% CI | delta WER | delta exact |",
+                "|---:|---:|---:|---:|---:|---:|---:|---:|",
+            ])
+            for row in remaining["page_paired_line_vs_base"]:
+                lines.append(
+                    f"| {row['seed']} | {row['n']} | {fmt(row['delta_cer'])} | "
+                    f"[{fmt(row['ci95_low'])}, {fmt(row['ci95_high'])}] | "
+                    f"{fmt(row['school_delta_cer'])} | "
+                    f"[{fmt(row['school_ci95_low'])}, {fmt(row['school_ci95_high'])}] | "
+                    f"{fmt(row['delta_wer'])} | {fmt(row['delta_exact'])} |"
+                )
+        if remaining.get("page_paired_line_vs_controls"):
+            lines.extend([
+                "",
+                "Page-disjoint paired line-vs-control comparison:",
+                "",
+                "| comparison | seed | n | delta CER | 95% CI | School delta CER | School 95% CI | delta WER | delta exact |",
+                "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
+            ])
+            for key, rows in remaining["page_paired_line_vs_controls"].items():
+                if not rows:
+                    lines.append(f"| `{key}` | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a |")
+                    continue
+                for row in rows:
+                    lines.append(
+                        f"| `{key}` | {row['seed']} | {row['n']} | {fmt(row['delta_cer'])} | "
+                        f"[{fmt(row['ci95_low'])}, {fmt(row['ci95_high'])}] | "
+                        f"{fmt(row['school_delta_cer'])} | "
+                        f"[{fmt(row['school_ci95_low'])}, {fmt(row['school_ci95_high'])}] | "
+                        f"{fmt(row['delta_wer'])} | {fmt(row['delta_exact'])} |"
+                    )
         lines.extend([
             "",
             "Annotation reliability:",

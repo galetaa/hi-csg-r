@@ -3,6 +3,10 @@
   "page_disjoint": {
     "base_summary": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1/summary.json",
     "line_summary": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_plus_lines_10k_v1/summary.json",
+    "control_summaries": {
+      "page_random_crops_8k_control": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_random_crops_8k_control_v1/summary.json",
+      "page_school_words_8k_control": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_school_words_8k_control_v1/summary.json"
+    },
     "run_status": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/run_status.json",
     "base": {
       "root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1",
@@ -679,31 +683,576 @@
       },
       "purpose": "page-disjoint hkr+school base plus natural-line augmentation restricted to training pages"
     },
+    "controls": {
+      "page_random_crops_8k_control": {
+        "control": "page_random_crops_8k_control",
+        "root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_random_crops_8k_control_v1",
+        "base_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1",
+        "line_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_plus_lines_10k_v1",
+        "seed": 20260702,
+        "target_total": 8014,
+        "base_train_n": 20000,
+        "merged_train_n": 28014,
+        "extra_selected": {
+          "n": 8014,
+          "by_dataset": {
+            "hkr_words": 4007,
+            "school_notebooks_clean": 4007
+          },
+          "by_source_dataset": {
+            "hkr_words": 4007,
+            "school_notebooks": 4007
+          },
+          "by_level": {
+            "phrase": 1591,
+            "word": 6423
+          },
+          "by_category": {
+            "None": 4007,
+            "pupil_text": 3778,
+            "pupil_comment": 160,
+            "teacher_comment": 69
+          },
+          "unique_page_keys": 1308,
+          "page_key_rows": 8014
+        },
+        "train": {
+          "n": 28014,
+          "by_dataset": {
+            "hkr_words": 14007,
+            "school_notebooks_clean": 14007
+          },
+          "by_source_dataset": {
+            "hkr_words": 14007,
+            "school_notebooks": 14007
+          },
+          "by_level": {
+            "phrase": 5727,
+            "word": 22287
+          },
+          "by_category": {
+            "None": 14007,
+            "pupil_text": 13157,
+            "pupil_comment": 596,
+            "teacher_comment": 254
+          },
+          "unique_page_keys": 1468,
+          "page_key_rows": 28014
+        },
+        "val": {
+          "n": 4000,
+          "by_dataset": {
+            "school_notebooks_clean": 2000,
+            "hkr_words": 2000
+          },
+          "by_source_dataset": {
+            "school_notebooks": 2000,
+            "hkr_words": 2000
+          },
+          "by_level": {
+            "word": 3082,
+            "phrase": 918
+          },
+          "by_category": {
+            "pupil_text": 1891,
+            "None": 2000,
+            "teacher_comment": 40,
+            "pupil_comment": 69
+          },
+          "unique_page_keys": 187,
+          "page_key_rows": 4000
+        },
+        "test": {
+          "n": 4000,
+          "by_dataset": {
+            "school_notebooks_clean": 2000,
+            "hkr_words": 2000
+          },
+          "by_source_dataset": {
+            "school_notebooks": 2000,
+            "hkr_words": 2000
+          },
+          "by_level": {
+            "word": 2129,
+            "phrase": 1871
+          },
+          "by_category": {
+            "pupil_text": 1885,
+            "pupil_comment": 81,
+            "None": 2000,
+            "teacher_comment": 34
+          },
+          "unique_page_keys": 186,
+          "page_key_rows": 4000
+        },
+        "target_by_dataset": {
+          "hkr_words": 4007,
+          "school_notebooks_clean": 4007
+        },
+        "candidate_counts": {
+          "hkr_words": 40997,
+          "school_notebooks_clean": 214784
+        },
+        "missing_page_rows": {
+          "hkr_words": 0,
+          "school_notebooks_clean": 0
+        },
+        "oov_rejected_n": 38,
+        "oov_rejected_examples": [
+          {
+            "sample_id": "hkr_words_031917",
+            "dataset": "hkr_words",
+            "text": "үштобе",
+            "missing_characters": [
+              "ү"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0018811",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0018848",
+            "dataset": "school_notebooks_clean",
+            "text": "jason",
+            "missing_characters": [
+              "j"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0018877",
+            "dataset": "school_notebooks_clean",
+            "text": "jonuary,",
+            "missing_characters": [
+              "j"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0018882",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019006",
+            "dataset": "school_notebooks_clean",
+            "text": "jonrai",
+            "missing_characters": [
+              "j"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019039",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019107",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019111",
+            "dataset": "school_notebooks_clean",
+            "text": "january,",
+            "missing_characters": [
+              "j"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019310",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019316",
+            "dataset": "school_notebooks_clean",
+            "text": "exn",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019445",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019451",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019466",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019469",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019480",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019489",
+            "dataset": "school_notebooks_clean",
+            "text": "pizz",
+            "missing_characters": [
+              "z"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019536",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019538",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019568",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          }
+        ],
+        "page_overlap": {
+          "train_vs_val": [],
+          "train_vs_test": [],
+          "val_vs_test": []
+        },
+        "selected_pages_all_in_base_train": true,
+        "interpretation": "Page-disjoint same-size ordinary crop control. Extra rows are sampled only from base train pages and compared against the same validation/test pages as the page-disjoint base and line variants."
+      },
+      "page_school_words_8k_control": {
+        "control": "page_school_words_8k_control",
+        "root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_school_words_8k_control_v1",
+        "base_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1",
+        "line_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_plus_lines_10k_v1",
+        "seed": 20260702,
+        "target_total": 8014,
+        "base_train_n": 20000,
+        "merged_train_n": 28014,
+        "extra_selected": {
+          "n": 8014,
+          "by_dataset": {
+            "school_notebooks_clean": 8014
+          },
+          "by_source_dataset": {
+            "school_notebooks": 8014
+          },
+          "by_level": {
+            "word": 8014
+          },
+          "by_category": {
+            "pupil_text": 7529,
+            "pupil_comment": 344,
+            "teacher_comment": 141
+          },
+          "unique_page_keys": 1430,
+          "page_key_rows": 8014
+        },
+        "train": {
+          "n": 28014,
+          "by_dataset": {
+            "hkr_words": 10000,
+            "school_notebooks_clean": 18014
+          },
+          "by_source_dataset": {
+            "hkr_words": 10000,
+            "school_notebooks": 18014
+          },
+          "by_level": {
+            "phrase": 4136,
+            "word": 23878
+          },
+          "by_category": {
+            "None": 10000,
+            "pupil_text": 16908,
+            "pupil_comment": 780,
+            "teacher_comment": 326
+          },
+          "unique_page_keys": 1468,
+          "page_key_rows": 28014
+        },
+        "val": {
+          "n": 4000,
+          "by_dataset": {
+            "school_notebooks_clean": 2000,
+            "hkr_words": 2000
+          },
+          "by_source_dataset": {
+            "school_notebooks": 2000,
+            "hkr_words": 2000
+          },
+          "by_level": {
+            "word": 3082,
+            "phrase": 918
+          },
+          "by_category": {
+            "pupil_text": 1891,
+            "None": 2000,
+            "teacher_comment": 40,
+            "pupil_comment": 69
+          },
+          "unique_page_keys": 187,
+          "page_key_rows": 4000
+        },
+        "test": {
+          "n": 4000,
+          "by_dataset": {
+            "school_notebooks_clean": 2000,
+            "hkr_words": 2000
+          },
+          "by_source_dataset": {
+            "school_notebooks": 2000,
+            "hkr_words": 2000
+          },
+          "by_level": {
+            "word": 2129,
+            "phrase": 1871
+          },
+          "by_category": {
+            "pupil_text": 1885,
+            "pupil_comment": 81,
+            "None": 2000,
+            "teacher_comment": 34
+          },
+          "unique_page_keys": 186,
+          "page_key_rows": 4000
+        },
+        "target_by_dataset": {
+          "school_notebooks_clean": 8014
+        },
+        "candidate_counts": {
+          "school_notebooks_clean_word": 211852
+        },
+        "missing_page_rows": {
+          "school_notebooks_clean": 0
+        },
+        "oov_rejected_n": 35,
+        "oov_rejected_examples": [
+          {
+            "sample_id": "school_notebooks_train_0018811",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0018848",
+            "dataset": "school_notebooks_clean",
+            "text": "jason",
+            "missing_characters": [
+              "j"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0018877",
+            "dataset": "school_notebooks_clean",
+            "text": "jonuary,",
+            "missing_characters": [
+              "j"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0018882",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019006",
+            "dataset": "school_notebooks_clean",
+            "text": "jonrai",
+            "missing_characters": [
+              "j"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019039",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019107",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019111",
+            "dataset": "school_notebooks_clean",
+            "text": "january,",
+            "missing_characters": [
+              "j"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019310",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019316",
+            "dataset": "school_notebooks_clean",
+            "text": "exn",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019445",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019451",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019466",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019469",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019480",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019489",
+            "dataset": "school_notebooks_clean",
+            "text": "pizz",
+            "missing_characters": [
+              "z"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019536",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019538",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019568",
+            "dataset": "school_notebooks_clean",
+            "text": "ex",
+            "missing_characters": [
+              "x"
+            ]
+          },
+          {
+            "sample_id": "school_notebooks_train_0019660",
+            "dataset": "school_notebooks_clean",
+            "text": "zoo.",
+            "missing_characters": [
+              "z"
+            ]
+          }
+        ],
+        "page_overlap": {
+          "train_vs_val": [],
+          "train_vs_test": [],
+          "val_vs_test": []
+        },
+        "selected_pages_all_in_base_train": true,
+        "interpretation": "Page-disjoint same-size School-word control. Extra rows are ordinary word crops from base train pages only, not natural line-context samples."
+      }
+    },
     "run_status_rows": [
       {
-        "variant": "page_base",
+        "variant": "page_random_crops_8k_control",
         "seed": 42,
-        "manifest_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1",
-        "checkpoint_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_base_seed42",
-        "eval_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed42_test",
-        "target_epochs": 80,
-        "batch_size": 8,
-        "prefetch_factor": 2,
-        "bucket_by_width": true,
-        "cuda_alloc_conf": "expandable_segments:True",
-        "last_epoch_before": null,
-        "train_returncode": 0,
-        "eval_returncode": 0,
-        "status": "complete",
-        "last_epoch_after": 80,
-        "best_exists": true
-      },
-      {
-        "variant": "page_base",
-        "seed": 43,
-        "manifest_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1",
-        "checkpoint_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_base_seed43",
-        "eval_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed43_test",
+        "manifest_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_random_crops_8k_control_v1",
+        "checkpoint_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_random_crops_8k_control_seed42",
+        "eval_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed42_test",
         "target_epochs": 80,
         "batch_size": 8,
         "prefetch_factor": 2,
@@ -719,25 +1268,333 @@
       {
         "variant": "page_base",
         "seed": 42,
-        "manifest_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1",
-        "checkpoint_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_base_seed42",
-        "eval_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed42_test",
-        "target_epochs": 80,
-        "batch_size": 8,
-        "prefetch_factor": 2,
-        "bucket_by_width": true,
-        "cuda_alloc_conf": "expandable_segments:True",
-        "last_epoch_before": null,
-        "train_returncode": 0,
-        "eval_returncode": 0,
-        "status": "complete",
-        "last_epoch_after": 80,
-        "best_exists": true
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed42_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed42_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_base_seed42/best.pt",
+        "checkpoint_epoch": 78,
+        "checkpoint_val_cer": 0.149285591240544,
+        "n": 4000,
+        "cer": 0.1428953207632577,
+        "wer": 0.4617499999999998,
+        "exact": 0.4135
+      },
+      {
+        "variant": "page_base",
+        "seed": 43,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed43_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed43_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_base_seed43/best.pt",
+        "checkpoint_epoch": 79,
+        "checkpoint_val_cer": 0.18333372055039035,
+        "n": 4000,
+        "cer": 0.16198011209421748,
+        "wer": 0.5112500000000002,
+        "exact": 0.35725
+      },
+      {
+        "variant": "page_base",
+        "seed": 44,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed44_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed44_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_base_seed44/best.pt",
+        "checkpoint_epoch": 64,
+        "checkpoint_val_cer": 0.15563645165141826,
+        "n": 4000,
+        "cer": 0.14000004267211047,
+        "wer": 0.45620833333333294,
+        "exact": 0.413
+      },
+      {
+        "variant": "page_line_10k",
+        "seed": 42,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed42_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed42_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_line_10k_seed42/best.pt",
+        "checkpoint_epoch": 53,
+        "checkpoint_val_cer": 0.13258626829182107,
+        "n": 4000,
+        "cer": 0.1330369321553915,
+        "wer": 0.4364791666666664,
+        "exact": 0.43725
+      },
+      {
+        "variant": "page_line_10k",
+        "seed": 43,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed43_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed43_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_line_10k_seed43/best.pt",
+        "checkpoint_epoch": 70,
+        "checkpoint_val_cer": 0.13356634044060448,
+        "n": 4000,
+        "cer": 0.1217281909138331,
+        "wer": 0.4122499999999998,
+        "exact": 0.464
+      },
+      {
+        "variant": "page_line_10k",
+        "seed": 44,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed44_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed44_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_line_10k_seed44/best.pt",
+        "checkpoint_epoch": 69,
+        "checkpoint_val_cer": 0.1317476393092191,
+        "n": 4000,
+        "cer": 0.1264627909231718,
+        "wer": 0.4193124999999996,
+        "exact": 0.45525
       }
     ],
+    "eval_rows": [
+      {
+        "variant": "page_base",
+        "seed": 42,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed42_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed42_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_base_seed42/best.pt",
+        "checkpoint_epoch": 78,
+        "checkpoint_val_cer": 0.149285591240544,
+        "n": 4000,
+        "cer": 0.1428953207632577,
+        "wer": 0.4617499999999998,
+        "exact": 0.4135
+      },
+      {
+        "variant": "page_base",
+        "seed": 43,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed43_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed43_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_base_seed43/best.pt",
+        "checkpoint_epoch": 79,
+        "checkpoint_val_cer": 0.18333372055039035,
+        "n": 4000,
+        "cer": 0.16198011209421748,
+        "wer": 0.5112500000000002,
+        "exact": 0.35725
+      },
+      {
+        "variant": "page_base",
+        "seed": 44,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed44_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_base_seed44_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_base_seed44/best.pt",
+        "checkpoint_epoch": 64,
+        "checkpoint_val_cer": 0.15563645165141826,
+        "n": 4000,
+        "cer": 0.14000004267211047,
+        "wer": 0.45620833333333294,
+        "exact": 0.413
+      },
+      {
+        "variant": "page_line_10k",
+        "seed": 42,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed42_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed42_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_line_10k_seed42/best.pt",
+        "checkpoint_epoch": 53,
+        "checkpoint_val_cer": 0.13258626829182107,
+        "n": 4000,
+        "cer": 0.1330369321553915,
+        "wer": 0.4364791666666664,
+        "exact": 0.43725
+      },
+      {
+        "variant": "page_line_10k",
+        "seed": 43,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed43_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed43_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_line_10k_seed43/best.pt",
+        "checkpoint_epoch": 70,
+        "checkpoint_val_cer": 0.13356634044060448,
+        "n": 4000,
+        "cer": 0.1217281909138331,
+        "wer": 0.4122499999999998,
+        "exact": 0.464
+      },
+      {
+        "variant": "page_line_10k",
+        "seed": 44,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed44_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed44_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_line_10k_seed44/best.pt",
+        "checkpoint_epoch": 69,
+        "checkpoint_val_cer": 0.1317476393092191,
+        "n": 4000,
+        "cer": 0.1264627909231718,
+        "wer": 0.4193124999999996,
+        "exact": 0.45525
+      },
+      {
+        "variant": "page_random_crops_8k_control",
+        "seed": 42,
+        "exists": false,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed42_test/summary.json"
+      },
+      {
+        "variant": "page_random_crops_8k_control",
+        "seed": 43,
+        "exists": false,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed43_test/summary.json"
+      },
+      {
+        "variant": "page_random_crops_8k_control",
+        "seed": 44,
+        "exists": false,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed44_test/summary.json"
+      },
+      {
+        "variant": "page_school_words_8k_control",
+        "seed": 42,
+        "exists": false,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed42_test/summary.json"
+      },
+      {
+        "variant": "page_school_words_8k_control",
+        "seed": 43,
+        "exists": false,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed43_test/summary.json"
+      },
+      {
+        "variant": "page_school_words_8k_control",
+        "seed": 44,
+        "exists": false,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed44_test/summary.json"
+      }
+    ],
+    "aggregates": [
+      {
+        "variant": "page_base",
+        "completed_seeds": [
+          42,
+          43,
+          44
+        ],
+        "n_completed": 3,
+        "mean_cer": 0.14829182517652856,
+        "std_cer": 0.0119424686669884,
+        "mean_wer": 0.4764027777777777,
+        "mean_exact": 0.39458333333333334
+      },
+      {
+        "variant": "page_line_10k",
+        "completed_seeds": [
+          42,
+          43,
+          44
+        ],
+        "n_completed": 3,
+        "mean_cer": 0.12707597133079881,
+        "std_cer": 0.005679251691583508,
+        "mean_wer": 0.4226805555555553,
+        "mean_exact": 0.45216666666666666
+      },
+      {
+        "variant": "page_random_crops_8k_control",
+        "completed_seeds": [],
+        "n_completed": 0,
+        "mean_cer": null,
+        "std_cer": null,
+        "mean_wer": null,
+        "mean_exact": null
+      },
+      {
+        "variant": "page_school_words_8k_control",
+        "completed_seeds": [],
+        "n_completed": 0,
+        "mean_cer": null,
+        "std_cer": null,
+        "mean_wer": null,
+        "mean_exact": null
+      }
+    ],
+    "paired_line_vs_base": [
+      {
+        "key": "line_vs_base",
+        "seed": 42,
+        "n": 4000,
+        "delta_cer": -0.009858388607866163,
+        "delta_wer": -0.025270833333333353,
+        "delta_exact": 0.02375000000000005,
+        "ci95_low": -0.014674684286409325,
+        "ci95_high": -0.00511771875873633,
+        "school_delta_cer": -0.018016862304362304,
+        "school_ci95_low": -0.026253107517482516,
+        "school_ci95_high": -0.009832212093462094,
+        "dataset_delta_cer": {
+          "hkr_words": -0.0016999149113700197,
+          "school_notebooks_clean": -0.018016862304362304
+        }
+      },
+      {
+        "key": "line_vs_base",
+        "seed": 43,
+        "n": 4000,
+        "delta_cer": -0.0402519211803848,
+        "delta_wer": -0.09899999999999998,
+        "delta_exact": 0.10675000000000001,
+        "ci95_low": -0.04499269207263862,
+        "ci95_high": -0.035659622373777754,
+        "school_delta_cer": -0.039646364746364744,
+        "school_ci95_low": -0.048183425879675876,
+        "school_ci95_high": -0.03159318162740038,
+        "dataset_delta_cer": {
+          "hkr_words": -0.04085747761440486,
+          "school_notebooks_clean": -0.039646364746364744
+        }
+      },
+      {
+        "key": "line_vs_base",
+        "seed": 44,
+        "n": 4000,
+        "delta_cer": -0.013537251748939053,
+        "delta_wer": -0.03689583333333335,
+        "delta_exact": 0.04225000000000001,
+        "ci95_low": -0.01812397454637296,
+        "ci95_high": -0.008891400495117843,
+        "school_delta_cer": -0.01769594502719502,
+        "school_ci95_low": -0.025456432040182043,
+        "school_ci95_high": -0.009653583100926861,
+        "dataset_delta_cer": {
+          "hkr_words": -0.009378558470683083,
+          "school_notebooks_clean": -0.01769594502719502
+        }
+      }
+    ],
+    "paired_line_vs_controls": {
+      "line_vs_random_crops_control": [],
+      "line_vs_school_words_control": []
+    },
+    "mean_delta_cer": -0.021215853845729743,
+    "mean_delta_wer": -0.05372222222222239,
+    "mean_delta_exact": 0.05758333333333332,
+    "line_vs_control_mean_deltas": {
+      "page_random_crops_8k_control": null,
+      "page_school_words_8k_control": null
+    },
+    "all_eval_complete": false,
+    "core_eval_complete": true,
+    "controls_eval_complete": false,
+    "paired_ci_complete": true,
+    "paired_controls_complete": false,
     "is_manifest_ready": true,
+    "is_control_manifest_ready": true,
+    "is_base_line_retrain_complete": true,
+    "is_control_retrain_complete": false,
     "is_full_retrain_complete": false,
-    "recommended_full_command": "python -u tools/run_page_disjoint_hkr_school_v1.py --seeds 42 43 44 --epochs 80 --num_workers 4"
+    "recommended_full_command": "python -u tools/run_page_disjoint_hkr_school_v1.py --seeds 42 43 44 --epochs 80 --num_workers 4",
+    "recommended_control_command": "python -u tools/run_page_disjoint_hkr_school_v1.py --variants page_random_crops_8k_control page_school_words_8k_control --seeds 42 43 44 --epochs 80 --num_workers 4",
+    "recommended_control_comparison_command": "python tools/build_page_disjoint_control_comparisons_v1.py"
   },
   "annotation_reliability": {
     "summary": "outputs/htr_publication_v3/annotation_reliability_addendum_v1/summary.json",
@@ -1478,6 +2335,157 @@
       }
     }
   },
+  "external_baseline_availability": {
+    "summary": "outputs/htr_publication_v3/external_baseline_availability_v1/summary.json",
+    "report": "outputs/htr_publication_v3/external_baseline_availability_v1/report.md",
+    "data": {
+      "package": "external_baseline_availability_v1",
+      "python_packages": [
+        {
+          "name": "easyocr",
+          "available": false,
+          "error_type": "ModuleNotFoundError",
+          "error": "No module named 'easyocr'"
+        },
+        {
+          "name": "pytesseract",
+          "available": false,
+          "error_type": "ModuleNotFoundError",
+          "error": "No module named 'pytesseract'"
+        },
+        {
+          "name": "tesserocr",
+          "available": false,
+          "error_type": "ModuleNotFoundError",
+          "error": "No module named 'tesserocr'"
+        },
+        {
+          "name": "kraken",
+          "available": false,
+          "error_type": "ModuleNotFoundError",
+          "error": "No module named 'kraken'"
+        },
+        {
+          "name": "keras_ocr",
+          "available": false,
+          "error_type": "ModuleNotFoundError",
+          "error": "No module named 'keras_ocr'"
+        },
+        {
+          "name": "doctr",
+          "available": false,
+          "error_type": "ModuleNotFoundError",
+          "error": "No module named 'doctr'"
+        },
+        {
+          "name": "paddleocr",
+          "available": false,
+          "error_type": "ModuleNotFoundError",
+          "error": "No module named 'paddleocr'"
+        },
+        {
+          "name": "transformers",
+          "available": true,
+          "version": "4.57.1"
+        },
+        {
+          "name": "torch",
+          "available": true,
+          "version": "2.9.0+cu128"
+        },
+        {
+          "name": "cv2",
+          "available": true,
+          "version": "4.12.0"
+        }
+      ],
+      "cli_tools": [
+        {
+          "name": "tesseract",
+          "available": false,
+          "path": null
+        },
+        {
+          "name": "kraken",
+          "available": false,
+          "path": null
+        },
+        {
+          "name": "calamari-predict",
+          "available": false,
+          "path": null
+        },
+        {
+          "name": "paddleocr",
+          "available": false,
+          "path": null
+        }
+      ],
+      "cached_huggingface_models": [
+        "bert-base-uncased",
+        "microsoft/trocr-base-handwritten"
+      ],
+      "existing_baselines": [
+        {
+          "name": "external_trocr_zero_shot_full",
+          "exists": true,
+          "summary": "outputs/htr_publication_v3/external_trocr_zero_shot_full/summary.json",
+          "model_id": "microsoft/trocr-base-handwritten",
+          "protocol": "pretrained zero-shot generation baseline",
+          "n": 5563,
+          "cer": 1.2985233942724257,
+          "wer": 1.4752891125891299,
+          "exact": 0.003954700701060579
+        },
+        {
+          "name": "external_trocr_finetuned_tri10k_base_test",
+          "exists": true,
+          "summary": "outputs/htr_publication_v3/external_trocr_finetuned_tri10k_base_test/summary.json",
+          "model_id": "outputs/htr_publication_v3/trocr_finetuned_tri10k_base/best",
+          "protocol": "pretrained zero-shot generation baseline",
+          "n": 5563,
+          "cer": 1.2657019030836423,
+          "wer": 1.0343280004793578,
+          "exact": 0.004314218946611541
+        },
+        {
+          "name": "mixed_cyrillic_natural_full_v1",
+          "exists": true,
+          "summary": "outputs/htr_publication_v3/strong_internal_baselines/mixed_cyrillic_natural_full_v1_tri10k_test_fixed_m04/summary.json",
+          "model_id": "outputs/htr_baseline_v1/mixed_cyrillic_natural_full_v1/best.pt",
+          "protocol": null,
+          "n": 5563,
+          "cer": 0.08215208421252419,
+          "wer": 0.3350230690874226,
+          "exact": 0.6244831925220204
+        },
+        {
+          "name": "mixed_cyrillic_balanced50k_v1",
+          "exists": true,
+          "summary": "outputs/htr_publication_v3/strong_internal_baselines/mixed_cyrillic_balanced50k_v1_tri10k_test_fixed_m04/summary.json",
+          "model_id": "outputs/htr_baseline_v1/mixed_cyrillic_balanced50k_v1/best.pt",
+          "protocol": null,
+          "n": 5563,
+          "cer": 0.09792085787413547,
+          "wer": 0.38532865959614054,
+          "exact": 0.5773863023548446
+        }
+      ],
+      "publication_interpretation": {
+        "external_baseline_available_locally": true,
+        "competitive_external_russian_cyrillic_baseline_available_locally": false,
+        "prepared_easyocr_eval_wrapper": "tools/evaluate_easyocr_baseline_v1.py",
+        "example_easyocr_command": "python tools/evaluate_easyocr_baseline_v1.py --manifest data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1/test.jsonl --out_dir outputs/htr_publication_v3/external_easyocr_page_disjoint_test_v1",
+        "current_external_boundary": "Only TrOCR-base-handwritten is cached locally as an external HTR/OCR model. The completed external TrOCR zero-shot and decoder-only adaptation baselines are weak. No EasyOCR, Tesseract, Kraken, PaddleOCR, docTR, or Calamari runtime is available locally.",
+        "what_would_close_the_gap": [
+          "Install/evaluate a suitable external Cyrillic/Russian OCR/HTR system on the same test protocol.",
+          "For EasyOCR specifically, run the prepared wrapper after installing the package and model weights.",
+          "Or download a relevant HuggingFace/Russian OCR checkpoint and run it on the fixed manifests.",
+          "If no such model is available, report TrOCR as a negative/limited external baseline and avoid SOTA claims."
+        ]
+      }
+    }
+  },
   "strong_internal_baselines": {
     "rows": [
       {
@@ -1517,6 +2525,9 @@
     "now_added": [
       "page-disjoint HKR+School manifests with zero train/val/test page overlap",
       "page-disjoint line augmentation restricted to train pages",
+      "page-disjoint same-size random-crop and School-word control manifests",
+      "completed 3-seed page-disjoint base-vs-line retraining",
+      null,
       "annotation repeated-consistency and line-quality Wilson intervals",
       "blind second-annotation package for formal IAA",
       "strong data-rich internal CRNN baselines on the same tri10k test"
@@ -1524,7 +2535,8 @@
     "still_not_fully_solved": [
       "formal independent inter-annotator agreement",
       "competitive external Russian/Cyrillic HTR baseline beyond cached TrOCR",
-      "completed 3-seed page-disjoint from-scratch retraining"
+      "completed 3-seed page-disjoint same-size controls",
+      "paired page-disjoint line-vs-control CIs"
     ],
     "weak_annotation_fields": [
       "audit_usable",
@@ -1536,6 +2548,6 @@
     ],
     "independent_annotation_package_ready": true,
     "formal_iaa_ready": false,
-    "strict_claim_boundary": "The new page-disjoint manifests make the required strict retraining feasible and reproducible. Until the long retrain finishes, they should be reported as prepared/queued rather than final result evidence."
+    "strict_claim_boundary": "The strict page-disjoint base-vs-line effect is supported if base/line evaluations are complete, but uniqueness of natural-line context remains unproven until the page-disjoint same-size controls and paired line-vs-control comparisons finish."
   }
 }

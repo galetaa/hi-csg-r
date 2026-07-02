@@ -1,0 +1,147 @@
+{
+  "package": "external_baseline_availability_v1",
+  "python_packages": [
+    {
+      "name": "easyocr",
+      "available": false,
+      "error_type": "ModuleNotFoundError",
+      "error": "No module named 'easyocr'"
+    },
+    {
+      "name": "pytesseract",
+      "available": false,
+      "error_type": "ModuleNotFoundError",
+      "error": "No module named 'pytesseract'"
+    },
+    {
+      "name": "tesserocr",
+      "available": false,
+      "error_type": "ModuleNotFoundError",
+      "error": "No module named 'tesserocr'"
+    },
+    {
+      "name": "kraken",
+      "available": false,
+      "error_type": "ModuleNotFoundError",
+      "error": "No module named 'kraken'"
+    },
+    {
+      "name": "keras_ocr",
+      "available": false,
+      "error_type": "ModuleNotFoundError",
+      "error": "No module named 'keras_ocr'"
+    },
+    {
+      "name": "doctr",
+      "available": false,
+      "error_type": "ModuleNotFoundError",
+      "error": "No module named 'doctr'"
+    },
+    {
+      "name": "paddleocr",
+      "available": false,
+      "error_type": "ModuleNotFoundError",
+      "error": "No module named 'paddleocr'"
+    },
+    {
+      "name": "transformers",
+      "available": true,
+      "version": "4.57.1"
+    },
+    {
+      "name": "torch",
+      "available": true,
+      "version": "2.9.0+cu128"
+    },
+    {
+      "name": "cv2",
+      "available": true,
+      "version": "4.12.0"
+    }
+  ],
+  "cli_tools": [
+    {
+      "name": "tesseract",
+      "available": false,
+      "path": null
+    },
+    {
+      "name": "kraken",
+      "available": false,
+      "path": null
+    },
+    {
+      "name": "calamari-predict",
+      "available": false,
+      "path": null
+    },
+    {
+      "name": "paddleocr",
+      "available": false,
+      "path": null
+    }
+  ],
+  "cached_huggingface_models": [
+    "bert-base-uncased",
+    "microsoft/trocr-base-handwritten"
+  ],
+  "existing_baselines": [
+    {
+      "name": "external_trocr_zero_shot_full",
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/external_trocr_zero_shot_full/summary.json",
+      "model_id": "microsoft/trocr-base-handwritten",
+      "protocol": "pretrained zero-shot generation baseline",
+      "n": 5563,
+      "cer": 1.2985233942724257,
+      "wer": 1.4752891125891299,
+      "exact": 0.003954700701060579
+    },
+    {
+      "name": "external_trocr_finetuned_tri10k_base_test",
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/external_trocr_finetuned_tri10k_base_test/summary.json",
+      "model_id": "outputs/htr_publication_v3/trocr_finetuned_tri10k_base/best",
+      "protocol": "pretrained zero-shot generation baseline",
+      "n": 5563,
+      "cer": 1.2657019030836423,
+      "wer": 1.0343280004793578,
+      "exact": 0.004314218946611541
+    },
+    {
+      "name": "mixed_cyrillic_natural_full_v1",
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/strong_internal_baselines/mixed_cyrillic_natural_full_v1_tri10k_test_fixed_m04/summary.json",
+      "model_id": "outputs/htr_baseline_v1/mixed_cyrillic_natural_full_v1/best.pt",
+      "protocol": null,
+      "n": 5563,
+      "cer": 0.08215208421252419,
+      "wer": 0.3350230690874226,
+      "exact": 0.6244831925220204
+    },
+    {
+      "name": "mixed_cyrillic_balanced50k_v1",
+      "exists": true,
+      "summary": "outputs/htr_publication_v3/strong_internal_baselines/mixed_cyrillic_balanced50k_v1_tri10k_test_fixed_m04/summary.json",
+      "model_id": "outputs/htr_baseline_v1/mixed_cyrillic_balanced50k_v1/best.pt",
+      "protocol": null,
+      "n": 5563,
+      "cer": 0.09792085787413547,
+      "wer": 0.38532865959614054,
+      "exact": 0.5773863023548446
+    }
+  ],
+  "publication_interpretation": {
+    "external_baseline_available_locally": true,
+    "competitive_external_russian_cyrillic_baseline_available_locally": false,
+    "prepared_easyocr_eval_wrapper": "tools/evaluate_easyocr_baseline_v1.py",
+    "example_easyocr_command": "python tools/evaluate_easyocr_baseline_v1.py --manifest data/experiments/htr_publication_v3/page_disjoint_hkr_school_base_v1/test.jsonl --out_dir outputs/htr_publication_v3/external_easyocr_page_disjoint_test_v1",
+    "current_external_boundary": "Only TrOCR-base-handwritten is cached locally as an external HTR/OCR model. The completed external TrOCR zero-shot and decoder-only adaptation baselines are weak. No EasyOCR, Tesseract, Kraken, PaddleOCR, docTR, or Calamari runtime is available locally.",
+    "what_would_close_the_gap": [
+      "Install/evaluate a suitable external Cyrillic/Russian OCR/HTR system on the same test protocol.",
+      "For EasyOCR specifically, run the prepared wrapper after installing the package and model weights.",
+      "Or download a relevant HuggingFace/Russian OCR checkpoint and run it on the fixed manifests.",
+      "If no such model is available, report TrOCR as a negative/limited external baseline and avoid SOTA claims."
+    ]
+  }
+}
