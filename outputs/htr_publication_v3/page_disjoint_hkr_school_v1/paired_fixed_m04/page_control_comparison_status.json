@@ -19,7 +19,8 @@
     "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed42_test/predictions.jsonl",
     "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_random_crops_control_seed42.json",
     "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_random_crops_control_seed42.md",
-    "status": "missing_predictions"
+    "status": "complete",
+    "returncode": 0
   },
   {
     "key": "line_vs_school_words_control",
@@ -30,7 +31,8 @@
     "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed42_test/predictions.jsonl",
     "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_school_words_control_seed42.json",
     "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_school_words_control_seed42.md",
-    "status": "missing_predictions"
+    "status": "complete",
+    "returncode": 0
   },
   {
     "key": "random_crops_control_vs_base",
@@ -41,7 +43,8 @@
     "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed42_test/predictions.jsonl",
     "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/random_crops_control_vs_base_seed42.json",
     "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/random_crops_control_vs_base_seed42.md",
-    "status": "missing_predictions"
+    "status": "complete",
+    "returncode": 0
   },
   {
     "key": "school_words_control_vs_base",
@@ -52,7 +55,8 @@
     "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed42_test/predictions.jsonl",
     "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/school_words_control_vs_base_seed42.json",
     "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/school_words_control_vs_base_seed42.md",
-    "status": "missing_predictions"
+    "status": "complete",
+    "returncode": 0
   },
   {
     "key": "line_vs_base",
@@ -74,7 +78,8 @@
     "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed43_test/predictions.jsonl",
     "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_random_crops_control_seed43.json",
     "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_random_crops_control_seed43.md",
-    "status": "missing_predictions"
+    "status": "complete",
+    "returncode": 0
   },
   {
     "key": "line_vs_school_words_control",
@@ -85,7 +90,8 @@
     "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed43_test/predictions.jsonl",
     "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_school_words_control_seed43.json",
     "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_school_words_control_seed43.md",
-    "status": "missing_predictions"
+    "status": "complete",
+    "returncode": 0
   },
   {
     "key": "random_crops_control_vs_base",
@@ -96,7 +102,8 @@
     "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed43_test/predictions.jsonl",
     "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/random_crops_control_vs_base_seed43.json",
     "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/random_crops_control_vs_base_seed43.md",
-    "status": "missing_predictions"
+    "status": "complete",
+    "returncode": 0
   },
   {
     "key": "school_words_control_vs_base",
@@ -107,7 +114,8 @@
     "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed43_test/predictions.jsonl",
     "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/school_words_control_vs_base_seed43.json",
     "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/school_words_control_vs_base_seed43.md",
-    "status": "missing_predictions"
+    "status": "complete",
+    "returncode": 0
   },
   {
     "key": "line_vs_base",
@@ -129,7 +137,8 @@
     "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed44_test/predictions.jsonl",
     "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_random_crops_control_seed44.json",
     "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_random_crops_control_seed44.md",
-    "status": "missing_predictions"
+    "status": "complete",
+    "returncode": 0
   },
   {
     "key": "line_vs_school_words_control",
@@ -140,7 +149,8 @@
     "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_line_10k_seed44_test/predictions.jsonl",
     "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_school_words_control_seed44.json",
     "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/line_vs_school_words_control_seed44.md",
-    "status": "missing_predictions"
+    "status": "complete",
+    "returncode": 0
   },
   {
     "key": "random_crops_control_vs_base",
@@ -151,7 +161,8 @@
     "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed44_test/predictions.jsonl",
     "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/random_crops_control_vs_base_seed44.json",
     "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/random_crops_control_vs_base_seed44.md",
-    "status": "missing_predictions"
+    "status": "complete",
+    "returncode": 0
   },
   {
     "key": "school_words_control_vs_base",
@@ -162,6 +173,7 @@
     "augmented_predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed44_test/predictions.jsonl",
     "out_json": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/school_words_control_vs_base_seed44.json",
     "out_md": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/paired_fixed_m04/school_words_control_vs_base_seed44.md",
-    "status": "missing_predictions"
+    "status": "complete",
+    "returncode": 0
   }
 ]

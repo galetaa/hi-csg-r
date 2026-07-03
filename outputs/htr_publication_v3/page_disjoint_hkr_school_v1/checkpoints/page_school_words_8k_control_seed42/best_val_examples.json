@@ -1,0 +1,212 @@
+[
+  {
+    "sample_id": "school_notebooks_train_0165525",
+    "target": "гл",
+    "pred": "гл",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0207767",
+    "target": "на",
+    "pred": "н.",
+    "cer": 0.5,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0225524",
+    "target": "со",
+    "pred": "со",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0101904",
+    "target": "и.",
+    "pred": "и.",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0189174",
+    "target": "4.",
+    "pred": "4.",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0119335",
+    "target": ".п.",
+    "pred": ".п.",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0016934",
+    "target": "не",
+    "pred": "не",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0134755",
+    "target": "г)",
+    "pred": "))",
+    "cer": 0.5,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0178576",
+    "target": "не",
+    "pred": "не",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0215333",
+    "target": "пр.",
+    "pred": "пр",
+    "cer": 0.3333333333333333,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0139717",
+    "target": "н.",
+    "pred": "н.",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0064371",
+    "target": "6.",
+    "pred": "1.",
+    "cer": 0.5,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0231643",
+    "target": "ii",
+    "pred": "ii",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0165543",
+    "target": "1)",
+    "pred": "1)",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0204390",
+    "target": "2.",
+    "pred": "о.",
+    "cer": 0.5,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0210496",
+    "target": "н.",
+    "pred": "н.",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0287661",
+    "target": "как",
+    "pred": "как",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0238124",
+    "target": "2.",
+    "pred": "2.",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0209117",
+    "target": "1-",
+    "pred": "1-",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0134833",
+    "target": "но",
+    "pred": "по",
+    "cer": 0.5,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0134813",
+    "target": "не",
+    "pred": "не",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0128245",
+    "target": "р.",
+    "pred": "р.",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0107953",
+    "target": "4.",
+    "pred": "4.",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0175582",
+    "target": ".п",
+    "pred": ".",
+    "cer": 0.5,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0189065",
+    "target": "ч.",
+    "pred": "ч.",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0134919",
+    "target": "не",
+    "pred": "не",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0003433",
+    "target": "серца",
+    "pred": "8",
+    "cer": 1.0,
+    "wer": 1.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0194517",
+    "target": "не",
+    "pred": "не",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_val_0283715",
+    "target": "р.",
+    "pred": "р.",
+    "cer": 0.0,
+    "wer": 0.0
+  },
+  {
+    "sample_id": "school_notebooks_train_0064575",
+    "target": "но",
+    "pred": "по",
+    "cer": 0.5,
+    "wer": 1.0
+  }
+]

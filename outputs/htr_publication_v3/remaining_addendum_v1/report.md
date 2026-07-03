@@ -39,7 +39,12 @@ Page-disjoint same-size control manifests:
 
 | variant | seed | last epoch | best exists | eval returncode | status |
 |---|---:|---:|---|---:|---|
-| `page_random_crops_8k_control` | 42 | None | None | None | running |
+| `page_random_crops_8k_control` | 42 | 80 | True | 0 | complete |
+| `page_random_crops_8k_control` | 43 | 80 | True | 0 | complete |
+| `page_random_crops_8k_control` | 44 | 80 | True | 0 | complete |
+| `page_school_words_8k_control` | 42 | 80 | True | 0 | complete |
+| `page_school_words_8k_control` | 43 | 80 | True | 0 | complete |
+| `page_school_words_8k_control` | 44 | 80 | True | 0 | complete |
 
 Page-disjoint fixed-penalty evaluation:
 
@@ -51,12 +56,12 @@ Page-disjoint fixed-penalty evaluation:
 | `page_line_10k` | 42 | 4000 | 0.1330 | 0.4365 | 0.4373 | 53 |
 | `page_line_10k` | 43 | 4000 | 0.1217 | 0.4122 | 0.4640 | 70 |
 | `page_line_10k` | 44 | 4000 | 0.1265 | 0.4193 | 0.4552 | 69 |
-| `page_random_crops_8k_control` | 42 | n/a | n/a | n/a | n/a | n/a |
-| `page_random_crops_8k_control` | 43 | n/a | n/a | n/a | n/a | n/a |
-| `page_random_crops_8k_control` | 44 | n/a | n/a | n/a | n/a | n/a |
-| `page_school_words_8k_control` | 42 | n/a | n/a | n/a | n/a | n/a |
-| `page_school_words_8k_control` | 43 | n/a | n/a | n/a | n/a | n/a |
-| `page_school_words_8k_control` | 44 | n/a | n/a | n/a | n/a | n/a |
+| `page_random_crops_8k_control` | 42 | 4000 | 0.1253 | 0.4214 | 0.4510 | 75 |
+| `page_random_crops_8k_control` | 43 | 4000 | 0.1332 | 0.4403 | 0.4325 | 50 |
+| `page_random_crops_8k_control` | 44 | 4000 | 0.1367 | 0.4467 | 0.4253 | 44 |
+| `page_school_words_8k_control` | 42 | 4000 | 0.1211 | 0.4126 | 0.4585 | 69 |
+| `page_school_words_8k_control` | 43 | 4000 | 0.1217 | 0.4117 | 0.4627 | 62 |
+| `page_school_words_8k_control` | 44 | 4000 | 0.1202 | 0.4086 | 0.4600 | 71 |
 
 Page-disjoint aggregate:
 
@@ -64,8 +69,8 @@ Page-disjoint aggregate:
 |---|---|---:|---:|---:|---:|
 | `page_base` | [42, 43, 44] | 0.1483 | 0.0119 | 0.4764 | 0.3946 |
 | `page_line_10k` | [42, 43, 44] | 0.1271 | 0.0057 | 0.4227 | 0.4522 |
-| `page_random_crops_8k_control` | [] | n/a | n/a | n/a | n/a |
-| `page_school_words_8k_control` | [] | n/a | n/a | n/a | n/a |
+| `page_random_crops_8k_control` | [42, 43, 44] | 0.1317 | 0.0058 | 0.4362 | 0.4363 |
+| `page_school_words_8k_control` | [42, 43, 44] | 0.1210 | 0.0007 | 0.4110 | 0.4604 |
 
 Mean `page_line_10k - page_base` delta: CER -0.0212, WER -0.0537, exact 0.0576.
 
@@ -73,8 +78,8 @@ Mean `page_line_10k - control` deltas:
 
 | control | delta CER | delta WER | delta exact |
 |---|---:|---:|---:|
-| `page_random_crops_8k_control` | n/a | n/a | n/a |
-| `page_school_words_8k_control` | n/a | n/a | n/a |
+| `page_random_crops_8k_control` | -0.0047 | -0.0135 | 0.0159 |
+| `page_school_words_8k_control` | 0.0061 | 0.0117 | -0.0083 |
 
 Page-disjoint paired line-vs-base comparison:
 
@@ -88,8 +93,12 @@ Page-disjoint paired line-vs-control comparison:
 
 | comparison | seed | n | delta CER | 95% CI | School delta CER | School 95% CI | delta WER | delta exact |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| `line_vs_random_crops_control` | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
-| `line_vs_school_words_control` | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
+| `line_vs_random_crops_control` | 42 | 4000 | 0.0077 | [0.0031, 0.0126] | 0.0066 | [-0.0017, 0.0149] | 0.0150 | -0.0137 |
+| `line_vs_random_crops_control` | 43 | 4000 | -0.0115 | [-0.0159, -0.0070] | -0.0196 | [-0.0273, -0.0119] | -0.0280 | 0.0315 |
+| `line_vs_random_crops_control` | 44 | 4000 | -0.0102 | [-0.0149, -0.0054] | -0.0168 | [-0.0253, -0.0088] | -0.0274 | 0.0300 |
+| `line_vs_school_words_control` | 42 | 4000 | 0.0119 | [0.0073, 0.0168] | 0.0168 | [0.0084, 0.0252] | 0.0238 | -0.0212 |
+| `line_vs_school_words_control` | 43 | 4000 | 0.0001 | [-0.0045, 0.0046] | 0.0011 | [-0.0073, 0.0094] | 0.0005 | 0.0013 |
+| `line_vs_school_words_control` | 44 | 4000 | 0.0063 | [0.0019, 0.0106] | 0.0081 | [0.0004, 0.0158] | 0.0107 | -0.0048 |
 
 ## Annotation Reliability
 
@@ -124,11 +133,10 @@ Independent annotation package:
 - Added: page-disjoint line augmentation restricted to train pages
 - Added: page-disjoint same-size random-crop and School-word control manifests
 - Added: completed 3-seed page-disjoint base-vs-line retraining
+- Added: completed 3-seed page-disjoint same-size controls
 - Added: annotation repeated-consistency and line-quality Wilson intervals
 - Added: blind second-annotation package for formal IAA
 - Added: strong data-rich internal CRNN baselines on the same tri10k test
 - Still not fully solved: formal independent inter-annotator agreement
 - Still not fully solved: competitive external Russian/Cyrillic HTR baseline beyond cached TrOCR
-- Still not fully solved: completed 3-seed page-disjoint same-size controls
-- Still not fully solved: paired page-disjoint line-vs-control CIs
-- Claim boundary: The strict page-disjoint base-vs-line effect is supported if base/line evaluations are complete, but uniqueness of natural-line context remains unproven until the page-disjoint same-size controls and paired line-vs-control comparisons finish.
+- Claim boundary: The strict page-disjoint base, line, and same-size controls are complete. A unique natural-line-context claim is allowed only if the paired line-vs-control deltas support it.

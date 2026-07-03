@@ -1258,10 +1258,108 @@
         "prefetch_factor": 2,
         "bucket_by_width": true,
         "cuda_alloc_conf": "expandable_segments:True",
+        "last_epoch_before": 80,
+        "train_returncode": 0,
+        "eval_returncode": 0,
+        "status": "complete",
+        "train_skipped": "complete",
+        "last_epoch_after": 80,
+        "best_exists": true,
+        "eval_skipped": "summary exists"
+      },
+      {
+        "variant": "page_random_crops_8k_control",
+        "seed": 43,
+        "manifest_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_random_crops_8k_control_v1",
+        "checkpoint_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_random_crops_8k_control_seed43",
+        "eval_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed43_test",
+        "target_epochs": 80,
+        "batch_size": 8,
+        "prefetch_factor": 2,
+        "bucket_by_width": true,
+        "cuda_alloc_conf": "expandable_segments:True",
+        "last_epoch_before": 80,
+        "train_returncode": 0,
+        "eval_returncode": 0,
+        "status": "complete",
+        "train_skipped": "complete",
+        "last_epoch_after": 80,
+        "best_exists": true,
+        "eval_skipped": "summary exists"
+      },
+      {
+        "variant": "page_random_crops_8k_control",
+        "seed": 44,
+        "manifest_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_random_crops_8k_control_v1",
+        "checkpoint_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_random_crops_8k_control_seed44",
+        "eval_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed44_test",
+        "target_epochs": 80,
+        "batch_size": 8,
+        "prefetch_factor": 2,
+        "bucket_by_width": true,
+        "cuda_alloc_conf": "expandable_segments:True",
+        "last_epoch_before": 80,
+        "train_returncode": 0,
+        "eval_returncode": 0,
+        "status": "complete",
+        "train_skipped": "complete",
+        "last_epoch_after": 80,
+        "best_exists": true,
+        "eval_skipped": "summary exists"
+      },
+      {
+        "variant": "page_school_words_8k_control",
+        "seed": 42,
+        "manifest_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_school_words_8k_control_v1",
+        "checkpoint_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_school_words_8k_control_seed42",
+        "eval_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed42_test",
+        "target_epochs": 80,
+        "batch_size": 8,
+        "prefetch_factor": 2,
+        "bucket_by_width": true,
+        "cuda_alloc_conf": "expandable_segments:True",
+        "last_epoch_before": 9,
+        "train_returncode": 0,
+        "eval_returncode": 0,
+        "status": "complete",
+        "last_epoch_after": 80,
+        "best_exists": true
+      },
+      {
+        "variant": "page_school_words_8k_control",
+        "seed": 43,
+        "manifest_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_school_words_8k_control_v1",
+        "checkpoint_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_school_words_8k_control_seed43",
+        "eval_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed43_test",
+        "target_epochs": 80,
+        "batch_size": 8,
+        "prefetch_factor": 2,
+        "bucket_by_width": true,
+        "cuda_alloc_conf": "expandable_segments:True",
         "last_epoch_before": null,
-        "train_returncode": null,
-        "eval_returncode": null,
-        "status": "running"
+        "train_returncode": 0,
+        "eval_returncode": 0,
+        "status": "complete",
+        "last_epoch_after": 80,
+        "best_exists": true
+      },
+      {
+        "variant": "page_school_words_8k_control",
+        "seed": 44,
+        "manifest_root": "data/experiments/htr_publication_v3/page_disjoint_hkr_school_school_words_8k_control_v1",
+        "checkpoint_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_school_words_8k_control_seed44",
+        "eval_dir": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed44_test",
+        "target_epochs": 80,
+        "batch_size": 8,
+        "prefetch_factor": 2,
+        "bucket_by_width": true,
+        "cuda_alloc_conf": "expandable_segments:True",
+        "last_epoch_before": null,
+        "train_returncode": 0,
+        "eval_returncode": 0,
+        "status": "complete",
+        "last_epoch_after": 80,
+        "best_exists": true
       }
     ],
     "completed_model_evals": [
@@ -1348,6 +1446,90 @@
         "cer": 0.1264627909231718,
         "wer": 0.4193124999999996,
         "exact": 0.45525
+      },
+      {
+        "variant": "page_random_crops_8k_control",
+        "seed": 42,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed42_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed42_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_random_crops_8k_control_seed42/best.pt",
+        "checkpoint_epoch": 75,
+        "checkpoint_val_cer": 0.14016157103775073,
+        "n": 4000,
+        "cer": 0.12534781459832695,
+        "wer": 0.42143749999999935,
+        "exact": 0.451
+      },
+      {
+        "variant": "page_random_crops_8k_control",
+        "seed": 43,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed43_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed43_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_random_crops_8k_control_seed43/best.pt",
+        "checkpoint_epoch": 50,
+        "checkpoint_val_cer": 0.13992319199333442,
+        "n": 4000,
+        "cer": 0.13322017224691332,
+        "wer": 0.44029166666666647,
+        "exact": 0.4325
+      },
+      {
+        "variant": "page_random_crops_8k_control",
+        "seed": 44,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed44_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed44_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_random_crops_8k_control_seed44/best.pt",
+        "checkpoint_epoch": 44,
+        "checkpoint_val_cer": 0.1445660658109084,
+        "n": 4000,
+        "cer": 0.1366569612705832,
+        "wer": 0.4467499999999999,
+        "exact": 0.42525
+      },
+      {
+        "variant": "page_school_words_8k_control",
+        "seed": 42,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed42_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed42_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_school_words_8k_control_seed42/best.pt",
+        "checkpoint_epoch": 69,
+        "checkpoint_val_cer": 0.13388949694526206,
+        "n": 4000,
+        "cer": 0.1211464386973961,
+        "wer": 0.4126458333333329,
+        "exact": 0.4585
+      },
+      {
+        "variant": "page_school_words_8k_control",
+        "seed": 43,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed43_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed43_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_school_words_8k_control_seed43/best.pt",
+        "checkpoint_epoch": 62,
+        "checkpoint_val_cer": 0.1339867748017798,
+        "n": 4000,
+        "cer": 0.12167611233795413,
+        "wer": 0.4117083333333328,
+        "exact": 0.46275
+      },
+      {
+        "variant": "page_school_words_8k_control",
+        "seed": 44,
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed44_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed44_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_school_words_8k_control_seed44/best.pt",
+        "checkpoint_epoch": 71,
+        "checkpoint_val_cer": 0.13204685478887213,
+        "n": 4000,
+        "cer": 0.12020442868749712,
+        "wer": 0.408645833333333,
+        "exact": 0.46
       }
     ],
     "eval_rows": [
@@ -1438,38 +1620,86 @@
       {
         "variant": "page_random_crops_8k_control",
         "seed": 42,
-        "exists": false,
-        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed42_test/summary.json"
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed42_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed42_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_random_crops_8k_control_seed42/best.pt",
+        "checkpoint_epoch": 75,
+        "checkpoint_val_cer": 0.14016157103775073,
+        "n": 4000,
+        "cer": 0.12534781459832695,
+        "wer": 0.42143749999999935,
+        "exact": 0.451
       },
       {
         "variant": "page_random_crops_8k_control",
         "seed": 43,
-        "exists": false,
-        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed43_test/summary.json"
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed43_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed43_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_random_crops_8k_control_seed43/best.pt",
+        "checkpoint_epoch": 50,
+        "checkpoint_val_cer": 0.13992319199333442,
+        "n": 4000,
+        "cer": 0.13322017224691332,
+        "wer": 0.44029166666666647,
+        "exact": 0.4325
       },
       {
         "variant": "page_random_crops_8k_control",
         "seed": 44,
-        "exists": false,
-        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed44_test/summary.json"
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed44_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_random_crops_8k_control_seed44_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_random_crops_8k_control_seed44/best.pt",
+        "checkpoint_epoch": 44,
+        "checkpoint_val_cer": 0.1445660658109084,
+        "n": 4000,
+        "cer": 0.1366569612705832,
+        "wer": 0.4467499999999999,
+        "exact": 0.42525
       },
       {
         "variant": "page_school_words_8k_control",
         "seed": 42,
-        "exists": false,
-        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed42_test/summary.json"
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed42_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed42_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_school_words_8k_control_seed42/best.pt",
+        "checkpoint_epoch": 69,
+        "checkpoint_val_cer": 0.13388949694526206,
+        "n": 4000,
+        "cer": 0.1211464386973961,
+        "wer": 0.4126458333333329,
+        "exact": 0.4585
       },
       {
         "variant": "page_school_words_8k_control",
         "seed": 43,
-        "exists": false,
-        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed43_test/summary.json"
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed43_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed43_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_school_words_8k_control_seed43/best.pt",
+        "checkpoint_epoch": 62,
+        "checkpoint_val_cer": 0.1339867748017798,
+        "n": 4000,
+        "cer": 0.12167611233795413,
+        "wer": 0.4117083333333328,
+        "exact": 0.46275
       },
       {
         "variant": "page_school_words_8k_control",
         "seed": 44,
-        "exists": false,
-        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed44_test/summary.json"
+        "exists": true,
+        "summary": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed44_test/summary.json",
+        "predictions": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/page_school_words_8k_control_seed44_test/predictions.jsonl",
+        "checkpoint": "outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/page_school_words_8k_control_seed44/best.pt",
+        "checkpoint_epoch": 71,
+        "checkpoint_val_cer": 0.13204685478887213,
+        "n": 4000,
+        "cer": 0.12020442868749712,
+        "wer": 0.408645833333333,
+        "exact": 0.46
       }
     ],
     "aggregates": [
@@ -1501,21 +1731,29 @@
       },
       {
         "variant": "page_random_crops_8k_control",
-        "completed_seeds": [],
-        "n_completed": 0,
-        "mean_cer": null,
-        "std_cer": null,
-        "mean_wer": null,
-        "mean_exact": null
+        "completed_seeds": [
+          42,
+          43,
+          44
+        ],
+        "n_completed": 3,
+        "mean_cer": 0.13174164937194116,
+        "std_cer": 0.005797734215408041,
+        "mean_wer": 0.43615972222222193,
+        "mean_exact": 0.43625
       },
       {
         "variant": "page_school_words_8k_control",
-        "completed_seeds": [],
-        "n_completed": 0,
-        "mean_cer": null,
-        "std_cer": null,
-        "mean_wer": null,
-        "mean_exact": null
+        "completed_seeds": [
+          42,
+          43,
+          44
+        ],
+        "n_completed": 3,
+        "mean_cer": 0.12100899324094912,
+        "std_cer": 0.0007454070243021972,
+        "mean_wer": 0.41099999999999953,
+        "mean_exact": 0.4604166666666667
       }
     ],
     "paired_line_vs_base": [
@@ -1572,26 +1810,138 @@
       }
     ],
     "paired_line_vs_controls": {
-      "line_vs_random_crops_control": [],
-      "line_vs_school_words_control": []
+      "line_vs_random_crops_control": [
+        {
+          "key": "line_vs_random_crops_control",
+          "seed": 42,
+          "n": 4000,
+          "delta_cer": 0.007689117557064538,
+          "delta_wer": 0.01504166666666662,
+          "delta_exact": -0.013749999999999984,
+          "ci95_low": 0.0031023892151020634,
+          "ci95_high": 0.01257512190176954,
+          "school_delta_cer": 0.0066357905982905975,
+          "school_ci95_low": -0.0016899281274281276,
+          "school_ci95_high": 0.014889906465062712,
+          "dataset_delta_cer": {
+            "hkr_words": 0.008742444515838478,
+            "school_notebooks_clean": 0.0066357905982905975
+          }
+        },
+        {
+          "key": "line_vs_random_crops_control",
+          "seed": 43,
+          "n": 4000,
+          "delta_cer": -0.011491981333080404,
+          "delta_wer": -0.028041666666666687,
+          "delta_exact": 0.03150000000000003,
+          "ci95_low": -0.015908322694301313,
+          "ci95_high": -0.006967878257041379,
+          "school_delta_cer": -0.019644388944388944,
+          "school_ci95_low": -0.02731983863358863,
+          "school_ci95_high": -0.011922497155622158,
+          "dataset_delta_cer": {
+            "hkr_words": -0.003339573721771864,
+            "school_notebooks_clean": -0.019644388944388944
+          }
+        },
+        {
+          "key": "line_vs_random_crops_control",
+          "seed": 44,
+          "n": 4000,
+          "delta_cer": -0.010194170347411447,
+          "delta_wer": -0.027437500000000004,
+          "delta_exact": 0.02999999999999997,
+          "ci95_low": -0.01490799553173005,
+          "ci95_high": -0.005370837100367383,
+          "school_delta_cer": -0.016798694361194362,
+          "school_ci95_low": -0.025256895396270396,
+          "school_ci95_high": -0.00876074078699079,
+          "dataset_delta_cer": {
+            "hkr_words": -0.003589646333628532,
+            "school_notebooks_clean": -0.016798694361194362
+          }
+        }
+      ],
+      "line_vs_school_words_control": [
+        {
+          "key": "line_vs_school_words_control",
+          "seed": 42,
+          "n": 4000,
+          "delta_cer": 0.011890493457995394,
+          "delta_wer": 0.023833333333333317,
+          "delta_exact": -0.02124999999999999,
+          "ci95_low": 0.007278142789845819,
+          "ci95_high": 0.016784010217803992,
+          "school_delta_cer": 0.016771429265179265,
+          "school_ci95_low": 0.00842085881132756,
+          "school_ci95_high": 0.025244369848901098,
+          "dataset_delta_cer": {
+            "hkr_words": 0.0070095576508115215,
+            "school_notebooks_clean": 0.016771429265179265
+          }
+        },
+        {
+          "key": "line_vs_school_words_control",
+          "seed": 43,
+          "n": 4000,
+          "delta_cer": 5.20785758788862e-05,
+          "delta_wer": 0.000541666666666718,
+          "delta_exact": 0.0012500000000000289,
+          "ci95_low": -0.004519402266039988,
+          "ci95_high": 0.004633569021546479,
+          "school_delta_cer": 0.001094666444666446,
+          "school_ci95_low": -0.007264799783549783,
+          "school_ci95_high": 0.009350743804806301,
+          "dataset_delta_cer": {
+            "hkr_words": -0.0009905092929086735,
+            "school_notebooks_clean": 0.001094666444666446
+          }
+        },
+        {
+          "key": "line_vs_school_words_control",
+          "seed": 44,
+          "n": 4000,
+          "delta_cer": 0.006258362235674542,
+          "delta_wer": 0.010666666666666658,
+          "delta_exact": -0.004750000000000032,
+          "ci95_low": 0.0018787170227057518,
+          "ci95_high": 0.010647164557551794,
+          "school_delta_cer": 0.008121930846930848,
+          "school_ci95_low": 0.00039178106615606653,
+          "school_ci95_high": 0.015848525328837817,
+          "dataset_delta_cer": {
+            "hkr_words": 0.004394793624418236,
+            "school_notebooks_clean": 0.008121930846930848
+          }
+        }
+      ]
     },
     "mean_delta_cer": -0.021215853845729743,
     "mean_delta_wer": -0.05372222222222239,
     "mean_delta_exact": 0.05758333333333332,
     "line_vs_control_mean_deltas": {
-      "page_random_crops_8k_control": null,
-      "page_school_words_8k_control": null
+      "page_random_crops_8k_control": {
+        "mean_delta_cer": -0.004665678041142346,
+        "mean_delta_wer": -0.013479166666666653,
+        "mean_delta_exact": 0.015916666666666635
+      },
+      "page_school_words_8k_control": {
+        "mean_delta_cer": 0.006066978089849698,
+        "mean_delta_wer": 0.01168055555555575,
+        "mean_delta_exact": -0.008250000000000035
+      }
     },
-    "all_eval_complete": false,
+    "all_eval_complete": true,
     "core_eval_complete": true,
-    "controls_eval_complete": false,
+    "controls_eval_complete": true,
     "paired_ci_complete": true,
-    "paired_controls_complete": false,
+    "paired_controls_complete": true,
     "is_manifest_ready": true,
     "is_control_manifest_ready": true,
     "is_base_line_retrain_complete": true,
-    "is_control_retrain_complete": false,
-    "is_full_retrain_complete": false,
+    "is_control_retrain_complete": true,
+    "is_full_retrain_complete": true,
     "recommended_full_command": "python -u tools/run_page_disjoint_hkr_school_v1.py --seeds 42 43 44 --epochs 80 --num_workers 4",
     "recommended_control_command": "python -u tools/run_page_disjoint_hkr_school_v1.py --variants page_random_crops_8k_control page_school_words_8k_control --seeds 42 43 44 --epochs 80 --num_workers 4",
     "recommended_control_comparison_command": "python tools/build_page_disjoint_control_comparisons_v1.py"
@@ -2527,7 +2877,7 @@
       "page-disjoint line augmentation restricted to train pages",
       "page-disjoint same-size random-crop and School-word control manifests",
       "completed 3-seed page-disjoint base-vs-line retraining",
-      null,
+      "completed 3-seed page-disjoint same-size controls",
       "annotation repeated-consistency and line-quality Wilson intervals",
       "blind second-annotation package for formal IAA",
       "strong data-rich internal CRNN baselines on the same tri10k test"
@@ -2535,8 +2885,8 @@
     "still_not_fully_solved": [
       "formal independent inter-annotator agreement",
       "competitive external Russian/Cyrillic HTR baseline beyond cached TrOCR",
-      "completed 3-seed page-disjoint same-size controls",
-      "paired page-disjoint line-vs-control CIs"
+      null,
+      null
     ],
     "weak_annotation_fields": [
       "audit_usable",
@@ -2548,6 +2898,6 @@
     ],
     "independent_annotation_package_ready": true,
     "formal_iaa_ready": false,
-    "strict_claim_boundary": "The strict page-disjoint base-vs-line effect is supported if base/line evaluations are complete, but uniqueness of natural-line context remains unproven until the page-disjoint same-size controls and paired line-vs-control comparisons finish."
+    "strict_claim_boundary": "The strict page-disjoint base, line, and same-size controls are complete. A unique natural-line-context claim is allowed only if the paired line-vs-control deltas support it."
   }
 }
