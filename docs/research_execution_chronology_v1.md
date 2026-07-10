@@ -11,32 +11,32 @@
 
 Ключевые локальные источники:
 
-- [chats/ChatGPT-iter1.3.2 plan ready.md](</home/galetka/Documents/Programming/hi-csg-r/chats/ChatGPT-iter1.3.2 plan ready.md:1>) - самый ранний зафиксированный этап: поиск идеи, литературы, научной ниши и первичного плана.
-- [chats/ChatGPT-iter2.md](/home/galetka/Documents/Programming/hi-csg-r/chats/ChatGPT-iter2.md:1>) - ранняя реализация пайплайнов данных, графов и HTR.
-- [chats/ChatGPT-iter3.md](/home/galetka/Documents/Programming/hi-csg-r/chats/ChatGPT-iter3.md:1>) - развитие экспериментов, интерпретация результатов, подготовка публикационного усиления.
-- [chats/ChatGPT-iter4.md](/home/galetka/Documents/Programming/hi-csg-r/chats/ChatGPT-iter4.md:1>) - методологическая критика, усиление дизайна, уточнение публикационных требований.
-- [chats/ChatGPT-iter5.md](/home/galetka/Documents/Programming/hi-csg-r/chats/ChatGPT-iter5.md:1>) - полный экспорт текущей длинной Codex-сессии с запуском, проверкой, исправлением и документированием поздних экспериментов.
-- [docs/00_research_problem.md](/home/galetka/Documents/Programming/hi-csg-r/docs/00_research_problem.md:1>) - формализация исследовательской проблемы.
-- [docs/01_data_audit_and_preprocessing.md](/home/galetka/Documents/Programming/hi-csg-r/docs/01_data_audit_and_preprocessing.md:1>) - аудит данных и проектирование предобработки.
-- [docs/02_stage2_checkpoint_report.md](/home/galetka/Documents/Programming/hi-csg-r/docs/02_stage2_checkpoint_report.md:1>) - отчет по графовому пайплайну и пилотной структурной валидации.
-- [docs/final_experimental_protocol_v1.md](/home/galetka/Documents/Programming/hi-csg-r/docs/final_experimental_protocol_v1.md:1>) - финальный экспериментальный протокол.
-- [docs/h2_structural_validity_protocol_v1.md](/home/galetka/Documents/Programming/hi-csg-r/docs/h2_structural_validity_protocol_v1.md:1>) - протокол проверки структурной пригодности HI-CSG-R.
-- [docs/preliminary_scientific_report_for_supervisor_v1.md](/home/galetka/Documents/Programming/hi-csg-r/docs/preliminary_scientific_report_for_supervisor_v1.md:1>) - предварительный научный отчет для руководителя.
-- [docs/publication_hardening_plan_v1.md](/home/galetka/Documents/Programming/hi-csg-r/docs/publication_hardening_plan_v1.md:1>) - план доведения исследования до публикационного уровня.
-- [docs/supervisor_brief_v1.md](/home/galetka/Documents/Programming/hi-csg-r/docs/supervisor_brief_v1.md:1>) - краткая версия для объяснения руководителю.
-- [outputs/final_result_package_v1/seed_confirmation_summary.md](/home/galetka/Documents/Programming/hi-csg-r/outputs/final_result_package_v1/seed_confirmation_summary.md:1>) - подтверждение основного эффекта на 3 seed.
-- [outputs/final_result_package_v1/domainwise_seed_confirmation.md](/home/galetka/Documents/Programming/hi-csg-r/outputs/final_result_package_v1/domainwise_seed_confirmation.md:1>) - доменные результаты по seed.
-- [outputs/final_result_package_v1/thesis_tables/table_4_structural_gold_diagnostic.md](/home/galetka/Documents/Programming/hi-csg-r/outputs/final_result_package_v1/thesis_tables/table_4_structural_gold_diagnostic.md:1>) - структурная диагностика gold subset.
-- [outputs/final_result_package_v1/thesis_tables/table_5_selective_prediction.md](/home/galetka/Documents/Programming/hi-csg-r/outputs/final_result_package_v1/thesis_tables/table_5_selective_prediction.md:1>) - selective prediction.
-- [outputs/final_result_package_v1/thesis_tables/table_6_graph_fusion_exploratory.md](/home/galetka/Documents/Programming/hi-csg-r/outputs/final_result_package_v1/thesis_tables/table_6_graph_fusion_exploratory.md:1>) - graph fusion как exploratory результат.
-- [outputs/htr_baseline_v1/htr_mini_baselines_report.md](/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_baseline_v1/htr_mini_baselines_report.md:1>) - первые HTR baseline.
-- [outputs/htr_baseline_v1/htr_full_baselines_report.md](/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_baseline_v1/htr_full_baselines_report.md:1>) - full baseline.
-- [outputs/htr_baseline_v1/htr_mixed_cyrillic_report.md](/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_baseline_v1/htr_mixed_cyrillic_report.md:1>) - смешанные кириллические baseline.
-- [outputs/htr_graph_v1/stage4_graph_ablation_report.md](/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_graph_v1/stage4_graph_ablation_report.md:1>) - ablation для графовых каналов.
-- [outputs/htr_graph_v1/graph_vector_fusion_report.md](/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_graph_v1/graph_vector_fusion_report.md:1>) - первые graph-vector fusion эксперименты.
-- [outputs/htr_publication_v3/publication_v3_status_report.md](/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_publication_v3/publication_v3_status_report.md:1>) - публикационный пакет v3.
-- [outputs/htr_publication_v3/remaining_addendum_v1/report.md](/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_publication_v3/remaining_addendum_v1/report.md:1>) - дополнительные проверки и остаточные ограничения.
-- [outputs/htr_publication_v3/page_disjoint_hkr_school_v1/final_page_disjoint_control_report.md](/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_publication_v3/page_disjoint_hkr_school_v1/final_page_disjoint_control_report.md:1>) - финальная агрегация strict page-disjoint controls после завершения всех seed.
+- [chats/ChatGPT-iter1.3.2 plan ready.md](<../chats/ChatGPT-iter1.3.2 plan ready.md>) - самый ранний зафиксированный этап: поиск идеи, литературы, научной ниши и первичного плана.
+- [chats/ChatGPT-iter2.md](../chats/ChatGPT-iter2.md) - ранняя реализация пайплайнов данных, графов и HTR.
+- [chats/ChatGPT-iter3.md](../chats/ChatGPT-iter3.md) - развитие экспериментов, интерпретация результатов, подготовка публикационного усиления.
+- [chats/ChatGPT-iter4.md](../chats/ChatGPT-iter4.md) - методологическая критика, усиление дизайна, уточнение публикационных требований.
+- [chats/ChatGPT-iter5.md](../chats/ChatGPT-iter5.md) - полный экспорт текущей длинной Codex-сессии с запуском, проверкой, исправлением и документированием поздних экспериментов.
+- [docs/00_research_problem.md](00_research_problem.md) - формализация исследовательской проблемы.
+- [docs/01_data_audit_and_preprocessing.md](01_data_audit_and_preprocessing.md) - аудит данных и проектирование предобработки.
+- [docs/02_stage2_checkpoint_report.md](02_stage2_checkpoint_report.md) - отчет по графовому пайплайну и пилотной структурной валидации.
+- [docs/final_experimental_protocol_v1.md](final_experimental_protocol_v1.md) - финальный экспериментальный протокол.
+- [docs/h2_structural_validity_protocol_v1.md](h2_structural_validity_protocol_v1.md) - протокол проверки структурной пригодности HI-CSG-R.
+- [docs/preliminary_scientific_report_for_supervisor_v1.md](preliminary_scientific_report_for_supervisor_v1.md) - предварительный научный отчет для руководителя.
+- [docs/publication_hardening_plan_v1.md](publication_hardening_plan_v1.md) - план доведения исследования до публикационного уровня.
+- [docs/supervisor_brief_v1.md](supervisor_brief_v1.md) - краткая версия для объяснения руководителю.
+- [outputs/final_result_package_v1/seed_confirmation_summary.md](../outputs/final_result_package_v1/seed_confirmation_summary.md) - подтверждение основного эффекта на 3 seed.
+- [outputs/final_result_package_v1/domainwise_seed_confirmation.md](../outputs/final_result_package_v1/domainwise_seed_confirmation.md) - доменные результаты по seed.
+- [outputs/final_result_package_v1/thesis_tables/table_4_structural_gold_diagnostic.md](../outputs/final_result_package_v1/thesis_tables/table_4_structural_gold_diagnostic.md) - структурная диагностика gold subset.
+- [outputs/final_result_package_v1/thesis_tables/table_5_selective_prediction.md](../outputs/final_result_package_v1/thesis_tables/table_5_selective_prediction.md) - selective prediction.
+- [outputs/final_result_package_v1/thesis_tables/table_6_graph_fusion_exploratory.md](../outputs/final_result_package_v1/thesis_tables/table_6_graph_fusion_exploratory.md) - graph fusion как exploratory результат.
+- [outputs/htr_baseline_v1/htr_mini_baselines_report.md](../outputs/htr_baseline_v1/htr_mini_baselines_report.md) - первые HTR baseline.
+- [outputs/htr_baseline_v1/htr_full_baselines_report.md](../outputs/htr_baseline_v1/htr_full_baselines_report.md) - full baseline.
+- [outputs/htr_baseline_v1/htr_mixed_cyrillic_report.md](../outputs/htr_baseline_v1/htr_mixed_cyrillic_report.md) - смешанные кириллические baseline.
+- [outputs/htr_graph_v1/stage4_graph_ablation_report.md](../outputs/htr_graph_v1/stage4_graph_ablation_report.md) - ablation для графовых каналов.
+- [outputs/htr_graph_v1/graph_vector_fusion_report.md](../outputs/htr_graph_v1/graph_vector_fusion_report.md) - первые graph-vector fusion эксперименты.
+- [outputs/htr_publication_v3/publication_v3_status_report.md](../outputs/htr_publication_v3/publication_v3_status_report.md) - публикационный пакет v3.
+- [outputs/htr_publication_v3/remaining_addendum_v1/report.md](../outputs/htr_publication_v3/remaining_addendum_v1/report.md) - дополнительные проверки и остаточные ограничения.
+- [outputs/htr_publication_v3/page_disjoint_hkr_school_v1/final_page_disjoint_control_report.md](../outputs/htr_publication_v3/page_disjoint_hkr_school_v1/final_page_disjoint_control_report.md) - финальная агрегация strict page-disjoint controls после завершения всех seed.
 
 Важное ограничение этого отчета: он не заменяет сырые логи запусков и не копирует каждую команду. Он реконструирует полную научную и инженерную хронологию по ключевым решениям, результатам и артефактам. Для аудита конкретных команд и файлов следует обращаться к `chats/` и `outputs/`.
 

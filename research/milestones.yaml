@@ -1,0 +1,34 @@
+schema_version: 1
+history_policy: append_only
+milestones:
+  - id: problem-definition-v1
+    tag: milestone/problem-definition-v1
+    commit: d5ad781
+    date: 2026-05-26
+    meaning: Постановка проблемы, границ и первоначальных гипотез.
+  - id: data-graph-pilot-v1
+    tag: milestone/data-graph-pilot-v1
+    commit: 44af7c3
+    date: 2026-06-01
+    meaning: Аудит данных и классический graph pilot завершены.
+  - id: htr-baselines-v1
+    tag: milestone/htr-baselines-v1
+    commit: e73b7f1
+    date: 2026-06-12
+    meaning: Стабильные CRNN-CTC baseline и CTC sanity checks.
+  - id: first-evidence-freeze-v1
+    tag: milestone/first-evidence-freeze-v1
+    commit: 3fc7974
+    date: 2026-06-16
+    meaning: Первый замороженный пакет документации и evidence.
+  - id: final-evidence-v1
+    tag: milestone/final-evidence-v1
+    commit: 35fcb36
+    date: 2026-06-27
+    meaning: Финальный экспериментальный evidence package v1.
+  - id: publication-v3-final
+    tag: milestone/publication-v3-final
+    commit: d9f8bde
+    date: 2026-07-03
+    meaning: Same-size и page-disjoint контроли, поздняя хронология и финальная интерпретация.
+

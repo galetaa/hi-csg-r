@@ -1,0 +1,88 @@
+schema_version: 1
+canonical_manuscript: article/HI_CSG_R_v11.docx
+default_tolerance: 1.0e-9
+
+checks:
+  - id: h2_baseline_mean_cer
+    claim: H2-RELEVANT-DATA-AUGMENTATION
+    source: outputs/final_result_package_v1/seed_confirmation_summary.json
+    selector: model_means.0.mean_cer
+    expected: 0.15243097494790606
+  - id: h2_augmented_mean_cer
+    claim: H2-RELEVANT-DATA-AUGMENTATION
+    source: outputs/final_result_package_v1/seed_confirmation_summary.json
+    selector: model_means.1.mean_cer
+    expected: 0.13547898827033988
+  - id: h2_delta_cer
+    claim: H2-RELEVANT-DATA-AUGMENTATION
+    source: outputs/final_result_package_v1/seed_confirmation_summary.json
+    selector: delta_summary.mean_delta_cer
+    expected: -0.01695198667756616
+  - id: h2_all_three_seeds_improve
+    claim: H2-RELEVANT-DATA-AUGMENTATION
+    source: outputs/final_result_package_v1/seed_confirmation_summary.json
+    selector: delta_summary.improved_cer_seeds_n
+    expected: 3
+  - id: h2_recompute_baseline_mean
+    claim: H2-RELEVANT-DATA-AUGMENTATION
+    source: outputs/final_result_package_v1/seed_confirmation_summary.json
+    selector: per_seed_deltas.*.baseline_cer
+    operation: mean
+    expected: 0.15243097494790606
+  - id: h2_recompute_augmented_mean
+    claim: H2-RELEVANT-DATA-AUGMENTATION
+    source: outputs/final_result_package_v1/seed_confirmation_summary.json
+    selector: per_seed_deltas.*.plus_10k_cer
+    operation: mean
+    expected: 0.13547898827033988
+  - id: h1_sample_size
+    claim: H1-STRUCTURAL-DIAGNOSTICS
+    source: outputs/iter2_structural_gold_v1/annotation_summary.json
+    selector: overall.n
+    expected: 200
+  - id: h1_all_acceptance_passed
+    claim: H1-STRUCTURAL-DIAGNOSTICS
+    source: outputs/iter2_structural_gold_v1/annotation_summary.json
+    selector: overall.all_acceptance_passed
+    expected: true
+  - id: h3_feature_auc
+    claim: H3-SELECTIVE-PREDICTION
+    source: outputs/htr_graph_v1/selective_iter2_confidence_v1/selective_summary.json
+    selector: models.plus_10k_context.risk_methods.feature_only.risk_auc_exact_error_all
+    expected: 0.6036449924997427
+  - id: h3_confidence_auc
+    claim: H3-SELECTIVE-PREDICTION
+    source: outputs/htr_graph_v1/selective_iter2_confidence_v1/selective_summary.json
+    selector: models.plus_10k_context.risk_methods.model_confidence.risk_auc_exact_error_all
+    expected: 0.7966906609062472
+  - id: h3_confidence_graph_auc
+    claim: H3-SELECTIVE-PREDICTION
+    source: outputs/htr_graph_v1/selective_iter2_confidence_v1/selective_summary.json
+    selector: models.plus_10k_context.risk_methods.confidence_graph.risk_auc_exact_error_all
+    expected: 0.812213672610391
+  - id: h3_balanced_school_coverage
+    claim: H3-SELECTIVE-PREDICTION
+    source: outputs/htr_graph_v1/selective_iter2_confidence_v1/operating_points.json
+    selector: operating_points.balanced.test.school.coverage
+    expected: 0.6615
+
+known_gaps:
+  - id: v11_page_disjoint_weighted_rows
+    severity: warning
+    statement: >-
+      Для части округлённых page-disjoint значений из v11 не найден отдельный
+      машинно-читаемый агрегат с точным совпадением. Версионированные predictions,
+      summaries и финальный контрольный отчёт сохранены, но строка рукописи не
+      должна считаться автоматически перепроверенной до явной регенерации таблицы.
+  - id: graph_fusion_single_seed
+    severity: warning
+    statement: >-
+      H4 подтверждается только поисковым single-seed отчётом; это ограничение
+      научного вывода, а не техническая ошибка воспроизводимости.
+  - id: primary_prediction_coverage
+    severity: warning
+    statement: >-
+      Итоговый three-seed JSON сохраняет per-seed метрики, но полный комплект
+      canonical predictions для всех шести baseline/+10k запусков в текущем
+      дереве не найден. Поэтому reproduce-lite независимо пересчитывает агрегаты
+      из per-seed evidence, но не все CER заново из пар target/prediction.

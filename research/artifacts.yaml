@@ -1,0 +1,29 @@
+schema_version: 1
+output: research/artifact_inventory.json
+description: >-
+  Минимальный неизменяемый пакет для проверки финальных научных чисел.
+  Raw images и model weights отсутствуют и поэтому не входят в inventory.
+paths:
+  - article/HI_CSG_R_v11.docx
+  - outputs/final_result_package_v1/seed_confirmation_summary.json
+  - outputs/final_result_package_v1/domainwise_seed_confirmation.json
+  - outputs/final_result_package_v1/thesis_tables/table_2_primary_htr_3seed.csv
+  - outputs/final_result_package_v1/thesis_tables/table_3_domainwise_htr.csv
+  - outputs/final_result_package_v1/thesis_tables/table_4_structural_gold_diagnostic.csv
+  - outputs/final_result_package_v1/thesis_tables/table_5_selective_prediction.csv
+  - outputs/final_result_package_v1/thesis_tables/table_6_graph_fusion_exploratory.csv
+  - outputs/iter2_structural_gold_v1/annotation_summary.json
+  - outputs/htr_graph_v1/selective_iter2_confidence_v1/selective_summary.json
+  - outputs/htr_graph_v1/selective_iter2_confidence_v1/operating_points.json
+  - outputs/htr_graph_v1/graph_fusion_iter2_context10k_v1/summary.md
+  - outputs/htr_publication_v3/publication_v3_status_summary.json
+  - outputs/htr_publication_v3/page_disjoint_hkr_school_v1/final_page_disjoint_control_report.md
+  - outputs/htr_publication_v3/pip_freeze.txt
+  - outputs/htr_publication_v3/reproducibility_snapshot_v1.json
+globs:
+  - data/experiments/htr_publication_v3/page_disjoint_hkr_school_*_v1/*.json
+  - data/experiments/htr_publication_v3/page_disjoint_hkr_school_*_v1/*.jsonl
+  - outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/*/summary.json
+  - outputs/htr_publication_v3/page_disjoint_hkr_school_v1/eval_fixed_m04/*/predictions.jsonl
+  - outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/*/config.json
+  - outputs/htr_publication_v3/page_disjoint_hkr_school_v1/checkpoints/*/history.json

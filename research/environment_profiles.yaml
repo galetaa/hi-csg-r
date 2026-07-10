@@ -1,0 +1,28 @@
+schema_version: 1
+historical_publication_v3:
+  snapshot: outputs/htr_publication_v3/reproducibility_snapshot_v1.json
+  pip_freeze: outputs/htr_publication_v3/pip_freeze.txt
+  git_commit_at_snapshot: 35fcb36b55d719b362a91c80cdd8efb96253d99d
+  git_tree_was_dirty: true
+  python: 3.11.12
+  platform: Linux x86_64
+  torch: 2.9.0+cu128
+  cuda_available_in_snapshot: false
+  note: >-
+    Это фактический снимок позднего запуска, а не обещание битовой идентичности.
+    Точное состояние фиксируется также milestone tags и artifact inventory.
+
+current_verification:
+  environment: uv.lock
+  python_constraint: ">=3.11,<3.12"
+  purpose: CPU-проверка реестров, метрик, manifests, checksum и smoke pipeline.
+
+determinism_policy:
+  seeds: [42, 43, 44]
+  required:
+    - фиксировать Python, NumPy и Torch seed;
+    - сохранять seed в config и имени запуска;
+    - выбирать параметры декодирования только по validation;
+    - сохранять predictions и summary для test;
+    - фиксировать split manifest и его SHA-256;
+    - документировать недетерминированные CUDA kernels, если они используются;

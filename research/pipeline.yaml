@@ -1,0 +1,46 @@
+schema_version: 1
+pipeline_id: hi-csg-r-final-research-pipeline
+mode: frozen_research
+canonical_manuscript: article/HI_CSG_R_v11.docx
+canonical_claims: research/claims.yaml
+canonical_history: research/milestones.yaml
+canonical_datasets: research/datasets.yaml
+canonical_evidence: research/evidence.yaml
+artifact_inventory: research/artifact_inventory.json
+
+stages:
+  - id: data
+    status: frozen
+    implementation: src/datasets
+    description: Конвертация, нормализация, проверка metadata и построение split.
+  - id: preprocessing
+    status: frozen
+    implementation: src/preprocessing
+    description: OCR-normalized и feature-preserving обработка, включая School foreground.
+  - id: graph
+    status: frozen
+    implementation: src/graph
+    description: Бинаризация, скелетизация и построение HI-CSG-R.
+  - id: htr
+    status: frozen
+    implementation: src/htr
+    description: Каноническое ядро CRNN-CTC, CTC decoding и метрики.
+  - id: evidence
+    status: canonical
+    implementation: src/pipeline
+    description: Проверка реестра утверждений, evidence paths, manuscript hash и milestone tags.
+
+legacy_scripts:
+  root: archive/legacy_tools
+  status: preserved_not_canonical
+  execution_note: >-
+    Исторические команды воспроизводятся из соответствующего milestone tag.
+    Текущее дерево сохраняет сценарии как архив реализации, а не как публичный API.
+
+verification:
+  command: uv run python -m src.pipeline verify
+  evidence_command: uv run python -m src.pipeline reproduce-lite
+  data_audit_command: uv run python -m src.pipeline audit-data
+  full_readiness_command: uv run python -m src.pipeline reproduce-full
+  table_regeneration_command: uv run python -m src.pipeline regenerate-tables
+  tests: uv run pytest

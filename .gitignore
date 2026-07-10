@@ -9,6 +9,7 @@
 
 ### Local artifacts ###
 .venv
+.DS_Store
 *.log
 *.zip
 *.pdf

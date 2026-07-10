@@ -1,0 +1,4 @@
+method,risk_auc_exact_error_all,risk_auc_exact_error_school
+feature_only,0.6036449924997427,0.5986884203494057
+model_confidence,0.7966906609062472,0.8198670712615553
+confidence_graph,0.812213672610391,0.8283567222984638

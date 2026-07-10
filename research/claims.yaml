@@ -1,0 +1,120 @@
+schema_version: 1
+canonical_manuscript:
+  path: article/HI_CSG_R_v11.docx
+  sha256: 86bdd1d5a2aca811824d30b466095b4a5c502522049eca0002cc4dca9c92bb79
+  role: final_scientific_text
+
+claims:
+  - id: H1-STRUCTURAL-DIAGNOSTICS
+    manuscript_hypothesis: H1
+    title: Диагностическая пригодность HI-CSG-R
+    status: supported_within_audited_subset
+    level: additional
+    statement: >-
+      HI-CSG-R диагностически пригоден для контроля выделения переднего плана,
+      построения скелета и извлечения графа видимых штрихов на проверенной
+      диагностической подвыборке.
+    scope: Ручная диагностическая проверка 200 отобранных примеров.
+    evidence:
+      - path: outputs/iter2_structural_gold_v1/annotation_summary.json
+        role: structural_gold_summary
+      - path: outputs/final_result_package_v1/thesis_tables/table_4_structural_gold_diagnostic.md
+        role: final_table
+    limitations:
+      - Не является полной пиксельной или топологической разметкой.
+      - Не доказывает восстановление порядка письма или траектории пера.
+
+  - id: H2-RELEVANT-DATA-AUGMENTATION
+    manuscript_hypothesis: H2
+    title: Польза релевантного расширения обучающей выборки
+    status: supported
+    level: primary
+    statement: >-
+      Добавление релевантных дополнительных данных улучшает CRNN-CTC
+      относительно базовой модели без дополнительной выборки.
+    scope: Три seed в основной tri10k постановке и отдельные HKR+School page-disjoint контроли.
+    headline_metrics:
+      baseline_mean_cer: 0.152431
+      augmented_mean_cer: 0.135479
+      mean_delta_cer: -0.016952
+      relative_delta_cer_percent: -10.89
+      seeds: [42, 43, 44]
+    evidence:
+      - path: outputs/final_result_package_v1/seed_confirmation_summary.json
+        role: three_seed_confirmation
+      - path: outputs/final_result_package_v1/domainwise_seed_confirmation.md
+        role: domainwise_analysis
+      - path: outputs/htr_publication_v3/page_disjoint_hkr_school_v1/final_page_disjoint_control_report.md
+        role: strict_page_disjoint_controls
+    limitations:
+      - Эффект не следует приписывать исключительно естественному строковому контексту.
+      - Стабильность по доменам неодинакова; HKR Words улучшился в 2 из 3 запусков.
+
+  - id: H3-SELECTIVE-PREDICTION
+    manuscript_hypothesis: H3
+    title: Выборочное принятие предсказаний
+    status: partially_supported
+    level: additional
+    statement: >-
+      Уверенность модели позволяет снижать CER на принятом подмножестве;
+      структурные признаки дают дополнительный, но небольшой диагностический сигнал.
+    scope: Канонический вариант +10k, оценка ROC-AUC и CER при фиксированном покрытии.
+    evidence:
+      - path: outputs/htr_graph_v1/selective_iter2_confidence_v1/selective_summary.json
+        role: selective_prediction_summary
+      - path: outputs/final_result_package_v1/thesis_tables/table_5_selective_prediction.md
+        role: final_table
+    limitations:
+      - Основной сигнал даёт confidence CRNN-CTC, а не структура сама по себе.
+      - Режим снижает риск только ценой уменьшения покрытия.
+
+  - id: H4-GRAPH-FUSION
+    manuscript_hypothesis: H4
+    title: Прямое слияние графовых признаков
+    status: exploratory
+    level: exploratory
+    statement: >-
+      Графовая ветвь содержит распознавательный сигнал, однако устойчивое
+      превосходство graph-fusion над image-only CRNN-CTC не доказано.
+    scope: Один основной запуск graph-fusion и zero-graph ablation.
+    evidence:
+      - path: outputs/htr_graph_v1/graph_fusion_iter2_context10k_v1/summary.md
+        role: graph_fusion_summary
+      - path: outputs/final_result_package_v1/thesis_tables/table_6_graph_fusion_exploratory.md
+        role: final_table
+    limitations:
+      - Нет подтверждения преимущества на нескольких seed.
+      - Доля полностью правильных ответов ниже, чем у image-only +10k.
+
+  - id: BOUNDARY-NATURAL-LINE-UNIQUENESS
+    manuscript_hypothesis: null
+    title: Уникальность естественного строкового контекста
+    status: not_supported
+    level: boundary
+    statement: >-
+      Имеющиеся same-size и page-disjoint контроли не подтверждают, что весь
+      эффект релевантного расширения вызван именно естественным строковым контекстом.
+    scope: Tri10k same-size controls и строгие HKR+School page-disjoint controls.
+    evidence:
+      - path: outputs/htr_publication_v3/publication_v3_status_report.md
+        role: publication_status
+      - path: outputs/htr_publication_v3/page_disjoint_hkr_school_v1/final_page_disjoint_control_report.md
+        role: strict_control_report
+    limitations: []
+
+  - id: BOUNDARY-PEN-TRAJECTORY
+    manuscript_hypothesis: null
+    title: Восстановление траектории пера
+    status: false_by_design
+    level: boundary
+    statement: >-
+      HI-CSG-R описывает видимую статическую структуру штрихов и не
+      восстанавливает реальную траекторию, порядок письма, скорость или нажим.
+    scope: Терминологическая граница всей работы.
+    evidence:
+      - path: docs/00_research_problem.md
+        role: original_methodological_boundary
+      - path: article/HI_CSG_R_v11.docx
+        role: final_manuscript
+    limitations: []
+

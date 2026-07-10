@@ -1,0 +1,118 @@
+schema_version: 1
+captured_at: 2026-07-10
+local_state: >-
+  На текущем устройстве отсутствуют data/raw, data/interim и data/processed.
+  Сохранены только версионированные манифесты, отчёты и результаты.
+
+datasets:
+  - id: cyrillic_handwriting
+    title: Cyrillic Handwriting Dataset
+    role: primary_htr_domain
+    required_for_final_training: true
+    source:
+      provider: Kaggle
+      url: https://www.kaggle.com/datasets/constantinwerner/cyrillic-handwriting-dataset/versions/4
+      revision: version-4
+      license: CC0-1.0
+      access: kaggle_authenticated_download
+    expected_raw_root: data/raw/cyrillic-handwriting-dataset
+    expected_interim_root: data/interim/cyrillic_handwriting
+    report: data/reports/cyrillic_handwriting/summary_report.md
+    historically_observed_samples: 73830
+    current_device: absent
+
+  - id: hkr_words
+    title: HKR Dataset — Words
+    role: primary_htr_domain
+    required_for_final_training: true
+    source:
+      provider: HKR authors
+      url: https://github.com/abdoelsayed2016/HKR_Dataset
+      revision: 2e7a86a7e5b2f304e14ba4de519d3cf7df893181
+      license: CC-BY-NC-ND-4.0
+      access: manual_application_required
+      redistribution: prohibited
+    expected_raw_root: data/raw/hkr
+    expected_interim_root: data/interim/hkr_words
+    report: data/reports/hkr_words/summary_report.md
+    historically_observed_samples: 64943
+    current_device: absent
+    restore_note: >-
+      Заполнить официальную форму HKR, получить архив от авторов и распаковать
+      локально. Репозиторий намеренно не автоматизирует обход этого ограничения.
+
+  - id: hkr_forms
+    title: HKR Dataset — Forms
+    role: diagnostic_page_domain
+    required_for_final_training: false
+    source:
+      provider: HKR authors
+      url: https://github.com/abdoelsayed2016/HKR_Dataset
+      revision: 2e7a86a7e5b2f304e14ba4de519d3cf7df893181
+      license: CC-BY-NC-ND-4.0
+      access: manual_application_required
+      redistribution: prohibited
+    expected_raw_root: data/raw/hkr
+    expected_interim_root: data/interim/hkr_forms
+    report: data/reports/hkr_forms/summary_report.md
+    historically_observed_samples: 1577
+    current_device: absent
+
+  - id: school_notebooks
+    title: School Notebooks RU
+    role: primary_hard_domain_and_augmentation_source
+    required_for_final_training: true
+    source:
+      provider: Hugging Face / AI Forever
+      url: https://huggingface.co/datasets/ai-forever/school_notebooks_RU
+      revision: a10cd26104f054dc116a9dbc4a29c34b494eb9ae
+      license: MIT
+      access: public_download
+    expected_raw_root: data/raw/school_notebooks
+    expected_interim_root: data/interim/school_notebooks
+    report: data/reports/school_notebooks/summary_report.md
+    historically_observed_samples: 324312
+    current_device: absent
+
+  - id: hwr200
+    title: HWR200
+    role: acquisition_condition_stress_test
+    required_for_final_training: false
+    source:
+      provider: Hugging Face / AntiplagiatCompany
+      url: https://huggingface.co/datasets/AntiplagiatCompany/HWR200
+      revision: 366a882a2b8d043d437126d2878bd3812ec55a94
+      license: Apache-2.0
+      doi: 10.57967/hf/3226
+      access: public_download
+    expected_raw_root: data/raw/hwr200
+    expected_interim_root: data/interim/hwr200
+    report: data/reports/hwr200/summary_report.md
+    historically_observed_document_condition_images: 9000
+    current_device: absent
+
+  - id: iam
+    title: IAM Handwriting Database 3.0
+    role: early_english_baseline_only
+    required_for_final_training: false
+    source:
+      provider: IAM / FKI
+      url: https://fki.tic.heia-fr.ch/databases/iam-handwriting-database
+      revision: version-3.0
+      license: non-commercial-research-registration
+      access: manual_registration_required
+      redistribution: prohibited
+    expected_raw_root: data/raw/iam
+    expected_interim_root: data/interim/iam
+    report: data/reports/iam/summary_report.md
+    historically_observed_lines: 13353
+    current_device: absent
+    restore_note: >-
+      Зарегистрироваться на официальном сайте IAM и скачать архивы в соответствии
+      с условиями базы. Архивы и распакованные изображения не распространяются.
+
+lineage_rules:
+  - Не считать historical raw_inventory доказательством наличия файлов сейчас.
+  - После восстановления записать SHA-256 архивов и фактическую revision в локальный provenance snapshot.
+  - Не коммитить лицензированное содержимое IAM/HKR или производные изображения, если это запрещено условиями.
+  - Проверять writer/page-disjoint ограничения до обучения, а не после получения метрик.

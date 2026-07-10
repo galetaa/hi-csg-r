@@ -104,7 +104,11 @@ def rdp(points: list[list[int]], epsilon: float = 1.5) -> list[list[int]]:
         distances = [np.linalg.norm(np.array(p, dtype=float) - start) for p in points]
     else:
         distances = [
-            abs(np.cross(line, start - np.array(p, dtype=float))) / line_norm
+            abs(
+                line[0] * (start[1] - float(p[1]))
+                - line[1] * (start[0] - float(p[0]))
+            )
+            / line_norm
             for p in points
         ]
 
