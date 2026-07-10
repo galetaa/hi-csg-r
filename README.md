@@ -257,6 +257,7 @@ src/preprocessing/       OCR/feature preprocessing и School foreground
 src/graph/               бинаризация, скелетизация и HI-CSG-R
 src/htr/                 CRNN-CTC, decoding и метрики
 src/pipeline/            verifier завершённого исследования
+scripts/                 канонические операционные автоматизаторы
 tests/                   тесты научных инвариантов
 docs/                    актуальная навигация и исторические документы
 data/                    манифесты, gold subset и dataset reports
@@ -312,6 +313,18 @@ Raw и processed изображения не хранятся в Git. IAM и HKR
 Hugging Face с закреплёнными revisions, Cyrillic Handwriting — через Kaggle v4.
 Полная карта источников приведена в [`research/datasets.yaml`](research/datasets.yaml),
 а процедура — в [`docs/DATASETS.md`](docs/DATASETS.md).
+
+План автоматического получения данных без фактического скачивания:
+
+```bash
+uv sync --group data-download
+uv run python -m scripts.download_datasets plan
+```
+
+Публичные HWR200, School Notebooks и Cyrillic Handwriting поддерживают
+`download --execute`; для IAM/HKR сценарий выводит ручной маршрут и проверяет
+ожидаемые архивы. Скачивание, безопасная распаковка и локальные SHA-256 подробно
+описаны в [`docs/DATASETS.md`](docs/DATASETS.md).
 
 ## Замороженные этапы истории
 

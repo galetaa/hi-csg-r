@@ -43,4 +43,5 @@ verification:
   data_audit_command: uv run python -m src.pipeline audit-data
   full_readiness_command: uv run python -m src.pipeline reproduce-full
   table_regeneration_command: uv run python -m src.pipeline regenerate-tables
+  data_acquisition_plan: uv run python -m scripts.download_datasets plan
   tests: uv run pytest

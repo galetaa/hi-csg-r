@@ -15,6 +15,10 @@ datasets:
       revision: version-4
       license: CC0-1.0
       access: kaggle_authenticated_download
+    automation:
+      kind: kaggle
+      dataset_ref: constantinwerner/cyrillic-handwriting-dataset/4
+      approximate_download_size: 3.3GB
     expected_raw_root: data/raw/cyrillic-handwriting-dataset
     expected_interim_root: data/interim/cyrillic_handwriting
     report: data/reports/cyrillic_handwriting/summary_report.md
@@ -32,6 +36,10 @@ datasets:
       license: CC-BY-NC-ND-4.0
       access: manual_application_required
       redistribution: prohibited
+    automation:
+      kind: manual
+      expected_archives:
+        - HKR_Dataset_Words_Public.rar
     expected_raw_root: data/raw/hkr
     expected_interim_root: data/interim/hkr_words
     report: data/reports/hkr_words/summary_report.md
@@ -52,6 +60,10 @@ datasets:
       license: CC-BY-NC-ND-4.0
       access: manual_application_required
       redistribution: prohibited
+    automation:
+      kind: manual
+      expected_archives:
+        - HKR_Dataset_Forms_Public.rar
     expected_raw_root: data/raw/hkr
     expected_interim_root: data/interim/hkr_forms
     report: data/reports/hkr_forms/summary_report.md
@@ -68,6 +80,10 @@ datasets:
       revision: a10cd26104f054dc116a9dbc4a29c34b494eb9ae
       license: MIT
       access: public_download
+    automation:
+      kind: huggingface_snapshot
+      repo_id: ai-forever/school_notebooks_RU
+      approximate_download_size: 3.1GB
     expected_raw_root: data/raw/school_notebooks
     expected_interim_root: data/interim/school_notebooks
     report: data/reports/school_notebooks/summary_report.md
@@ -85,6 +101,10 @@ datasets:
       license: Apache-2.0
       doi: 10.57967/hf/3226
       access: public_download
+    automation:
+      kind: huggingface_snapshot
+      repo_id: AntiplagiatCompany/HWR200
+      approximate_download_size: 45.5GB
     expected_raw_root: data/raw/hwr200
     expected_interim_root: data/interim/hwr200
     report: data/reports/hwr200/summary_report.md
@@ -102,6 +122,17 @@ datasets:
       license: non-commercial-research-registration
       access: manual_registration_required
       redistribution: prohibited
+    automation:
+      kind: manual
+      expected_archives:
+        - ascii.tgz
+        - lines.tgz
+        - words.tgz
+        - xml.tgz
+        - formsA-D.tgz
+        - formsE-H.tgz
+        - formsI-Z.tgz
+        - sentences.tgz
     expected_raw_root: data/raw/iam
     expected_interim_root: data/interim/iam
     report: data/reports/iam/summary_report.md

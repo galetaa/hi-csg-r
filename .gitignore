@@ -20,6 +20,7 @@ pdf_manifest.json
 /data/interim/
 /data/processed/
 /data/splits/
+/data/local_provenance/
 data/experiments/
 !data/**/summary.json
 outputs/**
