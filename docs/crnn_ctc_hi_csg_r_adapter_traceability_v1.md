@@ -89,8 +89,9 @@ until the preregistered experiments are actually run.
 - Unit/integration tests (`13 passed`) and scoped Ruff checks: PASS.
 - Canonical M0 and M3 evaluator paths, including graph-quality strata: PASS.
 - Historical prediction compatibility and paired-bootstrap self-check on 5,563 samples: PASS.
-- The 36-cell experiment notebook executes completely with all heavy and final-test
-  switches disabled; its embedded input audit and tests pass.
+- The 37-cell staged experiment notebook executes completely in `check` mode:
+  all 21 code cells run, input audit and tests pass, every inactive block emits a
+  visible `SKIP`, and the final artifact dashboard is rendered.
 - All CLI entry points import and expose help successfully.
 
 ## Not Yet Scientifically Complete

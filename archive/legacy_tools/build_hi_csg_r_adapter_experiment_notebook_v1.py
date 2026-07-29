@@ -33,7 +33,18 @@ def build_notebook() -> nbf.NotebookNode:
 - distorted images всегда получают заново построенный HI-CSG-R;
 - после отрицательного seed-42 gate ветка останавливается.
 
-Тяжёлые стадии выключены по умолчанию. Включайте флаги последовательно, не все сразу.
+Notebook работает по последовательным стадиям. В первой code-ячейке выберите
+`RUN_STAGE` и выполните `Run All`:
+
+1. `prepare` — features, normalizer, audits, 30 visual examples;
+2. `smoke` — one-sample и 128-sample overfit;
+3. `seed42` — M0-FT/M3/M3-shuffle/M2 и validation gate;
+4. `final_seeds` — seed 43/44 и freeze registry;
+5. `final_test` — однократный test после явного разрешения;
+6. `report` — bootstrap, таблицы, figures и итоговый отчёт.
+
+`check` выполняет только быстрый input audit и тесты. Каждая секция явно пишет
+`RUN` или `SKIP`; команды показывают потоковый вывод прямо в notebook.
 """
         ),
         code(
@@ -79,23 +90,62 @@ DATA_ROOT = ROOT / "data" / "experiments" / "htr_adapter_v1"
 LOG_ROOT = RUN_ROOT / "notebook" / "logs"
 LOG_ROOT.mkdir(parents=True, exist_ok=True)
 
+# Выберите одну стадию и выполните Run All. Значение окружения имеет приоритет.
+RUN_STAGE = "prepare"
+RUN_STAGE = os.environ.get("HI_CSG_R_NOTEBOOK_STAGE", RUN_STAGE).strip().lower()
+
+STAGE_FLAGS = {
+    "check": {"input_audit", "tests"},
+    "prepare": {
+        "input_audit",
+        "feature_build",
+        "feature_audit",
+        "tests",
+        "visual_audit",
+    },
+    "smoke": {"smoke"},
+    "seed42": {"seed42", "validation"},
+    "final_seeds": {"final_seeds"},
+    "final_test": {"final_test"},
+    "report": {"statistics", "final_report"},
+}
+if RUN_STAGE not in STAGE_FLAGS:
+    raise ValueError(f"Неизвестная стадия {RUN_STAGE!r}; допустимы {sorted(STAGE_FLAGS)}")
+
 EXECUTE = {
-    "input_audit": True,
-    "feature_build": False,
-    "feature_audit": False,
-    "tests": True,
-    "visual_audit": False,
-    "smoke": False,
-    "seed42": False,
-    "validation": False,
-    "final_seeds": False,
-    "final_test": False,
-    "statistics": False,
-    "final_report": False,
+    name: name in STAGE_FLAGS[RUN_STAGE]
+    for name in {
+        "input_audit",
+        "feature_build",
+        "feature_audit",
+        "tests",
+        "visual_audit",
+        "smoke",
+        "seed42",
+        "validation",
+        "final_seeds",
+        "final_test",
+        "statistics",
+        "final_report",
+    }
 }
 
-# Изменить на True разрешается только после PASS validation gate и freeze.
+# Для final_test установите True только после PASS validation gate и freeze.
 ALLOW_FINAL_TEST = False
+ALLOW_FINAL_TEST = os.environ.get("HI_CSG_R_ALLOW_FINAL_TEST", "0") == "1"
+FEATURE_WORKERS = int(os.environ.get("HI_CSG_R_FEATURE_WORKERS", "4"))
+if FEATURE_WORKERS < 1:
+    raise ValueError("HI_CSG_R_FEATURE_WORKERS должен быть >= 1")
+
+display(
+    Markdown(
+        "## Управление запуском\\n\\n"
+        f"- выбранная стадия: **`{RUN_STAGE}`**\\n"
+        f"- активные блоки: `{', '.join(sorted(STAGE_FLAGS[RUN_STAGE]))}`\\n"
+        f"- workers для feature builder: **{FEATURE_WORKERS}**\\n"
+        f"- final test разрешён: **{ALLOW_FINAL_TEST}**"
+    )
+)
 """
         ),
         markdown("## 1. Frozen paths и служебные функции"),
@@ -149,23 +199,51 @@ def write_jsonl(path: Path, rows):
         encoding="utf-8",
     )
 
+def require_artifacts(stage: str, *paths: Path) -> None:
+    missing = [str(path) for path in paths if not path.exists()]
+    if missing:
+        formatted = "\\n".join(f"- `{path}`" for path in missing)
+        raise RuntimeError(
+            f"Для стадии `{RUN_STAGE}` сначала выполните `{stage}`. "
+            f"Отсутствуют:\\n{formatted}"
+        )
+
+def stage_enabled(name: str) -> bool:
+    enabled = bool(EXECUTE[name])
+    state = "RUN" if enabled else "SKIP"
+    display(Markdown(f"> **{state} `{name}`** — выбранная стадия: `{RUN_STAGE}`"))
+    return enabled
+
 def run_cmd(args, name: str, *, check: bool = True):
     args = [str(value) for value in args]
-    result = subprocess.run(
+    stdout_path = LOG_ROOT / f"{name}.stdout.log"
+    stderr_path = LOG_ROOT / f"{name}.stderr.log"
+    print("$", " ".join(args), flush=True)
+    process = subprocess.Popen(
         args,
         cwd=ROOT,
         text=True,
-        capture_output=True,
-        check=False,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        bufsize=1,
+        env={**os.environ, "PYTHONUNBUFFERED": "1"},
     )
-    (LOG_ROOT / f"{name}.stdout.log").write_text(result.stdout, encoding="utf-8")
-    (LOG_ROOT / f"{name}.stderr.log").write_text(result.stderr, encoding="utf-8")
-    print("$", " ".join(args))
-    print(result.stdout[-4000:])
-    if result.stderr:
-        print(result.stderr[-2000:], file=sys.stderr)
-    if check and result.returncode != 0:
-        raise RuntimeError(f"{name} завершился с кодом {result.returncode}")
+    assert process.stdout is not None
+    with stdout_path.open("w", encoding="utf-8") as stream:
+        for line in process.stdout:
+            print(line, end="", flush=True)
+            stream.write(line)
+            stream.flush()
+    returncode = process.wait()
+    stderr_path.write_text(
+        "stderr redirected to the streamed stdout log\\n",
+        encoding="utf-8",
+    )
+    result = subprocess.CompletedProcess(args, returncode)
+    if check and returncode != 0:
+        raise RuntimeError(
+            f"{name} завершился с кодом {returncode}; log: {stdout_path}"
+        )
     return result
 
 def module(name: str, *args, log_name: str, check: bool = True):
@@ -184,7 +262,7 @@ PROTOCOL = ROOT / "docs/crnn_ctc_hi_csg_r_adapter_protocol_v1.md"
 assert PROTOCOL.exists()
 print("protocol_sha256:", sha256(PROTOCOL))
 
-if EXECUTE["input_audit"]:
+if stage_enabled("input_audit"):
     module(
         "tools.audit_adapter_inputs_v1",
         "--train_manifest", SOURCE_MANIFESTS["train"],
@@ -217,7 +295,7 @@ def build_features(name: str, source: Path, *, domain_split: bool = False):
         "--feature_version", "hi_csg_r_xaligned_v1",
         "--width_downsample", 4,
         "--smooth",
-        "--workers", max((os.cpu_count() or 2) // 2, 1),
+        "--workers", FEATURE_WORKERS,
     ]
     if domain_split:
         args += ["--domain_manifest_dir", DATA_ROOT / "manifests"]
@@ -231,7 +309,7 @@ def build_features(name: str, source: Path, *, domain_split: bool = False):
     assert result["written_n"] == result["expected_n"]
     assert result["feature_dim"] == 20
 
-if EXECUTE["feature_build"]:
+if stage_enabled("feature_build"):
     build_features("train", SOURCE_MANIFESTS["train"])
     build_features("val", SOURCE_MANIFESTS["val"])
     build_features("test", SOURCE_MANIFESTS["test"], domain_split=True)
@@ -246,7 +324,13 @@ if EXECUTE["feature_build"]:
         markdown("## 4. WP3: train-only normalizer, автоматический и визуальный audit"),
         code(
             """
-if EXECUTE["feature_audit"]:
+if stage_enabled("feature_audit"):
+    require_artifacts(
+        "prepare/feature_build",
+        ENHANCED["train"],
+        ENHANCED["val"],
+        ENHANCED["test"],
+    )
     module(
         "tools.audit_xaligned_features_v1",
         "fit-normalizer",
@@ -266,7 +350,8 @@ if EXECUTE["feature_audit"]:
     assert audit["status"] == "PASS"
     display(Markdown((RUN_ROOT / "feature_audit" / "feature_audit.md").read_text(encoding="utf-8")))
 
-if EXECUTE["visual_audit"]:
+if stage_enabled("visual_audit"):
+    require_artifacts("prepare/feature_build", ENHANCED["test"])
     module(
         "tools.visualize_xaligned_features_v1",
         "--manifest", ENHANCED["test"],
@@ -278,13 +363,16 @@ if EXECUTE["visual_audit"]:
     assert pd.Series([row["dataset"] for row in selection]).value_counts().to_dict() == {
         "cyrillic": 10, "hkr": 10, "school": 10
     }
-    display(Markdown("[Открыть visual browser](feature_audit/browser/browser.html)"))
+    browser_dir = RUN_ROOT / "feature_audit" / "browser"
+    display(Markdown(f"Visual browser: `{browser_dir / 'browser.html'}`"))
+    for item in (selection[0], selection[10], selection[20]):
+        display(DisplayImage(filename=browser_dir / item["image"]))
 """
         ),
         markdown("## 5. WP4–WP7: tests и initial equivalence"),
         code(
             """
-if EXECUTE["tests"]:
+if stage_enabled("tests"):
     run_cmd(
         [
             ROOT / ".venv/bin/pytest",
@@ -357,6 +445,13 @@ if ENHANCED["train"].exists() and NORMALIZER.exists():
     delta = float((expected - actual).abs().max())
     assert delta == 0.0
     print("real-checkpoint initial equivalence:", delta)
+else:
+    display(
+        Markdown(
+            "> **SKIP `real_checkpoint_initial_equivalence`** — "
+            "сначала выполните стадию `prepare`."
+        )
+    )
 """
         ),
         markdown("## 6. WP8: one-sample и 128-sample overfit gates"),
@@ -387,7 +482,8 @@ def train_direct(name: str, *args):
         log_name=f"train_{name}",
     )
 
-if EXECUTE["smoke"]:
+if stage_enabled("smoke"):
+    require_artifacts("prepare", ENHANCED["train"], ENHANCED["val"], NORMALIZER)
     one_manifest, small_manifest = make_smoke_manifests()
     common = [
         "--mode", "m3_full",
@@ -448,7 +544,7 @@ def smoke_gate():
     path.write_text(json.dumps(result, indent=2), encoding="utf-8")
     return result
 
-if EXECUTE["smoke"]:
+if stage_enabled("smoke"):
     SMOKE_GATE = smoke_gate()
     display(SMOKE_GATE)
     assert SMOKE_GATE["status"] == "PASS", "Full seed-42 experiment запрещён"
@@ -457,7 +553,14 @@ if EXECUTE["smoke"]:
         markdown("## 7. WP9: development seed 42, correct/shuffled/topology-off"),
         code(
             """
-if EXECUTE["seed42"]:
+if stage_enabled("seed42"):
+    require_artifacts(
+        "smoke",
+        RUN_ROOT / "smoke" / "smoke_gate.json",
+        ENHANCED["train"],
+        ENHANCED["val"],
+        NORMALIZER,
+    )
     assert read_json(RUN_ROOT / "smoke" / "smoke_gate.json")["status"] == "PASS"
     for config_name in ("m0_ft_seed42.yaml", "m3_full_seed42.yaml"):
         module(
@@ -490,7 +593,7 @@ def evaluate(checkpoint: Path, manifest: Path, out_dir: Path, *, normalizer=True
         log_name=f"eval_{out_dir.name}",
     )
 
-if EXECUTE["validation"]:
+if stage_enabled("validation"):
     evaluate(
         RUN_ROOT / "m0_ft_seed42" / "best.pt",
         ENHANCED["val"],
@@ -538,7 +641,7 @@ def preliminary_gate_without_m2():
     }
     return {"status": "PASS" if all(conditions.values()) else "STOP", "conditions": conditions}
 
-if EXECUTE["validation"]:
+if stage_enabled("validation"):
     PRE_GATE = preliminary_gate_without_m2()
     display(PRE_GATE)
     if PRE_GATE["status"] == "PASS":
@@ -559,7 +662,7 @@ if EXECUTE["validation"]:
         ),
         code(
             """
-if EXECUTE["validation"]:
+if stage_enabled("validation"):
     gate_dir = RUN_ROOT / "statistical_analysis" / "validation_gate"
     result = module(
         "tools.compare_hi_csg_r_adapter_results_v1",
@@ -583,7 +686,11 @@ if EXECUTE["validation"]:
         markdown("## 8. WP10: final seeds и freeze registry"),
         code(
             """
-if EXECUTE["final_seeds"]:
+if stage_enabled("final_seeds"):
+    require_artifacts(
+        "seed42",
+        RUN_ROOT / "statistical_analysis/validation_gate/validation_gate.json",
+    )
     gate = read_json(RUN_ROOT / "statistical_analysis/validation_gate/validation_gate.json")
     assert gate["status"] == "PASS"
     for seed in (43, 44):
@@ -669,7 +776,8 @@ def final_evaluate_model(model: str, seed: int, checkpoint: Path):
                 shuffle=mapping,
             )
 
-if EXECUTE["final_test"]:
+if stage_enabled("final_test"):
+    require_artifacts("final_seeds", FREEZE_REGISTRY)
     assert ALLOW_FINAL_TEST, "Явно установите ALLOW_FINAL_TEST=True после freeze"
     registry = read_json(FREEZE_REGISTRY)
     assert registry["validation_gate"]["status"] == "PASS"
@@ -708,7 +816,15 @@ def bootstrap(name: str, baseline, adapter):
     )
     return output
 
-if EXECUTE["statistics"]:
+if stage_enabled("statistics"):
+    require_artifacts(
+        "final_test",
+        *prediction_paths("M0-FT"),
+        *prediction_paths("M3"),
+        *prediction_paths("M3-shuffle"),
+        *prediction_paths("M2", seeds=(42,)),
+        GLOBAL_VECTOR_PREDICTIONS,
+    )
     primary = bootstrap("m3_vs_m0_ft", prediction_paths("M0-FT"), prediction_paths("M3"))
     shuffled = bootstrap(
         "m3_vs_shuffle",
@@ -755,7 +871,7 @@ def load_summary(model: str, seed: int, split: str):
         RUN_ROOT / "final_evaluation" / model / f"seed{seed}" / split / "summary.json"
     )
 
-if EXECUTE["statistics"]:
+if stage_enabled("statistics"):
     main_rows = []
     for model, seeds in (("M0", SEEDS), ("M0-FT", SEEDS), ("M2", (42,)), ("M3", SEEDS)):
         summaries = [load_summary(model, seed, "mixed") for seed in seeds]
@@ -826,7 +942,7 @@ if EXECUTE["statistics"]:
         ),
         code(
             """
-if EXECUTE["statistics"]:
+if stage_enabled("statistics"):
     robustness_rows = []
     for model in ("M0-FT", "M3"):
         row = {
@@ -857,7 +973,7 @@ if EXECUTE["statistics"]:
         markdown("## 12. Метрики и диагностические визуализации"),
         code(
             """
-if EXECUTE["statistics"]:
+if stage_enabled("statistics"):
     primary = read_json(STATS / "m3_vs_m0_ft.json")
     figure, axes = plt.subplots(1, 2, figsize=(12, 4))
     seed_df = pd.DataFrame({
@@ -892,7 +1008,14 @@ if EXECUTE["statistics"]:
         markdown("## 13. Figure A и Figure B"),
         code(
             """
-if EXECUTE["final_report"]:
+if stage_enabled("final_report"):
+    require_artifacts(
+        "report/statistics",
+        STATS / "comparison.json",
+        STATS / "m3_vs_m0_ft.json",
+        STATS / "m3_vs_shuffle.json",
+        STATS / "m3_vs_m2_seed42.json",
+    )
     figure_a = RUN_ROOT / "final_report" / "figure_a_architecture.png"
     module(
         "tools.make_hi_csg_r_adapter_architecture_figure_v1",
@@ -920,7 +1043,7 @@ if EXECUTE["final_report"]:
         markdown("## 14. Final report и статус H4"),
         code(
             """
-if EXECUTE["final_report"]:
+if stage_enabled("final_report"):
     module(
         "tools.make_hi_csg_r_adapter_final_report_v1",
         "--comparison", STATS / "comparison.json",
@@ -976,6 +1099,80 @@ blank penalty -0.4 и выбор checkpoint только по validation micro-C
 - primary paired CI использует одинаковые sample IDs;
 - сформированы четыре таблицы, две figures и final report;
 - H4 классифицирована без изменения архитектуры после seed 42.
+"""
+        ),
+        code(
+            """
+def artifact_state(path: Path, *, json_field: str | None = None):
+    if not path.exists():
+        return "missing"
+    if json_field is None:
+        return "present"
+    try:
+        value = read_json(path)
+        for part in json_field.split("."):
+            value = value[part]
+        return str(value)
+    except Exception as error:
+        return f"invalid: {type(error).__name__}"
+
+dashboard = [
+    {
+        "artifact": "input audit",
+        "state": artifact_state(RUN_ROOT / "input_audit/report.json", json_field="status"),
+        "next_stage": "prepare",
+    },
+    {
+        "artifact": "enhanced train manifest",
+        "state": artifact_state(ENHANCED["train"]),
+        "next_stage": "prepare",
+    },
+    {
+        "artifact": "train normalizer",
+        "state": artifact_state(NORMALIZER),
+        "next_stage": "prepare",
+    },
+    {
+        "artifact": "30-sample visual audit",
+        "state": artifact_state(RUN_ROOT / "feature_audit/browser/selection.json"),
+        "next_stage": "prepare",
+    },
+    {
+        "artifact": "smoke gate",
+        "state": artifact_state(RUN_ROOT / "smoke/smoke_gate.json", json_field="status"),
+        "next_stage": "smoke",
+    },
+    {
+        "artifact": "validation gate",
+        "state": artifact_state(
+            RUN_ROOT / "statistical_analysis/validation_gate/validation_gate.json",
+            json_field="status",
+        ),
+        "next_stage": "seed42",
+    },
+    {
+        "artifact": "freeze registry",
+        "state": artifact_state(FREEZE_REGISTRY),
+        "next_stage": "final_seeds",
+    },
+    {
+        "artifact": "one-time test",
+        "state": artifact_state(FREEZE_REGISTRY, json_field="test_evaluated"),
+        "next_stage": "final_test",
+    },
+    {
+        "artifact": "paired statistics",
+        "state": artifact_state(STATS / "comparison.json"),
+        "next_stage": "report",
+    },
+    {
+        "artifact": "H4 final report",
+        "state": artifact_state(RUN_ROOT / "final_report/final_report.json"),
+        "next_stage": "report",
+    },
+]
+display(Markdown(f"## Состояние после стадии `{RUN_STAGE}`"))
+display(pd.DataFrame(dashboard))
 """
         ),
     ]

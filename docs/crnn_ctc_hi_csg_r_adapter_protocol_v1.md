@@ -86,9 +86,11 @@ notebooks/htr_adapter_v1_full_experiment.ipynb
 ```
 
 It is generated reproducibly by
-`tools/build_hi_csg_r_adapter_experiment_notebook_v1.py`. Heavy stages are disabled
-by default. Final test cells additionally require a successful validation gate,
-a frozen checkpoint registry, and explicit one-time authorization in the notebook.
+`tools/build_hi_csg_r_adapter_experiment_notebook_v1.py`. The notebook executes one
+explicit `RUN_STAGE` at a time: `prepare`, `smoke`, `seed42`, `final_seeds`,
+`final_test`, or `report`; `check` is the fast validation-only mode. The default
+stage is `prepare`. Final test cells additionally require a successful validation
+gate, a frozen checkpoint registry, and explicit one-time authorization.
 
 ## Fixed Evaluation
 
