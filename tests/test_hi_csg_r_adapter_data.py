@@ -97,8 +97,26 @@ def test_collate_pads_to_output_steps_not_image_width(tmp_path: Path) -> None:
     batch = collate_adapter_batch([dataset[0], dataset[1]])
     assert batch["images"].shape == (2, 1, 16, 40)
     assert batch["graph_features"].shape == (2, 10, 20)
+    assert batch["graph_raw_features"].shape == (2, 10, 20)
     assert batch["graph_mask"][0].sum().item() == 8
     assert not batch["graph_mask"][0, 8:].any()
+
+
+def test_topology_off_zeros_features_11_to_20_after_normalization(
+    tmp_path: Path,
+) -> None:
+    manifest, _ = fixture_manifest(tmp_path)
+    normalizer = XAlignedFeatureNormalizer.fit(manifest)
+    dataset = HICSGRAdapterDataset(
+        manifest,
+        vocab(),
+        normalizer=normalizer,
+        mode="m2_geometry",
+    )
+    item = dataset[0]
+    assert np.count_nonzero(item["graph_features"].numpy()[:, 10:]) == 0
+    assert np.count_nonzero(item["graph_raw_features"].numpy()[:, 10:]) > 0
+    assert np.count_nonzero(item["graph_quality"].numpy()) == 0
 
 
 def test_shuffle_changes_only_graph_and_resamples_width(tmp_path: Path) -> None:

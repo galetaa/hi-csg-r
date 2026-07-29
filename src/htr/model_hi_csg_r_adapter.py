@@ -38,12 +38,16 @@ class TemporalGraphAdapter(nn.Module):
             raise ValueError(f"Expected graph features [B,T,F], got {features.shape}")
         if mask.shape != features.shape[:2]:
             raise ValueError("Graph mask shape does not match graph features")
-        values = features * mask.unsqueeze(-1).to(features.dtype)
-        values = self.input_norm(values)
-        values = self.temporal(values.transpose(1, 2)).transpose(1, 2)
+        sequence_mask = mask.unsqueeze(-1).to(features.dtype)
+        temporal_mask = mask.unsqueeze(1).to(features.dtype)
+        values = self.input_norm(features * sequence_mask) * sequence_mask
+        values = values.transpose(1, 2)
+        for layer in self.temporal:
+            values = layer(values) * temporal_mask
+        values = values.transpose(1, 2)
         values = self.output_projection(values)
         values = self.output_norm(values)
-        return values * mask.unsqueeze(-1).to(values.dtype)
+        return values * sequence_mask
 
 
 class QualityAwareGraphGate(nn.Module):

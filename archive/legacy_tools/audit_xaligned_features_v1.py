@@ -9,6 +9,7 @@ from typing import Any
 import numpy as np
 from src.htr.xaligned_hi_csg_r import (
     FEATURE_NAMES,
+    QUALITY_FEATURE_INDICES,
     XAlignedFeatureNormalizer,
     compute_output_steps,
     load_feature_record,
@@ -73,6 +74,7 @@ def audit_manifest(path: Path, feature_field: str) -> dict[str, Any]:
 
             record = load_feature_record(feature_path)
             features = np.asarray(record["features"], dtype=np.float64)
+            quality = np.asarray(record["quality"], dtype=np.float64)
             mask = np.asarray(record["valid_mask"], dtype=bool)
             names = tuple(str(value) for value in record["feature_names"].tolist())
             expected_steps = compute_output_steps(int(record["original_width"]))
@@ -84,6 +86,10 @@ def audit_manifest(path: Path, feature_field: str) -> dict[str, Any]:
                 )
             if mask.shape != (expected_steps,) or not mask.all():
                 raise ValueError("main split feature records must contain all-valid real bins")
+            if quality.shape != (expected_steps, len(QUALITY_FEATURE_INDICES)):
+                raise ValueError("quality shape mismatch")
+            if not np.allclose(quality, features[:, QUALITY_FEATURE_INDICES]):
+                raise ValueError("quality values differ from features 18-20")
             if not np.isfinite(features).all():
                 raise ValueError("NaN or Inf detected")
 
@@ -157,6 +163,17 @@ def audit_manifest(path: Path, feature_field: str) -> dict[str, Any]:
         }
         for index, (name, math_value) in enumerate(zip(FEATURE_NAMES, np.sqrt(variance), strict=True))
     }
+    consistency = {
+        key: {
+            "max_abs_delta": max(values, default=0.0),
+            "mean_abs_delta": sum(values) / max(len(values), 1),
+        }
+        for key, values in count_deltas.items()
+    }
+    consistency_pass = all(
+        values["max_abs_delta"] <= (1e-3 if key == "edge_length" else 1e-6)
+        for key, values in consistency.items()
+    )
     return {
         "manifest": str(path),
         "expected_n": len(rows),
@@ -172,16 +189,14 @@ def audit_manifest(path: Path, feature_field: str) -> dict[str, Any]:
         "distributions": distributions,
         "sample_mean_correlations": correlations,
         "target_field_violations": dict(target_field_violations),
-        "count_consistency": {
-            key: {
-                "max_abs_delta": max(values, default=0.0),
-                "mean_abs_delta": sum(values) / max(len(values), 1),
-            }
-            for key, values in count_deltas.items()
-        },
+        "count_consistency": consistency,
+        "count_consistency_pass": consistency_pass,
         "status": (
             "PASS"
-            if count == len(rows) and not failures and not target_field_violations
+            if count == len(rows)
+            and not failures
+            and not target_field_violations
+            and consistency_pass
             else "FAIL"
         ),
     }

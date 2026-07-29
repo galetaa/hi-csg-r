@@ -79,6 +79,17 @@ seed 44: 3be0676d169d99b1cb817b99aa8f0a8ee43b35881a03770e39a4244df3fb8410
 Seeds are matched: every adapter or matched-fine-tuning run starts from the canonical
 checkpoint with the same seed.
 
+The executable experiment registry and analysis workflow is:
+
+```text
+notebooks/htr_adapter_v1_full_experiment.ipynb
+```
+
+It is generated reproducibly by
+`tools/build_hi_csg_r_adapter_experiment_notebook_v1.py`. Heavy stages are disabled
+by default. Final test cells additionally require a successful validation gate,
+a frozen checkpoint registry, and explicit one-time authorization in the notebook.
+
 ## Fixed Evaluation
 
 - Primary metric: corpus micro-CER.

@@ -88,11 +88,17 @@ class HICSGRAdapterDataset(Dataset):
         row: dict[str, Any],
         *,
         expected_steps: int,
-    ) -> tuple[np.ndarray, np.ndarray, np.ndarray, str]:
+    ) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, str]:
         if self.mode == "m0_ft":
-            features = np.zeros((expected_steps, len(FEATURE_NAMES)), dtype=np.float32)
+            raw_features = np.zeros((expected_steps, len(FEATURE_NAMES)), dtype=np.float32)
             quality = np.zeros((expected_steps, len(QUALITY_FEATURE_NAMES)), dtype=np.float32)
-            return features, quality, np.ones(expected_steps, dtype=bool), str(row["sample_id"])
+            return (
+                raw_features.copy(),
+                raw_features,
+                quality,
+                np.ones(expected_steps, dtype=bool),
+                str(row["sample_id"]),
+            )
 
         if self.normalizer is None:
             raise ValueError(f"Normalizer is required for mode={self.mode}")
@@ -142,7 +148,8 @@ class HICSGRAdapterDataset(Dataset):
         )
         features[~valid_mask] = 0.0
         quality[~valid_mask] = 0.0
-        return features, quality, valid_mask, donor_id
+        raw_features[~valid_mask] = 0.0
+        return features, raw_features, quality, valid_mask, donor_id
 
     def __getitem__(self, index: int) -> dict[str, Any]:
         row = self.rows[index]
@@ -153,10 +160,13 @@ class HICSGRAdapterDataset(Dataset):
         image = torch.from_numpy((255.0 - array) / 255.0).unsqueeze(0)
         width = int(image.shape[-1])
         output_steps = compute_output_steps(width)
-        graph_features, graph_quality, graph_mask, donor_id = self._load_graph_features(
-            row,
-            expected_steps=output_steps,
-        )
+        (
+            graph_features,
+            graph_raw_features,
+            graph_quality,
+            graph_mask,
+            donor_id,
+        ) = self._load_graph_features(row, expected_steps=output_steps)
 
         text = str(row["text"])
         target = torch.tensor(self.vocab.encode(text), dtype=torch.long)
@@ -172,6 +182,7 @@ class HICSGRAdapterDataset(Dataset):
             "level": row.get("level"),
             "category": row.get("category"),
             "graph_features": torch.from_numpy(graph_features),
+            "graph_raw_features": torch.from_numpy(graph_raw_features),
             "graph_quality": torch.from_numpy(graph_quality),
             "graph_mask": torch.from_numpy(graph_mask),
         }
@@ -189,6 +200,7 @@ def collate_adapter_batch(batch: list[dict[str, Any]]) -> dict[str, Any]:
         (len(batch), max_steps, len(FEATURE_NAMES)),
         dtype=torch.float32,
     )
+    graph_raw_features = torch.zeros_like(graph_features)
     graph_quality = torch.zeros(
         (len(batch), max_steps, len(QUALITY_FEATURE_NAMES)),
         dtype=torch.float32,
@@ -210,6 +222,7 @@ def collate_adapter_batch(batch: list[dict[str, Any]]) -> dict[str, Any]:
             raise ValueError("Graph feature shape does not match sample output length")
         images[batch_index, :, :height, :width] = image
         graph_features[batch_index, :steps] = item["graph_features"]
+        graph_raw_features[batch_index, :steps] = item["graph_raw_features"]
         graph_quality[batch_index, :steps] = item["graph_quality"]
         graph_mask[batch_index, :steps] = item["graph_mask"]
         targets.append(item["target"])
@@ -222,6 +235,7 @@ def collate_adapter_batch(batch: list[dict[str, Any]]) -> dict[str, Any]:
         "widths": torch.tensor(widths, dtype=torch.long),
         "output_steps": torch.tensor(output_steps, dtype=torch.long),
         "graph_features": graph_features,
+        "graph_raw_features": graph_raw_features,
         "graph_quality": graph_quality,
         "graph_mask": graph_mask,
         "targets": torch.cat(targets, dim=0),

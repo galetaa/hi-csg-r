@@ -253,6 +253,16 @@ def evaluate_loader(
                 rows[-1]["graph_aux_prediction"] = aux_predictions[index]
                 aux_char_edits += edit_distance(aux_predictions[index], batch["texts"][index])
                 aux_target_chars += len(batch["texts"][index])
+            length = int(lengths[index].item())
+            raw_graph = batch["graph_raw_features"][index, :length]
+            rows[-1].update(
+                {
+                    "short_branch_fraction_mean": float(raw_graph[:, 15].mean().item()),
+                    "ambiguous_edge_fraction_mean": float(raw_graph[:, 17].mean().item()),
+                    "graph_occupancy_mean": float(raw_graph[:, 18].mean().item()),
+                    "warning_density_mean": float(raw_graph[:, 19].mean().item()),
+                }
+            )
 
         if "gate" in output:
             gate = output["gate"].detach().cpu().numpy()[..., 0]

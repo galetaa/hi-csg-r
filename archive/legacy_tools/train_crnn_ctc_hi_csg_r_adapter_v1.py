@@ -5,6 +5,7 @@ import json
 import platform
 import sys
 import time
+import traceback
 from collections import defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
@@ -378,6 +379,7 @@ def run_train(args: argparse.Namespace) -> None:
             "history.json",
             "train_summary.json",
             "stdout.log",
+            "stderr.log",
         )
     ]
     existing = [path for path in generated if path.exists()]
@@ -389,6 +391,7 @@ def run_train(args: argparse.Namespace) -> None:
     if config.get("overwrite"):
         for path in existing:
             path.unlink()
+    (output_dir / "stderr.log").touch()
     (output_dir / "config.json").write_text(
         json.dumps(config, ensure_ascii=False, indent=2), encoding="utf-8"
     )
@@ -560,7 +563,18 @@ def parser() -> argparse.ArgumentParser:
 
 def main() -> None:
     args = parser().parse_args()
-    args.func(args)
+    try:
+        args.func(args)
+    except Exception:
+        out_dir = getattr(args, "out_dir", None)
+        if out_dir is None and getattr(args, "config", None):
+            raw = yaml.safe_load(Path(args.config).read_text(encoding="utf-8")) or {}
+            out_dir = raw.get("out_dir")
+        if out_dir:
+            output = Path(out_dir)
+            output.mkdir(parents=True, exist_ok=True)
+            (output / "stderr.log").write_text(traceback.format_exc(), encoding="utf-8")
+        raise
 
 
 if __name__ == "__main__":
