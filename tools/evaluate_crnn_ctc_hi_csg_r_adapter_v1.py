@@ -33,7 +33,23 @@ def load_model(
     checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=False)
     metadata = checkpoint.get("metadata")
     if not isinstance(metadata, dict):
-        raise ValueError("Adapter checkpoint has no metadata")
+        config = checkpoint.get("config") or {}
+        model = CRNNCTC(
+            num_classes=vocab.num_classes,
+            blank_index=vocab.blank_index,
+            **baseline_model_config(checkpoint),
+        )
+        model.load_state_dict(checkpoint["model"], strict=True)
+        return model, {
+            "experiment_id": "canonical_image_only",
+            "mode": "m0_ft",
+            "model_id": "M0",
+            "canonical_image_only": True,
+            "seed": int(config["seed"]),
+            "vocab": config.get("vocab"),
+            "blank_logit_penalty": -0.4,
+            "config": config,
+        }
     mode = str(metadata["mode"])
     config = metadata.get("config") or {}
     base_config = config
@@ -89,6 +105,30 @@ def token_type(row: dict[str, Any]) -> str:
     if text.isalpha():
         return "alphabetic"
     return "mixed"
+
+
+def quantile_strata(
+    rows: list[dict[str, Any]],
+    field: str,
+) -> dict[str, Any]:
+    if not rows:
+        return {"field": field, "thresholds": [], "strata": {}}
+    values = torch.tensor([float(row[field]) for row in rows], dtype=torch.float64)
+    low = float(torch.quantile(values, 1 / 3).item())
+    high = float(torch.quantile(values, 2 / 3).item())
+    grouped: defaultdict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in rows:
+        value = float(row[field])
+        name = "low" if value < low else "high" if value > high else "medium"
+        grouped[name].append(row)
+    return {
+        "field": field,
+        "thresholds": [low, high],
+        "strata": {
+            name: summarize_rows(grouped.get(name, []))
+            for name in ("low", "medium", "high")
+        },
+    }
 
 
 def main() -> None:
@@ -162,6 +202,7 @@ def main() -> None:
             "checkpoint": str(Path(args.checkpoint).resolve()),
             "manifest": str(Path(args.manifest).resolve()),
             "mode": mode,
+            "model_id": metadata.get("model_id", mode),
             "seed": metadata["seed"],
             "blank_logit_penalty": penalty,
             "shuffle_map": (
@@ -179,6 +220,15 @@ def main() -> None:
         "domain_summary.json": group_summary(rows, lambda row: row["dataset"]),
         "length_bucket_summary.json": group_summary(rows, length_bucket),
         "token_type_summary.json": group_summary(rows, token_type),
+        "graph_strata_summary.json": {
+            field: quantile_strata(rows, field)
+            for field in (
+                "graph_occupancy_mean",
+                "ambiguous_edge_fraction_mean",
+                "short_branch_fraction_mean",
+                "warning_density_mean",
+            )
+        },
     }
     for name, data in artifacts.items():
         (output / name).write_text(

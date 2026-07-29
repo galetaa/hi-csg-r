@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import numpy as np
+import torch
+from src.htr.model import CRNNCTC
 from src.htr.xaligned_hi_csg_r import (
     FEATURE_NAMES,
     aggregate_bin_features,
@@ -64,6 +66,18 @@ def test_output_length_and_exact_feature_dimension() -> None:
     features, _ = aggregate_bin_features(foreground, skeleton, graph, 16)
     assert features.shape == (16, len(FEATURE_NAMES))
     assert np.isfinite(features).all()
+    model = CRNNCTC(
+        num_classes=4,
+        hidden_size=8,
+        lstm_layers=1,
+        dropout=0.0,
+        feature_size=16,
+        height_bins=2,
+    )
+    image = torch.zeros(1, 1, 16, 64)
+    with torch.no_grad():
+        assert model(image).shape[0] == compute_output_steps(64)
+    assert model.output_lengths(torch.tensor([64])).item() == compute_output_steps(64)
 
 
 def test_fixed_smoothing_and_resampling() -> None:

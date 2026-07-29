@@ -4,7 +4,10 @@ from pathlib import Path
 
 import torch
 from src.htr.model import CRNNCTC
-from src.htr.model_hi_csg_r_adapter import CRNNCTCHICSGRAdapter
+from src.htr.model_hi_csg_r_adapter import (
+    CRNNCTCHICSGRAdapter,
+    load_canonical_visual_weights,
+)
 
 
 def models() -> tuple[CRNNCTC, CRNNCTCHICSGRAdapter]:
@@ -65,7 +68,18 @@ def test_padding_graph_values_do_not_leak_into_real_logits() -> None:
         second = adapter(
             images, widths, changed_features, changed_quality, mask
         )["log_probs"]
+        padded_embedding = adapter.graph_adapter(features, mask)[1, :6]
+        standalone_embedding = adapter.graph_adapter(
+            features[1:2, :6],
+            mask[1:2, :6],
+        )[0]
     assert torch.allclose(first[:6, 1], second[:6, 1], atol=1e-6, rtol=1e-5)
+    assert torch.allclose(
+        padded_embedding,
+        standalone_embedding,
+        atol=1e-6,
+        rtol=1e-5,
+    )
 
 
 def test_warmup_freezes_visual_layers_and_joint_gradients_flow() -> None:
@@ -73,11 +87,27 @@ def test_warmup_freezes_visual_layers_and_joint_gradients_flow() -> None:
     adapter.configure_warmup()
     assert not any(parameter.requires_grad for parameter in adapter.cnn.parameters())
     assert all(parameter.requires_grad for parameter in adapter.graph_adapter.parameters())
+    visual_before = {
+        name: parameter.detach().clone()
+        for name, parameter in adapter.named_parameters()
+        if name.startswith(("cnn.", "proj.", "rnn.", "classifier."))
+    }
+    images, widths, features, quality, mask = inputs()
+    output = adapter(images, widths, features, quality, mask)
+    warmup_loss = output["graph_aux_log_probs"].square().mean()
+    optimizer = torch.optim.AdamW(
+        [parameter for parameter in adapter.parameters() if parameter.requires_grad],
+        lr=1e-3,
+    )
+    warmup_loss.backward()
+    optimizer.step()
+    for name, expected in visual_before.items():
+        assert torch.equal(adapter.state_dict()[name], expected)
 
     with torch.no_grad():
         adapter.graph_adapter.output_projection.weight.normal_(0, 0.01)
     adapter.configure_joint_finetuning()
-    images, widths, features, quality, mask = inputs()
+    adapter.zero_grad(set_to_none=True)
     output = adapter(images, widths, features, quality, mask)
     loss = output["log_probs"].square().mean() + output["graph_aux_log_probs"].square().mean()
     loss.backward()
@@ -89,6 +119,30 @@ def test_warmup_freezes_visual_layers_and_joint_gradients_flow() -> None:
         parameter.grad is not None and parameter.grad.abs().sum() > 0
         for parameter in adapter.graph_gate.parameters()
     )
+
+
+def test_strict_canonical_loader_and_provenance(tmp_path: Path) -> None:
+    baseline, adapter = models()
+    path = tmp_path / "baseline.pt"
+    torch.save(
+        {
+            "model": baseline.state_dict(),
+            "epoch": 9,
+            "config": {
+                "seed": 42,
+                "hidden_size": 16,
+                "lstm_layers": 1,
+                "dropout": 0.0,
+                "feature_size": 32,
+                "height_bins": 2,
+            },
+        },
+        path,
+    )
+    metadata = load_canonical_visual_weights(adapter, path)
+    assert metadata["base_checkpoint_seed"] == 42
+    assert metadata["base_checkpoint_epoch"] == 9
+    assert len(metadata["base_checkpoint_sha256"]) == 64
 
 
 def test_checkpoint_serialization_preserves_logits(tmp_path: Path) -> None:

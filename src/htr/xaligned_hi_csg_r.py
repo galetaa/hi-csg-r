@@ -702,6 +702,8 @@ class XAlignedFeatureNormalizer:
     graph_version: str
     feature_builder_version: str
     created_at: str
+    missing_policy: str = "raw_zero"
+    default_policy: str = "empty_real_bin_zero_padding_mask_false"
 
     def __post_init__(self) -> None:
         dimension = len(self.feature_names)
@@ -776,6 +778,13 @@ class XAlignedFeatureNormalizer:
             graph_version=str(data["graph_version"]),
             feature_builder_version=str(data["feature_builder_version"]),
             created_at=str(data["created_at"]),
+            missing_policy=str(data.get("missing_policy", "raw_zero")),
+            default_policy=str(
+                data.get(
+                    "default_policy",
+                    "empty_real_bin_zero_padding_mask_false",
+                )
+            ),
         )
 
     def to_path(self, path: str | Path) -> None:

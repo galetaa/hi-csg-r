@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any
 
 import torch
-from src.htr.xaligned_hi_csg_r import read_jsonl, resolve_path
+from src.htr.xaligned_hi_csg_r import load_feature_record, read_jsonl, resolve_path
 
 
 def sha256(path: str | Path) -> str:
@@ -30,6 +30,7 @@ def audit_manifest(path: Path, graph_fields: list[str]) -> dict[str, Any]:
     missing_images: list[dict[str, str]] = []
     missing_graph_sources: list[str] = []
     graph_source_counts: Counter[str] = Counter()
+    graph_sample_mismatches: list[dict[str, str]] = []
     oov_ready_rows = 0
 
     for row in rows:
@@ -45,8 +46,18 @@ def audit_manifest(path: Path, graph_fields: list[str]) -> dict[str, Any]:
         for field in graph_fields:
             if row.get(field):
                 try:
-                    resolve_path(str(row[field]), path)
+                    graph_path = resolve_path(str(row[field]), path)
                     graph_source = field
+                    if field == "xaligned_graph_npz":
+                        record = load_feature_record(graph_path)
+                        record_id = str(record["sample_id"])
+                        if record_id != sample_id:
+                            graph_sample_mismatches.append(
+                                {
+                                    "manifest_sample_id": sample_id,
+                                    "graph_sample_id": record_id,
+                                }
+                            )
                     break
                 except FileNotFoundError:
                     continue
@@ -70,6 +81,7 @@ def audit_manifest(path: Path, graph_fields: list[str]) -> dict[str, Any]:
         "missing_images": missing_images,
         "missing_graph_sources": missing_graph_sources,
         "graph_source_counts": dict(graph_source_counts),
+        "graph_sample_mismatches": graph_sample_mismatches,
         "rows_with_text": oov_ready_rows,
     }
 
@@ -153,6 +165,13 @@ def main() -> None:
     parser.add_argument("--checkpoint_seeds", nargs="+", type=int, default=[42, 43, 44])
     parser.add_argument("--vocab", required=True)
     parser.add_argument(
+        "--expected_counts",
+        nargs=3,
+        type=int,
+        metavar=("TRAIN", "VAL", "TEST"),
+        default=[39998, 6000, 5563],
+    )
+    parser.add_argument(
         "--graph_fields",
         nargs="+",
         default=["xaligned_graph_npz", "graph_json", "local_graph_npz"],
@@ -184,6 +203,15 @@ def main() -> None:
     path_sets = {split: set(item["image_paths"]) for split, item in manifests.items()}
     checks = [
         status_row(
+            "manifest_sample_counts",
+            [manifests[name]["n"] for name in ("train", "val", "test")]
+            == list(args.expected_counts),
+            {
+                "expected": list(args.expected_counts),
+                "actual": [manifests[name]["n"] for name in ("train", "val", "test")],
+            },
+        ),
+        status_row(
             "missing_images",
             all(not item["missing_images"] for item in manifests.values()),
             {split: len(item["missing_images"]) for split, item in manifests.items()},
@@ -192,6 +220,14 @@ def main() -> None:
             "missing_graphs",
             all(not item["missing_graph_sources"] for item in manifests.values()),
             {split: len(item["missing_graph_sources"]) for split, item in manifests.items()},
+        ),
+        status_row(
+            "graph_sample_id_mismatch",
+            all(not item["graph_sample_mismatches"] for item in manifests.values()),
+            {
+                split: len(item["graph_sample_mismatches"])
+                for split, item in manifests.items()
+            },
         ),
         status_row(
             "duplicate_sample_id",
