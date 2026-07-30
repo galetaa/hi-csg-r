@@ -1,0 +1,24 @@
+experiment_id: htr_adapter_v2_b0_dev_seed42
+protocol: crnn_ctc_hi_csg_r_late_correction_protocol_v2
+mode: b0_dev
+seed: 42
+train_manifest: data/experiments/htr_adapter_v2/splits/train.jsonl
+val_manifest: data/experiments/htr_adapter_v2/splits/dev.jsonl
+vocab: data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_10k_context_v1/vocab.json
+out_dir: outputs/htr_adapter_v2/b0_dev_seed42
+epochs: 80
+batch_size: 16
+num_workers: 4
+hidden_size: 256
+lstm_layers: 2
+dropout: 0.1
+lr: 0.0005
+weight_decay: 0.0001
+grad_clip: 5.0
+blank_logit_penalty_start: -2.0
+blank_logit_penalty_end: -0.4
+height_bins: 4
+feature_size: 256
+split_seed: 20260730
+holdout_evaluation_allowed: false
+

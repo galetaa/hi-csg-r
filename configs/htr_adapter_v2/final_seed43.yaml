@@ -1,0 +1,12 @@
+experiment_id: htr_adapter_v2_final_seed43
+protocol: crnn_ctc_hi_csg_r_late_correction_protocol_v2
+stage: final
+seed: 43
+variant: FROZEN_AFTER_HOLDOUT
+base_checkpoint: outputs/htr_adapter_v1/m0_ft_seed43/best.pt
+train_manifest: data/experiments/htr_adapter_v1/manifests/train.jsonl
+val_manifest: data/experiments/htr_adapter_v1/manifests/val.jsonl
+vocab: data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_10k_context_v1/vocab.json
+out_dir: outputs/htr_adapter_v2/final_seed43
+holdout_gate_required: true
+
