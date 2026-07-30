@@ -492,15 +492,28 @@ def evidence_files(root: Path, output: Path) -> list[Path]:
         "feature_audit/*",
         "protocol_freeze/*",
         "smoke/smoke_gate.*",
+        "b0_dev_seed42/*",
+        "v2_1_dev_p05_seed42/*",
+        "v2_2_dev_p05_seed42/*",
+        "v2_best_dev_p10_seed42/*",
         "development/**/*.json",
-        "holdout/**/*.json",
-        "final_seed*/**/*.json",
+        "holdout/**/*",
+        "frozen_final_configs/*",
+        "m0_ft_final_seed*/*",
+        "final_seed*/*",
+        "final_evaluation/**/*",
         "statistical_analysis/*",
+        "failure_analysis/**/*",
     )
     paths: set[Path] = set()
     for pattern in patterns:
         paths.update(path for path in root.glob(pattern) if path.is_file())
     paths.update(path for path in Path("configs/htr_adapter_v2").glob("*.yaml"))
+    paths.update(
+        path
+        for path in Path("data/experiments/htr_adapter_v2").rglob("*")
+        if path.is_file()
+    )
     paths.update(
         Path("docs").glob(
             "crnn_ctc_hi_csg_r_late_correction_protocol_v2*.md"
@@ -508,6 +521,8 @@ def evidence_files(root: Path, output: Path) -> list[Path]:
     )
     paths.update(path for path in output.glob("*.md") if path.is_file())
     paths.update(path for path in output.glob("*.png") if path.is_file())
+    if (output / "final_report.json").exists():
+        paths.add(output / "final_report.json")
     return sorted(path.resolve() for path in paths if path.exists())
 
 
