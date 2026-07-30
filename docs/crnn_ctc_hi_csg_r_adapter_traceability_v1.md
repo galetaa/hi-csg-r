@@ -12,8 +12,8 @@ until the preregistered experiments are actually run.
 |---:|---|---|---|
 | 0 | Frozen protocol and seed configs | `docs/crnn_ctc_hi_csg_r_adapter_protocol_v1.md`, seven YAML configs | Complete |
 | 1 | Input/checkpoint audit | `tools/audit_adapter_inputs_v1.py`; canonical report under `outputs/htr_adapter_v1/input_audit/` | Complete |
-| 2 | 20-feature x-aligned builder | `src/htr/xaligned_hi_csg_r.py`, builder CLI | Complete; full corpus build pending |
-| 3 | Feature audit and 30-sample browser | audit and visualization CLIs | Code complete; full audit and manual acceptance pending |
+| 2 | 20-feature x-aligned builder | `src/htr/xaligned_hi_csg_r.py`, builder CLI | Complete; all main and additional manifests built |
+| 3 | Feature audit and 30-sample browser | audit and visualization CLIs | Complete; full audit PASS and 30 examples inspected |
 | 4 | Dataset and output-length collate | `src/htr/dataset_adapter.py` | Complete |
 | 5 | Adapter, gate, auxiliary CTC, strict loader | `src/htr/model_hi_csg_r_adapter.py` | Complete |
 | 6 | Unit/integration tests | three required test modules | Complete |
@@ -35,6 +35,9 @@ until the preregistered experiments are actually run.
 - Actual image width determines `T = max(width // 4, 1)`.
 - Real empty bins and batch padding have distinct masks.
 - Robustness feature builds consume the distorted image path in each manifest.
+- Builder `1.0.1` deterministically orders node-free isolated-loop pixels before
+  segment aggregation. This is a recorded pre-training bug fix to the `1.0.0`
+  implementation; it does not change the frozen feature list or model protocol.
 
 ### Model
 
@@ -77,6 +80,12 @@ until the preregistered experiments are actually run.
 
 - Canonical input audit for seeds 42/43/44: PASS.
 - Canonical split counts: 39,998 train, 6,000 validation, and 5,563 test.
+- All 21 main/additional feature-build summaries: PASS with builder `1.0.1`.
+- Full main-split feature audit: PASS over 51,561 records with no record failures.
+- Node, endpoint, and junction count deltas are exactly zero; effective edge-length
+  deltas are below `3e-11`, and float32 record reconstruction deltas below `2.3e-5`.
+- The 30-example visual browser contains 10 Cyrillic, 10 HKR, and 10 School samples
+  stratified across clean/medium/hard; manual alignment acceptance: PASS.
 - Real image feature record: shape `[185, 20]`, no NaN/Inf.
 - Real-record quality mapping and local/global count consistency audit: PASS.
 - Train-only normalizer serialization, provenance, and default policies: PASS.
@@ -86,25 +95,26 @@ until the preregistered experiments are actually run.
   (3.062% increase).
 - M0-FT training/evaluation smoke: PASS.
 - M3 warm-up/joint training/evaluation smoke: PASS.
-- Unit/integration tests (`13 passed`) and scoped Ruff checks: PASS.
+- Unit/integration tests (`14 passed`) and scoped Ruff checks: PASS.
 - Canonical M0 and M3 evaluator paths, including graph-quality strata: PASS.
 - Historical prediction compatibility and paired-bootstrap self-check on 5,563 samples: PASS.
 - The 37-cell staged experiment notebook executes completely in `check` mode:
   all 21 code cells run, input audit and tests pass, every inactive block emits a
   visible `SKIP`, and the final artifact dashboard is rendered.
+- The same 37-cell notebook executes completely in `prepare` mode: all 21 code
+  cells run, all feature builds/audits/visualizations/tests pass, 55 rich display
+  outputs are rendered, and no error output is present.
 - All CLI entry points import and expose help successfully.
 
 ## Not Yet Scientifically Complete
 
 The following cannot be marked complete by code inspection:
 
-1. full feature construction for every main and additional manifest;
-2. automatic full-corpus audit and manual inspection of 30 examples;
-3. preregistered one-sample and 128-sample overfit runs;
-4. M0-FT/M3/M2 seed-42 development runs and validation gate;
-5. seeds 43/44 after a positive gate;
-6. the one-time mixed/domain/page-disjoint/robustness test;
-7. final paired confidence intervals, tables, figures, report, and H4 classification.
+1. preregistered one-sample and 128-sample overfit runs;
+2. M0-FT/M3/M2 seed-42 development runs and validation gate;
+3. seeds 43/44 after a positive gate;
+4. the one-time mixed/domain/page-disjoint/robustness test;
+5. final paired confidence intervals, tables, figures, report, and H4 classification.
 
 These stages are encoded in
 `notebooks/htr_adapter_v1_full_experiment.ipynb`. Until they are executed in order,

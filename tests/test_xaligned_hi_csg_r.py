@@ -48,6 +48,27 @@ def test_long_edge_is_distributed_across_bins() -> None:
     assert np.all(result["orientation_length"][:, 0] > 0)
 
 
+def test_unordered_isolated_loop_is_canonicalized_before_distribution() -> None:
+    graph = {
+        "image": {"width": 3},
+        "edges": [
+            {
+                "id": "loop-edge",
+                "type": "isolated_loop",
+                "component_id": "component",
+                "points": [[1, 0], [0, 1], [2, 1], [1, 2]],
+                "length_px": 4.0,
+                "flags": ["isolated_component_no_special_nodes"],
+            }
+        ],
+        "loops": [{"edge_ids": ["loop-edge"]}],
+    }
+    result = distribute_edges_to_bins(graph, 3)
+    assert np.isclose(result["length"].sum(), 4.0 * np.sqrt(2.0))
+    assert np.count_nonzero(result["length"]) == 2
+    assert np.isclose(result["orientation_length"].sum(), result["length"].sum())
+
+
 def test_output_length_and_exact_feature_dimension() -> None:
     assert compute_output_steps(1) == 1
     assert compute_output_steps(63) == 15

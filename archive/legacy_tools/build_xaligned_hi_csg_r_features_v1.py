@@ -5,8 +5,10 @@ import json
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any
+from zipfile import BadZipFile
 
 from src.htr.xaligned_hi_csg_r import (
+    FEATURE_BUILDER_VERSION,
     FEATURE_NAMES,
     FEATURE_VERSION,
     WIDTH_DOWNSAMPLE,
@@ -25,6 +27,18 @@ def _safe_filename(sample_id: str) -> str:
     return sample_id.replace("/", "__").replace("\\", "__")
 
 
+def _migrate_compatible_record(record: dict[str, Any]) -> bool:
+    diagnostics = record.get("diagnostics") or {}
+    declared = float(diagnostics.get("graph_edge_length", 0.0))
+    local = float(diagnostics.get("local_edge_length_sum", 0.0))
+    if abs(declared - local) > 1e-3:
+        return False
+    diagnostics["graph_edge_length_declared"] = declared
+    record["diagnostics"] = diagnostics
+    record["feature_builder_version"] = FEATURE_BUILDER_VERSION
+    return True
+
+
 def _process(task: dict[str, Any]) -> dict[str, Any]:
     row = task["row"]
     manifest_path = Path(task["manifest"])
@@ -38,14 +52,24 @@ def _process(task: dict[str, Any]) -> dict[str, Any]:
     )
     output = Path(task["out_dir"]) / f"{_safe_filename(sample_id)}.npz"
     if task["reuse"] and output.exists():
-        record = load_feature_record(output)
+        try:
+            record = load_feature_record(output)
+        except (BadZipFile, EOFError, OSError, ValueError):
+            record = None
         if (
-            str(record["sample_id"]) == sample_id
+            record is not None
+            and str(record["sample_id"]) == sample_id
             and str(record["feature_version"]) == task["feature_version"]
         ):
-            metadata = feature_record_metadata(record)
-            metadata.update({"path": str(output), "reused": True})
-            return metadata
+            current_builder = (
+                str(record["feature_builder_version"]) == FEATURE_BUILDER_VERSION
+            )
+            if current_builder or _migrate_compatible_record(record):
+                if not current_builder:
+                    save_feature_record(record, output)
+                metadata = feature_record_metadata(record)
+                metadata.update({"path": str(output), "reused": True})
+                return metadata
 
     record = build_feature_record(
         sample_id=sample_id,
@@ -177,6 +201,7 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
         "out_dir": str(args.out_dir),
         "out_manifest": str(args.out_manifest),
         "feature_version": args.feature_version,
+        "feature_builder_version": FEATURE_BUILDER_VERSION,
         "feature_names": list(FEATURE_NAMES),
         "feature_dim": len(FEATURE_NAMES),
         "width_downsample": args.width_downsample,

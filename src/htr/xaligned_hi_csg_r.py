@@ -3,6 +3,8 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import os
+import tempfile
 from collections.abc import Iterable, Sequence
 from dataclasses import asdict, dataclass
 from datetime import UTC, datetime
@@ -17,7 +19,7 @@ from skimage.morphology import remove_small_objects, skeletonize
 from src.graph.pixel_graph import build_pixel_graph
 
 FEATURE_VERSION = "hi_csg_r_xaligned_v1"
-FEATURE_BUILDER_VERSION = "1.0.0"
+FEATURE_BUILDER_VERSION = "1.0.1"
 GRAPH_VERSION = "hi_csg_r_v1"
 WIDTH_DOWNSAMPLE = 4
 
@@ -295,6 +297,66 @@ def _edge_is_short_branch(edge: dict[str, Any]) -> bool:
     )
 
 
+def _ordered_edge_points(edge: dict[str, Any]) -> list[list[float]]:
+    points = [
+        [float(point[0]), float(point[1])]
+        for point in (edge.get("points") or [])
+    ]
+    flags = set(str(value) for value in (edge.get("flags") or []))
+    if (
+        len(points) < 3
+        or str(edge.get("type")) != "isolated_loop"
+        or "isolated_component_no_special_nodes" not in flags
+    ):
+        return points
+
+    pixel_set = {(int(round(x)), int(round(y))) for x, y in points}
+    if len(pixel_set) != len(points):
+        return points
+    neighbors: dict[tuple[int, int], list[tuple[int, int]]] = {}
+    for x, y in pixel_set:
+        adjacent = sorted(
+            (x + dx, y + dy)
+            for dx in (-1, 0, 1)
+            for dy in (-1, 0, 1)
+            if (dx or dy) and (x + dx, y + dy) in pixel_set
+        )
+        if len(adjacent) != 2:
+            return points
+        neighbors[(x, y)] = adjacent
+
+    start = min(pixel_set)
+    previous = start
+    current = neighbors[start][0]
+    ordered = [start]
+    visited = {start}
+    while current != start:
+        if current in visited:
+            return points
+        ordered.append(current)
+        visited.add(current)
+        candidates = [value for value in neighbors[current] if value != previous]
+        if len(candidates) != 1:
+            return points
+        previous, current = current, candidates[0]
+    if visited != pixel_set:
+        return points
+    ordered.append(start)
+    return [[float(x), float(y)] for x, y in ordered]
+
+
+def _polyline_length(points: list[list[float]]) -> float:
+    return float(
+        sum(
+            math.hypot(
+                float(right[0]) - float(left[0]),
+                float(right[1]) - float(left[1]),
+            )
+            for left, right in zip(points, points[1:], strict=False)
+        )
+    )
+
+
 def _orientation_index(dx: float, dy: float) -> int:
     angle = math.atan2(dy, dx)
     abs_cos = abs(math.cos(angle))
@@ -344,7 +406,7 @@ def distribute_edges_to_bins(
     }
 
     for edge in graph.get("edges", []):
-        points = edge.get("points") or []
+        points = _ordered_edge_points(edge)
         if len(points) < 2:
             continue
         component_id = str(edge.get("component_id") or "")
@@ -502,8 +564,14 @@ def aggregate_bin_features(
         "skeleton_pixels": int(skeleton_mask.sum()),
         "graph_nodes": len(graph.get("nodes", [])),
         "graph_edges": len(graph.get("edges", [])),
-        "graph_edge_length": float(
+        "graph_edge_length_declared": float(
             sum(float(edge.get("length_px") or 0.0) for edge in graph.get("edges", []))
+        ),
+        "graph_edge_length": float(
+            sum(
+                _polyline_length(_ordered_edge_points(edge))
+                for edge in graph.get("edges", [])
+            )
         ),
         "graph_components": len(graph.get("components", [])),
         "graph_loops": len(graph.get("loops", [])),
@@ -649,26 +717,45 @@ def build_feature_record(
 def save_feature_record(record: dict[str, Any], path: str | Path) -> None:
     output = Path(path)
     output.parent.mkdir(parents=True, exist_ok=True)
-    np.savez_compressed(
-        output,
-        features=np.asarray(record["features"], dtype=np.float32),
-        raw_features=np.asarray(record["raw_features"], dtype=np.float32),
-        quality=np.asarray(record["quality"], dtype=np.float32),
-        valid_mask=np.asarray(record["valid_mask"], dtype=bool),
-        time_steps=np.int32(record["time_steps"]),
-        original_width=np.int32(record["original_width"]),
-        feature_names=np.asarray(record["feature_names"]),
-        quality_feature_names=np.asarray(record["quality_feature_names"]),
-        sample_id=np.asarray(str(record["sample_id"])),
-        graph_version=np.asarray(str(record["graph_version"])),
-        feature_version=np.asarray(str(record["feature_version"])),
-        feature_builder_version=np.asarray(str(record["feature_builder_version"])),
-        source_image_sha1=np.asarray(str(record["source_image_sha1"])),
-        binarization=np.asarray(str(record["binarization"])),
-        diagnostics_json=np.asarray(
-            json.dumps(record.get("diagnostics", {}), ensure_ascii=False)
-        ),
-    )
+    temporary_path: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w+b",
+            prefix=f".{output.name}.",
+            suffix=".tmp",
+            dir=output.parent,
+            delete=False,
+        ) as stream:
+            temporary_path = Path(stream.name)
+            np.savez_compressed(
+                stream,
+                features=np.asarray(record["features"], dtype=np.float32),
+                raw_features=np.asarray(record["raw_features"], dtype=np.float32),
+                quality=np.asarray(record["quality"], dtype=np.float32),
+                valid_mask=np.asarray(record["valid_mask"], dtype=bool),
+                time_steps=np.int32(record["time_steps"]),
+                original_width=np.int32(record["original_width"]),
+                feature_names=np.asarray(record["feature_names"]),
+                quality_feature_names=np.asarray(record["quality_feature_names"]),
+                sample_id=np.asarray(str(record["sample_id"])),
+                graph_version=np.asarray(str(record["graph_version"])),
+                feature_version=np.asarray(str(record["feature_version"])),
+                feature_builder_version=np.asarray(
+                    str(record["feature_builder_version"])
+                ),
+                source_image_sha1=np.asarray(str(record["source_image_sha1"])),
+                binarization=np.asarray(str(record["binarization"])),
+                diagnostics_json=np.asarray(
+                    json.dumps(record.get("diagnostics", {}), ensure_ascii=False)
+                ),
+            )
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(temporary_path, output)
+        temporary_path = None
+    finally:
+        if temporary_path is not None:
+            temporary_path.unlink(missing_ok=True)
 
 
 def load_feature_record(path: str | Path) -> dict[str, Any]:
