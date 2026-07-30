@@ -95,6 +95,14 @@ def module(name, *args, log_name=None, allowed=(0,)):
         raise RuntimeError(f"{label}: exit={result.returncode}; log={log_path}")
     return result.returncode
 
+def resume_args(run_dir):
+    run_dir = Path(run_dir)
+    return (
+        ("--resume", run_dir / "last.pt")
+        if (run_dir / "last.pt").exists() and not (run_dir / "train_summary.json").exists()
+        else ()
+    )
+
 display(Markdown(f"**Workspace:** `{ROOT}`  \\n**Python:** `{PYTHON}`"))
 """
         ),
@@ -153,7 +161,38 @@ if not preflight_path.exists():
         allowed=(0, 2),
     )
 preflight = show_json(preflight_path, "Preflight decision")
-display(pd.read_csv(OUT / "preflight/blank_penalty_sweep.csv"))
+penalty_table = pd.read_csv(OUT / "preflight/blank_penalty_sweep.csv")
+display(penalty_table)
+fig, axes = plt.subplots(1, 2, figsize=(13, 4))
+for model, values in preflight["blank_penalty"].items():
+    xs = sorted(float(value) for value in values)
+    axes[0].plot(
+        xs,
+        [values[str(value)]["cer"] for value in xs],
+        marker="o",
+        label=model,
+    )
+axes[0].axvline(
+    preflight["decision"]["selected_blank_logit_penalty"],
+    color="black",
+    linestyle="--",
+    linewidth=1,
+)
+axes[0].set(xlabel="blank logit penalty", ylabel="Validation CER", title="D1 calibration")
+axes[0].legend()
+scale_values = preflight["graph_scale"]
+scale_x = sorted(float(value) for value in scale_values)
+axes[1].plot(
+    scale_x,
+    [scale_values[str(value)]["cer"] for value in scale_x],
+    marker="o",
+    color="#0f766e",
+)
+axes[1].set(xlabel="v1 graph residual scale", ylabel="Validation CER", title="D2 graph strength")
+for axis in axes:
+    axis.grid(alpha=0.2)
+plt.tight_layout()
+plt.show()
 """
         ),
         markdown("## 4. Independent split и train-only statistics"),
@@ -207,10 +246,24 @@ if smoke["status"] == "PASS" and not b0.exists():
     module(
         "tools.train_crnn_ctc_adapter_v2_baseline",
         "train", "--config", "configs/htr_adapter_v2/b0_dev_seed42.yaml",
+        *resume_args(OUT / "b0_dev_seed42"),
         log_name="b0_dev_seed42",
     )
 if b0.exists():
     show_json(b0, "B0-dev-v2 training")
+    b0_history = pd.DataFrame(load_json(OUT / "b0_dev_seed42/history.json"))
+    display(b0_history.tail())
+    fig, axes = plt.subplots(1, 2, figsize=(13, 4))
+    axes[0].plot(b0_history["epoch"], b0_history["train_loss"], color="#2563eb")
+    axes[0].set(title="B0 train loss", xlabel="epoch", ylabel="CTC loss")
+    axes[1].plot(b0_history["epoch"], b0_history["val_CER"], label="CER")
+    axes[1].plot(b0_history["epoch"], b0_history["val_exact"], label="Exact")
+    axes[1].set(title="B0 development metrics", xlabel="epoch")
+    axes[1].legend()
+    for axis in axes:
+        axis.grid(alpha=0.2)
+    plt.tight_layout()
+    plt.show()
 else:
     display(Markdown("B0 не запущен из-за предыдущего STOP."))
 """
@@ -223,10 +276,39 @@ if b0.exists() and not v21.exists():
     module(
         "tools.train_crnn_ctc_hi_csg_r_late_correction_v2",
         "train", "--config", "configs/htr_adapter_v2/v2_1_dev_p05_seed42.yaml",
+        *resume_args(OUT / "v2_1_dev_p05_seed42"),
         log_name="v2_1_dev_p05",
     )
 if v21.exists():
     show_json(v21, "V2-1 training")
+    v21_history = pd.DataFrame(
+        load_json(OUT / "v2_1_dev_p05_seed42/history.json")
+    )
+    display(v21_history.tail())
+    fig, axes = plt.subplots(2, 2, figsize=(13, 8))
+    axes[0, 0].plot(v21_history["epoch"], v21_history["train_ctc_loss"], label="main CTC")
+    axes[0, 0].plot(v21_history["epoch"], v21_history["train_auxiliary_ctc"], label="aux CTC")
+    axes[0, 0].set_title("Training CTC objectives")
+    axes[0, 0].legend()
+    axes[0, 1].plot(v21_history["epoch"], v21_history["train_preservation_kl"])
+    axes[0, 1].set_title("Baseline-preservation KL")
+    axes[1, 0].plot(v21_history["epoch"], v21_history["val_CER"], label="CER")
+    axes[1, 0].plot(v21_history["epoch"], v21_history["val_exact"], label="Exact")
+    axes[1, 0].set_title("Development metrics")
+    axes[1, 0].legend()
+    axes[1, 1].plot(v21_history["epoch"], v21_history["val_alpha"], label="alpha")
+    axes[1, 1].plot(
+        v21_history["epoch"],
+        [row["mean"] for row in v21_history["val_gate"]],
+        label="gate mean",
+    )
+    axes[1, 1].set_title("Bounded intervention")
+    axes[1, 1].legend()
+    for axis in axes.flat:
+        axis.grid(alpha=0.2)
+        axis.set_xlabel("epoch")
+    plt.tight_layout()
+    plt.show()
 """
         ),
         markdown("## 8. V2-1 correct/shuffle/zero и dev gate"),
@@ -290,6 +372,7 @@ if allow_v22 and not v22.exists():
     module(
         "tools.train_crnn_ctc_hi_csg_r_late_correction_v2",
         "train", "--config", "configs/htr_adapter_v2/v2_2_dev_p05_seed42.yaml",
+        *resume_args(OUT / "v2_2_dev_p05_seed42"),
         log_name="v2_2_dev_p05",
     )
 if not allow_v22:
@@ -357,6 +440,7 @@ if p05_selection and p05_selection["status"] == "PASS":
         module(
             "tools.train_crnn_ctc_hi_csg_r_late_correction_v2",
             "train", "--config", resolved_p10,
+            *resume_args(OUT / "v2_best_dev_p10_seed42"),
             log_name="v2_best_dev_p10",
         )
     if p10.exists():
@@ -405,6 +489,21 @@ selected = (
     if selection_path.exists()
     else None
 )
+if selected:
+    dev_rows = []
+    for candidate in selected["candidates"]:
+        decision = candidate["decision"]
+        dev_rows.append({
+            "candidate": candidate["name"],
+            "gate": decision["status"],
+            "baseline_CER": decision["baseline"]["cer"],
+            "correct_CER": decision["correct"]["cer"],
+            "shuffle_CER": decision["shuffle"]["cer"],
+            "zero_CER": decision["zero"]["cer"],
+            "relative_improvement": decision["relative_cer_improvement"],
+            "Exact": decision["correct"]["exact"],
+        })
+    display(pd.DataFrame(dev_rows).sort_values("correct_CER"))
 
 holdout_decision_path = OUT / "holdout/decision/holdout_decision.json"
 if selected and selected["status"] == "PASS" and not holdout_decision_path.exists():
@@ -517,6 +616,7 @@ if final_allowed:
                 "tools.train_crnn_ctc_hi_csg_r_late_correction_v2",
                 "train",
                 "--config", frozen_configs / f"final_seed{seed}.yaml",
+                *resume_args(OUT / f"final_seed{seed}"),
                 log_name=f"v2_final_seed{seed}",
             )
 else:

@@ -400,11 +400,13 @@ def run_train(args: argparse.Namespace) -> None:
         )
     ]
     existing = [path for path in generated if path.exists()]
-    if existing and not config.get("overwrite"):
+    if existing and not config.get("overwrite") and not config.get("resume"):
         raise FileExistsError(
-            "Run artifacts already exist; use --overwrite: "
+            "Run artifacts already exist; use --overwrite or --resume: "
             + ", ".join(str(path) for path in existing)
         )
+    if config.get("overwrite") and config.get("resume"):
+        raise ValueError("--overwrite and --resume are mutually exclusive")
     if config.get("overwrite"):
         for path in existing:
             path.unlink()
@@ -437,8 +439,53 @@ def run_train(args: argparse.Namespace) -> None:
     best_epoch = 0
     no_improvement = 0
     history: list[dict[str, Any]] = []
+    start_epoch = 1
+    if config.get("resume"):
+        resume_path = Path(str(config["resume"]))
+        checkpoint = torch.load(
+            resume_path,
+            map_location=device,
+            weights_only=False,
+        )
+        saved_config = checkpoint.get("config") or {}
+        for key in (
+            "variant",
+            "seed",
+            "base_checkpoint",
+            "train_manifest",
+            "val_manifest",
+            "normalizer",
+            "risk_stats",
+            "alpha_max",
+            "lambda_preservation",
+        ):
+            if str(saved_config.get(key)) != str(config.get(key)):
+                raise ValueError(f"Resume config mismatch for {key}")
+        model.load_state_dict(checkpoint["model"], strict=True)
+        optimizer.load_state_dict(checkpoint["optimizer"])
+        if backbone_state_sha256(model) != initial_backbone_hash:
+            raise ValueError("Resume checkpoint contains a changed backbone")
+        start_epoch = int(checkpoint["epoch"]) + 1
+        best_cer = float(checkpoint.get("best_val_cer", float("inf")))
+        history_path = output / "history.jsonl"
+        if history_path.exists():
+            history = [
+                json.loads(line)
+                for line in history_path.read_text(encoding="utf-8").splitlines()
+                if line.strip()
+            ]
+        if len(history) != start_epoch - 1:
+            raise ValueError(
+                "Resume history length does not match checkpoint epoch"
+            )
+        if history:
+            best_epoch = min(
+                range(1, len(history) + 1),
+                key=lambda index: float(history[index - 1]["val_CER"]),
+            )
+            no_improvement = len(history) - best_epoch
     started = time.monotonic()
-    for epoch in range(1, int(config["max_epochs"]) + 1):
+    for epoch in range(start_epoch, int(config["max_epochs"]) + 1):
         train_sampler.set_epoch(epoch)
         train_metrics = train_epoch(
             model,
@@ -566,6 +613,7 @@ def parser() -> argparse.ArgumentParser:
     train.add_argument("--num_workers", type=int)
     train.add_argument("--max_train_batches", type=int)
     train.add_argument("--max_val_batches", type=int)
+    train.add_argument("--resume")
     train.add_argument("--overwrite", action="store_true", default=None)
     train.set_defaults(func=run_train)
     return root
