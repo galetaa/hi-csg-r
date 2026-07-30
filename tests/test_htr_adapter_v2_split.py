@@ -48,9 +48,11 @@ def test_domain_balanced_sampler_is_reproducible() -> None:
     assert list(first) == list(second)
     for batch in first:
         domains = [rows[index]["dataset"] for index in batch]
+        widths = [rows[index]["image_info"]["width"] for index in batch]
         assert sum("cyrillic" in value for value in domains) == 2
         assert sum("hkr" in value for value in domains) == 2
         assert sum("school" in value for value in domains) == 2
+        assert max(widths) - min(widths) <= 1
 
 
 def test_exact_hash_unions_distinct_hierarchy_groups() -> None:

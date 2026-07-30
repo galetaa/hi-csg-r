@@ -1,0 +1,13 @@
+{
+  "status": "ABORTED_BEFORE_FIRST_EPOCH",
+  "completed_epochs": 0,
+  "checkpoint_created": false,
+  "validation_evaluated": false,
+  "holdout_evaluated": false,
+  "test_evaluated": false,
+  "scientific_result": false,
+  "old_mean_padding_overhead": 2.1765912865925867,
+  "new_mean_padding_overhead": 1.7563816653986573,
+  "domain_balance_changed": false,
+  "sample_selection_policy_changed": false
+}
