@@ -903,13 +903,48 @@ class XAlignedFeatureNormalizer:
 def verify_normalizer_for_manifest(
     normalizer: XAlignedFeatureNormalizer,
     train_manifest: str | Path,
+    *,
+    normalizer_train_manifest: str | Path | None = None,
 ) -> None:
     actual = file_sha256(train_manifest)
-    if actual != normalizer.train_manifest_sha256:
+    if actual == normalizer.train_manifest_sha256:
+        return
+    if normalizer_train_manifest is None:
         raise ValueError(
             "Normalizer was not fitted on this train manifest: "
             f"expected {normalizer.train_manifest_sha256}, got {actual}"
         )
+
+    parent_path = Path(normalizer_train_manifest)
+    parent_sha256 = file_sha256(parent_path)
+    if parent_sha256 != normalizer.train_manifest_sha256:
+        raise ValueError(
+            "Normalizer source manifest SHA256 mismatch: "
+            f"expected {normalizer.train_manifest_sha256}, got {parent_sha256}"
+        )
+
+    parent_rows = read_jsonl(parent_path)
+    subset_rows = read_jsonl(train_manifest)
+    parent_by_id: dict[str, dict[str, Any]] = {}
+    for row in parent_rows:
+        sample_id = str(row.get("sample_id") or "")
+        if not sample_id or sample_id in parent_by_id:
+            raise ValueError(
+                "Normalizer source manifest must have unique non-empty sample_id values"
+            )
+        parent_by_id[sample_id] = row
+
+    subset_ids: set[str] = set()
+    for row in subset_rows:
+        sample_id = str(row.get("sample_id") or "")
+        if not sample_id or sample_id in subset_ids:
+            raise ValueError("Train subset must have unique non-empty sample_id values")
+        subset_ids.add(sample_id)
+        if parent_by_id.get(sample_id) != row:
+            raise ValueError(
+                "Train manifest is not an exact row subset of the normalizer source "
+                f"manifest: sample_id={sample_id!r}"
+            )
 
 
 def feature_record_metadata(record: dict[str, Any]) -> dict[str, Any]:

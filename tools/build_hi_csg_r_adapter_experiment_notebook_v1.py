@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 from pathlib import Path
 
 import nbformat as nbf
@@ -511,10 +512,12 @@ if stage_enabled("smoke"):
         "--base_checkpoint", CHECKPOINTS[42],
         "--vocab", VOCAB,
         "--normalizer", NORMALIZER,
+        "--normalizer_train_manifest", ENHANCED["train"],
         "--seed", 42,
         "--batch_size", 16,
         "--num_workers", 4,
         "--blank_logit_penalty", BLANK_PENALTY,
+        "--overwrite",
     ]
     train_direct(
         "smoke_one",
@@ -1197,6 +1200,13 @@ display(pd.DataFrame(dashboard))
 """
         ),
     ]
+    for index, cell in enumerate(cells):
+        source = str(cell.get("source", ""))
+        digest = hashlib.sha256(
+            f"{cell.cell_type}\0{source}".encode()
+        ).hexdigest()[:12]
+        cell["id"] = f"htr-adapter-v1-{index:02d}-{digest}"
+
     notebook = nbf.v4.new_notebook(cells=cells)
     notebook.metadata.update(
         {
