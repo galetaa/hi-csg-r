@@ -1,6 +1,6 @@
 {
   "protocol": "crnn_ctc_hi_csg_r_late_correction_protocol_v2",
-  "created_at": "2026-07-30T19:57:54.112052+00:00",
+  "created_at": "2026-07-30T20:39:39.868408+00:00",
   "status": "complete_negative_development",
   "hypothesis_h4_v2": "not_supported",
   "preflight_status": "CONTINUE_FULL",

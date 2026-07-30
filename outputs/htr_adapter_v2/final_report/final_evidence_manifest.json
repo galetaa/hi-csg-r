@@ -496,13 +496,18 @@
   },
   {
     "path": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/final_report/final_report.json",
-    "sha256": "c7b7700cf99979c07e69394bcd1eb12d6d044bed8edcf3957ea957904e19c96e",
+    "sha256": "10fc0898bff2279e909fbcb41b6d8968ff6c13aae94b7e9de38ca08daa315bd4",
     "bytes": 25689
   },
   {
     "path": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/final_report/final_results.md",
     "sha256": "694f56b009f001eb6d6cec4f756f54ec0073eb1796c7895fc5b3f72d6effe53e",
     "bytes": 4044
+  },
+  {
+    "path": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/final_report/full_execution_report_ru.md",
+    "sha256": "f11a278c411d8b53e990fa2e5e2cefb2a92703a2f165a28d6c1bc5459906fd6c",
+    "bytes": 52740
   },
   {
     "path": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/final_report/holdout_decision.md",
