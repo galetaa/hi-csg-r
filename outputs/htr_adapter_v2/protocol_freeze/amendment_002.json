@@ -1,0 +1,19 @@
+{
+  "protocol": "crnn_ctc_hi_csg_r_late_correction_protocol_v2",
+  "amendment": 2,
+  "implementation_commit": "91339ba",
+  "scientific_configuration_changed": false,
+  "change": "width-quantile matching inside the already required domain-balanced sampler",
+  "completed_epochs_before_change": 0,
+  "checkpoint_created_before_change": false,
+  "holdout_evaluated_before_change": false,
+  "test_evaluated_before_change": false,
+  "old_mean_padding_overhead": 2.1765912865925867,
+  "new_mean_padding_overhead": 1.7563816653986573,
+  "sha256": {
+    "docs/crnn_ctc_hi_csg_r_late_correction_protocol_v2_amendment_002.md": "00a5bed3b9ba0dc9cb019e3f62533e7a5d012c7ea596607c5dbc2429e65aa001",
+    "src/htr/dataset_adapter_v2.py": "a9420286b94692bc0cdcf005cbc04e353286b228baa5b9e82d615ae857832c36",
+    "tests/test_htr_adapter_v2_split.py": "06aae1770e17e6b2531af2104061529f2ac60d47a1fe2e92a1beba4b347e77ee",
+    "outputs/htr_adapter_v2/failed_runs/b0_dev_domain_random_no_epoch_performance_abort/invalidation_report.json": "35a0a808d77b6cfffef6b054854e84d289126dd46bb76207035d1199b64c598f"
+  }
+}
