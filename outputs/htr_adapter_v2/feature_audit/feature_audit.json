@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "normalizer_fit_split": "train",
+  "train_records": 35498,
+  "train_bins": 2575073,
+  "split_counts": {
+    "train": 35498,
+    "dev": 3000,
+    "holdout": 1500
+  },
+  "inactive_features": [],
+  "ambiguous_edge_fraction_active": true,
+  "risk_stats": {
+    "feature_names": [
+      "component_count_norm",
+      "short_branch_fraction",
+      "warning_density"
+    ],
+    "q05": [
+      6.25,
+      0.0,
+      0.0
+    ],
+    "q50": [
+      25.0,
+      0.0,
+      0.0
+    ],
+    "q95": [
+      87.5,
+      0.21475814282894135,
+      0.2290380597114563
+    ],
+    "raw_quantiles": {
+      "component_count_norm": {
+        "q05": 6.25,
+        "q50": 25.0,
+        "q95": 87.5
+      },
+      "short_branch_fraction": {
+        "q05": 0.0,
+        "q50": 0.0,
+        "q95": 0.21475814282894135
+      },
+      "warning_density": {
+        "q05": 0.0,
+        "q50": 0.0,
+        "q95": 0.2290380597114563
+      }
+    },
+    "train_manifest_sha256": "0db9f5ecdeb3d3f9338d45a27f12c07e1a69229eb8d241f6e8bfd6336ed1b085"
+  },
+  "failures": []
+}

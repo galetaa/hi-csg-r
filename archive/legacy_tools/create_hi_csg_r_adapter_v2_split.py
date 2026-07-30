@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import random
 import sys
 from collections import defaultdict
@@ -47,6 +48,50 @@ def group_key(row: dict[str, Any]) -> str:
     raise ValueError("Row has no usable grouping identifier")
 
 
+def leakage_safe_group_keys(rows: list[dict[str, Any]]) -> dict[str, str]:
+    """Union hierarchy groups that share an exact source-image SHA1."""
+    base_keys = [group_key(row) for row in rows]
+    parent = list(range(len(rows)))
+
+    def find(index: int) -> int:
+        while parent[index] != index:
+            parent[index] = parent[parent[index]]
+            index = parent[index]
+        return index
+
+    def union(left: int, right: int) -> None:
+        left_root = find(left)
+        right_root = find(right)
+        if left_root != right_root:
+            parent[right_root] = left_root
+
+    first_by_group: dict[str, int] = {}
+    first_by_sha1: dict[str, int] = {}
+    for index, (row, key) in enumerate(zip(rows, base_keys, strict=True)):
+        if key in first_by_group:
+            union(index, first_by_group[key])
+        else:
+            first_by_group[key] = index
+        source_sha1 = str(row.get("xaligned_source_image_sha1") or "")
+        if source_sha1:
+            if source_sha1 in first_by_sha1:
+                union(index, first_by_sha1[source_sha1])
+            else:
+                first_by_sha1[source_sha1] = index
+
+    component_names: defaultdict[int, list[str]] = defaultdict(list)
+    for index, key in enumerate(base_keys):
+        component_names[find(index)].append(key)
+    canonical = {
+        root: min(names)
+        for root, names in component_names.items()
+    }
+    return {
+        str(row["sample_id"]): canonical[find(index)]
+        for index, row in enumerate(rows)
+    }
+
+
 def choose_group_subset(
     groups: list[tuple[str, list[dict[str, Any]]]],
     target: int,
@@ -78,6 +123,39 @@ def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
             stream.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
+def slim_output_row(row: dict[str, Any], split: str, safe_group: str) -> dict[str, Any]:
+    keep = (
+        "sample_id",
+        "dataset",
+        "source_dataset",
+        "level",
+        "language",
+        "script",
+        "image_path",
+        "text",
+        "text_len",
+        "category",
+        "image_info",
+        "xaligned_graph_npz",
+        "xaligned_graph_version",
+        "xaligned_feature_dim",
+        "xaligned_feature_source",
+        "xaligned_time_steps",
+        "xaligned_source_image_sha1",
+    )
+    output = {key: row.get(key) for key in keep if key in row}
+    output.update(
+        {
+            "source_split": row.get("split"),
+            "split": split,
+            "adapter_v2_split": split,
+            "adapter_v2_group_id": safe_group,
+            "adapter_v2_split_version": SPLIT_VERSION,
+        }
+    )
+    return output
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--train_manifest", required=True)
@@ -90,10 +168,11 @@ def main() -> None:
 
     source = Path(args.train_manifest)
     rows = read_jsonl(source)
+    safe_group_by_sample = leakage_safe_group_keys(rows)
     grouped: defaultdict[str, list[dict[str, Any]]] = defaultdict(list)
     group_domains: dict[str, str] = {}
     for row in rows:
-        key = group_key(row)
+        key = safe_group_by_sample[str(row["sample_id"])]
         domain = core_domain(str(row.get("dataset") or row.get("source_dataset")))
         if domain not in {"cyrillic", "hkr", "school"}:
             raise ValueError(f"Unsupported core domain: {domain}")
@@ -146,14 +225,9 @@ def main() -> None:
         "holdout": [],
     }
     for row in rows:
-        name = assignments[group_key(row)]
-        output_row = dict(row)
-        output_row["source_split"] = row.get("split")
-        output_row["split"] = name
-        output_row["adapter_v2_split"] = name
-        output_row["adapter_v2_group_id"] = group_key(row)
-        output_row["adapter_v2_split_version"] = SPLIT_VERSION
-        split_rows[name].append(output_row)
+        safe_group = safe_group_by_sample[str(row["sample_id"])]
+        name = assignments[safe_group]
+        split_rows[name].append(slim_output_row(row, name, safe_group))
 
     out_dir = Path(args.out_dir)
     features_out = (
@@ -167,7 +241,10 @@ def main() -> None:
         split_path = out_dir / f"{name}.jsonl"
         feature_path = features_out / f"{name}.jsonl"
         write_jsonl(split_path, values)
-        write_jsonl(feature_path, values)
+        feature_path.parent.mkdir(parents=True, exist_ok=True)
+        if feature_path.exists() or feature_path.is_symlink():
+            feature_path.unlink()
+        feature_path.symlink_to(os.path.relpath(split_path, feature_path.parent))
         manifest_hashes[name] = sha256_file(split_path)
 
     summary = {
@@ -203,4 +280,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -1,0 +1,28 @@
+{
+  "protocol": "crnn_ctc_hi_csg_r_late_correction_protocol_v2",
+  "frozen_before_training": true,
+  "implementation_commit": "0e8ee2c",
+  "preflight_decision": "CONTINUE_FULL",
+  "selected_blank_logit_penalty": -0.4,
+  "selected_alpha_max": 0.25,
+  "split_seed": 20260730,
+  "sha256": {
+    "docs/crnn_ctc_hi_csg_r_late_correction_protocol_v2.md": "77e630be611118ff99e4a3df48962d0e4be9268975b4da3c72fec43baaaa1de5",
+    "configs/htr_adapter_v2/b0_dev_seed42.yaml": "6f68c98348995b33fde80377e791293ba4f8aeec740c45c3c8328d5221ae0252",
+    "configs/htr_adapter_v2/final_seed42.yaml": "df8c1609eadb6e4a5477967c6cab8fcb2bdaf128dc2ea5a9a67d2f5c5741754d",
+    "configs/htr_adapter_v2/final_seed43.yaml": "6b8957faf3b4c4a58553c3a372c90d58cfc748e0c359a712723dd45e0bbded08",
+    "configs/htr_adapter_v2/final_seed44.yaml": "bf6287bd0e58d3bde2ee4780132744dace853c755b891342ee1503657234d433",
+    "configs/htr_adapter_v2/preflight.yaml": "3085d7f7151549ddc2ccd85d0cde75b8678a5c20a6298070af4dccf92b456263",
+    "configs/htr_adapter_v2/v2_1_dev_p05_seed42.yaml": "f9a0a399319a735139f40d5844915d5f9da4bd8ad332bfab8bac680b04027010",
+    "configs/htr_adapter_v2/v2_2_dev_p05_seed42.yaml": "b08a3cdaae7ff768c72ab769301d977913985c56f714be0311aadc8e64a0b075",
+    "configs/htr_adapter_v2/v2_best_dev_p10_seed42.yaml": "1c8141fc3fe7a22afacef29d11b8bd5194b8d87926fc6885d7369139f1f0b5f6",
+    "data/experiments/htr_adapter_v2/splits/train.jsonl": "0db9f5ecdeb3d3f9338d45a27f12c07e1a69229eb8d241f6e8bfd6336ed1b085",
+    "data/experiments/htr_adapter_v2/splits/dev.jsonl": "8c47c573d6a43bddab0f7efc8101a34fd046b0508c1c3ef9d8c59e22f3eefcc9",
+    "data/experiments/htr_adapter_v2/splits/holdout.jsonl": "d805fb7a3731c672502fcb501efd027f15f10d0bd6f0774c21fd5a3b58157a89",
+    "data/experiments/htr_adapter_v2/normalizer/train_stats.json": "fa462a3ccfb06988fe75e7832c8066d77a14907f1c0ec06a8037c642d2d08bea",
+    "data/experiments/htr_adapter_v2/normalizer/risk_stats.json": "093986af92462407fb530e817bc6de299702e631972090e37f903d588292e250",
+    "outputs/htr_adapter_v2/preflight/preflight_report.json": "75e252ddb04c40893982b4a72307ec0f57922c181ec61e0f27444d7773aff828",
+    "outputs/htr_adapter_v2/split_audit/split_audit.json": "7e87f14a9143b3123f528976a20cd652c3f1dc685db7b89974743723831f61c8"
+  }
+}
+

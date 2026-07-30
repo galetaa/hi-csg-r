@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "counts": {
+    "train": 35498,
+    "dev": 3000,
+    "holdout": 1500
+  },
+  "domain_counts": {
+    "train": {
+      "cyrillic": 8500,
+      "hkr": 8500,
+      "school": 18498
+    },
+    "dev": {
+      "cyrillic": 1000,
+      "hkr": 1000,
+      "school": 1000
+    },
+    "holdout": {
+      "cyrillic": 500,
+      "hkr": 500,
+      "school": 500
+    }
+  },
+  "duplicate_sample_ids": {
+    "train": 0,
+    "dev": 0,
+    "holdout": 0
+  },
+  "missing_images": {
+    "train": 0,
+    "dev": 0,
+    "holdout": 0
+  },
+  "missing_features": {
+    "train": 0,
+    "dev": 0,
+    "holdout": 0
+  },
+  "overlaps": {
+    "sample_id": {
+      "train_dev": 0,
+      "train_holdout": 0,
+      "dev_holdout": 0
+    },
+    "image_path": {
+      "train_dev": 0,
+      "train_holdout": 0,
+      "dev_holdout": 0
+    },
+    "group": {
+      "train_dev": 0,
+      "train_holdout": 0,
+      "dev_holdout": 0
+    },
+    "image_sha1": {
+      "train_dev": 0,
+      "train_holdout": 0,
+      "dev_holdout": 0
+    }
+  },
+  "near_duplicate_audit": {
+    "status": "NOT_AVAILABLE",
+    "note": "No frozen perceptual-hash infrastructure exists; exact SHA1 overlap is enforced."
+  },
+  "failures": []
+}
