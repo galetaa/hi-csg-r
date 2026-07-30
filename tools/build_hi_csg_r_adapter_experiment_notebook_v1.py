@@ -586,13 +586,50 @@ if stage_enabled("seed42"):
         NORMALIZER,
     )
     assert read_json(RUN_ROOT / "smoke" / "smoke_gate.json")["status"] == "PASS"
+    expected_runs = {
+        "m0_ft_seed42": {
+            "mode": "m0_ft",
+            "epochs": 25,
+            "train_manifest": SOURCE_MANIFESTS["train"],
+        },
+        "m3_full_seed42": {
+            "mode": "m3_full",
+            "epochs": 30,
+            "train_manifest": ENHANCED["train"],
+        },
+    }
     for config_name in ("m0_ft_seed42.yaml", "m3_full_seed42.yaml"):
-        module(
-            "tools.train_crnn_ctc_hi_csg_r_adapter_v1",
-            "train",
-            "--config", ROOT / "configs/htr_adapter_v1" / config_name,
-            log_name=f"train_{Path(config_name).stem}",
+        run_name = Path(config_name).stem
+        run_dir = RUN_ROOT / run_name
+        required = (
+            run_dir / "best.pt",
+            run_dir / "last.pt",
+            run_dir / "config.json",
+            run_dir / "history.jsonl",
+            run_dir / "train_summary.json",
         )
+        completed = all(path.exists() for path in required)
+        if completed:
+            saved_config = read_json(run_dir / "config.json")
+            saved_summary = read_json(run_dir / "train_summary.json")
+            expected = expected_runs[run_name]
+            completed = (
+                saved_config["mode"] == expected["mode"]
+                and int(saved_config["seed"]) == 42
+                and float(saved_config["blank_logit_penalty"]) == BLANK_PENALTY
+                and Path(saved_config["train_manifest"]).resolve()
+                == expected["train_manifest"].resolve()
+                and int(saved_summary["epochs_completed"]) == expected["epochs"]
+            )
+        if completed:
+            display(Markdown(f"**REUSE `{run_name}`** — завершённый run проверен"))
+        else:
+            module(
+                "tools.train_crnn_ctc_hi_csg_r_adapter_v1",
+                "train",
+                "--config", ROOT / "configs/htr_adapter_v1" / config_name,
+                log_name=f"train_{run_name}",
+            )
 """
         ),
         code(
@@ -663,48 +700,127 @@ def preliminary_gate_without_m2():
         "gate_variable": (m3.get("gate") or {}).get("std", 0) > 0,
         "adapter_gradient": any(row["graph_adapter_grad_norm"] > 0 for row in history),
     }
-    return {"status": "PASS" if all(conditions.values()) else "STOP", "conditions": conditions}
+    return {
+        "status": "PASS" if all(conditions.values()) else "STOP",
+        "phase": "pre_m2",
+        "conditions": conditions,
+        "domain_deltas": deltas,
+        "m0_ft_cer": m0["cer"],
+        "m3_cer": m3["cer"],
+        "m3_shuffle_cer": shuffled["cer"],
+        "relative_improvement": (m0["cer"] - m3["cer"]) / max(m0["cer"], 1e-12),
+        "correct_vs_shuffle_delta": shuffled["cer"] - m3["cer"],
+    }
 
 if stage_enabled("validation"):
+    gate_dir = RUN_ROOT / "statistical_analysis" / "validation_gate"
+    gate_dir.mkdir(parents=True, exist_ok=True)
     PRE_GATE = preliminary_gate_without_m2()
+    (gate_dir / "preliminary_gate.json").write_text(
+        json.dumps(PRE_GATE, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
     display(PRE_GATE)
     if PRE_GATE["status"] == "PASS":
-        module(
-            "tools.train_crnn_ctc_hi_csg_r_adapter_v1",
-            "train",
-            "--config", ROOT / "configs/htr_adapter_v1/m2_geometry_seed42.yaml",
-            log_name="train_m2_geometry_seed42",
-        )
+        m2_dir = RUN_ROOT / "m2_geometry_seed42"
+        if (m2_dir / "best.pt").exists() and (m2_dir / "train_summary.json").exists():
+            display(Markdown("**REUSE `m2_geometry_seed42`** — завершённый run найден"))
+        else:
+            module(
+                "tools.train_crnn_ctc_hi_csg_r_adapter_v1",
+                "train",
+                "--config", ROOT / "configs/htr_adapter_v1/m2_geometry_seed42.yaml",
+                log_name="train_m2_geometry_seed42",
+            )
         evaluate(
             RUN_ROOT / "m2_geometry_seed42" / "best.pt",
             ENHANCED["val"],
             VAL_EVAL / "m2",
         )
     else:
-        raise RuntimeError("Seed-42 pre-gate STOP: M2 и seeds 43/44 запускать нельзя")
+        display(
+            Markdown(
+                "## Seed-42 validation: STOP\\n\\n"
+                "`M2`, seeds 43/44 и test не запускаются согласно frozen protocol. "
+                "H4 остаётся exploratory."
+            )
+        )
 """
         ),
         code(
             """
 if stage_enabled("validation"):
     gate_dir = RUN_ROOT / "statistical_analysis" / "validation_gate"
-    result = module(
-        "tools.compare_hi_csg_r_adapter_results_v1",
-        "--run", f"M0-FT={VAL_EVAL / 'm0_ft' / 'summary.json'}",
-        "--run", f"M2={VAL_EVAL / 'm2' / 'summary.json'}",
-        "--run", f"M3={VAL_EVAL / 'm3_correct' / 'summary.json'}",
-        "--run", f"M3-shuffle={VAL_EVAL / 'm3_shuffle' / 'summary.json'}",
-        "--validation_gate",
-        "--domain_summary", f"M0-FT={VAL_EVAL / 'm0_ft' / 'domain_summary.json'}",
-        "--domain_summary", f"M3={VAL_EVAL / 'm3_correct' / 'domain_summary.json'}",
-        "--m3_history", RUN_ROOT / "m3_full_seed42" / "history.jsonl",
-        "--out_dir", gate_dir,
-        log_name="validation_gate",
-        check=False,
+    PRE_GATE = read_json(gate_dir / "preliminary_gate.json")
+    if PRE_GATE["status"] == "PASS":
+        module(
+            "tools.compare_hi_csg_r_adapter_results_v1",
+            "--run", f"M0-FT={VAL_EVAL / 'm0_ft' / 'summary.json'}",
+            "--run", f"M2={VAL_EVAL / 'm2' / 'summary.json'}",
+            "--run", f"M3={VAL_EVAL / 'm3_correct' / 'summary.json'}",
+            "--run", f"M3-shuffle={VAL_EVAL / 'm3_shuffle' / 'summary.json'}",
+            "--validation_gate",
+            "--domain_summary", f"M0-FT={VAL_EVAL / 'm0_ft' / 'domain_summary.json'}",
+            "--domain_summary", f"M3={VAL_EVAL / 'm3_correct' / 'domain_summary.json'}",
+            "--m3_history", RUN_ROOT / "m3_full_seed42" / "history.jsonl",
+            "--out_dir", gate_dir,
+            log_name="validation_gate",
+            check=False,
+        )
+        VALIDATION_GATE = read_json(gate_dir / "validation_gate.json")
+    else:
+        VALIDATION_GATE = {
+            **PRE_GATE,
+            "decision": "M2, seeds 43/44 and test are blocked; H4 is exploratory",
+            "m2_trained": False,
+        }
+        (gate_dir / "validation_gate.json").write_text(
+            json.dumps(VALIDATION_GATE, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+    gate_report = [
+        "# Seed-42 Validation Gate",
+        "",
+        f"Status: **{VALIDATION_GATE['status']}**",
+        "",
+        f"- M0-FT CER: `{VALIDATION_GATE.get('m0_ft_cer', float('nan')):.6f}`",
+        f"- M3 CER: `{VALIDATION_GATE.get('m3_cer', float('nan')):.6f}`",
+        f"- relative improvement: "
+        f"`{100 * VALIDATION_GATE.get('relative_improvement', float('nan')):.3f}%`",
+        "",
+        "| condition | passed |",
+        "|---|---:|",
+    ]
+    gate_report.extend(
+        f"| `{name}` | **{value}** |"
+        for name, value in VALIDATION_GATE.get("conditions", {}).items()
     )
-    VALIDATION_GATE = read_json(gate_dir / "validation_gate.json")
+    gate_report.extend(["", "## Domain CER deltas", ""])
+    gate_report.extend(
+        f"- `{name}`: `{value:+.6f}`"
+        for name, value in VALIDATION_GATE.get("domain_deltas", {}).items()
+    )
+    if VALIDATION_GATE["status"] != "PASS":
+        gate_report.extend(
+            [
+                "",
+                "## Decision",
+                "",
+                "M2, seeds 43/44 and test are blocked by the frozen protocol. "
+                "H4 remains exploratory.",
+            ]
+        )
+    gate_markdown = "\\n".join(gate_report) + "\\n"
+    (gate_dir / "validation_gate.md").write_text(gate_markdown, encoding="utf-8")
+    display(Markdown(gate_markdown))
     display(VALIDATION_GATE)
-    assert VALIDATION_GATE["status"] == "PASS", "Seeds 43/44 и test запрещены"
+    if VALIDATION_GATE["status"] != "PASS":
+        display(
+            Markdown(
+                "**Protocol stop recorded successfully.** "
+                "Следующие экспериментальные стадии заблокированы."
+            )
+        )
 """
         ),
         markdown("## 8. WP10: final seeds и freeze registry"),
