@@ -764,8 +764,13 @@ module(
     "--out_dir", OUT / "final_report",
     log_name="final_report_v2",
 )
+full_report = OUT / "final_report/full_execution_report_ru.md"
 display(Markdown(
-    (OUT / "final_report/final_results.md").read_text(encoding="utf-8")
+    (
+        full_report
+        if full_report.exists()
+        else OUT / "final_report/final_results.md"
+    ).read_text(encoding="utf-8")
 ))
 for name in (
     "figure_a_architecture.png",
