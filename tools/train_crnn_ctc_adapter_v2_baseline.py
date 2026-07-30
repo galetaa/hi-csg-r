@@ -26,6 +26,7 @@ from src.htr.adapter_runtime import (
     write_jsonl,
 )
 from src.htr.dataset_adapter import HICSGRAdapterDataset, collate_adapter_batch
+from src.htr.dataset_adapter_v2 import DomainBalancedBatchSampler
 from src.htr.model import CRNNCTC
 from src.htr.vocab import CTCVocab
 
@@ -78,12 +79,20 @@ def main() -> None:
         vocab,
         mode="m0_ft",
     )
-    train_sampler = EpochWidthBatchSampler(
-        train_dataset.rows,
-        int(config["batch_size"]),
-        seed=int(config["seed"]),
-        shuffle=True,
-    )
+    if bool(config.get("domain_balanced", True)):
+        train_sampler: Any = DomainBalancedBatchSampler(
+            train_dataset.rows,
+            int(config["batch_size"]),
+            seed=int(config["seed"]),
+            shuffle=True,
+        )
+    else:
+        train_sampler = EpochWidthBatchSampler(
+            train_dataset.rows,
+            int(config["batch_size"]),
+            seed=int(config["seed"]),
+            shuffle=True,
+        )
     dev_sampler = EpochWidthBatchSampler(
         dev_dataset.rows,
         int(config["batch_size"]),
