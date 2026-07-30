@@ -79,21 +79,26 @@ def module(name, *args, log_name=None, allowed=(0,)):
     log_path = LOGS / f"{label}.stdout.log"
     display(Markdown(f"**RUN `{label}`**\\n\\n`{' '.join(command)}`"))
     with log_path.open("w", encoding="utf-8") as stream:
-        result = subprocess.run(
+        process = subprocess.Popen(
             command,
             cwd=ROOT,
-            stdout=stream,
+            stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
             env=os.environ.copy(),
+            bufsize=1,
         )
-    tail = "\\n".join(log_path.read_text(encoding="utf-8").splitlines()[-30:])
-    print(tail)
-    state = "PASS" if result.returncode == 0 else "STOP" if result.returncode == 2 else "FAIL"
+        assert process.stdout is not None
+        for line in process.stdout:
+            stream.write(line)
+            stream.flush()
+            print(line, end="", flush=True)
+        returncode = process.wait()
+    state = "PASS" if returncode == 0 else "STOP" if returncode == 2 else "FAIL"
     display(Markdown(f"**{state} `{label}`**; log: `{log_path}`"))
-    if result.returncode not in allowed:
-        raise RuntimeError(f"{label}: exit={result.returncode}; log={log_path}")
-    return result.returncode
+    if returncode not in allowed:
+        raise RuntimeError(f"{label}: exit={returncode}; log={log_path}")
+    return returncode
 
 def resume_args(run_dir):
     run_dir = Path(run_dir)
