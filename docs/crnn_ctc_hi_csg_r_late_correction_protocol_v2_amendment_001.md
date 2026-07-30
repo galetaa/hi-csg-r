@@ -13,6 +13,7 @@
 - `blank_ratio` и дополнительные заранее требуемые uncertainty/gate/intervention
   diagnostics в evaluator;
 - автоматический выбор dev-кандидата исключительно по frozen dev gate;
+- безопасный resume длинных B0/v2 runs с проверкой config и backbone hash;
 - блокировка final trainer без положительных frozen dev/holdout artifacts;
 - материализация baseline predictions для paired bootstrap;
 - Holm summary, failure analysis и final report;

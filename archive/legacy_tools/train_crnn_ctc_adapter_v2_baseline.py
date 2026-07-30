@@ -54,6 +54,7 @@ def main() -> None:
     parser.add_argument("--device")
     parser.add_argument("--max_train_batches", type=int)
     parser.add_argument("--max_val_batches", type=int)
+    parser.add_argument("--resume")
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
     config = yaml.safe_load(Path(args.config).read_text(encoding="utf-8")) or {}
@@ -127,8 +128,10 @@ def main() -> None:
         for name in ("best.pt", "last.pt", "history.jsonl", "train_summary.json")
         if (output / name).exists()
     ]
-    if existing and not args.overwrite:
+    if existing and not args.overwrite and not args.resume:
         raise FileExistsError(f"Baseline artifacts already exist: {existing}")
+    if args.overwrite and args.resume:
+        raise ValueError("--overwrite and --resume are mutually exclusive")
     if args.overwrite:
         for path in existing:
             path.unlink()
@@ -151,9 +154,36 @@ def main() -> None:
     )
     history: list[dict[str, Any]] = []
     best_cer = float("inf")
+    start_epoch = 1
+    if args.resume:
+        resume_path = Path(args.resume)
+        checkpoint = torch.load(
+            resume_path,
+            map_location=device,
+            weights_only=False,
+        )
+        saved_config = checkpoint.get("config") or {}
+        for key in ("seed", "train_manifest", "val_manifest"):
+            if str(saved_config.get(key)) != str(config.get(key)):
+                raise ValueError(f"Resume config mismatch for {key}")
+        model.load_state_dict(checkpoint["model"], strict=True)
+        optimizer.load_state_dict(checkpoint["optimizer"])
+        start_epoch = int(checkpoint["epoch"]) + 1
+        best_cer = float(checkpoint.get("best_cer", float("inf")))
+        history_path = output / "history.jsonl"
+        if history_path.exists():
+            history = [
+                json.loads(line)
+                for line in history_path.read_text(encoding="utf-8").splitlines()
+                if line.strip()
+            ]
+        if len(history) != start_epoch - 1:
+            raise ValueError(
+                "Resume history length does not match checkpoint epoch"
+            )
     started = time.monotonic()
     epochs = int(config["epochs"])
-    for epoch in range(1, epochs + 1):
+    for epoch in range(start_epoch, epochs + 1):
         train_sampler.set_epoch(epoch)
         penalty = scheduled_penalty(
             epoch,
@@ -272,4 +302,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
