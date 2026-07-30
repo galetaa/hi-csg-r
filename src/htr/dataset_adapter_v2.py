@@ -224,7 +224,7 @@ def collate_late_correction_batch(batch: list[dict[str, Any]]) -> dict[str, Any]
 
 
 class DomainBalancedBatchSampler(Sampler[list[int]]):
-    """Deterministic approximately 1/3-per-domain batches."""
+    """Deterministic 1/3-per-domain batches with matched width quantiles."""
 
     def __init__(
         self,
@@ -241,11 +241,17 @@ class DomainBalancedBatchSampler(Sampler[list[int]]):
         self.shuffle = bool(shuffle)
         self.epoch = 0
         self.by_domain: dict[str, list[int]] = {}
+        self.width_by_index: dict[int, int] = {}
         for index, row in enumerate(rows):
             domain = core_domain(
                 str(row.get("dataset") or row.get("source_dataset") or "unknown")
             )
             self.by_domain.setdefault(domain, []).append(index)
+            image_info = row.get("image_info") or {}
+            width = image_info.get("width")
+            if width is None:
+                width = int(row.get("xaligned_time_steps", 1)) * 4
+            self.width_by_index[index] = max(int(width), 1)
         if set(self.by_domain) != {"cyrillic", "hkr", "school"}:
             raise ValueError(
                 "Domain-balanced sampler requires cyrillic, hkr, and school rows; "
@@ -262,33 +268,39 @@ class DomainBalancedBatchSampler(Sampler[list[int]]):
     def __iter__(self) -> Iterator[list[int]]:
         rng = random.Random(self.seed + self.epoch)
         domains = ("cyrillic", "hkr", "school")
-        pools = {name: list(self.by_domain[name]) for name in domains}
-        positions = {name: 0 for name in domains}
-        if self.shuffle:
-            for pool in pools.values():
-                rng.shuffle(pool)
-
-        def next_index(domain: str) -> int:
-            position = positions[domain]
-            if position >= len(pools[domain]):
-                positions[domain] = 0
-                position = 0
-                if self.shuffle:
-                    rng.shuffle(pools[domain])
-            positions[domain] += 1
-            return pools[domain][position]
-
+        counts_by_batch: list[dict[str, int]] = []
         for batch_index in range(self.batch_count):
             base = self.batch_size // 3
             remainder = self.batch_size % 3
             counts = {domain: base for domain in domains}
             for offset in range(remainder):
                 counts[domains[(batch_index + offset) % 3]] += 1
-            batch = [
-                next_index(domain)
-                for domain in domains
-                for _ in range(counts[domain])
-            ]
+            counts_by_batch.append(counts)
+
+        selected_by_domain: dict[str, list[int]] = {}
+        for domain in domains:
+            required = sum(counts[domain] for counts in counts_by_batch)
+            selected: list[int] = []
+            while len(selected) < required:
+                cycle = list(self.by_domain[domain])
+                if self.shuffle:
+                    rng.shuffle(cycle)
+                selected.extend(cycle[: required - len(selected)])
+            selected.sort(key=self.width_by_index.__getitem__)
+            selected_by_domain[domain] = selected
+
+        positions = {domain: 0 for domain in domains}
+        planned: list[list[int]] = []
+        for counts in counts_by_batch:
+            batch: list[int] = []
+            for domain in domains:
+                start = positions[domain]
+                stop = start + counts[domain]
+                batch.extend(selected_by_domain[domain][start:stop])
+                positions[domain] = stop
             if self.shuffle:
                 rng.shuffle(batch)
-            yield batch
+            planned.append(batch)
+        if self.shuffle:
+            rng.shuffle(planned)
+        yield from planned
