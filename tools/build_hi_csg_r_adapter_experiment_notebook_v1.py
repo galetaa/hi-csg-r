@@ -79,6 +79,8 @@ if ROOT is None:
     raise RuntimeError("Не найден корень репозитория hi-csg-r")
 os.chdir(ROOT)
 
+from src.htr.xaligned_hi_csg_r import FEATURE_BUILDER_VERSION
+
 PYTHON = ROOT / ".venv" / "bin" / "python"
 if not PYTHON.exists():
     PYTHON = Path(sys.executable)
@@ -142,6 +144,7 @@ display(
         "## Управление запуском\\n\\n"
         f"- выбранная стадия: **`{RUN_STAGE}`**\\n"
         f"- активные блоки: `{', '.join(sorted(STAGE_FLAGS[RUN_STAGE]))}`\\n"
+        f"- x-aligned feature builder: **`{FEATURE_BUILDER_VERSION}`**\\n"
         f"- workers для feature builder: **{FEATURE_WORKERS}**\\n"
         f"- final test разрешён: **{ALLOW_FINAL_TEST}**"
     )
@@ -241,9 +244,17 @@ def run_cmd(args, name: str, *, check: bool = True):
     )
     result = subprocess.CompletedProcess(args, returncode)
     if check and returncode != 0:
+        display(
+            Markdown(
+                f"**FAIL `{name}`** (exit code `{returncode}`). "
+                f"Полный журнал: `{stdout_path}`"
+            )
+        )
         raise RuntimeError(
             f"{name} завершился с кодом {returncode}; log: {stdout_path}"
         )
+    state = "PASS" if returncode == 0 else "FAIL"
+    display(Markdown(f"**{state} `{name}`** — log: `{stdout_path}`"))
     return result
 
 def module(name: str, *args, log_name: str, check: bool = True):
@@ -308,6 +319,7 @@ def build_features(name: str, source: Path, *, domain_split: bool = False):
     assert result["status"] == "PASS"
     assert result["written_n"] == result["expected_n"]
     assert result["feature_dim"] == 20
+    assert result["feature_builder_version"] == FEATURE_BUILDER_VERSION
 
 if stage_enabled("feature_build"):
     build_features("train", SOURCE_MANIFESTS["train"])
@@ -338,17 +350,26 @@ if stage_enabled("feature_audit"):
         "--out", NORMALIZER,
         log_name="fit_normalizer",
     )
-    module(
+    audit_run = module(
         "tools.audit_xaligned_features_v1",
         "audit",
         "--manifests", ENHANCED["train"], ENHANCED["val"], ENHANCED["test"],
         "--normalizer", NORMALIZER,
         "--out_dir", RUN_ROOT / "feature_audit",
         log_name="feature_audit",
+        check=False,
     )
-    audit = read_json(RUN_ROOT / "feature_audit" / "feature_audit.json")
+    audit_json = RUN_ROOT / "feature_audit" / "feature_audit.json"
+    audit_markdown = RUN_ROOT / "feature_audit" / "feature_audit.md"
+    if audit_markdown.exists():
+        display(Markdown(audit_markdown.read_text(encoding="utf-8")))
+    if audit_run.returncode != 0:
+        raise RuntimeError(
+            "Feature audit завершился со статусом FAIL; "
+            f"отчёт показан выше, log: {LOG_ROOT / 'feature_audit.stdout.log'}"
+        )
+    audit = read_json(audit_json)
     assert audit["status"] == "PASS"
-    display(Markdown((RUN_ROOT / "feature_audit" / "feature_audit.md").read_text(encoding="utf-8")))
 
 if stage_enabled("visual_audit"):
     require_artifacts("prepare/feature_build", ENHANCED["test"])

@@ -8,6 +8,7 @@ from PIL import Image
 from src.htr.dataset_adapter import HICSGRAdapterDataset, collate_adapter_batch
 from src.htr.vocab import CTCVocab
 from src.htr.xaligned_hi_csg_r import (
+    FEATURE_BUILDER_VERSION,
     FEATURE_NAMES,
     QUALITY_FEATURE_INDICES,
     XAlignedFeatureNormalizer,
@@ -46,7 +47,7 @@ def write_record(path: Path, sample_id: str, steps: int, value: float) -> None:
             "sample_id": sample_id,
             "graph_version": "hi_csg_r_v1",
             "feature_version": "hi_csg_r_xaligned_v1",
-            "feature_builder_version": "1.0.0",
+            "feature_builder_version": FEATURE_BUILDER_VERSION,
             "source_image_sha1": "test",
             "binarization": "test",
             "diagnostics": {},

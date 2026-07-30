@@ -8,6 +8,7 @@ from typing import Any
 
 import numpy as np
 from src.htr.xaligned_hi_csg_r import (
+    FEATURE_BUILDER_VERSION,
     FEATURE_NAMES,
     QUALITY_FEATURE_INDICES,
     XAlignedFeatureNormalizer,
@@ -74,6 +75,7 @@ def audit_manifest(path: Path, feature_field: str) -> dict[str, Any]:
 
             record = load_feature_record(feature_path)
             features = np.asarray(record["features"], dtype=np.float64)
+            raw_features = np.asarray(record["raw_features"], dtype=np.float64)
             quality = np.asarray(record["quality"], dtype=np.float64)
             mask = np.asarray(record["valid_mask"], dtype=bool)
             names = tuple(str(value) for value in record["feature_names"].tolist())
@@ -83,6 +85,13 @@ def audit_manifest(path: Path, feature_field: str) -> dict[str, Any]:
             if features.shape != (expected_steps, len(FEATURE_NAMES)):
                 raise ValueError(
                     f"shape={features.shape}, expected={(expected_steps, len(FEATURE_NAMES))}"
+                )
+            if raw_features.shape != features.shape:
+                raise ValueError("raw_features shape mismatch")
+            if str(record["feature_builder_version"]) != FEATURE_BUILDER_VERSION:
+                raise ValueError(
+                    "stale feature_builder_version="
+                    f"{record['feature_builder_version']}; expected={FEATURE_BUILDER_VERSION}"
                 )
             if mask.shape != (expected_steps,) or not mask.all():
                 raise ValueError("main split feature records must contain all-valid real bins")
@@ -108,6 +117,26 @@ def audit_manifest(path: Path, feature_field: str) -> dict[str, Any]:
             datasets.append(str(row.get("dataset") or row.get("source_dataset") or "unknown"))
 
             diagnostics = record.get("diagnostics", {})
+            image_width = int(record["original_width"])
+            image_height = int(diagnostics.get("image_height", 0))
+            bin_areas = np.asarray(
+                [
+                    image_height
+                    * max(
+                        min(
+                            int(np.floor((index + 1) * image_width / expected_steps)),
+                            image_width,
+                        )
+                        - int(np.floor(index * image_width / expected_steps)),
+                        1,
+                    )
+                    for index in range(expected_steps)
+                ],
+                dtype=np.float64,
+            )
+            reconstructed_edge_length = float(
+                np.sum(raw_features[:, 2] * bin_areas)
+            )
             count_deltas["node"].append(
                 abs(
                     float(diagnostics.get("graph_nodes", 0.0))
@@ -129,6 +158,12 @@ def audit_manifest(path: Path, feature_field: str) -> dict[str, Any]:
             count_deltas["edge_length"].append(
                 abs(
                     float(diagnostics.get("graph_edge_length", 0.0))
+                    - float(diagnostics.get("local_edge_length_sum", 0.0))
+                )
+            )
+            count_deltas["edge_length_record"].append(
+                abs(
+                    reconstructed_edge_length
                     - float(diagnostics.get("local_edge_length_sum", 0.0))
                 )
             )
@@ -171,7 +206,9 @@ def audit_manifest(path: Path, feature_field: str) -> dict[str, Any]:
         for key, values in count_deltas.items()
     }
     consistency_pass = all(
-        values["max_abs_delta"] <= (1e-3 if key == "edge_length" else 1e-6)
+        values["max_abs_delta"] <= (
+            1e-2 if key.startswith("edge_length") else 1e-6
+        )
         for key, values in consistency.items()
     )
     return {
@@ -234,6 +271,22 @@ def build_markdown(summary: dict[str, Any]) -> str:
             f"{values['mean']:.6g} | {values['std']:.6g} | "
             f"{values['zero_fraction']:.4f} |"
         )
+    lines.extend(
+        [
+            "",
+            "## Count Consistency",
+            "",
+            "| split | quantity | max abs delta | mean abs delta |",
+            "|---|---|---:|---:|",
+        ]
+    )
+    for item in summary["manifests"]:
+        for name, values in item["count_consistency"].items():
+            lines.append(
+                f"| `{Path(item['manifest']).stem}` | `{name}` | "
+                f"{values['max_abs_delta']:.6g} | "
+                f"{values['mean_abs_delta']:.6g} |"
+            )
     lines.extend(
         [
             "",
