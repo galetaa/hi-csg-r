@@ -275,6 +275,24 @@ def save_checkpoint(
 
 def run_train(args: argparse.Namespace) -> None:
     config = load_config(args)
+    if config.get("stage") == "final":
+        holdout_path = Path(str(config.get("holdout_decision", "")))
+        selection_path = Path(str(config.get("selection_artifact", "")))
+        if not holdout_path.is_file() or not selection_path.is_file():
+            raise ValueError(
+                "Final training requires frozen selection and holdout artifacts"
+            )
+        holdout = json.loads(holdout_path.read_text(encoding="utf-8"))
+        selection = json.loads(selection_path.read_text(encoding="utf-8"))
+        if holdout.get("status") != "PASS" or selection.get("status") != "PASS":
+            raise ValueError("Final training is blocked by development/holdout STOP")
+        selected = selection.get("selected") or {}
+        if (
+            config["variant"] != selected.get("variant")
+            or float(config["lambda_preservation"])
+            != float(selected.get("lambda_preservation", -1.0))
+        ):
+            raise ValueError("Final config differs from frozen selected candidate")
     set_seed(int(config["seed"]))
     torch.use_deterministic_algorithms(True, warn_only=True)
     if torch.cuda.is_available():
@@ -297,7 +315,11 @@ def run_train(args: argparse.Namespace) -> None:
 
     vocab = CTCVocab.from_path(config["vocab"])
     normalizer = XAlignedFeatureNormalizer.from_path(config["normalizer"])
-    verify_normalizer_for_manifest(normalizer, config["train_manifest"])
+    verify_normalizer_for_manifest(
+        normalizer,
+        config["train_manifest"],
+        normalizer_train_manifest=config.get("normalizer_train_manifest"),
+    )
     risk_stats = load_risk_stats(config["risk_stats"])
     train_dataset = HICSGRLateCorrectionDataset(
         config["train_manifest"],
@@ -570,4 +592,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -127,14 +127,19 @@ def evaluate_v2_loader(
     uncertainty_blank: list[np.ndarray] = []
     uncertainty_nonblank: list[np.ndarray] = []
     risk_values: list[np.ndarray] = []
+    uncertainty_by_domain: defaultdict[str, list[float]] = defaultdict(list)
+    uncertainty_changed_top1: list[np.ndarray] = []
     correction_norms: list[np.ndarray] = []
     correction_abs: list[np.ndarray] = []
+    delta_norms: list[np.ndarray] = []
+    delta_abs: list[np.ndarray] = []
     base_norms: list[np.ndarray] = []
     empty_corrections: list[np.ndarray] = []
     gate_by_domain: defaultdict[str, list[float]] = defaultdict(list)
     frame_store: defaultdict[str, list[np.ndarray]] = defaultdict(list)
     changed_frames = 0
     valid_frames = 0
+    blank_frames = 0
     intervention_frames = 0
     strong_intervention_frames = 0
 
@@ -206,8 +211,11 @@ def evaluate_v2_loader(
         uncertainty = output["visual_uncertainty"][..., 0].cpu().numpy()
         risk = output["risk"][..., 0].cpu().numpy()
         correction = output["correction_logits"]
+        delta = output["delta_logits"]
         correction_norm = correction.norm(dim=-1).cpu().numpy()
         correction_absolute = correction.abs().amax(dim=-1).cpu().numpy()
+        delta_norm = delta.norm(dim=-1).cpu().numpy()
+        delta_absolute = delta.abs().amax(dim=-1).cpu().numpy()
         base_norm = output["base_logits"].norm(dim=-1).cpu().numpy()
         time_mask = batch["time_mask"].numpy()
         nonempty = batch["nonempty_graph_mask"].numpy() & time_mask
@@ -216,6 +224,9 @@ def evaluate_v2_loader(
         final_argmax = output["final_logits"].argmax(dim=-1).cpu().numpy()
         changed_frames += int(((base_argmax != final_argmax) & time_mask).sum())
         valid_frames += int(time_mask.sum())
+        blank_frames += int(
+            ((final_argmax == vocab.blank_index) & time_mask).sum()
+        )
         intervention_frames += int(((gate > 0.05) & time_mask).sum())
         strong_intervention_frames += int(((gate > 0.15) & time_mask).sum())
         gate_values.append(gate[time_mask])
@@ -230,10 +241,18 @@ def evaluate_v2_loader(
         risk_values.append(risk[time_mask])
         correction_norms.append(correction_norm[time_mask])
         correction_abs.append(correction_absolute[time_mask])
+        delta_norms.append(delta_norm[time_mask])
+        delta_abs.append(delta_absolute[time_mask])
         base_norms.append(base_norm[time_mask])
         empty_corrections.append(correction_absolute[empty])
         for index, domain in enumerate(batch["core_domains"]):
             gate_by_domain[str(domain)].extend(gate[index][time_mask[index]].tolist())
+            uncertainty_by_domain[str(domain)].extend(
+                uncertainty[index][time_mask[index]].tolist()
+            )
+        uncertainty_changed_top1.append(
+            uncertainty[time_mask & (base_argmax != final_argmax)]
+        )
         if frame_output:
             frame_store["gate"].append(gate[time_mask])
             frame_store["uncertainty"].append(uncertainty[time_mask])
@@ -243,6 +262,12 @@ def evaluate_v2_loader(
             frame_store["nonempty"].append(nonempty[time_mask].astype(np.uint8))
             frame_store["top1_changed"].append(
                 (base_argmax[time_mask] != final_argmax[time_mask]).astype(np.uint8)
+            )
+            frame_store["sample_lengths"].append(
+                lengths.detach().cpu().numpy().astype(np.int32)
+            )
+            frame_store["sample_ids"].append(
+                np.asarray(batch["sample_ids"], dtype=np.str_)
             )
 
         raw_graph = batch["raw_graph_features"].numpy()
@@ -317,6 +342,29 @@ def evaluate_v2_loader(
     changed = [row for row in rows if row["prediction_changed"]]
     unchanged = [row for row in rows if not row["prediction_changed"]]
     improved = [row for row in changed if row["edit_delta_vs_baseline"] < 0]
+    hurt = [row for row in changed if row["edit_delta_vs_baseline"] > 0]
+    merged_gate = np.concatenate(gate_values) if gate_values else np.asarray([])
+    merged_uncertainty = (
+        np.concatenate(uncertainty_values)
+        if uncertainty_values
+        else np.asarray([])
+    )
+    merged_risk = np.concatenate(risk_values) if risk_values else np.asarray([])
+
+    def gate_by_tercile(values: np.ndarray) -> dict[str, float | None]:
+        if values.size == 0 or merged_gate.size == 0:
+            return {"low": None, "middle": None, "high": None}
+        q1, q2 = np.quantile(values, (1 / 3, 2 / 3))
+        masks = {
+            "low": values <= q1,
+            "middle": (values > q1) & (values <= q2),
+            "high": values > q2,
+        }
+        return {
+            name: float(merged_gate[mask].mean()) if bool(mask.any()) else None
+            for name, mask in masks.items()
+        }
+
     summary.update(
         {
             "baseline": summarize_rows(base_rows),
@@ -327,6 +375,7 @@ def evaluate_v2_loader(
                 float(np.mean(preservation_losses)) if preservation_losses else 0.0
             ),
             "alpha": float(model.alpha().item()),
+            "blank_ratio": blank_frames / max(valid_frames, 1),
             "gate": {
                 **_stats(gate_values),
                 "empty": 0.0,
@@ -335,13 +384,34 @@ def evaluate_v2_loader(
                     key: float(np.mean(values))
                     for key, values in sorted(gate_by_domain.items())
                 },
+                "by_uncertainty_tercile": gate_by_tercile(merged_uncertainty),
+                "by_risk_tercile": gate_by_tercile(merged_risk),
+                "improved_prediction_mean": (
+                    float(np.mean([row["gate_mean"] for row in improved]))
+                    if improved
+                    else None
+                ),
+                "hurt_prediction_mean": (
+                    float(np.mean([row["gate_mean"] for row in hurt]))
+                    if hurt
+                    else None
+                ),
             },
             "uncertainty": {
                 **_stats(uncertainty_values),
                 "blank_argmax": _stats(uncertainty_blank)["mean"],
                 "nonblank_argmax": _stats(uncertainty_nonblank)["mean"],
+                "top1_changed": _stats(uncertainty_changed_top1)["mean"],
+                "by_domain": {
+                    key: float(np.mean(values))
+                    for key, values in sorted(uncertainty_by_domain.items())
+                },
             },
             "risk": _stats(risk_values),
+            "delta_logits": {
+                "absolute": _stats(delta_abs),
+                "l2": _stats(delta_norms),
+            },
             "correction": {
                 "absolute": _stats(correction_abs),
                 "l2": _stats(correction_norms),
@@ -361,9 +431,7 @@ def evaluate_v2_loader(
                 "unchanged_summary": summarize_rows(unchanged),
                 "precision": len(improved) / max(len(changed), 1),
                 "improved_samples": len(improved),
-                "hurt_samples": sum(
-                    row["edit_delta_vs_baseline"] > 0 for row in changed
-                ),
+                "hurt_samples": len(hurt),
             },
         }
     )

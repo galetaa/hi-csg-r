@@ -1,6 +1,15 @@
 from __future__ import annotations
 
+from pathlib import Path
+
+import pytest
 from src.htr.dataset_adapter_v2 import DomainBalancedBatchSampler
+from src.htr.xaligned_hi_csg_r import (
+    FEATURE_NAMES,
+    XAlignedFeatureNormalizer,
+    file_sha256,
+    verify_normalizer_for_manifest,
+)
 from tools.create_hi_csg_r_adapter_v2_split import (
     choose_group_subset,
     group_key,
@@ -63,3 +72,23 @@ def test_exact_hash_unions_distinct_hierarchy_groups() -> None:
     ]
     safe = leakage_safe_group_keys(rows)
     assert safe["a"] == safe["b"]
+
+
+def test_normalizer_rejects_non_train_manifest(tmp_path: Path) -> None:
+    train = tmp_path / "train.jsonl"
+    dev = tmp_path / "dev.jsonl"
+    train.write_text('{"sample_id":"train"}\n', encoding="utf-8")
+    dev.write_text('{"sample_id":"dev"}\n', encoding="utf-8")
+    normalizer = XAlignedFeatureNormalizer(
+        feature_names=FEATURE_NAMES,
+        mean=tuple([0.0] * 20),
+        std=tuple([1.0] * 20),
+        clip_value=5.0,
+        train_manifest_sha256=file_sha256(train),
+        graph_version="g",
+        feature_builder_version="f",
+        created_at="now",
+    )
+    verify_normalizer_for_manifest(normalizer, train)
+    with pytest.raises(ValueError, match="not fitted"):
+        verify_normalizer_for_manifest(normalizer, dev)

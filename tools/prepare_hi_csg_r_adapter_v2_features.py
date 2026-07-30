@@ -22,6 +22,32 @@ from src.htr.xaligned_hi_csg_r import (
 )
 
 
+def audit_manifest(path: str | Path) -> dict[str, int | str]:
+    manifest = Path(path)
+    records = 0
+    bins = 0
+    nonfinite = 0
+    name_mismatches = 0
+    for row in read_jsonl(manifest):
+        record = load_feature_record(
+            resolve_path(str(row["xaligned_graph_npz"]), manifest)
+        )
+        values = np.asarray(record["features"], dtype=np.float32)
+        mask = np.asarray(record["valid_mask"], dtype=bool)
+        names = tuple(str(name) for name in record["feature_names"].tolist())
+        records += 1
+        bins += int(mask.sum())
+        nonfinite += int(not np.isfinite(values[mask]).all())
+        name_mismatches += int(names != FEATURE_NAMES)
+    return {
+        "manifest": str(manifest.resolve()),
+        "records": records,
+        "valid_bins": bins,
+        "nonfinite_records": nonfinite,
+        "feature_name_mismatches": name_mismatches,
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--train_manifest", required=True)
@@ -100,12 +126,23 @@ def main() -> None:
         "dev": len(read_jsonl(args.dev_manifest)),
         "holdout": len(read_jsonl(args.holdout_manifest)),
     }
+    split_audits = {
+        "train": audit_manifest(args.train_manifest),
+        "dev": audit_manifest(args.dev_manifest),
+        "holdout": audit_manifest(args.holdout_manifest),
+    }
+    if any(
+        value["nonfinite_records"] or value["feature_name_mismatches"]
+        for value in split_audits.values()
+    ):
+        raise ValueError(f"Feature audit failed: {split_audits}")
     audit = {
         "status": "PASS",
         "normalizer_fit_split": "train",
         "train_records": record_count,
         "train_bins": bin_count,
         "split_counts": split_counts,
+        "split_audits": split_audits,
         "inactive_features": inactive,
         "ambiguous_edge_fraction_active": "ambiguous_edge_fraction" not in inactive,
         "risk_stats": risk_stats,
@@ -117,9 +154,39 @@ def main() -> None:
         json.dumps(audit, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+    lines = [
+        "# HI-CSG-R adapter v2 feature audit",
+        "",
+        "**Status:** `PASS`",
+        "",
+        "Normalizer fitted only on `adapter_v2_train`.",
+        "",
+        "| Split | Records | Valid bins | Non-finite | Name mismatches |",
+        "|---|---:|---:|---:|---:|",
+    ]
+    for name in ("train", "dev", "holdout"):
+        value = split_audits[name]
+        lines.append(
+            f"| {name} | {value['records']} | {value['valid_bins']} | "
+            f"{value['nonfinite_records']} | {value['feature_name_mismatches']} |"
+        )
+    lines.extend(
+        [
+            "",
+            f"- inactive features: `{inactive}`",
+            (
+                "- ambiguous_edge_fraction active: "
+                f"`{audit['ambiguous_edge_fraction_active']}`"
+            ),
+            f"- risk quantiles: `{quantiles}`",
+        ]
+    )
+    audit_path.with_suffix(".md").write_text(
+        "\n".join(lines) + "\n",
+        encoding="utf-8",
+    )
     print(json.dumps(audit, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
     main()
-
