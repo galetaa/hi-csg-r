@@ -1,0 +1,16 @@
+{
+  "protocol": "crnn_ctc_hi_csg_r_late_correction_protocol_v2",
+  "amendment": 1,
+  "implementation_commit": "5e2fd5b",
+  "scientific_configuration_changed": false,
+  "conformance_fix": "B0 development sampler changed from width-bucket to protocol-required domain-balanced batches",
+  "invalid_partial_run_used_for_selection": false,
+  "holdout_evaluated_before_fix": false,
+  "test_evaluated_before_fix": false,
+  "sha256": {
+    "configs/htr_adapter_v2/b0_dev_seed42.yaml": "88ce9892369a4fe01a97fe2a75025c64c77729f3bfae065bdfdf0008a9e9f155",
+    "docs/crnn_ctc_hi_csg_r_late_correction_protocol_v2_amendment_001.md": "7ddd07614e194e63aba09b71a65ee69e132ef66feb6007e77c9dd625c253e692",
+    "tools/train_crnn_ctc_adapter_v2_baseline.py": "e8e6840f720d9decc2e12808a7fb21df6796aba4b5f960908f6620fdad65e04a",
+    "outputs/htr_adapter_v2/failed_runs/b0_dev_width_batched_invalid_partial/invalidation_report.json": "0232c6005edb2e52779fd4d69ee4ea6e9965a079802de60cb94240b18f074e73"
+  }
+}
