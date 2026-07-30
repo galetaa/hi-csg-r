@@ -42,7 +42,8 @@ Notebook работает по последовательным стадиям. 
 3. `seed42` — M0-FT/M3/M3-shuffle/M2 и validation gate;
 4. `final_seeds` — seed 43/44 и freeze registry;
 5. `final_test` — однократный test после явного разрешения;
-6. `report` — bootstrap, таблицы, figures и итоговый отчёт.
+6. `report` — полный test-report после PASS либо validation-only negative report
+   после protocol STOP.
 
 `check` выполняет только быстрый input audit и тесты. Каждая секция явно пишет
 `RUN` или `SKIP`; команды показывают потоковый вывод прямо в notebook.
@@ -114,6 +115,12 @@ STAGE_FLAGS = {
 }
 if RUN_STAGE not in STAGE_FLAGS:
     raise ValueError(f"Неизвестная стадия {RUN_STAGE!r}; допустимы {sorted(STAGE_FLAGS)}")
+if RUN_STAGE == "report":
+    gate_path = RUN_ROOT / "statistical_analysis/validation_gate/validation_gate.json"
+    if gate_path.exists():
+        gate_status = json.loads(gate_path.read_text(encoding="utf-8")).get("status")
+        if gate_status == "STOP":
+            STAGE_FLAGS["report"] = {"negative_report"}
 
 EXECUTE = {
     name: name in STAGE_FLAGS[RUN_STAGE]
@@ -130,6 +137,7 @@ EXECUTE = {
         "final_test",
         "statistics",
         "final_report",
+        "negative_report",
     }
 }
 
@@ -402,6 +410,7 @@ if stage_enabled("tests"):
             "tests/test_xaligned_hi_csg_r.py",
             "tests/test_hi_csg_r_adapter_data.py",
             "tests/test_hi_csg_r_adapter_model.py",
+            "tests/test_hi_csg_r_adapter_report.py",
         ],
         "adapter_tests",
     )
@@ -426,6 +435,7 @@ if stage_enabled("tests"):
             "tests/test_xaligned_hi_csg_r.py",
             "tests/test_hi_csg_r_adapter_data.py",
             "tests/test_hi_csg_r_adapter_model.py",
+            "tests/test_hi_csg_r_adapter_report.py",
         ],
         "adapter_ruff",
         check=True,
@@ -1219,6 +1229,53 @@ blank penalty -0.4 и выбор checkpoint только по validation micro-C
         method_text + "\\n" + result_text,
         encoding="utf-8",
     )
+"""
+        ),
+        markdown("## 14.1. Финальный отрицательный отчёт после protocol STOP"),
+        code(
+            """
+if stage_enabled("negative_report"):
+    gate_path = RUN_ROOT / "statistical_analysis/validation_gate/validation_gate.json"
+    require_artifacts(
+        "seed42",
+        gate_path,
+        VAL_EVAL / "m0_ft/summary.json",
+        VAL_EVAL / "m3_correct/summary.json",
+        VAL_EVAL / "m3_shuffle/summary.json",
+        VAL_EVAL / "m0_ft/domain_summary.json",
+        VAL_EVAL / "m3_correct/domain_summary.json",
+        RUN_ROOT / "m3_full_seed42/history.jsonl",
+    )
+    gate = read_json(gate_path)
+    assert gate["status"] == "STOP"
+    report_dir = RUN_ROOT / "final_report"
+    figure_a = report_dir / "figure_a_architecture.png"
+    module(
+        "tools.make_hi_csg_r_adapter_architecture_figure_v1",
+        "--out", figure_a,
+        log_name="negative_report_figure_a",
+    )
+    module(
+        "tools.make_hi_csg_r_adapter_final_report_v1",
+        "--validation_gate", gate_path,
+        "--m0_summary", VAL_EVAL / "m0_ft/summary.json",
+        "--m3_summary", VAL_EVAL / "m3_correct/summary.json",
+        "--shuffle_summary", VAL_EVAL / "m3_shuffle/summary.json",
+        "--m0_domain_summary", VAL_EVAL / "m0_ft/domain_summary.json",
+        "--m3_domain_summary", VAL_EVAL / "m3_correct/domain_summary.json",
+        "--m3_history", RUN_ROOT / "m3_full_seed42/history.jsonl",
+        "--figure_a", figure_a,
+        "--out_dir", report_dir,
+        log_name="negative_final_report",
+    )
+    final = read_json(report_dir / "final_report.json")
+    assert final["hypothesis_h4"] == "exploratory"
+    assert final["test_evaluated"] is False
+    display(Markdown((report_dir / "final_report.md").read_text(encoding="utf-8")))
+    display(DisplayImage(filename=figure_a))
+    display(DisplayImage(filename=report_dir / "figure_b_seed42_validation.png"))
+    display(pd.read_csv(report_dir / "validation_overall_table.csv"))
+    display(pd.read_csv(report_dir / "validation_domain_table.csv"))
 """
         ),
         markdown(

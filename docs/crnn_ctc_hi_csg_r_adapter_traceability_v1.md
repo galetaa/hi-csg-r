@@ -16,13 +16,13 @@ until the preregistered experiments are actually run.
 | 3 | Feature audit and 30-sample browser | audit and visualization CLIs | Complete; full audit PASS and 30 examples inspected |
 | 4 | Dataset and output-length collate | `src/htr/dataset_adapter.py` | Complete |
 | 5 | Adapter, gate, auxiliary CTC, strict loader | `src/htr/model_hi_csg_r_adapter.py` | Complete |
-| 6 | Unit/integration tests | three required test modules | Complete |
+| 6 | Unit/integration tests | three required modules plus report regression test | Complete |
 | 7 | Trainer/evaluator and metadata | training/evaluation CLIs and runtime module | Complete |
 | 8 | One-sample and 64-128 sample overfit | notebook smoke section and trainer support | Complete; preregistered smoke gate PASS |
 | 9 | Seed-42 development comparison | automated preliminary and full validation gates | Complete; preliminary gate STOP |
 | 10 | Final three seeds | frozen configs and guarded notebook stage | Not run; blocked by seed-42 STOP |
 | 11 | One-time final evaluation | freeze registry and double-guarded notebook stage | Not run; blocked by seed-42 STOP |
-| 12 | Paired statistics and report | bootstrap, Holm comparison, report tools | Code complete; final inputs pending |
+| 12 | Paired statistics and report | bootstrap, Holm comparison, report tools | Negative validation report complete; paired test statistics blocked |
 
 ## Specification Coverage
 
@@ -98,17 +98,17 @@ until the preregistered experiments are actually run.
   (3.062% increase).
 - M0-FT training/evaluation smoke: PASS.
 - M3 warm-up/joint training/evaluation smoke: PASS.
-- Unit/integration tests (`15 passed`) and scoped Ruff checks: PASS.
+- Unit/integration tests (`16 passed`) and scoped Ruff checks: PASS.
 - Canonical M0 and M3 evaluator paths, including graph-quality strata: PASS.
 - Historical prediction compatibility and paired-bootstrap self-check on 5,563 samples: PASS.
-- The 37-cell staged experiment notebook executes completely in `check` mode:
-  all 21 code cells run, input audit and tests pass, every inactive block emits a
-  visible `SKIP`, and the final artifact dashboard is rendered.
-- The same 37-cell notebook executes completely in `prepare` mode: all 21 code
-  cells run, all feature builds/audits/visualizations/tests pass, 55 rich display
-  outputs are rendered, and no error output is present.
-- The notebook executes completely in `smoke` mode on CUDA with 21/21 code cells
-  and no error outputs. The one-sample CER reaches `0.0`; auxiliary-only loss on
+- The staged experiment notebook executes completely in `check` mode: input audit
+  and tests pass, every inactive block emits a visible `SKIP`, and the final
+  artifact dashboard is rendered.
+- The notebook executes completely in `prepare` mode: all feature
+  builds/audits/visualizations/tests pass, 55 rich display outputs are rendered,
+  and no error output is present.
+- The notebook executes completely in `smoke` mode on CUDA with no error outputs.
+  The one-sample CER reaches `0.0`; auxiliary-only loss on
   128 samples decreases from `7.94` to `2.85`; the full-128 CER decreases from
   `0.288` to `0.070`; all six machine-checked smoke conditions pass.
 - Seed-42 M0-FT and M3 runs completed all 25 joint epochs (plus five M3 warm-up
@@ -121,11 +121,13 @@ until the preregistered experiments are actually run.
 - The seed-42 notebook now records this expected protocol `STOP` without an error
   output, reuses the verified completed training runs on repetition, and blocks
   M2, seeds 43/44, and test. H4 is classified as exploratory.
+- The `report` stage detects the recorded STOP and produces a validation-only
+  negative report without reading test data. Its 22/22 code cells execute with
+  no errors; Markdown, JSON, two CSV tables, two figures, and Russian
+  method/results text are persisted under `outputs/htr_adapter_v1/final_report/`.
 - All CLI entry points import and expose help successfully.
 
 ## Stopped Per Frozen Protocol
-
-The following cannot be marked complete by code inspection:
 
 The frozen seed-42 continuation gate failed. Consequently, the following stages are
 intentionally not executed rather than pending:
@@ -136,9 +138,8 @@ intentionally not executed rather than pending:
 4. final paired test confidence intervals.
 
 The negative validation result and exploratory H4 classification are recorded in
-`outputs/htr_adapter_v1/statistical_analysis/validation_gate/validation_gate.md`.
+`outputs/htr_adapter_v1/statistical_analysis/validation_gate/validation_gate.md`
+and `outputs/htr_adapter_v1/final_report/final_report.md`.
 
-These stages are encoded in
-`notebooks/htr_adapter_v1_full_experiment.ipynb`. Until they are executed in order,
-the correct status is **implementation complete, experiments pending**, not full
-Definition of Done.
+The correct final status is **protocol-compliant negative result**. The adapter
+branch is complete and stopped; it is not awaiting the prohibited stages above.
