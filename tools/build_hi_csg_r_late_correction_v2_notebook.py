@@ -54,9 +54,17 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from IPython.display import Image, Markdown, display
 
-ROOT = Path.cwd().resolve()
-if not (ROOT / "src").exists():
-    raise RuntimeError(f"Запустите notebook из корня репозитория; cwd={ROOT}")
+start = Path.cwd().resolve()
+ROOT = next(
+    (
+        candidate
+        for candidate in (start, *start.parents)
+        if (candidate / "src").is_dir() and (candidate / "tools").is_dir()
+    ),
+    None,
+)
+if ROOT is None:
+    raise RuntimeError(f"Корень репозитория не найден из cwd={start}")
 PYTHON = str(ROOT / ".venv/bin/python")
 OUT = ROOT / "outputs/htr_adapter_v2"
 DATA = ROOT / "data/experiments/htr_adapter_v2"
