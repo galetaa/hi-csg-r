@@ -169,6 +169,7 @@ class CRNNCTCHICSGRAdapter(nn.Module):
         graph_mask: torch.Tensor,
         *,
         graph_enabled: bool = True,
+        graph_scale: float = 1.0,
     ) -> dict[str, torch.Tensor]:
         visual = self.visual_sequence(images)
         batch, time_steps, _ = visual.shape
@@ -188,7 +189,8 @@ class CRNNCTCHICSGRAdapter(nn.Module):
                 graph_quality,
                 graph_mask,
             )
-            fused = self._baseline_preserving_fusion(visual, gate * graph_embedding)
+            residual = float(graph_scale) * gate * graph_embedding
+            fused = self._baseline_preserving_fusion(visual, residual)
         else:
             graph_embedding = torch.zeros_like(visual)
             gate = torch.zeros(
