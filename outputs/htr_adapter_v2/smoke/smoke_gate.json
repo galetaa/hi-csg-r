@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "conditions": {
+    "one_sample_cer_zero": true,
+    "finite_losses": true,
+    "graph_gradient_nonzero": true,
+    "gate_nonconstant": true,
+    "correct_not_worse_shuffle": true,
+    "empty_correction_zero": true,
+    "backbone_unchanged": true,
+    "no_blank_collapse": true
+  },
+  "one_sample": {
+    "cer": 0.0,
+    "exact": 1.0
+  },
+  "subset": {
+    "cer": 0.0,
+    "exact": 1.0,
+    "gate_std": 0.03159103915095329,
+    "correct_cer": 0.0,
+    "shuffle_cer": 0.0,
+    "empty_correction_max": 0.0,
+    "blank_ratio": 0.7681600695954763
+  }
+}

@@ -60,3 +60,33 @@ def test_zero_graph_changes_only_graph_inputs_dependency() -> None:
     assert torch.allclose(correct["base_logits"], zero["base_logits"])
     assert torch.count_nonzero(zero["correction_logits"]).item() == 0
 
+
+def test_shuffle_changes_only_graph_conditioning() -> None:
+    model = small_model().eval()
+    batch = small_batch()
+    shuffled_features = batch["features"].flip(0)
+    shuffled_risk = batch["risk"].flip(0)
+    shuffled_nonempty = batch["nonempty"].flip(0)
+    with torch.no_grad():
+        model.correction_head.output.weight.fill_(0.01)
+        correct = model(
+            batch["images"],
+            batch["widths"],
+            batch["features"],
+            batch["risk"],
+            batch["time_mask"],
+            batch["nonempty"],
+        )
+        shuffled = model(
+            batch["images"],
+            batch["widths"],
+            shuffled_features,
+            shuffled_risk,
+            batch["time_mask"],
+            shuffled_nonempty,
+        )
+    assert torch.equal(correct["base_logits"], shuffled["base_logits"])
+    assert not torch.equal(
+        correct["graph_embedding"],
+        shuffled["graph_embedding"],
+    )

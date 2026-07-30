@@ -77,4 +77,3 @@ class MaskedMultiscaleGraphPooling(nn.Module):
         # Context may summarize neighbors, but an empty target bin never receives
         # a graph representation or downstream correction.
         return output * valid.unsqueeze(-1).to(output.dtype)
-

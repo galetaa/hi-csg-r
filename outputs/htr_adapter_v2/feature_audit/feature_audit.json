@@ -8,6 +8,29 @@
     "dev": 3000,
     "holdout": 1500
   },
+  "split_audits": {
+    "train": {
+      "manifest": "/home/galetka/Documents/Programming/hi-csg-r/data/experiments/htr_adapter_v2/splits/train.jsonl",
+      "records": 35498,
+      "valid_bins": 2575073,
+      "nonfinite_records": 0,
+      "feature_name_mismatches": 0
+    },
+    "dev": {
+      "manifest": "/home/galetka/Documents/Programming/hi-csg-r/data/experiments/htr_adapter_v2/splits/dev.jsonl",
+      "records": 3000,
+      "valid_bins": 229404,
+      "nonfinite_records": 0,
+      "feature_name_mismatches": 0
+    },
+    "holdout": {
+      "manifest": "/home/galetka/Documents/Programming/hi-csg-r/data/experiments/htr_adapter_v2/splits/holdout.jsonl",
+      "records": 1500,
+      "valid_bins": 120132,
+      "nonfinite_records": 0,
+      "feature_name_mismatches": 0
+    }
+  },
   "inactive_features": [],
   "ambiguous_edge_fraction_active": true,
   "risk_stats": {
