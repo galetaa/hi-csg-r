@@ -18,7 +18,7 @@ until the preregistered experiments are actually run.
 | 5 | Adapter, gate, auxiliary CTC, strict loader | `src/htr/model_hi_csg_r_adapter.py` | Complete |
 | 6 | Unit/integration tests | three required test modules | Complete |
 | 7 | Trainer/evaluator and metadata | training/evaluation CLIs and runtime module | Complete |
-| 8 | One-sample and 64-128 sample overfit | notebook smoke section and trainer support | One-sample technical smoke passed; preregistered 128-sample gates pending |
+| 8 | One-sample and 64-128 sample overfit | notebook smoke section and trainer support | Complete; preregistered smoke gate PASS |
 | 9 | Seed-42 development comparison | automated preliminary and full validation gates | Code complete; runs pending |
 | 10 | Final three seeds | frozen configs and guarded notebook stage | Pending validation gate |
 | 11 | One-time final evaluation | freeze registry and double-guarded notebook stage | Pending final checkpoints |
@@ -61,6 +61,9 @@ until the preregistered experiments are actually run.
 ### Leakage controls
 
 - Normalizer provenance is tied to the train-manifest SHA256.
+- Smoke subsets may reuse the full-train normalizer only when the canonical
+  normalizer train manifest is passed explicitly and every subset row exactly
+  matches a row in that SHA-verified parent manifest.
 - Evaluation rejects a blank penalty different from checkpoint metadata.
 - Validation gate is machine checked.
 - The notebook requires a successful validation gate and freeze registry before test.
@@ -95,7 +98,7 @@ until the preregistered experiments are actually run.
   (3.062% increase).
 - M0-FT training/evaluation smoke: PASS.
 - M3 warm-up/joint training/evaluation smoke: PASS.
-- Unit/integration tests (`14 passed`) and scoped Ruff checks: PASS.
+- Unit/integration tests (`15 passed`) and scoped Ruff checks: PASS.
 - Canonical M0 and M3 evaluator paths, including graph-quality strata: PASS.
 - Historical prediction compatibility and paired-bootstrap self-check on 5,563 samples: PASS.
 - The 37-cell staged experiment notebook executes completely in `check` mode:
@@ -104,17 +107,20 @@ until the preregistered experiments are actually run.
 - The same 37-cell notebook executes completely in `prepare` mode: all 21 code
   cells run, all feature builds/audits/visualizations/tests pass, 55 rich display
   outputs are rendered, and no error output is present.
+- The notebook executes completely in `smoke` mode on CUDA with 21/21 code cells
+  and no error outputs. The one-sample CER reaches `0.0`; auxiliary-only loss on
+  128 samples decreases from `7.94` to `2.85`; the full-128 CER decreases from
+  `0.288` to `0.070`; all six machine-checked smoke conditions pass.
 - All CLI entry points import and expose help successfully.
 
 ## Not Yet Scientifically Complete
 
 The following cannot be marked complete by code inspection:
 
-1. preregistered one-sample and 128-sample overfit runs;
-2. M0-FT/M3/M2 seed-42 development runs and validation gate;
-3. seeds 43/44 after a positive gate;
-4. the one-time mixed/domain/page-disjoint/robustness test;
-5. final paired confidence intervals, tables, figures, report, and H4 classification.
+1. M0-FT/M3/M2 seed-42 development runs and validation gate;
+2. seeds 43/44 after a positive gate;
+3. the one-time mixed/domain/page-disjoint/robustness test;
+4. final paired confidence intervals, tables, figures, report, and H4 classification.
 
 These stages are encoded in
 `notebooks/htr_adapter_v1_full_experiment.ipynb`. Until they are executed in order,

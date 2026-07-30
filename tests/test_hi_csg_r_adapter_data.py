@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 import numpy as np
+import pytest
 from PIL import Image
 from src.htr.dataset_adapter import HICSGRAdapterDataset, collate_adapter_batch
 from src.htr.vocab import CTCVocab
@@ -14,6 +15,7 @@ from src.htr.xaligned_hi_csg_r import (
     XAlignedFeatureNormalizer,
     file_sha256,
     save_feature_record,
+    verify_normalizer_for_manifest,
 )
 
 
@@ -89,6 +91,36 @@ def test_train_only_normalization_and_serialization(tmp_path: Path) -> None:
     normalizer.to_path(path)
     restored = XAlignedFeatureNormalizer.from_path(path)
     assert restored == normalizer
+
+
+def test_normalizer_accepts_only_explicit_exact_train_subset(tmp_path: Path) -> None:
+    manifest, _ = fixture_manifest(tmp_path)
+    normalizer = XAlignedFeatureNormalizer.fit(manifest)
+    rows = [
+        json.loads(line)
+        for line in manifest.read_text(encoding="utf-8").splitlines()
+        if line
+    ]
+    subset = tmp_path / "subset.jsonl"
+    subset.write_text(json.dumps(rows[0]) + "\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="not fitted"):
+        verify_normalizer_for_manifest(normalizer, subset)
+    verify_normalizer_for_manifest(
+        normalizer,
+        subset,
+        normalizer_train_manifest=manifest,
+    )
+
+    modified = dict(rows[0])
+    modified["text"] = "changed"
+    subset.write_text(json.dumps(modified) + "\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="not an exact row subset"):
+        verify_normalizer_for_manifest(
+            normalizer,
+            subset,
+            normalizer_train_manifest=manifest,
+        )
 
 
 def test_collate_pads_to_output_steps_not_image_width(tmp_path: Path) -> None:

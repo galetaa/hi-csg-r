@@ -288,6 +288,11 @@ def checkpoint_payload(
         "normalizer": (
             str(Path(config["normalizer"]).resolve()) if config.get("normalizer") else None
         ),
+        "normalizer_train_manifest": (
+            str(Path(config["normalizer_train_manifest"]).resolve())
+            if config.get("normalizer_train_manifest")
+            else None
+        ),
         "feature_version": FEATURE_VERSION,
         "feature_dim": 20,
         "topology_enabled": config["mode"] == "m3_full",
@@ -333,7 +338,11 @@ def run_train(args: argparse.Namespace) -> None:
     normalizer = None
     if config["mode"] != "m0_ft":
         normalizer = XAlignedFeatureNormalizer.from_path(config["normalizer"])
-        verify_normalizer_for_manifest(normalizer, config["train_manifest"])
+        verify_normalizer_for_manifest(
+            normalizer,
+            config["train_manifest"],
+            normalizer_train_manifest=config.get("normalizer_train_manifest"),
+        )
 
     train_dataset = HICSGRAdapterDataset(
         config["train_manifest"], vocab, normalizer=normalizer, mode=config["mode"]
@@ -536,6 +545,7 @@ def parser() -> argparse.ArgumentParser:
     train.add_argument("--val_manifest")
     train.add_argument("--vocab")
     train.add_argument("--normalizer")
+    train.add_argument("--normalizer_train_manifest")
     train.add_argument("--seed", type=int)
     train.add_argument("--warmup_epochs", type=int)
     train.add_argument("--joint_epochs", type=int)
