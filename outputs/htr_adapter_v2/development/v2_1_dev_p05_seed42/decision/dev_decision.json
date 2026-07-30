@@ -1,0 +1,41 @@
+{
+  "stage": "dev",
+  "status": "STOP",
+  "conditions": {
+    "relative_cer_improvement_at_least_1_percent": false,
+    "correct_better_shuffle": false,
+    "empty_correction_invariant": true,
+    "no_domain_degrades_over_0_003": true,
+    "exact_drop_at_most_0_005": true
+  },
+  "baseline": {
+    "cer": 0.1393695188433278,
+    "wer": 0.47990700763865823,
+    "exact": 0.423
+  },
+  "correct": {
+    "cer": 0.13910615996418318,
+    "wer": 0.4814015277316506,
+    "exact": 0.4226666666666667
+  },
+  "shuffle": {
+    "cer": 0.13910615996418318,
+    "wer": 0.48073729657920955,
+    "exact": 0.423
+  },
+  "zero": {
+    "cer": 0.1393695188433278,
+    "wer": 0.47990700763865823,
+    "exact": 0.423
+  },
+  "relative_cer_improvement": 0.0018896447467875981,
+  "absolute_cer_delta": -0.00026335887914460954,
+  "correct_vs_shuffle_cer": 0.0,
+  "domain_cer_deltas": {
+    "cyrillic": 0.0005340453938584705,
+    "hkr": 0.0007731294562322855,
+    "school": -0.0012208067940552014
+  },
+  "alpha": 0.0008702169870957732,
+  "empty_correction_max": 0.0
+}

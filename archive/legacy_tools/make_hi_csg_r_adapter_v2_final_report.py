@@ -51,6 +51,7 @@ def status_from_artifacts(
     smoke: dict[str, Any] | None,
     selection: dict[str, Any] | None,
     holdout: dict[str, Any] | None,
+    decisions: list[dict[str, Any]],
     final_seed_summaries: list[dict[str, Any]],
     final_statistics: dict[str, Any] | None,
 ) -> tuple[str, str]:
@@ -75,6 +76,22 @@ def status_from_artifacts(
         if selection.get("status") != "PASS":
             return "complete_negative_development", "not_supported"
         return "development_selected_holdout_pending", "not_evaluated"
+    decision_runs = {Path(row["path"]).parents[1].name for row in decisions}
+    v2_1_finished = any(name.startswith("v2_1_") for name in decision_runs)
+    v2_2_finished = any(name.startswith("v2_2_") for name in decision_runs)
+    v2_2_allowed = bool(
+        preflight
+        and preflight.get("decision", {}).get("allow_v2_2", False)
+    )
+    development_exhausted = v2_1_finished and (
+        v2_2_finished or not v2_2_allowed
+    )
+    if (
+        development_exhausted
+        and decisions
+        and all(row.get("status") == "STOP" for row in decisions)
+    ):
+        return "complete_negative_development", "not_supported"
     return "implementation_or_development_in_progress", "not_evaluated"
 
 
@@ -307,9 +324,34 @@ def write_human_reports(
         "## V2 technical evidence",
         "",
         f"- preflight: `{report['preflight_status']}`",
+        (
+            "- fixed decode/correction: "
+            f"`blank penalty={report['preflight_decision'].get('selected_blank_logit_penalty')}`, "
+            f"`alpha_max={report['preflight_decision'].get('selected_alpha_max')}`"
+        ),
+        (
+            "- preflight D2/D3 CER gains: "
+            f"`{report['preflight_decision'].get('d2_absolute_cer_gain', 0.0):+.6f}` / "
+            f"`{report['preflight_decision'].get('d3_absolute_cer_gain', 0.0):+.6f}`"
+        ),
         f"- split audit: `{report['split_status']}`",
+        (
+            "- independent split: "
+            f"`train={report['split_counts'].get('train')}`, "
+            f"`dev={report['split_counts'].get('dev')}`, "
+            f"`holdout={report['split_counts'].get('holdout')}`"
+        ),
+        (
+            "- split overlap counts: "
+            f"`{report['split_overlap_total']}` (sample/path/group/SHA1)"
+        ),
         f"- smoke gate: `{report['smoke_status']}`",
         f"- fresh B0-dev: `{report['b0_status']}`",
+        (
+            "- B0 best dev micro-CER / epoch: "
+            f"`{report['b0_summary'].get('best_dev_micro_cer', float('nan')):.6f}` / "
+            f"`{report['b0_summary'].get('epochs_completed', 0)}` completed epochs"
+        ),
         f"- holdout evaluated: `{report['holdout_evaluated']}`",
         f"- final test evaluated: `{report['test_evaluated']}`",
         (
@@ -326,6 +368,120 @@ def write_human_reports(
         "",
         *metric_table(decisions),
     ]
+    for row in decisions:
+        name = Path(row["path"]).parents[1].name
+        final_lines.extend(
+            [
+                "",
+                f"### {name}",
+                "",
+                (
+                    "- absolute / relative CER change vs B0: "
+                    f"`{row['absolute_cer_delta']:+.6f}` / "
+                    f"`{-row['relative_cer_improvement']:+.3%}` "
+                    "(adapter minus baseline)"
+                ),
+                (
+                    "- correct minus shuffle CER: "
+                    f"`{row['correct_vs_shuffle_cer']:+.6f}`"
+                ),
+                (
+                    "- domain CER deltas (Cyrillic/HKR/School): "
+                    f"`{row['domain_cer_deltas'].get('cyrillic', 0.0):+.6f}` / "
+                    f"`{row['domain_cer_deltas'].get('hkr', 0.0):+.6f}` / "
+                    f"`{row['domain_cer_deltas'].get('school', 0.0):+.6f}`"
+                ),
+                (
+                    "- alpha / empty correction max: "
+                    f"`{row['alpha']:.9f}` / `{row['empty_correction_max']:.3g}`"
+                ),
+                (
+                    "- gate conditions: "
+                    + ", ".join(
+                        f"`{key}={value}`"
+                        for key, value in row["conditions"].items()
+                    )
+                ),
+            ]
+        )
+    development_statistics = report.get("development_statistics", {})
+    if development_statistics:
+        final_lines.extend(["", "## Development paired statistics", ""])
+        for name, values in development_statistics.items():
+            final_lines.extend(
+                [
+                    f"### {name}",
+                    "",
+                    (
+                        "- delta CER / relative delta: "
+                        f"`{values['delta_cer']:+.6f}` / "
+                        f"`{values['relative_delta']:+.3%}`"
+                    ),
+                    (
+                        "- paired bootstrap CI95 / p: "
+                        f"`[{values['ci95'][0]:+.6f}, {values['ci95'][1]:+.6f}]` / "
+                        f"`{values['p_two_sided']:.6f}`"
+                    ),
+                    (
+                        "- WER / Exact delta: "
+                        f"`{values['delta_wer']:+.6f}` / "
+                        f"`{values['delta_exact']:+.6f}`"
+                    ),
+                    (
+                        "- wins/losses/ties: "
+                        f"`{values['wins']}/{values['losses']}/{values['ties']}`"
+                    ),
+                    "",
+                ]
+            )
+    diagnostics = report.get("development_diagnostics")
+    if diagnostics:
+        final_lines.extend(
+            [
+                "## Intervention diagnostics (best-CER development variant)",
+                "",
+                f"- alpha: `{diagnostics['alpha']:.9f}`",
+                (
+                    "- gate mean/std/P90/non-empty/empty: "
+                    f"`{diagnostics['gate']['mean']:.6f}` / "
+                    f"`{diagnostics['gate']['std']:.6f}` / "
+                    f"`{diagnostics['gate']['p90']:.6f}` / "
+                    f"`{diagnostics['gate']['nonempty']:.6f}` / "
+                    f"`{diagnostics['gate']['empty']:.6f}`"
+                ),
+                (
+                    "- intervention / strong intervention / changed prediction: "
+                    f"`{diagnostics['intervention']['gate_gt_005_rate']:.3%}` / "
+                    f"`{diagnostics['intervention']['gate_gt_015_rate']:.3%}` / "
+                    f"`{diagnostics['intervention']['prediction_change_rate']:.3%}`"
+                ),
+                (
+                    "- intervention precision (improves edit distance): "
+                    f"`{diagnostics['intervention']['precision']:.3%}`"
+                ),
+                (
+                    "- improved/hurt samples: "
+                    f"`{diagnostics['intervention']['improved_samples']}` / "
+                    f"`{diagnostics['intervention']['hurt_samples']}`"
+                ),
+                (
+                    "- correction/base L2 ratio / empty correction max: "
+                    f"`{diagnostics['correction']['l2_ratio']:.6f}` / "
+                    f"`{diagnostics['correction']['empty_max']:.3g}`"
+                ),
+                (
+                    "- visual uncertainty mean/P90: "
+                    f"`{diagnostics['uncertainty']['mean']:.6f}` / "
+                    f"`{diagnostics['uncertainty']['p90']:.6f}`"
+                ),
+                (
+                    "- structural risk mean/P90: "
+                    f"`{diagnostics['risk']['mean']:.6f}` / "
+                    f"`{diagnostics['risk']['p90']:.6f}`"
+                ),
+                "",
+            ]
+        )
     holdout = report.get("holdout")
     if holdout:
         final_lines.extend(
@@ -389,6 +545,13 @@ def write_human_reports(
     final_lines.extend(
         [
             "",
+            "## Protected stages",
+            "",
+            "- `lambda_pres=0.10` repeat: **not run** (no dev PASS candidate).",
+            "- independent holdout: **not opened**.",
+            "- final seeds 42/43/44: **not run**.",
+            "- canonical test/page-disjoint/robustness: **not opened**.",
+            "",
             "## Решение",
             "",
             report["conclusion_ru"],
@@ -411,6 +574,30 @@ def write_human_reports(
     ]
     (output / "dev_comparison.md").write_text(
         "\n".join(dev_lines) + "\n",
+        encoding="utf-8",
+    )
+    if report["holdout_evaluated"]:
+        holdout_lines = [
+            "# HI-CSG-R Late Correction v2: holdout decision",
+            "",
+            f"**Status:** `{report['holdout']['status']}`",
+            "",
+            "Holdout был оценён однократно после фиксации кандидата.",
+        ]
+    else:
+        holdout_lines = [
+            "# HI-CSG-R Late Correction v2: holdout decision",
+            "",
+            "**Status:** `NOT_EVALUATED_PROTOCOL_STOP`",
+            "",
+            (
+                "Оба разрешённых development-варианта получили `STOP`. "
+                "Независимый holdout не открывался и не использовался для "
+                "обучения, выбора checkpoint или изменения конфигурации."
+            ),
+        ]
+    (output / "holdout_decision.md").write_text(
+        "\n".join(holdout_lines) + "\n",
         encoding="utf-8",
     )
     limitations = [
@@ -556,6 +743,7 @@ def main() -> None:
         smoke,
         selection,
         holdout,
+        decisions,
         final_seed_summaries,
         final_statistics,
     )
@@ -568,8 +756,11 @@ def main() -> None:
         )
     elif status == "complete_negative_development":
         conclusion = (
-            "H4-v2 не подтверждена на development: ни один разрешенный вариант "
-            "не прошел заранее установленный dev gate; holdout и test не открывались."
+            "H4-v2 не подтверждена. Оба разрешенных development-варианта "
+            "не прошли заранее установленный dev gate: снижение CER было "
+            "меньше 1%, а correct graph не превзошел matched shuffle. "
+            "Согласно frozen protocol p10, holdout, final seeds и test "
+            "не запускались. Отрицательный вывод v1 сохранен отдельно."
         )
     elif status == "final_evaluation_complete":
         conclusion = (
@@ -582,6 +773,28 @@ def main() -> None:
             "Эксперимент v2 еще не достиг научного decision gate. Текущие "
             "технические результаты не подтверждают и не опровергают H4-v2."
         )
+    split_overlaps = split.get("overlaps", {}) if split else {}
+    split_overlap_total = sum(
+        int(value)
+        for category in split_overlaps.values()
+        for value in category.values()
+    )
+    development_statistics: dict[str, dict[str, Any]] = {}
+    v2_vs_b0 = read_json(
+        root / "statistical_analysis/dev_v2_2_vs_b0_bootstrap.json"
+    )
+    if v2_vs_b0:
+        development_statistics["V2-2 correct vs B0"] = v2_vs_b0
+    correct_vs_shuffle = read_json(
+        root
+        / "statistical_analysis/dev_v2_2_correct_vs_shuffle_bootstrap.json"
+    )
+    if correct_vs_shuffle:
+        development_statistics["V2-2 correct vs shuffle"] = correct_vs_shuffle
+    development_diagnostics = read_json(
+        root / "development/v2_2_dev_p05_seed42/correct/summary.json"
+    )
+    failure_analysis = read_json(root / "failure_analysis/failure_analysis.json")
     report = {
         "protocol": "crnn_ctc_hi_csg_r_late_correction_protocol_v2",
         "created_at": datetime.now(UTC).isoformat(),
@@ -590,12 +803,20 @@ def main() -> None:
         "preflight_status": (
             preflight.get("decision", {}).get("status") if preflight else "MISSING"
         ),
+        "preflight_decision": preflight.get("decision", {}) if preflight else {},
         "split_status": split.get("status") if split else "MISSING",
+        "split_counts": split.get("counts", {}) if split else {},
+        "split_domain_counts": split.get("domain_counts", {}) if split else {},
+        "split_overlap_total": split_overlap_total,
         "smoke_status": smoke.get("status") if smoke else "MISSING",
         "b0_status": "COMPLETE" if b0 else "PENDING",
+        "b0_summary": b0 or {},
         "holdout_evaluated": holdout is not None,
         "test_evaluated": test_evaluated,
         "development_decisions": decisions,
+        "development_statistics": development_statistics,
+        "development_diagnostics": development_diagnostics,
+        "failure_analysis": failure_analysis,
         "selection": selection,
         "holdout": holdout,
         "final_seed_summaries": final_seed_summaries,

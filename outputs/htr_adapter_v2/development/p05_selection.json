@@ -1,0 +1,110 @@
+{
+  "protocol": "crnn_ctc_hi_csg_r_late_correction_protocol_v2",
+  "purpose": "select_best_p05_before_single_p10_repeat",
+  "created_at": "2026-07-30T19:56:20.472877+00:00",
+  "selection_metric": "development micro-CER",
+  "holdout_used": false,
+  "test_used": false,
+  "status": "STOP",
+  "selected": null,
+  "candidates": [
+    {
+      "name": "v2_1_p05",
+      "evaluation_dir": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/development/v2_1_dev_p05_seed42",
+      "checkpoint": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/v2_1_dev_p05_seed42/best.pt",
+      "checkpoint_sha256": "b9b63c54265ab3b1e0d55aceb33f7ed68ffd2bcbcea906fdfd5adeba1826ea61",
+      "variant": "v2_1",
+      "lambda_preservation": 0.05,
+      "decision": {
+        "stage": "dev",
+        "status": "STOP",
+        "conditions": {
+          "relative_cer_improvement_at_least_1_percent": false,
+          "correct_better_shuffle": false,
+          "empty_correction_invariant": true,
+          "no_domain_degrades_over_0_003": true,
+          "exact_drop_at_most_0_005": true
+        },
+        "baseline": {
+          "cer": 0.1393695188433278,
+          "wer": 0.47990700763865823,
+          "exact": 0.423
+        },
+        "correct": {
+          "cer": 0.13910615996418318,
+          "wer": 0.4814015277316506,
+          "exact": 0.4226666666666667
+        },
+        "shuffle": {
+          "cer": 0.13910615996418318,
+          "wer": 0.48073729657920955,
+          "exact": 0.423
+        },
+        "zero": {
+          "cer": 0.1393695188433278,
+          "wer": 0.47990700763865823,
+          "exact": 0.423
+        },
+        "relative_cer_improvement": 0.0018896447467875981,
+        "absolute_cer_delta": -0.00026335887914460954,
+        "correct_vs_shuffle_cer": 0.0,
+        "domain_cer_deltas": {
+          "cyrillic": 0.0005340453938584705,
+          "hkr": 0.0007731294562322855,
+          "school": -0.0012208067940552014
+        },
+        "alpha": 0.0008702169870957732,
+        "empty_correction_max": 0.0
+      }
+    },
+    {
+      "name": "v2_2_p05",
+      "evaluation_dir": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/development/v2_2_dev_p05_seed42",
+      "checkpoint": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/v2_2_dev_p05_seed42/best.pt",
+      "checkpoint_sha256": "b66f4ba89a747a518580b14adb4aefe7c34e6d696d27411da5fac13adc2c1da7",
+      "variant": "v2_2",
+      "lambda_preservation": 0.05,
+      "decision": {
+        "stage": "dev",
+        "status": "STOP",
+        "conditions": {
+          "relative_cer_improvement_at_least_1_percent": false,
+          "correct_better_shuffle": false,
+          "empty_correction_invariant": true,
+          "no_domain_degrades_over_0_003": true,
+          "exact_drop_at_most_0_005": true
+        },
+        "baseline": {
+          "cer": 0.1393695188433278,
+          "wer": 0.47990700763865823,
+          "exact": 0.423
+        },
+        "correct": {
+          "cer": 0.13905348818835428,
+          "wer": 0.48206575888409164,
+          "exact": 0.423
+        },
+        "shuffle": {
+          "cer": 0.13871112164546628,
+          "wer": 0.4814015277316506,
+          "exact": 0.4226666666666667
+        },
+        "zero": {
+          "cer": 0.1393695188433278,
+          "wer": 0.47990700763865823,
+          "exact": 0.423
+        },
+        "relative_cer_improvement": 0.002267573696144998,
+        "absolute_cer_delta": -0.0003160306549735148,
+        "correct_vs_shuffle_cer": 0.0003423665428879952,
+        "domain_cer_deltas": {
+          "cyrillic": 0.0002670226969292422,
+          "hkr": 0.0009449360020616776,
+          "school": -0.0013269639065817407
+        },
+        "alpha": 0.0010677630780264735,
+        "empty_correction_max": 0.0
+      }
+    }
+  ]
+}

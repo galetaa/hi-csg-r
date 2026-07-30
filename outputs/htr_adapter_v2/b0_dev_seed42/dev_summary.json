@@ -1,0 +1,16 @@
+{
+  "samples": 3000,
+  "cer": 0.13947486239498566,
+  "macro_cer": 0.12928489493405032,
+  "wer": 0.4805712387910993,
+  "exact": 0.4236666666666667,
+  "char_edits": 5296,
+  "target_chars": 37971,
+  "word_edits": 2894,
+  "target_words": 6022,
+  "pred_len_mean": 12.500333333333334,
+  "ctc_loss": 0.8006396359427178,
+  "graph_aux_ctc_loss": null,
+  "graph_aux_cer": null,
+  "blank_ratio": 0.7939530261024219
+}

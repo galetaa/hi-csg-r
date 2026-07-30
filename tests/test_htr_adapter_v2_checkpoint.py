@@ -4,6 +4,7 @@ import io
 
 import torch
 from tests._htr_adapter_v2_helpers import small_batch, small_model
+from tools.make_hi_csg_r_adapter_v2_final_report import status_from_artifacts
 
 
 def test_checkpoint_round_trip_preserves_logits() -> None:
@@ -90,3 +91,31 @@ def test_shuffle_changes_only_graph_conditioning() -> None:
         correct["graph_embedding"],
         shuffled["graph_embedding"],
     )
+
+
+def test_two_stopped_development_variants_finalize_negative_result() -> None:
+    decisions = [
+        {
+            "path": (
+                "outputs/htr_adapter_v2/development/"
+                "v2_1_dev_p05_seed42/decision/dev_decision.json"
+            ),
+            "status": "STOP",
+        },
+        {
+            "path": (
+                "outputs/htr_adapter_v2/development/"
+                "v2_2_dev_p05_seed42/decision/dev_decision.json"
+            ),
+            "status": "STOP",
+        },
+    ]
+    assert status_from_artifacts(
+        {"decision": {"status": "CONTINUE_FULL", "allow_v2_2": True}},
+        {"status": "PASS"},
+        None,
+        None,
+        decisions,
+        [],
+        None,
+    ) == ("complete_negative_development", "not_supported")

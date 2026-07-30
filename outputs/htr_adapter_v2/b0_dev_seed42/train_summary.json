@@ -1,0 +1,15 @@
+{
+  "experiment_id": "htr_adapter_v2_b0_dev_seed42",
+  "mode": "b0_dev",
+  "seed": 42,
+  "best_dev_micro_cer": 0.13947486239498566,
+  "epochs_completed": 80,
+  "runtime_seconds": 14199.999373731,
+  "holdout_evaluated": false,
+  "device": "cuda",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "platform": "Linux-6.12.96+deb13-amd64-x86_64-with-glibc2.41",
+  "python": "3.11.12 (main, Apr  9 2025, 04:04:00) [Clang 20.1.0 ]",
+  "parameters": 3900892
+}

@@ -1,0 +1,11 @@
+{
+  "device": "cuda",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "platform": "Linux-6.12.96+deb13-amd64-x86_64-with-glibc2.41",
+  "python": "3.11.12 (main, Apr  9 2025, 04:04:00) [Clang 20.1.0 ]",
+  "trainable_parameters": 196156,
+  "v2_module_parameters": 196156,
+  "total_parameters": 4097048,
+  "initial_backbone_sha256": "02a6772823cb334055060a3025801051bba6344134568b7664d26ed4b542195a"
+}

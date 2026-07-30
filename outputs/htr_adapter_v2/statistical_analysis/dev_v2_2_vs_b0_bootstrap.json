@@ -1,0 +1,73 @@
+{
+  "baseline_files": [
+    "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/statistical_analysis/dev_b0_predictions.jsonl"
+  ],
+  "adapter_files": [
+    "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/development/v2_2_dev_p05_seed42/correct/predictions.jsonl"
+  ],
+  "samples": 3000,
+  "seeds": 1,
+  "baseline_cer_by_seed": [
+    0.1393695188433278
+  ],
+  "adapter_cer_by_seed": [
+    0.13905348818835428
+  ],
+  "baseline_mean_cer": 0.1393695188433278,
+  "baseline_sd_cer": 0.0,
+  "adapter_mean_cer": 0.13905348818835428,
+  "adapter_sd_cer": 0.0,
+  "delta_cer": -0.0003160306549735148,
+  "relative_delta": -0.002267573696144998,
+  "baseline_wer": 0.47990700763865823,
+  "adapter_wer": 0.48206575888409164,
+  "delta_wer": 0.00215875124543341,
+  "baseline_exact": 0.423,
+  "adapter_exact": 0.423,
+  "delta_exact": 0.0,
+  "bootstrap_iterations": 10000,
+  "ci95": [
+    -0.0012957963274052929,
+    0.0006629721630229351
+  ],
+  "p_two_sided": 0.5449455054494551,
+  "wins": 140,
+  "losses": 134,
+  "ties": 2726,
+  "domains": {
+    "cyrillic_handwriting": {
+      "samples": 1000,
+      "delta_cer": 0.0002670226969292422
+    },
+    "hkr_words": {
+      "samples": 1000,
+      "delta_cer": 0.0009449360020616776
+    },
+    "school_notebooks_clean": {
+      "samples": 483,
+      "delta_cer": -0.0010431154381084773
+    },
+    "school_notebooks_line": {
+      "samples": 517,
+      "delta_cer": -0.0013781007266349121
+    }
+  },
+  "length_buckets": {
+    "1-5": {
+      "samples": 565,
+      "delta_cer": -0.001835704451583292
+    },
+    "6-10": {
+      "samples": 1195,
+      "delta_cer": 0.0014029786315562232
+    },
+    "11-20": {
+      "samples": 821,
+      "delta_cer": 8.485362749256764e-05
+    },
+    "21+": {
+      "samples": 419,
+      "delta_cer": -0.0014924360626823174
+    }
+  }
+}

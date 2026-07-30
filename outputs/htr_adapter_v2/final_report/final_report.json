@@ -1,0 +1,806 @@
+{
+  "protocol": "crnn_ctc_hi_csg_r_late_correction_protocol_v2",
+  "created_at": "2026-07-30T19:57:54.112052+00:00",
+  "status": "complete_negative_development",
+  "hypothesis_h4_v2": "not_supported",
+  "preflight_status": "CONTINUE_FULL",
+  "preflight_decision": {
+    "status": "CONTINUE_FULL",
+    "selected_blank_logit_penalty": -0.4,
+    "selected_alpha_max": 0.25,
+    "best_v1_graph_scale": 0.0,
+    "d2_absolute_cer_gain": 0.000808132363574493,
+    "d3_absolute_cer_gain": -0.00019139977032027466,
+    "correct_better_strict_shuffle": true,
+    "branch_technically_active": true,
+    "allow_v2_2": true
+  },
+  "split_status": "PASS",
+  "split_counts": {
+    "train": 35498,
+    "dev": 3000,
+    "holdout": 1500
+  },
+  "split_domain_counts": {
+    "train": {
+      "cyrillic": 8500,
+      "hkr": 8500,
+      "school": 18498
+    },
+    "dev": {
+      "cyrillic": 1000,
+      "hkr": 1000,
+      "school": 1000
+    },
+    "holdout": {
+      "cyrillic": 500,
+      "hkr": 500,
+      "school": 500
+    }
+  },
+  "split_overlap_total": 0,
+  "smoke_status": "PASS",
+  "b0_status": "COMPLETE",
+  "b0_summary": {
+    "experiment_id": "htr_adapter_v2_b0_dev_seed42",
+    "mode": "b0_dev",
+    "seed": 42,
+    "best_dev_micro_cer": 0.13947486239498566,
+    "epochs_completed": 80,
+    "runtime_seconds": 14199.999373731,
+    "holdout_evaluated": false,
+    "device": "cuda",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "platform": "Linux-6.12.96+deb13-amd64-x86_64-with-glibc2.41",
+    "python": "3.11.12 (main, Apr  9 2025, 04:04:00) [Clang 20.1.0 ]",
+    "parameters": 3900892
+  },
+  "holdout_evaluated": false,
+  "test_evaluated": false,
+  "development_decisions": [
+    {
+      "path": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/development/v2_1_dev_p05_seed42/decision/dev_decision.json",
+      "stage": "dev",
+      "status": "STOP",
+      "conditions": {
+        "relative_cer_improvement_at_least_1_percent": false,
+        "correct_better_shuffle": false,
+        "empty_correction_invariant": true,
+        "no_domain_degrades_over_0_003": true,
+        "exact_drop_at_most_0_005": true
+      },
+      "baseline": {
+        "cer": 0.1393695188433278,
+        "wer": 0.47990700763865823,
+        "exact": 0.423
+      },
+      "correct": {
+        "cer": 0.13910615996418318,
+        "wer": 0.4814015277316506,
+        "exact": 0.4226666666666667
+      },
+      "shuffle": {
+        "cer": 0.13910615996418318,
+        "wer": 0.48073729657920955,
+        "exact": 0.423
+      },
+      "zero": {
+        "cer": 0.1393695188433278,
+        "wer": 0.47990700763865823,
+        "exact": 0.423
+      },
+      "relative_cer_improvement": 0.0018896447467875981,
+      "absolute_cer_delta": -0.00026335887914460954,
+      "correct_vs_shuffle_cer": 0.0,
+      "domain_cer_deltas": {
+        "cyrillic": 0.0005340453938584705,
+        "hkr": 0.0007731294562322855,
+        "school": -0.0012208067940552014
+      },
+      "alpha": 0.0008702169870957732,
+      "empty_correction_max": 0.0
+    },
+    {
+      "path": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/development/v2_2_dev_p05_seed42/decision/dev_decision.json",
+      "stage": "dev",
+      "status": "STOP",
+      "conditions": {
+        "relative_cer_improvement_at_least_1_percent": false,
+        "correct_better_shuffle": false,
+        "empty_correction_invariant": true,
+        "no_domain_degrades_over_0_003": true,
+        "exact_drop_at_most_0_005": true
+      },
+      "baseline": {
+        "cer": 0.1393695188433278,
+        "wer": 0.47990700763865823,
+        "exact": 0.423
+      },
+      "correct": {
+        "cer": 0.13905348818835428,
+        "wer": 0.48206575888409164,
+        "exact": 0.423
+      },
+      "shuffle": {
+        "cer": 0.13871112164546628,
+        "wer": 0.4814015277316506,
+        "exact": 0.4226666666666667
+      },
+      "zero": {
+        "cer": 0.1393695188433278,
+        "wer": 0.47990700763865823,
+        "exact": 0.423
+      },
+      "relative_cer_improvement": 0.002267573696144998,
+      "absolute_cer_delta": -0.0003160306549735148,
+      "correct_vs_shuffle_cer": 0.0003423665428879952,
+      "domain_cer_deltas": {
+        "cyrillic": 0.0002670226969292422,
+        "hkr": 0.0009449360020616776,
+        "school": -0.0013269639065817407
+      },
+      "alpha": 0.0010677630780264735,
+      "empty_correction_max": 0.0
+    }
+  ],
+  "development_statistics": {
+    "V2-2 correct vs B0": {
+      "baseline_files": [
+        "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/statistical_analysis/dev_b0_predictions.jsonl"
+      ],
+      "adapter_files": [
+        "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/development/v2_2_dev_p05_seed42/correct/predictions.jsonl"
+      ],
+      "samples": 3000,
+      "seeds": 1,
+      "baseline_cer_by_seed": [
+        0.1393695188433278
+      ],
+      "adapter_cer_by_seed": [
+        0.13905348818835428
+      ],
+      "baseline_mean_cer": 0.1393695188433278,
+      "baseline_sd_cer": 0.0,
+      "adapter_mean_cer": 0.13905348818835428,
+      "adapter_sd_cer": 0.0,
+      "delta_cer": -0.0003160306549735148,
+      "relative_delta": -0.002267573696144998,
+      "baseline_wer": 0.47990700763865823,
+      "adapter_wer": 0.48206575888409164,
+      "delta_wer": 0.00215875124543341,
+      "baseline_exact": 0.423,
+      "adapter_exact": 0.423,
+      "delta_exact": 0.0,
+      "bootstrap_iterations": 10000,
+      "ci95": [
+        -0.0012957963274052929,
+        0.0006629721630229351
+      ],
+      "p_two_sided": 0.5449455054494551,
+      "wins": 140,
+      "losses": 134,
+      "ties": 2726,
+      "domains": {
+        "cyrillic_handwriting": {
+          "samples": 1000,
+          "delta_cer": 0.0002670226969292422
+        },
+        "hkr_words": {
+          "samples": 1000,
+          "delta_cer": 0.0009449360020616776
+        },
+        "school_notebooks_clean": {
+          "samples": 483,
+          "delta_cer": -0.0010431154381084773
+        },
+        "school_notebooks_line": {
+          "samples": 517,
+          "delta_cer": -0.0013781007266349121
+        }
+      },
+      "length_buckets": {
+        "1-5": {
+          "samples": 565,
+          "delta_cer": -0.001835704451583292
+        },
+        "6-10": {
+          "samples": 1195,
+          "delta_cer": 0.0014029786315562232
+        },
+        "11-20": {
+          "samples": 821,
+          "delta_cer": 8.485362749256764e-05
+        },
+        "21+": {
+          "samples": 419,
+          "delta_cer": -0.0014924360626823174
+        }
+      }
+    },
+    "V2-2 correct vs shuffle": {
+      "baseline_files": [
+        "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/development/v2_2_dev_p05_seed42/shuffle/predictions.jsonl"
+      ],
+      "adapter_files": [
+        "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/development/v2_2_dev_p05_seed42/correct/predictions.jsonl"
+      ],
+      "samples": 3000,
+      "seeds": 1,
+      "baseline_cer_by_seed": [
+        0.13871112164546628
+      ],
+      "adapter_cer_by_seed": [
+        0.13905348818835428
+      ],
+      "baseline_mean_cer": 0.13871112164546628,
+      "baseline_sd_cer": 0.0,
+      "adapter_mean_cer": 0.13905348818835428,
+      "adapter_sd_cer": 0.0,
+      "delta_cer": 0.0003423665428879952,
+      "relative_delta": 0.002468198215302841,
+      "baseline_wer": 0.4814015277316506,
+      "adapter_wer": 0.48206575888409164,
+      "delta_wer": 0.0006642311524410194,
+      "baseline_exact": 0.4226666666666667,
+      "adapter_exact": 0.423,
+      "delta_exact": 0.0003333333333332966,
+      "bootstrap_iterations": 10000,
+      "ci95": [
+        -0.00018771965835838732,
+        0.0008923790912704133
+      ],
+      "p_two_sided": 0.23937606239376064,
+      "wins": 40,
+      "losses": 50,
+      "ties": 2910,
+      "domains": {
+        "cyrillic_handwriting": {
+          "samples": 1000,
+          "delta_cer": -0.0002670226969292283
+        },
+        "hkr_words": {
+          "samples": 1000,
+          "delta_cer": 0.0
+        },
+        "school_notebooks_clean": {
+          "samples": 483,
+          "delta_cer": 0.0
+        },
+        "school_notebooks_line": {
+          "samples": 517,
+          "delta_cer": 0.0009396141317965512
+        }
+      },
+      "length_buckets": {
+        "1-5": {
+          "samples": 565,
+          "delta_cer": -0.001835704451583292
+        },
+        "6-10": {
+          "samples": 1195,
+          "delta_cer": 0.00021584286639325656
+        },
+        "11-20": {
+          "samples": 821,
+          "delta_cer": -0.00016970725498514916
+        },
+        "21+": {
+          "samples": 419,
+          "delta_cer": 0.001153246048436335
+        }
+      }
+    }
+  },
+  "development_diagnostics": {
+    "samples": 3000,
+    "cer": 0.13905348818835428,
+    "macro_cer": 0.1295791725226205,
+    "wer": 0.48206575888409164,
+    "exact": 0.423,
+    "char_edits": 5280,
+    "target_chars": 37971,
+    "word_edits": 2903,
+    "target_words": 6022,
+    "pred_len_mean": 12.498333333333333,
+    "baseline": {
+      "samples": 3000,
+      "cer": 0.1393695188433278,
+      "macro_cer": 0.12935444606449767,
+      "wer": 0.47990700763865823,
+      "exact": 0.423,
+      "char_edits": 5292,
+      "target_chars": 37971,
+      "word_edits": 2890,
+      "target_words": 6022,
+      "pred_len_mean": 12.489
+    },
+    "ctc_loss": 0.8017527807424677,
+    "baseline_ctc_loss": 0.8005119428989735,
+    "auxiliary_ctc_loss": 3.681927523714431,
+    "preservation_kl": 0.00038514451790298213,
+    "alpha": 0.0010677630780264735,
+    "blank_ratio": 0.7980331641994036,
+    "gate": {
+      "mean": 0.014765542931854725,
+      "std": 0.05785902217030525,
+      "p10": 1.8476990770732726e-11,
+      "p50": 4.0336050233236165e-07,
+      "p90": 0.01658080890774727,
+      "max": 0.7952326536178589,
+      "empty": 0.0,
+      "nonempty": 0.015530119650065899,
+      "by_domain": {
+        "cyrillic": 0.011891464110558997,
+        "hkr": 0.0108411950319577,
+        "school": 0.02246275196758038
+      },
+      "by_uncertainty_tercile": {
+        "low": 2.688081091051231e-09,
+        "middle": 2.6774523576023057e-06,
+        "high": 0.044293951243162155
+      },
+      "by_risk_tercile": {
+        "low": 0.011659830808639526,
+        "middle": 0.015160026960074902,
+        "high": 0.01946815475821495
+      },
+      "improved_prediction_mean": 0.03060414109246007,
+      "hurt_prediction_mean": 0.030347556873127374
+    },
+    "uncertainty": {
+      "mean": 0.024386592209339142,
+      "std": 0.0911286473274231,
+      "p10": 1.425579515546005e-10,
+      "p50": 7.650061206732062e-07,
+      "p90": 0.029704032465815544,
+      "max": 0.8642100095748901,
+      "blank_argmax": 0.012213397771120071,
+      "nonblank_argmax": 0.07258174568414688,
+      "top1_changed": 0.560751736164093,
+      "by_domain": {
+        "cyrillic": 0.016897531868910878,
+        "hkr": 0.014070626932896887,
+        "school": 0.04457264988883657
+      },
+      "baseline_correct_samples": 0.013665148728618938,
+      "baseline_error_samples": 0.032780284516726946
+    },
+    "risk": {
+      "mean": 0.16142112016677856,
+      "std": 0.15206536650657654,
+      "p10": 0.046153850853443146,
+      "p50": 0.06923077255487442,
+      "p90": 0.39858970046043396,
+      "max": 0.9307692646980286
+    },
+    "delta_logits": {
+      "absolute": {
+        "mean": 2095.619873046875,
+        "std": 509.6487731933594,
+        "p10": 1893.231689453125,
+        "p50": 2206.085205078125,
+        "p90": 2419.665283203125,
+        "max": 2881.74609375
+      },
+      "l2": {
+        "mean": 6532.55810546875,
+        "std": 1589.4993896484375,
+        "p10": 5899.998046875,
+        "p50": 6874.3798828125,
+        "p90": 7548.87548828125,
+        "max": 8964.9912109375
+      }
+    },
+    "correction": {
+      "absolute": {
+        "mean": 0.03546066954731941,
+        "std": 0.13901583850383759,
+        "p10": 4.2231461383490654e-11,
+        "p50": 9.526082749289344e-07,
+        "p90": 0.03980334848165512,
+        "max": 2.0485527515411377
+      },
+      "l2": {
+        "mean": 0.11073783785104752,
+        "std": 0.4337727427482605,
+        "p10": 1.314061359725116e-10,
+        "p50": 2.9650268515979405e-06,
+        "p90": 0.12434651702642441,
+        "max": 6.429190158843994
+      },
+      "base_l2": {
+        "mean": 131.07408142089844,
+        "std": 25.007976531982422,
+        "p10": 99.34381103515625,
+        "p50": 130.4617156982422,
+        "p90": 163.4705047607422,
+        "max": 238.69998168945312
+      },
+      "l2_ratio": 0.0008448492383131932,
+      "empty_max": 0.0
+    },
+    "intervention": {
+      "top1_frame_change_rate": 0.00425886209481962,
+      "prediction_change_rate": 0.12766666666666668,
+      "gate_gt_005_rate": 0.07051751495178811,
+      "gate_gt_015_rate": 0.03749716657076598,
+      "changed_summary": {
+        "samples": 383,
+        "cer": 0.26304426052536883,
+        "macro_cer": 0.26368911226928243,
+        "wer": 0.7478599221789883,
+        "exact": 0.0731070496083551,
+        "char_edits": 2193,
+        "target_chars": 8337,
+        "word_edits": 961,
+        "target_words": 1285,
+        "pred_len_mean": 21.172323759791123
+      },
+      "unchanged_summary": {
+        "samples": 2617,
+        "cer": 0.10417088479449281,
+        "macro_cer": 0.10995207778705628,
+        "wer": 0.4099641123073675,
+        "exact": 0.4742071073748567,
+        "char_edits": 3087,
+        "target_chars": 29634,
+        "word_edits": 1942,
+        "target_words": 4737,
+        "pred_len_mean": 11.228888039740161
+      },
+      "precision": 0.36553524804177545,
+      "improved_samples": 140,
+      "hurt_samples": 134
+    },
+    "grouped": {
+      "domain": {
+        "cyrillic": {
+          "samples": 1000,
+          "cer": 0.12309746328437918,
+          "macro_cer": 0.13005675875122472,
+          "wer": 0.47939068100358423,
+          "exact": 0.516,
+          "char_edits": 922,
+          "target_chars": 7490,
+          "word_edits": 535,
+          "target_words": 1116,
+          "pred_len_mean": 7.397
+        },
+        "hkr": {
+          "samples": 1000,
+          "cer": 0.10935486642041062,
+          "macro_cer": 0.12438420041001311,
+          "wer": 0.4099255583126551,
+          "exact": 0.361,
+          "char_edits": 1273,
+          "target_chars": 11641,
+          "word_edits": 826,
+          "target_words": 2015,
+          "pred_len_mean": 11.55
+        },
+        "school": {
+          "samples": 1000,
+          "cer": 0.16374734607218683,
+          "macro_cer": 0.1342965584066236,
+          "wer": 0.5333794534763058,
+          "exact": 0.392,
+          "char_edits": 3085,
+          "target_chars": 18840,
+          "word_edits": 1542,
+          "target_words": 2891,
+          "pred_len_mean": 18.548
+        }
+      },
+      "dataset": {
+        "cyrillic_handwriting": {
+          "samples": 1000,
+          "cer": 0.12309746328437918,
+          "macro_cer": 0.13005675875122472,
+          "wer": 0.47939068100358423,
+          "exact": 0.516,
+          "char_edits": 922,
+          "target_chars": 7490,
+          "word_edits": 535,
+          "target_words": 1116,
+          "pred_len_mean": 7.397
+        },
+        "hkr_words": {
+          "samples": 1000,
+          "cer": 0.10935486642041062,
+          "macro_cer": 0.12438420041001311,
+          "wer": 0.4099255583126551,
+          "exact": 0.361,
+          "char_edits": 1273,
+          "target_chars": 11641,
+          "word_edits": 826,
+          "target_words": 2015,
+          "pred_len_mean": 11.55
+        },
+        "school_notebooks_clean": {
+          "samples": 483,
+          "cer": 0.10674547983310154,
+          "macro_cer": 0.10340140650699656,
+          "wer": 0.3822314049586777,
+          "exact": 0.6252587991718427,
+          "char_edits": 307,
+          "target_chars": 2876,
+          "word_edits": 185,
+          "target_words": 484,
+          "pred_len_mean": 5.950310559006211
+        },
+        "school_notebooks_line": {
+          "samples": 517,
+          "cer": 0.17401653720871962,
+          "macro_cer": 0.16315992081962147,
+          "wer": 0.5637723307021189,
+          "exact": 0.17408123791102514,
+          "char_edits": 2778,
+          "target_chars": 15964,
+          "word_edits": 1357,
+          "target_words": 2407,
+          "pred_len_mean": 30.317214700193425
+        }
+      },
+      "baseline_domain": {
+        "cyrillic": {
+          "samples": 1000,
+          "cer": 0.12283044058744993,
+          "macro_cer": 0.12971128935134354,
+          "wer": 0.47939068100358423,
+          "exact": 0.515,
+          "char_edits": 920,
+          "target_chars": 7490,
+          "word_edits": 535,
+          "target_words": 1116,
+          "pred_len_mean": 7.396
+        },
+        "hkr": {
+          "samples": 1000,
+          "cer": 0.10840993041834894,
+          "macro_cer": 0.12253874847632588,
+          "wer": 0.4064516129032258,
+          "exact": 0.367,
+          "char_edits": 1262,
+          "target_chars": 11641,
+          "word_edits": 819,
+          "target_words": 2015,
+          "pred_len_mean": 11.555
+        },
+        "school": {
+          "samples": 1000,
+          "cer": 0.16507430997876857,
+          "macro_cer": 0.13581330036582362,
+          "wer": 0.5313040470425459,
+          "exact": 0.387,
+          "char_edits": 3110,
+          "target_chars": 18840,
+          "word_edits": 1536,
+          "target_words": 2891,
+          "pred_len_mean": 18.516
+        }
+      },
+      "baseline_dataset": {
+        "cyrillic_handwriting": {
+          "samples": 1000,
+          "cer": 0.12283044058744993,
+          "macro_cer": 0.12971128935134354,
+          "wer": 0.47939068100358423,
+          "exact": 0.515,
+          "char_edits": 920,
+          "target_chars": 7490,
+          "word_edits": 535,
+          "target_words": 1116,
+          "pred_len_mean": 7.396
+        },
+        "hkr_words": {
+          "samples": 1000,
+          "cer": 0.10840993041834894,
+          "macro_cer": 0.12253874847632588,
+          "wer": 0.4064516129032258,
+          "exact": 0.367,
+          "char_edits": 1262,
+          "target_chars": 11641,
+          "word_edits": 819,
+          "target_words": 2015,
+          "pred_len_mean": 11.555
+        },
+        "school_notebooks_clean": {
+          "samples": 483,
+          "cer": 0.10778859527121001,
+          "macro_cer": 0.10481712329538416,
+          "wer": 0.3884297520661157,
+          "exact": 0.6190476190476191,
+          "char_edits": 310,
+          "target_chars": 2876,
+          "word_edits": 188,
+          "target_words": 484,
+          "pred_len_mean": 5.950310559006211
+        },
+        "school_notebooks_line": {
+          "samples": 517,
+          "cer": 0.17539463793535454,
+          "macro_cer": 0.16477104412795568,
+          "wer": 0.5600332363938513,
+          "exact": 0.1702127659574468,
+          "char_edits": 2800,
+          "target_chars": 15964,
+          "word_edits": 1348,
+          "target_words": 2407,
+          "pred_len_mean": 30.25531914893617
+        }
+      }
+    },
+    "checkpoint": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/v2_2_dev_p05_seed42/best.pt",
+    "base_checkpoint": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/b0_dev_seed42/best.pt",
+    "manifest": "/home/galetka/Documents/Programming/hi-csg-r/data/experiments/htr_adapter_v2/splits/dev.jsonl",
+    "mode": "correct",
+    "variant": "v2_2",
+    "seed": 42,
+    "blank_logit_penalty": -0.4,
+    "shuffle_map": null,
+    "backbone_state_sha256": "02a6772823cb334055060a3025801051bba6344134568b7664d26ed4b542195a"
+  },
+  "failure_analysis": {
+    "samples": 3000,
+    "groups": {
+      "A_baseline_correct_v2_wrong": {
+        "samples": 28,
+        "cer": 0.09302325581395349,
+        "uncertainty_mean": 0.02364182472229004,
+        "gate_mean": 0.017235665099828372,
+        "correction_norm_mean": 0.1293732442760042
+      },
+      "B_baseline_wrong_v2_correct": {
+        "samples": 28,
+        "cer": 0.0,
+        "uncertainty_mean": 0.024008159575584744,
+        "gate_mean": 0.016327748923296376,
+        "correction_norm_mean": 0.12511275735284602
+      },
+      "C_both_wrong": {
+        "samples": 1703,
+        "cer": 0.19966545012165451,
+        "uncertainty_mean": 0.032924512055395164,
+        "gate_mean": 0.01870647203683668,
+        "correction_norm_mean": 0.14061117229286768
+      },
+      "D_both_correct": {
+        "samples": 1241,
+        "cer": 0.0,
+        "uncertainty_mean": 0.013440050478963184,
+        "gate_mean": 0.009842460710562316,
+        "correction_norm_mean": 0.072440708556304
+      }
+    },
+    "case_counts": {
+      "graph_helps": 20,
+      "graph_hurts": 20,
+      "high_intervention_unchanged": 20,
+      "low_intervention_errors": 20
+    },
+    "intervention_precision": 0.36553524804177545,
+    "changed_prediction_rate": 0.12766666666666668
+  },
+  "selection": {
+    "protocol": "crnn_ctc_hi_csg_r_late_correction_protocol_v2",
+    "purpose": "freeze_candidate_before_one_shot_holdout",
+    "created_at": "2026-07-30T19:56:21.703846+00:00",
+    "selection_metric": "development micro-CER",
+    "holdout_used": false,
+    "test_used": false,
+    "status": "STOP",
+    "selected": null,
+    "candidates": [
+      {
+        "name": "v2_1_p05",
+        "evaluation_dir": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/development/v2_1_dev_p05_seed42",
+        "checkpoint": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/v2_1_dev_p05_seed42/best.pt",
+        "checkpoint_sha256": "b9b63c54265ab3b1e0d55aceb33f7ed68ffd2bcbcea906fdfd5adeba1826ea61",
+        "variant": "v2_1",
+        "lambda_preservation": 0.05,
+        "decision": {
+          "stage": "dev",
+          "status": "STOP",
+          "conditions": {
+            "relative_cer_improvement_at_least_1_percent": false,
+            "correct_better_shuffle": false,
+            "empty_correction_invariant": true,
+            "no_domain_degrades_over_0_003": true,
+            "exact_drop_at_most_0_005": true
+          },
+          "baseline": {
+            "cer": 0.1393695188433278,
+            "wer": 0.47990700763865823,
+            "exact": 0.423
+          },
+          "correct": {
+            "cer": 0.13910615996418318,
+            "wer": 0.4814015277316506,
+            "exact": 0.4226666666666667
+          },
+          "shuffle": {
+            "cer": 0.13910615996418318,
+            "wer": 0.48073729657920955,
+            "exact": 0.423
+          },
+          "zero": {
+            "cer": 0.1393695188433278,
+            "wer": 0.47990700763865823,
+            "exact": 0.423
+          },
+          "relative_cer_improvement": 0.0018896447467875981,
+          "absolute_cer_delta": -0.00026335887914460954,
+          "correct_vs_shuffle_cer": 0.0,
+          "domain_cer_deltas": {
+            "cyrillic": 0.0005340453938584705,
+            "hkr": 0.0007731294562322855,
+            "school": -0.0012208067940552014
+          },
+          "alpha": 0.0008702169870957732,
+          "empty_correction_max": 0.0
+        }
+      },
+      {
+        "name": "v2_2_p05",
+        "evaluation_dir": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/development/v2_2_dev_p05_seed42",
+        "checkpoint": "/home/galetka/Documents/Programming/hi-csg-r/outputs/htr_adapter_v2/v2_2_dev_p05_seed42/best.pt",
+        "checkpoint_sha256": "b66f4ba89a747a518580b14adb4aefe7c34e6d696d27411da5fac13adc2c1da7",
+        "variant": "v2_2",
+        "lambda_preservation": 0.05,
+        "decision": {
+          "stage": "dev",
+          "status": "STOP",
+          "conditions": {
+            "relative_cer_improvement_at_least_1_percent": false,
+            "correct_better_shuffle": false,
+            "empty_correction_invariant": true,
+            "no_domain_degrades_over_0_003": true,
+            "exact_drop_at_most_0_005": true
+          },
+          "baseline": {
+            "cer": 0.1393695188433278,
+            "wer": 0.47990700763865823,
+            "exact": 0.423
+          },
+          "correct": {
+            "cer": 0.13905348818835428,
+            "wer": 0.48206575888409164,
+            "exact": 0.423
+          },
+          "shuffle": {
+            "cer": 0.13871112164546628,
+            "wer": 0.4814015277316506,
+            "exact": 0.4226666666666667
+          },
+          "zero": {
+            "cer": 0.1393695188433278,
+            "wer": 0.47990700763865823,
+            "exact": 0.423
+          },
+          "relative_cer_improvement": 0.002267573696144998,
+          "absolute_cer_delta": -0.0003160306549735148,
+          "correct_vs_shuffle_cer": 0.0003423665428879952,
+          "domain_cer_deltas": {
+            "cyrillic": 0.0002670226969292422,
+            "hkr": 0.0009449360020616776,
+            "school": -0.0013269639065817407
+          },
+          "alpha": 0.0010677630780264735,
+          "empty_correction_max": 0.0
+        }
+      }
+    ]
+  },
+  "holdout": null,
+  "final_seed_summaries": [],
+  "final_statistics": null,
+  "conclusion_ru": "H4-v2 не подтверждена. Оба разрешенных development-варианта не прошли заранее установленный dev gate: снижение CER было меньше 1%, а correct graph не превзошел matched shuffle. Согласно frozen protocol p10, holdout, final seeds и test не запускались. Отрицательный вывод v1 сохранен отдельно.",
+  "v1_preserved": true,
+  "v1_conclusion": "negative",
+  "parameter_budget": {
+    "image_only_parameters": 3900892,
+    "v2_trainable_parameters": 196156,
+    "relative_increase_percent": 5.028490919512768
+  }
+}

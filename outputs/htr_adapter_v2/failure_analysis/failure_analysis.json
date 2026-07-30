@@ -1,0 +1,41 @@
+{
+  "samples": 3000,
+  "groups": {
+    "A_baseline_correct_v2_wrong": {
+      "samples": 28,
+      "cer": 0.09302325581395349,
+      "uncertainty_mean": 0.02364182472229004,
+      "gate_mean": 0.017235665099828372,
+      "correction_norm_mean": 0.1293732442760042
+    },
+    "B_baseline_wrong_v2_correct": {
+      "samples": 28,
+      "cer": 0.0,
+      "uncertainty_mean": 0.024008159575584744,
+      "gate_mean": 0.016327748923296376,
+      "correction_norm_mean": 0.12511275735284602
+    },
+    "C_both_wrong": {
+      "samples": 1703,
+      "cer": 0.19966545012165451,
+      "uncertainty_mean": 0.032924512055395164,
+      "gate_mean": 0.01870647203683668,
+      "correction_norm_mean": 0.14061117229286768
+    },
+    "D_both_correct": {
+      "samples": 1241,
+      "cer": 0.0,
+      "uncertainty_mean": 0.013440050478963184,
+      "gate_mean": 0.009842460710562316,
+      "correction_norm_mean": 0.072440708556304
+    }
+  },
+  "case_counts": {
+    "graph_helps": 20,
+    "graph_hurts": 20,
+    "high_intervention_unchanged": 20,
+    "low_intervention_errors": 20
+  },
+  "intervention_precision": 0.36553524804177545,
+  "changed_prediction_rate": 0.12766666666666668
+}
