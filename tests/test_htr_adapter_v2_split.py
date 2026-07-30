@@ -1,7 +1,11 @@
 from __future__ import annotations
 
 from src.htr.dataset_adapter_v2 import DomainBalancedBatchSampler
-from tools.create_hi_csg_r_adapter_v2_split import choose_group_subset, group_key
+from tools.create_hi_csg_r_adapter_v2_split import (
+    choose_group_subset,
+    group_key,
+    leakage_safe_group_keys,
+)
 
 
 def test_split_subset_selection_reaches_exact_target() -> None:
@@ -39,3 +43,23 @@ def test_domain_balanced_sampler_is_reproducible() -> None:
         assert sum("hkr" in value for value in domains) == 2
         assert sum("school" in value for value in domains) == 2
 
+
+def test_exact_hash_unions_distinct_hierarchy_groups() -> None:
+    rows = [
+        {
+            "dataset": "hkr_words",
+            "sample_id": "a",
+            "image_path": "a.png",
+            "source_metadata": {"page_id": "p1"},
+            "xaligned_source_image_sha1": "same",
+        },
+        {
+            "dataset": "hkr_words",
+            "sample_id": "b",
+            "image_path": "b.png",
+            "source_metadata": {"page_id": "p2"},
+            "xaligned_source_image_sha1": "same",
+        },
+    ]
+    safe = leakage_safe_group_keys(rows)
+    assert safe["a"] == safe["b"]

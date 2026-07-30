@@ -57,7 +57,10 @@ def main() -> None:
         for name, values in rows.items()
     }
     group_sets = {
-        name: {group_key(row) for row in values}
+        name: {
+            str(row.get("adapter_v2_group_id") or group_key(row))
+            for row in values
+        }
         for name, values in rows.items()
     }
     hash_sets = {
@@ -180,4 +183,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
