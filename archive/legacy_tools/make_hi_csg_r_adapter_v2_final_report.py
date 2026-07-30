@@ -504,6 +504,7 @@ def evidence_files(root: Path, output: Path) -> list[Path]:
         "final_evaluation/**/*",
         "statistical_analysis/*",
         "failure_analysis/**/*",
+        "failed_runs/**/invalidation_report.*",
     )
     paths: set[Path] = set()
     for pattern in patterns:

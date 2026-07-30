@@ -20,5 +20,5 @@ blank_logit_penalty_end: -0.4
 height_bins: 4
 feature_size: 256
 split_seed: 20260730
+domain_balanced: true
 holdout_evaluation_allowed: false
-

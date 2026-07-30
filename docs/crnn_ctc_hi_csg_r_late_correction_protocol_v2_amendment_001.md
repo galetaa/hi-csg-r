@@ -14,6 +14,8 @@
   diagnostics в evaluator;
 - автоматический выбор dev-кандидата исключительно по frozen dev gate;
 - безопасный resume длинных B0/v2 runs с проверкой config и backbone hash;
+- исправление B0 sampler до требуемого domain-balanced режима; первый
+  width-batched partial run остановлен до завершения и исключен из evidence;
 - блокировка final trainer без положительных frozen dev/holdout artifacts;
 - материализация baseline predictions для paired bootstrap;
 - Holm summary, failure analysis и final report;

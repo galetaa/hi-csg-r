@@ -1,0 +1,14 @@
+{
+  "status": "INVALIDATED_BEFORE_V2_TRAINING",
+  "reason": "B0 used width-bucket batches while protocol v2 requires domain-balanced development batches",
+  "completed_epochs": 11,
+  "planned_epochs": 80,
+  "last_validation_cer": 0.17197334808143055,
+  "last_validation_exact": 0.35,
+  "holdout_evaluated": false,
+  "test_evaluated": false,
+  "used_for_model_selection": false,
+  "used_as_v2_base_checkpoint": false,
+  "invalid_checkpoint_sha256": "432412f0349b93c98e262ae5fb4bdd291403863f98950da5cfe8e6c257e84909",
+  "corrected_config_sha256": "88ce9892369a4fe01a97fe2a75025c64c77729f3bfae065bdfdf0008a9e9f155"
+}
