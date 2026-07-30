@@ -19,9 +19,9 @@ until the preregistered experiments are actually run.
 | 6 | Unit/integration tests | three required test modules | Complete |
 | 7 | Trainer/evaluator and metadata | training/evaluation CLIs and runtime module | Complete |
 | 8 | One-sample and 64-128 sample overfit | notebook smoke section and trainer support | Complete; preregistered smoke gate PASS |
-| 9 | Seed-42 development comparison | automated preliminary and full validation gates | Code complete; runs pending |
-| 10 | Final three seeds | frozen configs and guarded notebook stage | Pending validation gate |
-| 11 | One-time final evaluation | freeze registry and double-guarded notebook stage | Pending final checkpoints |
+| 9 | Seed-42 development comparison | automated preliminary and full validation gates | Complete; preliminary gate STOP |
+| 10 | Final three seeds | frozen configs and guarded notebook stage | Not run; blocked by seed-42 STOP |
+| 11 | One-time final evaluation | freeze registry and double-guarded notebook stage | Not run; blocked by seed-42 STOP |
 | 12 | Paired statistics and report | bootstrap, Holm comparison, report tools | Code complete; final inputs pending |
 
 ## Specification Coverage
@@ -111,16 +111,32 @@ until the preregistered experiments are actually run.
   and no error outputs. The one-sample CER reaches `0.0`; auxiliary-only loss on
   128 samples decreases from `7.94` to `2.85`; the full-128 CER decreases from
   `0.288` to `0.070`; all six machine-checked smoke conditions pass.
+- Seed-42 M0-FT and M3 runs completed all 25 joint epochs (plus five M3 warm-up
+  epochs). Validation CER is `0.079537` for M0-FT and `0.082196` for M3, a
+  `-3.342%` relative improvement (that is, a degradation).
+- M3 degrades CER in all three core validation domains by `0.002104` to
+  `0.003033`. Correct graphs are slightly better than shuffled graphs
+  (`0.082196` versus `0.083004`), and gate/gradient diagnostics pass, but the
+  frozen primary and domain gates fail.
+- The seed-42 notebook now records this expected protocol `STOP` without an error
+  output, reuses the verified completed training runs on repetition, and blocks
+  M2, seeds 43/44, and test. H4 is classified as exploratory.
 - All CLI entry points import and expose help successfully.
 
-## Not Yet Scientifically Complete
+## Stopped Per Frozen Protocol
 
 The following cannot be marked complete by code inspection:
 
-1. M0-FT/M3/M2 seed-42 development runs and validation gate;
-2. seeds 43/44 after a positive gate;
+The frozen seed-42 continuation gate failed. Consequently, the following stages are
+intentionally not executed rather than pending:
+
+1. M2 seed-42;
+2. M0-FT/M3 seeds 43/44;
 3. the one-time mixed/domain/page-disjoint/robustness test;
-4. final paired confidence intervals, tables, figures, report, and H4 classification.
+4. final paired test confidence intervals.
+
+The negative validation result and exploratory H4 classification are recorded in
+`outputs/htr_adapter_v1/statistical_analysis/validation_gate/validation_gate.md`.
 
 These stages are encoded in
 `notebooks/htr_adapter_v1_full_experiment.ipynb`. Until they are executed in order,
