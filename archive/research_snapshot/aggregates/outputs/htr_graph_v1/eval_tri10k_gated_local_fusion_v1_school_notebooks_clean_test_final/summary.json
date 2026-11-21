@@ -1,0 +1,25 @@
+{
+  "argmax_blank_ratio": 0.8231492436675445,
+  "blank_logit_penalty": -0.2,
+  "cer": 0.1672288750210828,
+  "checkpoint_epoch": 80,
+  "checkpoint_val_cer": 0.10382374207817617,
+  "exact": 0.484,
+  "gate_mean": 0.07100472168531269,
+  "graph_channels": 3,
+  "grouped": {
+    "school_notebooks_clean": {
+      "cer": 0.1672288750210828,
+      "exact": 0.484,
+      "n": 2000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 5.8405,
+      "wer": 0.5277777777777778
+    }
+  },
+  "n": 2000,
+  "out_dir": "outputs/htr_graph_v1/eval_tri10k_gated_local_fusion_v1_school_notebooks_clean_test_final",
+  "pred_empty_ratio": 0.0,
+  "pred_len_mean": 5.8405,
+  "wer": 0.5277777777777778
+}

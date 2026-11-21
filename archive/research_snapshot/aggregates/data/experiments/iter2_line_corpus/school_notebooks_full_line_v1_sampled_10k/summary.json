@@ -1,0 +1,33 @@
+{
+  "available_length_buckets": {
+    "2_words": 11580,
+    "3_words": 6920,
+    "4_7_words": 28656,
+    "8plus_words": 2726
+  },
+  "available_total": 49882,
+  "geometry_root": "data/experiments/iter2_line_groups/school_notebooks_full_coco_geometry_v1",
+  "out_root": "data/experiments/iter2_line_corpus/school_notebooks_full_line_v1_sampled_10k",
+  "seed": 42,
+  "selected_length_buckets": {
+    "2_words": 2000,
+    "3_words": 2000,
+    "4_7_words": 4500,
+    "8plus_words": 1500
+  },
+  "selected_line_corpus_buckets": {
+    "clean_line": 6500,
+    "hard_line": 3500
+  },
+  "selected_n_words": {
+    "max": 15,
+    "mean": 4.6476,
+    "min": 2
+  },
+  "selected_total": 10000,
+  "selected_x_gap_max_norm_by_height": {
+    "max": 0.7156862745098039,
+    "mean": 0.2480660306813953
+  },
+  "split": "train"
+}

@@ -1,0 +1,5 @@
+{
+  "n_repeats": 64,
+  "out_dir": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/one_sample",
+  "source": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting"
+}

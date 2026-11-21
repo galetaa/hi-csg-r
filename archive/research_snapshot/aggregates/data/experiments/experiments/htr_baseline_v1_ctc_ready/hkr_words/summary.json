@@ -1,0 +1,29 @@
+{
+  "categories": {
+    "null": 64943
+  },
+  "dataset": "hkr_words",
+  "levels": {
+    "phrase": 29787,
+    "word": 35156
+  },
+  "num_kept": 64943,
+  "num_rejected": 0,
+  "num_source_records": 64943,
+  "source_dir": "data/experiments/htr_baseline_v1/hkr_words",
+  "source_summary": {
+    "num_chars": 52,
+    "num_records": 64943,
+    "splits": {
+      "test": 6495,
+      "train": 51954,
+      "val": 6494
+    }
+  },
+  "splits": {
+    "test": 6495,
+    "train": 51954,
+    "val": 6494
+  },
+  "time_downsample": 4
+}

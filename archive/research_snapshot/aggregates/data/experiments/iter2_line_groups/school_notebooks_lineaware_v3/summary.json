@@ -1,0 +1,51 @@
+{
+  "graph_root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed_school_lineaware_v3",
+  "min_words": 2,
+  "quality_root": "data/experiments/iter2_quality_manifests/school_notebooks_lineaware_v3",
+  "school_raw_dir": "data/interim/school_notebooks",
+  "splits": {
+    "test": {
+      "n_all_clean_core": 214,
+      "n_has_hard_real": 39,
+      "n_has_invalid": 0,
+      "n_line_groups": 253,
+      "n_long_groups": 0,
+      "n_short_groups": 223,
+      "n_word_instances": 537,
+      "skipped": {
+        "below_min_words": 1390,
+        "missing_group_key": 73
+      }
+    },
+    "train": {
+      "n_all_clean_core": 570,
+      "n_has_hard_real": 143,
+      "n_has_invalid": 0,
+      "n_line_groups": 713,
+      "n_long_groups": 0,
+      "n_short_groups": 663,
+      "n_word_instances": 1478,
+      "skipped": {
+        "below_min_words": 8239,
+        "missing_group_key": 283
+      }
+    },
+    "val": {
+      "n_all_clean_core": 240,
+      "n_has_hard_real": 42,
+      "n_has_invalid": 0,
+      "n_line_groups": 282,
+      "n_long_groups": 0,
+      "n_short_groups": 249,
+      "n_word_instances": 599,
+      "skipped": {
+        "below_min_words": 1361,
+        "missing_group_key": 40
+      }
+    }
+  },
+  "total": {
+    "n_line_groups": 1248,
+    "n_word_instances": 2614
+  }
+}

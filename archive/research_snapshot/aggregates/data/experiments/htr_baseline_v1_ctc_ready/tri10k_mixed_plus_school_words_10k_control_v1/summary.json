@@ -1,0 +1,30 @@
+{
+  "base_root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed",
+  "base_train_n": 30000,
+  "candidate_counts": {
+    "school_notebooks_clean_word": 221483
+  },
+  "merged_by_dataset": {
+    "cyrillic_handwriting": 10000,
+    "hkr_words": 10000,
+    "school_notebooks_clean": 20000
+  },
+  "merged_train_n": 40000,
+  "oov_rejected_n": 45,
+  "out_root": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_words_10k_control_v1",
+  "seed": 20260627,
+  "selected_by_category": {
+    "pupil_comment": 420,
+    "pupil_text": 9390,
+    "teacher_comment": 190
+  },
+  "selected_by_dataset": {
+    "school_notebooks_clean": 10000
+  },
+  "selected_n": 10000,
+  "source_roots": {
+    "cyrillic_handwriting": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting",
+    "hkr_words": "data/experiments/htr_baseline_v1_ctc_ready/hkr_words",
+    "school_notebooks_clean": "data/experiments/htr_baseline_v1_ctc_ready/school_notebooks_clean"
+  }
+}

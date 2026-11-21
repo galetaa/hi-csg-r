@@ -1,0 +1,88 @@
+{
+  "annotation_inconsistencies": [
+    {},
+    {},
+    {}
+  ],
+  "annotations_csv": "outputs/h2_gold_audit_v1/school_foreground_v3_random/random_100_browser_annotations.csv",
+  "fix_grade_counts": {
+    "good_fix": 92,
+    "partial_fix": 8
+  },
+  "metrics": {
+    "auto_selected": {
+      "count": 100,
+      "n": 100,
+      "rate": 1.0,
+      "wilson_95_high": 0.9999999999999999,
+      "wilson_95_low": 0.9630051925239981
+    },
+    "background_artifact_after": {
+      "count": 7,
+      "n": 100,
+      "rate": 0.07,
+      "wilson_95_high": 0.13749671006529757,
+      "wilson_95_low": 0.034318824364064096
+    },
+    "bad_fix": {
+      "count": 0,
+      "n": 100,
+      "rate": 0.0,
+      "wilson_95_high": 0.03699480747600191,
+      "wilson_95_low": 0.0
+    },
+    "good_fix": {
+      "count": 92,
+      "n": 100,
+      "rate": 0.92,
+      "wilson_95_high": 0.9589070305141891,
+      "wilson_95_low": 0.8500173312059693
+    },
+    "partial_fix": {
+      "count": 8,
+      "n": 100,
+      "rate": 0.08,
+      "wilson_95_high": 0.14998266879403072,
+      "wilson_95_low": 0.04109296948581091
+    },
+    "real_ink_erased": {
+      "count": 4,
+      "n": 100,
+      "rate": 0.04,
+      "wilson_95_high": 0.09837217232607373,
+      "wilson_95_low": 0.015663050551848016
+    },
+    "skeleton_follows_ink_after": {
+      "count": 96,
+      "n": 100,
+      "rate": 0.96,
+      "wilson_95_high": 0.984336949448152,
+      "wilson_95_low": 0.9016278276739262
+    },
+    "strict_good": {
+      "count": 89,
+      "n": 100,
+      "rate": 0.89,
+      "wilson_95_high": 0.9374586804477487,
+      "wilson_95_low": 0.8136853697209698
+    },
+    "strict_usable": {
+      "count": 89,
+      "n": 100,
+      "rate": 0.89,
+      "wilson_95_high": 0.9374586804477487,
+      "wilson_95_low": 0.8136853697209698
+    }
+  },
+  "missing_required_fields": {
+    "best_variant": 0,
+    "border_artifact_after": 0,
+    "fix_grade": 0,
+    "real_ink_erased": 0,
+    "skeleton_follows_ink_after": 0
+  },
+  "n": 100,
+  "variant_counts": {
+    "school_dark_auto": 100
+  }
+}

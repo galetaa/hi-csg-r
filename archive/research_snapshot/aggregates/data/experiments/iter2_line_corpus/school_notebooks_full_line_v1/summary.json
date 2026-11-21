@@ -1,0 +1,61 @@
+{
+  "geometry_root": "data/experiments/iter2_line_groups/school_notebooks_full_coco_geometry_v1",
+  "out_root": "data/experiments/iter2_line_corpus/school_notebooks_full_line_v1",
+  "splits": {
+    "test": {
+      "excluded": 2,
+      "line_corpus_buckets": {
+        "clean_line": 3448,
+        "hard_line": 1597
+      },
+      "n": 5045,
+      "n_words": {
+        "max": 14.0,
+        "mean": 4.521704658077304,
+        "min": 2.0,
+        "p50": 4.0,
+        "p90": 7.0,
+        "p95": 8.0
+      },
+      "source_candidates": 5047
+    },
+    "train": {
+      "excluded": 94,
+      "line_corpus_buckets": {
+        "clean_line": 35576,
+        "hard_line": 14306
+      },
+      "n": 49882,
+      "n_words": {
+        "max": 15.0,
+        "mean": 4.342087326089572,
+        "min": 2.0,
+        "p50": 4.0,
+        "p90": 7.0,
+        "p95": 8.0
+      },
+      "source_candidates": 49976
+    },
+    "val": {
+      "excluded": 5,
+      "line_corpus_buckets": {
+        "clean_line": 3983,
+        "hard_line": 1063
+      },
+      "n": 5046,
+      "n_words": {
+        "max": 12.0,
+        "mean": 4.47205707491082,
+        "min": 2.0,
+        "p50": 4.0,
+        "p90": 7.0,
+        "p95": 7.0
+      },
+      "source_candidates": 5051
+    }
+  },
+  "total": {
+    "excluded": 101,
+    "n": 59973
+  }
+}

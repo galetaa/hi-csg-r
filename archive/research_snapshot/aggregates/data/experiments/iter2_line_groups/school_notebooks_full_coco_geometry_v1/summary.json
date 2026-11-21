@@ -1,0 +1,143 @@
+{
+  "in_root": "data/experiments/iter2_line_groups/school_notebooks_full_coco",
+  "large_gap_threshold": 3.5,
+  "out_root": "data/experiments/iter2_line_groups/school_notebooks_full_coco_geometry_v1",
+  "splits": {
+    "test": {
+      "bucket_counts": {
+        "clean_line": 3448,
+        "hard_line": 1597,
+        "large_gap_outlier": 2
+      },
+      "bucket_rates": {
+        "clean_line": 0.6831781256191797,
+        "hard_line": 0.31642559936596,
+        "large_gap_outlier": 0.00039627501486031304
+      },
+      "n": 5047,
+      "n_words": {
+        "max": 14.0,
+        "mean": 4.521497919556172,
+        "p50": 4.0,
+        "p90": 7.0,
+        "p95": 8.0
+      },
+      "x_gap_max_norm_by_height": {
+        "max": 5.46,
+        "mean": 0.4002879483318792,
+        "p50": 0.29441624365482233,
+        "p90": 0.8757761979354944,
+        "p95": 1.103183023872679
+      },
+      "x_gap_max_norm_by_median_word_width": {
+        "max": 4.747826086956522,
+        "mean": 0.22964254426917027,
+        "p50": 0.1592505854800937,
+        "p90": 0.5372725114324942,
+        "p95": 0.6526247840367563
+      }
+    },
+    "train": {
+      "bucket_counts": {
+        "clean_line": 35576,
+        "hard_line": 14306,
+        "large_gap_outlier": 94
+      },
+      "bucket_rates": {
+        "clean_line": 0.7118616936129342,
+        "hard_line": 0.28625740355370577,
+        "large_gap_outlier": 0.0018809028333600128
+      },
+      "n": 49976,
+      "n_words": {
+        "max": 15.0,
+        "mean": 4.340143268769009,
+        "p50": 4.0,
+        "p90": 7.0,
+        "p95": 8.0
+      },
+      "x_gap_max_norm_by_height": {
+        "max": 15.51764705882353,
+        "mean": 0.4077748415870958,
+        "p50": 0.2868217054263566,
+        "p90": 0.8958333333333334,
+        "p95": 1.150831087151842
+      },
+      "x_gap_max_norm_by_median_word_width": {
+        "max": 9.07843137254902,
+        "mean": 0.22507214300091447,
+        "p50": 0.1507052526879174,
+        "p90": 0.4953774928774929,
+        "p95": 0.6385949000593016
+      }
+    },
+    "val": {
+      "bucket_counts": {
+        "clean_line": 3983,
+        "hard_line": 1063,
+        "large_gap_outlier": 5
+      },
+      "bucket_rates": {
+        "clean_line": 0.7885567214412987,
+        "hard_line": 0.21045337556919422,
+        "large_gap_outlier": 0.0009899029895070284
+      },
+      "n": 5051,
+      "n_words": {
+        "max": 12.0,
+        "mean": 4.470005939417937,
+        "p50": 4.0,
+        "p90": 7.0,
+        "p95": 7.0
+      },
+      "x_gap_max_norm_by_height": {
+        "max": 12.977272727272727,
+        "mean": 0.37881061068189126,
+        "p50": 0.25333333333333335,
+        "p90": 0.855072463768116,
+        "p95": 1.0954137931034484
+      },
+      "x_gap_max_norm_by_median_word_width": {
+        "max": 11.954198473282442,
+        "mean": 0.1943015110296824,
+        "p50": 0.1242603550295858,
+        "p90": 0.4416243654822335,
+        "p95": 0.5558046836073742
+      }
+    }
+  },
+  "total": {
+    "bucket_counts": {
+      "clean_line": 43007,
+      "hard_line": 16966,
+      "large_gap_outlier": 101
+    },
+    "bucket_rates": {
+      "clean_line": 0.7159003895195925,
+      "hard_line": 0.28241835070080235,
+      "large_gap_outlier": 0.0016812597796051537
+    },
+    "n": 60074,
+    "n_words": {
+      "max": 15.0,
+      "mean": 4.366298232180311,
+      "p50": 4.0,
+      "p90": 7.0,
+      "p95": 8.0
+    },
+    "x_gap_max_norm_by_height": {
+      "max": 15.51764705882353,
+      "mean": 0.40471054287948083,
+      "p50": 0.28484848484848485,
+      "p90": 0.8909906759906765,
+      "p95": 1.1418095691753996
+    },
+    "x_gap_max_norm_by_median_word_width": {
+      "max": 11.954198473282442,
+      "mean": 0.22286893284534287,
+      "p50": 0.14925373134328357,
+      "p90": 0.49382716049382713,
+      "p95": 0.6342978230230171
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "out_dir": "data/experiments/htr_baseline_v1_ctc_ready/school_notebooks_clean/subsets/train50k",
+  "requested": {
+    "test_n": 24623,
+    "train_n": 50000,
+    "val_n": 24214
+  },
+  "seed": 44,
+  "source": "data/experiments/htr_baseline_v1_ctc_ready/school_notebooks_clean",
+  "summary": {
+    "categories": {
+      "pupil_comment": 4317,
+      "pupil_text": 92584,
+      "teacher_comment": 1936
+    },
+    "count": 98837,
+    "levels": {
+      "phrase": 1181,
+      "word": 97656
+    },
+    "splits": {
+      "test": 24623,
+      "train": 50000,
+      "val": 24214
+    },
+    "text_len": {
+      "max": 21,
+      "mean": 5.891356475813714,
+      "min": 2
+    }
+  }
+}

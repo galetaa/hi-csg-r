@@ -1,0 +1,65 @@
+{
+  "dataset": "iam",
+  "effective_max_side": 10000,
+  "grid_suppression_enabled": true,
+  "input_image_path": "data/processed/iam/feature_images/iam_line_010384.png",
+  "level": "line",
+  "methods": {
+    "adaptive_gaussian": {
+      "binary_path": "outputs/graph_pilot/iam/pilot_iam_0018/binary_adaptive_gaussian.png",
+      "dataset": "iam",
+      "feature_scaled_path": "outputs/graph_pilot/iam/pilot_iam_0018/feature_scaled.png",
+      "foreground_pixels": 21093,
+      "foreground_ratio": 0.07396692476014138,
+      "image_height": 156,
+      "image_width": 1828,
+      "input_image_path": "data/processed/iam/feature_images/iam_line_010384.png",
+      "level": "line",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot/iam/pilot_iam_0018/skeleton_adaptive_gaussian.png",
+      "skeleton_pixels": 4246,
+      "threshold_info": {
+        "block_size": 35,
+        "offset": 10.0
+      }
+    },
+    "otsu": {
+      "binary_path": "outputs/graph_pilot/iam/pilot_iam_0018/binary_otsu.png",
+      "dataset": "iam",
+      "feature_scaled_path": "outputs/graph_pilot/iam/pilot_iam_0018/feature_scaled.png",
+      "foreground_pixels": 20287,
+      "foreground_ratio": 0.07114052067553162,
+      "image_height": 156,
+      "image_width": 1828,
+      "input_image_path": "data/processed/iam/feature_images/iam_line_010384.png",
+      "level": "line",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot/iam/pilot_iam_0018/skeleton_otsu.png",
+      "skeleton_pixels": 4113,
+      "threshold_info": {
+        "threshold": 184.0
+      }
+    },
+    "sauvola": {
+      "binary_path": "outputs/graph_pilot/iam/pilot_iam_0018/binary_sauvola.png",
+      "dataset": "iam",
+      "feature_scaled_path": "outputs/graph_pilot/iam/pilot_iam_0018/feature_scaled.png",
+      "foreground_pixels": 20551,
+      "foreground_ratio": 0.07206629074791,
+      "image_height": 156,
+      "image_width": 1828,
+      "input_image_path": "data/processed/iam/feature_images/iam_line_010384.png",
+      "level": "line",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot/iam/pilot_iam_0018/skeleton_sauvola.png",
+      "skeleton_pixels": 4132,
+      "threshold_info": {
+        "k": 0.2,
+        "window_size": 25
+      }
+    }
+  },
+  "output_dir": "outputs/graph_pilot/iam/pilot_iam_0018",
+  "page_like": false,
+  "scale": 1.0
+}

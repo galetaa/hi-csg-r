@@ -1,0 +1,29 @@
+{
+  "cyrillic": {
+    "cer": 0.0,
+    "char_edits": 0,
+    "exact": 1.0,
+    "macro_cer": 0.0,
+    "pred_len_mean": 8.071428571428571,
+    "wer": 0.0,
+    "word_edits": 0
+  },
+  "hkr": {
+    "cer": 0.0,
+    "char_edits": 0,
+    "exact": 1.0,
+    "macro_cer": 0.0,
+    "pred_len_mean": 10.238095238095237,
+    "wer": 0.0,
+    "word_edits": 0
+  },
+  "school": {
+    "cer": 0.0,
+    "char_edits": 0,
+    "exact": 1.0,
+    "macro_cer": 0.0,
+    "pred_len_mean": 19.954545454545453,
+    "wer": 0.0,
+    "word_edits": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "cyrillic_handwriting": {
+    "cer": 0.1485981308411215,
+    "char_edits": 1113,
+    "exact": 0.437,
+    "macro_cer": 0.15453654981069842,
+    "pred_len_mean": 7.352,
+    "wer": 0.5555555555555556,
+    "word_edits": 620
+  },
+  "hkr_words": {
+    "cer": 0.12541877845545915,
+    "char_edits": 1460,
+    "exact": 0.303,
+    "macro_cer": 0.13983870799393244,
+    "pred_len_mean": 11.52,
+    "wer": 0.4496277915632754,
+    "word_edits": 906
+  },
+  "school_notebooks_clean": {
+    "cer": 0.1349095966620306,
+    "char_edits": 388,
+    "exact": 0.5279503105590062,
+    "macro_cer": 0.1411630582438036,
+    "pred_len_mean": 5.906832298136646,
+    "wer": 0.4793388429752066,
+    "word_edits": 232
+  },
+  "school_notebooks_line": {
+    "cer": 0.22356552242545727,
+    "char_edits": 3569,
+    "exact": 0.10638297872340426,
+    "macro_cer": 0.20877313973138312,
+    "pred_len_mean": 29.771760154738878,
+    "wer": 0.6663896967179062,
+    "word_edits": 1604
+  }
+}

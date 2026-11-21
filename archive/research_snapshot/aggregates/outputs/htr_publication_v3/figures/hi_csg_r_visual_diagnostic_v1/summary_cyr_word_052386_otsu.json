@@ -1,0 +1,29 @@
+{
+  "assets": {
+    "binary": "outputs/htr_publication_v3/figures/hi_csg_r_visual_diagnostic_v1/assets/cyr_word_052386_binary_otsu.png",
+    "graph_json": "outputs/htr_publication_v3/figures/hi_csg_r_visual_diagnostic_v1/assets/cyr_word_052386_graph_otsu.json",
+    "graph_overlay": "outputs/htr_publication_v3/figures/hi_csg_r_visual_diagnostic_v1/assets/cyr_word_052386_graph_overlay_otsu.png",
+    "original": "outputs/htr_publication_v3/figures/hi_csg_r_visual_diagnostic_v1/assets/cyr_word_052386_original.png",
+    "skeleton": "outputs/htr_publication_v3/figures/hi_csg_r_visual_diagnostic_v1/assets/cyr_word_052386_skeleton_otsu.png"
+  },
+  "cer": 0.0,
+  "exact": 1.0,
+  "figure_pdf": "outputs/htr_publication_v3/figures/hi_csg_r_visual_diagnostic_v1/hi_csg_r_visual_diagnostic_cyr_word_052386_otsu.pdf",
+  "figure_png": "outputs/htr_publication_v3/figures/hi_csg_r_visual_diagnostic_v1/hi_csg_r_visual_diagnostic_cyr_word_052386_otsu.png",
+  "graph_features": {
+    "component_count": 6,
+    "edge_count": 39,
+    "endpoint_count": 26,
+    "junction_count": 17,
+    "loop_candidate_count": 0,
+    "mean_width_proxy": 3.9684653356484407,
+    "node_count": 43,
+    "short_branch_count": 8,
+    "short_branch_ratio": 0.20512820512820512,
+    "skeleton_pixels": 345
+  },
+  "image_path": "data/processed/cyrillic_handwriting/ocr_images/cyr_word_052386.png",
+  "manifest": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/test.jsonl",
+  "method": "otsu",
+  "wer": 0.0
+}

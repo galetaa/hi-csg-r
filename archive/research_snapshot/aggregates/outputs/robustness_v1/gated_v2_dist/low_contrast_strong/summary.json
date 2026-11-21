@@ -1,0 +1,25 @@
+{
+  "argmax_blank_ratio": 0.8456174769256943,
+  "blank_logit_penalty": -0.3,
+  "cer": 0.17759500260281103,
+  "checkpoint_epoch": 71,
+  "checkpoint_val_cer": 0.10214367742758709,
+  "exact": 0.3436994427467194,
+  "gate_mean": 0.07300699943269806,
+  "graph_channels": 1,
+  "grouped": {
+    "mixed_cyrillic_robustness": {
+      "cer": 0.17759500260281103,
+      "exact": 0.3436994427467194,
+      "n": 5563,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 8.464857091497393,
+      "wer": 0.5750837240455459
+    }
+  },
+  "n": 5563,
+  "out_dir": "outputs/robustness_v1/gated_v2_dist/low_contrast_strong",
+  "pred_empty_ratio": 0.0,
+  "pred_len_mean": 8.464857091497393,
+  "wer": 0.5750837240455459
+}

@@ -1,0 +1,16 @@
+{
+  "base_root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed",
+  "base_train_n": 30000,
+  "dataset_counts": {
+    "cyrillic_handwriting": 10000,
+    "hkr_words": 10000,
+    "school_notebooks_clean": 10000,
+    "school_notebooks_line": 9998
+  },
+  "line_train_input_n": 10000,
+  "line_train_jsonl": "data/experiments/iter2_line_corpus/school_notebooks_full_line_v1_sampled_10k_rendered/train.jsonl",
+  "line_train_n": 9998,
+  "line_train_oov_filtered_n": 2,
+  "merged_train_n": 39998,
+  "out_root": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_10k_context_v1"
+}

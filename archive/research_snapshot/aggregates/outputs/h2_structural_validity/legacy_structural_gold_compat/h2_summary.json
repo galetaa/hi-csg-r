@@ -1,0 +1,95 @@
+{
+  "failure_taxonomy": [
+    {
+      "count": 137,
+      "rate": 0.685
+    },
+    {
+      "count": 45,
+      "rate": 0.225
+    },
+    {
+      "count": 17,
+      "rate": 0.085
+    },
+    {
+      "count": 1,
+      "rate": 0.005
+    }
+  ],
+  "n": 200,
+  "overall_rates": [
+    {
+      "count_0": 0,
+      "count_1": 200,
+      "n_valid": 200,
+      "rate": 1.0
+    },
+    {
+      "count_0": 0,
+      "count_1": 200,
+      "n_valid": 200,
+      "rate": 1.0
+    },
+    {
+      "count_0": 0,
+      "count_1": 200,
+      "n_valid": 200,
+      "rate": 1.0
+    },
+    {
+      "count_0": 0,
+      "count_1": 200,
+      "n_valid": 200,
+      "rate": 1.0
+    },
+    {
+      "count_0": 0,
+      "count_1": 200,
+      "n_valid": 200,
+      "rate": 1.0
+    },
+    {
+      "count_0": 0,
+      "count_1": 200,
+      "n_valid": 200,
+      "rate": 1.0
+    },
+    {
+      "count_0": 0,
+      "count_1": 200,
+      "n_valid": 200,
+      "rate": 1.0
+    },
+    {
+      "count_0": 0,
+      "count_1": 0,
+      "n_valid": 0
+    },
+    {
+      "count_0": 177,
+      "count_1": 23,
+      "n_valid": 200,
+      "rate": 0.115
+    }
+  ],
+  "review_csv": "outputs/h2_structural_validity/review_pack_v1/review_completed_from_iter2_structural_gold_legacy.csv",
+  "threshold_status": {
+    "minimal": {
+      "foreground_ok": true,
+      "graph_usable": true,
+      "severe_topology_error": true,
+      "skeleton_usable": true,
+      "usable_for_diagnostics": true
+    },
+    "minimal_supported": true,
+    "strong": {
+      "foreground_ok": true,
+      "graph_usable": true,
+      "severe_topology_error": true,
+      "skeleton_usable": true,
+      "usable_for_diagnostics": true
+    },
+    "strongly_supported": true
+  }
+}

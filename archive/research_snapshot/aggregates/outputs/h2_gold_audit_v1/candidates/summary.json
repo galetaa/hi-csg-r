@@ -1,0 +1,24 @@
+{
+  "cell_counts": {
+    "A_highCER_highRisk": 25,
+    "B_highCER_lowRisk": 25,
+    "C_lowCER_highRisk": 25,
+    "D_lowCER_lowRisk": 25
+  },
+  "high_error_quantile": 0.8,
+  "high_risk_quantile": 0.8,
+  "joined_n": 5563,
+  "low_error_quantile": 0.2,
+  "low_risk_quantile": 0.2,
+  "manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/test.jsonl",
+  "max_per_dataset_cell": 10,
+  "outputs": {
+    "annotation_template_csv": "outputs/h2_gold_audit_v1/candidates/annotation_template.csv",
+    "candidates_csv": "outputs/h2_gold_audit_v1/candidates/h2_audit_candidates.csv",
+    "candidates_jsonl": "outputs/h2_gold_audit_v1/candidates/h2_audit_candidates.jsonl",
+    "report_md": "outputs/h2_gold_audit_v1/candidates/h2_gold_audit_candidate_report_v1.md"
+  },
+  "per_cell": 25,
+  "selected_n": 100,
+  "structural_feature_n": 30
+}

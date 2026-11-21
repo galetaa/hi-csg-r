@@ -1,0 +1,7 @@
+{
+  "input_jsonl": "data/experiments/iter2_line_corpus/school_notebooks_full_line_v1_sampled_5k/train.jsonl",
+  "n": 5000,
+  "out_jsonl": "data/experiments/iter2_line_corpus/school_notebooks_full_line_v1_sampled_5k_rendered/train.jsonl",
+  "pad_x_frac": 0.35,
+  "pad_y_frac": 0.25
+}

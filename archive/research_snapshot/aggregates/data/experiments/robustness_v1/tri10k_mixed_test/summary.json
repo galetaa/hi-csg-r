@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "level": "mild",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/blur_mild.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "medium",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/blur_medium.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "strong",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/blur_strong.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "mild",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/noise_mild.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "medium",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/noise_medium.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "strong",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/noise_strong.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "mild",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/low_contrast_mild.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "medium",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/low_contrast_medium.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "strong",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/low_contrast_strong.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "mild",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/thin_strokes_mild.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "medium",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/thin_strokes_medium.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "strong",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/thin_strokes_strong.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "mild",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/thick_strokes_mild.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "medium",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/thick_strokes_medium.jsonl",
+      "n": 5563
+    },
+    {
+      "level": "strong",
+      "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/thick_strokes_strong.jsonl",
+      "n": 5563
+    }
+  ],
+  "out_dir": "data/experiments/robustness_v1/tri10k_mixed_test",
+  "seed": 20260614,
+  "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/test.jsonl",
+  "source_n": 5563
+}

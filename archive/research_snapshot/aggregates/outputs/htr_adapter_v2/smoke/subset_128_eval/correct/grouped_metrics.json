@@ -1,0 +1,136 @@
+{
+  "baseline_dataset": {
+    "cyrillic_handwriting": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 8.071428571428571,
+      "wer": 0.0,
+      "word_edits": 0
+    },
+    "hkr_words": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 10.238095238095237,
+      "wer": 0.0,
+      "word_edits": 0
+    },
+    "school_notebooks_clean": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 7.2,
+      "wer": 0.0,
+      "word_edits": 0
+    },
+    "school_notebooks_line": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 36.73684210526316,
+      "wer": 0.0,
+      "word_edits": 0
+    }
+  },
+  "baseline_domain": {
+    "cyrillic": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 8.071428571428571,
+      "wer": 0.0,
+      "word_edits": 0
+    },
+    "hkr": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 10.238095238095237,
+      "wer": 0.0,
+      "word_edits": 0
+    },
+    "school": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 19.954545454545453,
+      "wer": 0.0,
+      "word_edits": 0
+    }
+  },
+  "dataset": {
+    "cyrillic_handwriting": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 8.071428571428571,
+      "wer": 0.0,
+      "word_edits": 0
+    },
+    "hkr_words": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 10.238095238095237,
+      "wer": 0.0,
+      "word_edits": 0
+    },
+    "school_notebooks_clean": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 7.2,
+      "wer": 0.0,
+      "word_edits": 0
+    },
+    "school_notebooks_line": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 36.73684210526316,
+      "wer": 0.0,
+      "word_edits": 0
+    }
+  },
+  "domain": {
+    "cyrillic": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 8.071428571428571,
+      "wer": 0.0,
+      "word_edits": 0
+    },
+    "hkr": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 10.238095238095237,
+      "wer": 0.0,
+      "word_edits": 0
+    },
+    "school": {
+      "cer": 0.0,
+      "char_edits": 0,
+      "exact": 1.0,
+      "macro_cer": 0.0,
+      "pred_len_mean": 19.954545454545453,
+      "wer": 0.0,
+      "word_edits": 0
+    }
+  }
+}

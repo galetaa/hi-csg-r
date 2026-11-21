@@ -1,0 +1,9 @@
+{
+  "domain_counts": {
+    "cyrillic": 42,
+    "hkr": 42,
+    "school": 44
+  },
+  "seed": 42,
+  "subset_size": 128
+}

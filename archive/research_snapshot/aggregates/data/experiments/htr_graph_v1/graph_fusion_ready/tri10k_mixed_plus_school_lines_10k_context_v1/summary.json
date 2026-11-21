@@ -1,0 +1,52 @@
+{
+  "base_root": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_school_lines_10k_context_v1",
+  "clip": [
+    -5.0,
+    5.0
+  ],
+  "feature_dim": 39,
+  "graph_root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed_school_lineaware_v3",
+  "out_root": "data/experiments/htr_graph_v1/graph_fusion_ready/tri10k_mixed_plus_school_lines_10k_context_v1",
+  "splits": {
+    "test": {
+      "dataset_counts": {
+        "cyrillic_handwriting": 1563,
+        "hkr_words": 2000,
+        "school_notebooks_clean": 2000
+      },
+      "graph_missing_word_n": 0,
+      "graph_valid_n": 5563,
+      "line_graph_valid_n": 0,
+      "line_n": 0,
+      "n": 5563,
+      "word_n": 5563
+    },
+    "train": {
+      "dataset_counts": {
+        "cyrillic_handwriting": 10000,
+        "hkr_words": 10000,
+        "school_notebooks_clean": 10000,
+        "school_notebooks_line": 9998
+      },
+      "graph_missing_word_n": 0,
+      "graph_valid_n": 30000,
+      "line_graph_valid_n": 0,
+      "line_n": 9998,
+      "n": 39998,
+      "word_n": 30000
+    },
+    "val": {
+      "dataset_counts": {
+        "cyrillic_handwriting": 2000,
+        "hkr_words": 2000,
+        "school_notebooks_clean": 2000
+      },
+      "graph_missing_word_n": 0,
+      "graph_valid_n": 6000,
+      "line_graph_valid_n": 0,
+      "line_n": 0,
+      "n": 6000,
+      "word_n": 6000
+    }
+  }
+}

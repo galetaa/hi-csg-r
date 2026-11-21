@@ -1,0 +1,28 @@
+{
+  "categories": {
+    "null": 13353
+  },
+  "dataset": "iam",
+  "levels": {
+    "line": 13353
+  },
+  "num_kept": 13353,
+  "num_rejected": 0,
+  "num_source_records": 13353,
+  "source_dir": "data/experiments/htr_baseline_v1/iam",
+  "source_summary": {
+    "num_chars": 53,
+    "num_records": 13353,
+    "splits": {
+      "test": 1039,
+      "train": 11134,
+      "val": 1180
+    }
+  },
+  "splits": {
+    "test": 1039,
+    "train": 11134,
+    "val": 1180
+  },
+  "time_downsample": 4
+}

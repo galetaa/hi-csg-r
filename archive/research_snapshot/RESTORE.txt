@@ -1,0 +1,21 @@
+HI-CSG-R research artifacts archive
+
+Download all hi-csg-r-research-artifacts.tar.zst.part-NNN assets and both
+SHA256SUMS files from the same GitHub release into one directory.
+
+Verify the compressed parts and reassemble them in numeric order:
+
+  sha256sum -c SHA256SUMS.parts
+  cat hi-csg-r-research-artifacts.tar.zst.part-[0-9][0-9][0-9] > hi-csg-r-research-artifacts.tar.zst
+  sha256sum -c SHA256SUMS.archive
+  mkdir hi-csg-r-research-artifacts
+  tar --zstd -xf hi-csg-r-research-artifacts.tar.zst -C hi-csg-r-research-artifacts
+
+The archive contains FILE_INDEX.json with the byte length and SHA-256 of each
+payload file. SCOPE.json documents provenance and the fields retained in the
+manifest indexes and aggregate metrics. ATTRIBUTION.txt identifies each dataset.
+
+The archive/research-artifacts branch contains the supplemental aggregate JSON.
+The archive/source-before-rebase, archive/early-source and
+archive/early-results-source branches reconstruct historical source trees.
+Their commit messages map each reconstructed commit to the original object ID.

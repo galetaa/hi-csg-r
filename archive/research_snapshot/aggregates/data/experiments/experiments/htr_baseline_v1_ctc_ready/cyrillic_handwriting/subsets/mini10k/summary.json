@@ -1,0 +1,30 @@
+{
+  "out_dir": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/subsets/mini10k",
+  "requested": {
+    "test_n": 2000,
+    "train_n": 10000,
+    "val_n": 2000
+  },
+  "seed": 43,
+  "source": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting",
+  "summary": {
+    "categories": {
+      "null": 13563
+    },
+    "count": 13563,
+    "levels": {
+      "phrase": 1671,
+      "word": 11892
+    },
+    "splits": {
+      "test": 1563,
+      "train": 10000,
+      "val": 2000
+    },
+    "text_len": {
+      "max": 32,
+      "mean": 7.665118336651183,
+      "min": 1
+    }
+  }
+}

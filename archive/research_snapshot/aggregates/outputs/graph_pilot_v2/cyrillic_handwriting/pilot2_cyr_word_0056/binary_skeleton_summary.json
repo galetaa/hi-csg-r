@@ -1,0 +1,65 @@
+{
+  "dataset": "cyrillic_handwriting",
+  "effective_max_side": 10000,
+  "grid_suppression_enabled": true,
+  "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_013670.png",
+  "level": "word",
+  "methods": {
+    "adaptive_gaussian": {
+      "binary_path": "outputs/graph_pilot_v2/cyrillic_handwriting/pilot2_cyr_word_0056/binary_adaptive_gaussian.png",
+      "dataset": "cyrillic_handwriting",
+      "feature_scaled_path": "outputs/graph_pilot_v2/cyrillic_handwriting/pilot2_cyr_word_0056/feature_scaled.png",
+      "foreground_pixels": 4994,
+      "foreground_ratio": 0.16804630190456962,
+      "image_height": 127,
+      "image_width": 234,
+      "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_013670.png",
+      "level": "word",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot_v2/cyrillic_handwriting/pilot2_cyr_word_0056/skeleton_adaptive_gaussian.png",
+      "skeleton_pixels": 2155,
+      "threshold_info": {
+        "block_size": 35,
+        "offset": 10.0
+      }
+    },
+    "otsu": {
+      "binary_path": "outputs/graph_pilot_v2/cyrillic_handwriting/pilot2_cyr_word_0056/binary_otsu.png",
+      "dataset": "cyrillic_handwriting",
+      "feature_scaled_path": "outputs/graph_pilot_v2/cyrillic_handwriting/pilot2_cyr_word_0056/feature_scaled.png",
+      "foreground_pixels": 2930,
+      "foreground_ratio": 0.09859344505013797,
+      "image_height": 127,
+      "image_width": 234,
+      "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_013670.png",
+      "level": "word",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot_v2/cyrillic_handwriting/pilot2_cyr_word_0056/skeleton_otsu.png",
+      "skeleton_pixels": 1064,
+      "threshold_info": {
+        "threshold": 200.0
+      }
+    },
+    "sauvola": {
+      "binary_path": "outputs/graph_pilot_v2/cyrillic_handwriting/pilot2_cyr_word_0056/binary_sauvola.png",
+      "dataset": "cyrillic_handwriting",
+      "feature_scaled_path": "outputs/graph_pilot_v2/cyrillic_handwriting/pilot2_cyr_word_0056/feature_scaled.png",
+      "foreground_pixels": 2803,
+      "foreground_ratio": 0.09431994077663369,
+      "image_height": 127,
+      "image_width": 234,
+      "input_image_path": "data/processed/cyrillic_handwriting/feature_images/cyr_word_013670.png",
+      "level": "word",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot_v2/cyrillic_handwriting/pilot2_cyr_word_0056/skeleton_sauvola.png",
+      "skeleton_pixels": 1064,
+      "threshold_info": {
+        "k": 0.2,
+        "window_size": 25
+      }
+    }
+  },
+  "output_dir": "outputs/graph_pilot_v2/cyrillic_handwriting/pilot2_cyr_word_0056",
+  "page_like": false,
+  "scale": 1.0
+}

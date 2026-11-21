@@ -1,0 +1,172 @@
+{
+  "condition_n": 15,
+  "input_manifest_dir": "data/experiments/robustness_v1/tri10k_mixed_test/manifests",
+  "items": [
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.25631691193950606,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/blur_medium.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/blur_medium.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.030241327675416915,
+      "warning_rate": 0.13212295523997844
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.24590014564169355,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/blur_mild.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/blur_mild.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.031491875069681714,
+      "warning_rate": 0.12834801366169332
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.2706059528835339,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/blur_strong.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/blur_strong.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.028782296622861494,
+      "warning_rate": 0.13158367787165198
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.22612430470020572,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/low_contrast_medium.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/low_contrast_medium.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.03532149407896835,
+      "warning_rate": 0.11630415243573611
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.2272679247464414,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/low_contrast_mild.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/low_contrast_mild.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.035197920775162934,
+      "warning_rate": 0.11792198454071544
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.2257904573132722,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/low_contrast_strong.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/low_contrast_strong.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.03547081749218654,
+      "warning_rate": 0.117382707172389
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.21844551397314443,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/noise_medium.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/noise_medium.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.06132911764217537,
+      "warning_rate": 0.11846126190904188
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.22365705727457474,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/noise_mild.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/noise_mild.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.03969667818244221,
+      "warning_rate": 0.11504583857630775
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.21337390019979288,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/noise_strong.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/noise_strong.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.08319351079835687,
+      "warning_rate": 0.15692971418299478
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.2485816471341043,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/thick_strokes_medium.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/thick_strokes_medium.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.03456751975926425,
+      "warning_rate": 0.11522559769908323
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.2485816471341043,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/thick_strokes_mild.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/thick_strokes_mild.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.034567519759264254,
+      "warning_rate": 0.11522559769908323
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.2724479876005282,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/thick_strokes_strong.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/thick_strokes_strong.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.03483121030147522,
+      "warning_rate": 0.09796872191263707
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.21081249413985567,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/thin_strokes_medium.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/thin_strokes_medium.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.032217773275946916,
+      "warning_rate": 0.1269099406794895
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.21081249413985567,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/thin_strokes_mild.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/thin_strokes_mild.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.032217773275946916,
+      "warning_rate": 0.1269099406794895
+    },
+    {
+      "failure_n": 0,
+      "fg_fraction_mean": 0.19336509435020993,
+      "input_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/thin_strokes_strong.jsonl",
+      "n": 5563,
+      "output_manifest": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests/thin_strokes_strong.jsonl",
+      "school_n": 0,
+      "school_threshold_120_rate": 0.0,
+      "skel_fraction_mean": 0.02688669739071346,
+      "warning_rate": 0.12007909401402121
+    }
+  ],
+  "output_manifest_dir": "data/experiments/htr_graph_v1/robustness_v2_recomputed/manifests"
+}

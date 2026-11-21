@@ -1,0 +1,19 @@
+{
+  "batch_size": 16,
+  "blank_bias_init": -2.0,
+  "dropout": 0.1,
+  "epochs": 20,
+  "grad_clip": 5.0,
+  "hidden_size": 256,
+  "lr": 0.001,
+  "lstm_layers": 2,
+  "num_classes": 78,
+  "num_workers": 2,
+  "out_dir": "outputs/htr_baseline_v1/overfit_cyrillic_tiny64",
+  "seed": 42,
+  "train_manifest": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/tiny64/train.jsonl",
+  "train_size": 64,
+  "val_manifest": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/tiny64/val.jsonl",
+  "val_size": 64,
+  "weight_decay": 0.0001
+}

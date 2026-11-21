@@ -1,0 +1,15 @@
+HI-CSG-R public research artifacts
+
+Cyrillic Handwriting Dataset, Constantin Werner, CC0-1.0.
+https://www.kaggle.com/datasets/constantinwerner/cyrillic-handwriting-dataset/versions/4
+
+School Notebooks RU, AI Forever, MIT.
+https://huggingface.co/datasets/ai-forever/school_notebooks_RU/tree/a10cd26104f054dc116a9dbc4a29c34b494eb9ae
+
+HWR200, AntiplagiatCompany, Apache License 2.0, DOI 10.57967/hf/3226.
+https://huggingface.co/datasets/AntiplagiatCompany/HWR200/tree/366a882a2b8d043d437126d2878bd3812ec55a94
+
+HI-CSG-R derived artifacts change the source inputs by applying preprocessing
+and feature extraction, summarizing metrics, or training single-domain models.
+The original dataset terms apply to the original contributions.
+See SCOPE.json for the provenance and data treatment of each group.

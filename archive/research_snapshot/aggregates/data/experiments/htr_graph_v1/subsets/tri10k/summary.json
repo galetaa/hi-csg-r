@@ -1,0 +1,48 @@
+{
+  "datasets": {
+    "cyrillic_handwriting": {
+      "test": {
+        "selected_n": 1563,
+        "source_n": 1563
+      },
+      "train": {
+        "selected_n": 10000,
+        "source_n": 65031
+      },
+      "val": {
+        "selected_n": 2000,
+        "source_n": 7232
+      }
+    },
+    "hkr_words": {
+      "test": {
+        "selected_n": 2000,
+        "source_n": 6495
+      },
+      "train": {
+        "selected_n": 10000,
+        "source_n": 51954
+      },
+      "val": {
+        "selected_n": 2000,
+        "source_n": 6494
+      }
+    },
+    "school_notebooks_clean": {
+      "test": {
+        "selected_n": 2000,
+        "source_n": 24623
+      },
+      "train": {
+        "selected_n": 10000,
+        "source_n": 234833
+      },
+      "val": {
+        "selected_n": 2000,
+        "source_n": 24214
+      }
+    }
+  },
+  "name": "tri10k",
+  "seed": 47
+}

@@ -1,0 +1,10 @@
+{
+  "annotations_csv": "outputs/h2_gold_audit_v1/annotations/annotation_100_filled_stage.csv",
+  "dataset": "school_notebooks_clean",
+  "n": 23,
+  "outputs": {
+    "contact_sheet_png": "outputs/h2_gold_audit_v1/border_suppression_v1/border_suppression_contact_sheet.png",
+    "metrics_csv": "outputs/h2_gold_audit_v1/border_suppression_v1/border_suppression_metrics.csv",
+    "report_md": "outputs/h2_gold_audit_v1/border_suppression_v1/border_suppression_report.md"
+  }
+}

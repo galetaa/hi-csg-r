@@ -1,0 +1,8 @@
+{
+  "add_prefix_space": false,
+  "clean_up_tokenization_spaces": false,
+  "max_length": 96,
+  "model_max_length": 512,
+  "stride": 0,
+  "trim_offsets": true
+}

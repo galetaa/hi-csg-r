@@ -1,0 +1,24 @@
+{
+  "argmax_blank_ratio": 0.8365153545149079,
+  "blank_logit_penalty": -0.4,
+  "cer": 0.15021343050494534,
+  "checkpoint_epoch": 71,
+  "checkpoint_val_cer": 0.098847348049849,
+  "exact": 0.4208161064174007,
+  "graph_feature_dim": 39,
+  "grouped": {
+    "mixed_cyrillic_robustness": {
+      "cer": 0.15021343050494534,
+      "exact": 0.4208161064174007,
+      "n": 5563,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 8.494337587632572,
+      "wer": 0.5095780308104487
+    }
+  },
+  "n": 5563,
+  "out_dir": "outputs/robustness_v2_recomputed/graph_vector_v2/thick_strokes_medium",
+  "pred_empty_ratio": 0.0,
+  "pred_len_mean": 8.494337587632572,
+  "wer": 0.5095780308104487
+}

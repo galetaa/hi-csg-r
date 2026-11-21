@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "test": 500,
+    "train": 1000,
+    "val": 500
+  },
+  "dataset": "cyrillic_handwriting",
+  "smoke_dir": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/smoke",
+  "source_dir": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting"
+}

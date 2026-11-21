@@ -1,0 +1,11 @@
+{
+  "candidates_csv": "outputs/h2_gold_audit_v1/candidates/h2_audit_candidates.csv",
+  "cells": {
+    "A_highCER_highRisk": 25,
+    "B_highCER_lowRisk": 25,
+    "C_lowCER_highRisk": 25,
+    "D_lowCER_lowRisk": 25
+  },
+  "n": 100,
+  "out_dir": "outputs/h2_gold_audit_v1/contact_sheet"
+}

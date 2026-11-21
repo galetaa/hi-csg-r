@@ -1,0 +1,11 @@
+{
+  "adapter_parameters": 119429,
+  "base_parameters": 3900892,
+  "best_val_cer": 0.0,
+  "device": "cuda",
+  "epochs_completed": 25,
+  "relative_parameter_increase_percent": 3.061581812570048,
+  "runtime_seconds": 8.537344349000705,
+  "seed": 42,
+  "total_parameters": 4020321
+}

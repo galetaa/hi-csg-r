@@ -1,0 +1,65 @@
+{
+  "dataset": "hkr_words",
+  "effective_max_side": 10000,
+  "grid_suppression_enabled": true,
+  "input_image_path": "data/processed/hkr_words/feature_images/hkr_words_034162.png",
+  "level": "word",
+  "methods": {
+    "adaptive_gaussian": {
+      "binary_path": "outputs/graph_pilot_v2/hkr_words/pilot2_hkr_words_word_0081/binary_adaptive_gaussian.png",
+      "dataset": "hkr_words",
+      "feature_scaled_path": "outputs/graph_pilot_v2/hkr_words/pilot2_hkr_words_word_0081/feature_scaled.png",
+      "foreground_pixels": 2306,
+      "foreground_ratio": 0.092206805550002,
+      "image_height": 89,
+      "image_width": 281,
+      "input_image_path": "data/processed/hkr_words/feature_images/hkr_words_034162.png",
+      "level": "word",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot_v2/hkr_words/pilot2_hkr_words_word_0081/skeleton_adaptive_gaussian.png",
+      "skeleton_pixels": 584,
+      "threshold_info": {
+        "block_size": 35,
+        "offset": 10.0
+      }
+    },
+    "otsu": {
+      "binary_path": "outputs/graph_pilot_v2/hkr_words/pilot2_hkr_words_word_0081/binary_otsu.png",
+      "dataset": "hkr_words",
+      "feature_scaled_path": "outputs/graph_pilot_v2/hkr_words/pilot2_hkr_words_word_0081/feature_scaled.png",
+      "foreground_pixels": 2186,
+      "foreground_ratio": 0.08740853292814586,
+      "image_height": 89,
+      "image_width": 281,
+      "input_image_path": "data/processed/hkr_words/feature_images/hkr_words_034162.png",
+      "level": "word",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot_v2/hkr_words/pilot2_hkr_words_word_0081/skeleton_otsu.png",
+      "skeleton_pixels": 563,
+      "threshold_info": {
+        "threshold": 205.0
+      }
+    },
+    "sauvola": {
+      "binary_path": "outputs/graph_pilot_v2/hkr_words/pilot2_hkr_words_word_0081/binary_sauvola.png",
+      "dataset": "hkr_words",
+      "feature_scaled_path": "outputs/graph_pilot_v2/hkr_words/pilot2_hkr_words_word_0081/feature_scaled.png",
+      "foreground_pixels": 1983,
+      "foreground_ratio": 0.07929145507617258,
+      "image_height": 89,
+      "image_width": 281,
+      "input_image_path": "data/processed/hkr_words/feature_images/hkr_words_034162.png",
+      "level": "word",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot_v2/hkr_words/pilot2_hkr_words_word_0081/skeleton_sauvola.png",
+      "skeleton_pixels": 550,
+      "threshold_info": {
+        "k": 0.2,
+        "window_size": 25
+      }
+    }
+  },
+  "output_dir": "outputs/graph_pilot_v2/hkr_words/pilot2_hkr_words_word_0081",
+  "page_like": false,
+  "scale": 1.0
+}

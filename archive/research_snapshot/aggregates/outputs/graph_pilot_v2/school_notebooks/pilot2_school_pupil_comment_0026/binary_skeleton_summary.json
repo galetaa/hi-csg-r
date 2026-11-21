@@ -1,0 +1,65 @@
+{
+  "dataset": "school_notebooks",
+  "effective_max_side": 10000,
+  "grid_suppression_enabled": true,
+  "input_image_path": "data/processed/school_notebooks/feature_images/school_notebooks_train_0107002.png",
+  "level": "word",
+  "methods": {
+    "adaptive_gaussian": {
+      "binary_path": "outputs/graph_pilot_v2/school_notebooks/pilot2_school_pupil_comment_0026/binary_adaptive_gaussian.png",
+      "dataset": "school_notebooks",
+      "feature_scaled_path": "outputs/graph_pilot_v2/school_notebooks/pilot2_school_pupil_comment_0026/feature_scaled.png",
+      "foreground_pixels": 3496,
+      "foreground_ratio": 0.26480836236933797,
+      "image_height": 82,
+      "image_width": 161,
+      "input_image_path": "data/processed/school_notebooks/feature_images/school_notebooks_train_0107002.png",
+      "level": "word",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot_v2/school_notebooks/pilot2_school_pupil_comment_0026/skeleton_adaptive_gaussian.png",
+      "skeleton_pixels": 703,
+      "threshold_info": {
+        "block_size": 35,
+        "offset": 10.0
+      }
+    },
+    "otsu": {
+      "binary_path": "outputs/graph_pilot_v2/school_notebooks/pilot2_school_pupil_comment_0026/binary_otsu.png",
+      "dataset": "school_notebooks",
+      "feature_scaled_path": "outputs/graph_pilot_v2/school_notebooks/pilot2_school_pupil_comment_0026/feature_scaled.png",
+      "foreground_pixels": 6599,
+      "foreground_ratio": 0.4998485078018482,
+      "image_height": 82,
+      "image_width": 161,
+      "input_image_path": "data/processed/school_notebooks/feature_images/school_notebooks_train_0107002.png",
+      "level": "word",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot_v2/school_notebooks/pilot2_school_pupil_comment_0026/skeleton_otsu.png",
+      "skeleton_pixels": 418,
+      "threshold_info": {
+        "threshold": 198.0
+      }
+    },
+    "sauvola": {
+      "binary_path": "outputs/graph_pilot_v2/school_notebooks/pilot2_school_pupil_comment_0026/binary_sauvola.png",
+      "dataset": "school_notebooks",
+      "feature_scaled_path": "outputs/graph_pilot_v2/school_notebooks/pilot2_school_pupil_comment_0026/feature_scaled.png",
+      "foreground_pixels": 2859,
+      "foreground_ratio": 0.21655809725799122,
+      "image_height": 82,
+      "image_width": 161,
+      "input_image_path": "data/processed/school_notebooks/feature_images/school_notebooks_train_0107002.png",
+      "level": "word",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot_v2/school_notebooks/pilot2_school_pupil_comment_0026/skeleton_sauvola.png",
+      "skeleton_pixels": 610,
+      "threshold_info": {
+        "k": 0.2,
+        "window_size": 25
+      }
+    }
+  },
+  "output_dir": "outputs/graph_pilot_v2/school_notebooks/pilot2_school_pupil_comment_0026",
+  "page_like": false,
+  "scale": 1.0
+}

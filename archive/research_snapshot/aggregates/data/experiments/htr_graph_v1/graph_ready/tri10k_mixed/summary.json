@@ -1,0 +1,66 @@
+{
+  "datasets": {
+    "cyrillic_handwriting": {
+      "test": {
+        "n": 1563
+      },
+      "train": {
+        "n": 10000
+      },
+      "val": {
+        "n": 2000
+      }
+    },
+    "hkr_words": {
+      "test": {
+        "n": 2000
+      },
+      "train": {
+        "n": 10000
+      },
+      "val": {
+        "n": 2000
+      }
+    },
+    "school_notebooks_clean": {
+      "test": {
+        "n": 2000
+      },
+      "train": {
+        "n": 10000
+      },
+      "val": {
+        "n": 2000
+      }
+    }
+  },
+  "graph_feature_dim": 40,
+  "name": "tri10k_mixed",
+  "num_chars_without_blank": 91,
+  "num_classes_with_blank": 92,
+  "seed": 48,
+  "test": {
+    "by_dataset": {
+      "cyrillic_handwriting": 1563,
+      "hkr_words": 2000,
+      "school_notebooks_clean": 2000
+    },
+    "n": 5563
+  },
+  "train": {
+    "by_dataset": {
+      "cyrillic_handwriting": 10000,
+      "hkr_words": 10000,
+      "school_notebooks_clean": 10000
+    },
+    "n": 30000
+  },
+  "val": {
+    "by_dataset": {
+      "cyrillic_handwriting": 2000,
+      "hkr_words": 2000,
+      "school_notebooks_clean": 2000
+    },
+    "n": 6000
+  }
+}

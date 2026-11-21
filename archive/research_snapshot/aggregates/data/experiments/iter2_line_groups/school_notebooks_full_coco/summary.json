@@ -1,0 +1,76 @@
+{
+  "manifest_root": "data/experiments/htr_baseline_v1_ctc_ready/school_notebooks_clean",
+  "min_words": 2,
+  "out_root": "data/experiments/iter2_line_groups/school_notebooks_full_coco",
+  "school_raw_dir": "data/interim/school_notebooks",
+  "splits": {
+    "test": {
+      "coverage_rate": 0.9267757787434513,
+      "groups_2_words": 1167,
+      "groups_3_words": 656,
+      "groups_4plus_words": 3224,
+      "groups_8plus_words": 430,
+      "max_words_per_group": 14,
+      "mean_words_per_group": 4.521497919556172,
+      "n_line_groups": 5047,
+      "n_word_instances": 22820,
+      "p50_words_per_group": 4.0,
+      "p90_words_per_group": 7.0,
+      "p95_words_per_group": 8.0,
+      "skipped": {
+        "below_min_words": 1010,
+        "missing_group_key": 793
+      }
+    },
+    "train": {
+      "coverage_rate": 0.9236478689110985,
+      "groups_2_words": 11605,
+      "groups_3_words": 6961,
+      "groups_4plus_words": 31410,
+      "groups_8plus_words": 2727,
+      "max_words_per_group": 15,
+      "mean_words_per_group": 4.340143268769009,
+      "n_line_groups": 49976,
+      "n_word_instances": 216903,
+      "p50_words_per_group": 4.0,
+      "p90_words_per_group": 7.0,
+      "p95_words_per_group": 8.0,
+      "skipped": {
+        "below_min_words": 11171,
+        "missing_group_key": 6759
+      }
+    },
+    "val": {
+      "coverage_rate": 0.9324357809531676,
+      "groups_2_words": 824,
+      "groups_3_words": 736,
+      "groups_4plus_words": 3491,
+      "groups_8plus_words": 242,
+      "max_words_per_group": 12,
+      "mean_words_per_group": 4.470005939417937,
+      "n_line_groups": 5051,
+      "n_word_instances": 22578,
+      "p50_words_per_group": 4.0,
+      "p90_words_per_group": 7.0,
+      "p95_words_per_group": 7.0,
+      "skipped": {
+        "below_min_words": 1191,
+        "missing_group_key": 445
+      }
+    }
+  },
+  "total": {
+    "coverage_rate": 0.9246695103465294,
+    "groups_2_words": 13596,
+    "groups_3_words": 8353,
+    "groups_4plus_words": 38125,
+    "groups_8plus_words": 3399,
+    "max_words_per_group": 15,
+    "mean_words_per_group": 4.366298232180311,
+    "n_line_groups": 60074,
+    "n_word_instances": 262301,
+    "p50_words_per_group": 4.0,
+    "p90_words_per_group": 7.0,
+    "p95_words_per_group": 8.0
+  }
+}

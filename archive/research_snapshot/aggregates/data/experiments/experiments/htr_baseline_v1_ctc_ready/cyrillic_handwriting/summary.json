@@ -1,0 +1,32 @@
+{
+  "categories": {
+    "null": 73826
+  },
+  "dataset": "cyrillic_handwriting",
+  "levels": {
+    "phrase": 7770,
+    "word": 66056
+  },
+  "num_kept": 73826,
+  "num_rejected": 2,
+  "num_source_records": 73828,
+  "rejection_reasons": {
+    "ctc_min_gt_timesteps": 2
+  },
+  "source_dir": "data/experiments/htr_baseline_v1/cyrillic_handwriting",
+  "source_summary": {
+    "num_chars": 77,
+    "num_records": 73828,
+    "splits": {
+      "test": 1563,
+      "train": 65033,
+      "val": 7232
+    }
+  },
+  "splits": {
+    "test": 1563,
+    "train": 65031,
+    "val": 7232
+  },
+  "time_downsample": 4
+}

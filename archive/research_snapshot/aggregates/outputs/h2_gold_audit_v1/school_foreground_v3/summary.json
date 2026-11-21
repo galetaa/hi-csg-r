@@ -1,0 +1,8 @@
+{
+  "dataset": "school_notebooks_clean",
+  "n": 23,
+  "outputs": {
+    "contact_sheet": "outputs/h2_gold_audit_v1/school_foreground_v3/school_foreground_v3_contact_sheet.png",
+    "metrics_csv": "outputs/h2_gold_audit_v1/school_foreground_v3/school_foreground_v3_metrics.csv"
+  }
+}

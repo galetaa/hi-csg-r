@@ -1,0 +1,3362 @@
+[
+  {
+    "blank_logit_penalty": -2.0,
+    "epoch": 1,
+    "train_gate_mean": 0.0497428955078125,
+    "train_loss": 3.825147677230835,
+    "val": {
+      "argmax_blank_ratio": 0.9301002848000351,
+      "cer": 0.8102590276891668,
+      "exact": 0.0055,
+      "gate_mean": 0.07830908041199049,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.845945028842891,
+          "exact": 0.0035,
+          "n": 2000,
+          "pred_empty_ratio": 0.003,
+          "pred_len_mean": 3.1965,
+          "wer": 1.009549795361528
+        },
+        "hkr_words": {
+          "cer": 0.7681457537466941,
+          "exact": 0.0,
+          "n": 2000,
+          "pred_empty_ratio": 0.003,
+          "pred_len_mean": 5.1235,
+          "wer": 0.9794918885827977
+        },
+        "school_notebooks_clean": {
+          "cer": 0.8384025612941276,
+          "exact": 0.013,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 2.6935,
+          "wer": 0.9915674603174603
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.002,
+      "pred_len_mean": 3.6711666666666667,
+      "wer": 0.9915797914995991
+    }
+  },
+  {
+    "blank_logit_penalty": -1.9797468354430379,
+    "epoch": 2,
+    "train_gate_mean": 0.07965499674479166,
+    "train_loss": 2.4330173226038614,
+    "val": {
+      "argmax_blank_ratio": 0.8752872741667674,
+      "cer": 0.47543702947556465,
+      "exact": 0.054,
+      "gate_mean": 0.10961068260669708,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.5517475398710553,
+          "exact": 0.039,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 6.4465,
+          "wer": 0.9636198271941792
+        },
+        "hkr_words": {
+          "cer": 0.39450484866294444,
+          "exact": 0.0465,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 9.7655,
+          "wer": 0.8653198653198653
+        },
+        "school_notebooks_clean": {
+          "cer": 0.5199258572752549,
+          "exact": 0.0765,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.2615,
+          "wer": 0.9260912698412699
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.1578333333333335,
+      "wer": 0.9105854049719326
+    }
+  },
+  {
+    "blank_logit_penalty": -1.959493670886076,
+    "epoch": 3,
+    "train_gate_mean": 0.08339903971354166,
+    "train_loss": 1.4002864950180054,
+    "val": {
+      "argmax_blank_ratio": 0.8732529882011414,
+      "cer": 0.3066649653353749,
+      "exact": 0.17733333333333334,
+      "gate_mean": 0.10199307596683502,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.3819477434679335,
+          "exact": 0.1305,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 6.549,
+          "wer": 0.8676671214188267
+        },
+        "hkr_words": {
+          "cer": 0.2370947203447938,
+          "exact": 0.1705,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 9.6645,
+          "wer": 0.6813590449954087
+        },
+        "school_notebooks_clean": {
+          "cer": 0.33288398348639314,
+          "exact": 0.231,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.3785,
+          "wer": 0.7718253968253969
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.197333333333333,
+      "wer": 0.760491847099706
+    }
+  },
+  {
+    "blank_logit_penalty": -1.9392405063291138,
+    "epoch": 4,
+    "train_gate_mean": 0.08351007486979167,
+    "train_loss": 0.9697493611653646,
+    "val": {
+      "argmax_blank_ratio": 0.8645302998647475,
+      "cer": 0.23125345582918633,
+      "exact": 0.27316666666666667,
+      "gate_mean": 0.10310109446446102,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.28727519511367494,
+          "exact": 0.218,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.025,
+          "wer": 0.7762619372442019
+        },
+        "hkr_words": {
+          "cer": 0.18243706533450876,
+          "exact": 0.258,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.152,
+          "wer": 0.5846342209978573
+        },
+        "school_notebooks_clean": {
+          "cer": 0.24568202881455894,
+          "exact": 0.3435,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.7245,
+          "wer": 0.6597222222222222
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.6338333333333335,
+      "wer": 0.661186848436247
+    }
+  },
+  {
+    "blank_logit_penalty": -1.918987341772152,
+    "epoch": 5,
+    "train_gate_mean": 0.08257493489583333,
+    "train_loss": 0.7269529740015666,
+    "val": {
+      "argmax_blank_ratio": 0.8681260377607459,
+      "cer": 0.19663136404236314,
+      "exact": 0.33516666666666667,
+      "gate_mean": 0.10070965524514516,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.25110281642348153,
+          "exact": 0.271,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 6.8555,
+          "wer": 0.726693951796271
+        },
+        "hkr_words": {
+          "cer": 0.14879028308355371,
+          "exact": 0.3295,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 9.948,
+          "wer": 0.5231098867462504
+        },
+        "school_notebooks_clean": {
+          "cer": 0.211306765523633,
+          "exact": 0.405,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.6115,
+          "wer": 0.5997023809523809
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.471666666666667,
+      "wer": 0.60358192996525
+    }
+  },
+  {
+    "blank_logit_penalty": -1.8987341772151898,
+    "epoch": 6,
+    "train_gate_mean": 0.08153961588541667,
+    "train_loss": 0.5798464222033819,
+    "val": {
+      "argmax_blank_ratio": 0.863603875039861,
+      "cer": 0.15752201097358684,
+      "exact": 0.4078333333333333,
+      "gate_mean": 0.10479937160015106,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.2033254156769596,
+          "exact": 0.334,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.15,
+          "wer": 0.6571168713051387
+        },
+        "hkr_words": {
+          "cer": 0.12185326672543834,
+          "exact": 0.4055,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.0915,
+          "wer": 0.44934190388735845
+        },
+        "school_notebooks_clean": {
+          "cer": 0.16201870418737888,
+          "exact": 0.484,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.787,
+          "wer": 0.5193452380952381
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.676166666666667,
+      "wer": 0.529270248596632
+    }
+  },
+  {
+    "blank_logit_penalty": -1.8784810126582279,
+    "epoch": 7,
+    "train_gate_mean": 0.08105553385416667,
+    "train_loss": 0.4841475343306859,
+    "val": {
+      "argmax_blank_ratio": 0.8634279367941853,
+      "cer": 0.1484411552039471,
+      "exact": 0.43133333333333335,
+      "gate_mean": 0.10117975323398908,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.18506956226671192,
+          "exact": 0.372,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.213,
+          "wer": 0.6202819463392452
+        },
+        "hkr_words": {
+          "cer": 0.11622098148692331,
+          "exact": 0.4185,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.139,
+          "wer": 0.4361799816345271
+        },
+        "school_notebooks_clean": {
+          "cer": 0.15839582104642347,
+          "exact": 0.5035,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.797,
+          "wer": 0.5009920634920635
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.716333333333333,
+      "wer": 0.5077519379844961
+    }
+  },
+  {
+    "blank_logit_penalty": -1.8582278481012657,
+    "epoch": 8,
+    "train_gate_mean": 0.07842841796875,
+    "train_loss": 0.41509182325998945,
+    "val": {
+      "argmax_blank_ratio": 0.8627846625834332,
+      "cer": 0.13925396622857386,
+      "exact": 0.4543333333333333,
+      "gate_mean": 0.10001060439149538,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.17638276213098067,
+          "exact": 0.393,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.192,
+          "wer": 0.5993633469758981
+        },
+        "hkr_words": {
+          "cer": 0.1092663336271917,
+          "exact": 0.439,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.106,
+          "wer": 0.4150596877869605
+        },
+        "school_notebooks_clean": {
+          "cer": 0.14474681944561463,
+          "exact": 0.531,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8125,
+          "wer": 0.47470238095238093
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.7035,
+      "wer": 0.48529804865009357
+    }
+  },
+  {
+    "blank_logit_penalty": -1.8379746835443038,
+    "epoch": 9,
+    "train_gate_mean": 0.07815455729166666,
+    "train_loss": 0.3580109306057294,
+    "val": {
+      "argmax_blank_ratio": 0.8600218823193059,
+      "cer": 0.13689336906129046,
+      "exact": 0.466,
+      "gate_mean": 0.0960754512945811,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.17604343400067865,
+          "exact": 0.3975,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.335,
+          "wer": 0.5966348340154616
+        },
+        "hkr_words": {
+          "cer": 0.1069154667450289,
+          "exact": 0.457,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.198,
+          "wer": 0.406489133761861
+        },
+        "school_notebooks_clean": {
+          "cer": 0.13986013986013987,
+          "exact": 0.5435,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.9075,
+          "wer": 0.46378968253968256
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.8135,
+      "wer": 0.4778134188719594
+    }
+  },
+  {
+    "blank_logit_penalty": -1.8177215189873417,
+    "epoch": 10,
+    "train_gate_mean": 0.07695763346354166,
+    "train_loss": 0.31047520398894946,
+    "val": {
+      "argmax_blank_ratio": 0.8614926160917518,
+      "cer": 0.13474543830547403,
+      "exact": 0.4681666666666667,
+      "gate_mean": 0.09695725175738334,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1678316932473702,
+          "exact": 0.41,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.107,
+          "wer": 0.5866302864938608
+        },
+        "hkr_words": {
+          "cer": 0.10681751395827212,
+          "exact": 0.453,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.0675,
+          "wer": 0.40985613712886443
+        },
+        "school_notebooks_clean": {
+          "cer": 0.14171370797876823,
+          "exact": 0.5415,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.7465,
+          "wer": 0.46378968253968256
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.640333333333333,
+      "wer": 0.47634322373696875
+    }
+  },
+  {
+    "blank_logit_penalty": -1.7974683544303798,
+    "epoch": 11,
+    "train_gate_mean": 0.07617828776041667,
+    "train_loss": 0.2686198108434677,
+    "val": {
+      "argmax_blank_ratio": 0.8611379905653116,
+      "cer": 0.12755731359789035,
+      "exact": 0.48383333333333334,
+      "gate_mean": 0.09657854350407918,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.15771971496437054,
+          "exact": 0.4225,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.2535,
+          "wer": 0.5720782173715325
+        },
+        "hkr_words": {
+          "cer": 0.10387893035556861,
+          "exact": 0.4665,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1055,
+          "wer": 0.3939393939393939
+        },
+        "school_notebooks_clean": {
+          "cer": 0.13084505855590192,
+          "exact": 0.5625,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.833,
+          "wer": 0.44246031746031744
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.730666666666667,
+      "wer": 0.45936915263298583
+    }
+  },
+  {
+    "blank_logit_penalty": -1.7772151898734176,
+    "epoch": 12,
+    "train_gate_mean": 0.07574231770833334,
+    "train_loss": 0.23713634384473165,
+    "val": {
+      "argmax_blank_ratio": 0.8585593956521261,
+      "cer": 0.1304283101526945,
+      "exact": 0.4771666666666667,
+      "gate_mean": 0.0992433407008648,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.16090939938920937,
+          "exact": 0.421,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.2645,
+          "wer": 0.572987721691678
+        },
+        "hkr_words": {
+          "cer": 0.10505436379665002,
+          "exact": 0.458,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.147,
+          "wer": 0.40342822161003977
+        },
+        "school_notebooks_clean": {
+          "cer": 0.13623725671918444,
+          "exact": 0.5525,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8375,
+          "wer": 0.4558531746031746
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.749666666666666,
+      "wer": 0.46738839882384386
+    }
+  },
+  {
+    "blank_logit_penalty": -1.7569620253164557,
+    "epoch": 13,
+    "train_gate_mean": 0.07569108072916667,
+    "train_loss": 0.2084306942343712,
+    "val": {
+      "argmax_blank_ratio": 0.8581662836344444,
+      "cer": 0.11779592531155629,
+      "exact": 0.512,
+      "gate_mean": 0.0954097160299619,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1498473023413641,
+          "exact": 0.45,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.278,
+          "wer": 0.5461573442473852
+        },
+        "hkr_words": {
+          "cer": 0.09432853364678224,
+          "exact": 0.494,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1605,
+          "wer": 0.37006427915518825
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11837560030331115,
+          "exact": 0.592,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.846,
+          "wer": 0.41220238095238093
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.7615,
+      "wer": 0.43317294840951615
+    }
+  },
+  {
+    "blank_logit_penalty": -1.7367088607594936,
+    "epoch": 14,
+    "train_gate_mean": 0.07312333984375,
+    "train_loss": 0.1853708988070488,
+    "val": {
+      "argmax_blank_ratio": 0.8568412487216986,
+      "cer": 0.12134745438305473,
+      "exact": 0.5013333333333333,
+      "gate_mean": 0.0921748414238294,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1507295554801493,
+          "exact": 0.4455,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.28,
+          "wer": 0.55025011368804
+        },
+        "hkr_words": {
+          "cer": 0.09599373102164757,
+          "exact": 0.4865,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1645,
+          "wer": 0.37894092439546984
+        },
+        "school_notebooks_clean": {
+          "cer": 0.12848597185946584,
+          "exact": 0.572,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.864,
+          "wer": 0.43353174603174605
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.7695,
+      "wer": 0.44399893076717456
+    }
+  },
+  {
+    "blank_logit_penalty": -1.7164556962025317,
+    "epoch": 15,
+    "train_gate_mean": 0.07205994466145833,
+    "train_loss": 0.16382970922092596,
+    "val": {
+      "argmax_blank_ratio": 0.857742932230787,
+      "cer": 0.12343158521543107,
+      "exact": 0.499,
+      "gate_mean": 0.09583845767378807,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1522904648795385,
+          "exact": 0.453,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.26,
+          "wer": 0.5420645748067303
+        },
+        "hkr_words": {
+          "cer": 0.10113625232637868,
+          "exact": 0.465,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.0945,
+          "wer": 0.3933272115090297
+        },
+        "school_notebooks_clean": {
+          "cer": 0.12595837897042717,
+          "exact": 0.579,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8455,
+          "wer": 0.42658730158730157
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.733333333333333,
+      "wer": 0.44600374231488904
+    }
+  },
+  {
+    "blank_logit_penalty": -1.6962025316455696,
+    "epoch": 16,
+    "train_gate_mean": 0.072937939453125,
+    "train_loss": 0.1455374120404323,
+    "val": {
+      "argmax_blank_ratio": 0.8578006619676494,
+      "cer": 0.1169665263068351,
+      "exact": 0.5203333333333333,
+      "gate_mean": 0.09515653297305107,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.14652188666440447,
+          "exact": 0.458,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.2645,
+          "wer": 0.5356980445657117
+        },
+        "hkr_words": {
+          "cer": 0.09506317954745813,
+          "exact": 0.503,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.0985,
+          "wer": 0.3682277318640955
+        },
+        "school_notebooks_clean": {
+          "cer": 0.1179543348218047,
+          "exact": 0.6,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8225,
+          "wer": 0.40575396825396826
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.7285,
+      "wer": 0.42755947607591555
+    }
+  },
+  {
+    "blank_logit_penalty": -1.6759493670886076,
+    "epoch": 17,
+    "train_gate_mean": 0.07269586588541667,
+    "train_loss": 0.13020990651945272,
+    "val": {
+      "argmax_blank_ratio": 0.8556151790721457,
+      "cer": 0.11654119348390116,
+      "exact": 0.5141666666666667,
+      "gate_mean": 0.09375346621870995,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.14367153036986766,
+          "exact": 0.467,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.2995,
+          "wer": 0.5238744884038199
+        },
+        "hkr_words": {
+          "cer": 0.09614066020178275,
+          "exact": 0.4845,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1455,
+          "wer": 0.3835322926232017
+        },
+        "school_notebooks_clean": {
+          "cer": 0.1179543348218047,
+          "exact": 0.591,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8905,
+          "wer": 0.4181547619047619
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.7785,
+      "wer": 0.43410852713178294
+    }
+  },
+  {
+    "blank_logit_penalty": -1.6556962025316455,
+    "epoch": 18,
+    "train_gate_mean": 0.06968800455729167,
+    "train_loss": 0.11765298495988051,
+    "val": {
+      "argmax_blank_ratio": 0.8539822522294674,
+      "cer": 0.11892305729233126,
+      "exact": 0.5118333333333334,
+      "gate_mean": 0.0915753925939401,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.14428232100441127,
+          "exact": 0.458,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.245,
+          "wer": 0.5361527967257844
+        },
+        "hkr_words": {
+          "cer": 0.09770790478989128,
+          "exact": 0.4965,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.103,
+          "wer": 0.3731251913070095
+        },
+        "school_notebooks_clean": {
+          "cer": 0.12393630465919622,
+          "exact": 0.581,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8525,
+          "wer": 0.4255952380952381
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.7335,
+      "wer": 0.4351777599572307
+    }
+  },
+  {
+    "blank_logit_penalty": -1.6354430379746836,
+    "epoch": 19,
+    "train_gate_mean": 0.07059972330729167,
+    "train_loss": 0.10896512796630461,
+    "val": {
+      "argmax_blank_ratio": 0.8518325067901167,
+      "cer": 0.11560546127344647,
+      "exact": 0.5178333333333334,
+      "gate_mean": 0.08889561047156652,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.14536817102137767,
+          "exact": 0.456,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.298,
+          "wer": 0.5402455661664393
+        },
+        "hkr_words": {
+          "cer": 0.0928592418454305,
+          "exact": 0.507,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1985,
+          "wer": 0.362105907560453
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11778582862920213,
+          "exact": 0.5905,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.875,
+          "wer": 0.4146825396825397
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.7905,
+      "wer": 0.4286287089013633
+    }
+  },
+  {
+    "blank_logit_penalty": -1.6151898734177215,
+    "epoch": 20,
+    "train_gate_mean": 0.07178087565104167,
+    "train_loss": 0.10247842889328798,
+    "val": {
+      "argmax_blank_ratio": 0.8497239968770961,
+      "cer": 0.11424439624005785,
+      "exact": 0.5246666666666666,
+      "gate_mean": 0.09326262527704239,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.14238208347472006,
+          "exact": 0.464,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.2955,
+          "wer": 0.5288767621646203
+        },
+        "hkr_words": {
+          "cer": 0.09364286413948476,
+          "exact": 0.512,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1635,
+          "wer": 0.3624119987756351
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11475271716235572,
+          "exact": 0.598,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.861,
+          "wer": 0.40773809523809523
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.773333333333333,
+      "wer": 0.4235498529804865
+    }
+  },
+  {
+    "blank_logit_penalty": -1.5949367088607596,
+    "epoch": 21,
+    "train_gate_mean": 0.07042086588541667,
+    "train_loss": 0.08910902134428422,
+    "val": {
+      "argmax_blank_ratio": 0.8499054331929493,
+      "cer": 0.11181999914933435,
+      "exact": 0.5195,
+      "gate_mean": 0.09362443706393242,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13647777400746522,
+          "exact": 0.4655,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3375,
+          "wer": 0.53706230104593
+        },
+        "hkr_words": {
+          "cer": 0.0933979821725928,
+          "exact": 0.4935,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.144,
+          "wer": 0.3734312825221916
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11289914904372736,
+          "exact": 0.5995,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8995,
+          "wer": 0.4117063492063492
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.793666666666667,
+      "wer": 0.4318364073777065
+    }
+  },
+  {
+    "blank_logit_penalty": -1.5746835443037974,
+    "epoch": 22,
+    "train_gate_mean": 0.07262646484375,
+    "train_loss": 0.08344636927470565,
+    "val": {
+      "argmax_blank_ratio": 0.8477556877535984,
+      "cer": 0.11832759134022372,
+      "exact": 0.5163333333333333,
+      "gate_mean": 0.09964082748691241,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.14435018663047167,
+          "exact": 0.4665,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.358,
+          "wer": 0.5334242837653479
+        },
+        "hkr_words": {
+          "cer": 0.09653247134880988,
+          "exact": 0.4985,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.148,
+          "wer": 0.371900826446281
+        },
+        "school_notebooks_clean": {
+          "cer": 0.12351503917768979,
+          "exact": 0.584,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.881,
+          "wer": 0.42311507936507936
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.7956666666666665,
+      "wer": 0.43317294840951615
+    }
+  },
+  {
+    "blank_logit_penalty": -1.5544303797468355,
+    "epoch": 23,
+    "train_gate_mean": 0.07206901041666666,
+    "train_loss": 0.07806483365148306,
+    "val": {
+      "argmax_blank_ratio": 0.8505212170528145,
+      "cer": 0.11284079792437582,
+      "exact": 0.5305,
+      "gate_mean": 0.09411636773745219,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13844587716321682,
+          "exact": 0.472,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3375,
+          "wer": 0.5234197362437472
+        },
+        "hkr_words": {
+          "cer": 0.09222254873151141,
+          "exact": 0.518,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.19,
+          "wer": 0.3581267217630854
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11652203218468278,
+          "exact": 0.6015,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.911,
+          "wer": 0.404265873015873
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.812833333333334,
+      "wer": 0.41913926757551456
+    }
+  },
+  {
+    "blank_logit_penalty": -1.5341772151898734,
+    "epoch": 24,
+    "train_gate_mean": 0.07152687174479166,
+    "train_loss": 0.07588962055084605,
+    "val": {
+      "argmax_blank_ratio": 0.8507548850353526,
+      "cer": 0.11041640083365234,
+      "exact": 0.538,
+      "gate_mean": 0.09350390268365542,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13769935527655242,
+          "exact": 0.478,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3,
+          "wer": 0.5216007276034561
+        },
+        "hkr_words": {
+          "cer": 0.09158585561759232,
+          "exact": 0.517,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1315,
+          "wer": 0.3627180899908173
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10893925351756677,
+          "exact": 0.619,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.878,
+          "wer": 0.38839285714285715
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.769833333333334,
+      "wer": 0.41633253140871423
+    }
+  },
+  {
+    "blank_logit_penalty": -1.5139240506329115,
+    "epoch": 25,
+    "train_gate_mean": 0.072655615234375,
+    "train_loss": 0.06854316728537281,
+    "val": {
+      "argmax_blank_ratio": 0.8468045216129139,
+      "cer": 0.11252179830717536,
+      "exact": 0.5265,
+      "gate_mean": 0.09497177538275718,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.14007465218866644,
+          "exact": 0.466,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.325,
+          "wer": 0.5302410186448385
+        },
+        "hkr_words": {
+          "cer": 0.09119404447056519,
+          "exact": 0.517,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1565,
+          "wer": 0.3593510866238139
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11500547645125958,
+          "exact": 0.5965,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.88,
+          "wer": 0.4117063492063492
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.787166666666667,
+      "wer": 0.4236835070836675
+    }
+  },
+  {
+    "blank_logit_penalty": -1.4936708860759493,
+    "epoch": 26,
+    "train_gate_mean": 0.07260939127604167,
+    "train_loss": 0.06433437923888366,
+    "val": {
+      "argmax_blank_ratio": 0.847741942578155,
+      "cer": 0.11375526349368381,
+      "exact": 0.5266666666666666,
+      "gate_mean": 0.09124130301674208,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.14095690532745164,
+          "exact": 0.4725,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3115,
+          "wer": 0.5202364711232378
+        },
+        "hkr_words": {
+          "cer": 0.09486727397394455,
+          "exact": 0.502,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1255,
+          "wer": 0.37037037037037035
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11247788356222091,
+          "exact": 0.6055,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8855,
+          "wer": 0.4007936507936508
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.774166666666667,
+      "wer": 0.42261427425821974
+    }
+  },
+  {
+    "blank_logit_penalty": -1.4734177215189872,
+    "epoch": 27,
+    "train_gate_mean": 0.06828885091145834,
+    "train_loss": 0.0622096790800492,
+    "val": {
+      "argmax_blank_ratio": 0.8465296181040455,
+      "cer": 0.11358513036451023,
+      "exact": 0.5278333333333334,
+      "gate_mean": 0.08799405575791995,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.14095690532745164,
+          "exact": 0.469,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.288,
+          "wer": 0.5279672578444747
+        },
+        "hkr_words": {
+          "cer": 0.09359388774610637,
+          "exact": 0.513,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1285,
+          "wer": 0.36516681971227427
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11399443929564411,
+          "exact": 0.6015,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.87,
+          "wer": 0.4037698412698413
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.762166666666666,
+      "wer": 0.4234161988773055
+    }
+  },
+  {
+    "blank_logit_penalty": -1.4531645569620253,
+    "epoch": 28,
+    "train_gate_mean": 0.06875227864583333,
+    "train_loss": 0.05879710103571415,
+    "val": {
+      "argmax_blank_ratio": 0.845072629507043,
+      "cer": 0.11201139891965463,
+      "exact": 0.5251666666666667,
+      "gate_mean": 0.09335532947381338,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13817441465897523,
+          "exact": 0.4755,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3185,
+          "wer": 0.5211459754433834
+        },
+        "hkr_words": {
+          "cer": 0.09330002938583602,
+          "exact": 0.496,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1615,
+          "wer": 0.3734312825221916
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11171960569550932,
+          "exact": 0.604,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8875,
+          "wer": 0.4007936507936508
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.789166666666667,
+      "wer": 0.4242181234963913
+    }
+  },
+  {
+    "blank_logit_penalty": -1.4329113924050634,
+    "epoch": 29,
+    "train_gate_mean": 0.06913291015625,
+    "train_loss": 0.05440361859363814,
+    "val": {
+      "argmax_blank_ratio": 0.8483192399467787,
+      "cer": 0.10958700182893114,
+      "exact": 0.5358333333333334,
+      "gate_mean": 0.089775806893905,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13389888021717,
+          "exact": 0.493,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.2805,
+          "wer": 0.49931787175989084
+        },
+        "hkr_words": {
+          "cer": 0.09349593495934959,
+          "exact": 0.4975,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.0945,
+          "wer": 0.3691460055096419
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10708568539893841,
+          "exact": 0.617,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.849,
+          "wer": 0.3888888888888889
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.741333333333333,
+      "wer": 0.4127238706228281
+    }
+  },
+  {
+    "blank_logit_penalty": -1.4126582278481012,
+    "epoch": 30,
+    "train_gate_mean": 0.06887229817708333,
+    "train_loss": 0.058513996109863124,
+    "val": {
+      "argmax_blank_ratio": 0.8457296488932384,
+      "cer": 0.10928926885287737,
+      "exact": 0.5368333333333334,
+      "gate_mean": 0.09203449920813242,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13437393959959282,
+          "exact": 0.482,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.32,
+          "wer": 0.5106866757617099
+        },
+        "hkr_words": {
+          "cer": 0.09099813889705162,
+          "exact": 0.512,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.137,
+          "wer": 0.3624119987756351
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10961327828797708,
+          "exact": 0.6165,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8975,
+          "wer": 0.3898809523809524
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.784833333333333,
+      "wer": 0.41339214113873296
+    }
+  },
+  {
+    "blank_logit_penalty": -1.3924050632911391,
+    "epoch": 31,
+    "train_gate_mean": 0.06847892252604167,
+    "train_loss": 0.04754269786005219,
+    "val": {
+      "argmax_blank_ratio": 0.8464251547706755,
+      "cer": 0.11281953128322912,
+      "exact": 0.5296666666666666,
+      "gate_mean": 0.09132673210899035,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.14170342721411605,
+          "exact": 0.4645,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.345,
+          "wer": 0.538881309686221
+        },
+        "hkr_words": {
+          "cer": 0.0916838084043491,
+          "exact": 0.517,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1765,
+          "wer": 0.35751453933272115
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11332041452523381,
+          "exact": 0.6075,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.896,
+          "wer": 0.3998015873015873
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.805833333333333,
+      "wer": 0.42221331194867684
+    }
+  },
+  {
+    "blank_logit_penalty": -1.3721518987341772,
+    "epoch": 32,
+    "train_gate_mean": 0.068859814453125,
+    "train_loss": 0.046504032541190586,
+    "val": {
+      "argmax_blank_ratio": 0.8440499884540527,
+      "cer": 0.10954446854663774,
+      "exact": 0.5386666666666666,
+      "gate_mean": 0.09039576922853788,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13824228028503563,
+          "exact": 0.476,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.286,
+          "wer": 0.5202364711232378
+        },
+        "hkr_words": {
+          "cer": 0.08864727201488883,
+          "exact": 0.5215,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.148,
+          "wer": 0.35384144475053564
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10986603757688095,
+          "exact": 0.6185,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.879,
+          "wer": 0.3888888888888889
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.771,
+      "wer": 0.41218925421010427
+    }
+  },
+  {
+    "blank_logit_penalty": -1.3518987341772153,
+    "epoch": 33,
+    "train_gate_mean": 0.068607275390625,
+    "train_loss": 0.04769757287837565,
+    "val": {
+      "argmax_blank_ratio": 0.8457653863493914,
+      "cer": 0.11347879715877675,
+      "exact": 0.5201666666666667,
+      "gate_mean": 0.08775755148132643,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.14183915846623685,
+          "exact": 0.466,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3295,
+          "wer": 0.5356980445657117
+        },
+        "hkr_words": {
+          "cer": 0.09320207659907924,
+          "exact": 0.495,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.141,
+          "wer": 0.3706764615855525
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11315190833263122,
+          "exact": 0.5995,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8745,
+          "wer": 0.4052579365079365
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.781666666666666,
+      "wer": 0.4284950547981823
+    }
+  },
+  {
+    "blank_logit_penalty": -1.3316455696202532,
+    "epoch": 34,
+    "train_gate_mean": 0.06981023763020833,
+    "train_loss": 0.04744969643764198,
+    "val": {
+      "argmax_blank_ratio": 0.8463756721390792,
+      "cer": 0.1091404023648505,
+      "exact": 0.5436666666666666,
+      "gate_mean": 0.09175578317046165,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13742789277231082,
+          "exact": 0.4795,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3005,
+          "wer": 0.519781718963165
+        },
+        "hkr_words": {
+          "cer": 0.08874522480164561,
+          "exact": 0.5345,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1325,
+          "wer": 0.3468013468013468
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10910775971016935,
+          "exact": 0.617,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8855,
+          "wer": 0.3898809523809524
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.772833333333334,
+      "wer": 0.40924886394012294
+    }
+  },
+  {
+    "blank_logit_penalty": -1.311392405063291,
+    "epoch": 35,
+    "train_gate_mean": 0.06839923502604167,
+    "train_loss": 0.04449256611540914,
+    "val": {
+      "argmax_blank_ratio": 0.8430658338923038,
+      "cer": 0.11173493258474756,
+      "exact": 0.5365,
+      "gate_mean": 0.08442951999107996,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13987105531048524,
+          "exact": 0.485,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.2935,
+          "wer": 0.5134151887221464
+        },
+        "hkr_words": {
+          "cer": 0.09183073758448428,
+          "exact": 0.506,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1185,
+          "wer": 0.37159473523109887
+        },
+        "school_notebooks_clean": {
+          "cer": 0.111045580925099,
+          "exact": 0.6185,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.897,
+          "wer": 0.3869047619047619
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.769666666666667,
+      "wer": 0.417401764234162
+    }
+  },
+  {
+    "blank_logit_penalty": -1.2911392405063291,
+    "epoch": 36,
+    "train_gate_mean": 0.06739720052083334,
+    "train_loss": 0.0466267784918348,
+    "val": {
+      "argmax_blank_ratio": 0.8433957181029459,
+      "cer": 0.10660967206839352,
+      "exact": 0.5521666666666667,
+      "gate_mean": 0.09078799575567245,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1350525958601968,
+          "exact": 0.488,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.294,
+          "wer": 0.5079581628012733
+        },
+        "hkr_words": {
+          "cer": 0.08624742873934764,
+          "exact": 0.5385,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1405,
+          "wer": 0.34067952249770433
+        },
+        "school_notebooks_clean": {
+          "cer": 0.1063274075322268,
+          "exact": 0.63,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8525,
+          "wer": 0.37648809523809523
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.762333333333333,
+      "wer": 0.3994921144079123
+    }
+  },
+  {
+    "blank_logit_penalty": -1.2708860759493672,
+    "epoch": 37,
+    "train_gate_mean": 0.06639913736979167,
+    "train_loss": 0.038980621259814746,
+    "val": {
+      "argmax_blank_ratio": 0.8481955333677879,
+      "cer": 0.11099060014461316,
+      "exact": 0.5418333333333333,
+      "gate_mean": 0.08655041937033335,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.14048184594502885,
+          "exact": 0.481,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.296,
+          "wer": 0.5129604365620737
+        },
+        "hkr_words": {
+          "cer": 0.08972475266921344,
+          "exact": 0.524,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1265,
+          "wer": 0.35537190082644626
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11096132782879771,
+          "exact": 0.6205,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8615,
+          "wer": 0.3854166666666667
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.761333333333333,
+      "wer": 0.40978348035284684
+    }
+  },
+  {
+    "blank_logit_penalty": -1.250632911392405,
+    "epoch": 38,
+    "train_gate_mean": 0.06564435221354167,
+    "train_loss": 0.04279914372793089,
+    "val": {
+      "argmax_blank_ratio": 0.8458671006476727,
+      "cer": 0.10782187061375527,
+      "exact": 0.543,
+      "gate_mean": 0.08057920890053114,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1317950458092976,
+          "exact": 0.4955,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.2815,
+          "wer": 0.5034106412005457
+        },
+        "hkr_words": {
+          "cer": 0.09036144578313253,
+          "exact": 0.5165,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1295,
+          "wer": 0.35873890419344967
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10809672255455388,
+          "exact": 0.617,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.861,
+          "wer": 0.3878968253968254
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.757333333333333,
+      "wer": 0.409115209836942
+    }
+  },
+  {
+    "blank_logit_penalty": -1.230379746835443,
+    "epoch": 39,
+    "train_gate_mean": 0.06572472330729166,
+    "train_loss": 0.03842255574700733,
+    "val": {
+      "argmax_blank_ratio": 0.8398247215227456,
+      "cer": 0.10780060397260857,
+      "exact": 0.5406666666666666,
+      "gate_mean": 0.08303876955310503,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13254156769596198,
+          "exact": 0.486,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.362,
+          "wer": 0.514324693042292
+        },
+        "hkr_words": {
+          "cer": 0.09075325693015966,
+          "exact": 0.5155,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1565,
+          "wer": 0.3608815426997245
+        },
+        "school_notebooks_clean": {
+          "cer": 0.1064116606285281,
+          "exact": 0.6205,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.9105,
+          "wer": 0.3864087301587302
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.809666666666667,
+      "wer": 0.41285752472600906
+    }
+  },
+  {
+    "blank_logit_penalty": -1.2101265822784808,
+    "epoch": 40,
+    "train_gate_mean": 0.06663810221354166,
+    "train_loss": 0.03680509360538175,
+    "val": {
+      "argmax_blank_ratio": 0.8417133086286713,
+      "cer": 0.10916166900599719,
+      "exact": 0.5406666666666666,
+      "gate_mean": 0.08715955218672752,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1347811333559552,
+          "exact": 0.49,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3285,
+          "wer": 0.5038653933606184
+        },
+        "hkr_words": {
+          "cer": 0.09075325693015966,
+          "exact": 0.5155,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.158,
+          "wer": 0.3593510866238139
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10902350661386806,
+          "exact": 0.6165,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8795,
+          "wer": 0.39037698412698413
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.788666666666667,
+      "wer": 0.41018444266238974
+    }
+  },
+  {
+    "blank_logit_penalty": -1.1898734177215189,
+    "epoch": 41,
+    "train_gate_mean": 0.06732508138020833,
+    "train_loss": 0.038376017037034034,
+    "val": {
+      "argmax_blank_ratio": 0.8445063282787741,
+      "cer": 0.10999106801071838,
+      "exact": 0.5381666666666667,
+      "gate_mean": 0.08752581278483072,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.133559552086868,
+          "exact": 0.483,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.335,
+          "wer": 0.5165984538426558
+        },
+        "hkr_words": {
+          "cer": 0.09271231266529532,
+          "exact": 0.518,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1165,
+          "wer": 0.3654729109274564
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11045580925098998,
+          "exact": 0.6135,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8835,
+          "wer": 0.39285714285714285
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.778333333333333,
+      "wer": 0.41726811013098103
+    }
+  },
+  {
+    "blank_logit_penalty": -1.169620253164557,
+    "epoch": 42,
+    "train_gate_mean": 0.06690861002604166,
+    "train_loss": 0.03450782257892812,
+    "val": {
+      "argmax_blank_ratio": 0.8428376639799431,
+      "cer": 0.10992726808727829,
+      "exact": 0.5353333333333333,
+      "gate_mean": 0.08562196317315102,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13634204275534442,
+          "exact": 0.4785,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3145,
+          "wer": 0.519781718963165
+        },
+        "hkr_words": {
+          "cer": 0.0905083749632677,
+          "exact": 0.5145,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.153,
+          "wer": 0.3569023569023569
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11054006234729126,
+          "exact": 0.613,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.879,
+          "wer": 0.3923611111111111
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.782166666666667,
+      "wer": 0.41432771986099975
+    }
+  },
+  {
+    "blank_logit_penalty": -1.1493670886075948,
+    "epoch": 43,
+    "train_gate_mean": 0.06580598958333334,
+    "train_loss": 0.03363652396723628,
+    "val": {
+      "argmax_blank_ratio": 0.8397972311718587,
+      "cer": 0.1075028709965548,
+      "exact": 0.5486666666666666,
+      "gate_mean": 0.08177880441149075,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13525619273837802,
+          "exact": 0.487,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3495,
+          "wer": 0.5106866757617099
+        },
+        "hkr_words": {
+          "cer": 0.08859829562151043,
+          "exact": 0.53,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.148,
+          "wer": 0.3458830731558004
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10556912966551521,
+          "exact": 0.629,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8995,
+          "wer": 0.37797619047619047
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.799,
+      "wer": 0.4029671210906175
+    }
+  },
+  {
+    "blank_logit_penalty": -1.1291139240506327,
+    "epoch": 44,
+    "train_gate_mean": 0.06518780924479167,
+    "train_loss": 0.03611312012076378,
+    "val": {
+      "argmax_blank_ratio": 0.8424802894184141,
+      "cer": 0.10514227382927141,
+      "exact": 0.5605,
+      "gate_mean": 0.08525979825854302,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1347132677298948,
+          "exact": 0.49,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.357,
+          "wer": 0.5088676671214188
+        },
+        "hkr_words": {
+          "cer": 0.08340679792340092,
+          "exact": 0.5605,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1845,
+          "wer": 0.32384450566268747
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10582188895441907,
+          "exact": 0.631,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8845,
+          "wer": 0.3740079365079365
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.808666666666666,
+      "wer": 0.3917401764234162
+    }
+  },
+  {
+    "blank_logit_penalty": -1.108860759493671,
+    "epoch": 45,
+    "train_gate_mean": 0.06808419596354166,
+    "train_loss": 0.034696442926985524,
+    "val": {
+      "argmax_blank_ratio": 0.8412734630144819,
+      "cer": 0.10871506954191655,
+      "exact": 0.547,
+      "gate_mean": 0.08515892257293066,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13545978961655922,
+          "exact": 0.489,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3055,
+          "wer": 0.5070486584811278
+        },
+        "hkr_words": {
+          "cer": 0.0882554608678617,
+          "exact": 0.54,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.167,
+          "wer": 0.34527089072543615
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11070856853989385,
+          "exact": 0.612,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8825,
+          "wer": 0.3958333333333333
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.785,
+      "wer": 0.4064421277733226
+    }
+  },
+  {
+    "blank_logit_penalty": -1.0886075949367089,
+    "epoch": 46,
+    "train_gate_mean": 0.068576953125,
+    "train_loss": 0.03233142473405848,
+    "val": {
+      "argmax_blank_ratio": 0.8408501116108246,
+      "cer": 0.1059504061928459,
+      "exact": 0.5503333333333333,
+      "gate_mean": 0.08764808469017346,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.130166270783848,
+          "exact": 0.4965,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.324,
+          "wer": 0.49749886311959984
+        },
+        "hkr_words": {
+          "cer": 0.08595357037907729,
+          "exact": 0.542,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.171,
+          "wer": 0.3376186103458831
+        },
+        "school_notebooks_clean": {
+          "cer": 0.1102873030583874,
+          "exact": 0.6125,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.871,
+          "wer": 0.3923611111111111
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.788666666666667,
+      "wer": 0.3993584603047314
+    }
+  },
+  {
+    "blank_logit_penalty": -1.0683544303797468,
+    "epoch": 47,
+    "train_gate_mean": 0.06965779622395833,
+    "train_loss": 0.03373386613068481,
+    "val": {
+      "argmax_blank_ratio": 0.8413751773127632,
+      "cer": 0.10996980136957168,
+      "exact": 0.544,
+      "gate_mean": 0.08839633588989576,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13898880217170004,
+          "exact": 0.4845,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.314,
+          "wer": 0.5170532060027285
+        },
+        "hkr_words": {
+          "cer": 0.0899696346361054,
+          "exact": 0.5225,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.146,
+          "wer": 0.3569023569023569
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10834948184345775,
+          "exact": 0.625,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.879,
+          "wer": 0.37996031746031744
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.7796666666666665,
+      "wer": 0.41018444266238974
+    }
+  },
+  {
+    "blank_logit_penalty": -1.0481012658227848,
+    "epoch": 48,
+    "train_gate_mean": 0.06748929036458333,
+    "train_loss": 0.03562074985873575,
+    "val": {
+      "argmax_blank_ratio": 0.8424308067868178,
+      "cer": 0.10580153970481902,
+      "exact": 0.5511666666666667,
+      "gate_mean": 0.08565614160895348,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1331523583305056,
+          "exact": 0.4905,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.2825,
+          "wer": 0.5070486584811278
+        },
+        "hkr_words": {
+          "cer": 0.08605152316583407,
+          "exact": 0.5345,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.134,
+          "wer": 0.3437404346495256
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10582188895441907,
+          "exact": 0.6285,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8555,
+          "wer": 0.376984126984127
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.757333333333333,
+      "wer": 0.400695001336541
+    }
+  },
+  {
+    "blank_logit_penalty": -1.0278481012658227,
+    "epoch": 49,
+    "train_gate_mean": 0.06938095703125,
+    "train_loss": 0.03029065943378955,
+    "val": {
+      "argmax_blank_ratio": 0.8361904971355054,
+      "cer": 0.10731147122623452,
+      "exact": 0.5423333333333333,
+      "gate_mean": 0.0885377545952797,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1323379708177808,
+          "exact": 0.4785,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.342,
+          "wer": 0.5175079581628013
+        },
+        "hkr_words": {
+          "cer": 0.08654128709961799,
+          "exact": 0.5405,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1705,
+          "wer": 0.34220997857361496
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11197236498441318,
+          "exact": 0.608,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8845,
+          "wer": 0.39732142857142855
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.799,
+      "wer": 0.4085805934242181
+    }
+  },
+  {
+    "blank_logit_penalty": -1.0075949367088608,
+    "epoch": 50,
+    "train_gate_mean": 0.06765908203125,
+    "train_loss": 0.028975499907135962,
+    "val": {
+      "argmax_blank_ratio": 0.8409215865231304,
+      "cer": 0.10771553740802178,
+      "exact": 0.5535,
+      "gate_mean": 0.08266356967886289,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13525619273837802,
+          "exact": 0.4965,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.316,
+          "wer": 0.5006821282401092
+        },
+        "hkr_words": {
+          "cer": 0.08752081496718582,
+          "exact": 0.5345,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.157,
+          "wer": 0.3458830731558004
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10826522874715645,
+          "exact": 0.6295,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.869,
+          "wer": 0.3759920634920635
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.780666666666667,
+      "wer": 0.3994921144079123
+    }
+  },
+  {
+    "blank_logit_penalty": -0.9873417721518987,
+    "epoch": 51,
+    "train_gate_mean": 0.06591927083333333,
+    "train_loss": 0.03304460259110977,
+    "val": {
+      "argmax_blank_ratio": 0.8425765056465181,
+      "cer": 0.10996980136957168,
+      "exact": 0.5393333333333333,
+      "gate_mean": 0.08517377588152886,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13702069901594843,
+          "exact": 0.483,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.284,
+          "wer": 0.5111414279217826
+        },
+        "hkr_words": {
+          "cer": 0.08845136644137526,
+          "exact": 0.526,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.0935,
+          "wer": 0.3556779920416284
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11340466762153509,
+          "exact": 0.609,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.837,
+          "wer": 0.39732142857142855
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.738166666666666,
+      "wer": 0.41259021651964717
+    }
+  },
+  {
+    "blank_logit_penalty": -0.9670886075949368,
+    "epoch": 52,
+    "train_gate_mean": 0.06845875651041666,
+    "train_loss": 0.029977437180280685,
+    "val": {
+      "argmax_blank_ratio": 0.8447784827525538,
+      "cer": 0.10805580366636894,
+      "exact": 0.543,
+      "gate_mean": 0.08440168772141139,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1332880895826264,
+          "exact": 0.491,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.26,
+          "wer": 0.5061391541609823
+        },
+        "hkr_words": {
+          "cer": 0.0876187677539426,
+          "exact": 0.5255,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1205,
+          "wer": 0.34863789409243956
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11188811188811189,
+          "exact": 0.6125,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.857,
+          "wer": 0.39384920634920634
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.745833333333334,
+      "wer": 0.40711039828922746
+    }
+  },
+  {
+    "blank_logit_penalty": -0.9468354430379746,
+    "epoch": 53,
+    "train_gate_mean": 0.067614013671875,
+    "train_loss": 0.0306701271221973,
+    "val": {
+      "argmax_blank_ratio": 0.8430218493308849,
+      "cer": 0.10605673939857939,
+      "exact": 0.5481666666666667,
+      "gate_mean": 0.08099906245867411,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1338310145911096,
+          "exact": 0.482,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.278,
+          "wer": 0.514324693042292
+        },
+        "hkr_words": {
+          "cer": 0.08673719267313156,
+          "exact": 0.532,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.107,
+          "wer": 0.34251606978879706
+        },
+        "school_notebooks_clean": {
+          "cer": 0.1048108517988036,
+          "exact": 0.6305,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8395,
+          "wer": 0.375
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.7415,
+      "wer": 0.40176423416198875
+    }
+  },
+  {
+    "blank_logit_penalty": -0.9265822784810125,
+    "epoch": 54,
+    "train_gate_mean": 0.06638203125,
+    "train_loss": 0.0309754479375047,
+    "val": {
+      "argmax_blank_ratio": 0.8423703280148668,
+      "cer": 0.11192633235506784,
+      "exact": 0.5323333333333333,
+      "gate_mean": 0.0832095842162768,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13858160841533762,
+          "exact": 0.469,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3015,
+          "wer": 0.5261482492041837
+        },
+        "hkr_words": {
+          "cer": 0.0911450680771868,
+          "exact": 0.52,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.133,
+          "wer": 0.35751453933272115
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11458421096975314,
+          "exact": 0.608,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8525,
+          "wer": 0.3978174603174603
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.762333333333333,
+      "wer": 0.4179363806468859
+    }
+  },
+  {
+    "blank_logit_penalty": -0.9063291139240506,
+    "epoch": 55,
+    "train_gate_mean": 0.06651027018229166,
+    "train_loss": 0.02832000890849158,
+    "val": {
+      "argmax_blank_ratio": 0.8398329686280116,
+      "cer": 0.10722640466164773,
+      "exact": 0.5475,
+      "gate_mean": 0.08554857050379118,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1337631489650492,
+          "exact": 0.491,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.274,
+          "wer": 0.5043201455206913
+        },
+        "hkr_words": {
+          "cer": 0.08629640513272603,
+          "exact": 0.5325,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.103,
+          "wer": 0.349862258953168
+        },
+        "school_notebooks_clean": {
+          "cer": 0.1102873030583874,
+          "exact": 0.619,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8605,
+          "wer": 0.3869047619047619
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.745833333333334,
+      "wer": 0.4052392408446939
+    }
+  },
+  {
+    "blank_logit_penalty": -0.8860759493670884,
+    "epoch": 56,
+    "train_gate_mean": 0.06881824544270833,
+    "train_loss": 0.028216461562504992,
+    "val": {
+      "argmax_blank_ratio": 0.8395745593296753,
+      "cer": 0.1067372719152737,
+      "exact": 0.546,
+      "gate_mean": 0.08981649121642113,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13342382083474721,
+          "exact": 0.489,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3115,
+          "wer": 0.506593906321055
+        },
+        "hkr_words": {
+          "cer": 0.0870800274267803,
+          "exact": 0.5325,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.142,
+          "wer": 0.3458830731558004
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10742269778414357,
+          "exact": 0.6165,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8875,
+          "wer": 0.38938492063492064
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.780333333333333,
+      "wer": 0.40483827853515103
+    }
+  },
+  {
+    "blank_logit_penalty": -0.8658227848101265,
+    "epoch": 57,
+    "train_gate_mean": 0.06593445638020834,
+    "train_loss": 0.028572006815547744,
+    "val": {
+      "argmax_blank_ratio": 0.8417380499444695,
+      "cer": 0.10565267321679214,
+      "exact": 0.5486666666666666,
+      "gate_mean": 0.08610166922211647,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.12846963013233798,
+          "exact": 0.499,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.344,
+          "wer": 0.49386084583901774
+        },
+        "hkr_words": {
+          "cer": 0.0882554608678617,
+          "exact": 0.524,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.156,
+          "wer": 0.3516988062442608
+        },
+        "school_notebooks_clean": {
+          "cer": 0.107254191591541,
+          "exact": 0.623,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.893,
+          "wer": 0.3834325396825397
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.797666666666666,
+      "wer": 0.4020315423683507
+    }
+  },
+  {
+    "blank_logit_penalty": -0.8455696202531646,
+    "epoch": 58,
+    "train_gate_mean": 0.0666111328125,
+    "train_loss": 0.026022262054650733,
+    "val": {
+      "argmax_blank_ratio": 0.8427964284536128,
+      "cer": 0.10652460550380673,
+      "exact": 0.5493333333333333,
+      "gate_mean": 0.08508224032322566,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.131862911435358,
+          "exact": 0.4865,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3185,
+          "wer": 0.5079581628012733
+        },
+        "hkr_words": {
+          "cer": 0.08698207464002351,
+          "exact": 0.533,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.141,
+          "wer": 0.3440465258647077
+        },
+        "school_notebooks_clean": {
+          "cer": 0.1086864942286629,
+          "exact": 0.6285,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8895,
+          "wer": 0.37896825396825395
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.783,
+      "wer": 0.4016305800588078
+    }
+  },
+  {
+    "blank_logit_penalty": -0.8253164556962025,
+    "epoch": 59,
+    "train_gate_mean": 0.06483056640625,
+    "train_loss": 0.02581615949276214,
+    "val": {
+      "argmax_blank_ratio": 0.841289957225014,
+      "cer": 0.10546127344647187,
+      "exact": 0.5566666666666666,
+      "gate_mean": 0.07999162110686302,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13145571767899558,
+          "exact": 0.4945,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.313,
+          "wer": 0.49977262391996363
+        },
+        "hkr_words": {
+          "cer": 0.08639435791948281,
+          "exact": 0.5465,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.138,
+          "wer": 0.3370064279155188
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10599039514702166,
+          "exact": 0.629,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8775,
+          "wer": 0.37797619047619047
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.776166666666667,
+      "wer": 0.3958834536220262
+    }
+  },
+  {
+    "blank_logit_penalty": -0.8050632911392406,
+    "epoch": 60,
+    "train_gate_mean": 0.06340974934895834,
+    "train_loss": 0.02848402474188867,
+    "val": {
+      "argmax_blank_ratio": 0.8384749452942017,
+      "cer": 0.10626940581004636,
+      "exact": 0.5525,
+      "gate_mean": 0.08190961003303528,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13254156769596198,
+          "exact": 0.498,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3625,
+          "wer": 0.4979536152796726
+        },
+        "hkr_words": {
+          "cer": 0.08654128709961799,
+          "exact": 0.536,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1555,
+          "wer": 0.3403734312825222
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10759120397674614,
+          "exact": 0.6235,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.909,
+          "wer": 0.3834325396825397
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.809,
+      "wer": 0.39828922747928364
+    }
+  },
+  {
+    "blank_logit_penalty": -0.7848101265822782,
+    "epoch": 61,
+    "train_gate_mean": 0.06924879557291666,
+    "train_loss": 0.027287763332839433,
+    "val": {
+      "argmax_blank_ratio": 0.837402821609615,
+      "cer": 0.10429160818340351,
+      "exact": 0.5591666666666667,
+      "gate_mean": 0.09092679928739866,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13023413640990839,
+          "exact": 0.5,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3375,
+          "wer": 0.4965893587994543
+        },
+        "hkr_words": {
+          "cer": 0.08634538152610442,
+          "exact": 0.5385,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1715,
+          "wer": 0.34527089072543615
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10295728368017525,
+          "exact": 0.639,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.895,
+          "wer": 0.3695436507936508
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.801333333333333,
+      "wer": 0.3962844159315691
+    }
+  },
+  {
+    "blank_logit_penalty": -0.7645569620253163,
+    "epoch": 62,
+    "train_gate_mean": 0.07144495442708333,
+    "train_loss": 0.026243484477512537,
+    "val": {
+      "argmax_blank_ratio": 0.8403305439790634,
+      "cer": 0.1051848071115648,
+      "exact": 0.5523333333333333,
+      "gate_mean": 0.08742046491305033,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1321343739395996,
+          "exact": 0.491,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3455,
+          "wer": 0.5093224192814916
+        },
+        "hkr_words": {
+          "cer": 0.08526790087177981,
+          "exact": 0.5405,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1555,
+          "wer": 0.3403734312825222
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10599039514702166,
+          "exact": 0.6255,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8895,
+          "wer": 0.3819444444444444
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.796833333333334,
+      "wer": 0.4012296177492649
+    }
+  },
+  {
+    "blank_logit_penalty": -0.7443037974683544,
+    "epoch": 63,
+    "train_gate_mean": 0.07003455403645834,
+    "train_loss": 0.02682283692015335,
+    "val": {
+      "argmax_blank_ratio": 0.8363142037144962,
+      "cer": 0.10571647314023223,
+      "exact": 0.5503333333333333,
+      "gate_mean": 0.08467913763721784,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.12941974889718358,
+          "exact": 0.5005,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.306,
+          "wer": 0.4988631195998181
+        },
+        "hkr_words": {
+          "cer": 0.08756979136056421,
+          "exact": 0.529,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1545,
+          "wer": 0.3492500765228038
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10750695088044486,
+          "exact": 0.6215,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8805,
+          "wer": 0.3844246031746032
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.780333333333333,
+      "wer": 0.40269981288425555
+    }
+  },
+  {
+    "blank_logit_penalty": -0.7240506329113923,
+    "epoch": 64,
+    "train_gate_mean": 0.067317236328125,
+    "train_loss": 0.02442510038524245,
+    "val": {
+      "argmax_blank_ratio": 0.838238528276575,
+      "cer": 0.10514227382927141,
+      "exact": 0.5495,
+      "gate_mean": 0.08606261949737867,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1309806582965728,
+          "exact": 0.496,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.321,
+          "wer": 0.5043201455206913
+        },
+        "hkr_words": {
+          "cer": 0.08595357037907729,
+          "exact": 0.528,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.152,
+          "wer": 0.352310988674625
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10607464824332294,
+          "exact": 0.6245,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8835,
+          "wer": 0.3854166666666667
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.7855,
+      "wer": 0.40590751136059877
+    }
+  },
+  {
+    "blank_logit_penalty": -0.7037974683544304,
+    "epoch": 65,
+    "train_gate_mean": 0.070026708984375,
+    "train_loss": 0.022842066151974722,
+    "val": {
+      "argmax_blank_ratio": 0.8425682585412521,
+      "cer": 0.10916166900599719,
+      "exact": 0.5425,
+      "gate_mean": 0.08816245115796725,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1346454021038344,
+          "exact": 0.4885,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.2865,
+          "wer": 0.5038653933606184
+        },
+        "hkr_words": {
+          "cer": 0.0893819179155647,
+          "exact": 0.526,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1035,
+          "wer": 0.3559840832568105
+        },
+        "school_notebooks_clean": {
+          "cer": 0.11155109950290673,
+          "exact": 0.613,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.868,
+          "wer": 0.3923611111111111
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.752666666666666,
+      "wer": 0.40924886394012294
+    }
+  },
+  {
+    "blank_logit_penalty": -0.6835443037974682,
+    "epoch": 66,
+    "train_gate_mean": 0.06747783203125,
+    "train_loss": 0.025997473432170227,
+    "val": {
+      "argmax_blank_ratio": 0.840151856698299,
+      "cer": 0.10699247160903406,
+      "exact": 0.547,
+      "gate_mean": 0.08490476342042287,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1300305395317272,
+          "exact": 0.4915,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3115,
+          "wer": 0.5038653933606184
+        },
+        "hkr_words": {
+          "cer": 0.09129199725732197,
+          "exact": 0.5195,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1275,
+          "wer": 0.3590449954086318
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10540062347291262,
+          "exact": 0.63,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.889,
+          "wer": 0.375
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.776,
+      "wer": 0.40590751136059877
+    }
+  },
+  {
+    "blank_logit_penalty": -0.6632911392405063,
+    "epoch": 67,
+    "train_gate_mean": 0.066828564453125,
+    "train_loss": 0.025770180969312786,
+    "val": {
+      "argmax_blank_ratio": 0.8414576483654237,
+      "cer": 0.10860873633618306,
+      "exact": 0.5366666666666666,
+      "gate_mean": 0.08180650429924329,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13342382083474721,
+          "exact": 0.486,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.291,
+          "wer": 0.5106866757617099
+        },
+        "hkr_words": {
+          "cer": 0.09001861102948379,
+          "exact": 0.515,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.126,
+          "wer": 0.36149372513008876
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10978178448057967,
+          "exact": 0.609,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8515,
+          "wer": 0.39732142857142855
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.756166666666667,
+      "wer": 0.41499599037690454
+    }
+  },
+  {
+    "blank_logit_penalty": -0.6430379746835442,
+    "epoch": 68,
+    "train_gate_mean": 0.06764563802083333,
+    "train_loss": 0.022105540255317465,
+    "val": {
+      "argmax_blank_ratio": 0.8380625900308991,
+      "cer": 0.10590787291055251,
+      "exact": 0.5486666666666666,
+      "gate_mean": 0.08650872660676638,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13165931455717678,
+          "exact": 0.4875,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3415,
+          "wer": 0.5097771714415643
+        },
+        "hkr_words": {
+          "cer": 0.08835341365461848,
+          "exact": 0.5305,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1505,
+          "wer": 0.34741352923171104
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10413682702839329,
+          "exact": 0.628,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.895,
+          "wer": 0.3784722222222222
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.7956666666666665,
+      "wer": 0.40350173750334134
+    }
+  },
+  {
+    "blank_logit_penalty": -0.622784810126582,
+    "epoch": 69,
+    "train_gate_mean": 0.06629954427083333,
+    "train_loss": 0.025979943685575078,
+    "val": {
+      "argmax_blank_ratio": 0.8368942501182085,
+      "cer": 0.10797073710178215,
+      "exact": 0.5368333333333334,
+      "gate_mean": 0.08144270486632983,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1348489989820156,
+          "exact": 0.4735,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3105,
+          "wer": 0.5206912232833106
+        },
+        "hkr_words": {
+          "cer": 0.08796160250759134,
+          "exact": 0.52,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1385,
+          "wer": 0.3526170798898072
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10902350661386806,
+          "exact": 0.617,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8695,
+          "wer": 0.3898809523809524
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.772833333333334,
+      "wer": 0.41205560010692327
+    }
+  },
+  {
+    "blank_logit_penalty": -0.6025316455696201,
+    "epoch": 70,
+    "train_gate_mean": 0.06629754231770833,
+    "train_loss": 0.024124374029048098,
+    "val": {
+      "argmax_blank_ratio": 0.8380048602940368,
+      "cer": 0.10509974054697802,
+      "exact": 0.5536666666666666,
+      "gate_mean": 0.0793207624455293,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13138785205293518,
+          "exact": 0.502,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.2995,
+          "wer": 0.49749886311959984
+        },
+        "hkr_words": {
+          "cer": 0.08781467332745617,
+          "exact": 0.525,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1215,
+          "wer": 0.3501683501683502
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10219900581346364,
+          "exact": 0.634,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.848,
+          "wer": 0.3705357142857143
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.756333333333333,
+      "wer": 0.3989574979951884
+    }
+  },
+  {
+    "blank_logit_penalty": -0.5822784810126582,
+    "epoch": 71,
+    "train_gate_mean": 0.06607596028645833,
+    "train_loss": 0.023996417799219488,
+    "val": {
+      "argmax_blank_ratio": 0.8354537557317382,
+      "cer": 0.1043128748245502,
+      "exact": 0.5531666666666667,
+      "gate_mean": 0.08168468622366587,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.12684085510688836,
+          "exact": 0.5095,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.326,
+          "wer": 0.483856298317417
+        },
+        "hkr_words": {
+          "cer": 0.08619845234596925,
+          "exact": 0.531,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1475,
+          "wer": 0.3431282522191613
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10750695088044486,
+          "exact": 0.619,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8925,
+          "wer": 0.3878968253968254
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.788666666666667,
+      "wer": 0.39655172413793105
+    }
+  },
+  {
+    "blank_logit_penalty": -0.5620253164556961,
+    "epoch": 72,
+    "train_gate_mean": 0.06697799479166666,
+    "train_loss": 0.023265178267875067,
+    "val": {
+      "argmax_blank_ratio": 0.8377107135395476,
+      "cer": 0.10471694100633745,
+      "exact": 0.5505,
+      "gate_mean": 0.07941202945510546,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1327451645741432,
+          "exact": 0.4895,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.332,
+          "wer": 0.502955889040473
+        },
+        "hkr_words": {
+          "cer": 0.08565971201880694,
+          "exact": 0.533,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1465,
+          "wer": 0.34527089072543615
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10270452439127138,
+          "exact": 0.629,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.88,
+          "wer": 0.376984126984127
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.7861666666666665,
+      "wer": 0.40016038492381717
+    }
+  },
+  {
+    "blank_logit_penalty": -0.5417721518987342,
+    "epoch": 73,
+    "train_gate_mean": 0.066913232421875,
+    "train_loss": 0.023761213303807503,
+    "val": {
+      "argmax_blank_ratio": 0.8391622040663727,
+      "cer": 0.10586533962825911,
+      "exact": 0.5516666666666666,
+      "gate_mean": 0.08598678824305535,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.134238208347472,
+          "exact": 0.4915,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3325,
+          "wer": 0.5052296498408367
+        },
+        "hkr_words": {
+          "cer": 0.08585561759232051,
+          "exact": 0.537,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1335,
+          "wer": 0.3394551576369758
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10506361108770747,
+          "exact": 0.6265,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.904,
+          "wer": 0.3819444444444444
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.79,
+      "wer": 0.39962576851109327
+    }
+  },
+  {
+    "blank_logit_penalty": -0.521518987341772,
+    "epoch": 74,
+    "train_gate_mean": 0.07074259440104166,
+    "train_loss": 0.02296105037603993,
+    "val": {
+      "argmax_blank_ratio": 0.832498543011403,
+      "cer": 0.10533367359959168,
+      "exact": 0.5498333333333333,
+      "gate_mean": 0.08512119992574056,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.131184255174754,
+          "exact": 0.4875,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.364,
+          "wer": 0.5075034106412005
+        },
+        "hkr_words": {
+          "cer": 0.08678616906650995,
+          "exact": 0.537,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.152,
+          "wer": 0.34067952249770433
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10514786418400876,
+          "exact": 0.625,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.9015,
+          "wer": 0.3804563492063492
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.805833333333333,
+      "wer": 0.4004276931301791
+    }
+  },
+  {
+    "blank_logit_penalty": -0.5012658227848101,
+    "epoch": 75,
+    "train_gate_mean": 0.07201048177083333,
+    "train_loss": 0.021366322153333263,
+    "val": {
+      "argmax_blank_ratio": 0.8384529530134923,
+      "cer": 0.10667347199183361,
+      "exact": 0.5495,
+      "gate_mean": 0.08344668166836103,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13131998642687479,
+          "exact": 0.499,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3375,
+          "wer": 0.49477035015916326
+        },
+        "hkr_words": {
+          "cer": 0.08717798021353708,
+          "exact": 0.5305,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.145,
+          "wer": 0.3440465258647077
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10961327828797708,
+          "exact": 0.619,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8775,
+          "wer": 0.38591269841269843
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.786666666666667,
+      "wer": 0.39962576851109327
+    }
+  },
+  {
+    "blank_logit_penalty": -0.481012658227848,
+    "epoch": 76,
+    "train_gate_mean": 0.07041180013020833,
+    "train_loss": 0.021926066183795532,
+    "val": {
+      "argmax_blank_ratio": 0.8375100339780737,
+      "cer": 0.10526987367615159,
+      "exact": 0.5563333333333333,
+      "gate_mean": 0.08240336603919665,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.12901255514082116,
+          "exact": 0.505,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.327,
+          "wer": 0.4906775807185084
+        },
+        "hkr_words": {
+          "cer": 0.08830443726124008,
+          "exact": 0.5315,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.153,
+          "wer": 0.34527089072543615
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10497935799140619,
+          "exact": 0.6325,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.892,
+          "wer": 0.37648809523809523
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.790666666666667,
+      "wer": 0.39641807003475005
+    }
+  },
+  {
+    "blank_logit_penalty": -0.46075949367088587,
+    "epoch": 77,
+    "train_gate_mean": 0.06892195638020833,
+    "train_loss": 0.02284726636973986,
+    "val": {
+      "argmax_blank_ratio": 0.8391154704698651,
+      "cer": 0.1059504061928459,
+      "exact": 0.5543333333333333,
+      "gate_mean": 0.08298161856333415,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1299626739056668,
+          "exact": 0.501,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.2825,
+          "wer": 0.4929513415188722
+        },
+        "hkr_words": {
+          "cer": 0.08722695660691547,
+          "exact": 0.539,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1055,
+          "wer": 0.3440465258647077
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10834948184345775,
+          "exact": 0.623,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.853,
+          "wer": 0.3834325396825397
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.747,
+      "wer": 0.3984228815824646
+    }
+  },
+  {
+    "blank_logit_penalty": -0.44050632911392396,
+    "epoch": 78,
+    "train_gate_mean": 0.06896754557291666,
+    "train_loss": 0.01975545513383113,
+    "val": {
+      "argmax_blank_ratio": 0.8385904047679265,
+      "cer": 0.10480200757092425,
+      "exact": 0.5531666666666667,
+      "gate_mean": 0.0819854257106781,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.1329487614523244,
+          "exact": 0.489,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.364,
+          "wer": 0.5020463847203275
+        },
+        "hkr_words": {
+          "cer": 0.08423939661083357,
+          "exact": 0.539,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1655,
+          "wer": 0.34282216100397916
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10523211728031005,
+          "exact": 0.6315,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.905,
+          "wer": 0.3740079365079365
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.8115,
+      "wer": 0.3980219192729217
+    }
+  },
+  {
+    "blank_logit_penalty": -0.4202531645569618,
+    "epoch": 79,
+    "train_gate_mean": 0.06957955729166666,
+    "train_loss": 0.02426551920847657,
+    "val": {
+      "argmax_blank_ratio": 0.8402233316106047,
+      "cer": 0.10512100718812471,
+      "exact": 0.5573333333333333,
+      "gate_mean": 0.08322203666965167,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.13023413640990839,
+          "exact": 0.5055,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.315,
+          "wer": 0.48794906775807184
+        },
+        "hkr_words": {
+          "cer": 0.08663923988637477,
+          "exact": 0.539,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.1415,
+          "wer": 0.34098561371288644
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10573763585811778,
+          "exact": 0.6275,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8885,
+          "wer": 0.3794642857142857
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.781666666666666,
+      "wer": 0.3945469125902165
+    }
+  },
+  {
+    "blank_logit_penalty": -0.3999999999999999,
+    "epoch": 80,
+    "train_gate_mean": 0.07124298502604166,
+    "train_loss": 0.0218744330961102,
+    "val": {
+      "argmax_blank_ratio": 0.84031679880362,
+      "cer": 0.10382374207817617,
+      "exact": 0.5588333333333333,
+      "gate_mean": 0.08777391510208447,
+      "grouped": {
+        "cyrillic_handwriting": {
+          "cer": 0.12969121140142517,
+          "exact": 0.499,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 7.3295,
+          "wer": 0.493406093678945
+        },
+        "hkr_words": {
+          "cer": 0.08570868841218533,
+          "exact": 0.5405,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 10.153,
+          "wer": 0.3351698806244261
+        },
+        "school_notebooks_clean": {
+          "cer": 0.10287303058387395,
+          "exact": 0.637,
+          "n": 2000,
+          "pred_empty_ratio": 0.0,
+          "pred_len_mean": 5.8645,
+          "wer": 0.3705357142857143
+        }
+      },
+      "n": 6000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.782333333333334,
+      "wer": 0.39120556001069234
+    }
+  }
+]

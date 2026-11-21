@@ -1,0 +1,189 @@
+{
+  "items": [
+    {
+      "csv": "data/experiments/htr_graph_v1/features/tri10k/cyrillic_handwriting_train_features.csv",
+      "dataset": "cyrillic_handwriting",
+      "expected_n": 10000,
+      "failures": "data/experiments/htr_graph_v1/features/tri10k/cyrillic_handwriting_train_failures.jsonl",
+      "failures_n": 0,
+      "features_n": 10000,
+      "jsonl": "data/experiments/htr_graph_v1/features/tri10k/cyrillic_handwriting_train_features.jsonl",
+      "manifest": "data/experiments/htr_graph_v1/subsets/tri10k/cyrillic_handwriting/train.jsonl",
+      "split": "train",
+      "stats": {
+        "branchpoint_per_100_skel_mean": 14.985501938218574,
+        "endpoint_per_100_skel_mean": 5.857421300733316,
+        "fg_fraction_mean": 0.14593565115843427,
+        "n": 10000,
+        "skel_pixels_mean": 559.4626,
+        "stroke_width_mean": 3.7117488332641937,
+        "warning_rate": 0.0061
+      }
+    },
+    {
+      "csv": "data/experiments/htr_graph_v1/features/tri10k/cyrillic_handwriting_val_features.csv",
+      "dataset": "cyrillic_handwriting",
+      "expected_n": 2000,
+      "failures": "data/experiments/htr_graph_v1/features/tri10k/cyrillic_handwriting_val_failures.jsonl",
+      "failures_n": 0,
+      "features_n": 2000,
+      "jsonl": "data/experiments/htr_graph_v1/features/tri10k/cyrillic_handwriting_val_features.jsonl",
+      "manifest": "data/experiments/htr_graph_v1/subsets/tri10k/cyrillic_handwriting/val.jsonl",
+      "split": "val",
+      "stats": {
+        "branchpoint_per_100_skel_mean": 15.11245362485608,
+        "endpoint_per_100_skel_mean": 5.832865010816376,
+        "fg_fraction_mean": 0.14609271950210287,
+        "n": 2000,
+        "skel_pixels_mean": 559.0225,
+        "stroke_width_mean": 3.690055643289187,
+        "warning_rate": 0.005
+      }
+    },
+    {
+      "csv": "data/experiments/htr_graph_v1/features/tri10k/cyrillic_handwriting_test_features.csv",
+      "dataset": "cyrillic_handwriting",
+      "expected_n": 1563,
+      "failures": "data/experiments/htr_graph_v1/features/tri10k/cyrillic_handwriting_test_failures.jsonl",
+      "failures_n": 0,
+      "features_n": 1563,
+      "jsonl": "data/experiments/htr_graph_v1/features/tri10k/cyrillic_handwriting_test_features.jsonl",
+      "manifest": "data/experiments/htr_graph_v1/subsets/tri10k/cyrillic_handwriting/test.jsonl",
+      "split": "test",
+      "stats": {
+        "branchpoint_per_100_skel_mean": 11.601524076869941,
+        "endpoint_per_100_skel_mean": 4.464179128941208,
+        "fg_fraction_mean": 0.14501358566456693,
+        "n": 1563,
+        "skel_pixels_mean": 720.8502879078695,
+        "stroke_width_mean": 3.9346272578162,
+        "warning_rate": 0.0
+      }
+    },
+    {
+      "csv": "data/experiments/htr_graph_v1/features/tri10k/hkr_words_train_features.csv",
+      "dataset": "hkr_words",
+      "expected_n": 10000,
+      "failures": "data/experiments/htr_graph_v1/features/tri10k/hkr_words_train_failures.jsonl",
+      "failures_n": 0,
+      "features_n": 10000,
+      "jsonl": "data/experiments/htr_graph_v1/features/tri10k/hkr_words_train_features.jsonl",
+      "manifest": "data/experiments/htr_graph_v1/subsets/tri10k/hkr_words/train.jsonl",
+      "split": "train",
+      "stats": {
+        "branchpoint_per_100_skel_mean": 10.090319361139995,
+        "endpoint_per_100_skel_mean": 3.8067186171458687,
+        "fg_fraction_mean": 0.13057586696656479,
+        "n": 10000,
+        "skel_pixels_mean": 839.773,
+        "stroke_width_mean": 3.7382246012420874,
+        "warning_rate": 0.0
+      }
+    },
+    {
+      "csv": "data/experiments/htr_graph_v1/features/tri10k/hkr_words_val_features.csv",
+      "dataset": "hkr_words",
+      "expected_n": 2000,
+      "failures": "data/experiments/htr_graph_v1/features/tri10k/hkr_words_val_failures.jsonl",
+      "failures_n": 0,
+      "features_n": 2000,
+      "jsonl": "data/experiments/htr_graph_v1/features/tri10k/hkr_words_val_features.jsonl",
+      "manifest": "data/experiments/htr_graph_v1/subsets/tri10k/hkr_words/val.jsonl",
+      "split": "val",
+      "stats": {
+        "branchpoint_per_100_skel_mean": 10.4220984136095,
+        "endpoint_per_100_skel_mean": 3.9161644501032926,
+        "fg_fraction_mean": 0.12987384886685518,
+        "n": 2000,
+        "skel_pixels_mean": 751.1505,
+        "stroke_width_mean": 3.6339937693186313,
+        "warning_rate": 0.0
+      }
+    },
+    {
+      "csv": "data/experiments/htr_graph_v1/features/tri10k/hkr_words_test_features.csv",
+      "dataset": "hkr_words",
+      "expected_n": 2000,
+      "failures": "data/experiments/htr_graph_v1/features/tri10k/hkr_words_test_failures.jsonl",
+      "failures_n": 0,
+      "features_n": 2000,
+      "jsonl": "data/experiments/htr_graph_v1/features/tri10k/hkr_words_test_features.jsonl",
+      "manifest": "data/experiments/htr_graph_v1/subsets/tri10k/hkr_words/test.jsonl",
+      "split": "test",
+      "stats": {
+        "branchpoint_per_100_skel_mean": 10.360431779195844,
+        "endpoint_per_100_skel_mean": 3.7440294441450486,
+        "fg_fraction_mean": 0.13120418578048523,
+        "n": 2000,
+        "skel_pixels_mean": 812.2295,
+        "stroke_width_mean": 3.7059807185771647,
+        "warning_rate": 0.0
+      }
+    },
+    {
+      "csv": "data/experiments/htr_graph_v1/features/tri10k/school_notebooks_clean_train_features.csv",
+      "dataset": "school_notebooks_clean",
+      "expected_n": 10000,
+      "failures": "data/experiments/htr_graph_v1/features/tri10k/school_notebooks_clean_train_failures.jsonl",
+      "failures_n": 0,
+      "features_n": 10000,
+      "jsonl": "data/experiments/htr_graph_v1/features/tri10k/school_notebooks_clean_train_features.jsonl",
+      "manifest": "data/experiments/htr_graph_v1/subsets/tri10k/school_notebooks_clean/train.jsonl",
+      "split": "train",
+      "stats": {
+        "branchpoint_per_100_skel_mean": 20.083979054417348,
+        "endpoint_per_100_skel_mean": 4.711747248264018,
+        "fg_fraction_mean": 0.19552397307115102,
+        "n": 10000,
+        "skel_pixels_mean": 604.5102,
+        "stroke_width_mean": 3.6144169472916694,
+        "warning_rate": 0.0002
+      }
+    },
+    {
+      "csv": "data/experiments/htr_graph_v1/features/tri10k/school_notebooks_clean_val_features.csv",
+      "dataset": "school_notebooks_clean",
+      "expected_n": 2000,
+      "failures": "data/experiments/htr_graph_v1/features/tri10k/school_notebooks_clean_val_failures.jsonl",
+      "failures_n": 0,
+      "features_n": 2000,
+      "jsonl": "data/experiments/htr_graph_v1/features/tri10k/school_notebooks_clean_val_features.jsonl",
+      "manifest": "data/experiments/htr_graph_v1/subsets/tri10k/school_notebooks_clean/val.jsonl",
+      "split": "val",
+      "stats": {
+        "branchpoint_per_100_skel_mean": 19.610877147813103,
+        "endpoint_per_100_skel_mean": 3.94880556408802,
+        "fg_fraction_mean": 0.20728361950717283,
+        "n": 2000,
+        "skel_pixels_mean": 711.8795,
+        "stroke_width_mean": 3.516483008026497,
+        "warning_rate": 0.0
+      }
+    },
+    {
+      "csv": "data/experiments/htr_graph_v1/features/tri10k/school_notebooks_clean_test_features.csv",
+      "dataset": "school_notebooks_clean",
+      "expected_n": 2000,
+      "failures": "data/experiments/htr_graph_v1/features/tri10k/school_notebooks_clean_test_failures.jsonl",
+      "failures_n": 0,
+      "features_n": 2000,
+      "jsonl": "data/experiments/htr_graph_v1/features/tri10k/school_notebooks_clean_test_features.jsonl",
+      "manifest": "data/experiments/htr_graph_v1/subsets/tri10k/school_notebooks_clean/test.jsonl",
+      "split": "test",
+      "stats": {
+        "branchpoint_per_100_skel_mean": 20.43465820364789,
+        "endpoint_per_100_skel_mean": 4.460805624473946,
+        "fg_fraction_mean": 0.20257453923556362,
+        "n": 2000,
+        "skel_pixels_mean": 620.4675,
+        "stroke_width_mean": 3.4887906071194728,
+        "warning_rate": 0.0
+      }
+    }
+  ],
+  "min_object_size": 0,
+  "num_workers": 4,
+  "out_dir": "data/experiments/htr_graph_v1/features/tri10k",
+  "sauvola_window": 25,
+  "subset_dir": "data/experiments/htr_graph_v1/subsets/tri10k"
+}

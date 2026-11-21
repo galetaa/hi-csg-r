@@ -1,0 +1,30 @@
+{
+  "out_dir": "data/experiments/htr_baseline_v1_ctc_ready/hkr_words/subsets/mini10k",
+  "requested": {
+    "test_n": 2000,
+    "train_n": 10000,
+    "val_n": 2000
+  },
+  "seed": 43,
+  "source": "data/experiments/htr_baseline_v1_ctc_ready/hkr_words",
+  "summary": {
+    "categories": {
+      "null": 14000
+    },
+    "count": 14000,
+    "levels": {
+      "phrase": 6449,
+      "word": 7551
+    },
+    "splits": {
+      "test": 2000,
+      "train": 10000,
+      "val": 2000
+    },
+    "text_len": {
+      "max": 23,
+      "mean": 10.945,
+      "min": 2
+    }
+  }
+}

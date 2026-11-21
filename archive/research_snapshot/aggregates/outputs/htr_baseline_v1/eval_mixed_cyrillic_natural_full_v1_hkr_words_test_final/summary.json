@@ -1,0 +1,41 @@
+{
+  "blank_logit_penalty": -0.4,
+  "checkpoint": "outputs/htr_baseline_v1/mixed_cyrillic_natural_full_v1/best.pt",
+  "checkpoint_blank_logit_penalty": -0.5306122448979591,
+  "checkpoint_config": {
+    "amp": true,
+    "amp_enabled": true,
+    "batch_size": 32,
+    "blank_bias_init": -1.0,
+    "blank_logit_penalty_end": -0.4,
+    "blank_logit_penalty_start": -2.0,
+    "dropout": 0.1,
+    "epochs": 50,
+    "feature_size": 256,
+    "grad_clip": 5.0,
+    "height_bins": 4,
+    "hidden_size": 256,
+    "lr": 0.0005,
+    "lstm_layers": 2,
+    "num_classes": 105,
+    "num_workers": 2,
+    "prefetch_factor": 4,
+    "seed": 42,
+    "train_size": 351818,
+    "val_size": 6000,
+    "weight_decay": 0.0001
+  },
+  "checkpoint_epoch": 46,
+  "checkpoint_val_cer": 0.05389584135257089,
+  "device": "cuda",
+  "manifest": "data/experiments/htr_baseline_v1_ctc_ready/mixed_cyrillic_natural_full_v1/eval_manifests/hkr_words_test.jsonl",
+  "metrics": {
+    "argmax_blank_ratio": 0.859535742537347,
+    "cer": 0.06230800708538979,
+    "exact": 0.641108545034642,
+    "n": 6495,
+    "pred_empty_ratio": 0.0,
+    "pred_len_mean": 10.434488067744418,
+    "wer": 0.28669489350782495
+  }
+}

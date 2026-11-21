@@ -1,0 +1,53 @@
+{
+  "eval_manifests": {
+    "cyrillic_handwriting": {
+      "test": "data/experiments/htr_baseline_v1_ctc_ready/mixed_cyrillic_natural_full_v1/eval_manifests/cyrillic_handwriting_test.jsonl",
+      "val": "data/experiments/htr_baseline_v1_ctc_ready/mixed_cyrillic_natural_full_v1/eval_manifests/cyrillic_handwriting_val.jsonl"
+    },
+    "hkr_words": {
+      "test": "data/experiments/htr_baseline_v1_ctc_ready/mixed_cyrillic_natural_full_v1/eval_manifests/hkr_words_test.jsonl",
+      "train": "data/experiments/htr_baseline_v1_ctc_ready/mixed_cyrillic_natural_full_v1/eval_manifests/hkr_words_train.jsonl",
+      "val": "data/experiments/htr_baseline_v1_ctc_ready/mixed_cyrillic_natural_full_v1/eval_manifests/hkr_words_val.jsonl"
+    }
+  },
+  "name": "mixed_cyrillic_natural_full_v1",
+  "num_chars_without_blank": 104,
+  "num_classes_with_blank": 105,
+  "seed": 46,
+  "train": {
+    "by_dataset": {
+      "cyrillic_handwriting": 65031,
+      "hkr_words": 51954,
+      "school_notebooks_clean": 234833
+    },
+    "by_level": {
+      "phrase": 33912,
+      "word": 317906
+    },
+    "count": 351818,
+    "text_len": {
+      "max": 42,
+      "mean": 6.9518159957705405,
+      "min": 1
+    }
+  },
+  "train_n_per_dataset": 0,
+  "val": {
+    "by_dataset": {
+      "cyrillic_handwriting": 2000,
+      "hkr_words": 2000,
+      "school_notebooks_clean": 2000
+    },
+    "by_level": {
+      "phrase": 1118,
+      "word": 4882
+    },
+    "count": 6000,
+    "text_len": {
+      "max": 32,
+      "mean": 7.907,
+      "min": 1
+    }
+  },
+  "val_n_per_dataset": 2000
+}

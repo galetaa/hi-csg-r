@@ -1,0 +1,29 @@
+{
+  "out_dir": "data/experiments/htr_baseline_v1_ctc_ready/iam/subsets/mini10k",
+  "requested": {
+    "test_n": 2000,
+    "train_n": 10000,
+    "val_n": 2000
+  },
+  "seed": 43,
+  "source": "data/experiments/htr_baseline_v1_ctc_ready/iam",
+  "summary": {
+    "categories": {
+      "null": 12219
+    },
+    "count": 12219,
+    "levels": {
+      "line": 12219
+    },
+    "splits": {
+      "test": 1039,
+      "train": 10000,
+      "val": 1180
+    },
+    "text_len": {
+      "max": 93,
+      "mean": 43.24977494066618,
+      "min": 1
+    }
+  }
+}

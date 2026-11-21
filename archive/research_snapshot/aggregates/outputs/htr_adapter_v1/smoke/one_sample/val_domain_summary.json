@@ -1,0 +1,11 @@
+{
+  "cyrillic_handwriting": {
+    "cer": 0.0,
+    "char_edits": 0,
+    "exact": 1.0,
+    "macro_cer": 0.0,
+    "pred_len_mean": 11.0,
+    "wer": 0.0,
+    "word_edits": 0
+  }
+}

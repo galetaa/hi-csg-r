@@ -1,0 +1,21 @@
+{
+  "feature_change_scales": {
+    "dir_h_frac": 0.19653015078852792,
+    "fg_fraction": 0.15272040094339612,
+    "graph_branchpoint_count": 166.0,
+    "stroke_width_mean": 1.7859581577010737,
+    "stroke_width_p90": 3.675444679663241
+  },
+  "groups": {
+    "high_feature_change": 30,
+    "high_ruling_response": 30,
+    "old_binary_issue": 30,
+    "random_stable_control": 30
+  },
+  "n_per_group": 30,
+  "new_root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed_school_lineaware_v3",
+  "old_fg_p95": 0.27290909471609315,
+  "old_root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed_school_fg_v3_auto",
+  "seed": 20260622,
+  "selected_n": 120
+}

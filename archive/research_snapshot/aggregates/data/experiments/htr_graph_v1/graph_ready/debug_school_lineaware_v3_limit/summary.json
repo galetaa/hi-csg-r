@@ -1,0 +1,249 @@
+{
+  "input_root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed_school_fg_v3_auto",
+  "items": [
+    {
+      "branchpoint_count": {
+        "max": 172.0,
+        "mean": 65.08,
+        "median": 60.0,
+        "min": 11.0,
+        "p05": 18.0,
+        "p95": 118.8
+      },
+      "cc_count": {
+        "max": 14.0,
+        "mean": 4.16,
+        "median": 3.0,
+        "min": 1.0,
+        "p05": 1.0,
+        "p95": 9.799999999999997
+      },
+      "diagnostics_path": "data/experiments/htr_graph_v1/graph_ready/debug_school_lineaware_v3_limit/diagnostics/train.jsonl",
+      "dir_h_frac": {
+        "max": 0.5129348795718108,
+        "mean": 0.2422307599513534,
+        "median": 0.2325,
+        "min": 0.11724137931034483,
+        "p05": 0.13407875826386892,
+        "p95": 0.36015687081596826
+      },
+      "endpoint_count": {
+        "max": 41.0,
+        "mean": 17.72,
+        "median": 15.0,
+        "min": 3.0,
+        "p05": 6.2,
+        "p95": 40.19999999999999
+      },
+      "fg_fraction": {
+        "max": 0.18352440828402367,
+        "mean": 0.11321508862061125,
+        "median": 0.10205078125,
+        "min": 0.06029929577464789,
+        "p05": 0.08734596988581887,
+        "p95": 0.16519397810218975
+      },
+      "input_path": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed_school_fg_v3_auto/train.jsonl",
+      "n_rows": 100,
+      "output_path": "data/experiments/htr_graph_v1/graph_ready/debug_school_lineaware_v3_limit/train.jsonl",
+      "ruling_response_mean": {
+        "max": 27.902021408081055,
+        "mean": 12.821647815704345,
+        "median": 10.909342765808105,
+        "min": 4.683907985687256,
+        "p05": 5.77969913482666,
+        "p95": 21.917203521728513
+      },
+      "school_n": 25,
+      "skel_components": {
+        "max": 14.0,
+        "mean": 4.16,
+        "median": 3.0,
+        "min": 1.0,
+        "p05": 1.0,
+        "p95": 9.799999999999997
+      },
+      "skel_fraction": {
+        "max": 0.05725,
+        "mean": 0.038849139457871634,
+        "median": 0.03728448275862069,
+        "min": 0.024693080357142856,
+        "p05": 0.025362827715355807,
+        "p95": 0.05484585326510178
+      },
+      "split": "train",
+      "stroke_width_mean": {
+        "max": 4.659152008240488,
+        "mean": 2.9596740632894667,
+        "median": 2.7888632067866257,
+        "min": 2.176125524287755,
+        "p05": 2.1918413179682714,
+        "p95": 4.2728122845729475
+      },
+      "warning_rate": 0.0
+    },
+    {
+      "branchpoint_count": {
+        "max": 157.0,
+        "mean": 57.1,
+        "median": 44.0,
+        "min": 7.0,
+        "p05": 12.600000000000001,
+        "p95": 125.69999999999996
+      },
+      "cc_count": {
+        "max": 12.0,
+        "mean": 3.1666666666666665,
+        "median": 3.0,
+        "min": 1.0,
+        "p05": 1.0,
+        "p95": 7.099999999999994
+      },
+      "diagnostics_path": "data/experiments/htr_graph_v1/graph_ready/debug_school_lineaware_v3_limit/diagnostics/val.jsonl",
+      "dir_h_frac": {
+        "max": 0.5149425287356322,
+        "mean": 0.29248363506301084,
+        "median": 0.2660546204850003,
+        "min": 0.14545454545454545,
+        "p05": 0.1554608656649473,
+        "p95": 0.49495225983568497
+      },
+      "endpoint_count": {
+        "max": 42.0,
+        "mean": 15.066666666666666,
+        "median": 13.5,
+        "min": 4.0,
+        "p05": 4.45,
+        "p95": 29.0
+      },
+      "fg_fraction": {
+        "max": 0.16798726303317535,
+        "mean": 0.10237322595852029,
+        "median": 0.10223041358151652,
+        "min": 0.06117724867724868,
+        "p05": 0.06632323704129539,
+        "p95": 0.1544910919763501
+      },
+      "input_path": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed_school_fg_v3_auto/val.jsonl",
+      "n_rows": 100,
+      "output_path": "data/experiments/htr_graph_v1/graph_ready/debug_school_lineaware_v3_limit/val.jsonl",
+      "ruling_response_mean": {
+        "max": 23.395618438720703,
+        "mean": 11.711026525497436,
+        "median": 10.306262969970703,
+        "min": 4.019400119781494,
+        "p05": 4.459649920463562,
+        "p95": 21.874082660675043
+      },
+      "school_n": 30,
+      "skel_components": {
+        "max": 12.0,
+        "mean": 3.1666666666666665,
+        "median": 3.0,
+        "min": 1.0,
+        "p05": 1.0,
+        "p95": 7.099999999999994
+      },
+      "skel_fraction": {
+        "max": 0.0503125,
+        "mean": 0.03449306106456722,
+        "median": 0.033891731194690265,
+        "min": 0.020153985507246376,
+        "p05": 0.02312060523017441,
+        "p95": 0.04746117008608077
+      },
+      "split": "val",
+      "stroke_width_mean": {
+        "max": 4.899693413119448,
+        "mean": 2.9891853612252044,
+        "median": 2.88714496834002,
+        "min": 2.104158711936028,
+        "p05": 2.18163370489244,
+        "p95": 4.675248661642704
+      },
+      "warning_rate": 0.0
+    },
+    {
+      "branchpoint_count": {
+        "max": 185.0,
+        "mean": 64.11111111111111,
+        "median": 62.0,
+        "min": 13.0,
+        "p05": 16.75,
+        "p95": 150.75
+      },
+      "cc_count": {
+        "max": 21.0,
+        "mean": 4.916666666666667,
+        "median": 3.0,
+        "min": 1.0,
+        "p05": 1.0,
+        "p95": 17.0
+      },
+      "diagnostics_path": "data/experiments/htr_graph_v1/graph_ready/debug_school_lineaware_v3_limit/diagnostics/test.jsonl",
+      "dir_h_frac": {
+        "max": 0.5496009122006842,
+        "mean": 0.27217874058786073,
+        "median": 0.2703044078355894,
+        "min": 0.05652173913043478,
+        "p05": 0.11303241486733269,
+        "p95": 0.4702976116684977
+      },
+      "endpoint_count": {
+        "max": 70.0,
+        "mean": 20.555555555555557,
+        "median": 17.5,
+        "min": 3.0,
+        "p05": 4.5,
+        "p95": 51.0
+      },
+      "fg_fraction": {
+        "max": 0.16977611940298507,
+        "mean": 0.11924356225298875,
+        "median": 0.11667324934240073,
+        "min": 0.08077830188679246,
+        "p05": 0.0812535881469705,
+        "p95": 0.1520218063186813
+      },
+      "input_path": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed_school_fg_v3_auto/test.jsonl",
+      "n_rows": 100,
+      "output_path": "data/experiments/htr_graph_v1/graph_ready/debug_school_lineaware_v3_limit/test.jsonl",
+      "ruling_response_mean": {
+        "max": 24.948583602905273,
+        "mean": 13.126301474041409,
+        "median": 11.129882335662842,
+        "min": 4.79562520980835,
+        "p05": 5.8531670570373535,
+        "p95": 23.245656967163086
+      },
+      "school_n": 36,
+      "skel_components": {
+        "max": 21.0,
+        "mean": 4.916666666666667,
+        "median": 3.0,
+        "min": 1.0,
+        "p05": 1.0,
+        "p95": 17.0
+      },
+      "skel_fraction": {
+        "max": 0.0876068376068376,
+        "mean": 0.04076057433634186,
+        "median": 0.03487539176123561,
+        "min": 0.02311862244897959,
+        "p05": 0.024457587884494664,
+        "p95": 0.08073226686507937
+      },
+      "split": "test",
+      "stroke_width_mean": {
+        "max": 5.610202473862072,
+        "mean": 3.2001695770161924,
+        "median": 3.0445663134935708,
+        "min": 2.0868625060165815,
+        "p05": 2.1734795222872245,
+        "p95": 4.974180482177077
+      },
+      "warning_rate": 0.0
+    }
+  ],
+  "out_root": "data/experiments/htr_graph_v1/graph_ready/debug_school_lineaware_v3_limit"
+}

@@ -1,0 +1,7 @@
+{
+  "n": 64,
+  "out_dir": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/tiny64",
+  "source": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting",
+  "text_len_max": 12,
+  "text_len_min": 3
+}

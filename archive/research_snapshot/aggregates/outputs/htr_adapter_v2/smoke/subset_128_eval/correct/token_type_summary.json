@@ -1,0 +1,29 @@
+{
+  "alphabetic": {
+    "cer": 0.0,
+    "char_edits": 0,
+    "exact": 1.0,
+    "macro_cer": 0.0,
+    "pred_len_mean": 8.0,
+    "wer": 0.0,
+    "word_edits": 0
+  },
+  "mixed": {
+    "cer": 0.0,
+    "char_edits": 0,
+    "exact": 1.0,
+    "macro_cer": 0.0,
+    "pred_len_mean": 7.411764705882353,
+    "wer": 0.0,
+    "word_edits": 0
+  },
+  "multiword": {
+    "cer": 0.0,
+    "char_edits": 0,
+    "exact": 1.0,
+    "macro_cer": 0.0,
+    "pred_len_mean": 26.61764705882353,
+    "wer": 0.0,
+    "word_edits": 0
+  }
+}

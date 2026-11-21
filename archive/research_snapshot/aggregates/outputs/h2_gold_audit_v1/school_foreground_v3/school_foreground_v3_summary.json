@@ -1,0 +1,31 @@
+{
+  "annotations_csv": "outputs/h2_gold_audit_v1/school_foreground_v3/school_foreground_v3_annotations.csv",
+  "bad_fix_rate": 0.08695652173913043,
+  "best_variant_counts": {
+    "baseline_sauvola": 1,
+    "global_dark_120": 9,
+    "global_dark_145": 13
+  },
+  "border_artifact_after_counts": {
+    "0": 19,
+    "1": 4
+  },
+  "border_artifact_after_rate": 0.17391304347826086,
+  "fix_grade_counts": {
+    "bad_fix": 2,
+    "good_fix": 19,
+    "partial_fix": 2
+  },
+  "good_fix_rate": 0.8260869565217391,
+  "n": 23,
+  "partial_fix_rate": 0.08695652173913043,
+  "real_ink_erased_counts": {
+    "0": 23
+  },
+  "real_ink_erased_rate": 0.0,
+  "skeleton_follows_ink_after_counts": {
+    "0": 4,
+    "1": 19
+  },
+  "skeleton_follows_ink_after_rate": 0.8260869565217391
+}

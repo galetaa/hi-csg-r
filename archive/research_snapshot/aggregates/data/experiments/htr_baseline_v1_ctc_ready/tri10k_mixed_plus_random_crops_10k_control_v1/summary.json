@@ -1,0 +1,29 @@
+{
+  "base_root": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed",
+  "base_train_n": 30000,
+  "candidate_counts": {
+    "cyrillic_handwriting": 55023,
+    "hkr_words": 41954,
+    "school_notebooks_clean": 224786
+  },
+  "merged_by_dataset": {
+    "cyrillic_handwriting": 13333,
+    "hkr_words": 13333,
+    "school_notebooks_clean": 13334
+  },
+  "merged_train_n": 40000,
+  "oov_rejected_n": 55,
+  "out_root": "data/experiments/htr_baseline_v1_ctc_ready/tri10k_mixed_plus_random_crops_10k_control_v1",
+  "seed": 20260627,
+  "selected_by_dataset": {
+    "cyrillic_handwriting": 3333,
+    "hkr_words": 3333,
+    "school_notebooks_clean": 3334
+  },
+  "selected_n": 10000,
+  "source_roots": {
+    "cyrillic_handwriting": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting",
+    "hkr_words": "data/experiments/htr_baseline_v1_ctc_ready/hkr_words",
+    "school_notebooks_clean": "data/experiments/htr_baseline_v1_ctc_ready/school_notebooks_clean"
+  }
+}

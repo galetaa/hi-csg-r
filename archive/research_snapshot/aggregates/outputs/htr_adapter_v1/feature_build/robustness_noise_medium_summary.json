@@ -1,0 +1,15 @@
+{
+  "expected_n": 5563,
+  "failures_n": 0,
+  "feature_dim": 20,
+  "reused_n": 4960,
+  "smooth": true,
+  "status": "PASS",
+  "time_steps": {
+    "max": 297,
+    "mean": 67.62106776918928,
+    "min": 16
+  },
+  "width_downsample": 4,
+  "written_n": 5563
+}

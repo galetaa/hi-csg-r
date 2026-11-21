@@ -1,0 +1,41 @@
+{
+  "argmax_blank_ratio": 0.8428651543308299,
+  "blank_logit_penalty": 0.0,
+  "cer": 0.1035685423844158,
+  "checkpoint_epoch": 80,
+  "checkpoint_val_cer": 0.10382374207817617,
+  "exact": 0.5596666666666666,
+  "gate_mean": 0.07787362268154925,
+  "graph_channels": 3,
+  "grouped": {
+    "cyrillic_handwriting": {
+      "cer": 0.12840176450627758,
+      "exact": 0.504,
+      "n": 2000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 7.3085,
+      "wer": 0.4870395634379263
+    },
+    "hkr_words": {
+      "cer": 0.08600254677245568,
+      "exact": 0.5395,
+      "n": 2000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 10.132,
+      "wer": 0.3351698806244261
+    },
+    "school_notebooks_clean": {
+      "cer": 0.10295728368017525,
+      "exact": 0.6355,
+      "n": 2000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 5.852,
+      "wer": 0.3715277777777778
+    }
+  },
+  "n": 6000,
+  "out_dir": "outputs/htr_graph_v1/sweep_tri10k_gated_local_fusion_v1_val/penalty_0p0",
+  "pred_empty_ratio": 0.0,
+  "pred_len_mean": 7.764166666666667,
+  "wer": 0.3896017107725207
+}

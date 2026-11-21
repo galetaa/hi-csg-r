@@ -1,0 +1,23 @@
+{
+  "batch_size": 16,
+  "blank_logit_penalty_end": -0.4,
+  "blank_logit_penalty_start": -2.0,
+  "domain_balanced": true,
+  "dropout": 0.1,
+  "epochs": 80,
+  "feature_size": 256,
+  "grad_clip": 5.0,
+  "height_bins": 4,
+  "hidden_size": 256,
+  "holdout_evaluation_allowed": false,
+  "lr": 0.0005,
+  "lstm_layers": 2,
+  "num_workers": 4,
+  "out_dir": "outputs/htr_adapter_v2/b0_dev_seed42",
+  "protocol": "crnn_ctc_hi_csg_r_late_correction_protocol_v2",
+  "seed": 42,
+  "split_seed": 20260730,
+  "train_manifest": "data/experiments/htr_adapter_v2/splits/train.jsonl",
+  "val_manifest": "data/experiments/htr_adapter_v2/splits/dev.jsonl",
+  "weight_decay": 0.0001
+}

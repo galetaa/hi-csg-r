@@ -1,0 +1,23 @@
+{
+  "batch_size": 64,
+  "blank_bias_init": -1.0,
+  "blank_logit_penalty_end": -0.4,
+  "blank_logit_penalty_start": -2.0,
+  "dropout": 0.1,
+  "epochs": 80,
+  "feature_size": 256,
+  "grad_clip": 5.0,
+  "height_bins": 4,
+  "hidden_size": 256,
+  "lr": 0.0005,
+  "lstm_layers": 2,
+  "num_classes": 78,
+  "num_workers": 2,
+  "out_dir": "outputs/htr_baseline_v1/mini10k_cyrillic_v1",
+  "seed": 42,
+  "train_manifest": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/subsets/mini10k/train.jsonl",
+  "train_size": 10000,
+  "val_manifest": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/subsets/mini10k/val.jsonl",
+  "val_size": 2000,
+  "weight_decay": 0.0001
+}

@@ -1,0 +1,24 @@
+{
+  "argmax_blank_ratio": 0.8414388977742832,
+  "blank_logit_penalty": -0.9,
+  "cer": 0.20428886365154653,
+  "checkpoint_epoch": 75,
+  "checkpoint_val_cer": 0.1074816043554081,
+  "exact": 0.2591170825335892,
+  "grouped": {
+    "cyrillic_handwriting": {
+      "cer": 0.20428886365154653,
+      "exact": 0.2591170825335892,
+      "n": 1563,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 9.312220089571337,
+      "wer": 0.6813793103448276
+    }
+  },
+  "input_channels": 3,
+  "n": 1563,
+  "out_dir": "outputs/htr_graph_v1/eval_tri10k_local_ablation_gray_fg_skel_v1_cyrillic_handwriting_test_final",
+  "pred_empty_ratio": 0.0,
+  "pred_len_mean": 9.312220089571337,
+  "wer": 0.6813793103448276
+}

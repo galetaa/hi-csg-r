@@ -1,0 +1,9 @@
+{
+  "annotations_csv": "outputs/h2_gold_audit_v1/annotations/annotation_100_filled_stage.csv",
+  "dataset": "school_notebooks_clean",
+  "n_samples": 23,
+  "outputs": {
+    "contact_sheet": "outputs/h2_gold_audit_v1/school_dark_padding_repair_v1/dark_padding_repair_contact_sheet.png",
+    "metrics_csv": "outputs/h2_gold_audit_v1/school_dark_padding_repair_v1/dark_padding_repair_metrics.csv"
+  }
+}

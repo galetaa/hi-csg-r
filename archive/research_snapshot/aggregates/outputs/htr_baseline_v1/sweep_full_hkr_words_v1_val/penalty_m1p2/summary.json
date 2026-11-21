@@ -1,0 +1,41 @@
+{
+  "blank_logit_penalty": -1.2,
+  "checkpoint": "outputs/htr_baseline_v1/full_hkr_words_v1/best.pt",
+  "checkpoint_blank_logit_penalty": -0.5620253164556961,
+  "checkpoint_config": {
+    "batch_size": 16,
+    "blank_bias_init": -1.0,
+    "blank_logit_penalty_end": -0.4,
+    "blank_logit_penalty_start": -2.0,
+    "dropout": 0.1,
+    "epochs": 80,
+    "feature_size": 256,
+    "grad_clip": 5.0,
+    "height_bins": 4,
+    "hidden_size": 256,
+    "lr": 0.0005,
+    "lstm_layers": 2,
+    "num_classes": 53,
+    "num_workers": 2,
+    "out_dir": "outputs/htr_baseline_v1/full_hkr_words_v1",
+    "seed": 42,
+    "train_manifest": "data/experiments/htr_baseline_v1_ctc_ready/hkr_words/train.jsonl",
+    "train_size": 51954,
+    "val_manifest": "data/experiments/htr_baseline_v1_ctc_ready/hkr_words/val.jsonl",
+    "val_size": 6494,
+    "weight_decay": 0.0001
+  },
+  "checkpoint_epoch": 72,
+  "checkpoint_val_cer": 0.13101144310783036,
+  "device": "cuda",
+  "manifest": "data/experiments/htr_baseline_v1_ctc_ready/hkr_words/val.jsonl",
+  "metrics": {
+    "argmax_blank_ratio": 0.8231467472138578,
+    "cer": 0.1298318712862881,
+    "exact": 0.4373267631659994,
+    "n": 6494,
+    "pred_empty_ratio": 0.0,
+    "pred_len_mean": 10.219587311364336,
+    "wer": 0.45967559798789165
+  }
+}

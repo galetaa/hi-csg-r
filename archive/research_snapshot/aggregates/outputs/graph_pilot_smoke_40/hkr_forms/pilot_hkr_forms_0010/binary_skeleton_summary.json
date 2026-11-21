@@ -1,0 +1,62 @@
+{
+  "dataset": "hkr_forms",
+  "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000770.png",
+  "level": "form_page",
+  "methods": {
+    "adaptive_gaussian": {
+      "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/binary_adaptive_gaussian.png",
+      "dataset": "hkr_forms",
+      "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/feature_scaled.png",
+      "foreground_pixels": 122784,
+      "foreground_ratio": 0.06785145888594164,
+      "image_height": 1600,
+      "image_width": 1131,
+      "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000770.png",
+      "level": "form_page",
+      "scale": 0.45623039635015683,
+      "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/skeleton_adaptive_gaussian.png",
+      "skeleton_pixels": 57485,
+      "threshold_info": {
+        "block_size": 35,
+        "offset": 10.0
+      }
+    },
+    "otsu": {
+      "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/binary_otsu.png",
+      "dataset": "hkr_forms",
+      "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/feature_scaled.png",
+      "foreground_pixels": 97841,
+      "foreground_ratio": 0.054067749778956675,
+      "image_height": 1600,
+      "image_width": 1131,
+      "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000770.png",
+      "level": "form_page",
+      "scale": 0.45623039635015683,
+      "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/skeleton_otsu.png",
+      "skeleton_pixels": 56169,
+      "threshold_info": {
+        "threshold": 201.0
+      }
+    },
+    "sauvola": {
+      "binary_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/binary_sauvola.png",
+      "dataset": "hkr_forms",
+      "feature_scaled_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/feature_scaled.png",
+      "foreground_pixels": 101539,
+      "foreground_ratio": 0.056111295313881523,
+      "image_height": 1600,
+      "image_width": 1131,
+      "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000770.png",
+      "level": "form_page",
+      "scale": 0.45623039635015683,
+      "skeleton_path": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010/skeleton_sauvola.png",
+      "skeleton_pixels": 56333,
+      "threshold_info": {
+        "k": 0.2,
+        "window_size": 25
+      }
+    }
+  },
+  "output_dir": "outputs/graph_pilot_smoke_40/hkr_forms/pilot_hkr_forms_0010",
+  "scale": 0.45623039635015683
+}

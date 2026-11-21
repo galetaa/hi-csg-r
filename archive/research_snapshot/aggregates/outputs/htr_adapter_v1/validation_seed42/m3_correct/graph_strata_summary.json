@@ -1,0 +1,142 @@
+{
+  "ambiguous_edge_fraction_mean": {
+    "strata": {
+      "high": {
+        "cer": 0.0,
+        "char_edits": 0,
+        "exact": 0.0,
+        "macro_cer": 0.0,
+        "pred_len_mean": 0.0,
+        "wer": 0.0,
+        "word_edits": 0
+      },
+      "low": {
+        "cer": 0.0,
+        "char_edits": 0,
+        "exact": 0.0,
+        "macro_cer": 0.0,
+        "pred_len_mean": 0.0,
+        "wer": 0.0,
+        "word_edits": 0
+      },
+      "medium": {
+        "cer": 0.08219556803198502,
+        "char_edits": 3865,
+        "exact": 0.6206666666666667,
+        "macro_cer": 0.0876912809497322,
+        "pred_len_mean": 7.7843333333333335,
+        "wer": 0.33747661053194333,
+        "word_edits": 2525
+      }
+    },
+    "thresholds": [
+      0.0,
+      0.0
+    ]
+  },
+  "graph_occupancy_mean": {
+    "strata": {
+      "high": {
+        "cer": 0.0834644678038648,
+        "char_edits": 1326,
+        "exact": 0.6102204408817635,
+        "macro_cer": 0.0847623970433208,
+        "pred_len_mean": 7.912324649298597,
+        "wer": 0.3987583572110793,
+        "word_edits": 835
+      },
+      "low": {
+        "cer": 0.08303074316146211,
+        "char_edits": 1372,
+        "exact": 0.5983975963945919,
+        "macro_cer": 0.0933667954486915,
+        "pred_len_mean": 8.206309464196295,
+        "wer": 0.3035830618892508,
+        "word_edits": 932
+      },
+      "medium": {
+        "cer": 0.07987132981999863,
+        "char_edits": 1167,
+        "exact": 0.6532137518684604,
+        "macro_cer": 0.08495687627747284,
+        "pred_len_mean": 7.23716990533134,
+        "wer": 0.3270060396893874,
+        "word_edits": 758
+      }
+    },
+    "thresholds": [
+      0.8928571343421936,
+      0.95634925365448
+    ]
+  },
+  "short_branch_fraction_mean": {
+    "strata": {
+      "high": {
+        "cer": 0.095370245025044,
+        "char_edits": 1409,
+        "exact": 0.589,
+        "macro_cer": 0.09737852183034619,
+        "pred_len_mean": 7.332,
+        "wer": 0.41095260009203866,
+        "word_edits": 893
+      },
+      "low": {
+        "cer": 0.0713059472716125,
+        "char_edits": 1163,
+        "exact": 0.6465,
+        "macro_cer": 0.07689907019580008,
+        "pred_len_mean": 8.104,
+        "wer": 0.2853087295954578,
+        "word_edits": 804
+      },
+      "medium": {
+        "cer": 0.08112686660810642,
+        "char_edits": 1293,
+        "exact": 0.6265,
+        "macro_cer": 0.08879625082305036,
+        "pred_len_mean": 7.917,
+        "wer": 0.33239662786029706,
+        "word_edits": 828
+      }
+    },
+    "thresholds": [
+      0.012739367472628752,
+      0.03028484930594761
+    ]
+  },
+  "warning_density_mean": {
+    "strata": {
+      "high": {
+        "cer": 0.09324421728589215,
+        "char_edits": 1423,
+        "exact": 0.5855,
+        "macro_cer": 0.09594076525212906,
+        "pred_len_mean": 7.573,
+        "wer": 0.4001762891141472,
+        "word_edits": 908
+      },
+      "low": {
+        "cer": 0.0719935230740487,
+        "char_edits": 1156,
+        "exact": 0.6485,
+        "macro_cer": 0.07732036564012182,
+        "pred_len_mean": 7.9795,
+        "wer": 0.28628158844765345,
+        "word_edits": 793
+      },
+      "medium": {
+        "cer": 0.08188996434029547,
+        "char_edits": 1286,
+        "exact": 0.628,
+        "macro_cer": 0.08981271195694569,
+        "pred_len_mean": 7.8005,
+        "wer": 0.3372902169463774,
+        "word_edits": 824
+      }
+    },
+    "thresholds": [
+      0.013473434684177237,
+      0.03230666120847066
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "dataset": "hkr_forms",
+  "effective_max_side": 2400,
+  "grid_suppression_enabled": true,
+  "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000912.png",
+  "level": "form_page",
+  "methods": {
+    "adaptive_gaussian": {
+      "binary_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/binary_adaptive_gaussian.png",
+      "dataset": "hkr_forms",
+      "feature_scaled_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/feature_scaled.png",
+      "foreground_pixels": 359558,
+      "foreground_ratio": 0.088282753879395,
+      "image_height": 2400,
+      "image_width": 1697,
+      "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000912.png",
+      "level": "form_page",
+      "scale": 0.6843455945252352,
+      "skeleton_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/skeleton_adaptive_gaussian.png",
+      "skeleton_pixels": 110354,
+      "threshold_info": {
+        "block_size": 35,
+        "offset": 10.0
+      }
+    },
+    "otsu": {
+      "binary_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/binary_otsu.png",
+      "dataset": "hkr_forms",
+      "feature_scaled_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/feature_scaled.png",
+      "foreground_pixels": 306579,
+      "foreground_ratio": 0.07527474955804361,
+      "image_height": 2400,
+      "image_width": 1697,
+      "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000912.png",
+      "level": "form_page",
+      "scale": 0.6843455945252352,
+      "skeleton_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/skeleton_otsu.png",
+      "skeleton_pixels": 99254,
+      "threshold_info": {
+        "threshold": 186.0
+      }
+    },
+    "otsu_gridless": {
+      "binary_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/binary_otsu_gridless.png",
+      "dataset": "hkr_forms",
+      "feature_scaled_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/feature_scaled.png",
+      "foreground_pixels": 109104,
+      "foreground_ratio": 0.026788450206246317,
+      "grid_mask_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/grid_mask_otsu.png",
+      "grid_removed_pixels": 197475,
+      "grid_removed_ratio": 0.6441243529400252,
+      "image_height": 2400,
+      "image_width": 1697,
+      "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000912.png",
+      "level": "form_page",
+      "scale": 0.6843455945252352,
+      "skeleton_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/skeleton_otsu_gridless.png",
+      "skeleton_pixels": 56078,
+      "threshold_info": {
+        "grid_horizontal_length": 35,
+        "grid_line_width": 1,
+        "grid_removed_pixels": 197475,
+        "grid_removed_ratio": 0.6441243529400252,
+        "grid_vertical_length": 35,
+        "threshold": 186.0
+      }
+    },
+    "sauvola": {
+      "binary_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/binary_sauvola.png",
+      "dataset": "hkr_forms",
+      "feature_scaled_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/feature_scaled.png",
+      "foreground_pixels": 332999,
+      "foreground_ratio": 0.08176168729129837,
+      "image_height": 2400,
+      "image_width": 1697,
+      "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000912.png",
+      "level": "form_page",
+      "scale": 0.6843455945252352,
+      "skeleton_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/skeleton_sauvola.png",
+      "skeleton_pixels": 104039,
+      "threshold_info": {
+        "k": 0.2,
+        "window_size": 25
+      }
+    },
+    "sauvola_gridless": {
+      "binary_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/binary_sauvola_gridless.png",
+      "dataset": "hkr_forms",
+      "feature_scaled_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/feature_scaled.png",
+      "foreground_pixels": 129129,
+      "foreground_ratio": 0.0317052150854449,
+      "grid_mask_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/grid_mask_sauvola.png",
+      "grid_removed_pixels": 203870,
+      "grid_removed_ratio": 0.6122240607329151,
+      "image_height": 2400,
+      "image_width": 1697,
+      "input_image_path": "data/processed/hkr_forms/feature_images/hkr_forms_page_000912.png",
+      "level": "form_page",
+      "scale": 0.6843455945252352,
+      "skeleton_path": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009/skeleton_sauvola_gridless.png",
+      "skeleton_pixels": 59931,
+      "threshold_info": {
+        "grid_horizontal_length": 35,
+        "grid_line_width": 1,
+        "grid_removed_pixels": 203870,
+        "grid_removed_ratio": 0.6122240607329151,
+        "grid_vertical_length": 35,
+        "k": 0.2,
+        "window_size": 25
+      }
+    }
+  },
+  "output_dir": "outputs/graph_pilot/hkr_forms/pilot_hkr_forms_0009",
+  "page_like": true,
+  "scale": 0.6843455945252352
+}

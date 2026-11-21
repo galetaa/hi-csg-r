@@ -1,0 +1,38 @@
+{
+  "01_1-5": {
+    "cer": 0.0,
+    "char_edits": 0,
+    "exact": 1.0,
+    "macro_cer": 0.0,
+    "pred_len_mean": 3.55,
+    "wer": 0.0,
+    "word_edits": 0
+  },
+  "02_6-10": {
+    "cer": 0.0,
+    "char_edits": 0,
+    "exact": 1.0,
+    "macro_cer": 0.0,
+    "pred_len_mean": 7.762711864406779,
+    "wer": 0.0,
+    "word_edits": 0
+  },
+  "03_11-20": {
+    "cer": 0.0,
+    "char_edits": 0,
+    "exact": 1.0,
+    "macro_cer": 0.0,
+    "pred_len_mean": 14.485714285714286,
+    "wer": 0.0,
+    "word_edits": 0
+  },
+  "04_21+": {
+    "cer": 0.0,
+    "char_edits": 0,
+    "exact": 1.0,
+    "macro_cer": 0.0,
+    "pred_len_mean": 43.642857142857146,
+    "wer": 0.0,
+    "word_edits": 0
+  }
+}

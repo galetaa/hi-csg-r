@@ -1,0 +1,57 @@
+{
+  "eval_manifests": {
+    "cyrillic_handwriting": {
+      "test": "data/experiments/htr_baseline_v1_ctc_ready/mixed_cyrillic_balanced50k_v1/eval_manifests/cyrillic_handwriting_test.jsonl",
+      "train": "data/experiments/htr_baseline_v1_ctc_ready/mixed_cyrillic_balanced50k_v1/eval_manifests/cyrillic_handwriting_train.jsonl",
+      "val": "data/experiments/htr_baseline_v1_ctc_ready/mixed_cyrillic_balanced50k_v1/eval_manifests/cyrillic_handwriting_val.jsonl"
+    },
+    "hkr_words": {
+      "test": "data/experiments/htr_baseline_v1_ctc_ready/mixed_cyrillic_balanced50k_v1/eval_manifests/hkr_words_test.jsonl",
+      "train": "data/experiments/htr_baseline_v1_ctc_ready/mixed_cyrillic_balanced50k_v1/eval_manifests/hkr_words_train.jsonl",
+      "val": "data/experiments/htr_baseline_v1_ctc_ready/mixed_cyrillic_balanced50k_v1/eval_manifests/hkr_words_val.jsonl"
+    },
+    "school_notebooks_clean": {
+      "val": "data/experiments/htr_baseline_v1_ctc_ready/mixed_cyrillic_balanced50k_v1/eval_manifests/school_notebooks_clean_val.jsonl"
+    }
+  },
+  "name": "mixed_cyrillic_balanced50k_v1",
+  "num_chars_without_blank": 104,
+  "num_classes_with_blank": 105,
+  "seed": 45,
+  "train": {
+    "by_dataset": {
+      "cyrillic_handwriting": 50000,
+      "hkr_words": 50000,
+      "school_notebooks_clean": 50000
+    },
+    "by_level": {
+      "phrase": 28804,
+      "word": 121196
+    },
+    "count": 150000,
+    "text_len": {
+      "max": 42,
+      "mean": 8.17824,
+      "min": 1
+    }
+  },
+  "train_n_per_dataset": 50000,
+  "val": {
+    "by_dataset": {
+      "cyrillic_handwriting": 2000,
+      "hkr_words": 2000,
+      "school_notebooks_clean": 2000
+    },
+    "by_level": {
+      "phrase": 1122,
+      "word": 4878
+    },
+    "count": 6000,
+    "text_len": {
+      "max": 31,
+      "mean": 7.855166666666666,
+      "min": 1
+    }
+  },
+  "val_n_per_dataset": 2000
+}

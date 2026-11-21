@@ -1,0 +1,35 @@
+{
+  "by_distortion": {
+    "blur": {
+      "cer_mean": 0.16993926774249524,
+      "gate_mean": 0.06915729216003784
+    },
+    "clean": {
+      "cer_mean": 0.14375845913586674,
+      "gate_mean": 0.0685311439821775
+    },
+    "low_contrast": {
+      "cer_mean": 0.16406732604546242,
+      "gate_mean": 0.0720145211508676
+    },
+    "noise": {
+      "cer_mean": 0.1633940655908381,
+      "gate_mean": 0.06506712710434907
+    },
+    "thick_strokes": {
+      "cer_mean": 0.16251258025334028,
+      "gate_mean": 0.06977806333095635
+    },
+    "thin_strokes": {
+      "cer_mean": 0.20223494707617562,
+      "gate_mean": 0.06913743930301447
+    }
+  },
+  "clean_gate_mean": 0.0685311439821775,
+  "distorted_gate_mean": 0.06903088860984506,
+  "gate_max": 0.07300699943269806,
+  "gate_min": 0.06423691133486814,
+  "n_conditions": 16,
+  "structural_gate_mean": 0.06945775131698541,
+  "visual_gate_mean": 0.06874631347175149
+}

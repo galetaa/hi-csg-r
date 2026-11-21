@@ -1,0 +1,127 @@
+{
+  "datasets": {
+    "cyrillic_handwriting": {
+      "categories": {
+        "null": 73826
+      },
+      "dataset": "cyrillic_handwriting",
+      "levels": {
+        "phrase": 7770,
+        "word": 66056
+      },
+      "num_kept": 73826,
+      "num_rejected": 2,
+      "num_source_records": 73828,
+      "rejection_reasons": {
+        "ctc_min_gt_timesteps": 2
+      },
+      "source_dir": "data/experiments/htr_baseline_v1/cyrillic_handwriting",
+      "source_summary": {
+        "num_chars": 77,
+        "num_records": 73828,
+        "splits": {
+          "test": 1563,
+          "train": 65033,
+          "val": 7232
+        }
+      },
+      "splits": {
+        "test": 1563,
+        "train": 65031,
+        "val": 7232
+      },
+      "time_downsample": 4
+    },
+    "hkr_words": {
+      "categories": {
+        "null": 64943
+      },
+      "dataset": "hkr_words",
+      "levels": {
+        "phrase": 29787,
+        "word": 35156
+      },
+      "num_kept": 64943,
+      "num_rejected": 0,
+      "num_source_records": 64943,
+      "source_dir": "data/experiments/htr_baseline_v1/hkr_words",
+      "source_summary": {
+        "num_chars": 52,
+        "num_records": 64943,
+        "splits": {
+          "test": 6495,
+          "train": 51954,
+          "val": 6494
+        }
+      },
+      "splits": {
+        "test": 6495,
+        "train": 51954,
+        "val": 6494
+      },
+      "time_downsample": 4
+    },
+    "iam": {
+      "categories": {
+        "null": 13353
+      },
+      "dataset": "iam",
+      "levels": {
+        "line": 13353
+      },
+      "num_kept": 13353,
+      "num_rejected": 0,
+      "num_source_records": 13353,
+      "source_dir": "data/experiments/htr_baseline_v1/iam",
+      "source_summary": {
+        "num_chars": 53,
+        "num_records": 13353,
+        "splits": {
+          "test": 1039,
+          "train": 11134,
+          "val": 1180
+        }
+      },
+      "splits": {
+        "test": 1039,
+        "train": 11134,
+        "val": 1180
+      },
+      "time_downsample": 4
+    },
+    "school_notebooks_clean": {
+      "categories": {
+        "pupil_comment": 12053,
+        "pupil_text": 266288,
+        "teacher_comment": 5329
+      },
+      "dataset": "school_notebooks_clean",
+      "levels": {
+        "phrase": 3890,
+        "word": 279780
+      },
+      "num_kept": 283670,
+      "num_rejected": 0,
+      "num_source_records": 283670,
+      "source_dir": "data/experiments/htr_baseline_v1/school_notebooks_clean",
+      "source_summary": {
+        "num_chars": 94,
+        "num_records": 283670,
+        "splits": {
+          "test": 24623,
+          "train": 234833,
+          "val": 24214
+        }
+      },
+      "splits": {
+        "test": 24623,
+        "train": 234833,
+        "val": 24214
+      },
+      "time_downsample": 4
+    }
+  },
+  "out_root": "data/experiments/htr_baseline_v1_ctc_ready",
+  "source_root": "data/experiments/htr_baseline_v1",
+  "time_downsample": 4
+}

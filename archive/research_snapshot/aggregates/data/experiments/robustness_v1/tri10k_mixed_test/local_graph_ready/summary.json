@@ -1,0 +1,121 @@
+{
+  "clean_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/test.jsonl",
+  "conditions_file": "data/experiments/robustness_v1/tri10k_mixed_test/conditions.txt",
+  "graph_ready_dir": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready",
+  "items": [
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/clean.jsonl",
+      "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/test.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/blur_mild.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/blur_mild.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/blur_medium.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/blur_medium.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/blur_strong.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/blur_strong.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/noise_mild.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/noise_mild.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/noise_medium.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/noise_medium.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/noise_strong.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/noise_strong.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/low_contrast_mild.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/low_contrast_mild.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/low_contrast_medium.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/low_contrast_medium.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/low_contrast_strong.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/low_contrast_strong.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/thin_strokes_mild.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/thin_strokes_mild.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/thin_strokes_medium.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/thin_strokes_medium.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/thin_strokes_strong.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/thin_strokes_strong.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/thick_strokes_mild.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/thick_strokes_mild.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/thick_strokes_medium.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/thick_strokes_medium.jsonl",
+      "written_n": 5563
+    },
+    {
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready/thick_strokes_strong.jsonl",
+      "source_manifest": "data/experiments/robustness_v1/tri10k_mixed_test/graph_ready/thick_strokes_strong.jsonl",
+      "written_n": 5563
+    }
+  ],
+  "maps_root": "data/experiments/robustness_v1/tri10k_mixed_test/local_maps",
+  "out_dir": "data/experiments/robustness_v1/tri10k_mixed_test/local_graph_ready"
+}

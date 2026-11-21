@@ -1,0 +1,41 @@
+{
+  "blank_logit_penalty": -0.4,
+  "checkpoint": "outputs/htr_baseline_v1/mixed_cyrillic_natural_full_v1/best.pt",
+  "checkpoint_blank_logit_penalty": -0.5306122448979591,
+  "checkpoint_config": {
+    "amp": true,
+    "amp_enabled": true,
+    "batch_size": 32,
+    "blank_bias_init": -1.0,
+    "blank_logit_penalty_end": -0.4,
+    "blank_logit_penalty_start": -2.0,
+    "dropout": 0.1,
+    "epochs": 50,
+    "feature_size": 256,
+    "grad_clip": 5.0,
+    "height_bins": 4,
+    "hidden_size": 256,
+    "lr": 0.0005,
+    "lstm_layers": 2,
+    "num_classes": 105,
+    "num_workers": 2,
+    "prefetch_factor": 4,
+    "seed": 42,
+    "train_size": 351818,
+    "val_size": 6000,
+    "weight_decay": 0.0001
+  },
+  "checkpoint_epoch": 46,
+  "checkpoint_val_cer": 0.05389584135257089,
+  "device": "cuda",
+  "manifest": "data/experiments/robustness_v1/tri10k_mixed_test/manifests/thin_strokes_mild.jsonl",
+  "metrics": {
+    "argmax_blank_ratio": 0.8483317496664712,
+    "cer": 0.09470299955193909,
+    "exact": 0.5888908862124753,
+    "n": 5563,
+    "pred_empty_ratio": 0.0,
+    "pred_len_mean": 8.520043142189467,
+    "wer": 0.37158307867457585
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "argmax_blank_ratio": 0.8279927480753689,
+  "blank_logit_penalty": -0.481012658227848,
+  "cer": 0.13380530973451327,
+  "checkpoint_epoch": 76,
+  "checkpoint_val_cer": 0.09308408829909404,
+  "exact": 0.4562286536041704,
+  "graph_feature_dim": 39,
+  "grouped": {
+    "cyrillic_handwriting": {
+      "cer": 0.1997461420268555,
+      "exact": 0.2821497120921305,
+      "n": 1563,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 9.401791426743442,
+      "wer": 0.662528735632184
+    },
+    "hkr_words": {
+      "cer": 0.09198981035946788,
+      "exact": 0.4755,
+      "n": 2000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 10.527,
+      "wer": 0.3830177153329261
+    },
+    "school_notebooks_clean": {
+      "cer": 0.12531624219935908,
+      "exact": 0.573,
+      "n": 2000,
+      "pred_empty_ratio": 0.0,
+      "pred_len_mean": 5.876,
+      "wer": 0.435515873015873
+    }
+  },
+  "n": 5563,
+  "out_dir": "outputs/htr_graph_v1/eval_tri10k_graph_fusion_plus_school_lines_10k_context_v1_test_final",
+  "pred_empty_ratio": 0.0,
+  "pred_len_mean": 8.538738090958116,
+  "wer": 0.4786336235766912,
+  "zero_graph": false
+}

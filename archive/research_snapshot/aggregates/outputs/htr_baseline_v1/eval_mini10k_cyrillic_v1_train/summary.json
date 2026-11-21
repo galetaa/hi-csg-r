@@ -1,0 +1,40 @@
+{
+  "blank_logit_penalty": -0.4,
+  "checkpoint": "outputs/htr_baseline_v1/mini10k_cyrillic_v1/best.pt",
+  "checkpoint_config": {
+    "batch_size": 64,
+    "blank_bias_init": -1.0,
+    "blank_logit_penalty_end": -0.4,
+    "blank_logit_penalty_start": -2.0,
+    "dropout": 0.1,
+    "epochs": 80,
+    "feature_size": 256,
+    "grad_clip": 5.0,
+    "height_bins": 4,
+    "hidden_size": 256,
+    "lr": 0.0005,
+    "lstm_layers": 2,
+    "num_classes": 78,
+    "num_workers": 2,
+    "out_dir": "outputs/htr_baseline_v1/mini10k_cyrillic_v1",
+    "seed": 42,
+    "train_manifest": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/subsets/mini10k/train.jsonl",
+    "train_size": 10000,
+    "val_manifest": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/subsets/mini10k/val.jsonl",
+    "val_size": 2000,
+    "weight_decay": 0.0001
+  },
+  "checkpoint_epoch": 72,
+  "checkpoint_val_cer": 0.1609431527987832,
+  "device": "cuda",
+  "manifest": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/subsets/mini10k/train.jsonl",
+  "metrics": {
+    "argmax_blank_ratio": 0.8259961152720655,
+    "cer": 0.0005028983238983237,
+    "exact": 0.9973,
+    "n": 10000,
+    "pred_empty_ratio": 0.0,
+    "pred_len_mean": 7.406,
+    "wer": 0.0024
+  }
+}

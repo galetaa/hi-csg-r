@@ -1,0 +1,115 @@
+{
+  "graph_ready_dir": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed",
+  "items": [
+    {
+      "dataset": "mixed",
+      "expected_n": 30000,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/htr_graph_v1/local_graph_ready/tri10k_mixed/train.jsonl",
+      "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/train.jsonl",
+      "split": "train",
+      "written_n": 30000
+    },
+    {
+      "dataset": "mixed",
+      "expected_n": 6000,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/htr_graph_v1/local_graph_ready/tri10k_mixed/val.jsonl",
+      "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/val.jsonl",
+      "split": "val",
+      "written_n": 6000
+    },
+    {
+      "dataset": "mixed",
+      "expected_n": 5563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/htr_graph_v1/local_graph_ready/tri10k_mixed/test.jsonl",
+      "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/test.jsonl",
+      "split": "test",
+      "written_n": 5563
+    },
+    {
+      "dataset": "cyrillic_handwriting",
+      "expected_n": 10000,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/htr_graph_v1/local_graph_ready/tri10k_mixed/eval_manifests/cyrillic_handwriting_train.jsonl",
+      "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/eval_manifests/cyrillic_handwriting_train.jsonl",
+      "split": "train",
+      "written_n": 10000
+    },
+    {
+      "dataset": "cyrillic_handwriting",
+      "expected_n": 2000,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/htr_graph_v1/local_graph_ready/tri10k_mixed/eval_manifests/cyrillic_handwriting_val.jsonl",
+      "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/eval_manifests/cyrillic_handwriting_val.jsonl",
+      "split": "val",
+      "written_n": 2000
+    },
+    {
+      "dataset": "cyrillic_handwriting",
+      "expected_n": 1563,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/htr_graph_v1/local_graph_ready/tri10k_mixed/eval_manifests/cyrillic_handwriting_test.jsonl",
+      "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/eval_manifests/cyrillic_handwriting_test.jsonl",
+      "split": "test",
+      "written_n": 1563
+    },
+    {
+      "dataset": "hkr_words",
+      "expected_n": 10000,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/htr_graph_v1/local_graph_ready/tri10k_mixed/eval_manifests/hkr_words_train.jsonl",
+      "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/eval_manifests/hkr_words_train.jsonl",
+      "split": "train",
+      "written_n": 10000
+    },
+    {
+      "dataset": "hkr_words",
+      "expected_n": 2000,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/htr_graph_v1/local_graph_ready/tri10k_mixed/eval_manifests/hkr_words_val.jsonl",
+      "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/eval_manifests/hkr_words_val.jsonl",
+      "split": "val",
+      "written_n": 2000
+    },
+    {
+      "dataset": "hkr_words",
+      "expected_n": 2000,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/htr_graph_v1/local_graph_ready/tri10k_mixed/eval_manifests/hkr_words_test.jsonl",
+      "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/eval_manifests/hkr_words_test.jsonl",
+      "split": "test",
+      "written_n": 2000
+    },
+    {
+      "dataset": "school_notebooks_clean",
+      "expected_n": 10000,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/htr_graph_v1/local_graph_ready/tri10k_mixed/eval_manifests/school_notebooks_clean_train.jsonl",
+      "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/eval_manifests/school_notebooks_clean_train.jsonl",
+      "split": "train",
+      "written_n": 10000
+    },
+    {
+      "dataset": "school_notebooks_clean",
+      "expected_n": 2000,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/htr_graph_v1/local_graph_ready/tri10k_mixed/eval_manifests/school_notebooks_clean_val.jsonl",
+      "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/eval_manifests/school_notebooks_clean_val.jsonl",
+      "split": "val",
+      "written_n": 2000
+    },
+    {
+      "dataset": "school_notebooks_clean",
+      "expected_n": 2000,
+      "failures_n": 0,
+      "out_manifest": "data/experiments/htr_graph_v1/local_graph_ready/tri10k_mixed/eval_manifests/school_notebooks_clean_test.jsonl",
+      "source_manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/eval_manifests/school_notebooks_clean_test.jsonl",
+      "split": "test",
+      "written_n": 2000
+    }
+  ],
+  "maps_root": "data/experiments/htr_graph_v1/local_maps/tri10k_mixed",
+  "out_dir": "data/experiments/htr_graph_v1/local_graph_ready/tri10k_mixed"
+}

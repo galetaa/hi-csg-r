@@ -1,0 +1,31 @@
+{
+  "categories": {
+    "pupil_comment": 12053,
+    "pupil_text": 266288,
+    "teacher_comment": 5329
+  },
+  "dataset": "school_notebooks_clean",
+  "levels": {
+    "phrase": 3890,
+    "word": 279780
+  },
+  "num_kept": 283670,
+  "num_rejected": 0,
+  "num_source_records": 283670,
+  "source_dir": "data/experiments/htr_baseline_v1/school_notebooks_clean",
+  "source_summary": {
+    "num_chars": 94,
+    "num_records": 283670,
+    "splits": {
+      "test": 24623,
+      "train": 234833,
+      "val": 24214
+    }
+  },
+  "splits": {
+    "test": 24623,
+    "train": 234833,
+    "val": 24214
+  },
+  "time_downsample": 4
+}

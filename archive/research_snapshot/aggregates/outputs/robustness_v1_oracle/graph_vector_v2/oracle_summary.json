@@ -1,0 +1,37 @@
+{
+  "by_distortion": {
+    "blur": {
+      "mean_cer": 0.1676487940308867,
+      "mean_relative_cer_degradation": 0.20007949520544552
+    },
+    "low_contrast": {
+      "mean_cer": 0.16081207704320666,
+      "mean_relative_cer_degradation": 0.15114025935310782
+    },
+    "noise": {
+      "mean_cer": 0.1565573486031581,
+      "mean_relative_cer_degradation": 0.12068365876683074
+    },
+    "thick_strokes": {
+      "mean_cer": 0.1598750650702759,
+      "mean_relative_cer_degradation": 0.1444328513936504
+    },
+    "thin_strokes": {
+      "mean_cer": 0.2025334027416276,
+      "mean_relative_cer_degradation": 0.44979380931087604
+    }
+  },
+  "clean_cer": 0.1396980739198334,
+  "mean_absolute_cer_delta": 0.02978726357799758,
+  "mean_distorted_cer": 0.169485337497831,
+  "mean_relative_cer_degradation": 0.2132260148059821,
+  "num_distorted_conditions": 15,
+  "structural_distortions": {
+    "mean_relative_cer_degradation": 0.2971133303522632,
+    "n_conditions": 6
+  },
+  "visual_distortions": {
+    "mean_relative_cer_degradation": 0.15730113777512802,
+    "n_conditions": 9
+  }
+}

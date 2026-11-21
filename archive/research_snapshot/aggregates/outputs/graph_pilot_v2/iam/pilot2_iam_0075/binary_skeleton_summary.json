@@ -1,0 +1,65 @@
+{
+  "dataset": "iam",
+  "effective_max_side": 10000,
+  "grid_suppression_enabled": true,
+  "input_image_path": "data/processed/iam/feature_images/iam_line_007365.png",
+  "level": "line",
+  "methods": {
+    "adaptive_gaussian": {
+      "binary_path": "outputs/graph_pilot_v2/iam/pilot2_iam_0075/binary_adaptive_gaussian.png",
+      "dataset": "iam",
+      "feature_scaled_path": "outputs/graph_pilot_v2/iam/pilot2_iam_0075/feature_scaled.png",
+      "foreground_pixels": 26783,
+      "foreground_ratio": 0.0951986578421685,
+      "image_height": 163,
+      "image_width": 1726,
+      "input_image_path": "data/processed/iam/feature_images/iam_line_007365.png",
+      "level": "line",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot_v2/iam/pilot2_iam_0075/skeleton_adaptive_gaussian.png",
+      "skeleton_pixels": 3290,
+      "threshold_info": {
+        "block_size": 35,
+        "offset": 10.0
+      }
+    },
+    "otsu": {
+      "binary_path": "outputs/graph_pilot_v2/iam/pilot2_iam_0075/binary_otsu.png",
+      "dataset": "iam",
+      "feature_scaled_path": "outputs/graph_pilot_v2/iam/pilot2_iam_0075/feature_scaled.png",
+      "foreground_pixels": 27424,
+      "foreground_ratio": 0.09747705606779035,
+      "image_height": 163,
+      "image_width": 1726,
+      "input_image_path": "data/processed/iam/feature_images/iam_line_007365.png",
+      "level": "line",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot_v2/iam/pilot2_iam_0075/skeleton_otsu.png",
+      "skeleton_pixels": 3100,
+      "threshold_info": {
+        "threshold": 192.0
+      }
+    },
+    "sauvola": {
+      "binary_path": "outputs/graph_pilot_v2/iam/pilot2_iam_0075/binary_sauvola.png",
+      "dataset": "iam",
+      "feature_scaled_path": "outputs/graph_pilot_v2/iam/pilot2_iam_0075/feature_scaled.png",
+      "foreground_pixels": 26237,
+      "foreground_ratio": 0.09325793174046876,
+      "image_height": 163,
+      "image_width": 1726,
+      "input_image_path": "data/processed/iam/feature_images/iam_line_007365.png",
+      "level": "line",
+      "scale": 1.0,
+      "skeleton_path": "outputs/graph_pilot_v2/iam/pilot2_iam_0075/skeleton_sauvola.png",
+      "skeleton_pixels": 3256,
+      "threshold_info": {
+        "k": 0.2,
+        "window_size": 25
+      }
+    }
+  },
+  "output_dir": "outputs/graph_pilot_v2/iam/pilot2_iam_0075",
+  "page_like": false,
+  "scale": 1.0
+}

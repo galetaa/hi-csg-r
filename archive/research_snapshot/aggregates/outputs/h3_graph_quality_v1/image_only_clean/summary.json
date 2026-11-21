@@ -1,0 +1,58 @@
+{
+  "best_abs_spearman": {
+    "abs_spearman_r": 0.10489240073261621,
+    "max": 0.9663865546218487,
+    "mean": 0.26578037176455516,
+    "min": 0.0,
+    "n": 5563,
+    "pearson_p": 6.3320894307573e-08,
+    "pearson_r": -0.07244390823080872,
+    "spearman_p": 4.387173739346413e-15,
+    "spearman_r": -0.10489240073261621,
+    "std": 0.09762083264474608
+  },
+  "best_high_error_auc": {
+    "feature_mean": 0.26578037176455516,
+    "feature_std": 0.09762083264474608,
+    "high_error_rate": 0.2045658817184972,
+    "high_error_threshold_cer": 0.16666666666666666,
+    "n": 5563,
+    "pr_auc": 0.24614088087377572,
+    "roc_auc_direction_invariant": 0.5657684708031734,
+    "top20_f1": 0.2594402487783207,
+    "top20_precision": 0.26235399820305483,
+    "top20_recall": 0.2565905096660808
+  },
+  "dataset_breakdown": [
+    {
+      "dataset": "cyrillic_handwriting",
+      "exact_rate": 0.4657709532949456,
+      "mean_cer": 0.120339248697951,
+      "median_cer": 0.07142857142857142,
+      "n": 1563,
+      "p90_cer": 0.3333333333333333
+    },
+    {
+      "dataset": "hkr_words",
+      "exact_rate": 0.6545,
+      "mean_cer": 0.0581598088035975,
+      "median_cer": 0.0,
+      "n": 2000,
+      "p90_cer": 0.18181818181818182
+    },
+    {
+      "dataset": "school_notebooks_clean",
+      "exact_rate": 0.7185,
+      "mean_cer": 0.07653399655899655,
+      "median_cer": 0.0,
+      "n": 2000,
+      "p90_cer": 0.2727272727272727
+    }
+  ],
+  "feature_n": 39,
+  "high_error_quantile": 0.8,
+  "high_error_threshold_cer": 0.16666666666666666,
+  "joined_n": 5563,
+  "manifest": "data/experiments/htr_graph_v1/graph_ready/tri10k_mixed/test.jsonl",
+  "manifest_n": 5563
+}

@@ -1,0 +1,19 @@
+{
+  "batch_size": 32,
+  "blank_bias_init": -2.0,
+  "dropout": 0.1,
+  "epochs": 5,
+  "grad_clip": 5.0,
+  "hidden_size": 256,
+  "lr": 0.001,
+  "lstm_layers": 2,
+  "num_classes": 78,
+  "num_workers": 2,
+  "out_dir": "outputs/htr_baseline_v1/smoke_cyrillic_v2",
+  "seed": 42,
+  "train_manifest": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/smoke/train.jsonl",
+  "train_size": 1000,
+  "val_manifest": "data/experiments/htr_baseline_v1_ctc_ready/cyrillic_handwriting/smoke/val.jsonl",
+  "val_size": 500,
+  "weight_decay": 0.0001
+}

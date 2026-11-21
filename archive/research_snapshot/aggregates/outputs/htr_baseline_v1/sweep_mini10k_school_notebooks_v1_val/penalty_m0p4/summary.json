@@ -1,0 +1,41 @@
+{
+  "blank_logit_penalty": -0.4,
+  "checkpoint": "outputs/htr_baseline_v1/mini10k_school_notebooks_v1/best.pt",
+  "checkpoint_blank_logit_penalty": -0.521518987341772,
+  "checkpoint_config": {
+    "batch_size": 32,
+    "blank_bias_init": -1.0,
+    "blank_logit_penalty_end": -0.4,
+    "blank_logit_penalty_start": -2.0,
+    "dropout": 0.1,
+    "epochs": 80,
+    "feature_size": 256,
+    "grad_clip": 5.0,
+    "height_bins": 4,
+    "hidden_size": 256,
+    "lr": 0.0005,
+    "lstm_layers": 2,
+    "num_classes": 95,
+    "num_workers": 2,
+    "out_dir": "outputs/htr_baseline_v1/mini10k_school_notebooks_v1",
+    "seed": 42,
+    "train_manifest": "data/experiments/htr_baseline_v1_ctc_ready/school_notebooks_clean/subsets/mini10k/train.jsonl",
+    "train_size": 10000,
+    "val_manifest": "data/experiments/htr_baseline_v1_ctc_ready/school_notebooks_clean/subsets/mini10k/val.jsonl",
+    "val_size": 2000,
+    "weight_decay": 0.0001
+  },
+  "checkpoint_epoch": 74,
+  "checkpoint_val_cer": 0.15209059486265358,
+  "device": "cuda",
+  "manifest": "data/experiments/htr_baseline_v1_ctc_ready/school_notebooks_clean/subsets/mini10k/val.jsonl",
+  "metrics": {
+    "argmax_blank_ratio": 0.8351653893128034,
+    "cer": 0.15202304990760862,
+    "exact": 0.522,
+    "n": 2000,
+    "pred_empty_ratio": 0.0,
+    "pred_len_mean": 5.755,
+    "wer": 0.4805
+  }
+}
